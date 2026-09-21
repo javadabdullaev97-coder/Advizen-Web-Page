@@ -32,10 +32,19 @@ interesting.
 
 | | Rhythm | Note |
 |---|---|---|
-| Instagram | вт, чт | Russian. Carousel. |
+| Instagram | вт, чт | Russian. Carousel. The growth channel. |
 | Facebook | вт, чт | Russian and English, two separate posts. |
-| LinkedIn | вт, чт | English primary, Russian copy. |
+| LinkedIn | вт only | English, long form. A showcase, not a channel — see below. |
 | Twitter / X | вт, чт, сб | English only. Saturday is a note, not a topic. |
+
+**LinkedIn runs at half rhythm on purpose.** Nobody at the firm will
+publish from a personal profile, and a company page with no followers is
+barely distributed — the algorithm does not carry it. So LinkedIn is where
+a foreign client checks that the firm exists and knows something, not
+where anyone is found. That argues for fewer and heavier posts rather than
+more: what matters is how substantial the page looks when somebody
+arrives, not how often it updates. Effort moves to Instagram and Twitter,
+where a brand account is distributed on the same terms as a personal one.
 
 **One topic, four cuts.** The same research becomes four different things,
 not one thing in four wrappers. LinkedIn gets the full argument for the
@@ -158,35 +167,67 @@ November, a quarter by December, with original work taking over.
 
 ---
 
-## What this plan does not yet cover
+## Objective
 
-A schedule of topics is not a campaign. Five things are missing, and three
-of them need the owner's answer before they can be written.
+Both recognition and enquiries, in equal measure — the owner's decision,
+taken against a recommendation of seventy-thirty in favour of practical
+material.
 
-**Audience, per platform.** The plan lists topics without saying who they
-are for, and the platforms are near opposites: LinkedIn reaches an
-international investor and their counsel, Instagram a Russian-speaking
-founder in Tashkent. That decides depth as much as language — the foreign
-reader needs the Uzbek context explained, the local one does not.
+The two pull different ways. Practical local topics reach few people and
+reach the right ones; global cases reach many and convert none. Splitting
+evenly means accepting an audience of which a good half will never be
+clients, in exchange for the reach that makes the other half findable.
 
-**Measurement.** Nothing here says how we would know it is working. Needs
-a baseline (currently zero everywhere), a monthly review, and a stated
-threshold below which a topic counts as a failure.
+**October stays practical throughout.** It is the month that establishes
+what the firm is, and a piece on Enron sitting in the middle of it would
+undo that. The even split runs from November, which makes October to
+December roughly sixty-five thirty-five, and every month after that even.
 
-**The objective.** Recognition, inbound enquiries and recruiting imply
-three different plans. As written this one is tuned for recognition and
-trust. If the goal is enquiries it should look different. *Owner's call.*
+## The path from a post to a conversation
 
-**The path from a post to a conversation.** Someone reads the permanent
-establishment piece, recognises their own exposure, and then what? There
-is no step. This is not about adding a call to action — it is about
-deciding what should happen at all. *Owner's call.*
+For the first two months: the article on the site, and nothing else.
 
-**The partners' own profiles.** In consulting a post from a named person
-outperforms the company page severalfold, and it is the only free reach
-multiplier available. The pattern is: the partner publishes, the company
-page reshares. Needs to know which partners will post under their own
-name. *Owner's call.*
+Building a funnel while the follower count is zero optimises an empty
+room, and conversion mechanics on an account with no history read as
+exactly the thing this brand refuses to be. So the route stays passive —
+the post is shallow, the article is deep, and whoever wants more finds it.
+
+One concrete change: **the Instagram bio link points at `/insights`, not
+at the home page.** Instagram makes no link clickable anywhere except the
+bio, so that single link is the only route off the platform, and it should
+not land on a general page.
+
+Revisit in month three, when there is somebody to convert. The obvious
+next step then is `/store` — templates are useful rather than salesy.
+
+## Audience
+
+| | Who | What they need |
+|---|---|---|
+| Instagram | Russian-speaking founders, finance directors and lawyers in Tashkent | Less Uzbek context, more international comparison. They live here; they want to know how it works elsewhere. |
+| LinkedIn | Foreign investors, their counsel, regional corporate development | The Uzbek context spelled out. They know the law in general and this jurisdiction not at all. |
+| Facebook | The local business community, skewing older | The practical version. Shorter than LinkedIn, with the link that Instagram cannot carry. |
+| Twitter / X | International finance and legal professionals, journalists, other advisers | One sharp proposition. They are scrolling, not reading. |
+
+## Measurement
+
+The baseline is zero on every platform, which makes the first three months
+unusually easy to read: anything is a change.
+
+Reviewed monthly: followers, saves and profile visits on Instagram, link
+clicks off every platform, and the median engagement per post so that
+individual topics can be compared against the account's own norm rather
+than against nothing.
+
+A topic that lands below half the account's median drops out of rotation.
+A topic well above it becomes a candidate for a full article on the site —
+social is cheaper than the site, so it is the right place to test whether
+a subject has an audience before writing sixteen pages about it.
+
+The only measure that settles the question is an enquiry that mentions a
+post. One of those is worth more than a month of impressions.
+
+---
 
 Run `marketing:campaign-plan` against this file once the marketing plugin
 is loaded — it was enabled mid-session and its skills were not available
