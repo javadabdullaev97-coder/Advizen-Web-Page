@@ -58,6 +58,13 @@ def text(d: ImageDraw.ImageDraw, xy, s: str, f, fill, optical: bool = False):
     d.text((optical_x(s, f, x) if optical else x, y), s, font=f, fill=fill)
 
 
+def tracked_width(s: str, f, tracking: float) -> float:
+    """Width of tracked() output, for centring it."""
+    if not s:
+        return 0.0
+    return sum(f.getlength(c) for c in s) + tracking * (len(s) - 1)
+
+
 def tracked(d: ImageDraw.ImageDraw, xy, s: str, f, fill, tracking: float):
     """Letter-spaced text. PIL has no tracking, so glyphs are placed one by one."""
     x, y = xy
