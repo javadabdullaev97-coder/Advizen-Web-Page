@@ -46,7 +46,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# social cards — fonts are fetched, output is rendered
+# social cards — fonts are fetched, rendered cards are output.
+# The photographs under source/ are input and stay tracked.
 /social/fonts/*.ttf
 __pycache__/
-/public/social/
+/public/social/*
+!/public/social/source/
