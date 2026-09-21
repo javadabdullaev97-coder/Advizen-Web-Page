@@ -132,9 +132,10 @@ new creative.
 
 The topic calendar is in `PLAN.md` — twenty-six dated topics across three
 months, verified internally consistent: eleven in October, eight in
-November, seven in December; fourteen derived from published articles, nine
-new, three drafted; the five reserve articles are correctly held out.
-Dates match weekdays for 2026.
+November, seven in December; fifteen derived from published articles, eight
+new, three drafted; the four remaining reserve articles are correctly held
+out. Dates match weekdays for 2026, and the twelve Tuesdays, twelve
+Thursdays and two manual-phase Saturdays account for all twenty-six.
 
 What the calendar needs and does not have is a **production** calendar —
 the dates by which text has to exist, which run ahead of the publication
@@ -149,7 +150,7 @@ dates by the lead times below.
 | 12–18 Oct | Publishing automation working end to end | 15.10 | Javad | Phase 2 as designed | not started |
 | 19–25 Oct | Eight November texts | 03.11–26.11 | Javad | three are new, no source article | not started |
 | 26 Oct–1 Nov | Fact-check pass on ubo, deadlock, winklevoss | 01.12–08.12 | Javad | drafts cannot publish unchecked | not started |
-| 16–22 Nov | Seven December texts | 01.12–22.12 | Javad | four are new | not started |
+| 16–22 Nov | Seven December texts | 01.12–22.12 | Javad | three are new | not started |
 | 14–20 Dec | Month-three review; decide on `/store` route | January | Javad | | not started |
 
 **Every row is Javad's.** The framework asks for an owner per row because a
@@ -275,10 +276,10 @@ be written the morning they are due or not at all.
 *Mitigation*: write six at a time alongside the monthly batch; they cost a
 sentence each.
 
-**3. Nine of twenty-six topics have no source and no draft**, weighted into
+**3. Eight of twenty-six topics have no source and no draft**, weighted into
 November and December, after the article bank thins. The plan anticipates
 the ratio shift; it does not schedule the extra writing.
-*Mitigation*: the five reserve articles exist for exactly this. Substitute
+*Mitigation*: the four remaining reserve articles exist for exactly this. Substitute
 rather than miss a slot, and do it at the month boundary, not the week.
 
 **4. Facebook costs double for the weakest channel** — a Russian and an

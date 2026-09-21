@@ -129,19 +129,24 @@ of self-description.
 | 10.12 чт | Family office: зачем их создают | new | Финансы |
 | 15.12 вт | Холдинг против прямого владения | new | Структуры |
 | 17.12 чт | Когда цифры врут: Enron и Wirecard | new | Учёт |
-| 22.12 вт | Что меняется для бизнеса в 2027 | new | — |
+| 22.12 вт | Онлайн-гемблинг: регулирование | `online-gambling-uzbekistan` | Право |
+
+**«Что меняется для бизнеса в 2027» перенесено на январь.** Поправки в
+Налоговый кодекс, вступающие в силу с 1 января, подписываются в конце
+декабря — обзор, написанный в ноябрьском пакете, вышел бы неполным или
+неверным. Материал выходит в январе, когда всё принято, и попадает в момент,
+когда его ищут. Слот 22.12 занимает запасная статья.
 
 ---
 
 ## Source material
 
-Fourteen of the nineteen published articles are used. Each already carries
+Fifteen of the nineteen published articles are used. Each already carries
 a cover image in `public/Articles Image/`, so covers need no generation.
 
-Five are held in reserve, as substitutes if a topic is dropped:
+Four are held in reserve, as substitutes if a topic is dropped:
 `outsourcing-operational-activities`, `franchising-uzbekistan`,
-`online-gambling-uzbekistan`, `accounting-law-uzbekistan`,
-`pit-refunds-education-uzbekistan`.
+`accounting-law-uzbekistan`, `pit-refunds-education-uzbekistan`.
 
 **An article is the source, not the content.** A carousel that summarises
 an article and asks people to go read it is a link dump and gives nothing.
