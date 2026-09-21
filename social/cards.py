@@ -30,8 +30,36 @@ def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool):
                counter, font=f, fill=T.INK_3)
 
 
-def _canvas(eyebrow=None, counter=None, mark=True):
-    img = Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG)
+def _backdrop(path):
+    """
+    A photograph as the card's ground.
+
+    Two things happen to it and both are necessary. It is flattened toward
+    the void so the frame belongs to the same palette as every other card,
+    and a gradient closes the lower half to near-black so type sits on
+    solid ground rather than on whatever the photograph happens to do
+    there. Without the second step a headline lands on a highlight and
+    disappears.
+    """
+    src = Image.open(path).convert("RGB")
+    scale = max(T.WIDTH / src.width, T.HEIGHT / src.height)
+    src = src.resize((round(src.width * scale), round(src.height * scale)), Image.LANCZOS)
+    x = (src.width - T.WIDTH) // 2
+    y = (src.height - T.HEIGHT) // 2
+    img = src.crop((x, y, x + T.WIDTH, y + T.HEIGHT))
+
+    img = Image.blend(img, Image.new("RGB", img.size, T.BG), 0.42)
+
+    column = Image.new("L", (1, T.HEIGHT))
+    for row in range(T.HEIGHT):
+        t = max(0.0, (row - T.HEIGHT * 0.30) / (T.HEIGHT * 0.70))
+        column.putpixel((0, row), int(255 * t ** 1.5))
+    return Image.composite(Image.new("RGB", img.size, T.BG), img,
+                           column.resize((T.WIDTH, T.HEIGHT)))
+
+
+def _canvas(eyebrow=None, counter=None, mark=True, backdrop=None):
+    img = _backdrop(backdrop) if backdrop else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG)
     d = ImageDraw.Draw(img)
     _chrome(d, eyebrow, counter, mark)
     return img, d
@@ -39,15 +67,19 @@ def _canvas(eyebrow=None, counter=None, mark=True):
 
 # ── Text cards ──────────────────────────────────────────────────────
 
-def cover(*, category, title, deck, counter=None, **_):
-    img, d = _canvas(category, counter)
+def cover(*, category, title, deck, counter=None, image=None, **_):
+    img, d = _canvas(category, counter, backdrop=image)
     ft, fd = ts.serif(T.SIZE_DISPLAY, medium=True), ts.sans(T.SIZE_DECK, 300)
 
     title_lines = ts.wrap(title, ft, T.MEASURE_BODY)
     deck_lines = ts.wrap(deck, fd, T.MEASURE_DECK) if deck else []
+    block = (len(title_lines) * T.LEAD_DISPLAY + (26 if deck_lines else 0)
+             + len(deck_lines) * T.LEAD_DECK)
 
-    y = ts.centre_y(len(title_lines) * T.LEAD_DISPLAY + (26 if deck_lines else 0)
-                    + len(deck_lines) * T.LEAD_DECK)
+    # Over a photograph the title drops to the foot of the frame, where the
+    # gradient has already closed to black. Centred, it would float in the
+    # middle of the picture and fight it.
+    y = (T.BAND_BOTTOM - block) if image else ts.centre_y(block)
 
     for line in title_lines:
         ts.tracked(d, (ts.optical_x(line, ft, T.MARGIN), y), line, ft, T.INK,
