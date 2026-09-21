@@ -2,6 +2,7 @@ slug = "ubo"
 category = "Комплаенс"
 title = "UBO"
 deck = "Почему конечного бенефициара теперь спрашивают все"
+image = "public/Articles Image/TIFC.webp"
 
 [[slide]]
 type = "quote"
