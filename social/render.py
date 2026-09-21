@@ -68,8 +68,15 @@ def render(post: dict) -> list[Path]:
     total = len(post["slide"]) + 1
     written: list[Path] = []
 
-    specs = [dict(type="cover", category=post["category"], title=post["title"],
-                  deck=post.get("deck", ""))]
+    cover = dict(type="cover", category=post["category"], title=post["title"],
+                 deck=post.get("deck", ""))
+    if post.get("image"):
+        path = REPO / post["image"]
+        if not path.exists():
+            die(f"cover image not found: {post['image']}")
+        cover["image"] = path
+
+    specs = [cover]
     specs += post["slide"]
 
     for index, spec in enumerate(specs, start=1):
