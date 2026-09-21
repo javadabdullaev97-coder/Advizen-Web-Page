@@ -10,7 +10,7 @@ Canva. Consulting firms describe structures in prose; drawing them —
 consistently, in the brand's own hand — is what separates the feed.
 """
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageChops, ImageDraw
 
 import theme as T
 import typeset as ts
@@ -91,25 +91,65 @@ def numbered(*, items, eyebrow=None, counter=None, start=1, **_):
 
 # ── Diagrams ────────────────────────────────────────────────────────
 
-def _figure(d, cx, top, height, colour, *, width=2):
-    """
-    A person, drawn in the same hairline language as the boxes.
+# A drawn human figure was tried twice and abandoned twice. Outlined, it is
+# the avatar placeholder every UI kit ships; filled, it is the same icon in
+# a heavier weight. Primitives will not carry a body at this size without
+# landing in pictogram territory.
+#
+# So the cards do not draw people. They mark them. A person nobody has named
+# is a fingerprint — the forensic mark of one individual. A person with a
+# name is their initial, set in the display face inside a ring, the way a
+# signet marks a party to a deed. Both are precise about which kind of
+# person is meant, and neither resembles anybody.
 
-    Original geometry on purpose. A card about a named individual may not
-    carry their photograph — the likeness is theirs and the photograph is
-    the photographer's — and a stock pictogram would sit outside the brand
-    entirely. A circle and an arc read as a person at feed size and belong
-    to nobody.
-    """
-    r = height * 0.26
-    d.ellipse([cx - r, top, cx + r, top + 2 * r], outline=colour, width=width)
+_SS = 3  # supersample, then downscale: PIL has no antialiased stroke
 
-    body_top = top + 2 * r + height * 0.10
-    bw, bh = r * 2.5, height - (2 * r) - height * 0.10
-    d.arc([cx - bw / 2, body_top, cx + bw / 2, body_top + bh * 2],
-          start=180, end=360, fill=colour, width=width)
-    d.line([(cx - bw / 2, body_top + bh), (cx + bw / 2, body_top + bh)],
-           fill=colour, width=width)
+
+def _fingerprint(img, cx, top, height, colour):
+    """Loop pattern: ridges opening on one flank, clipped to a fingertip."""
+    h = height
+    w = int(h * 0.74)
+    W, H = w * _SS, h * _SS
+    layer = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(layer)
+
+    ox, oy = W * 0.50, H * 0.52
+    rings = 11
+    stroke = max(_SS, round(h / 68) * _SS)
+    for i in range(rings):
+        t = 0.18 + 0.82 * (i + 1) / rings
+        rx, ry = W * 0.43 * t, H * 0.44 * t
+        # The core sits off centre and the outer ridges close back over it.
+        # Perfectly concentric rings read as a target, not as a print.
+        dx, dy = W * 0.05 * (1 - t) ** 1.6, -H * 0.13 * (1 - t) ** 1.4
+        # One break angle for every ridge. Letting it wander piles the ends
+        # on one flank and the mark turns to mud.
+        d.arc([ox - rx + dx, oy - ry + dy, ox + rx + dx, oy + ry + dy],
+              start=200, end=160 + 360, fill=255, width=stroke)
+
+    clip = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(clip).ellipse([W * 0.02, H * 0.04, W * 0.98, H * 0.995], fill=255)
+    mask = ImageChops.multiply(layer, clip).resize((w, h), Image.LANCZOS)
+
+    img.paste(colour, (int(cx - w / 2), int(top)), mask)
+    return w
+
+
+def _signet(img, cx, top, size, colour, initial):
+    """An initial in the display face, ringed."""
+    S = size * _SS
+    layer = Image.new("L", (S, S), 0)
+    d = ImageDraw.Draw(layer)
+    d.ellipse([0, 0, S - 1, S - 1], outline=255, width=max(_SS, round(size / 44) * _SS))
+
+    f = ts.serif(int(S * 0.44), medium=True)
+    bb = f.getbbox(initial)
+    d.text(((S - (bb[2] - bb[0])) / 2 - bb[0], (S - (bb[3] - bb[1])) / 2 - bb[1]),
+           initial, font=f, fill=255)
+
+    img.paste(colour, (int(cx - size / 2), int(top)), layer.resize((size, size),
+                                                                   Image.LANCZOS))
+    return size
 
 
 def _node(d, box, label, value, *, accent=False):
@@ -227,12 +267,13 @@ def chain(*, nodes, person, note=None, eyebrow=None, counter=None, **_):
 
     This is the definition of a beneficial owner drawn rather than stated:
     however many companies sit in the middle, the chain ends at someone.
-    The figure is the card's crimson mark.
+    The fingerprint is the card's crimson mark.
     """
     img, d = _canvas(eyebrow, counter, mark=False)
 
     box_h, link = 84, 42
-    fig_h = 108
+    # Below about 150 the ridges close up and the mark reads as a blot.
+    fig_h = 164
     fn, fl = ts.sans(27, 400), ts.sans(19)
 
     note_lines = ts.wrap(note, ts.sans(27, 300), T.MEASURE_BODY) if note else []
@@ -252,7 +293,7 @@ def chain(*, nodes, person, note=None, eyebrow=None, counter=None, **_):
         d.line([(mid, y), (mid, y + link)], fill=T.LINE, width=1)
         y += link
 
-    _figure(d, mid, y, fig_h, T.CRIMSON, width=3)
+    _fingerprint(img, mid, y, fig_h, T.CRIMSON)
     y += fig_h + 30
 
     f = ts.serif(38, medium=True)
@@ -271,12 +312,11 @@ def chain(*, nodes, person, note=None, eyebrow=None, counter=None, **_):
 
 
 def people(*, groups, note=None, eyebrow=None, counter=None, **_):
-    """Parties to a dispute, as figures rather than as a list of names."""
+    """Parties to a dispute, each signed with its principals' initials."""
     img, d = _canvas(eyebrow, counter)
 
-    fig_h = 122
-    # Wider than a head, or a pair reads as one blot at feed size.
-    step = 88
+    fig_h = 104
+    step = fig_h + 26
     fn, fr = ts.serif(34, medium=True), ts.sans(24, 300)
 
     slot = T.MEASURE_BODY // len(groups)
@@ -293,10 +333,10 @@ def people(*, groups, note=None, eyebrow=None, counter=None, **_):
 
     for i, (group, name_lines, role_lines) in enumerate(laid):
         cx = T.MARGIN + i * slot + slot // 2
-        count = group.get("figures", 1)
-        first = cx - (count - 1) * step / 2
-        for k in range(count):
-            _figure(d, first + k * step, y, fig_h, T.INK_2)
+        marks = group["initials"]
+        first = cx - (len(marks) - 1) * step / 2
+        for k, initial in enumerate(marks):
+            _signet(img, first + k * step, y, fig_h, T.INK_2, initial)
 
         ty = y + fig_h + 34
         for line in name_lines:
