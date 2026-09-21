@@ -8,7 +8,7 @@ const contacts = [
   {
     name: "Email",
     href: "mailto:info@advizenco.com",
-    color: "#999999",
+    color: "var(--muted)",
     icon: <Mail className="w-5 h-5" />,
   },
   {
@@ -72,7 +72,7 @@ export default function FloatingContactWidget() {
                   className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full transition-all duration-300 ease-in-out"
                   style={{ backgroundColor: contact.color }}
                 />
-                <span className="relative z-10 text-[#999999] group-hover:text-white transition-colors duration-300">
+                <span className="relative z-10 text-muted group-hover:text-white transition-colors duration-300">
                   {contact.icon}
                 </span>
               </motion.a>
