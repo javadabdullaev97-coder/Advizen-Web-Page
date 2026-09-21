@@ -68,15 +68,8 @@ def render(post: dict) -> list[Path]:
     total = len(post["slide"]) + 1
     written: list[Path] = []
 
-    cover = dict(type="cover", category=post["category"], title=post["title"],
-                 deck=post.get("deck", ""))
-    if post.get("image"):
-        path = REPO / post["image"]
-        if not path.exists():
-            die(f"cover image not found: {post['image']}")
-        cover["image"] = path
-
-    specs = [cover]
+    specs = [dict(type="cover", category=post["category"], title=post["title"],
+                  deck=post.get("deck", ""), image=post.get("image"))]
     specs += post["slide"]
 
     for index, spec in enumerate(specs, start=1):
@@ -84,6 +77,13 @@ def render(post: dict) -> list[Path]:
         kind = spec.pop("type")
         # A slide may name its own eyebrow; otherwise it inherits the category.
         spec.setdefault("eyebrow", post["category"])
+        # Image paths are written relative to the repository root, on the
+        # cover and on any slide that takes one.
+        if spec.get("image"):
+            path = REPO / spec["image"]
+            if not path.exists():
+                die(f"slide {index}: image not found: {spec['image']}")
+            spec["image"] = path
         image = cards.TYPES[kind](counter=f"{index:02d}/{total:02d}", **spec)
 
         path = out_dir / f"{index:02d}.png"
