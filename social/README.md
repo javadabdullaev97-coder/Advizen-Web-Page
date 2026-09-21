@@ -31,6 +31,29 @@ is served by the site, so once deployed the cards answer at
 fetches an image by public URL rather than accepting bytes, so a card has
 to be live on the site before it can be published anywhere.
 
+## Drawing a Reel
+
+```bash
+python3 -m pip install imageio-ffmpeg     # once, alongside Pillow
+python3 social/reel.py social/posts/deadlock.toml
+```
+
+Writes `public/social/deadlock/reel.mp4` — 1080×1920, twelve seconds,
+silent. Same rule as the cards: ordinary code, no model, nothing to pay
+per post.
+
+A Reel adds no writing. It reads the `flow` slide for the mechanism and
+the closing `quote` for the conclusion, because the card types are already
+storyboards — a `flow` names parties, a gate and an outcome in the order
+the argument runs. Motion reveals what is drawn; it does not invent a
+second visual language, and every colour and size still comes from
+`theme.py`.
+
+The beats live in one dict, `BEATS`, and they are reading speeds rather
+than animation speeds. That is also what makes sound cheap to add later: a
+narrator follows the same timings, and laying a voice track over the
+finished frames is one more ffmpeg input, not a redraw.
+
 ## Writing a post
 
 One TOML file per post. The cover is generated from the header — do not
