@@ -140,21 +140,30 @@ What the calendar needs and does not have is a **production** calendar —
 the dates by which text has to exist, which run ahead of the publication
 dates by the lead times below.
 
-| Week | Produce | For | Blocks |
-|---|---|---|---|
-| 21–27 Sep | Phase 0 in full (§ 10), PPA check first | — | everything; overdue |
-| 21–27 Sep | Six October texts, all four cuts each | 01.10–13.10 | Phase 1 cannot start without the block |
-| 28 Sep–4 Oct | Render and approve six posts; verify cards reach public URLs | 01.10 | Instagram fetches by URL — cards must be live on the site first |
-| 5–11 Oct | Remaining five October texts | 15.10–29.10 | |
-| 12–18 Oct | Publishing automation working end to end | 15.10 | Phase 2 as designed |
-| 19–25 Oct | Eight November texts | 03.11–26.11 | three are new, no source article |
-| 26 Oct–1 Nov | Fact-check pass on ubo, deadlock, winklevoss | 01.12–08.12 | drafts cannot publish unchecked |
-| 16–22 Nov | Seven December texts | 01.12–22.12 | four are new |
-| 14–20 Dec | Month-three review; decide on `/store` route | January | |
+| Week | Produce | For | Owner | Blocks | Status |
+|---|---|---|---|---|---|
+| 21–27 Sep | Phase 0 in full (§ 10), PPA check first | — | **unassigned** | everything; overdue | not started |
+| 21–27 Sep | Six October texts, all four cuts each | 01.10–13.10 | **unassigned** | Phase 1 cannot start without the block | not started |
+| 28 Sep–4 Oct | Render and approve six posts; verify cards reach public URLs | 01.10 | **unassigned** | Instagram fetches by URL — cards must be live on the site first | not started |
+| 5–11 Oct | Remaining five October texts | 15.10–29.10 | **unassigned** | | not started |
+| 12–18 Oct | Publishing automation working end to end | 15.10 | **unassigned** | Phase 2 as designed | not started |
+| 19–25 Oct | Eight November texts | 03.11–26.11 | **unassigned** | three are new, no source article | not started |
+| 26 Oct–1 Nov | Fact-check pass on ubo, deadlock, winklevoss | 01.12–08.12 | **unassigned** | drafts cannot publish unchecked | not started |
+| 16–22 Nov | Seven December texts | 01.12–22.12 | **unassigned** | four are new | not started |
+| 14–20 Dec | Month-three review; decide on `/store` route | January | **unassigned** | | not started |
 
-Two rules from the framework that the plan should adopt: leave roughly a
-fifth of Twitter slots open for reactive material, and batch text
-production by month rather than by week. Writing four cuts of one topic in
+**Every row is unassigned, and that is the finding, not a formatting gap.**
+The framework asks for an owner per row because a date without a name is a
+wish. Nine rows, no names, and the first one is already overdue — which is
+risk 6 restated as a schedule rather than as prose. One name against the
+first three rows would settle most of it; the owner's own two items (firm
+facts, and which figures may be stated) cannot move to anyone else.
+
+Three rules from the framework that the plan should adopt: leave roughly a
+fifth of Twitter slots open for reactive material; batch text production by
+month rather than by week; and work backwards from the publication date
+rather than forwards from today — which is what the lead times above do and
+what the plan, which lists only publication dates, does not. Writing four cuts of one topic in
 one sitting is what makes the four cuts different rather than four
 wrappers — which is the plan's own stated standard.
 
@@ -171,6 +180,15 @@ cards each, plus roughly 10 Saturday notes. Against a plan whose stated
 cost is "writing the text — once a month, for the whole month", this is the
 number that decides whether the schedule is real. Nothing in the plan or
 the repository estimates it.
+
+The framework's own benchmark for a social post is one to two business days
+from draft to scheduled. Taken per piece that gives a number with no
+relation to a thirteen-week campaign, which is the point: **the batching is
+load-bearing, not a preference.** One topic researched once and cut four
+ways in a sitting is the only shape in which 117 pieces fits, and it is
+also the shape the plan needs editorially — four cuts written apart become
+four wrappers. If the batching slips to piece-by-piece production, the
+schedule fails on arithmetic before it fails on quality.
 
 **Covers**: none needed. All fourteen derived topics have article images in
 `public/Articles Image/`; carousel covers generate from the header.
