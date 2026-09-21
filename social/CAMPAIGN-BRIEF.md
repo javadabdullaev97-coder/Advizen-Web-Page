@@ -10,6 +10,12 @@ Where the plan already settles something, this brief points at it rather
 than restating it. Where the two disagree, the plan wins on editorial
 questions and this file flags the conflict.
 
+**Reviewed 21 September 2026.** Ten days to the first post. The 20
+September date for Phase 0 has passed with all three blocking items still
+open, and nothing in the repository has moved since the first pass — no
+publishing workflow, the same three drafts. The production calendar below
+is re-anchored to the week of 21 September; risk 6 is now the acute one.
+
 ---
 
 ## 1. Overview
@@ -136,7 +142,7 @@ dates by the lead times below.
 
 | Week | Produce | For | Blocks |
 |---|---|---|---|
-| to 20 Sep | Phase 0 in full (§ 10) | — | everything |
+| 21–27 Sep | Phase 0 in full (§ 10), PPA check first | — | everything; overdue |
 | 21–27 Sep | Six October texts, all four cuts each | 01.10–13.10 | Phase 1 cannot start without the block |
 | 28 Sep–4 Oct | Render and approve six posts; verify cards reach public URLs | 01.10 | Instagram fetches by URL — cards must be live on the site first |
 | 5–11 Oct | Remaining five October texts | 15.10–29.10 | |
@@ -220,6 +226,9 @@ of copy — and whatever the publishing automation takes to build.
 
 ## 9. Risks
 
+Risk 1 is still the one that can stop the campaign dead in October. Risk 6
+is the one that is already happening.
+
 **1. The automation Phase 2 depends on does not exist.** From 15 October
 the plan publishes twice a week through an API. The repository has no
 render-on-push workflow, keeps rendered cards out of git, and has no Meta,
@@ -254,23 +263,32 @@ in a firm's first quarter is expensive in a way an empty week is not.
 *Mitigation*: primary-source pass before 1 November, per the calendar. A
 topic that fails the check gets replaced, not softened.
 
-**6. Phase 0 has no owner and no dates** — and one item, Facebook Page
+**6. Phase 0 has no owner, and its date has now passed.** As of 21
+September all three items in `PLAN.md` § Open before drafting starts are
+still open, with ten days to the first post. One of them, Facebook Page
 Publishing Authorization, takes days to clear and blocks API publishing
-entirely. The plan says to find out now. Nothing records who is finding
-out.
+entirely; it has to be checked this week or Facebook is manual through
+October whatever the pipeline does. The plan said to find out now. Nothing
+records who is finding out, and that is why the date slipped rather than
+being missed for any substantive reason.
+*Mitigation*: name one owner for Phase 0 today. The two items that cannot
+be delegated — firm facts for the first post, and which figures may be
+stated publicly — are the owner's; the rest is checking.
 
 ---
 
 ## 10. Next steps
 
-Blocking, before anything publishes:
+Blocking, before anything publishes. All of it was due by 20 September and
+none of it is done, so the order below is now the order of the week, not of
+the month:
 
 1. **Firm facts for the first post.** Years in practice, projects, sectors,
    and which figures may be stated publicly. Owner only. This is the one
    text nobody else can write.
 2. **Account status.** Does the Facebook page exist, has PPA been imposed,
-   is the LinkedIn company page filled. Check this week — PPA clears in
-   days, not hours.
+   is the LinkedIn company page filled. Check today — PPA clears in days,
+   not hours, and there are ten of them left.
 3. **Meta Business setup**: assets attached, system user, permanent token.
    The referenced LEAP document is not in this repository; find it or write
    the order down here.
