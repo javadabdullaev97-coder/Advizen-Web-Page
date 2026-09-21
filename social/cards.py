@@ -10,7 +10,7 @@ Canva. Consulting firms describe structures in prose; drawing them —
 consistently, in the brand's own hand — is what separates the feed.
 """
 
-from PIL import Image, ImageChops, ImageDraw
+from PIL import Image, ImageDraw
 
 import theme as T
 import typeset as ts
@@ -123,65 +123,11 @@ def numbered(*, items, eyebrow=None, counter=None, start=1, **_):
 
 # ── Diagrams ────────────────────────────────────────────────────────
 
-# A drawn human figure was tried twice and abandoned twice. Outlined, it is
-# the avatar placeholder every UI kit ships; filled, it is the same icon in
-# a heavier weight. Primitives will not carry a body at this size without
-# landing in pictogram territory.
-#
-# So the cards do not draw people. They mark them. A person nobody has named
-# is a fingerprint — the forensic mark of one individual. A person with a
-# name is their initial, set in the display face inside a ring, the way a
-# signet marks a party to a deed. Both are precise about which kind of
-# person is meant, and neither resembles anybody.
-
-_SS = 3  # supersample, then downscale: PIL has no antialiased stroke
-
-
-def _fingerprint(img, cx, top, height, colour):
-    """Loop pattern: ridges opening on one flank, clipped to a fingertip."""
-    h = height
-    w = int(h * 0.74)
-    W, H = w * _SS, h * _SS
-    layer = Image.new("L", (W, H), 0)
-    d = ImageDraw.Draw(layer)
-
-    ox, oy = W * 0.50, H * 0.52
-    rings = 11
-    stroke = max(_SS, round(h / 68) * _SS)
-    for i in range(rings):
-        t = 0.18 + 0.82 * (i + 1) / rings
-        rx, ry = W * 0.43 * t, H * 0.44 * t
-        # The core sits off centre and the outer ridges close back over it.
-        # Perfectly concentric rings read as a target, not as a print.
-        dx, dy = W * 0.05 * (1 - t) ** 1.6, -H * 0.13 * (1 - t) ** 1.4
-        # One break angle for every ridge. Letting it wander piles the ends
-        # on one flank and the mark turns to mud.
-        d.arc([ox - rx + dx, oy - ry + dy, ox + rx + dx, oy + ry + dy],
-              start=200, end=160 + 360, fill=255, width=stroke)
-
-    clip = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(clip).ellipse([W * 0.02, H * 0.04, W * 0.98, H * 0.995], fill=255)
-    mask = ImageChops.multiply(layer, clip).resize((w, h), Image.LANCZOS)
-
-    img.paste(colour, (int(cx - w / 2), int(top)), mask)
-    return w
-
-
-def _signet(img, cx, top, size, colour, initial):
-    """An initial in the display face, ringed."""
-    S = size * _SS
-    layer = Image.new("L", (S, S), 0)
-    d = ImageDraw.Draw(layer)
-    d.ellipse([0, 0, S - 1, S - 1], outline=255, width=max(_SS, round(size / 44) * _SS))
-
-    f = ts.serif(int(S * 0.44), medium=True)
-    bb = f.getbbox(initial)
-    d.text(((S - (bb[2] - bb[0])) / 2 - bb[0], (S - (bb[3] - bb[1])) / 2 - bb[1]),
-           initial, font=f, fill=255)
-
-    img.paste(colour, (int(cx - size / 2), int(top)), layer.resize((size, size),
-                                                                   Image.LANCZOS))
-    return size
+# Drawing a person was tried three ways and dropped three times: an
+# outlined figure (the avatar placeholder every UI kit ships), a filled
+# one (the same icon, heavier), and a fingerprint (read as a whorl, not a
+# print). Primitives will not carry a human at this size. Where a card
+# needs a person it now carries a photograph, through `photo` below.
 
 
 def _node(d, box, label, value, *, accent=False):
@@ -299,91 +245,79 @@ def chain(*, nodes, person, note=None, eyebrow=None, counter=None, **_):
 
     This is the definition of a beneficial owner drawn rather than stated:
     however many companies sit in the middle, the chain ends at someone.
-    The fingerprint is the card's crimson mark.
+    The terminal node carries the crimson, because arriving there is the
+    entire purpose of the chain.
     """
     img, d = _canvas(eyebrow, counter, mark=False)
 
     box_h, link = 84, 42
-    # Below about 150 the ridges close up and the mark reads as a blot.
-    fig_h = 164
-    fn, fl = ts.sans(27, 400), ts.sans(19)
+    fn = ts.sans(27, 400)
 
     note_lines = ts.wrap(note, ts.sans(27, 300), T.MEASURE_BODY) if note else []
-    height = (len(nodes) * box_h + len(nodes) * link + fig_h + 96
-              + (64 + len(note_lines) * T.LEAD_BODY if note_lines else 0))
+    height = ((len(nodes) + 1) * box_h + (len(nodes) + 1) * link
+              + (24 + len(note_lines) * T.LEAD_BODY if note_lines else 0))
     y = ts.centre_y(height)
 
+    right = T.MARGIN + T.MEASURE_BODY
     mid = T.MARGIN + T.MEASURE_BODY // 2
+
+    def row(label, value, *, accent=False):
+        d.rectangle([T.MARGIN, y, right, y + box_h],
+                    fill=(38, 20, 24) if accent else T.PANEL,
+                    outline=T.CRIMSON if accent else None, width=2 if accent else 0)
+        ts.text(d, (T.MARGIN + 26, y + 26), label, fn, T.INK if accent else T.INK_2)
+        if value:
+            if accent:
+                f = ts.sans(19)
+                w = ts.tracked_width(value.upper(), f, 19 * 0.18)
+                ts.tracked(d, (right - 26 - w, y + 32), value.upper(), f,
+                           T.INK_2, 19 * 0.18)
+            else:
+                f = ts.mono(26, 500)
+                d.text((right - 26 - f.getlength(value), y + 28), value,
+                       font=f, fill=T.INK_3)
+
     for node in nodes:
-        d.rectangle([T.MARGIN, y, T.MARGIN + T.MEASURE_BODY, y + box_h], fill=T.PANEL)
-        ts.text(d, (T.MARGIN + 26, y + 26), node["label"], fn, T.INK_2)
-        if node.get("value"):
-            f = ts.mono(26, 500)
-            d.text((T.MARGIN + T.MEASURE_BODY - 26 - f.getlength(node["value"]), y + 28),
-                   node["value"], font=f, fill=T.INK_3)
+        row(node["label"], node.get("value"))
         y += box_h
         d.line([(mid, y), (mid, y + link)], fill=T.LINE, width=1)
         y += link
 
-    _fingerprint(img, mid, y, fig_h, T.CRIMSON)
-    y += fig_h + 30
-
-    f = ts.serif(38, medium=True)
-    w = f.getlength(person["name"])
-    ts.text(d, (mid - w / 2, y), person["name"], f, T.INK)
-    y += 52
-    w = ts.tracked_width(person["role"].upper(), fl, 19 * 0.18)
-    ts.tracked(d, (mid - w / 2, y), person["role"].upper(), fl, T.INK_3, 19 * 0.18)
+    row(person["name"], person.get("role"), accent=True)
+    y += box_h
 
     if note_lines:
-        y += 64
+        y += 56
         for line in note_lines:
             ts.text(d, (T.MARGIN, y), line, ts.sans(27, 300), T.INK_3)
             y += T.LEAD_BODY
     return img
 
 
-def people(*, groups, note=None, eyebrow=None, counter=None, **_):
-    """Parties to a dispute, each signed with its principals' initials."""
-    img, d = _canvas(eyebrow, counter)
+def photo(*, image, title=None, caption=None, eyebrow=None, counter=None, **_):
+    """
+    A frame that carries the slide on its own.
 
-    fig_h = 104
-    step = fig_h + 26
-    fn, fr = ts.serif(34, medium=True), ts.sans(24, 300)
+    Where a card needs a human being, this is how one gets there — a
+    photograph, not a pictogram. Title and caption sit at the foot, on the
+    part of the gradient that has already closed to black.
+    """
+    img, d = _canvas(eyebrow, counter, backdrop=image)
 
-    slot = T.MEASURE_BODY // len(groups)
-    measure = slot - 40
-    laid = [(g, ts.wrap(g["name"], fn, measure)[:2], ts.wrap(g["role"], fr, measure)[:2])
-            for g in groups]
-    caption_h = 34 + max(len(n) for _, n, _ in laid) * 44 + 8 \
-        + max(len(r) for _, _, r in laid) * 34
+    ft, fc = ts.serif(T.SIZE_QUOTE, medium=True), ts.sans(T.SIZE_BODY, 300)
+    title_lines = ts.wrap(title, ft, T.MEASURE_BODY - 20) if title else []
+    caption_lines = ts.wrap(caption, fc, T.MEASURE_DECK) if caption else []
 
-    note_lines = ts.wrap(note, ts.sans(27, 300), T.MEASURE_BODY) if note else []
-    block = fig_h + caption_h
-    height = block + (56 + len(note_lines) * T.LEAD_BODY if note_lines else 0)
-    y = ts.centre_y(height)
-
-    for i, (group, name_lines, role_lines) in enumerate(laid):
-        cx = T.MARGIN + i * slot + slot // 2
-        marks = group["initials"]
-        first = cx - (len(marks) - 1) * step / 2
-        for k, initial in enumerate(marks):
-            _signet(img, first + k * step, y, fig_h, T.INK_2, initial)
-
-        ty = y + fig_h + 34
-        for line in name_lines:
-            ts.text(d, (cx - fn.getlength(line) / 2, ty), line, fn, T.INK)
-            ty += 44
-        ty += 8
-        for line in role_lines:
-            ts.text(d, (cx - fr.getlength(line) / 2, ty), line, fr, T.INK_3)
-            ty += 34
-
-    if note_lines:
-        y += block + 56
-        for line in note_lines:
-            ts.text(d, (T.MARGIN, y), line, ts.sans(27, 300), T.INK_3)
-            y += T.LEAD_BODY
+    y = T.BAND_BOTTOM - (len(title_lines) * 68
+                         + (22 if caption_lines else 0)
+                         + len(caption_lines) * T.LEAD_BODY)
+    for line in title_lines:
+        ts.text(d, (T.MARGIN, y), line, ft, T.INK, optical=True)
+        y += 68
+    y += 22
+    for line in caption_lines:
+        ts.text(d, (T.MARGIN, y), line, fc, T.INK_2)
+        y += T.LEAD_BODY
     return img
 
 
@@ -483,7 +417,7 @@ TYPES = {
     "flow": flow,
     "structure": structure,
     "chain": chain,
-    "people": people,
+    "photo": photo,
     "timeline": timeline,
     "compare": compare,
     "chart": chart,
