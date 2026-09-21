@@ -8,9 +8,10 @@ argument-hint: "<campaign objective or product>"
 
 # Campaign Plan
 
-Vendored from `anthropics/knowledge-work-plugins`, `marketing/skills/campaign-plan`,
-so that it travels with this repository rather than depending on the marketing
-plugin being enabled for a particular project group. Upstream carries a
+Vendored from `anthropics/knowledge-work-plugins` (Apache 2.0),
+`marketing/skills/campaign-plan`, so that it travels with this repository
+rather than depending on the marketing plugin being enabled for a particular
+project group. Upstream carries a
 `CONNECTORS.md` and a set of marketing MCP servers; neither is used here, and
 the skill works without them.
 
