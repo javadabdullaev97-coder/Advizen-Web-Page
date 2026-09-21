@@ -22,12 +22,16 @@ The site serves international investors, executives, and legal/finance professio
 - **Hairline Border** (`#2A2A2A`) — Structural 1px dividers between sections and cells.
 - **Border Light** (`#333333`) — Hovered border state. Slightly brighter.
 - **Warm Parchment** (`#D9D4CE`) — Primary foreground text. Deliberately warm — not cold white. This warmth is the brand's human signature against cold dark backgrounds.
-- **Steel Muted** (`#999999`) — Secondary text, labels, metadata, eyebrows.
-- **Charcoal Muted** (`#666666`) — Tertiary text, footer copyright, placeholder states.
+- **Warm Muted** (`#9B938A`) — Secondary text, labels, metadata, eyebrows.
+- **Warm Dim** (`#6C665F`) — Tertiary text, footer copyright, placeholder states.
 - **Oxblood Crimson** (`#940e27`) — The single accent. CTAs, active indicators, accent lines, map pulses, beam animations. All crimson usage traces back to this one root.
 - **Crimson Bright** (`#b01535`) — Hover state for crimson elements. 20% brighter, never neon.
 - **Crimson Dark** (`#6e0a1c`) — Pressed/active state for crimson. Deeper, more confident.
 - **Crimson RGB** (`148, 14, 39`) — Used in `rgba()` for ambient glows: `rgba(148,14,39,0.12)` to `rgba(148,14,39,0.04)`.
+
+**One warm hue for every grey.** Parchment, Warm Muted and Warm Dim sit on a single hue — 34°, 13% saturation — descending in lightness. This is load-bearing, not cosmetic: the neutral greys they replaced (`#999999`, `#666666`) read cold beside Warm Parchment, and every pairing of the two looked muddy. Derive any new grey from the same hue; never take one from a neutral scale.
+
+**One crimson mark per view.** Crimson marks a single thing in any one composition — an accent rule, or a set of numerals, or one bar in a chart, or one active indicator. Never two of those at once. Crimson appearing in three or four roles stops reading as an accent and starts reading as noise.
 
 **Banned color patterns:**
 - Pure black `#000000` — use Void Canvas instead
@@ -40,8 +44,9 @@ The site serves international investors, executives, and legal/finance professio
 
 ## 3. Typography Rules
 
-- **Display / Wordmark:** `Raleway` — Weight 400–500, letter-spacing `0.12em`, used exclusively for the ADVIZEN logotype at large scale. Evokes luxury editorial rather than corporate.
-- **Section Headlines:** `Outfit` or `Cabinet Grotesk` — Weight 600, tracking `-0.01em`. Confident without being aggressive. Replace Inter for all heading contexts.
+- **Editorial Display:** `Spectral` — Weight 400 for pull quotes and standfirsts, 500 for headlines and display figures. The brand's display voice wherever one line has to carry a composition on its own: card headlines, quotes, large figures. A transitional serif set against a neutral grotesque gives hierarchy real character; a grotesque against itself can only vary weight and size, which on a near-black field reads as a software interface rather than a publication. Spectral also carries Cyrillic, which `Outfit` does not.
+- **Wordmark:** `Raleway` — Weight 400–500, letter-spacing `0.12em`, used exclusively for the ADVIZEN logotype. Evokes luxury editorial rather than corporate.
+- **Section Headlines (interface):** `Outfit` or `Cabinet Grotesk` — Weight 600, tracking `-0.01em`. Latin interface headings on the site. Replace Inter for all heading contexts.
 - **Body / UI:** `Geist` — Weight 300–500, relaxed leading `1.65`, max `65ch` per line. Clean, technical, neutral. Replaces Inter for all paragraph and navigation contexts.
 - **Mono / Numbers / Metadata:** `Geist Mono` — For transaction amounts (`$10B+`), counters, tabular data, track record stats. Every number in dense data contexts must use monospace.
 - **Eyebrow Labels:** `Geist` or `Outfit` — `text-[11px]`, `tracking-[0.28em]`, `uppercase`, `text-muted`. The pattern `tracking-luxury` (0.22–0.38em spaced caps) is the brand's typographic fingerprint. Keep this.
@@ -49,7 +54,8 @@ The site serves international investors, executives, and legal/finance professio
 
 **Banned:**
 - `Inter` in any headline or display context
-- Generic serif fonts (`Georgia`, `Times New Roman`, `Garamond`)
+- Generic and system serifs (`Georgia`, `Times New Roman`, `Garamond`, `Palatino`). `Spectral` is the one permitted serif, chosen deliberately — it is not a licence for serifs in general.
+- More than two families in a single composition: one display, one text. A third family always reads as an accident.
 - Font sizes below `11px`
 - Weight 700+ in body text — authority comes from spacing and color, not bold
 
@@ -203,7 +209,8 @@ Two variants only. Both `rounded-full`, no sharp corners.
 ### Visual
 - No emojis anywhere in the UI
 - No `Inter` font in headlines or display contexts
-- No generic serif fonts (`Georgia`, `Times New Roman`, `Garamond`, `Palatino`)
+- No generic or system serifs (`Georgia`, `Times New Roman`, `Garamond`, `Palatino`) — `Spectral` is the one permitted serif, see §3
+- No third typeface in a composition beyond one display and one text family
 - No pure black `#000000` — use `#0D0D0D` minimum
 - No neon outer-glow shadows on buttons or cards
 - No purple, violet, or blue accent colors — crimson only
@@ -232,3 +239,36 @@ Two variants only. Both `rounded-full`, no sharp corners.
 - No CSS animations on `width`, `height`, `top`, `left`
 - No `position: fixed` elements with expensive paint (disable grain/glow on mobile)
 - No animation delays over `400ms` for user-triggered interactions
+
+---
+
+## 10. Social Cards
+
+Instagram, Facebook and LinkedIn cards are the same publication as the site, at a different size. They are set in the same two typefaces, on the same warm ramp, under the same crimson rule.
+
+**Canvas.** `1080 × 1350` (4:5 — the largest portrait format the feed allows). Margin `100px` on every side. Film grain at `0.05`, matching `body::after`.
+
+**The grid.** Four elements, and no more. Anything beyond these has to earn its place by removing something else:
+
+1. Eyebrow — category, uppercase, `tracking 0.18em`, Warm Dim, at `y 112`
+2. Content band — `y 268` to `y 1048`, optically centred within it
+3. Crimson mark — one per card (see §2), sitting at `y 1118`
+4. Wordmark and counter — ADVIZEN left, `04/06` in Geist Mono right, at `y 1172`
+
+`0.18em` on the eyebrow, not the site's `0.28em`: at card scale the wider tracking reads as a mannerism rather than a fingerprint.
+
+**Typeface roles are absolute.** Spectral takes every display line — headlines, pull quotes, and large figures, including numeric ones such as `$38.4B`. Geist takes labels, body and tabular values; Geist Mono takes chart values, year labels and the counter. A display figure belongs to Spectral even though it is a number — display is a role, not a character set.
+
+**Card types.**
+
+| Type | Use | Crimson mark |
+|---|---|---|
+| Cover | Title and standfirst. Serif at `78px`, deck at `31px` Geist 300 on a `620px` measure | accent rule |
+| Diagram | A mechanism drawn rather than described — panels in `#1C1A18`, connectors in `#34302D` | the single stroke into the outcome |
+| Quote | One proposition, Spectral `50px`, centred in the band | accent rule |
+| Numbered | Up to three items — Spectral name, Geist description, mono numeral | the numerals |
+| Chart | Display figure, label, bars | the final bar |
+
+**Editorial rules.** No hook, no cliffhanger, no engagement bait, no emoji, no "swipe" prompt. Every slide states a complete proposition; a slide that only sets up the next one is cut. Captions run 120–200 words of connected prose, five subject hashtags at most. Any figure on a card carries its source on the same card.
+
+**Never:** photographs of the team in casual settings, holiday greetings, motivational quotes, handshakes, globes, stock imagery of any kind.
