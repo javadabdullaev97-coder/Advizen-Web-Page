@@ -229,6 +229,8 @@ post. One of those is worth more than a month of impressions.
 
 ---
 
-Run `marketing:campaign-plan` against this file once the marketing plugin
-is loaded — it was enabled mid-session and its skills were not available
-to the session that wrote this.
+Run through `marketing:campaign-plan`. The result is in
+[CAMPAIGN-BRIEF.md](CAMPAIGN-BRIEF.md): the measurable objective, the
+production calendar that runs ahead of this one, the asset count, targets,
+and the six risks — of which the first, that the publishing pipeline Phase
+2 assumes does not exist yet, is the one that can stop this mid-October.
