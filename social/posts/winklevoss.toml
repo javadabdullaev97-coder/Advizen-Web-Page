@@ -4,15 +4,6 @@ title = "$65 млн за идею"
 deck = "Winklevoss против Facebook и цена мирового соглашения"
 
 [[slide]]
-type = "people"
-eyebrow = "Стороны"
-note = "Близнецы наняли однокурсника дописать код социальной сети для студентов Гарварда. Через четыре месяца он запустил собственную."
-groups = [
-  { initials = ["К", "Т"], name = "ConnectU", role = "Кэмерон и Тайлер Уинклвосс, Дивья Нарендра" },
-  { initials = ["М"], name = "Facebook", role = "Марк Цукерберг" },
-]
-
-[[slide]]
 type = "timeline"
 eyebrow = "Хронология"
 events = [
