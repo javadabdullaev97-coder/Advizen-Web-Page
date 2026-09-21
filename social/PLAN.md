@@ -155,3 +155,39 @@ November, a quarter by December, with original work taking over.
    draft. None has been checked against a primary source.
 3. **Account status.** Whether the LinkedIn company page is filled, whether
    a Facebook page exists, whether PPA has been imposed.
+
+---
+
+## What this plan does not yet cover
+
+A schedule of topics is not a campaign. Five things are missing, and three
+of them need the owner's answer before they can be written.
+
+**Audience, per platform.** The plan lists topics without saying who they
+are for, and the platforms are near opposites: LinkedIn reaches an
+international investor and their counsel, Instagram a Russian-speaking
+founder in Tashkent. That decides depth as much as language — the foreign
+reader needs the Uzbek context explained, the local one does not.
+
+**Measurement.** Nothing here says how we would know it is working. Needs
+a baseline (currently zero everywhere), a monthly review, and a stated
+threshold below which a topic counts as a failure.
+
+**The objective.** Recognition, inbound enquiries and recruiting imply
+three different plans. As written this one is tuned for recognition and
+trust. If the goal is enquiries it should look different. *Owner's call.*
+
+**The path from a post to a conversation.** Someone reads the permanent
+establishment piece, recognises their own exposure, and then what? There
+is no step. This is not about adding a call to action — it is about
+deciding what should happen at all. *Owner's call.*
+
+**The partners' own profiles.** In consulting a post from a named person
+outperforms the company page severalfold, and it is the only free reach
+multiplier available. The pattern is: the partner publishes, the company
+page reshares. Needs to know which partners will post under their own
+name. *Owner's call.*
+
+Run `marketing:campaign-plan` against this file once the marketing plugin
+is loaded — it was enabled mid-session and its skills were not available
+to the session that wrote this.
