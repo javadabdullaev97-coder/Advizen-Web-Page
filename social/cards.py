@@ -91,6 +91,27 @@ def numbered(*, items, eyebrow=None, counter=None, start=1, **_):
 
 # ── Diagrams ────────────────────────────────────────────────────────
 
+def _figure(d, cx, top, height, colour, *, width=2):
+    """
+    A person, drawn in the same hairline language as the boxes.
+
+    Original geometry on purpose. A card about a named individual may not
+    carry their photograph — the likeness is theirs and the photograph is
+    the photographer's — and a stock pictogram would sit outside the brand
+    entirely. A circle and an arc read as a person at feed size and belong
+    to nobody.
+    """
+    r = height * 0.26
+    d.ellipse([cx - r, top, cx + r, top + 2 * r], outline=colour, width=width)
+
+    body_top = top + 2 * r + height * 0.10
+    bw, bh = r * 2.5, height - (2 * r) - height * 0.10
+    d.arc([cx - bw / 2, body_top, cx + bw / 2, body_top + bh * 2],
+          start=180, end=360, fill=colour, width=width)
+    d.line([(cx - bw / 2, body_top + bh), (cx + bw / 2, body_top + bh)],
+           fill=colour, width=width)
+
+
 def _node(d, box, label, value, *, accent=False):
     x0, y0, x1, y1 = box
     d.rectangle(box, fill=(38, 20, 24) if accent else T.PANEL,
@@ -200,6 +221,127 @@ def structure(*, parent, children, note=None, eyebrow=None, counter=None, **_):
     return img
 
 
+def chain(*, nodes, person, note=None, eyebrow=None, counter=None, **_):
+    """
+    An ownership chain resolving to a natural person.
+
+    This is the definition of a beneficial owner drawn rather than stated:
+    however many companies sit in the middle, the chain ends at someone.
+    The figure is the card's crimson mark.
+    """
+    img, d = _canvas(eyebrow, counter, mark=False)
+
+    box_h, link = 84, 42
+    fig_h = 108
+    fn, fl = ts.sans(27, 400), ts.sans(19)
+
+    note_lines = ts.wrap(note, ts.sans(27, 300), T.MEASURE_BODY) if note else []
+    height = (len(nodes) * box_h + len(nodes) * link + fig_h + 96
+              + (64 + len(note_lines) * T.LEAD_BODY if note_lines else 0))
+    y = ts.centre_y(height)
+
+    mid = T.MARGIN + T.MEASURE_BODY // 2
+    for node in nodes:
+        d.rectangle([T.MARGIN, y, T.MARGIN + T.MEASURE_BODY, y + box_h], fill=T.PANEL)
+        ts.text(d, (T.MARGIN + 26, y + 26), node["label"], fn, T.INK_2)
+        if node.get("value"):
+            f = ts.mono(26, 500)
+            d.text((T.MARGIN + T.MEASURE_BODY - 26 - f.getlength(node["value"]), y + 28),
+                   node["value"], font=f, fill=T.INK_3)
+        y += box_h
+        d.line([(mid, y), (mid, y + link)], fill=T.LINE, width=1)
+        y += link
+
+    _figure(d, mid, y, fig_h, T.CRIMSON, width=3)
+    y += fig_h + 30
+
+    f = ts.serif(38, medium=True)
+    w = f.getlength(person["name"])
+    ts.text(d, (mid - w / 2, y), person["name"], f, T.INK)
+    y += 52
+    w = ts.tracked_width(person["role"].upper(), fl, 19 * 0.18)
+    ts.tracked(d, (mid - w / 2, y), person["role"].upper(), fl, T.INK_3, 19 * 0.18)
+
+    if note_lines:
+        y += 64
+        for line in note_lines:
+            ts.text(d, (T.MARGIN, y), line, ts.sans(27, 300), T.INK_3)
+            y += T.LEAD_BODY
+    return img
+
+
+def people(*, groups, note=None, eyebrow=None, counter=None, **_):
+    """Parties to a dispute, as figures rather than as a list of names."""
+    img, d = _canvas(eyebrow, counter)
+
+    fig_h = 122
+    # Wider than a head, or a pair reads as one blot at feed size.
+    step = 88
+    fn, fr = ts.serif(34, medium=True), ts.sans(24, 300)
+
+    slot = T.MEASURE_BODY // len(groups)
+    measure = slot - 40
+    laid = [(g, ts.wrap(g["name"], fn, measure)[:2], ts.wrap(g["role"], fr, measure)[:2])
+            for g in groups]
+    caption_h = 34 + max(len(n) for _, n, _ in laid) * 44 + 8 \
+        + max(len(r) for _, _, r in laid) * 34
+
+    note_lines = ts.wrap(note, ts.sans(27, 300), T.MEASURE_BODY) if note else []
+    block = fig_h + caption_h
+    height = block + (56 + len(note_lines) * T.LEAD_BODY if note_lines else 0)
+    y = ts.centre_y(height)
+
+    for i, (group, name_lines, role_lines) in enumerate(laid):
+        cx = T.MARGIN + i * slot + slot // 2
+        count = group.get("figures", 1)
+        first = cx - (count - 1) * step / 2
+        for k in range(count):
+            _figure(d, first + k * step, y, fig_h, T.INK_2)
+
+        ty = y + fig_h + 34
+        for line in name_lines:
+            ts.text(d, (cx - fn.getlength(line) / 2, ty), line, fn, T.INK)
+            ty += 44
+        ty += 8
+        for line in role_lines:
+            ts.text(d, (cx - fr.getlength(line) / 2, ty), line, fr, T.INK_3)
+            ty += 34
+
+    if note_lines:
+        y += block + 56
+        for line in note_lines:
+            ts.text(d, (T.MARGIN, y), line, ts.sans(27, 300), T.INK_3)
+            y += T.LEAD_BODY
+    return img
+
+
+def timeline(*, events, eyebrow=None, counter=None, **_):
+    """Dated sequence. The decisive entry carries the crimson."""
+    img, d = _canvas(eyebrow, counter, mark=False)
+
+    fy, ft = ts.mono(26, 500), ts.sans(27, 300)
+    label_w, row_gap = 150, 30
+    measure = T.MEASURE_BODY - label_w
+
+    wrapped = [(e, ts.wrap(e["text"], ft, measure)) for e in events]
+    height = sum(len(lines) * T.LEAD_BODY + row_gap for _, lines in wrapped)
+    y = ts.centre_y(height)
+
+    for i, (event, lines) in enumerate(wrapped):
+        accent = event.get("accent", False)
+        if i:
+            d.line([(T.MARGIN, y - row_gap // 2),
+                    (T.MARGIN + T.MEASURE_BODY, y - row_gap // 2)], fill=T.LINE, width=1)
+        d.text((T.MARGIN, y + 2), str(event["year"]), font=fy,
+               fill=T.CRIMSON if accent else T.INK_3)
+        for line in lines:
+            ts.text(d, (T.MARGIN + label_w, y), line, ft,
+                    T.INK if accent else T.INK_2)
+            y += T.LEAD_BODY
+        y += row_gap
+    return img
+
+
 def compare(*, columns, rows, eyebrow=None, counter=None, **_):
     """Two regimes side by side. Hairlines only — no boxes, no zebra."""
     img, d = _canvas(eyebrow, counter)
@@ -268,6 +410,9 @@ TYPES = {
     "numbered": numbered,
     "flow": flow,
     "structure": structure,
+    "chain": chain,
+    "people": people,
+    "timeline": timeline,
     "compare": compare,
     "chart": chart,
 }
