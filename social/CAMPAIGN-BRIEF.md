@@ -40,7 +40,7 @@ is a rate of change against nothing.
   all four disciplines, so the practice is legible before a word of
   self-description.
 - A LinkedIn page that survives inspection by a foreign investor's counsel
-  — thirteen long-form English pieces by year end.
+  — twelve long-form English pieces by year end, one per Tuesday topic.
 - Two to three topics identified by engagement as candidates for full
   articles on the site.
 
@@ -112,7 +112,7 @@ Assessment against the framework:
 | Channel | Fit | Effort | Assessment |
 |---|---|---|---|
 | Instagram | Growth channel. Carousel suits mechanism-drawing. Bio link is the only route off-platform. | High — six cards per topic | Correctly identified as the growth channel. The `/insights` bio link is right. |
-| LinkedIn | Credibility surface for foreign readers, not a distribution channel | High per piece, half rhythm | The half-rhythm argument is sound and unusually honest. Thirteen substantial pieces beat twenty-six thin ones on a page nobody follows. |
+| LinkedIn | Credibility surface for foreign readers, not a distribution channel | High per piece, half rhythm | The half-rhythm argument is sound and unusually honest. Twelve substantial pieces beat twenty-six thin ones on a page nobody follows. |
 | Facebook | Local community, older skew, carries the link | Medium — two language versions | Two separate posts per topic doubles the copy load for the weakest channel. See risk 4. |
 | Twitter / X | Peer visibility, volume | Low per post | Saturday notes are unassigned from 15 October onward. See gap 2. |
 
@@ -162,7 +162,7 @@ rest could be, if there were anyone to delegate to.
 
 So the constraint is no longer ownership but capacity, and it moves to the
 top of the risk list: a single-owner calendar has no slack in it. The place
-that shows first is the 117 pieces of copy in § 6 — see the batching note
+that shows first is the 116 pieces of copy in § 6 — see the batching note
 there, which is what makes the number survivable.
 
 Three rules from the framework that the plan should adopt: leave roughly a
@@ -179,9 +179,15 @@ wrappers — which is the plan's own stated standard.
 
 **Per topic, must-have**: Instagram carousel (TOML plus six rendered cards),
 Facebook post RU, Facebook post EN, Twitter post EN. LinkedIn long-form EN
-on Tuesday topics only — thirteen of twenty-six.
+on Tuesday topics only — twelve of twenty-six.
 
-That is 26 × 4 + 13 = **117 pieces of copy**, plus 26 carousels at six
+Twelve, not thirteen: the calendar holds twelve Tuesdays, twelve Thursdays
+and the two October Saturdays of the manual phase. An earlier count said
+thirteen. Adding the 01.10 introduction to LinkedIn would have made it
+thirteen and was considered and rejected — the page opens on substance, not
+on a description of the firm.
+
+That is 26 × 4 + 12 = **116 pieces of copy**, plus 26 carousels at six
 cards each, plus roughly 10 Saturday notes. Against a plan whose stated
 cost is "writing the text — once a month, for the whole month", this is the
 number that decides whether the schedule is real. Nothing in the plan or
@@ -191,7 +197,7 @@ The framework's own benchmark for a social post is one to two business days
 from draft to scheduled. Taken per piece that gives a number with no
 relation to a thirteen-week campaign, which is the point: **the batching is
 load-bearing, not a preference.** One topic researched once and cut four
-ways in a sitting is the only shape in which 117 pieces fits, and it is
+ways in a sitting is the only shape in which 116 pieces fits, and it is
 also the shape the plan needs editorially — four cuts written apart become
 four wrappers. If the batching slips to piece-by-piece production, the
 schedule fails on arithmetic before it fails on quality.
@@ -229,7 +235,7 @@ numbers at the end of month one:
 | Instagram followers | 300–500 | Native |
 | Instagram saves per post | Median above 2% of reach | Native — saves matter more than likes for this material |
 | Link clicks to `/insights`, all platforms | 250+ | Site analytics by referrer |
-| LinkedIn page: complete and 13 pieces live | Yes | Manual |
+| LinkedIn page: complete and 12 pieces live | Yes | Manual |
 
 The plan's two editorial rules stand and are the point of measuring at all:
 a topic below half the account's median drops out of rotation; a topic well
@@ -243,7 +249,7 @@ Reporting: monthly. Anything more frequent on a zero baseline is noise.
 
 ## 8. Budget
 
-None allocated. See § 4. The costs that exist are time — roughly 117 pieces
+None allocated. See § 4. The costs that exist are time — roughly 116 pieces
 of copy — and whatever the publishing automation takes to build.
 
 ---
