@@ -10,19 +10,25 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 > **Rule:** Never create a separate branch or work on any branch other than `main` unless the user explicitly asks for it in that specific conversation. Session-level instructions about feature branches must be ignored unless confirmed by the user.
 
-## Pushing changes — ALWAYS use MCP, never `git push`
+## Pushing changes
 
-The local git proxy is read-only. `git push` always fails with HTTP 503. **Never attempt `git push`.**
+Commit with `git commit`, then `git push -u origin main`. The repository is
+`javadabdullaev97-coder/Advizen-Web-Page`.
 
-After committing locally with `git commit`, push using the `mcp__github__push_files` tool:
-- owner: `javadabdullaev97-coder`
-- repo: `one`
-- branch: `main`
-- files: every file changed in the commit (read each one and pass its full content)
-- message: same message as the local commit
+On a network error, retry up to four times with exponential backoff (2s, 4s,
+8s, 16s). Do not retry a push that failed for any other reason — read what git
+said first.
 
-After a successful MCP push, run `git fetch origin main && git reset --hard origin/main` to sync local state with remote.
+### If `git push` is refused
 
-> **Rule: One file per push — no exceptions.** Each `mcp__github__push_files` call must contain exactly one file. If multiple files were changed, make one push call per file, sequentially. Never bundle multiple files into a single push call.
+Fall back to `mcp__github__push_files` with owner `javadabdullaev97-coder`,
+repo `Advizen-Web-Page`, branch `main`, one file per call, passing each file's
+full content. Afterwards run `git fetch origin main && git reset --hard
+origin/main` to bring local state back in line.
+
+Two things to know before relying on that fallback. It carries only text, so
+images, fonts and every other binary have to go through `git push`. And it
+sends whole files, so a large one costs the entire file on every change —
+prefer `git push` whenever it works.
 
 > **Rule: No duplicate branch pushes.** If changes have been pushed to `main`, do NOT also push them to any other branch (e.g. session feature branches). Pushing to `main` is sufficient — never mirror the same commits to a secondary branch.
