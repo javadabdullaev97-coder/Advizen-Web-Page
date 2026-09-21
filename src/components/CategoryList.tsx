@@ -50,7 +50,7 @@ function CategoryRowInner({ item }: { item: CategoryItem }) {
         )}
         <h3
           className={cn(
-            "font-serif tracking-wide text-[#999] origin-left transition-all duration-400 ease-out",
+            "font-serif tracking-wide text-muted origin-left transition-all duration-400 ease-out",
             "group-hover:text-white group-hover:scale-[1.03] group-hover:translate-x-1",
             "group-focus-visible:text-white group-focus-visible:scale-[1.03] group-focus-visible:translate-x-1",
             item.featured ? "text-2xl md:text-3xl" : "text-xl md:text-2xl",
@@ -63,12 +63,12 @@ function CategoryRowInner({ item }: { item: CategoryItem }) {
       {/* Right: category + arrow */}
       <div className="relative z-10 flex items-center gap-6 md:gap-8">
         {item.subtitle && (
-          <span className="hidden sm:block text-sm uppercase tracking-wider text-[#999]/60 transition-colors duration-300 group-hover:text-white/50 group-focus-visible:text-white/50">
+          <span className="hidden sm:block text-sm uppercase tracking-wider text-muted/60 transition-colors duration-300 group-hover:text-white/50 group-focus-visible:text-white/50">
             {item.subtitle}
           </span>
         )}
         <svg
-          className="w-5 h-5 shrink-0 text-[#999]/40 transition-all duration-300 group-hover:text-primary group-hover:translate-x-1 group-focus-visible:text-primary group-focus-visible:translate-x-1"
+          className="w-5 h-5 shrink-0 text-muted/40 transition-all duration-300 group-hover:text-primary group-hover:translate-x-1 group-focus-visible:text-primary group-focus-visible:translate-x-1"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
