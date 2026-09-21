@@ -1,0 +1,44 @@
+# Specimen, not a post. Shows the three card types deadlock.toml does not
+# use, so the layouts can be checked after a change to theme.py or cards.py.
+# Every figure below is invented — nothing here is publishable.
+
+slug = "_specimen"
+category = "Образец вёрстки"
+title = "Типы карточек"
+deck = "Проверочный файл. Данные условные, публикации не подлежит."
+
+[[slide]]
+type = "structure"
+eyebrow = "Структура владения"
+note = "Холдинговая компания держит доли напрямую; операционные риски разнесены."
+parent = { label = "Холдинговая компания", value = "100%" }
+children = [
+  { label = "Операционная компания", value = "100%" },
+  { label = "Владелец активов", value = "100%" },
+  { label = "Сервисная компания", value = "75%" },
+]
+
+[[slide]]
+type = "compare"
+eyebrow = "Сравнение режимов"
+columns = ["ТМФЦ", "AIFC"]
+rows = [
+  { label = "Право", values = ["Общее право", "Общее право"] },
+  { label = "Год запуска", values = ["2026", "2018"] },
+  { label = "Налог на прибыль", values = ["0% до 2076", "0% до 2066"] },
+  { label = "Суд", values = ["Собственный", "Собственный"] },
+]
+
+[[slide]]
+type = "chart"
+eyebrow = "Условный ряд"
+value = "38.4"
+label = "единиц на конец периода"
+source = "Образец. Перед публикацией любая цифра сверяется с первоисточником."
+series = [
+  { label = "2022", value = 8.2 },
+  { label = "2023", value = 14.1 },
+  { label = "2024", value = 19.6 },
+  { label = "2025", value = 26.8 },
+  { label = "2026", value = 38.4 },
+]
