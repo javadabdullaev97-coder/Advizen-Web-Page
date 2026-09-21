@@ -142,22 +142,28 @@ dates by the lead times below.
 
 | Week | Produce | For | Owner | Blocks | Status |
 |---|---|---|---|---|---|
-| 21–27 Sep | Phase 0 in full (§ 10), PPA check first | — | **unassigned** | everything; overdue | not started |
-| 21–27 Sep | Six October texts, all four cuts each | 01.10–13.10 | **unassigned** | Phase 1 cannot start without the block | not started |
-| 28 Sep–4 Oct | Render and approve six posts; verify cards reach public URLs | 01.10 | **unassigned** | Instagram fetches by URL — cards must be live on the site first | not started |
-| 5–11 Oct | Remaining five October texts | 15.10–29.10 | **unassigned** | | not started |
-| 12–18 Oct | Publishing automation working end to end | 15.10 | **unassigned** | Phase 2 as designed | not started |
-| 19–25 Oct | Eight November texts | 03.11–26.11 | **unassigned** | three are new, no source article | not started |
-| 26 Oct–1 Nov | Fact-check pass on ubo, deadlock, winklevoss | 01.12–08.12 | **unassigned** | drafts cannot publish unchecked | not started |
-| 16–22 Nov | Seven December texts | 01.12–22.12 | **unassigned** | four are new | not started |
-| 14–20 Dec | Month-three review; decide on `/store` route | January | **unassigned** | | not started |
+| 21–27 Sep | Phase 0 in full (§ 10), PPA check first | — | Javad | everything; overdue | not started |
+| 21–27 Sep | Six October texts, all four cuts each | 01.10–13.10 | Javad | Phase 1 cannot start without the block | not started |
+| 28 Sep–4 Oct | Render and approve six posts; verify cards reach public URLs | 01.10 | Javad | Instagram fetches by URL — cards must be live on the site first | not started |
+| 5–11 Oct | Remaining five October texts | 15.10–29.10 | Javad | | not started |
+| 12–18 Oct | Publishing automation working end to end | 15.10 | Javad | Phase 2 as designed | not started |
+| 19–25 Oct | Eight November texts | 03.11–26.11 | Javad | three are new, no source article | not started |
+| 26 Oct–1 Nov | Fact-check pass on ubo, deadlock, winklevoss | 01.12–08.12 | Javad | drafts cannot publish unchecked | not started |
+| 16–22 Nov | Seven December texts | 01.12–22.12 | Javad | four are new | not started |
+| 14–20 Dec | Month-three review; decide on `/store` route | January | Javad | | not started |
 
-**Every row is unassigned, and that is the finding, not a formatting gap.**
-The framework asks for an owner per row because a date without a name is a
-wish. Nine rows, no names, and the first one is already overdue — which is
-risk 6 restated as a schedule rather than as prose. One name against the
-first three rows would settle most of it; the owner's own two items (firm
-facts, and which figures may be stated) cannot move to anyone else.
+**Every row is Javad's.** The framework asks for an owner per row because a
+date without a name is a wish, and the answer here is that there is one
+person. That settles who, and it sharpens what the schedule is actually
+claiming: nine rows of production, one owner, thirteen weeks, starting from
+a row that is already overdue. Two of the items cannot be delegated even in
+principle — the firm facts, and which figures may be stated publicly. The
+rest could be, if there were anyone to delegate to.
+
+So the constraint is no longer ownership but capacity, and it moves to the
+top of the risk list: a single-owner calendar has no slack in it. The place
+that shows first is the 117 pieces of copy in § 6 — see the batching note
+there, which is what makes the number survivable.
 
 Three rules from the framework that the plan should adopt: leave roughly a
 fifth of Twitter slots open for reactive material; batch text production by
@@ -281,17 +287,23 @@ in a firm's first quarter is expensive in a way an empty week is not.
 *Mitigation*: primary-source pass before 1 November, per the calendar. A
 topic that fails the check gets replaced, not softened.
 
-**6. Phase 0 has no owner, and its date has now passed.** As of 21
-September all three items in `PLAN.md` § Open before drafting starts are
-still open, with ten days to the first post. One of them, Facebook Page
+**6. Phase 0 is overdue, and its owner has no second.** As of 21 September
+all three items in `PLAN.md` § Open before drafting starts are still open,
+with ten days to the first post. Ownership is now settled — every row in
+§ 5 is Javad's — which converts this from an unassigned risk into a
+single-point-of-failure one: nothing in the calendar has a fallback, and an
+illness or a client week in October takes the schedule with it. One of them, Facebook Page
 Publishing Authorization, takes days to clear and blocks API publishing
 entirely; it has to be checked this week or Facebook is manual through
 October whatever the pipeline does. The plan said to find out now. Nothing
 records who is finding out, and that is why the date slipped rather than
 being missed for any substantive reason.
-*Mitigation*: name one owner for Phase 0 today. The two items that cannot
-be delegated — firm facts for the first post, and which figures may be
-stated publicly — are the owner's; the rest is checking.
+*Mitigation*: the two items that genuinely cannot be delegated are the
+firm facts and which figures may be stated publicly. Everything else —
+the PPA check, the Meta setup, the rendering — is checking and could be
+handed over the moment there is a second pair of hands. Until then, run the
+month's batch early rather than on the date, so that a lost week costs
+slack instead of a slot.
 
 ---
 
@@ -299,11 +311,14 @@ stated publicly — are the owner's; the rest is checking.
 
 Blocking, before anything publishes. All of it was due by 20 September and
 none of it is done, so the order below is now the order of the week, not of
-the month:
+the month. All five are Javad's, and they are listed in the order that
+unblocks the most — item 2 is first by the clock even though it is second
+on the page, because PPA clears in days and nothing else has a queue in
+front of it:
 
 1. **Firm facts for the first post.** Years in practice, projects, sectors,
-   and which figures may be stated publicly. Owner only. This is the one
-   text nobody else can write.
+   and which figures may be stated publicly. This is the one text nobody
+   else could write even with help.
 2. **Account status.** Does the Facebook page exist, has PPA been imposed,
    is the LinkedIn company page filled. Check today — PPA clears in days,
    not hours, and there are ten of them left.
