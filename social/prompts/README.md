@@ -71,6 +71,11 @@ treatment loses everything that made it a scene.
   loses its edges to the centre crop.
 - **No text in the frame.** Every letter and numeral comes from
   `theme.py`. A generator cannot set Spectral and cannot spell `$10 млрд+`.
+- **The renderer only darkens. It never brightens.** A frame that arrives
+  far below target stays that dark and prints as a black rectangle;
+  `_backdrop` warns on it now. Always generate lighter than the card
+  should end up, and let the flatten bring it down. This applies to a
+  graphic on a studio backdrop exactly as it does to a room.
 - **Brief the picture as daylight, never as darkness.** `scene` flattens
   whatever arrives down to `theme.SCENE_TARGET`, and `_backdrop` does the
   same toward `GROUND_TARGET`. The darkness is the renderer's, applied to

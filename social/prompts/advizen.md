@@ -63,29 +63,36 @@ of what was meant — that there is nobody there to help.
 An exact count is not asked for. Generators cannot count, and the card's
 own text carries the seven and seven.
 
-```
-A dark product-photography scene. A dozen or so small tiles of smoked
-dark glass float at different depths against a near-black ground,
-arranged in a loose arc. Each tile carries one simple pictogram etched
-into its surface and catching the light — a pair of scales, an hourglass,
-a key, a wax seal, a chart bar, a padlock, a banknote. Fine deep oxblood
-lines run between the tiles and gather into one larger tile at the front,
-square-on and closest to the camera, its pictogram the sharpest thing in
-the image. Real glass with weight and thickness, bevelled edges, faint
-internal reflections. Soft broad studio light from the upper left, gentle
-falloff, no hard speculars. The oxblood lines are deep and desaturated
-and are the only colour in the frame. Photorealistic macro product
-photography, 85mm, shallow depth of field, the rear tiles falling out of
-focus. The arc and the front tile occupy the lower two thirds; the upper
-third is plain dark ground and empty. 4:5 vertical, 1620x2025.
+**Brief it bright.** The first version asked for a near-black ground and
+smoked dark glass at once and came back at mean 26 against a target of
+115 — a black rectangle. Nothing in the renderer brightens a picture, only
+darkens it, so a graphic on a dark ground has to arrive clearly lit and be
+taken down, never the other way round.
 
-Negative prompt: text, letters, numbers, words, readable writing,
-watermark, logo, signage, face, eyes, portrait, people, bright red, ruby,
-scarlet, neon, glowing edges, saturated colours, orange, teal, yellow,
-rainbow refraction, hard rim light, bright white edge highlights,
-specular glare, faceted crystal, gemstone, jewellery, low-poly, cartoon,
-flat vector illustration, user interface screenshot, bright daylight,
-white background, cluttered, centred symmetrical composition.
+```
+A brightly lit studio product photograph. A dozen or so small tiles of
+clear polished glass float at different depths against a smooth mid-grey
+graphite backdrop that is lit to a visible gradient, brightest behind the
+tiles. Each tile carries one simple pictogram deeply etched into its face
+in frosted white, standing out clearly — a pair of scales, an hourglass, a
+key, a wax seal, a chart bar, a padlock, a banknote. Fine deep oxblood
+cords run between the tiles and gather into one larger tile at the front,
+square-on and closest to the camera. Thick glass with bright bevelled
+edges and crisp internal reflections. Strong soft key light from the upper
+left with a fill from the right; the whole image is bright and clearly
+readable. The oxblood cords are deep and desaturated and are the only
+colour. Photorealistic macro product photography, 85mm, shallow depth of
+field. The arc and the front tile occupy the lower two thirds; the upper
+third is plain graphite backdrop and empty. 4:5 vertical, 1620x2025.
+
+Negative prompt: dark, near-black, black background, underexposed, murky,
+low-key, dim, moody, night, text, letters, numbers, words, readable
+writing, watermark, logo, signage, face, eyes, portrait, people, bright
+red, ruby, scarlet, neon, glowing edges, saturated colours, orange, teal,
+yellow, rainbow refraction, hard rim light, specular glare, faceted
+crystal, gemstone, jewellery, low-poly, cartoon, flat vector
+illustration, user interface screenshot, white background, cluttered,
+centred symmetrical composition.
 ```
 
 ## 04 — Track record
