@@ -12,8 +12,8 @@ These are not preferences. `cards._backdrop` scales a photograph to cover
 a 1080×1350 frame and centre-crops it, then flattens it toward the void
 and closes a gradient over the lower half so type sits on solid ground.
 
-- **4:5 vertical.** 1080×1350 minimum, 2160×2700 preferred. Any other
-  aspect loses its edges to the crop.
+- **4:5 vertical.** 1080×1350, 1620×2025 or 2160×2700. Any other aspect
+  loses its edges to the crop.
 - **Subject right, lower-left empty.** Over a photograph the text block
   drops to the foot of the frame at the left margin. A subject there is a
   subject under the type.
@@ -25,6 +25,23 @@ and closes a gradient over the lower half so type sits on solid ground.
   `theme.py`. A generator cannot set Spectral, and it cannot spell
   `$10 млрд+`.
 
+## What the first pass got wrong
+
+Worth keeping, because the failures were in the prompt rather than the
+model.
+
+**Abstract sculptures do not say anything.** Faceted crystals are
+decoration; a row of dominoes with the first one tipping is an argument.
+Every subject below is an object doing something.
+
+**Hard key light with no fill** produced bright specular rims and dead
+bodies — the "white transparent edges" problem. The light is soft and
+broad now, and the glow comes from inside the object rather than off its
+corners.
+
+**`#981A30` alone gets read as ruby.** The colour has to be described as
+deep and desaturated, and bright red has to be named in the negatives.
+
 Generate two or three of each and keep the one with the emptiest lower
 left.
 
@@ -32,119 +49,129 @@ left.
 
 ## 01 — Cover
 
-For the title `Advizen` and the line about four practices in one.
+Four practices, one firm.
 
 ```
-Four tall faceted low-poly glass slabs of different heights standing
-tightly together on the right side of the frame, viewed slightly from
-below. Where the slabs overlap, the glass reads as one solid column rather
-than four separate pieces. Translucent glass with deep oxblood crimson
-(#981A30) glowing inside it and cool pale highlights along every edge.
-Near-black seamless studio background (#0D0D0D) and a polished dark floor
-holding a faint reflection. Single hard key light from the upper right,
-deep shadows, no fill light. Photorealistic 3D render, cinematic, high
-contrast. The lower-left quadrant of the frame is empty unlit negative
-space. 4:5 vertical composition.
+Four separate stacks of dark documents standing upright and close
+together on a dark desk, right of frame, clamped as one by a single deep
+oxblood band running across all four. Matte paper, deep shadow, no
+reflections on the paper. Near-black environment (#0D0D0D). Soft broad
+light falling from a window high on the right, gentle falloff, long quiet
+shadows, no hard specular highlights anywhere. The oxblood band is deep
+and desaturated, almost black in shadow, and it is the only colour in the
+frame. Photorealistic photography, shallow depth of field, calm and
+still. The lower-left quadrant of the frame is empty unlit negative
+space. 4:5 vertical, 1620x2025.
 
 Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, facial features, people, handshake, globe, world map, bright
-daylight, blue sky, green foliage, saturated colours, orange, teal,
-yellow, white background, clutter, centred composition, subject on the
-left, busy lower-left corner.
+face, people, hands, handshake, globe, bright red, ruby, scarlet,
+crimson neon, saturated colours, orange, teal, yellow, hard rim light,
+bright white edge highlights, specular glare, faceted crystal, low-poly,
+3D render look, studio seamless backdrop, bright daylight, white
+background, clutter, centred composition, subject on the left, busy
+lower-left corner.
 ```
 
-## 02 — Convergence
+## 02 — One point of contact
 
-For "seven disciplines and seven services, one point of contact".
+Fourteen services, one way in.
 
 ```
-A tight cluster of fourteen slender faceted low-poly glass rods of varying
-height rising and fanning outward from a single point at the base, on the
-right side of the frame. The convergence at the base is the brightest part
-of the image; the rods darken toward their tips. Translucent glass with
-deep oxblood crimson (#981A30) glowing inside it and cool pale highlights
-along every edge. Near-black seamless studio background (#0D0D0D) and a
-polished dark floor holding a faint reflection. Single hard key light from
-the upper right, deep shadows, no fill light. Photorealistic 3D render,
-cinematic, high contrast. The lower-left quadrant of the frame is empty
-unlit negative space. 4:5 vertical composition.
+A thick bundle of dark cables gathered and fed into one single deep
+oxblood connector, right of frame, resting on a dark surface. The cables
+spread loosely behind and the gathering point is the sharpest thing in
+the picture. Near-black environment (#0D0D0D). Soft broad light falling
+from a window high on the right, gentle falloff, long quiet shadows, no
+hard specular highlights anywhere. The oxblood connector is deep and
+desaturated, almost black in shadow, and it is the only colour in the
+frame. Photorealistic photography, shallow depth of field, calm and
+still. The lower-left quadrant of the frame is empty unlit negative
+space. 4:5 vertical, 1620x2025.
 
 Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, facial features, people, handshake, globe, world map, bright
-daylight, blue sky, green foliage, saturated colours, orange, teal,
-yellow, white background, clutter, centred composition, subject on the
-left, busy lower-left corner.
+face, people, hands, handshake, globe, bright red, ruby, scarlet,
+crimson neon, saturated colours, orange, teal, yellow, hard rim light,
+bright white edge highlights, specular glare, faceted crystal, low-poly,
+3D render look, studio seamless backdrop, bright daylight, white
+background, clutter, centred composition, subject on the left, busy
+lower-left corner.
 ```
 
-## 04 — Scale — optional
+## 04 — Track record — optional
 
-For the record: $10bn+, 80+ registrations, 30+ due diligence. The figures
-read better on the void, with nothing competing; this is here if you want
-to try it against that.
+The figures read better on the void, with nothing competing. This is here
+if you want to try it against that.
 
 ```
-One massive monolithic faceted low-poly glass block on the right side of
-the frame with a scatter of much smaller glass shards at its base, so the
-difference in scale between them is the subject. Translucent glass with
-deep oxblood crimson (#981A30) glowing inside it and cool pale highlights
-along every edge. Near-black seamless studio background (#0D0D0D) and a
-polished dark floor holding a faint reflection. Single hard key light from
-the upper right, deep shadows, no fill light. Photorealistic 3D render,
-cinematic, high contrast. The lower-left quadrant of the frame is empty
-unlit negative space. 4:5 vertical composition.
+A tall stack of dark bound case files on a dark desk, right of frame,
+seen from slightly below so the height of the stack is the subject. One
+file low in the stack has a deep oxblood spine. Worn matte board and
+paper, deep shadow. Near-black environment (#0D0D0D). Soft broad light
+falling from a window high on the right, gentle falloff, long quiet
+shadows, no hard specular highlights anywhere. The oxblood spine is deep
+and desaturated, almost black in shadow, and it is the only colour in the
+frame. Photorealistic photography, shallow depth of field, calm and
+still. The lower-left quadrant of the frame is empty unlit negative
+space. 4:5 vertical, 1620x2025.
 
 Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, facial features, people, handshake, globe, world map, bright
-daylight, blue sky, green foliage, saturated colours, orange, teal,
-yellow, white background, clutter, centred composition, subject on the
-left, busy lower-left corner.
+face, people, hands, handshake, globe, bright red, ruby, scarlet,
+crimson neon, saturated colours, orange, teal, yellow, hard rim light,
+bright white edge highlights, specular glare, faceted crystal, low-poly,
+3D render look, studio seamless backdrop, bright daylight, white
+background, clutter, centred composition, subject on the left, busy
+lower-left corner.
 ```
 
 ## 05 — Consequence
 
-For "a tax question is almost never only a tax question" — one move and
-everything downstream of it moves too.
+A tax question is almost never only a tax question.
 
 ```
-A row of tall faceted low-poly glass plates standing on edge like
-dominoes, receding into depth toward the right side of the frame. The
-nearest plate is tipping, caught just past the point of balance; the rest
-still stand upright. Translucent glass with deep oxblood crimson (#981A30)
-glowing inside it and cool pale highlights along every edge. Near-black
-seamless studio background (#0D0D0D) and a polished dark floor holding a
-faint reflection. Single hard key light from the upper right, deep
-shadows, no fill light. Photorealistic 3D render, cinematic, high
-contrast. The lower-left quadrant of the frame is empty unlit negative
-space. 4:5 vertical composition.
+A long row of dark dominoes standing on end on a dark polished desk,
+receding into depth toward the right of frame. The nearest domino is deep
+oxblood and caught mid-fall, just past the point of balance; the rest
+still stand. Near-black environment (#0D0D0D). Soft broad light falling
+from a window high on the right, gentle falloff, long quiet shadows, no
+hard specular highlights anywhere. The oxblood domino is deep and
+desaturated, almost black in shadow, and it is the only colour in the
+frame. Photorealistic photography, shallow depth of field, a moment
+caught rather than posed. The lower-left quadrant of the frame is empty
+unlit negative space. 4:5 vertical, 1620x2025.
 
 Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, facial features, people, handshake, globe, world map, bright
-daylight, blue sky, green foliage, saturated colours, orange, teal,
-yellow, white background, clutter, centred composition, subject on the
-left, busy lower-left corner.
+face, people, hands, handshake, globe, bright red, ruby, scarlet,
+crimson neon, saturated colours, orange, teal, yellow, hard rim light,
+bright white edge highlights, specular glare, faceted crystal, low-poly,
+3D render look, studio seamless backdrop, bright daylight, white
+background, clutter, centred composition, subject on the left, busy
+lower-left corner.
 ```
 
 ## 06 — Three
 
-For the three laws. The count is carried by the form, so the card's own
-numeral never has to compete with a generated one.
+Three laws, drafted with the team's involvement. The count is carried by
+the form, so the card's own numeral never competes with a generated one.
 
 ```
-Three faceted low-poly glass columns of equal height standing apart in a
-row on the right side of the frame. The central column is lit from within
-in deep oxblood crimson (#981A30); the outer two stay near-black, carrying
-only cool pale edge highlights. Near-black seamless studio background
-(#0D0D0D) and a polished dark floor holding a faint reflection. Single
-hard key light from the upper right, deep shadows, no fill light.
-Photorealistic 3D render, cinematic, high contrast. The lower-left
-quadrant of the frame is empty unlit negative space. 4:5 vertical
-composition.
+Three thick dark leather-bound legal volumes standing upright side by
+side on a dark shelf, right of frame. A single deep oxblood ribbon
+bookmark hangs from the middle volume. Worn leather, matte, deep shadow.
+Near-black environment (#0D0D0D). Soft broad light falling from a window
+high on the right, gentle falloff, long quiet shadows, no hard specular
+highlights anywhere. The oxblood ribbon is deep and desaturated, almost
+black in shadow, and it is the only colour in the frame. Photorealistic
+photography, shallow depth of field, calm and still. The lower-left
+quadrant of the frame is empty unlit negative space. 4:5 vertical,
+1620x2025.
 
 Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, facial features, people, handshake, globe, world map, bright
-daylight, blue sky, green foliage, saturated colours, orange, teal,
-yellow, white background, clutter, centred composition, subject on the
-left, busy lower-left corner.
+face, people, hands, handshake, globe, bright red, ruby, scarlet,
+crimson neon, saturated colours, orange, teal, yellow, hard rim light,
+bright white edge highlights, specular glare, faceted crystal, low-poly,
+3D render look, studio seamless backdrop, bright daylight, white
+background, clutter, centred composition, subject on the left, busy
+lower-left corner.
 ```
 
 ---
