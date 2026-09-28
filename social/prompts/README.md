@@ -30,6 +30,34 @@ frame goes dark under the band. Left and right are both free — the old
 "leave the lower left empty" rule belongs to the other type, and applying
 it here is what emptied the pictures out.
 
+## Rotate the register
+
+The first brief written to this file produced six prompts that were all
+the same picture: a desk, a hand, a sheet of paper. Each one obeyed every
+rule above and the set was worthless, because a carousel of six near
+identical frames has no carousel in it.
+
+So the register is a constraint of its own. **No two slides in a post
+share one, and a register does not repeat until the others have been
+used.** Pick from these and add to the list rather than settling into a
+favourite:
+
+| Register | What it looks like |
+|---|---|
+| Diorama | Miniature buildings, desks or figures on a dark plane, connected or marked |
+| Floating panels | Slabs of dark glass hanging in space, each carrying one engraved pictogram, joined by thin crimson lines |
+| Macro concept | One object very close — a puzzle piece, a seal, a stamp, a torn edge |
+| Staged office | A real room, a person from behind or out of focus, depth and furniture |
+| Monument | Something architectural and still: tablets, columns, a threshold, a vault |
+| Mass | Many identical things at once — a wall of drawers, a grid of markers, a full shelf — where the quantity is the subject |
+| Device | A screen, a keyboard, an instrument, its display abstract and unreadable |
+| Desk still life | A surface, papers, a hand. **Used already. Do not reach for it again until the rest have been.** |
+
+Pictograms are allowed where a register calls for them — scales, a chart
+bar, a pin, a clock — as long as they are engraved, embossed or etched
+into a real material rather than drawn on top. Letters and numerals never
+are.
+
 ## `cover`, `quote`, `numbered` — a ground, under type
 
 Here the type is laid over the foot of the picture and the picture is
