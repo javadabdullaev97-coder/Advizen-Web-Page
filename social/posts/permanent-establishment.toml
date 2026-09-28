@@ -7,6 +7,7 @@ image    = "public/Articles Image/Permanent Establishment Risk.webp"
 [[slide]]
 type = "quote"
 eyebrow = "Заблуждение"
+image = "public/Articles Image/Representative Offices.webp"
 text = """
 Правило 183 дней знают все.
 
@@ -27,6 +28,7 @@ nodes = [
 [[slide]]
 type = "numbered"
 eyebrow = "Где 183 дня действительно работают"
+image = "public/industries/energy-industrials.jpg"
 start = 1
 items = [
   { name = "Строительная площадка", text = "Площадка, монтажный объект или надзор над ними — более 183 дней в любом последовательном 12-месячном периоде." },
@@ -44,6 +46,7 @@ text = """
 [[slide]]
 type = "quote"
 eyebrow = "Вывод"
+image = "public/Articles Image/Escrow Accounts.webp"
 text = """
 Дробить проект на короткие отрезки бесполезно: периоды по связанным проектам складываются.
 

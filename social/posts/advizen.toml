@@ -2,6 +2,7 @@ slug     = "advizen"
 category = "О фирме"
 title    = "Advizen"
 deck     = "Налоги, право, финансы и HR — в одной практике"
+image    = "public/Hero and CTA images/Expertise Hero.webp"
 
 [[slide]]
 type = "quote"
@@ -33,6 +34,7 @@ advizenco.com/expertise
 [[slide]]
 type = "quote"
 eyebrow = "Зачем одна практика"
+image = "public/industries/financial-services.jpg"
 text = """
 Налоговый вопрос почти никогда не бывает только налоговым.
 
@@ -42,6 +44,7 @@ text = """
 [[slide]]
 type = "quote"
 eyebrow = "Ещё одна цифра"
+image = "public/Hero and CTA images/Contact Hero.webp"
 text = """
 Три закона Республики Узбекистан подготовлены при участии членов команды.
 

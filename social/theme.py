@@ -76,3 +76,9 @@ LIST_INDENT = 96
 # ── Surface ─────────────────────────────────────────────────────────
 GRAIN = 0.05             # matches body::after at 0.06, less the card's own contrast
 VIGNETTE = 0.20          # corner falloff; the page should feel lit, not flat
+
+# Mean luminance a photograph is flattened to before it becomes a card's
+# ground. Low enough that Warm Parchment keeps its contrast over any part
+# of the frame, high enough that the picture is still legible as one.
+# Every backdrop lands here, whatever it came in at.
+GROUND_TARGET = 46

@@ -8,9 +8,14 @@ way pass mark=False so the accent rule is not drawn on top of it.
 The diagram types are the reason this exists rather than a template in
 Canva. Consulting firms describe structures in prose; drawing them —
 consistently, in the brand's own hand — is what separates the feed.
+
+A photograph may ground `cover`, `photo`, `quote` and `numbered`, through
+_backdrop below. The diagrams may not: their panels are drawn in PANEL
+against the void, and over a picture that separation collapses — the
+structure stops reading, which is the only thing the card was for.
 """
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageStat
 
 import theme as T
 import typeset as ts
@@ -48,7 +53,19 @@ def _backdrop(path):
     y = (src.height - T.HEIGHT) // 2
     img = src.crop((x, y, x + T.WIDTH, y + T.HEIGHT))
 
-    img = Image.blend(img, Image.new("RGB", img.size, T.BG), 0.42)
+    # Flatten toward the void, by as much as this particular picture needs.
+    # A fixed factor was here first, and it only ever suited the dark
+    # article renders it was written against: a daylight photograph came
+    # through still glowing, and type laid over the top half of it
+    # disappeared. Solve instead for the blend that lands any frame on the
+    # same low-key ground, so the rule is in the code and not in someone's
+    # memory of which images are safe.
+    mean = ImageStat.Stat(img.convert("L")).mean[0]
+    ground = sum(T.BG) / 3
+    alpha = 0.42
+    if mean > T.GROUND_TARGET:
+        alpha = min(0.92, max(alpha, (mean - T.GROUND_TARGET) / max(1.0, mean - ground)))
+    img = Image.blend(img, Image.new("RGB", img.size, T.BG), alpha)
 
     column = Image.new("L", (1, T.HEIGHT))
     for row in range(T.HEIGHT):
@@ -92,23 +109,28 @@ def cover(*, category, title, deck, counter=None, image=None, **_):
     return img
 
 
-def quote(*, text, eyebrow=None, counter=None, **_):
-    img, d = _canvas(eyebrow, counter)
+def quote(*, text, eyebrow=None, counter=None, image=None, **_):
+    img, d = _canvas(eyebrow, counter, backdrop=image)
     f = ts.serif(T.SIZE_QUOTE)
     bl = ts.blocks(text, f, T.MEASURE_BODY - 20)
-    y = ts.centre_y(ts.block_height(bl, T.LEAD_QUOTE, 42))
+    h = ts.block_height(bl, T.LEAD_QUOTE, 42)
+    # Over a photograph the proposition drops to the foot of the frame, the
+    # way the cover does: the gradient has closed to black there, and type
+    # centred in the middle of a picture fights it.
+    y = (T.BAND_BOTTOM - h) if image else ts.centre_y(h)
     ts.draw_blocks(d, T.MARGIN, y, bl, f, T.INK, T.LEAD_QUOTE, 42, optical=True)
     return img
 
 
-def numbered(*, items, eyebrow=None, counter=None, start=1, **_):
-    img, d = _canvas(eyebrow, counter, mark=False)   # the numerals are the mark
+def numbered(*, items, eyebrow=None, counter=None, start=1, image=None, **_):
+    # the numerals are the mark
+    img, d = _canvas(eyebrow, counter, mark=False, backdrop=image)
     fn, fh, fb = ts.mono(23, 500), ts.serif(T.SIZE_HEAD, medium=True), ts.sans(T.SIZE_BODY, 300)
     measure = T.MEASURE_BODY - T.LIST_INDENT
 
     wrapped = [(i["name"], ts.wrap(i["text"], fb, measure)) for i in items]
     height = sum(52 + len(lines) * T.LEAD_BODY + 56 for _, lines in wrapped)
-    y = ts.centre_y(height)
+    y = (T.BAND_BOTTOM - height) if image else ts.centre_y(height)
 
     for offset, (name, lines) in enumerate(wrapped):
         d.text((T.MARGIN, y + 12), f"{start + offset:02d}", font=fn, fill=T.CRIMSON)
