@@ -1,75 +1,38 @@
 # Image prompts — `advizen`
 
-Backdrops for `social/posts/advizen.toml`. Each prompt is complete: paste
-one, generate, done.
+Scenes for `social/posts/advizen.toml`. Read `README.md` in this folder
+first: these are `scene` prompts, and a `scene` wants the opposite picture
+from a `cover` or a `quote`.
 
-Generated frames go to `public/social/source/advizen/`, which is tracked
-(see `.gitignore`) — the renders under `public/social/` are not.
+Frames go to `public/social/source/advizen/`, which is tracked.
 
-## What the renderer needs
-
-These are not preferences. `cards._backdrop` scales a photograph to cover
-a 1080×1350 frame and centre-crops it, then flattens it toward the void
-and closes a gradient over the lower half so type sits on solid ground.
-
-- **4:5 vertical.** 1080×1350, 1620×2025 or 2160×2700. Any other aspect
-  loses its edges to the crop.
-- **Subject right, lower-left empty.** Over a photograph the text block
-  drops to the foot of the frame at the left margin. A subject there is a
-  subject under the type.
-- **Upper-left stays dark.** The eyebrow sits at x=100, y=112.
-- **Dark overall, with the subject lit.** The frame is flattened to
-  `theme.GROUND_TARGET` whatever it came in at, so a daylight image
-  survives the flatten with its subject gone.
-- **No text in the frame.** Every letter and numeral on a card comes from
-  `theme.py`. A generator cannot set Spectral, and it cannot spell
-  `$10 млрд+`.
-
-## What the first pass got wrong
-
-Worth keeping, because the failures were in the prompt rather than the
-model.
-
-**Abstract sculptures do not say anything.** Faceted crystals are
-decoration; a row of dominoes with the first one tipping is an argument.
-Every subject below is an object doing something.
-
-**Hard key light with no fill** produced bright specular rims and dead
-bodies — the "white transparent edges" problem. The light is soft and
-broad now, and the glow comes from inside the object rather than off its
-corners.
-
-**`#981A30` alone gets read as ruby.** The colour has to be described as
-deep and desaturated, and bright red has to be named in the negatives.
-
-Generate two or three of each and keep the one with the emptiest lower
-left.
+Each prompt is complete. Generate two or three and keep the best.
 
 ---
 
 ## 01 — Cover
 
-Four practices, one firm.
+Four practices, one firm. A hand doing the joining.
 
 ```
-Four separate stacks of dark documents standing upright and close
-together on a dark desk, right of frame, clamped as one by a single deep
-oxblood band running across all four. Matte paper, deep shadow, no
-reflections on the paper. Near-black environment (#0D0D0D). Soft broad
-light falling from a window high on the right, gentle falloff, long quiet
-shadows, no hard specular highlights anywhere. The oxblood band is deep
-and desaturated, almost black in shadow, and it is the only colour in the
-frame. Photorealistic photography, shallow depth of field, calm and
-still. The lower-left quadrant of the frame is empty unlit negative
-space. 4:5 vertical, 1620x2025.
+Overhead photograph of a dark wooden desk. Four separate stacks of
+documents lie in a row, each slightly askew. A single hand, sleeve of a
+dark suit, reaches in from the right and lays one deep oxblood folder
+across all four stacks, binding them into one. A fountain pen and a pair
+of reading glasses sit nearby. Soft broad daylight from a window high on
+the left, long quiet shadows, warm and low-key, near-black surroundings.
+The oxblood folder is deep and desaturated and is the only colour in the
+frame. Photorealistic photography, 50mm, shallow depth of field, the
+moment caught rather than posed. The action sits in the lower two thirds
+of the frame; the top of the frame is dark and empty. 4:5 vertical,
+1620x2025.
 
-Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, people, hands, handshake, globe, bright red, ruby, scarlet,
-crimson neon, saturated colours, orange, teal, yellow, hard rim light,
-bright white edge highlights, specular glare, faceted crystal, low-poly,
-3D render look, studio seamless backdrop, bright daylight, white
-background, clutter, centred composition, subject on the left, busy
-lower-left corner.
+Negative prompt: face, head, portrait, eyes, smiling, people looking at
+camera, text, letters, numbers, readable writing, watermark, logo,
+signage, bright red, ruby, scarlet, saturated colours, orange, teal,
+yellow, hard rim light, bright white edge highlights, specular glare, 3D
+render look, faceted crystal, low-poly, illustration, cartoon, bright
+daylight, white background, clean studio backdrop, empty scene.
 ```
 
 ## 02 — One point of contact
@@ -77,50 +40,47 @@ lower-left corner.
 Fourteen services, one way in.
 
 ```
-A thick bundle of dark cables gathered and fed into one single deep
-oxblood connector, right of frame, resting on a dark surface. The cables
-spread loosely behind and the gathering point is the sharpest thing in
-the picture. Near-black environment (#0D0D0D). Soft broad light falling
-from a window high on the right, gentle falloff, long quiet shadows, no
-hard specular highlights anywhere. The oxblood connector is deep and
-desaturated, almost black in shadow, and it is the only colour in the
-frame. Photorealistic photography, shallow depth of field, calm and
-still. The lower-left quadrant of the frame is empty unlit negative
-space. 4:5 vertical, 1620x2025.
+Photograph of a dark meeting table from a low angle. Four pairs of hands,
+dark suit sleeves, push four separate sets of documents in from the edges
+of the frame toward the centre, where they all meet a single deep oxblood
+document wallet. No faces, no heads, only hands and forearms. A carafe and
+two glasses sit at the far end, out of focus. Soft broad daylight from a
+window high on the left, long quiet shadows, warm and low-key, near-black
+surroundings. The oxblood wallet is deep and desaturated and is the only
+colour in the frame. Photorealistic photography, 35mm, shallow depth of
+field, the moment caught rather than posed. The action sits in the lower
+two thirds of the frame; the top of the frame is dark and empty. 4:5
+vertical, 1620x2025.
 
-Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, people, hands, handshake, globe, bright red, ruby, scarlet,
-crimson neon, saturated colours, orange, teal, yellow, hard rim light,
-bright white edge highlights, specular glare, faceted crystal, low-poly,
-3D render look, studio seamless backdrop, bright daylight, white
-background, clutter, centred composition, subject on the left, busy
-lower-left corner.
+Negative prompt: face, head, portrait, eyes, smiling, people looking at
+camera, text, letters, numbers, readable writing, watermark, logo,
+signage, bright red, ruby, scarlet, saturated colours, orange, teal,
+yellow, hard rim light, bright white edge highlights, specular glare, 3D
+render look, faceted crystal, low-poly, illustration, cartoon, bright
+daylight, white background, clean studio backdrop, empty scene.
 ```
 
-## 04 — Track record — optional
+## 04 — Track record
 
-The figures read better on the void, with nothing competing. This is here
-if you want to try it against that.
+Ten billion in deals, eighty registrations, thirty due diligence reviews.
 
 ```
-A tall stack of dark bound case files on a dark desk, right of frame,
-seen from slightly below so the height of the stack is the subject. One
-file low in the stack has a deep oxblood spine. Worn matte board and
-paper, deep shadow. Near-black environment (#0D0D0D). Soft broad light
-falling from a window high on the right, gentle falloff, long quiet
-shadows, no hard specular highlights anywhere. The oxblood spine is deep
-and desaturated, almost black in shadow, and it is the only colour in the
-frame. Photorealistic photography, shallow depth of field, calm and
-still. The lower-left quadrant of the frame is empty unlit negative
-space. 4:5 vertical, 1620x2025.
+Photograph of a long archive shelf receding into darkness, packed tight
+with identical dark bound case files. A single hand, dark suit sleeve,
+draws one file halfway out; that file alone has a deep oxblood spine. Dust
+hangs in the light. Soft broad daylight from a window high on the left,
+long quiet shadows, warm and low-key, near-black surroundings. The oxblood
+spine is deep and desaturated and is the only colour in the frame.
+Photorealistic photography, 50mm, shallow depth of field, the moment
+caught rather than posed. The action sits in the lower two thirds of the
+frame; the top of the frame is dark and empty. 4:5 vertical, 1620x2025.
 
-Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, people, hands, handshake, globe, bright red, ruby, scarlet,
-crimson neon, saturated colours, orange, teal, yellow, hard rim light,
-bright white edge highlights, specular glare, faceted crystal, low-poly,
-3D render look, studio seamless backdrop, bright daylight, white
-background, clutter, centred composition, subject on the left, busy
-lower-left corner.
+Negative prompt: face, head, portrait, eyes, smiling, people looking at
+camera, text, letters, numbers, readable writing, watermark, logo,
+signage, bright red, ruby, scarlet, saturated colours, orange, teal,
+yellow, hard rim light, bright white edge highlights, specular glare, 3D
+render look, faceted crystal, low-poly, illustration, cartoon, bright
+daylight, white background, clean studio backdrop, empty scene.
 ```
 
 ## 05 — Consequence
@@ -128,50 +88,50 @@ lower-left corner.
 A tax question is almost never only a tax question.
 
 ```
-A long row of dark dominoes standing on end on a dark polished desk,
-receding into depth toward the right of frame. The nearest domino is deep
-oxblood and caught mid-fall, just past the point of balance; the rest
-still stand. Near-black environment (#0D0D0D). Soft broad light falling
-from a window high on the right, gentle falloff, long quiet shadows, no
-hard specular highlights anywhere. The oxblood domino is deep and
-desaturated, almost black in shadow, and it is the only colour in the
-frame. Photorealistic photography, shallow depth of field, a moment
-caught rather than posed. The lower-left quadrant of the frame is empty
-unlit negative space. 4:5 vertical, 1620x2025.
+Overhead photograph of a dark desk with three documents overlapping each
+other — a tax return, a payroll sheet and an employment contract, their
+text blurred and unreadable. A hand, dark suit sleeve, pulls the top sheet
+aside and the two beneath it slide out of alignment with it. A deep
+oxblood paper clip is fixed to the sheet being moved. Soft broad daylight
+from a window high on the left, long quiet shadows, warm and low-key,
+near-black surroundings. The oxblood clip is deep and desaturated and is
+the only colour in the frame. Photorealistic photography, 50mm, shallow
+depth of field, motion caught mid-pull. The action sits in the lower two
+thirds of the frame; the top of the frame is dark and empty. 4:5 vertical,
+1620x2025.
 
-Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, people, hands, handshake, globe, bright red, ruby, scarlet,
-crimson neon, saturated colours, orange, teal, yellow, hard rim light,
-bright white edge highlights, specular glare, faceted crystal, low-poly,
-3D render look, studio seamless backdrop, bright daylight, white
-background, clutter, centred composition, subject on the left, busy
-lower-left corner.
+Negative prompt: face, head, portrait, eyes, smiling, people looking at
+camera, text, letters, numbers, readable writing, watermark, logo,
+signage, bright red, ruby, scarlet, saturated colours, orange, teal,
+yellow, hard rim light, bright white edge highlights, specular glare, 3D
+render look, faceted crystal, low-poly, illustration, cartoon, bright
+daylight, white background, clean studio backdrop, empty scene.
 ```
 
 ## 06 — Three
 
-Three laws, drafted with the team's involvement. The count is carried by
-the form, so the card's own numeral never competes with a generated one.
+Three laws drafted with the team's involvement. The count is in the
+picture, so the card's own numeral never competes with a generated one.
 
 ```
-Three thick dark leather-bound legal volumes standing upright side by
-side on a dark shelf, right of frame. A single deep oxblood ribbon
-bookmark hangs from the middle volume. Worn leather, matte, deep shadow.
-Near-black environment (#0D0D0D). Soft broad light falling from a window
-high on the right, gentle falloff, long quiet shadows, no hard specular
-highlights anywhere. The oxblood ribbon is deep and desaturated, almost
-black in shadow, and it is the only colour in the frame. Photorealistic
-photography, shallow depth of field, calm and still. The lower-left
-quadrant of the frame is empty unlit negative space. 4:5 vertical,
+Photograph of a dark table carrying three thick leather-bound legal
+volumes lying flat, one on top of the next. A hand, dark suit sleeve,
+holds the topmost one open at a page marked with a deep oxblood ribbon;
+the printed text on the page is blurred and unreadable. A brass desk lamp
+throws a small pool of light. Soft broad daylight from a window high on
+the left, long quiet shadows, warm and low-key, near-black surroundings.
+The oxblood ribbon is deep and desaturated and is the only colour in the
+frame. Photorealistic photography, 50mm, shallow depth of field, the
+moment caught rather than posed. The action sits in the lower two thirds
+of the frame; the top of the frame is dark and empty. 4:5 vertical,
 1620x2025.
 
-Negative prompt: text, letters, numbers, watermark, logo, signage, human
-face, people, hands, handshake, globe, bright red, ruby, scarlet,
-crimson neon, saturated colours, orange, teal, yellow, hard rim light,
-bright white edge highlights, specular glare, faceted crystal, low-poly,
-3D render look, studio seamless backdrop, bright daylight, white
-background, clutter, centred composition, subject on the left, busy
-lower-left corner.
+Negative prompt: face, head, portrait, eyes, smiling, people looking at
+camera, text, letters, numbers, readable writing, watermark, logo,
+signage, bright red, ruby, scarlet, saturated colours, orange, teal,
+yellow, hard rim light, bright white edge highlights, specular glare, 3D
+render look, faceted crystal, low-poly, illustration, cartoon, bright
+daylight, white background, clean studio backdrop, empty scene.
 ```
 
 ---
@@ -179,7 +139,4 @@ lower-left corner.
 ## Slide 03 keeps the void
 
 The numbered slide carries two headings and the longest body text in the
-carousel. A photograph under it competes with the one thing it is for.
-
-Which leaves the carousel reading picture, picture, void, void, picture,
-picture — images work while they are not on every slide.
+carousel. A picture under it competes with the one thing it is for.

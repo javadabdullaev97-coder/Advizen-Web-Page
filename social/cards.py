@@ -35,7 +35,7 @@ def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool):
                counter, font=f, fill=T.INK_3)
 
 
-def _backdrop(path):
+def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42):
     """
     A photograph as the card's ground.
 
@@ -45,6 +45,12 @@ def _backdrop(path):
     solid ground rather than on whatever the photograph happens to do
     there. Without the second step a headline lands on a highlight and
     disappears.
+
+    `close` says which end the gradient shuts: the foot, under type that
+    sits low, or the head, under a band reserved at the top. `target` is
+    how dark the picture is taken down to — a scene that has to stay
+    readable as a scene is flattened less than a ground that only has to
+    hold a sentence.
     """
     src = Image.open(path).convert("RGB")
     scale = max(T.WIDTH / src.width, T.HEIGHT / src.height)
@@ -62,14 +68,23 @@ def _backdrop(path):
     # memory of which images are safe.
     mean = ImageStat.Stat(img.convert("L")).mean[0]
     ground = sum(T.BG) / 3
-    alpha = 0.42
-    if mean > T.GROUND_TARGET:
-        alpha = min(0.92, max(alpha, (mean - T.GROUND_TARGET) / max(1.0, mean - ground)))
-    img = Image.blend(img, Image.new("RGB", img.size, T.BG), alpha)
+    # `floor` is how much is taken off a picture that is already dark
+    # enough. A ground gets the standard knock-down regardless, so that
+    # every card sits on the same value; a scene gets none, because
+    # flattening a frame that is already at target only buries the thing
+    # the scene was staged to show.
+    alpha = floor
+    if mean > target:
+        alpha = min(0.92, max(alpha, (mean - target) / max(1.0, mean - ground)))
+    if alpha:
+        img = Image.blend(img, Image.new("RGB", img.size, T.BG), alpha)
 
     column = Image.new("L", (1, T.HEIGHT))
     for row in range(T.HEIGHT):
-        t = max(0.0, (row - T.HEIGHT * 0.30) / (T.HEIGHT * 0.70))
+        if close == "bottom":
+            t = max(0.0, (row - T.HEIGHT * 0.30) / (T.HEIGHT * 0.70))
+        else:
+            t = max(0.0, (T.HEIGHT * 0.46 - row) / (T.HEIGHT * 0.46))
         column.putpixel((0, row), int(255 * t ** 1.5))
     return Image.composite(Image.new("RGB", img.size, T.BG), img,
                            column.resize((T.WIDTH, T.HEIGHT)))
@@ -343,6 +358,40 @@ def photo(*, image, title=None, caption=None, eyebrow=None, counter=None, **_):
     return img
 
 
+def scene(*, image, title, caption=None, eyebrow=None, counter=None, **_):
+    """
+    A staged photograph with the proposition banded across the head.
+
+    Every other image card lays type over the foot of the picture, which
+    forces the picture to be quiet — one object, a lot of unlit space, and
+    nothing happening in it. That is a still life, and a still life has
+    nothing to do with the post above it.
+
+    Reserving the band instead inverts the constraint. The gradient closes
+    the top rather than the bottom, the frame is flattened less because it
+    has to stay readable as a scene, and what is underneath can now carry a
+    situation: a hand mid-action, props, markers, one crimson thing among
+    neutral ones. The headline asks; the caption answers in a line.
+    """
+    img = _backdrop(image, close="top", target=T.SCENE_TARGET, floor=0.0)
+    d = ImageDraw.Draw(img)
+    _chrome(d, eyebrow, counter, mark=True)
+
+    ft, fc = ts.serif(58, medium=True), ts.sans(T.SIZE_DECK, 300)
+    title_lines = ts.wrap(title, ft, T.MEASURE_BODY - 20)
+    caption_lines = ts.wrap(caption, fc, T.MEASURE_DECK) if caption else []
+
+    y = T.BAND_TOP - 42
+    for line in title_lines:
+        ts.text(d, (T.MARGIN, y), line, ft, T.INK, optical=True)
+        y += 72
+    y += 20
+    for line in caption_lines:
+        ts.text(d, (T.MARGIN, y), line, fc, T.INK_2)
+        y += T.LEAD_DECK
+    return img
+
+
 def timeline(*, events, eyebrow=None, counter=None, **_):
     """Dated sequence. The decisive entry carries the crimson."""
     img, d = _canvas(eyebrow, counter, mark=False)
@@ -440,6 +489,7 @@ TYPES = {
     "structure": structure,
     "chain": chain,
     "photo": photo,
+    "scene": scene,
     "timeline": timeline,
     "compare": compare,
     "chart": chart,
