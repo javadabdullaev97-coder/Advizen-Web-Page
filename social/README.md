@@ -107,6 +107,16 @@ cliffhanger, no engagement bait, no emoji, no "swipe" prompt. Every slide
 states a complete proposition. A slide that only sets up the next one gets
 cut.
 
+**No URL on a card.** A printed address is something the reader cannot
+click, and setting it in the same type as the argument puts a call to
+action where a proposition should be. The caption carries the link, and
+the profile carries it permanently.
+
+**A carousel is an argument, not a catalogue.** If the slides could be
+shuffled without loss, the post is a list, and each slide would do better
+as a post of its own — which is where the strong ones should go. Cut to
+the slides that carry the argument and free the rest.
+
 ## Files
 
 | File | What it holds |

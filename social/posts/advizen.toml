@@ -4,14 +4,20 @@ title    = "Advizen"
 deck     = "Консалтинг и операции — в одной практике, по одному договору"
 image    = "public/social/source/advizen/01-cover.jpg"
 
-[[slide]]
-type = "scene"
-eyebrow = "Что это"
-image = "public/social/source/advizen/02-contact.jpg"
-title = "Семь консалтинговых дисциплин и семь операционных сервисов"
-caption = "Одна практика, один договор, одна точка контакта."
+# Four slides, not six, and in the order of an argument rather than of a
+# catalogue: the problem, the answer, the proof. Six self-contained
+# assertions could be shuffled without loss, which is the definition of a
+# list — and a list is what a profile post defaults to unless something
+# stops it.
 
-[[slide]]
+[[slide]]                       # the problem
+type = "scene"
+eyebrow = "Почему это вообще вопрос"
+image = "public/social/source/advizen/05-consequence.jpg"
+title = "Вопрос из одной области почти никогда в ней не остаётся"
+caption = "Структура сделки меняет налог. Налог меняет трудовой договор. Договор меняет отчётность."
+
+[[slide]]                       # the answer
 type = "matrix"
 eyebrow = "Практика"
 columns = [
@@ -35,7 +41,7 @@ columns = [
   ] },
 ]
 
-[[slide]]
+[[slide]]                       # the proof
 type = "figures"
 eyebrow = "Послужной список"
 image = "public/social/source/advizen/04-record.jpg"
@@ -44,18 +50,3 @@ rows = [
   { value = "80+",       label = "регистраций компаний" },
   { value = "30+",       label = "проведённых due diligence" },
 ]
-
-[[slide]]
-type = "scene"
-eyebrow = "Зачем одна практика"
-image = "public/social/source/advizen/05-consequence.jpg"
-title = "Вопрос из одной области почти никогда в ней не остаётся"
-caption = "Структура сделки меняет налог. Налог меняет трудовой договор. Договор меняет отчётность."
-
-[[slide]]
-type = "scene"
-foot = true
-eyebrow = "Законотворчество"
-image = "public/social/source/advizen/06-three.jpg"
-title = "Члены команды участвовали в разработке трёх законов Республики Узбекистан"
-caption = "advizenco.com/expertise"
