@@ -4,20 +4,20 @@ title    = "Advizen"
 deck     = "Консалтинг и операции — в одной практике, по одному договору"
 image    = "public/social/source/advizen/01-cover.jpg"
 
-# Four slides, not six, and in the order of an argument rather than of a
-# catalogue: the problem, the answer, the proof. Six self-contained
-# assertions could be shuffled without loss, which is the definition of a
-# list — and a list is what a profile post defaults to unless something
-# stops it.
+# The argument, in order: why the question arises at all, what the practice
+# covers, what that arrangement means for the reader. The record and the
+# legislative work are a post of their own — they are credentials, and
+# credentials answer a different question from "what is this firm".
 
 [[slide]]                       # the problem
 type = "scene"
+foot = true
 eyebrow = "Почему это вообще вопрос"
 image = "public/social/source/advizen/05-consequence.jpg"
 title = "Вопрос из одной области почти никогда в ней не остаётся"
 caption = "Структура сделки меняет налог. Налог меняет трудовой договор. Договор меняет отчётность."
 
-[[slide]]                       # the answer
+[[slide]]                       # what the practice covers
 type = "matrix"
 eyebrow = "Практика"
 columns = [
@@ -41,12 +41,9 @@ columns = [
   ] },
 ]
 
-[[slide]]                       # the proof
-type = "figures"
-eyebrow = "Послужной список"
-image = "public/social/source/advizen/04-record.jpg"
-rows = [
-  { value = "$10 млрд+", label = "в сделках, сопровождённых членами команды" },
-  { value = "80+",       label = "регистраций компаний" },
-  { value = "30+",       label = "проведённых due diligence" },
-]
+[[slide]]                       # what the arrangement means
+type = "scene"
+eyebrow = "Как это устроено"
+image = "public/social/source/advizen/02-contact.jpg"
+title = "Одна практика, один договор, одна точка контакта"
+caption = "Четырнадцать направлений — но не четырнадцать подрядчиков и не четырнадцать согласований между ними."

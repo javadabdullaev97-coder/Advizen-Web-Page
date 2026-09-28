@@ -1,0 +1,26 @@
+slug     = "track-record"
+category = "Опыт"
+title    = "Послужной список"
+deck     = "Сделки, регистрации, due diligence и участие в разработке законов"
+
+# The cover carries no photograph. Both frames in this post are the same
+# material — studio glass on a near-black ground — and a third would make
+# the post one picture repeated. Type on the void is the contrast.
+
+[[slide]]
+type = "figures"
+eyebrow = "Цифры"
+image = "public/social/source/advizen/04-record.jpg"
+rows = [
+  { value = "$10 млрд+", label = "в сделках, сопровождённых членами команды" },
+  { value = "80+",       label = "регистраций компаний" },
+  { value = "30+",       label = "проведённых due diligence" },
+]
+
+[[slide]]
+type = "scene"
+foot = true
+eyebrow = "Законотворчество"
+image = "public/social/source/advizen/06-three.jpg"
+title = "Члены команды участвовали в разработке трёх законов Республики Узбекистан"
+caption = "Не консультировали по готовому тексту — работали над проектами до их принятия."
