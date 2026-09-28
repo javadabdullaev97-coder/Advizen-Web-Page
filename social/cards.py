@@ -95,6 +95,21 @@ def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42):
             edge = (row if close == "top"
                     else T.HEIGHT - row)
             t = 1.0 if edge <= d1 else max(0.0, 1 - (edge - d1) / d2)
+
+            # The far end gets a shallow seat of its own, because the
+            # wordmark and the counter sit there on the bare picture. Over
+            # a dark floor nothing showed; over a lit one they washed out
+            # and the card lost its signature.
+            # It holds up to the crimson mark rather than ramping from the
+            # very edge: the wordmark sits well above the bottom of the
+            # frame, and a seat that only reaches full strength at the edge
+            # leaves it on the bare picture.
+            far = (T.HEIGHT - row) if close == "top" else row
+            hold, fade = T.HEIGHT * 0.19, T.HEIGHT * 0.07
+            if far <= hold:
+                t = max(t, 0.72)
+            elif far <= hold + fade:
+                t = max(t, 0.72 * (1 - (far - hold) / fade))
         column.putpixel((0, row), int(255 * t))
     return Image.composite(Image.new("RGB", img.size, T.BG), img,
                            column.resize((T.WIDTH, T.HEIGHT)))
