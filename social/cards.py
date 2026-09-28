@@ -21,10 +21,13 @@ import theme as T
 import typeset as ts
 
 
-def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool):
+def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool, ink=None):
     if eyebrow:
+        # Warm Dim is the eyebrow's colour against the void. On a crimson
+        # band it disappears, so a washed card passes its own.
         ts.tracked(d, (T.MARGIN, T.EYEBROW_Y), eyebrow.upper(),
-                   ts.sans(T.SIZE_LABEL), T.INK_3, T.SIZE_LABEL * T.EYEBROW_TRACKING)
+                   ts.sans(T.SIZE_LABEL), ink or T.INK_3,
+                   T.SIZE_LABEL * T.EYEBROW_TRACKING)
     if mark:
         d.line([(T.MARGIN, T.MARK_Y), (T.MARGIN + 46, T.MARK_Y)], fill=T.CRIMSON, width=2)
     ts.tracked(d, (T.MARGIN, T.FOOT_Y), "ADVIZEN", ts.sans(23, 500), T.INK_2,
@@ -35,7 +38,7 @@ def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool):
                counter, font=f, fill=T.INK_3)
 
 
-def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42):
+def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42, wash=None):
     """
     A photograph as the card's ground.
 
@@ -83,10 +86,17 @@ def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42):
     for row in range(T.HEIGHT):
         if close == "bottom":
             t = max(0.0, (row - T.HEIGHT * 0.30) / (T.HEIGHT * 0.70))
+        elif close == "foot":
+            t = max(0.0, (row - T.HEIGHT * 0.56) / (T.HEIGHT * 0.44))
         else:
-            t = max(0.0, (T.HEIGHT * 0.46 - row) / (T.HEIGHT * 0.46))
+            t = max(0.0, (T.HEIGHT * 0.54 - row) / (T.HEIGHT * 0.54))
         column.putpixel((0, row), int(255 * t ** 1.5))
-    return Image.composite(Image.new("RGB", img.size, T.BG), img,
+    # `wash` is what the gradient closes to. The void, normally, so the
+    # frame ends where every other card's ground begins. Crimson, when the
+    # band is meant to be seen: at that point it stops being a scrim that
+    # clears the type and becomes the card's mark, which is why a washed
+    # card draws no separate rule.
+    return Image.composite(Image.new("RGB", img.size, wash or T.BG), img,
                            column.resize((T.WIDTH, T.HEIGHT)))
 
 
@@ -358,7 +368,8 @@ def photo(*, image, title=None, caption=None, eyebrow=None, counter=None, **_):
     return img
 
 
-def scene(*, image, title, caption=None, eyebrow=None, counter=None, **_):
+def scene(*, image, title, caption=None, eyebrow=None, counter=None,
+          tint=False, foot=False, **_):
     """
     A staged photograph with the proposition banded across the head.
 
@@ -373,21 +384,32 @@ def scene(*, image, title, caption=None, eyebrow=None, counter=None, **_):
     situation: a hand mid-action, props, markers, one crimson thing among
     neutral ones. The headline asks; the caption answers in a line.
     """
-    img = _backdrop(image, close="top", target=T.SCENE_TARGET, floor=0.0)
+    img = _backdrop(image, close="foot" if foot else "top",
+                    target=T.SCENE_TARGET, floor=0.0,
+                    wash=T.CRIMSON if tint else None)
     d = ImageDraw.Draw(img)
-    _chrome(d, eyebrow, counter, mark=True)
+    # A crimson band is already the one mark DESIGN.md §2 allows, so the
+    # accent rule is not drawn on top of it.
+    _chrome(d, eyebrow, counter, mark=not tint, ink=T.INK_2 if tint else None)
 
     ft, fc = ts.serif(58, medium=True), ts.sans(T.SIZE_DECK, 300)
     title_lines = ts.wrap(title, ft, T.MEASURE_BODY - 20)
     caption_lines = ts.wrap(caption, fc, T.MEASURE_DECK) if caption else []
 
-    y = T.BAND_TOP - 42
+    # Over crimson the caption cannot be Warm Muted — it goes muddy. Both
+    # lines take Warm Parchment and separate by size and weight instead.
+    sub = T.INK if tint else T.INK_2
+
+    block = len(title_lines) * 72 + (20 if caption_lines else 0) \
+        + len(caption_lines) * T.LEAD_DECK
+    y = (T.MARK_Y - 40 - block) if foot else (T.BAND_TOP - 42)
+
     for line in title_lines:
         ts.text(d, (T.MARGIN, y), line, ft, T.INK, optical=True)
         y += 72
     y += 20
     for line in caption_lines:
-        ts.text(d, (T.MARGIN, y), line, fc, T.INK_2)
+        ts.text(d, (T.MARGIN, y), line, fc, sub)
         y += T.LEAD_DECK
     return img
 
