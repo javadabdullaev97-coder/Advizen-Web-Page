@@ -395,7 +395,10 @@ def scene(*, image, title, caption=None, eyebrow=None, counter=None,
 
     block = len(title_lines) * 72 + (20 if caption_lines else 0) \
         + len(caption_lines) * T.LEAD_DECK
-    y = (T.MARK_Y - 40 - block) if foot else (T.BAND_TOP - 42)
+    # Close under the eyebrow rather than centred in the space below it:
+    # the block and the eyebrow read as one band that way, and the picture
+    # gets the rest of the frame.
+    y = (T.MARK_Y - 40 - block) if foot else (T.EYEBROW_Y + 76)
 
     for line in title_lines:
         ts.text(d, (T.MARGIN, y), line, ft, T.INK, optical=True)
