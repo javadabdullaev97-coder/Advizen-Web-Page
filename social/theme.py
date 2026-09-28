@@ -83,8 +83,10 @@ VIGNETTE = 0.20          # corner falloff; the page should feel lit, not flat
 # Every backdrop lands here, whatever it came in at.
 GROUND_TARGET = 46
 
-# The same, for a `scene` card. A ground only has to hold a sentence, so
-# it can go down to near-black; a scene has to stay readable as a scene —
-# the hand, the prop, the marker — so it is taken down far less, and the
-# gradient at the head of the frame does the work of clearing the type.
-SCENE_TARGET = 82
+# The same, for cards that reserve a band for their type rather than
+# laying it across the picture — `scene` and `cover`. Those two only need
+# the frame dark where the gradient has already closed it, so flattening
+# the whole picture as well is what turned a bright walnut-and-concrete
+# corridor into mud. A ground under a long text block still takes
+# GROUND_TARGET, because there the type can ride up past the gradient.
+SCENE_TARGET = 115

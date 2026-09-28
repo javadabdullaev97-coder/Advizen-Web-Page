@@ -110,7 +110,13 @@ def _canvas(eyebrow=None, counter=None, mark=True, backdrop=None):
 # ── Text cards ──────────────────────────────────────────────────────
 
 def cover(*, category, title, deck, counter=None, image=None, **_):
-    img, d = _canvas(category, counter, backdrop=image)
+    # The cover reserves the foot of the frame the way `scene` reserves the
+    # head, so it takes the same gentler flatten: it is the card the grid
+    # shows, and crushing its picture costs the most there.
+    img = (_backdrop(image, target=T.SCENE_TARGET, floor=0.0) if image
+           else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
+    d = ImageDraw.Draw(img)
+    _chrome(d, category, counter, mark=True)
     ft, fd = ts.serif(T.SIZE_DISPLAY, medium=True), ts.sans(T.SIZE_DECK, 300)
 
     title_lines = ts.wrap(title, ft, T.MEASURE_BODY)

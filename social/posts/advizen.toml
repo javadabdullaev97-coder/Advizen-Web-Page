@@ -2,7 +2,7 @@ slug     = "advizen"
 category = "О фирме"
 title    = "Advizen"
 deck     = "Налоги, право, финансы и HR — в одной практике"
-image    = "public/Hero and CTA images/Expertise Hero.webp"
+image    = "public/social/source/advizen/01-cover.jpg"
 
 [[slide]]
 type = "quote"
@@ -32,14 +32,11 @@ advizenco.com/expertise
 """
 
 [[slide]]
-type = "quote"
+type = "scene"
 eyebrow = "Зачем одна практика"
-image = "public/industries/financial-services.jpg"
-text = """
-Налоговый вопрос почти никогда не бывает только налоговым.
-
-Структура сделки меняет налог. Налог меняет форму трудовых отношений. Трудовые отношения меняют отчётность.
-"""
+image = "public/social/source/advizen/05-consequence.jpg"
+title = "Налоговый вопрос — почти никогда не только налоговый"
+caption = "Структура сделки меняет налог. Налог меняет трудовой договор. Договор меняет отчётность."
 
 [[slide]]
 type = "quote"
