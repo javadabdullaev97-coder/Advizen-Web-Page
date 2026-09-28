@@ -431,6 +431,62 @@ def scene(*, image, title, caption=None, eyebrow=None, counter=None,
     return img
 
 
+def matrix(*, columns, eyebrow=None, counter=None, **_):
+    """
+    An inventory, set as a table rather than as prose.
+
+    The numbered card this replaces held the same fourteen services, but
+    held them as two run-on sentences: the reader could see that the list
+    was long and could not see what was in it. Counting is the point of
+    the slide — seven and seven — and a comma-separated paragraph cannot
+    be counted at a glance.
+
+    One crimson rule under the column heads is the card's whole accent, so
+    the chrome's own mark is suppressed.
+    """
+    img, d = _canvas(eyebrow, counter, mark=False)
+
+    gap = 56
+    col_w = (T.MEASURE_BODY - gap * (len(columns) - 1)) // len(columns)
+    fh, fn, fi = ts.serif(T.SIZE_HEAD, medium=True), ts.mono(20, 500), ts.sans(25, 300)
+
+    HEAD, RULE, ROW = 58, 30, 76
+    rows = max(len(c["items"]) for c in columns)
+    height = HEAD + RULE + rows * ROW
+    # Centred in the content band, not on the canvas. `centre_y` puts the
+    # block in the middle of the frame, which counts the eyebrow's strip at
+    # the top as free space and the wordmark's at the bottom as free too —
+    # the table then sat high with a hole under it.
+    top = T.BAND_TOP + (T.BAND_BOTTOM - T.BAND_TOP - height) // 2
+
+    for i, column in enumerate(columns):
+        x = T.MARGIN + i * (col_w + gap)
+        ts.text(d, (x, top), column["name"], fh, T.INK, optical=True)
+        count = f"{len(column['items']):02d}"
+        d.text((x + col_w - fn.getlength(count), top + 12), count,
+               font=fn, fill=T.INK_3)
+
+        y = top + HEAD + RULE
+        for item in column["items"]:
+            # A dash rather than a pictogram. Fourteen drawn icons for
+            # fourteen abstractions — tax, law, payroll, compliance — come
+            # out as the same three shapes rotated, which is a UI kit and
+            # not a brand.
+            d.line([(x, y + 14), (x + 14, y + 14)], fill=T.LINE, width=1)
+            for line in ts.wrap(item, fi, col_w - 30):
+                ts.text(d, (x + 30, y), line, fi, T.INK_2)
+                y += 34
+            y += ROW - 34
+
+        if i:
+            spine = x - gap // 2
+            d.line([(spine, top), (spine, top + height)], fill=T.LINE, width=1)
+
+    d.line([(T.MARGIN, top + HEAD), (T.MARGIN + T.MEASURE_BODY, top + HEAD)],
+           fill=T.CRIMSON, width=2)
+    return img
+
+
 def timeline(*, events, eyebrow=None, counter=None, **_):
     """Dated sequence. The decisive entry carries the crimson."""
     img, d = _canvas(eyebrow, counter, mark=False)
@@ -529,6 +585,7 @@ TYPES = {
     "chain": chain,
     "photo": photo,
     "scene": scene,
+    "matrix": matrix,
     "timeline": timeline,
     "compare": compare,
     "chart": chart,
