@@ -100,26 +100,33 @@ centred symmetrical composition.
 Ten billion in deals, eighty registrations, thirty due diligence reviews.
 The quantity is the subject.
 
-```
-A deep, orderly archive room in a modern office, shelves running floor to
-ceiling on both sides and away down the length of the frame, packed with
-identical charcoal box files. A walnut rolling ladder rests against the
-left-hand run. One box file at chest height on the right is pulled half
-out and is deep oxblood; every other box is charcoal. Brushed steel shelf
-frames, a pale concrete floor. Large soft daylight from a high window,
-even and diffused, gentle shadows. The oxblood box is deep and
-desaturated, matte board, and is the only colour in the frame. Editorial
-architectural photography, 35mm, natural light, calm and expensive. The
-shelves and the ladder occupy the lower two thirds; the upper third is
-plain ceiling and empty. 4:5 vertical, 1620x2025.
+*Macro, not a room.* Slides 01 and 06 are both interiors, and a third
+would put three rooms in a five-image post. Coming in close also gives the
+frame the texture that carries a picture at this size — worn board, paper
+edges, raking light.
 
-Negative prompt: night, darkness, unlit, gloomy, moody, horror, thriller,
-film noir, haunted, eerie, dusty abandoned archive, coloured light, red
-glow, neon, text, letters, numbers, words, signage, labels with writing,
-watermark, logo, face, eyes, portrait, bright red, ruby, scarlet,
-saturated colours, orange, teal, yellow, hard rim light, specular glare,
-3D render, illustration, faceted crystal, floating glass panels, abstract
-sculpture, tabletop still life.
+```
+Extreme close-up of the fore-edges of a long row of bound case files
+standing tightly packed and seen end-on, filling the whole frame and
+falling out of focus to either side. Thick grey board, worn and slightly
+uneven paper edges, faint handling marks, a hairline of dust along the
+top. One file near the centre has a deep oxblood spine and stands a few
+millimetres proud of the rest. Large soft daylight raking across the edges
+from the left, picking out the texture of every sheet, gentle shadows
+between the files. The oxblood spine is deep and desaturated, matte board,
+and is the only colour in the frame. Editorial macro photography, 100mm,
+shallow depth of field, sharp on the proud file. The row occupies the
+lower two thirds; the upper third falls away into plain shadow and is
+empty. 4:5 vertical, 1620x2025.
+
+Negative prompt: night, darkness, unlit, gloomy, moody, horror, film noir,
+eerie, dusty abandoned archive, coloured light, red glow, neon, text,
+letters, numbers, words, readable writing, labels with writing, watermark,
+logo, signage, face, eyes, portrait, people, hands, bright red, ruby,
+scarlet, saturated colours, orange, teal, yellow, hard rim light, specular
+glare, 3D render, illustration, cartoon, faceted crystal, floating glass
+panels, abstract sculpture, wide room, library interior, bookshelf from a
+distance.
 ```
 
 ## 06 — Three
