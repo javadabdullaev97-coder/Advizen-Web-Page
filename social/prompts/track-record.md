@@ -101,32 +101,38 @@ flare, 3D render, illustration, cartoon, coins, banknotes, cluttered.
 
 ## 05 — Investment · UzFund · state investment fund
 
-*Register: desk still life.* Not a government room — the work was
-restructuring a fund, so the picture is what a fund is made of: holdings,
-prices, paper.
+*Register: device.* Not a government room, and not paper: prices on
+screens. Two things have to be said explicitly or the frame breaks the
+brand. Candlesticks come out green and red by default, which spends the
+whole colour budget on something that is not the subject — so the charts
+are monochrome and exactly one series is oxblood. And a dark room lit
+only by monitors is the horror set again; the room is daylit and the
+screens are simply in it.
 
 ```
-A still life on a dark walnut desk, photographed from a low
-three-quarter angle in bright soft daylight. A loose stack of engraved
-share certificates on heavy cream paper fills the upper two thirds of the
-frame, their guilloche borders and fine intaglio linework catching the
-light. The topmost sheet carries a printed line chart rising to the
-right, drawn in fine black ink, and a deep oxblood wax seal pressed into
-its lower corner. A plain steel fountain pen lies beside the stack. Large
-soft daylight from a window to the left, even and diffused, gentle
-shadows. The oxblood is deep and desaturated, matte wax, and is the only
-colour in the frame. Editorial still life photography, 50mm, shallow
-depth of field, sharp on the seal. The papers occupy the upper two
-thirds; the lower third is plain bare walnut and empty. 4:5 vertical,
-1620x2025.
+A trading desk in a bright modern office, photographed straight on in
+strong daylight from a window behind the camera. A curved bank of four
+or five monitors fills the upper two thirds of the frame, each showing
+dense financial charts — candlestick columns, a long price line, a depth
+ladder, rows of small tabular blocks — all rendered in white, pale grey
+and charcoal on a dark neutral interface, sharp but too small to read.
+On the central screen one price line is deep oxblood and runs the width
+of the display. A plain black keyboard sits below the monitors. The room
+is clearly lit by daylight; the screens are not the light source. Even
+diffused light, gentle reflections on the glass, no glare. The oxblood
+line is deep and desaturated and is the only colour in the frame.
+Photorealistic editorial photography, 35mm, shallow depth of field,
+sharp on the central screen. The monitors occupy the upper two thirds;
+the lower third is plain empty desk. 4:5 vertical, 1620x2025.
 
-Negative prompt: readable text, letters, words, numbers, figures on the
-chart, axis labels, currency symbols, company name, watermark, logo,
-government seal, coat of arms, flag, face, hand, fingers, people,
-banknotes, coins, gold bars, dollar signs, calculator, laptop, screen,
-bright red, scarlet, neon, saturated colours, orange, teal, green
-candlesticks, hard rim light, specular glare, 3D render, illustration,
-cartoon, cluttered, messy pile.
+Negative prompt: green candlesticks, red candlesticks, green and red,
+multicoloured charts, rainbow, neon, glowing screens, dark room, night,
+unlit office, monitor glow as only light, lens flare, bloom, cyberpunk,
+readable text, letters, words, numbers, prices, tickers, ticker symbols,
+axis labels, percentages, currency symbols, company name, watermark,
+logo, face, eyes, people, hands, coffee cup, bright red, scarlet,
+saturated colours, orange, teal, yellow, purple, hard rim light, 3D
+render, illustration, cartoon, cluttered desk, papers, phone.
 ```
 
 ---
