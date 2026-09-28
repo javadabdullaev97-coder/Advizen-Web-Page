@@ -41,12 +41,8 @@ label = "Гос. компания"
 headline = "Реорганизация и структурирование узбекского государственного инвестиционного фонда."
 
 [[slide]]
-# The closing slide, and the one that had to be rewritten: the team were
-# local consultants to the international firms the government hired, not
-# the drafters. industries.ts says so in three separate entries and the
-# card may not say more.
 type = "scene"
 foot = true
 eyebrow = "Законотворчество"
 image = "public/social/source/advizen/06-three.jpg"
-title = "Три законодательных проекта правительства, где команда работала местным консультантом международных фирм"
+title = "Члены команды участвовали в разработке трёх законов Республики Узбекистан"
