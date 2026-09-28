@@ -71,6 +71,18 @@ treatment loses everything that made it a scene.
   loses its edges to the centre crop.
 - **No text in the frame.** Every letter and numeral comes from
   `theme.py`. A generator cannot set Spectral and cannot spell `$10 млрд+`.
+- **Brief the picture as daylight, never as darkness.** `scene` flattens
+  whatever arrives down to `theme.SCENE_TARGET`, and `_backdrop` does the
+  same toward `GROUND_TARGET`. The darkness is the renderer's, applied to
+  every frame. Asking for it in the prompt as well multiplies the two and
+  produces a horror set — an unlit corridor with red light under the
+  doors, which is exactly what happened. What makes an image read as this
+  brand is the material, not the absent light: walnut, bronze, stone,
+  charcoal linen, worn leather. A bright room full of dark costly surfaces
+  flattens into something rich; a dark room flattens into a hole.
+- **The crimson is an object, never a light.** Coloured light across a
+  floor reads as a nightclub or a crime scene. A crimson folder, runner,
+  box or binding reads as a firm.
 - **Soft, broad light** — a window high and to one side. A hard key light
   with no fill is what produced the bright white rims on the first pass.
 - **Describe the crimson in words**, not only as a hex code: deep,
