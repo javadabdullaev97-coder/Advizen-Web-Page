@@ -130,7 +130,12 @@ def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42):
             # being legible. Holding it flat behind the block and fading
             # below keeps the type on solid ground without swallowing the
             # picture.
-            d1, d2 = (T.HEIGHT * 0.28, T.HEIGHT * 0.32)
+            # The foot closes earlier and harder than the head, because
+            # what sits there is a block of type across the full width
+            # rather than a banded headline. A shared ramp left a bright
+            # landscape showing through the figure.
+            d1, d2 = ((T.HEIGHT * 0.34, T.HEIGHT * 0.30) if close == "foot"
+                      else (T.HEIGHT * 0.28, T.HEIGHT * 0.32))
             edge = (row if close == "top"
                     else T.HEIGHT - row)
             t = 1.0 if edge <= d1 else max(0.0, 1 - (edge - d1) / d2)
@@ -536,12 +541,8 @@ def figures(*, rows, image=None, eyebrow=None, counter=None, **_):
     such decision: every figure gets the same size, the same weight and a
     rule of its own, and the reader ranks them or does not.
     """
-    # A ground, not a scene: the ledger lies across the full width of the
-    # picture rather than under a closed band, so it takes the deeper
-    # flatten. Briefed as a scene, the first label landed on lit glass and
-    # stopped being readable.
-    img = (_backdrop(image, close="foot") if image
-           else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
+    img = (_backdrop(image, close="foot", target=T.SCENE_TARGET, floor=0.0)
+           if image else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
     d = ImageDraw.Draw(img)
     _chrome(img, d, eyebrow, counter)
 
@@ -575,8 +576,12 @@ def engagement(*, value, label, headline, image=None, eyebrow=None,
     under it says what was counted and the line below says what the work
     was. Three registers, one proposition.
     """
-    img = (_backdrop(image, close="foot") if image
-           else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
+    # The picture keeps its light; the gradient below it, not the flatten,
+    # is what makes the type readable. Taken all the way down to
+    # GROUND_TARGET a daylit landscape turns to mud, which is the whole
+    # reason SCENE_TARGET exists.
+    img = (_backdrop(image, close="foot", target=T.SCENE_TARGET, floor=0.0)
+           if image else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
     d = ImageDraw.Draw(img)
     _chrome(img, d, eyebrow, counter)
 

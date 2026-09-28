@@ -37,7 +37,7 @@ type = "engagement"
 eyebrow = "Инвестиции"
 image = "public/social/source/track-record/05-fund.jpg"
 value = "UzFund"
-label = "Гос. компания"
+label = "Инвестиционный фонд"
 headline = "Реорганизация и структурирование узбекского государственного инвестиционного фонда."
 
 [[slide]]
