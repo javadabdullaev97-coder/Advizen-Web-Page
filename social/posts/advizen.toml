@@ -21,13 +21,12 @@ items = [
 ]
 
 [[slide]]
-type = "quote"
+type = "scene"
+foot = true
 eyebrow = "Послужной список"
-text = """
-$10 млрд+ — сделки, сопровождённые членами команды. 80+ регистраций компаний. 30+ проведённых due diligence.
-
-advizenco.com/expertise
-"""
+image = "public/social/source/advizen/04-record.jpg"
+title = "$10 млрд+ в сделках, сопровождённых членами команды"
+caption = "80+ регистраций компаний. 30+ проведённых due diligence."
 
 [[slide]]
 type = "scene"
@@ -37,11 +36,9 @@ title = "Налоговый вопрос — почти никогда не то
 caption = "Структура сделки меняет налог. Налог меняет трудовой договор. Договор меняет отчётность."
 
 [[slide]]
-type = "quote"
+type = "scene"
+foot = true
 eyebrow = "Ещё одна цифра"
-image = "public/Hero and CTA images/Contact Hero.webp"
-text = """
-Три закона Республики Узбекистан подготовлены при участии членов команды.
-
-advizenco.com/expertise
-"""
+image = "public/social/source/advizen/06-three.jpg"
+title = "Три закона Республики Узбекистан"
+caption = "Подготовлены при участии членов команды. advizenco.com/expertise"
