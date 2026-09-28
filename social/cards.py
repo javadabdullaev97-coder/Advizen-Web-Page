@@ -171,9 +171,12 @@ def _canvas(eyebrow=None, counter=None, backdrop=None):
 def cover(*, category, title, deck, counter=None, image=None, **_):
     # The cover reserves the foot of the frame the way `scene` reserves the
     # head, so it takes the same gentler flatten: it is the card the grid
-    # shows, and crushing its picture costs the most there.
-    img = (_backdrop(image, target=T.SCENE_TARGET, floor=0.0) if image
-           else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
+    # shows, and crushing its picture costs the most there. It closes the
+    # foot the way `engagement` does rather than on the shallow default
+    # ramp, which had run out of darkness by the title and left it sitting
+    # on whatever the picture happened to do there.
+    img = (_backdrop(image, close="foot", target=T.SCENE_TARGET, floor=0.0)
+           if image else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
     d = ImageDraw.Draw(img)
     _chrome(img, d, category, counter)
     ft, fd = ts.serif(T.SIZE_DISPLAY, medium=True), ts.sans(T.SIZE_DECK, 300)
