@@ -60,23 +60,26 @@ Fourteen services, one way in.
 ```
 The reception counter of a quiet, bright office lobby, shot from just in
 front of it in the middle of the day. Behind the counter three corridors
-lead away in different directions. On the otherwise empty counter lies one
-deep oxblood leather document folder, alone. Honed stone counter top,
-walnut panelling, a bronze pendant lamp, a linen armchair out of focus.
-Large soft daylight from a tall window to the left, even and diffused,
-gentle shadows. The oxblood folder is deep and desaturated, matte leather,
-and is the only colour in the frame. Editorial interior photography, 35mm,
-natural light, calm and expensive. The counter and the corridors occupy the
-lower two thirds; the upper third is plain wall and empty. 4:5 vertical,
+lead away in different directions, each falling off into soft depth. On
+the otherwise empty counter lies one deep oxblood visitor badge on a
+lanyard, alone. Honed dark stone counter top, walnut panelling, a bronze
+pendant lamp hanging above, a chair pushed in, a coat stand out of focus
+to one side. Large soft daylight from a tall window to the left, even and
+diffused, gentle shadows; the pendant lamp is on but is not what lights
+the room. The badge is deep and desaturated, matte, and is the only colour
+in the frame. Editorial interior photography, 35mm, shallow depth of
+field, calm and expensive. The counter and the corridors occupy the lower
+two thirds; the upper third is plain wall and empty. 4:5 vertical,
 1620x2025.
 
 Negative prompt: night, darkness, unlit, gloomy, moody, horror, thriller,
-film noir, haunted, eerie, coloured light on the floor, red glow, neon,
-light spilling under doors, text, letters, numbers, words, signage,
-nameplate, watermark, logo, face, eyes, portrait, bright red, ruby,
-scarlet, saturated colours, orange, teal, yellow, hard rim light, specular
-glare, 3D render, illustration, faceted crystal, floating glass panels,
-abstract sculpture, tabletop still life.
+film noir, haunted, eerie, deep shadow everywhere, coloured light, red
+glow, neon, text, letters, numbers, words, signage, nameplate, readable
+writing, watermark, logo, face, eyes, portrait, people looking at camera,
+bright red, ruby, scarlet, saturated colours, orange, teal, yellow, hard
+rim light, bright white edge highlights, specular glare, 3D render,
+illustration, cartoon, faceted crystal, floating glass panels, abstract
+sculpture, tabletop still life.
 ```
 
 ## 04 — Track record
