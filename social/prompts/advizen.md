@@ -55,31 +55,37 @@ abstract sculpture, tabletop still life.
 
 ## 02 — One point of contact
 
-Fourteen services, one way in.
+Many services, one way in. The only slide in the post that is a graphic
+rather than a place: it states a fact about how the firm is arranged, not
+a situation, and a photograph of an empty reception desk said the opposite
+of what was meant — that there is nobody there to help.
+
+An exact count is not asked for. Generators cannot count, and the card's
+own text carries the seven and seven.
 
 ```
-The reception counter of a quiet, bright office lobby, shot from just in
-front of it in the middle of the day. Behind the counter three corridors
-lead away in different directions, each falling off into soft depth. On
-the otherwise empty counter lies one deep oxblood visitor badge on a
-lanyard, alone. Honed dark stone counter top, walnut panelling, a bronze
-pendant lamp hanging above, a chair pushed in, a coat stand out of focus
-to one side. Large soft daylight from a tall window to the left, even and
-diffused, gentle shadows; the pendant lamp is on but is not what lights
-the room. The badge is deep and desaturated, matte, and is the only colour
-in the frame. Editorial interior photography, 35mm, shallow depth of
-field, calm and expensive. The counter and the corridors occupy the lower
-two thirds; the upper third is plain wall and empty. 4:5 vertical,
-1620x2025.
+A dark product-photography scene. A dozen or so small tiles of smoked
+dark glass float at different depths against a near-black ground,
+arranged in a loose arc. Each tile carries one simple pictogram etched
+into its surface and catching the light — a pair of scales, an hourglass,
+a key, a wax seal, a chart bar, a padlock, a banknote. Fine deep oxblood
+lines run between the tiles and gather into one larger tile at the front,
+square-on and closest to the camera, its pictogram the sharpest thing in
+the image. Real glass with weight and thickness, bevelled edges, faint
+internal reflections. Soft broad studio light from the upper left, gentle
+falloff, no hard speculars. The oxblood lines are deep and desaturated
+and are the only colour in the frame. Photorealistic macro product
+photography, 85mm, shallow depth of field, the rear tiles falling out of
+focus. The arc and the front tile occupy the lower two thirds; the upper
+third is plain dark ground and empty. 4:5 vertical, 1620x2025.
 
-Negative prompt: night, darkness, unlit, gloomy, moody, horror, thriller,
-film noir, haunted, eerie, deep shadow everywhere, coloured light, red
-glow, neon, text, letters, numbers, words, signage, nameplate, readable
-writing, watermark, logo, face, eyes, portrait, people looking at camera,
-bright red, ruby, scarlet, saturated colours, orange, teal, yellow, hard
-rim light, bright white edge highlights, specular glare, 3D render,
-illustration, cartoon, faceted crystal, floating glass panels, abstract
-sculpture, tabletop still life.
+Negative prompt: text, letters, numbers, words, readable writing,
+watermark, logo, signage, face, eyes, portrait, people, bright red, ruby,
+scarlet, neon, glowing edges, saturated colours, orange, teal, yellow,
+rainbow refraction, hard rim light, bright white edge highlights,
+specular glare, faceted crystal, gemstone, jewellery, low-poly, cartoon,
+flat vector illustration, user interface screenshot, bright daylight,
+white background, cluttered, centred symmetrical composition.
 ```
 
 ## 04 — Track record
