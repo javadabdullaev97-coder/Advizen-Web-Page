@@ -21,12 +21,10 @@ import theme as T
 import typeset as ts
 
 
-def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool, ink=None):
+def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool):
     if eyebrow:
-        # Warm Dim is the eyebrow's colour against the void. On a crimson
-        # band it disappears, so a washed card passes its own.
         ts.tracked(d, (T.MARGIN, T.EYEBROW_Y), eyebrow.upper(),
-                   ts.sans(T.SIZE_LABEL), ink or T.INK_3,
+                   ts.sans(T.SIZE_LABEL), T.INK_3,
                    T.SIZE_LABEL * T.EYEBROW_TRACKING)
     if mark:
         d.line([(T.MARGIN, T.MARK_Y), (T.MARGIN + 46, T.MARK_Y)], fill=T.CRIMSON, width=2)
@@ -38,7 +36,7 @@ def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool, ink=None):
                counter, font=f, fill=T.INK_3)
 
 
-def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42, wash=None):
+def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42):
     """
     A photograph as the card's ground.
 
@@ -85,18 +83,20 @@ def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42, wash=
     column = Image.new("L", (1, T.HEIGHT))
     for row in range(T.HEIGHT):
         if close == "bottom":
-            t = max(0.0, (row - T.HEIGHT * 0.30) / (T.HEIGHT * 0.70))
-        elif close == "foot":
-            t = max(0.0, (row - T.HEIGHT * 0.56) / (T.HEIGHT * 0.44))
+            t = max(0.0, (row - T.HEIGHT * 0.30) / (T.HEIGHT * 0.70)) ** 1.5
         else:
-            t = max(0.0, (T.HEIGHT * 0.54 - row) / (T.HEIGHT * 0.54))
-        column.putpixel((0, row), int(255 * t ** 1.5))
-    # `wash` is what the gradient closes to. The void, normally, so the
-    # frame ends where every other card's ground begins. Crimson, when the
-    # band is meant to be seen: at that point it stops being a scrim that
-    # clears the type and becomes the card's mark, which is why a washed
-    # card draws no separate rule.
-    return Image.composite(Image.new("RGB", img.size, wash or T.BG), img,
+            # A scene's band holds, then falls away. A plain ramp was here
+            # first and it had run out of darkness by the last line of the
+            # caption, which then sat on a lit sheet of paper and stopped
+            # being legible. Holding it flat behind the block and fading
+            # below keeps the type on solid ground without swallowing the
+            # picture.
+            d1, d2 = (T.HEIGHT * 0.28, T.HEIGHT * 0.32)
+            edge = (row if close == "top"
+                    else T.HEIGHT - row)
+            t = 1.0 if edge <= d1 else max(0.0, 1 - (edge - d1) / d2)
+        column.putpixel((0, row), int(255 * t))
+    return Image.composite(Image.new("RGB", img.size, T.BG), img,
                            column.resize((T.WIDTH, T.HEIGHT)))
 
 
@@ -369,7 +369,7 @@ def photo(*, image, title=None, caption=None, eyebrow=None, counter=None, **_):
 
 
 def scene(*, image, title, caption=None, eyebrow=None, counter=None,
-          tint=False, foot=False, **_):
+          foot=False, **_):
     """
     A staged photograph with the proposition banded across the head.
 
@@ -385,20 +385,13 @@ def scene(*, image, title, caption=None, eyebrow=None, counter=None,
     neutral ones. The headline asks; the caption answers in a line.
     """
     img = _backdrop(image, close="foot" if foot else "top",
-                    target=T.SCENE_TARGET, floor=0.0,
-                    wash=T.CRIMSON if tint else None)
+                    target=T.SCENE_TARGET, floor=0.0)
     d = ImageDraw.Draw(img)
-    # A crimson band is already the one mark DESIGN.md §2 allows, so the
-    # accent rule is not drawn on top of it.
-    _chrome(d, eyebrow, counter, mark=not tint, ink=T.INK_2 if tint else None)
+    _chrome(d, eyebrow, counter, mark=True)
 
     ft, fc = ts.serif(58, medium=True), ts.sans(T.SIZE_DECK, 300)
     title_lines = ts.wrap(title, ft, T.MEASURE_BODY - 20)
     caption_lines = ts.wrap(caption, fc, T.MEASURE_DECK) if caption else []
-
-    # Over crimson the caption cannot be Warm Muted — it goes muddy. Both
-    # lines take Warm Parchment and separate by size and weight instead.
-    sub = T.INK if tint else T.INK_2
 
     block = len(title_lines) * 72 + (20 if caption_lines else 0) \
         + len(caption_lines) * T.LEAD_DECK
@@ -409,7 +402,7 @@ def scene(*, image, title, caption=None, eyebrow=None, counter=None,
         y += 72
     y += 20
     for line in caption_lines:
-        ts.text(d, (T.MARGIN, y), line, fc, sub)
+        ts.text(d, (T.MARGIN, y), line, fc, T.INK_2)
         y += T.LEAD_DECK
     return img
 
