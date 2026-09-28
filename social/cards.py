@@ -487,6 +487,45 @@ def matrix(*, columns, eyebrow=None, counter=None, **_):
     return img
 
 
+def figures(*, rows, image=None, eyebrow=None, counter=None, **_):
+    """
+    Several figures of equal standing.
+
+    Set as a headline and a caption, the first number becomes the claim
+    and the rest become its footnote — which is a decision about the
+    firm, made by the layout rather than by anyone. A ledger makes no
+    such decision: every figure gets the same size, the same weight and a
+    rule of its own, and the reader ranks them or does not.
+    """
+    # A ground, not a scene: the ledger lies across the full width of the
+    # picture rather than under a closed band, so it takes the deeper
+    # flatten. Briefed as a scene, the first label landed on lit glass and
+    # stopped being readable.
+    img = (_backdrop(image, close="foot") if image
+           else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
+    d = ImageDraw.Draw(img)
+    _chrome(d, eyebrow, counter, mark=True)
+
+    fv, fl = ts.serif(46, medium=True), ts.sans(25, 300)
+    VALUE_W, ROW, PAD = 300, 92, 26
+
+    wrapped = [(r["value"], ts.wrap(r["label"], fl, T.MEASURE_BODY - VALUE_W))
+               for r in rows]
+    heights = [max(ROW, PAD + len(lines) * 34 + PAD) for _, lines in wrapped]
+    height = sum(heights)
+    y = (T.BAND_BOTTOM - height) if image else ts.centre_y(height)
+
+    for (value, lines), h in zip(wrapped, heights):
+        d.line([(T.MARGIN, y), (T.MARGIN + T.MEASURE_BODY, y)], fill=T.LINE, width=1)
+        ts.text(d, (T.MARGIN, y + PAD), value, fv, T.INK, optical=True)
+        ly = y + PAD + 8
+        for line in lines:
+            ts.text(d, (T.MARGIN + VALUE_W, ly), line, fl, T.INK_2)
+            ly += 34
+        y += h
+    return img
+
+
 def timeline(*, events, eyebrow=None, counter=None, **_):
     """Dated sequence. The decisive entry carries the crimson."""
     img, d = _canvas(eyebrow, counter, mark=False)
@@ -586,6 +625,7 @@ TYPES = {
     "photo": photo,
     "scene": scene,
     "matrix": matrix,
+    "figures": figures,
     "timeline": timeline,
     "compare": compare,
     "chart": chart,

@@ -1,7 +1,7 @@
 slug     = "advizen"
 category = "О фирме"
 title    = "Advizen"
-deck     = "Налоги, право, финансы и HR — в одной практике"
+deck     = "Консалтинг и операции — в одной практике, по одному договору"
 image    = "public/social/source/advizen/01-cover.jpg"
 
 [[slide]]
@@ -36,24 +36,26 @@ columns = [
 ]
 
 [[slide]]
-type = "scene"
-foot = true
+type = "figures"
 eyebrow = "Послужной список"
 image = "public/social/source/advizen/04-record.jpg"
-title = "$10 млрд+ в сделках, сопровождённых членами команды"
-caption = "80+ регистраций компаний. 30+ проведённых due diligence."
+rows = [
+  { value = "$10 млрд+", label = "в сделках, сопровождённых членами команды" },
+  { value = "80+",       label = "регистраций компаний" },
+  { value = "30+",       label = "проведённых due diligence" },
+]
 
 [[slide]]
 type = "scene"
 eyebrow = "Зачем одна практика"
 image = "public/social/source/advizen/05-consequence.jpg"
-title = "Налоговый вопрос — почти никогда не только налоговый"
+title = "Вопрос из одной области почти никогда в ней не остаётся"
 caption = "Структура сделки меняет налог. Налог меняет трудовой договор. Договор меняет отчётность."
 
 [[slide]]
 type = "scene"
 foot = true
-eyebrow = "Ещё одна цифра"
+eyebrow = "Законотворчество"
 image = "public/social/source/advizen/06-three.jpg"
-title = "Три закона Республики Узбекистан"
-caption = "Подготовлены при участии членов команды. advizenco.com/expertise"
+title = "Члены команды участвовали в разработке трёх законов Республики Узбекистан"
+caption = "advizenco.com/expertise"
