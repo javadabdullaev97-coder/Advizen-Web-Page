@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 FONT_DIR = ROOT / "fonts"
+LOGO = ROOT / "logo.png"
 
 # ── Canvas ────────────────────────────────────────────────────────────
 # 4:5 is the tallest portrait the feed renders without cropping.
@@ -20,7 +21,9 @@ MARGIN = 100
 EYEBROW_Y = 112          # baseline of the category label
 BAND_TOP = 268           # content band, top
 BAND_BOTTOM = 1048       # content band, bottom
-MARK_Y = 1118            # the single crimson mark
+MARK_Y = 1118            # lower bound for type; once the crimson rule
+LOGO_H = 26              # the mark itself, beside the wordmark
+LOGO_GAP = 20            # space between the mark and the wordmark
 FOOT_Y = 1172            # wordmark and counter
 
 # ── Colour, DESIGN.md §2 ─────────────────────────────────────────────

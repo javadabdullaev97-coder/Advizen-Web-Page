@@ -1,9 +1,10 @@
 """
 Card layouts.
 
-Every card carries exactly one crimson mark (DESIGN.md §2) — a rule, or the
-numerals, or one stroke, or one bar. Cards that mark themselves some other
-way pass mark=False so the accent rule is not drawn on top of it.
+Every card carries exactly one crimson mark (DESIGN.md §2). It is the
+logo, set beside the wordmark at the foot of every card — see _chrome.
+The diagrams spend crimson a second time, on the node or stroke that is
+the point of the figure; nothing else may.
 
 The diagram types are the reason this exists rather than a template in
 Canva. Consulting firms describe structures in prose; drawing them —
@@ -21,15 +22,53 @@ import theme as T
 import typeset as ts
 
 
-def _chrome(d, eyebrow: str | None, counter: str | None, mark: bool):
+_LOGO_CACHE: dict[int, Image.Image] = {}
+
+
+def _logo(height: int) -> Image.Image:
+    """
+    The mark, recoloured to the card's crimson.
+
+    The file is flat artwork in the site's #940e27; at card scale against
+    a near-black ground that reads hot, which is why theme.CRIMSON is a
+    touch desaturated. Only the alpha channel is kept, so the mark takes
+    the card's colour rather than the file's.
+    """
+    if height not in _LOGO_CACHE:
+        src = Image.open(T.LOGO).convert("RGBA")
+        w = round(src.width * height / src.height)
+        alpha = src.getchannel("A").resize((w, height), Image.LANCZOS)
+        mark = Image.new("RGBA", (w, height), T.CRIMSON + (0,))
+        mark.putalpha(alpha)
+        _LOGO_CACHE[height] = mark
+    return _LOGO_CACHE[height]
+
+
+def _chrome(img, d, eyebrow: str | None, counter: str | None):
+    """
+    The four fixed elements of DESIGN.md §10: category, mark, wordmark,
+    counter.
+
+    The mark used to be a short crimson rule sitting above the wordmark.
+    It is the logo now, set beside the wordmark as a lockup — and it is
+    still exactly one crimson thing on the card, so the rule goes rather
+    than joining it.
+    """
     if eyebrow:
         ts.tracked(d, (T.MARGIN, T.EYEBROW_Y), eyebrow.upper(),
                    ts.sans(T.SIZE_LABEL), T.INK_3,
                    T.SIZE_LABEL * T.EYEBROW_TRACKING)
-    if mark:
-        d.line([(T.MARGIN, T.MARK_Y), (T.MARGIN + 46, T.MARK_Y)], fill=T.CRIMSON, width=2)
-    ts.tracked(d, (T.MARGIN, T.FOOT_Y), "ADVIZEN", ts.sans(23, 500), T.INK_2,
-               23 * T.WORDMARK_TRACKING)
+
+    # Seated on the wordmark's baseline, not centred on its line box: the
+    # sans reserves descender room the capitals never reach, and centring
+    # on the box drops the mark below the letters it stands beside.
+    font = ts.sans(23, 500)
+    baseline = T.FOOT_Y + font.getbbox("ADVIZEN")[3]
+    mark = _logo(T.LOGO_H)
+    img.paste(mark, (T.MARGIN, baseline - T.LOGO_H), mark)
+    ts.tracked(d, (T.MARGIN + mark.width + T.LOGO_GAP, T.FOOT_Y), "ADVIZEN",
+               font, T.INK_2, 23 * T.WORDMARK_TRACKING)
+
     if counter:
         f = ts.mono(T.SIZE_COUNTER)
         d.text((T.WIDTH - T.MARGIN - f.getlength(counter), T.FOOT_Y + 2),
@@ -115,10 +154,10 @@ def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42):
                            column.resize((T.WIDTH, T.HEIGHT)))
 
 
-def _canvas(eyebrow=None, counter=None, mark=True, backdrop=None):
+def _canvas(eyebrow=None, counter=None, backdrop=None):
     img = _backdrop(backdrop) if backdrop else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG)
     d = ImageDraw.Draw(img)
-    _chrome(d, eyebrow, counter, mark)
+    _chrome(img, d, eyebrow, counter)
     return img, d
 
 
@@ -131,7 +170,7 @@ def cover(*, category, title, deck, counter=None, image=None, **_):
     img = (_backdrop(image, target=T.SCENE_TARGET, floor=0.0) if image
            else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
     d = ImageDraw.Draw(img)
-    _chrome(d, category, counter, mark=True)
+    _chrome(img, d, category, counter)
     ft, fd = ts.serif(T.SIZE_DISPLAY, medium=True), ts.sans(T.SIZE_DECK, 300)
 
     title_lines = ts.wrap(title, ft, T.MEASURE_BODY)
@@ -170,7 +209,7 @@ def quote(*, text, eyebrow=None, counter=None, image=None, **_):
 
 def numbered(*, items, eyebrow=None, counter=None, start=1, image=None, **_):
     # the numerals are the mark
-    img, d = _canvas(eyebrow, counter, mark=False, backdrop=image)
+    img, d = _canvas(eyebrow, counter, backdrop=image)
     fn, fh, fb = ts.mono(23, 500), ts.serif(T.SIZE_HEAD, medium=True), ts.sans(T.SIZE_BODY, 300)
     measure = T.MEASURE_BODY - T.LIST_INDENT
 
@@ -209,7 +248,7 @@ def _node(d, box, label, value, *, accent=False):
 
 def flow(*, nodes, gate, outcome, note=None, eyebrow=None, counter=None, **_):
     """A decision that cannot resolve: parties → gate → outcome."""
-    img, d = _canvas(eyebrow, counter, mark=False)   # the crimson stroke is the mark
+    img, d = _canvas(eyebrow, counter)   # the crimson stroke is the mark
 
     gap = 64
     box_w = (T.MEASURE_BODY - gap * (len(nodes) - 1)) // len(nodes)
@@ -259,7 +298,7 @@ def flow(*, nodes, gate, outcome, note=None, eyebrow=None, counter=None, **_):
 
 def structure(*, parent, children, note=None, eyebrow=None, counter=None, **_):
     """Ownership: one holder above, holdings below. Accent marks the holder."""
-    img, d = _canvas(eyebrow, counter, mark=False)
+    img, d = _canvas(eyebrow, counter)
 
     gap = 40
     child_w = (T.MEASURE_BODY - gap * (len(children) - 1)) // len(children)
@@ -316,7 +355,7 @@ def chain(*, nodes, person, note=None, eyebrow=None, counter=None, **_):
     The terminal node carries the crimson, because arriving there is the
     entire purpose of the chain.
     """
-    img, d = _canvas(eyebrow, counter, mark=False)
+    img, d = _canvas(eyebrow, counter)
 
     box_h, link = 84, 42
     fn = ts.sans(27, 400)
@@ -408,7 +447,7 @@ def scene(*, image, title, caption=None, eyebrow=None, counter=None,
     img = _backdrop(image, close="foot" if foot else "top",
                     target=T.SCENE_TARGET, floor=0.0)
     d = ImageDraw.Draw(img)
-    _chrome(d, eyebrow, counter, mark=True)
+    _chrome(img, d, eyebrow, counter)
 
     ft, fc = ts.serif(58, medium=True), ts.sans(T.SIZE_DECK, 300)
     title_lines = ts.wrap(title, ft, T.MEASURE_BODY - 20)
@@ -444,7 +483,7 @@ def matrix(*, columns, eyebrow=None, counter=None, **_):
     One crimson rule under the column heads is the card's whole accent, so
     the chrome's own mark is suppressed.
     """
-    img, d = _canvas(eyebrow, counter, mark=False)
+    img, d = _canvas(eyebrow, counter)
 
     gap = 56
     col_w = (T.MEASURE_BODY - gap * (len(columns) - 1)) // len(columns)
@@ -504,7 +543,7 @@ def figures(*, rows, image=None, eyebrow=None, counter=None, **_):
     img = (_backdrop(image, close="foot") if image
            else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
     d = ImageDraw.Draw(img)
-    _chrome(d, eyebrow, counter, mark=True)
+    _chrome(img, d, eyebrow, counter)
 
     fv, fl = ts.serif(46, medium=True), ts.sans(25, 300)
     VALUE_W, ROW, PAD = 300, 92, 26
@@ -526,9 +565,42 @@ def figures(*, rows, image=None, eyebrow=None, counter=None, **_):
     return img
 
 
+def engagement(*, value, label, headline, image=None, eyebrow=None,
+               counter=None, **_):
+    """
+    One piece of work: its size, what the size measures, and what it was.
+
+    The figure leads because it is what makes the slide worth stopping on,
+    but it is meaningless alone — $10B could be anything — so the label
+    under it says what was counted and the line below says what the work
+    was. Three registers, one proposition.
+    """
+    img = (_backdrop(image, close="foot") if image
+           else Image.new("RGB", (T.WIDTH, T.HEIGHT), T.BG))
+    d = ImageDraw.Draw(img)
+    _chrome(img, d, eyebrow, counter)
+
+    fv, fl, fh = (ts.serif(T.SIZE_DISPLAY, medium=True), ts.sans(T.SIZE_LABEL),
+                  ts.sans(29, 300))
+    lines = ts.wrap(headline, fh, T.MEASURE_BODY)
+    block = T.LEAD_DISPLAY + 22 + 28 + 40 + len(lines) * T.LEAD_BODY
+    y = (T.BAND_BOTTOM - block) if image else ts.centre_y(block)
+
+    ts.tracked(d, (ts.optical_x(value, fv, T.MARGIN), y), value, fv, T.INK,
+               T.DISPLAY_TRACKING)
+    y += T.LEAD_DISPLAY + 22
+    ts.tracked(d, (T.MARGIN, y), label.upper(), fl, T.INK_3,
+               T.SIZE_LABEL * T.EYEBROW_TRACKING)
+    y += 28 + 40
+    for line in lines:
+        ts.text(d, (T.MARGIN, y), line, fh, T.INK_2)
+        y += T.LEAD_BODY
+    return img
+
+
 def timeline(*, events, eyebrow=None, counter=None, **_):
     """Dated sequence. The decisive entry carries the crimson."""
-    img, d = _canvas(eyebrow, counter, mark=False)
+    img, d = _canvas(eyebrow, counter)
 
     fy, ft = ts.mono(26, 500), ts.sans(27, 300)
     label_w, row_gap = 150, 30
@@ -584,7 +656,7 @@ def compare(*, columns, rows, eyebrow=None, counter=None, **_):
 
 def chart(*, value, label, series, source=None, eyebrow=None, counter=None, **_):
     """Display figure over its own history. The final bar is the mark."""
-    img, d = _canvas(eyebrow, counter, mark=False)
+    img, d = _canvas(eyebrow, counter)
 
     ts.text(d, (T.MARGIN, T.BAND_TOP - 40), value,
             ts.serif(T.SIZE_FIGURE, medium=True), T.INK, optical=True)
@@ -626,6 +698,7 @@ TYPES = {
     "scene": scene,
     "matrix": matrix,
     "figures": figures,
+    "engagement": engagement,
     "timeline": timeline,
     "compare": compare,
     "chart": chart,

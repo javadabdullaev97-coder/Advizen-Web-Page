@@ -58,12 +58,14 @@ bar, a pin, a clock — as long as they are engraved, embossed or etched
 into a real material rather than drawn on top. Letters and numerals never
 are.
 
-## `cover`, `quote`, `numbered` — a ground, under type
+## `cover`, `quote`, `numbered`, `figures`, `engagement` — a ground, under type
 
 Here the type is laid over the foot of the picture and the picture is
 flattened most of the way to the void. It has to be quiet: one subject,
-right of frame, an empty and unlit lower left. A scene put through this
-treatment loses everything that made it a scene.
+in the **upper two thirds**, with the bottom of the frame empty. That is
+the exact inverse of `scene`, and briefing one as the other is how a
+picture ends up either buried or fighting the words on top of it. A scene
+put through this treatment loses everything that made it a scene.
 
 ## True for both
 
