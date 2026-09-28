@@ -72,51 +72,61 @@ cartoon, cluttered, dirty, rusted.
 
 ## 04 — Fintech · $200M · digital bank restructuring
 
-*Register: device.*
+*Register: macro concept.* The first draft of this was a rack of servers,
+which says "data centre" rather than "bank" — the money is what the work
+was about.
 
 ```
-A macro photograph of a bank of server equipment in a cool, brightly lit
-data hall. Ranks of identical dark matte units fill the upper two thirds
-of the frame, their front panels broken only by rows of small unlit
-indicators and neat bundles of pale grey cabling. One cable among them is
-deep oxblood and runs diagonally across the rack. Even diffused light
-from above, no coloured glow, no blinking lights. The oxblood is deep and
-desaturated, matte, and is the only colour. Photorealistic photography,
-85mm, shallow depth of field, sharp on the oxblood cable. The racks
-occupy the upper two thirds; the lower third is plain floor and empty.
-4:5 vertical, 1620x2025.
+An extreme close-up of a stack of payment cards lying on a dark slate
+surface, photographed from a low three-quarter angle in bright soft
+daylight. A dozen or so cards, fanned slightly so their edges step away
+from the camera, fill the upper two thirds of the frame. They are blank —
+plain matte charcoal and brushed steel, no printing of any kind — and
+their embossed chip contacts and milled edges catch the light. One card
+part-way down the stack is deep oxblood and sits proud of the others. A
+broad soft window light from the upper left, shallow gradients, gentle
+shadow under the stack. The oxblood is deep and desaturated, matte, and
+is the only colour. Photorealistic macro product photography, 100mm
+macro, shallow depth of field, sharp on the oxblood card. The stack
+occupies the upper two thirds; the lower third is plain dark slate and
+empty. 4:5 vertical, 1620x2025.
 
-Negative prompt: blue glow, green LEDs, glowing lights, neon, cyberpunk,
-holograms, futuristic interface, screens, user interface, code, text,
-letters, numbers, words, readable writing, watermark, logo, signage,
-face, people, bright red, scarlet, saturated colours, orange, teal,
-rainbow, hard rim light, lens flare, 3D render, illustration, cluttered,
-tangled cables.
+Negative prompt: text, letters, numbers, words, card number, name,
+expiry date, bank name, brand, Visa, Mastercard, hologram, magnetic
+stripe artwork, readable writing, watermark, logo, signage, face, hand,
+fingers, people, bright red, scarlet, neon, glowing edges, saturated
+colours, orange, teal, yellow, gold card, rainbow, hard rim light, lens
+flare, 3D render, illustration, cartoon, coins, banknotes, cluttered.
 ```
 
-## 05 — Public sector · UzFund · state investment fund
+## 05 — Investment · UzFund · state investment fund
 
-*Register: staged office.*
+*Register: desk still life.* Not a government room — the work was
+restructuring a fund, so the picture is what a fund is made of: holdings,
+prices, paper.
 
 ```
-The corner of a large, formal meeting room in a government building,
-photographed in bright midday daylight from a tall window. A long
-polished walnut table runs into the upper two thirds of the frame, ringed
-by empty high-backed leather chairs. Pale plaster walls, a plain plaster
-cornice, a stone floor. One deep oxblood document folder lies closed on
-the table, alone. Large soft daylight from the left, even and diffused,
-gentle shadows. The oxblood is deep and desaturated, matte leather, and
-is the only colour in the frame. Editorial architectural photography,
-35mm, natural light, formal and still. The table and chairs occupy the
-upper two thirds; the lower third is plain floor and empty. 4:5
-vertical, 1620x2025.
+A still life on a dark walnut desk, photographed from a low
+three-quarter angle in bright soft daylight. A loose stack of engraved
+share certificates on heavy cream paper fills the upper two thirds of the
+frame, their guilloche borders and fine intaglio linework catching the
+light. The topmost sheet carries a printed line chart rising to the
+right, drawn in fine black ink, and a deep oxblood wax seal pressed into
+its lower corner. A plain steel fountain pen lies beside the stack. Large
+soft daylight from a window to the left, even and diffused, gentle
+shadows. The oxblood is deep and desaturated, matte wax, and is the only
+colour in the frame. Editorial still life photography, 50mm, shallow
+depth of field, sharp on the seal. The papers occupy the upper two
+thirds; the lower third is plain bare walnut and empty. 4:5 vertical,
+1620x2025.
 
-Negative prompt: night, darkness, dim, moody, chandelier, gilt, ornate,
-baroque, marble columns, flags, coat of arms, portrait on the wall, text,
-letters, numbers, words, signage, nameplate, watermark, logo, face,
-eyes, people, bright red, scarlet, neon, saturated colours, orange,
-teal, hard rim light, specular glare, 3D render, illustration,
-cluttered, papers scattered.
+Negative prompt: readable text, letters, words, numbers, figures on the
+chart, axis labels, currency symbols, company name, watermark, logo,
+government seal, coat of arms, flag, face, hand, fingers, people,
+banknotes, coins, gold bars, dollar signs, calculator, laptop, screen,
+bright red, scarlet, neon, saturated colours, orange, teal, green
+candlesticks, hard rim light, specular glare, 3D render, illustration,
+cartoon, cluttered, messy pile.
 ```
 
 ---
