@@ -15,9 +15,6 @@ against the void, and over a picture that separation collapses — the
 structure stops reading, which is the only thing the card was for.
 """
 
-import sys
-from pathlib import Path
-
 from PIL import Image, ImageDraw, ImageStat
 
 import theme as T
@@ -77,15 +74,6 @@ def _backdrop(path, *, close="bottom", target=T.GROUND_TARGET, floor=0.42):
     # every card sits on the same value; a scene gets none, because
     # flattening a frame that is already at target only buries the thing
     # the scene was staged to show.
-    # Nothing here brightens a picture, and brightening one would only
-    # raise its noise. So a backdrop that arrives far under target stays
-    # that dark, and on a card it reads as a black rectangle. Say so,
-    # rather than leaving it to be noticed by eye after the render.
-    if mean < target * 0.55:
-        print(f"warning: {Path(path).name} arrives at mean {mean:.0f}, "
-              f"against a target of {target}. It will render close to "
-              f"black — generate it lighter.", file=sys.stderr)
-
     alpha = floor
     if mean > target:
         alpha = min(0.92, max(alpha, (mean - target) / max(1.0, mean - ground)))

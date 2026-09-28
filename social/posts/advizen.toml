@@ -5,13 +5,11 @@ deck     = "Налоги, право, финансы и HR — в одной п�
 image    = "public/social/source/advizen/01-cover.jpg"
 
 [[slide]]
-type = "quote"
+type = "scene"
 eyebrow = "Что это"
-text = """
-Семь консалтинговых дисциплин и семь операционных сервисов.
-
-Одна практика, один договор, одна точка контакта.
-"""
+image = "public/social/source/advizen/02-contact.jpg"
+title = "Семь консалтинговых дисциплин и семь операционных сервисов"
+caption = "Одна практика, один договор, одна точка контакта."
 
 [[slide]]
 type = "numbered"
