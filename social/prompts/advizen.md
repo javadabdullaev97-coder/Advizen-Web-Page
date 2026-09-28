@@ -98,35 +98,38 @@ centred symmetrical composition.
 ## 04 — Track record
 
 Ten billion in deals, eighty registrations, thirty due diligence reviews.
-The quantity is the subject.
+The quantity is the subject, and the card's own text carries the figures —
+the picture only has to make the volume felt.
 
-*Macro, not a room.* Slides 01 and 06 are both interiors, and a third
-would put three rooms in a five-image post. Coming in close also gives the
-frame the texture that carries a picture at this size — worn board, paper
-edges, raking light.
+*Same material as slide 02, different composition.* Three slides sharing
+one material is a house style; three slides sharing one photograph is the
+failure this post was rebuilt out of. So: a field seen from above and
+receding, where 02 was an arc at eye level.
 
 ```
-Extreme close-up of the fore-edges of a long row of bound case files
-standing tightly packed and seen end-on, filling the whole frame and
-falling out of focus to either side. Thick grey board, worn and slightly
-uneven paper edges, faint handling marks, a hairline of dust along the
-top. One file near the centre has a deep oxblood spine and stands a few
-millimetres proud of the rest. Large soft daylight raking across the edges
-from the left, picking out the texture of every sheet, gentle shadows
-between the files. The oxblood spine is deep and desaturated, matte board,
-and is the only colour in the frame. Editorial macro photography, 100mm,
-shallow depth of field, sharp on the proud file. The row occupies the
-lower two thirds; the upper third falls away into plain shadow and is
+A studio product photograph looking down at a shallow angle across a
+dense field of small square glass markers laid out in a loose grid on a
+smooth graphite surface, the grid running away from the camera and
+dissolving into soft focus at the back of the frame. Most markers are
+clear polished glass; perhaps a dozen scattered through the field are deep
+oxblood and stand slightly taller than the rest. A few near the front are
+tipped on their sides. Thick glass with bright bevelled edges, crisp
+internal reflections, faint contact shadows. Strong soft key light from
+the upper left with a fill from the right; the field is bright and clearly
+readable, the graphite backdrop lit to a visible gradient. The oxblood
+markers are deep and desaturated and are the only colour. Photorealistic
+macro product photography, 85mm, shallow depth of field. The field
+occupies the lower two thirds; the upper third is plain graphite and
 empty. 4:5 vertical, 1620x2025.
 
-Negative prompt: night, darkness, unlit, gloomy, moody, horror, film noir,
-eerie, dusty abandoned archive, coloured light, red glow, neon, text,
-letters, numbers, words, readable writing, labels with writing, watermark,
-logo, signage, face, eyes, portrait, people, hands, bright red, ruby,
-scarlet, saturated colours, orange, teal, yellow, hard rim light, specular
-glare, 3D render, illustration, cartoon, faceted crystal, floating glass
-panels, abstract sculpture, wide room, library interior, bookshelf from a
-distance.
+Negative prompt: dark, near-black, black background, underexposed, murky,
+low-key, dim, moody, night, text, letters, numbers, words, readable
+writing, watermark, logo, signage, face, eyes, portrait, people, bright
+red, ruby, scarlet, neon, glowing edges, saturated colours, orange, teal,
+yellow, rainbow refraction, hard rim light, specular glare, faceted
+crystal, gemstone, jewellery, chess board, game pieces, low-poly, cartoon,
+flat vector illustration, white background, cluttered, centred
+symmetrical composition.
 ```
 
 ## 06 — Three
@@ -134,25 +137,34 @@ distance.
 Three laws drafted with the team's involvement. The count is in the
 picture, so the card's own numeral never competes with a generated one.
 
-```
-An empty committee chamber in a government building, shot from the back of
-the room in the middle of the day. Curved rows of vacant seats in charcoal
-leather face a low speaker's rostrum. On the rostrum lie exactly three
-closed folders in deep oxblood, side by side; nothing else is on it.
-Walnut panelling, a bronze microphone stand, tall windows along one side.
-Large soft daylight, even and diffused, gentle shadows. The three folders
-are deep and desaturated, matte leather, and are the only colour in the
-frame. Editorial interior photography, 35mm, natural light, calm and
-formal. The rostrum and the front rows occupy the lower two thirds; the
-upper third is plain wall and empty. 4:5 vertical, 1620x2025.
+*Same material again, and a third composition: upright and frontal, where
+02 was an arc and 04 a receding field.* This is the closing slide, so it
+is the stillest of the three.
 
-Negative prompt: night, darkness, unlit, gloomy, moody, horror, thriller,
-film noir, haunted, eerie, coloured light, red glow, neon, text, letters,
-numbers, words, signage, nameplate, flags, coat of arms, watermark, logo,
-face, eyes, portrait, bright red, ruby, scarlet, saturated colours,
-orange, teal, yellow, hard rim light, specular glare, 3D render,
-illustration, faceted crystal, floating glass panels, abstract sculpture,
-tabletop still life.
+```
+A studio product photograph, straight on at eye level. Three upright
+tablets of thick polished glass stand side by side on a smooth graphite
+surface, evenly spaced, each about the height of a book. Each tablet has a
+plain bordered panel deeply etched into its face in frosted white, like an
+empty seal, and nothing else. The middle tablet is deep oxblood all the
+way through; the outer two are clear. Bright bevelled edges, crisp
+internal reflections, clean contact shadows on the surface. Strong soft
+key light from the upper left with a fill from the right; the whole image
+is bright and clearly readable, the graphite backdrop lit to a visible
+gradient behind the glass. The oxblood tablet is deep and desaturated and
+is the only colour. Photorealistic macro product photography, 85mm,
+shallow depth of field, sharp on the middle tablet. The three tablets
+occupy the lower two thirds; the upper third is plain graphite and empty.
+4:5 vertical, 1620x2025.
+
+Negative prompt: dark, near-black, black background, underexposed, murky,
+low-key, dim, moody, night, text, letters, numbers, words, readable
+writing, inscription, engraved text, watermark, logo, signage, coat of
+arms, flag, face, eyes, portrait, people, bright red, ruby, scarlet, neon,
+glowing edges, saturated colours, orange, teal, yellow, rainbow
+refraction, hard rim light, specular glare, faceted crystal, gemstone,
+jewellery, tombstone, gravestone, low-poly, cartoon, flat vector
+illustration, white background, cluttered, four tablets, two tablets.
 ```
 
 ---
@@ -165,4 +177,4 @@ carousel. A picture under it competes with the one thing it is for.
 ## Slide 05 is done
 
 `05-consequence.jpg`. The only tabletop in the post, which is why none of
-the four above is one.
+the others is one.
