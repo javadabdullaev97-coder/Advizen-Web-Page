@@ -1,362 +1,436 @@
 # Кадры для двух вышедших постов
 
-Тёмная тональность, тот же рецепт, что у «Постоянного учреждения».
-Каждый промпт самодостаточен — копируется целиком.
+## Что держит набор «Постоянного учреждения» вместе
 
-Проверка перед тем, как отдавать кадр: средняя яркость между 60 и 110
-из 255, и верхняя треть без предметов.
+Разбор по готовым карточкам, потому что первая попытка этого поста
+развалилась и причину стоит записать.
 
-```bash
-python3.12 -c "from PIL import Image,ImageStat;print(round(ImageStat.Stat(Image.open('файл.jpg').convert('L')).mean[0]))"
-```
+**Это рендеры, а не фотографии.** Даже интерьеры — опенспейс и
+переговорная — собраны в 3D: матовые материалы, чистая геометрия, ни
+плёночного зерна, ни случайного сора. Единственный кадр, который выпал
+из набора «Послужного списка», был настоящей съёмкой АЭС на улице, и
+выпал он именно поэтому, а не потому, что это «место».
+
+**Одна и та же среда.** Графитовая задняя стена с мягким вертикальным
+градиентом — светлее за объектом, темнее к верхним углам. Тёмный
+глянцевый пол с отражением под всем, что стоит в кадре. Ни неба, ни
+горизонта, ни улицы.
+
+**Один широкий мягкий свет** без жёстких теней и без видимых ламп.
+
+**Один чисто-красный предмет** на кадр. Не оксблад и не бордо — открытый
+красный, матовый.
+
+Интерьеры разрешены. Фотография — нет.
 
 ---
 
 ## Пост «Advizen» — пять кадров
 
-Было четыре карточки, стало пять. Причина техническая и её стоит
-назвать: таблица на четырнадцать позиций в `banner` не помещается —
-список там читается максимум на четыре-пять строк, дальше картинка
-исчезает под текстом. Поэтому две семёрки разъезжаются на две карточки,
-где счёт несёт заголовок, а перечень уходит в подпись.
+Было четыре карточки, стало пять: таблица на четырнадцать позиций в
+`banner` не помещается, список там читается строк до четырёх-пяти.
+Поэтому две семёрки разъезжаются на две карточки, где счёт несёт
+заголовок, а перечень уходит в подпись.
 
 Файлы: `public/social/source/advizen-dark/`
 
 ### `01-corridor.jpg` — Обложка. Четыре практики, одна фирма.
 
 ```
-A long dark corridor in a modern office, photographed straight down its
-length, wide angle, standing close to the first doorway. Four open
-doorways lead off it, two on each side, receding into the distance. A
-single continuous runner of deep red carpet lies along the dark polished
-floor and passes through all four thresholds, joining them. Charcoal
-door frames, graphite plaster walls, a slim steel handrail.
+A long dark office corridor seen straight down its length, wide angle,
+the camera close to the first doorway. Four open doorways lead off it,
+two on each side, receding into soft focus. A single continuous runner
+of pure bright red carpet lies along the dark polished floor and passes
+through all four thresholds, joining them. Charcoal door frames,
+graphite walls, a slim brushed steel handrail along the left wall.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
-### `02-chain.jpg` — Вопрос из одной области не остаётся в ней.
+### `02-dominoes.jpg` — Вопрос из одной области в ней не остаётся.
 
 ```
-A close-up of a long row of charcoal dominoes standing on a dark
-polished surface, curving away from the camera into soft focus. The
-nearest domino is large in frame and already tipping into the next. One
-domino part-way along the row is bright red. Shallow depth of field,
-sharp on the red one.
+A long row of matte charcoal dominoes standing on the dark polished
+floor, curving away from the camera into soft focus. The nearest domino
+is large in frame and already tipping into the next. One domino
+part-way along the row is pure bright red.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ### `03-advisory.jpg` — Семь консалтинговых направлений.
 
 ```
-A dark walnut desk photographed close up from a low three-quarter angle.
-Seven identical charcoal document folders are fanned across it in an
-even arc, overlapping, filling the width of the frame, the nearest one
-large and close to the camera. One folder in the middle of the fan is
-bright red. Beyond the desk a dark office recedes into soft focus.
+Seven tall matte charcoal monoliths of equal height standing in a row on
+the dark polished floor, evenly spaced, receding slightly into soft
+focus, the nearest one large and close to the camera. The middle
+monolith is pure bright red.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ### `04-operations.jpg` — Семь операционных сервисов.
 
 ```
-A wall of identical charcoal filing drawers photographed straight on,
-filling the lower two thirds of the frame edge to edge, the brushed
-steel handles catching a soft raking light. One drawer in the middle of
-the grid is pulled slightly open and its front is bright red. Dark
-polished floor below with a soft reflection.
+A wall of identical matte charcoal filing drawers filling the frame edge
+to edge, brushed steel handles catching the soft light, the dark
+polished floor visible below with a reflection. One drawer in the middle
+of the grid is pulled slightly open and its front is pure bright red.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ### `05-contact.jpg` — Одна точка контакта.
 
 ```
-A close-up of a dense bundle of charcoal cables on a dark surface,
-spreading out towards the back of the frame into soft focus and
-gathering at the front into a single large connector, square-on and
-closest to the camera. One cable running through the bundle is bright
-red. Shallow depth of field, sharp on the connector.
+Dozens of fine matte charcoal cables spread across the dark polished
+floor from the back of the frame, converging towards the camera and
+gathering into one large connector at the front, square-on and closest
+to the camera. One cable running through the bundle is pure bright
+red.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ---
 
 ## Пост «Послужной список» — шесть кадров
 
-Структура не меняется: обложка и пять проектов. Каждая карточка —
-цифра в заголовке и то, что за ней стоит, в подписи.
+Обложка и пять проектов. Каждая карточка — цифра в заголовке и то, что
+за ней стоит, в подписи.
 
 Файлы: `public/social/source/track-record-dark/`
 
 ### `01-archive.jpg` — Обложка. Послужной список.
 
 ```
-A tall shelf of identical charcoal bound volumes photographed straight
-on from close range, the spines filling the lower two thirds of the
-frame edge to edge and receding into soft focus to the left and right.
-One volume near the middle has a bright red spine and sits slightly
-proud of the rest. Soft raking light along the spines, dark polished
-floor below.
+A long shelf of identical matte charcoal bound volumes seen straight on
+from close range, the spines filling the frame edge to edge and receding
+into soft focus to the left and right, the dark polished floor below
+with a reflection. One volume near the middle has a pure bright red
+spine and stands slightly proud of the rest.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ### `02-energy.jpg` — $10 млрд+ — АЭС.
 
 ```
-A nuclear power station photographed from a distance under a heavy
-overcast sky at dusk. Two enormous concrete cooling towers rise into the
-middle of the frame, dark grey and weather-stained, with a thin plume of
-pale vapour. A low reactor building and a line of transmission pylons
-stand in front of them. In the near foreground a single bright red
-surveyor's marker post stands large in frame in rough dark grass.
+A large architectural scale model of a nuclear power station standing on
+the dark polished floor: two cooling towers, a low reactor block and a
+line of transmission pylons, all in matte charcoal, the nearest tower
+large and close to the camera. A single pure bright red surveyor's
+marker post is planted on the floor beside it.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ### `03-fmcg.jpg` — $250 млн — производитель напитков.
 
 ```
-A bottling line in a beverage plant photographed straight on, lit by
-soft overhead light. Hundreds of identical dark glass bottles stand in
-dense rows on a stainless steel conveyor, filling the lower two thirds
-of the frame and receding into soft focus. Brushed steel guides,
-graphite tiled walls. One bottle near the front carries a bright red
-cap.
+A dense block of identical matte charcoal bottles standing in tight rows
+on the dark polished floor, filling the frame edge to edge and receding
+into soft focus, the nearest bottles large and close to the camera. One
+bottle near the front carries a pure bright red cap.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ### `04-fintech.jpg` — $200 млн — цифровой банк.
 
 ```
-An extreme close-up of a stack of payment cards lying on a dark slate
-surface, photographed from a low three-quarter angle. A dozen or so
-cards are fanned so their edges step away from the camera, filling the
-lower two thirds of the frame. They are blank matte charcoal and
-graphite with no printing of any kind, their embossed chip contacts
-catching the light. One card part-way down the stack is bright red and
-sits proud of the others.
+A stack of payment cards lying on the dark polished floor, seen from a
+low three-quarter angle, fanned so their edges step away from the
+camera, the nearest card large in frame. They are blank matte charcoal
+with no printing, their embossed chip contacts catching the light. One
+card part-way down the stack is pure bright red.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ### `05-fund.jpg` — UzFund — инвестиционный фонд.
 
 ```
-A trading desk in a dark office photographed straight on. A curved bank
-of five monitors fills the lower two thirds of the frame, each showing
-dense financial charts — candlestick columns, a long price line, rows of
-small tabular blocks — rendered in white, pale grey and charcoal on a
-dark interface, sharp but too small to read. On the central screen one
-price line is bright red and runs the width of the display. A charcoal
-keyboard sits below the monitors.
+A cluster of matte charcoal spheres of different sizes resting on the
+dark polished floor, connected to one another by fine taut threads, the
+nearest sphere large and close to the camera, the cluster receding into
+soft focus. One sphere near the front is pure bright red.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
 ### `06-laws.jpg` — Три закона.
 
 ```
-A studio photograph on a dark surface, straight on at eye level. Three
-upright tablets of thick glass stand side by side, evenly spaced, large
-in frame and filling the lower two thirds. Each has a plain bordered
-panel deeply etched into its face in frosted white and nothing else. The
-middle tablet is bright red all the way through and lit from within; the
-outer two are dark smoked glass. Thick bevelled edges catching thin
-highlights, faint reflections on the surface beneath.
+Three upright tablets of thick smoked glass standing side by side on the
+dark polished floor, evenly spaced, large in frame. Each has a plain
+bordered panel etched into its face in frosted white and nothing else.
+The middle tablet is pure bright red all the way through; the outer two
+are dark smoked glass.
 
-Dark graphite studio environment, mid-dark charcoal grey, clearly lit by
-a large soft light from the upper left, visible tonal range, soft
-gradient falling off towards the edges, matte surfaces, gentle
-reflections on a dark polished floor. Everything is charcoal, graphite
-and warm dark grey except the one red object. The subject fills the
-lower two thirds of the frame edge to edge, the nearest element large
-and close to the camera. The upper third is a plain, evenly lit dark
-surface with nothing on it. Photorealistic, premium, 4:5 vertical,
-1620x2025.
+3D render, not photography. A dark interior or studio set built in matte
+charcoal and graphite: a seamless graphite back wall with a soft vertical
+gradient, lighter behind the subject and falling off towards the top
+corners, and a dark polished floor with a soft reflection under
+everything. One broad soft light source, gentle falloff, no hard
+shadows, no visible lamps. Materials are matte charcoal, graphite, dark
+walnut and brushed steel. Everything is greyscale except one object in
+pure bright red, matte. Mid-dark exposure with a visible tonal range,
+nothing blown out. The subject fills the lower two thirds of the frame
+edge to edge, the nearest element large and close to the camera, the
+rest receding into soft focus. The upper third is plain wall with
+nothing on it. Corona render, 50mm, shallow depth of field, 4:5
+vertical, 1620x2025.
 
-Negative prompt: black, pure black, near-black, underexposed, unlit, no
-light source, murky, muddy, pitch dark, night, horror, thriller, film
-noir, haunted, eerie, red light, coloured light on the floor, glow,
-neon, light under doors, lens flare, bloom, empty, negative space,
-minimal composition, single tiny object, vast empty background, clutter
-in the upper third, text, letters, numbers, words, signage, watermark,
-logo, face, portrait, eye contact, saturated colours, blue, teal, green,
-yellow, orange, purple, grain, vintage, low-poly, cartoon, toy.
+Negative prompt: photograph, photographic grain, documentary, reportage,
+outdoors, sky, clouds, grass, field, landscape, street, nature,
+daylight, sunlight, face, portrait, eye contact, detailed human faces,
+black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, visible light fixtures, empty, negative space, minimal
+composition, single tiny object, vast empty background, clutter in the
+upper third, text, letters, numbers, words, signage, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+grain, vintage, low-poly, cartoon, toy, clay render.
 ```
 
+---
+
+## Проверка перед тем, как отдавать кадр
+
+```bash
+python3.12 -c "from PIL import Image,ImageStat;print(round(ImageStat.Stat(Image.open('файл.jpg').convert('L')).mean[0]))"
+```
+
+Средняя яркость между 50 и 85. И глазами: есть ли графитовая стена, есть
+ли отражение на полу, ровно ли один красный предмет.
