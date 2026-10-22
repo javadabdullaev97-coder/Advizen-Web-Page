@@ -1,49 +1,47 @@
-slug     = "advizen"
-category = "О фирме"
-title    = "Advizen"
-deck     = "Консалтинг и операции — в одной практике, по одному договору"
-image    = "public/social/source/advizen/01-cover.jpg"
+slug       = "advizen"
+category   = "О фирме"
+cover_type = "banner"
+tone       = "dark"
 
-# The argument, in order: why the question arises at all, what the practice
-# covers, what that arrangement means for the reader. The record and the
-# legislative work are a post of their own — they are credentials, and
-# credentials answer a different question from "what is this firm".
+title = "Консалтинг и операции — *в одной практике*"
+deck  = "Налоги, право, финансы, HR и операционное сопровождение по одному договору"
+image = "public/social/source/advizen-dark/01-corridor.jpg"
+align = "right"
+size  = 60
 
-[[slide]]                       # the problem
-type = "scene"
-foot = true
-eyebrow = "Почему это вообще вопрос"
-image = "public/social/source/advizen/05-consequence.jpg"
-title = "Вопрос из одной области почти никогда в ней не остаётся"
-caption = "Структура сделки меняет налог. Налог меняет трудовой договор. Договор меняет отчётность."
+# Five cards, not four. The fourteen-row table does not survive the
+# banner system — a list there reads to four or five rows before the
+# picture disappears under it — so the two sevens take a card each, the
+# count carried by the headline and the enumeration by the subline.
 
-[[slide]]                       # what the practice covers
-type = "matrix"
-eyebrow = "Практика"
-columns = [
-  { name = "Консалтинг", items = [
-      "Налоги",
-      "Право",
-      "Бухгалтерский учёт",
-      "HR",
-      "Финансирование и гранты",
-      "M&A",
-      "Due diligence",
-  ] },
-  { name = "Операции", items = [
-      "Управление компаниями",
-      "Корпоративные услуги",
-      "Employer of Record",
-      "Payroll-бюро",
-      "Разрешения на работу",
-      "Виртуальный офис",
-      "Мониторинг комплаенса",
-  ] },
-]
+[[slide]]
+type = "banner"
+align = "left"
+size = 62
+image = "public/social/source/advizen-dark/02-dominoes.jpg"
+headline = "Вопрос из одной области *в ней не остаётся*"
+subline = "Структура сделки меняет налог. Налог меняет трудовой договор. Договор меняет отчётность."
 
-[[slide]]                       # what the arrangement means
-type = "scene"
-eyebrow = "Как это устроено"
-image = "public/social/source/advizen/02-contact.jpg"
-title = "Одна практика, один договор, одна точка контакта"
-caption = "Множество направлений — один подрядчик. Согласовывать их между собой не нужно."
+[[slide]]
+type = "banner"
+align = "right"
+size = 64
+image = "public/social/source/advizen-dark/03-advisory.jpg"
+headline = "*Семь* консалтинговых направлений"
+subline = "Налоги, право, бухгалтерский учёт, HR, финансирование и гранты, M&A, due diligence"
+
+[[slide]]
+type = "banner"
+align = "left"
+size = 58
+image = "public/social/source/advizen-dark/04-operations.jpg"
+headline = "Операционные сервисы — *под тем же договором*"
+subline = "Управление компаниями, корпоративные услуги, Employer of Record, payroll-бюро, разрешения на работу, виртуальный офис, мониторинг комплаенса"
+
+[[slide]]
+type = "banner"
+align = "right"
+size = 60
+image = "public/social/source/advizen-dark/05-contact.jpg"
+headline = "Одна практика, один договор, *одна точка контакта*"
+subline = "Множество направлений — один подрядчик. Согласовывать их между собой не нужно."
