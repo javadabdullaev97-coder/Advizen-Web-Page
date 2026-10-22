@@ -52,3 +52,8 @@ next-env.d.ts
 __pycache__/
 /public/social/*
 !/public/social/source/
+
+# Remotion lives in social/video with its own dependencies; the renders
+# are output, like the cards.
+/social/video/node_modules/
+/social/video/out/
