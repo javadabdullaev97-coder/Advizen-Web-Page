@@ -196,17 +196,18 @@ export const Finish: React.FC = () => {
     <AbsoluteFill style={{ pointerEvents: "none" }}>
       <AbsoluteFill
         style={{
+          background:
+            "radial-gradient(122% 80% at 48% 38%, rgba(0,0,0,0) 42%, rgba(0,0,0,0.44) 100%)",
+        }}
+      />
+      {/* Grain last and in normal blend: overlay does nothing to near-black,
+          and the dark floor and the vignette are exactly where bands form. */}
+      <AbsoluteFill
+        style={{
           backgroundImage: `url(${staticFile("noise.png")})`,
           backgroundSize: "256px 256px",
           backgroundPosition: `${x}px ${y}px`,
-          opacity: 0.045,
-          mixBlendMode: "overlay",
-        }}
-      />
-      <AbsoluteFill
-        style={{
-          background:
-            "radial-gradient(122% 80% at 48% 38%, rgba(0,0,0,0) 42%, rgba(0,0,0,0.44) 100%)",
+          opacity: 0.02,
         }}
       />
     </AbsoluteFill>

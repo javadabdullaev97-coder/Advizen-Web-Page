@@ -20,6 +20,7 @@ import {
   AbsoluteFill,
   Easing,
   interpolate,
+  interpolateColors,
   useCurrentFrame,
 } from "remotion";
 import {
@@ -184,7 +185,7 @@ const BuyerMark: React.FC<{ pose: Pose; opacity: number; rise: number }> = ({
     text="ПОКУПАТЕЛЬ"
     color={INK}
     opacity={opacity}
-    dy={-44 - 22 * rise}
+    dy={-58 - 8 * rise}
   />
 );
 
@@ -245,13 +246,17 @@ const Setup: React.FC<{ len: number }> = ({ len }) => {
   );
   const rise = interpolate(frame, [2, 26], [-1.06, 0], { ...clamp, easing: land });
   const split = frame >= 48;
-  const open = interpolate(frame, [48, 60, 80], [0, GAP + 0.5, GAP], {
+  // Both halves spring apart and settle. The 70% takes most of the
+  // recoil: the 30% sits by Instagram's action rail and can only open by
+  // a hair past its seat.
+  const open = interpolate(frame, [48, 60, 80], [0, GAP + 0.07, GAP], {
     ...clamp,
     easing: swap,
   });
+  const recoil = interpolate(frame, [48, 60, 80], [0, 0.32, 0], { ...clamp, easing: swap });
   const blocks: BlockState[] = split
     ? seats(
-        { labelOpacity: ramp(frame, 58, 72) },
+        { x: MAJOR_X - recoil, labelOpacity: ramp(frame, 58, 72) },
         {
           x: MINOR_X - GAP + open,
           tone: "ceramic",
@@ -297,7 +302,7 @@ const Buyer: React.FC<{ len: number }> = ({ len }) => {
       len={len}
       dir="push"
       amount={0.02}
-      foot={<Lockup delay={0} />}
+      foot={<Lockup instant />}
       world={
         <>
           <World
@@ -334,8 +339,8 @@ const Refusal: React.FC<{ len: number }> = ({ len }) => {
   const pose = move(
     frame,
     len,
-    lens({ az: deg(12), el: deg(15), dist: 23.5, target: [0.5, 0.5, -3], shiftY: 40 }),
-    lens({ az: deg(10), el: deg(14), dist: 22, target: [0.5, 0.5, -3], shiftY: 40 }),
+    lens({ az: deg(12), el: deg(15), dist: 23.5, target: [0.8, 0.5, -3], shiftY: 40 }),
+    lens({ az: deg(10), el: deg(14), dist: 22, target: [0.8, 0.5, -3], shiftY: 40 }),
   );
   const shake =
     frame >= 26 && frame < 48
@@ -396,7 +401,7 @@ const Term: React.FC<{
       light
       dir={mode === "drag" ? "push" : "settle"}
       amount={0.022}
-      foot={carried ? <Lockup instant dark /> : <Lockup delay={0} dark />}
+      foot={<Lockup instant dark />}
     >
       <Rail gap={22}>
         <Eyebrow text={lead} color={LIGHT.sub} delay={carried ? 0 : 4} />
@@ -528,7 +533,7 @@ const Flip: React.FC<{ len: number }> = ({ len }) => {
             pose={pose}
             x={MAJOR_X + (MINOR_X - MAJOR_X) * cross}
             text="ВЫ"
-            color={cross < 0.5 ? YOU_FIRST : ACCENT}
+            color={interpolateColors(cross, [0.3, 0.8], [YOU_FIRST, ACCENT])}
           />
           <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" opacity={1 - ramp(frame, 56, 62)} />
           <Mark pose={pose} x={MAJOR_X} text="ПАРТНЁР" opacity={ramp(frame, 80, 90)} />
@@ -678,7 +683,7 @@ const DragTerm: React.FC<{ len: number }> = ({ len }) => (
     term="DRAG-ALONG"
     at={0}
     note={"С ней вы могли бы обязать партнёра продать\u00a0— по\u00a0той же цене."}
-    noteAt={30}
+    noteAt={20}
   />
 );
 
@@ -695,7 +700,7 @@ const DragDemo: React.FC<{ len: number }> = ({ len }) => (
 );
 
 const TagTerm: React.FC<{ len: number }> = ({ len }) => (
-  <Term len={len} mode="tag" lead="ВАША СТРОКА В ДОГОВОРЕ" term="TAG-ALONG" at={40} />
+  <Term len={len} mode="tag" lead="ВАША СТРОКА В ДОГОВОРЕ" term="TAG-ALONG" at={32} />
 );
 
 const TagDemo: React.FC<{ len: number }> = ({ len }) => (
