@@ -53,7 +53,7 @@ import {
   Term as TermWord,
   hero,
 } from "./kit";
-import { Bar, Buyer, Legend, Reach } from "./Bar";
+import { Bar, Buyer, FILL, Legend, Reach } from "./Bar";
 
 const HANDOFF = 12;
 
@@ -146,7 +146,7 @@ const Refusal: React.FC<{ len: number }> = ({ len }) => {
       punchAt={54}
       graphic={
         <AbsoluteFill style={{ transform: `translateX(${kick}px)` }}>
-          <Bar minorColor={refused ? ACCENT : SUB} />
+          <Bar minorColor={refused ? FILL.accent : FILL.sub} />
           <Legend delay={0} />
           <Buyer delay={6} />
           <Reach delay={22} breakAt={54} />
@@ -212,7 +212,7 @@ const Term: React.FC<{
           <Bar
             majorPull={major}
             minorPull={minor}
-            minorColor={mode === "tag" ? ACCENT : SUB}
+            minorColor={mode === "tag" ? FILL.accent : FILL.sub}
           />
           <Buyer delay={72} landed={landed} />
         </>
@@ -234,7 +234,7 @@ const Term: React.FC<{
         style={{
           position: "absolute",
           left: 96,
-          top: 1230,
+          top: 866,
           fontFamily: FONT,
           fontWeight: 800,
           fontSize: 44,
@@ -307,7 +307,7 @@ const Stranded: React.FC<{ len: number }> = ({ len }) => {
         <>
           <Bar
             majorLift={stranger ? 0 : back + out}
-            minorColor={ACCENT}
+            minorColor={FILL.accent}
             stranger={stranger}
           />
           <Buyer delay={40} landed={interpolate(frame, [64, 76], [0, 1], {

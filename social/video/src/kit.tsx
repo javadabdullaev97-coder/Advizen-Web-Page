@@ -101,10 +101,60 @@ export const tracking = (size: number) => (size >= 150 ? "-0.015em" : "-0.005em"
 
 // ── surface ──────────────────────────────────────────────────────────
 
-/** Grain and a vignette, so a flat ground reads as a lit one. */
-export const Surface: React.FC = () => {
+/**
+ * The room the piece happens in.
+ *
+ * A flat fill is what reads as 1995: the still cards all stand in a lit
+ * space — a graphite wall with a soft gradient, a polished floor, a
+ * reflection — and the reel had none of it. Depth anchors here are the
+ * same ones the multiplane card names: a light source, a horizon, and a
+ * falloff. Grain sits on top so the gradient cannot band.
+ */
+export const HORIZON = 1080;
+
+export const Room: React.FC<{ drift?: number }> = ({ drift = 0 }) => (
+  <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {/* Wall: one soft light from upper left, falling off down and right. */}
+      <AbsoluteFill
+        style={{
+          background:
+            "radial-gradient(118% 82% at 26% 16%, #201F1C 0%, #161514 38%, #0C0C0B 74%, #070706 100%)",
+          transform: `translateY(${drift * 0.35}px)`,
+        }}
+      />
+      {/* Floor: the wall meets it at the horizon and turns over. */}
+      <div
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: HORIZON,
+          bottom: 0,
+          background:
+            "linear-gradient(180deg, #111110 0%, #0B0B0A 28%, #080807 100%)",
+          transform: `translateY(${drift * 0.55}px)`,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: HORIZON,
+          height: 1,
+          background:
+            "linear-gradient(90deg, rgba(236,232,226,0) 0%, rgba(236,232,226,0.16) 30%, rgba(236,232,226,0.05) 100%)",
+          transform: `translateY(${drift * 0.55}px)`,
+        }}
+      />
+  </AbsoluteFill>
+);
+
+/** Grain and a vignette, over everything. */
+export const Finish: React.FC = () => {
   const frame = useCurrentFrame();
-  // Shifted every frame: a still grain reads as dirt on the lens.
+  // Stepped at 10fps: a tile that changes all two million pixels every
+  // frame spends the bit budget the type edges needed.
   const step = Math.floor(frame / 3);
   const x = (step * 21) % 256;
   const y = (step * 33) % 256;
@@ -115,14 +165,14 @@ export const Surface: React.FC = () => {
           backgroundImage: `url(${staticFile("noise.png")})`,
           backgroundSize: "256px 256px",
           backgroundPosition: `${x}px ${y}px`,
-          opacity: 0.05,
+          opacity: 0.045,
           mixBlendMode: "overlay",
         }}
       />
       <AbsoluteFill
         style={{
           background:
-            "radial-gradient(118% 76% at 50% 40%, rgba(0,0,0,0) 36%, rgba(0,0,0,0.42) 100%)",
+            "radial-gradient(122% 80% at 48% 38%, rgba(0,0,0,0) 42%, rgba(0,0,0,0.44) 100%)",
         }}
       />
     </AbsoluteFill>
@@ -206,6 +256,7 @@ export const Stage: React.FC<{
 
   return (
     <AbsoluteFill style={{ backgroundColor: BG, overflow: "hidden" }}>
+      <Room drift={(scale - 1) * 900} />
       <AbsoluteFill style={{ filter: `brightness(${lift})` }}>
         {graphic ? (
           <AbsoluteFill
@@ -228,7 +279,7 @@ export const Stage: React.FC<{
           {children}
         </AbsoluteFill>
       </AbsoluteFill>
-      <Surface />
+      <Finish />
     </AbsoluteFill>
   );
 };
@@ -406,19 +457,28 @@ export const Lines: React.FC<{
               <span
                 key={`${word}-${wi}`}
                 style={{
-                  fontFamily: FONT,
-                  fontWeight: 800,
-                  fontSize: size,
-                  lineHeight: 1.02,
-                  letterSpacing: tracking(size),
-                  color: hot.includes(word) ? ACCENT : color,
-                  opacity: Math.min(1, s * 1.5),
-                  transform: `translateY(${(1 - s) * size * 0.16}px)`,
-                  filter: `blur(${blur ? (1 - s) * 7 : 0}px)`,
-                  whiteSpace: "nowrap",
+                  display: "inline-block",
+                  overflow: "hidden",
+                  paddingBottom: size * 0.06,
                 }}
               >
-                {word}
+                <span
+                  style={{
+                    display: "inline-block",
+                    fontFamily: FONT,
+                    fontWeight: 800,
+                    fontSize: size,
+                    lineHeight: 1.02,
+                    letterSpacing: tracking(size),
+                    color: hot.includes(word) ? ACCENT : color,
+                    opacity: Math.min(1, s * 2),
+                    transform: `translateY(${(1 - s) * 104}%)`,
+                    filter: `blur(${blur ? (1 - s) * 7 : 0}px)`,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {word}
+                </span>
               </span>
             );
           })}
@@ -451,11 +511,12 @@ export const Term: React.FC<{
   return (
     <div
       style={{
+        position: "relative",
         fontFamily: FONT,
         fontWeight: 800,
         fontSize: fitted,
         lineHeight: 1,
-        letterSpacing: tracking(fitted),
+        letterSpacing: `${interpolate(s, [0, 1], [0.16, -0.012])}em`,
         color: INK,
         opacity: Math.min(1, s * 1.6),
         transform: `scale(${interpolate(s, [0, 1], [scaleFrom, 1])})`,
@@ -465,6 +526,34 @@ export const Term: React.FC<{
       }}
     >
       {text}
+      <span
+        style={{
+          position: "absolute",
+          left: 0,
+          top: 0,
+          fontFamily: FONT,
+          fontWeight: 800,
+          fontSize: fitted,
+          lineHeight: 1,
+          letterSpacing: `${interpolate(s, [0, 1], [0.16, -0.012])}em`,
+          whiteSpace: "nowrap",
+          color: "transparent",
+          backgroundImage:
+            "linear-gradient(115deg, rgba(255,255,255,0) 42%, rgba(255,255,255,0.62) 50%, rgba(255,255,255,0) 58%)",
+          backgroundSize: "260% 100%",
+          backgroundPosition: `${interpolate(frame, [26, 54], [140, -60], {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+            easing: Easing.inOut(Easing.cubic),
+          })}% 0`,
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          opacity: frame > 20 && frame < 60 ? 1 : 0,
+          pointerEvents: "none",
+        }}
+      >
+        {text}
+      </span>
     </div>
   );
 };

@@ -17,9 +17,10 @@ import React from "react";
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 
 import { ACCENT, BG, FONT, INK, PANEL, RULE, SUB } from "./theme";
-import { MARGIN, copy } from "./kit";
+import { HORIZON, MARGIN, copy } from "./kit";
 
-export const LANE_Y = 990;
+// The bar stands ON the floor rather than floating above it.
+export const LANE_Y = HORIZON - 150;
 export const BAR_H = 150;
 export const BAR_W = 440; // 96 … 536
 const GAP = 14;
@@ -31,6 +32,16 @@ const BUYER_W = 240;
 const TRIP = 270;
 
 type Seg = { from: number; width: number };
+
+/** A lit face rather than a flat fill: light from upper left, as the room is. */
+const face = (base: string, top: string, bottom: string) =>
+  `linear-gradient(176deg, ${top} 0%, ${base} 52%, ${bottom} 100%)`;
+
+export const FILL = {
+  ink: face("#E9E5DE", "#F6F3ED", "#D6D1C8"),
+  sub: face("#8F8982", "#A8A29A", "#766F69"),
+  accent: face("#C6283A", "#DC3A4B", "#981F2E"),
+};
 
 const split = (major: number): [Seg, Seg] => {
   const usable = BAR_W - GAP;
@@ -65,8 +76,8 @@ export const Bar: React.FC<{
   majorPull = 0,
   minorPull = 0,
   majorLift = 0,
-  majorColor = INK,
-  minorColor = SUB,
+  majorColor = FILL.ink,
+  minorColor = FILL.sub,
   stranger = false,
   marker = null,
   y = LANE_Y,
@@ -96,8 +107,11 @@ export const Bar: React.FC<{
         top: 0,
         width: Math.max(0, seg.width),
         height: BAR_H,
-        backgroundColor: outline ? "transparent" : colour,
+        background: outline ? "transparent" : colour,
         border: outline ? `3px dashed ${RULE}` : undefined,
+        boxShadow: outline
+          ? undefined
+          : "0 20px 44px rgba(0,0,0,0.58), inset 0 1px 0 rgba(255,255,255,0.22)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -154,6 +168,29 @@ export const Bar: React.FC<{
         ? block(a, 0, RULE, "", true)
         : block(a, majorPull, majorColor, "70%", false, majorLift)}
       {block(b, minorPull, minorColor, "30%", false)}
+      <div
+        style={{
+          position: "absolute",
+          left: 0,
+          top: BAR_H,
+          width: BAR_W,
+          height: BAR_H,
+          transform: "scaleY(-1)",
+          transformOrigin: "top center",
+          opacity: 0.2,
+          filter: "blur(2px)",
+          maskImage:
+            "linear-gradient(0deg, rgba(0,0,0,0) 8%, rgba(0,0,0,0.9) 100%)",
+          WebkitMaskImage:
+            "linear-gradient(0deg, rgba(0,0,0,0) 8%, rgba(0,0,0,0.9) 100%)",
+          pointerEvents: "none",
+        }}
+      >
+        {stranger
+          ? null
+          : block(a, majorPull, majorColor, "", false, majorLift)}
+        {block(b, minorPull, minorColor, "", false)}
+      </div>
       {marker === null ? null : (
         <div
           style={{
@@ -236,7 +273,12 @@ export const Buyer: React.FC<{ delay?: number; landed?: number }> = ({
         width: BUYER_W,
         height: BAR_H,
         border: `2px ${full ? "solid" : "dashed"} ${full ? INK : RULE}`,
-        backgroundColor: full ? PANEL : "transparent",
+        background: full
+          ? "linear-gradient(176deg, #24221F 0%, #1C1A18 60%, #141311 100%)"
+          : "transparent",
+        boxShadow: full
+          ? "0 18px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08)"
+          : undefined,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
