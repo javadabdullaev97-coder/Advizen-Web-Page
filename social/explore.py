@@ -429,16 +429,21 @@ E_DARK_SUB = (158, 152, 145)
 E_DARK_RED = (198, 40, 58)     # the oxblood would vanish into the charcoal
 
 
-def e_scrim(img, bottom, blur=16, target=226, feather=230, dark=False):
+def e_scrim(img, bottom, blur=0, target=226, feather=230, dark=False):
     """
     Make the headline readable whatever the picture does under it.
 
-    Two things at once, both faded out rather than switched off. The top
-    of the frame is blurred, which kills detail without killing colour,
-    and it is lifted toward white by as much as that particular frame
-    needs — a bright studio backdrop barely moves, a busy or dark one
-    moves a long way. Below the type the treatment falls away over a
-    couple of hundred pixels on a curve, so there is no edge to see.
+    The strip under the type is moved toward white — or, in the dark
+    tone, toward charcoal — by as much as that particular frame needs. A
+    clean studio backdrop barely moves; a busy or badly exposed one moves
+    a long way. Below the type it falls away over a couple of hundred
+    pixels on a curve, so there is no edge to see.
+
+    `blur` defaults off. It was on at first and it earns nothing on a
+    frame briefed to keep its top third plain: it only softens detail
+    that is not there, and on a sharp picture the softened band is the
+    one thing that announces a treatment was applied. It stays as a
+    parameter for a frame that turns up busy where it should not be.
 
     The inverse of what the dark system did: there the whole frame was
     pulled down to meet the type, here only the strip under the type
@@ -448,8 +453,11 @@ def e_scrim(img, bottom, blur=16, target=226, feather=230, dark=False):
     treated = img.filter(ImageFilter.GaussianBlur(blur))
     if dark:
         # Same mechanism, opposite direction: a charcoal band over the
-        # head of the frame, deep enough that parchment type holds.
-        pull = min(0.94, max(0.0, (mean - 44) / max(1.0, mean)))
+        # head of the frame. It goes deeper than the light one has to,
+        # because without the blur a bright thin structure — a crane mast
+        # — reads straight through an shallow band and lands under the
+        # list.
+        pull = min(0.94, max(0.0, (mean - 32) / max(1.0, mean)))
         treated = Image.blend(treated, Image.new("RGB", img.size, (24, 23, 22)), pull)
     elif mean < target:
         lift = min(0.88, (target - mean) / max(1.0, 255 - mean))
