@@ -114,9 +114,13 @@ def _scrim(img, bottom, dark, blur=0, feather=None):
     return Image.composite(treated, img, col.resize((WIDTH, HEIGHT)))
 
 
-def _split(line):
-    """`*text*` marks the accented run; everything else is ink."""
-    out, buf, hot = [], "", False
+def _split(line, hot=False):
+    """`*text*` marks the accented run; everything else is ink.
+
+    `hot` carries in from the line above, so an accent that wraps keeps
+    its colour on the next line instead of falling back to ink.
+    """
+    out, buf = [], ""
     for ch in line:
         if ch == "*":
             if buf:
@@ -126,7 +130,7 @@ def _split(line):
             buf += ch
     if buf:
         out.append((buf, hot))
-    return out
+    return out, hot
 
 
 def _wrap(text, font, width):
@@ -221,8 +225,9 @@ def banner(*, image, headline=None, subline=None, title=None, deck=None,
     d = ImageDraw.Draw(img)
 
     y = 108
+    hot = False
     for line in lines:
-        runs = _split(line)
+        runs, hot = _split(line, hot)
         total = sum(fh.getlength(t) for t, _ in runs)
         x = MARGIN if align == "left" else WIDTH - MARGIN - total
         for text, hot in runs:
