@@ -152,8 +152,18 @@ const Ring: React.FC<{
 }> = ({ draw, major = 0.7, pull = 0, majorPull = 0, hot = false, shake = 0 }) => {
   const majorLen = C * major - GAP;
   const minorLen = C * (1 - major) - GAP;
+  // The translate has to sit on a wrapper, outside the rotation. Written
+  // as `rotate(...) translate(...)` on one element the shift happens in
+  // the rotated frame, so an arc asked to move sideways climbs the screen
+  // instead and looks stuck. overflow has to be visible too, or an arc
+  // leaving the ring is clipped at the viewBox.
   return (
-    <svg width={560} height={560} viewBox="0 0 560 560">
+    <svg
+      width={560}
+      height={560}
+      viewBox="0 0 560 560"
+      style={{ overflow: "visible" }}
+    >
       <circle
         cx={280}
         cy={280}
@@ -163,26 +173,30 @@ const Ring: React.FC<{
         strokeWidth={1}
         opacity={0.5}
       />
-      <circle
-        cx={280}
-        cy={280}
-        r={R}
-        fill="none"
-        stroke={INK}
-        strokeWidth={STROKE}
-        strokeDasharray={`${majorLen * draw} ${C}`}
-        transform={`rotate(-90 280 280) translate(${majorPull} 0)`}
-      />
-      <circle
-        cx={280}
-        cy={280}
-        r={R}
-        fill="none"
-        stroke={hot ? ACCENT : SUB}
-        strokeWidth={STROKE}
-        strokeDasharray={`${minorLen * draw} ${C}`}
-        transform={`rotate(${-90 + 360 * major} 280 280) translate(${pull + shake} 0)`}
-      />
+      <g transform={`translate(${majorPull} 0)`}>
+        <circle
+          cx={280}
+          cy={280}
+          r={R}
+          fill="none"
+          stroke={INK}
+          strokeWidth={STROKE}
+          strokeDasharray={`${majorLen * draw} ${C}`}
+          transform="rotate(-90 280 280)"
+        />
+      </g>
+      <g transform={`translate(${pull + shake} 0)`}>
+        <circle
+          cx={280}
+          cy={280}
+          r={R}
+          fill="none"
+          stroke={hot ? ACCENT : SUB}
+          strokeWidth={STROKE}
+          strokeDasharray={`${minorLen * draw} ${C}`}
+          transform={`rotate(${-90 + 360 * major} 280 280)`}
+        />
+      </g>
     </svg>
   );
 };
