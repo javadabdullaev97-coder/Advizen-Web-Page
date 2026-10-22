@@ -61,13 +61,8 @@ def load(path: Path) -> dict:
     return post
 
 
-def render(post: dict) -> list[Path]:
-    out_dir = OUT_ROOT / post["slug"]
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    total = len(post["slide"]) + 1
-    written: list[Path] = []
-
+def specs_for(post: dict) -> list[dict]:
+    """The cover and every slide, in order, as the card types take them."""
     cover = dict(type=post.get("cover_type", "cover"), category=post["category"],
                  title=post["title"], deck=post.get("deck", ""),
                  image=post.get("image"))
@@ -77,10 +72,17 @@ def render(post: dict) -> list[Path]:
     for key in ("align", "size", "items", "blur"):
         if key in post:
             cover[key] = post[key]
-    specs = [cover]
-    specs += post["slide"]
+    return [cover] + post["slide"]
 
-    for index, spec in enumerate(specs, start=1):
+
+def render(post: dict) -> list[Path]:
+    out_dir = OUT_ROOT / post["slug"]
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    total = len(post["slide"]) + 1
+    written: list[Path] = []
+
+    for index, spec in enumerate(specs_for(post), start=1):
         spec = dict(spec)
         kind = spec.pop("type")
         # A slide may name its own eyebrow; otherwise it inherits the category.
