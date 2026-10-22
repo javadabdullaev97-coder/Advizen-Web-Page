@@ -16,7 +16,7 @@ Writes public/social/_explore/<A|B|C|D>/01.png … 03.png
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageStat
 
 sys.path.insert(0, str(Path(__file__).parent))
 import typeset as ts                                        # noqa: E402
@@ -383,21 +383,42 @@ def e_wrap(text, font, width):
 E_SOURCE = ROOT / "public" / "social" / "source" / "_test"
 
 
-def e_card(photo, headline, subline, align="left", size=62, lighten=0.0):
+def e_scrim(img, bottom, blur=16, target=226, feather=230):
     """
-    `lighten` fakes a white studio frame out of a dark photograph, and it
-    reads as exactly that — a filter laid over the top. It is only here
-    so the layout can be looked at before real frames exist; any frame
-    dropped into public/social/source/_test/ is used untouched instead.
+    Make the headline readable whatever the picture does under it.
+
+    Two things at once, both faded out rather than switched off. The top
+    of the frame is blurred, which kills detail without killing colour,
+    and it is lifted toward white by as much as that particular frame
+    needs — a bright studio backdrop barely moves, a busy or dark one
+    moves a long way. Below the type the treatment falls away over a
+    couple of hundred pixels on a curve, so there is no edge to see.
+
+    The inverse of what the dark system did: there the whole frame was
+    pulled down to meet the type, here only the strip under the type
+    moves and the picture keeps its light.
     """
+    mean = ImageStat.Stat(img.crop((0, 0, W, bottom)).convert("L")).mean[0]
+    treated = img.filter(ImageFilter.GaussianBlur(blur))
+    if mean < target:
+        lift = min(0.88, (target - mean) / max(1.0, 255 - mean))
+        treated = Image.blend(treated, Image.new("RGB", img.size, (255, 255, 255)), lift)
+
+    col = Image.new("L", (1, H))
+    for row in range(H):
+        if row <= bottom:
+            v = 255
+        elif row <= bottom + feather:
+            v = int(255 * (1 - (row - bottom) / feather) ** 1.7)
+        else:
+            v = 0
+        col.putpixel((0, row), v)
+    return Image.composite(treated, img, col.resize((W, H)))
+
+
+def e_card(photo, headline, subline, align="left", size=62, items=None):
     override = sorted(E_SOURCE.glob(f"{photo.stem}.*")) if E_SOURCE.exists() else []
-    if override:
-        img, lighten = cover_photo(override[0]), 0.0
-    else:
-        img = cover_photo(photo)
-    if lighten:
-        img = Image.blend(img, Image.new("RGB", img.size, (255, 255, 255)), lighten)
-    d = ImageDraw.Draw(img)
+    img = cover_photo(override[0] if override else photo)
 
     fh = f("Geist", size, 800)
     fs = f("Geist", round(size * 0.52), 400)
@@ -405,6 +426,15 @@ def e_card(photo, headline, subline, align="left", size=62, lighten=0.0):
 
     lines = e_wrap(headline.upper(), fh, W - 2 * M)
     sub = ts.wrap(subline, fs, W - 2 * M) if subline else []
+
+    # The scrim is measured off the type rather than set to a fixed
+    # fraction of the frame: a two-line headline should not cover as much
+    # of the picture as a four-line one.
+    block = 108 + len(lines) * lead + round(size * 0.22) + len(sub) * round(size * 0.66)
+    if items:
+        block += 54 + len(items) * 92
+    img = e_scrim(img, block + 24)
+    d = ImageDraw.Draw(img)
 
     y = 108
     for line in lines:
@@ -421,32 +451,43 @@ def e_card(photo, headline, subline, align="left", size=62, lighten=0.0):
         d.text((x, y), line, font=fs, fill=E_SUB)
         y += round(size * 0.66)
 
+    if items:
+        y += 54
+        fn, fi = f("Geist", 30, 800), f("Geist", 29, 400)
+        for i, item in enumerate(items, 1):
+            d.text((M, y), f"{i:02d}", font=fn, fill=E_RED)
+            d.text((M + 74, y), item, font=fi, fill=E_INK)
+            d.line([(M, y + 62), (W - M, y + 62)], fill=(206, 206, 208), width=1)
+            y += 92
+
     foot(img, d, E_INK, E_RED, y=1200)
     return img
 
 
+TEST = ROOT / "public" / "social" / "source" / "_test"
+
+
 def e_cover():
-    return e_card(
-        ROOT / "public" / "social" / "source" / "advizen" / "01-cover.jpg",
-        "Постоянное учреждение возникает *с первого дня*",
-        "Когда деятельность иностранной компании облагается налогом в Узбекистане",
-        align="right", size=62, lighten=0.52)
+    return e_card(TEST / "01-cover.jpg",
+                  "Постоянное учреждение возникает *с первого дня*",
+                  "Когда деятельность иностранной компании облагается налогом в Узбекистане",
+                  align="right", size=62)
 
 
 def e_statement():
-    return e_card(
-        ROOT / "public" / "social" / "source" / "track-record" / "03-fmcg.jpg",
-        "Правило *183 дней* здесь не работает",
-        "Для постоянного места деятельности порога нет",
-        align="left", size=66, lighten=0.6)
+    return e_card(TEST / "03-fmcg.jpg",
+                  "Правило *183 дней* здесь не работает",
+                  "Для постоянного места деятельности порога нет",
+                  align="left", size=66)
 
 
 def e_list():
-    return e_card(
-        ROOT / "public" / "social" / "source" / "advizen" / "05-consequence.jpg",
-        "*183 дня* считают только в трёх случаях",
-        "Стройплощадка, услуги через персонал, установки для добычи",
-        align="left", size=64, lighten=0.66)
+    return e_card(TEST / "01-cover.jpg",
+                  "*183 дня* считают только в трёх случаях",
+                  None, align="left", size=58,
+                  items=["Строительная площадка",
+                         "Услуги через персонал",
+                         "Установки для добычи"])
 
 
 DIRECTIONS["E"] = ("Как у Key Consulting", [e_cover, e_statement, e_list])
