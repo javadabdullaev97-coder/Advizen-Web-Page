@@ -33,6 +33,8 @@ import {
   useVideoConfig,
 } from "remotion";
 
+import { fitText } from "@remotion/layout-utils";
+
 import { ACCENT, BG, FONT, INK, RULE, SUB } from "./theme";
 
 // ── the grid ─────────────────────────────────────────────────────────
@@ -151,7 +153,7 @@ export const Stage: React.FC<{
   dir = "push",
   amount = 0.035,
   punchAt = null,
-  hold = false,
+  hold = true,
   children,
   graphic,
 }) => {
@@ -329,6 +331,140 @@ export const Headline: React.FC<{
           </span>
         );
       })}
+    </div>
+  );
+};
+
+/**
+ * A headline set as explicit lines, each filling the measure.
+ *
+ * Point sizes were being picked by eye and then nudged when a word ran
+ * past the frame or wrapped into a widow. Measuring instead removes the
+ * whole class of bug: the breaks are the author's, the size is whatever
+ * makes the longest line fill the column, and every beat therefore
+ * reads at the largest size its own words allow — which is also where
+ * the scale contrast between beats comes from.
+ */
+export const Lines: React.FC<{
+  lines: string[];
+  delay?: number;
+  max?: number;
+  color?: string;
+  accent?: string;
+  align?: "left" | "right";
+  blur?: boolean;
+  instant?: boolean;
+}> = ({
+  lines,
+  delay = -4,
+  max = 168,
+  color = INK,
+  accent,
+  align = "left",
+  blur = false,
+  instant = false,
+}) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const hot = accent ? accent.split(" ") : [];
+
+  const size = Math.min(
+    max,
+    ...lines.map(
+      (line) =>
+        fitText({
+          text: line,
+          withinWidth: MEASURE,
+          fontFamily: FONT,
+          fontWeight: 800,
+          letterSpacing: tracking(max),
+        }).fontSize,
+    ),
+  );
+
+  let n = 0;
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: align === "right" ? "flex-end" : "flex-start",
+      }}
+    >
+      {lines.map((line, li) => (
+        <div
+          key={`${line}-${li}`}
+          style={{
+            display: "flex",
+            columnGap: size * 0.23,
+            justifyContent: align === "right" ? "flex-end" : "flex-start",
+          }}
+        >
+          {line.split(" ").map((word, wi) => {
+            const s = instant ? 1 : hero(frame, fps, delay + n++ * 2);
+            return (
+              <span
+                key={`${word}-${wi}`}
+                style={{
+                  fontFamily: FONT,
+                  fontWeight: 800,
+                  fontSize: size,
+                  lineHeight: 1.02,
+                  letterSpacing: tracking(size),
+                  color: hot.includes(word) ? ACCENT : color,
+                  opacity: Math.min(1, s * 1.5),
+                  transform: `translateY(${(1 - s) * size * 0.16}px)`,
+                  filter: `blur(${blur ? (1 - s) * 7 : 0}px)`,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {word}
+              </span>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+/** A single word sized to fill the measure — the two terms. */
+export const Term: React.FC<{
+  text: string;
+  size?: number;
+  scaleFrom?: number;
+  delay?: number;
+}> = ({ text, size = 168, scaleFrom = 1, delay = 8 }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const s = hero(frame, fps, delay);
+  const fitted = Math.min(
+    size,
+    fitText({
+      text,
+      withinWidth: MEASURE,
+      fontFamily: FONT,
+      fontWeight: 800,
+      letterSpacing: tracking(size),
+    }).fontSize,
+  );
+  return (
+    <div
+      style={{
+        fontFamily: FONT,
+        fontWeight: 800,
+        fontSize: fitted,
+        lineHeight: 1,
+        letterSpacing: tracking(fitted),
+        color: INK,
+        opacity: Math.min(1, s * 1.6),
+        transform: `scale(${interpolate(s, [0, 1], [scaleFrom, 1])})`,
+        transformOrigin: "left center",
+        whiteSpace: "nowrap",
+        filter: `blur(${(1 - Math.min(1, s)) * 6}px)`,
+      }}
+    >
+      {text}
     </div>
   );
 };
