@@ -79,6 +79,16 @@ export const Bridge: React.FC<{ len: number }> = ({ len }) => {
   return (
     <AbsoluteFill style={{ backgroundColor: BG, overflow: "hidden" }}>
       <Room />
+      <AbsoluteFill
+        style={{
+          opacity: interpolate(frame, [38, 72], [0, 1], {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+          }),
+        }}
+      >
+        <Room light />
+      </AbsoluteFill>
       <AbsoluteFill style={{ transform: `translateX(${-cam}px)` }}>
         <div
           style={{
@@ -139,7 +149,13 @@ export const Bridge: React.FC<{ len: number }> = ({ len }) => {
           ) : null}
         </svg>
       </AbsoluteFill>
-      <Lockup instant />
+      <Lockup
+        instant
+        dark={interpolate(frame, [38, 72], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        }) > 0.5}
+      />
       <Finish />
     </AbsoluteFill>
   );

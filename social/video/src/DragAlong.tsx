@@ -25,11 +25,13 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Audio,
   Easing,
   interpolate,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { staticFile } from "remotion";
 import {
   TransitionSeries,
   linearTiming,
@@ -50,25 +52,32 @@ import {
   Note,
   Rail,
   RULE_Y,
+  SIZE,
   Stage,
   Term as TermWord,
   hero,
+  impact,
+  LIGHT,
 } from "./kit";
 import { Bar, Buyer, FILL, Legend, Reach } from "./Bar";
 import { Bridge } from "./Bridge";
 
 const HANDOFF = 12;
 
+// Fitted to the 39.55s voiceover, not the other way round: the read is
+// the master clock and the beats stretch to it.
 const BEATS = [
   { key: "stake", len: 105 },
   { key: "setup", len: 126 },
   { key: "refusal", len: 156 },
   { key: "bridge", len: 84 },
-  { key: "dragTerm", len: 156 },
+  { key: "dragTerm", len: 108 },
+  { key: "dragDemo", len: 84 },
   { key: "flip", len: 111 },
   { key: "stranded", len: 141 },
-  { key: "tagTerm", len: 156 },
-  { key: "close", len: 141 },
+  { key: "tagTerm", len: 108 },
+  { key: "tagDemo", len: 84 },
+  { key: "close", len: 175 },
 ];
 
 /** A transition eats its own length out of the two beats it joins. */
@@ -181,55 +190,25 @@ const Term: React.FC<{
   lead: string;
   term: string;
   note: string;
-  caption: string;
   mode: "drag" | "tag";
   /** The rule was already drawn by the bridge, so it must not draw again. */
   carried?: boolean;
-}> = ({ len, lead, term, note, caption, mode, carried = false }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const s = hero(frame, fps, 8);
-  const from = mode === "drag" ? 1.12 : 0.88;
-
-  const trip = (delay: number) =>
-    interpolate(frame, [delay, delay + 32], [0, 270], {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp",
-      easing: Easing.bezier(0.16, 1, 0.3, 1),
-    });
-  // Under drag-along the smaller block has no choice and leaves locked
-  // to the larger one. Under tag-along it starts late and catches up,
-  // which is the difference between being taken and choosing to come.
-  const major = trip(84);
-  const minor = mode === "drag" ? major : trip(96);
-  const landed = interpolate(frame, [112, 126], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
+}> = ({ len, lead, term, note, mode, carried = false }) => {
+  const from = mode === "drag" ? 1.1 : 0.9;
   return (
     <Stage
       len={len}
+      light
       dir={mode === "drag" ? "push" : "settle"}
-      amount={0.025}
-      graphic={
-        <>
-          <Bar
-            majorPull={major}
-            minorPull={minor}
-            minorColor={mode === "tag" ? FILL.accent : FILL.sub}
-          />
-          <Buyer delay={72} landed={landed} />
-        </>
-      }
+      amount={0.022}
     >
-      <Rail gap={20}>
-        <Eyebrow text={lead} />
-        <TermWord text={term} scaleFrom={from} />
+      <Rail gap={22}>
+        <Eyebrow text={lead} color={LIGHT.sub} />
+        <TermWord text={term} scaleFrom={from} color={LIGHT.ink} />
       </Rail>
       <div style={{ position: "absolute", left: 96, top: RULE_Y }}>
         <Hairline
-          delay={carried ? -40 : 22}
+          delay={carried ? -40 : 18}
           from={mode === "drag" ? "left" : "right"}
           width={MEASURE}
           weight={3}
@@ -237,26 +216,58 @@ const Term: React.FC<{
         />
       </div>
       <div style={{ position: "absolute", left: 96, top: RULE_Y + 32 }}>
-        <Note text={note} delay={carried ? 6 : 34} />
+        <Note text={note} delay={carried ? 4 : 28} color={LIGHT.sub} />
       </div>
-      <div
-        style={{
-          position: "absolute",
-          left: 96,
-          top: 866,
-          fontFamily: FONT,
-          fontWeight: 800,
-          fontSize: 44,
-          letterSpacing: "0.02em",
-          color: INK,
-          opacity: interpolate(frame, [96, 110], [0, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          }),
-        }}
-      >
-        {caption}
-      </div>
+      <Lockup delay={0} dark />
+    </Stage>
+  );
+};
+
+/**
+ * The clause acted out, back on the dark ground.
+ *
+ * Both demos are the same picture twice and the difference is the whole
+ * lesson: under drag-along the smaller block leaves locked to the larger
+ * one, under tag-along it starts late and catches up — taken, versus
+ * choosing to come.
+ */
+const Demo: React.FC<{ len: number; mode: "drag" | "tag"; caption: string }> = ({
+  len,
+  mode,
+  caption,
+}) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const trip = (delay: number) =>
+    interpolate(frame, [delay, delay + 30], [0, 270], {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+      easing: Easing.bezier(0.16, 1, 0.3, 1),
+    });
+  const major = trip(16);
+  const minor = mode === "drag" ? major : trip(28);
+  // The one place a bounce is earned: a mass that was travelling
+  // arrives and settles into the buyer.
+  const landed = impact(frame, fps, 44);
+  return (
+    <Stage
+      len={len}
+      dir="push"
+      amount={0.045}
+      graphic={
+        <>
+          <Bar
+            majorPull={major}
+            minorPull={minor}
+            minorColor={mode === "tag" ? FILL.accent : FILL.sub}
+          />
+          <Buyer delay={4} landed={landed} />
+        </>
+      }
+    >
+      <Rail>
+        <Lines lines={[caption]} max={SIZE.caption} />
+      </Rail>
       <Lockup delay={0} />
     </Stage>
   );
@@ -378,6 +389,7 @@ const at = (key: string) => BEATS.find((b) => b.key === key)!.len;
 
 export const DragAlong: React.FC = () => (
   <AbsoluteFill style={{ backgroundColor: BG }}>
+    <Audio src={staticFile("audio/vo.mp3")} />
     <TransitionSeries>
       <TransitionSeries.Sequence durationInFrames={at("stake")}>
         <Stake len={at("stake")} />
@@ -408,8 +420,12 @@ export const DragAlong: React.FC = () => (
           lead="У ЭТОГО ПРАВА ЕСТЬ ИМЯ"
           term="DRAG-ALONG"
           note="Вправе обязать остальных продать по той же цене."
-          caption="ВЫБОРА У МЕНЬШЕЙ ДОЛИ НЕТ"
         />
+      </TransitionSeries.Sequence>
+      <TransitionSeries.Transition {...push("from-bottom")} />
+
+      <TransitionSeries.Sequence durationInFrames={at("dragDemo")}>
+        <Demo len={at("dragDemo")} mode="drag" caption="ВЫБОРА У НЕЁ НЕТ" />
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition {...push("from-right")} />
 
@@ -433,8 +449,12 @@ export const DragAlong: React.FC = () => (
           lead="ВАША ЗАЩИТА НАЗЫВАЕТСЯ"
           term="TAG-ALONG"
           note="Право уйти вместе с ним — на тех же условиях."
-          caption="МЕНЬШАЯ ДОЛЯ УХОДИТ САМА"
         />
+      </TransitionSeries.Sequence>
+      <TransitionSeries.Transition {...push("from-bottom")} />
+
+      <TransitionSeries.Sequence durationInFrames={at("tagDemo")}>
+        <Demo len={at("tagDemo")} mode="tag" caption="УХОДИТ САМА" />
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition {...push("from-bottom")} />
 

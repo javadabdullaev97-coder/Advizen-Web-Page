@@ -57,3 +57,4 @@ __pycache__/
 # are output, like the cards.
 /social/video/node_modules/
 /social/video/out/
+/social/video/public/audio/

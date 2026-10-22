@@ -69,12 +69,26 @@ export const TERM = { drag: 136, tag: 150 };
 
 // ── springs ──────────────────────────────────────────────────────────
 
-/** A hero word landing. Overshoots visibly. */
+/**
+ * A hero word landing. Critically damped — it arrives fast and stops.
+ *
+ * Everything in the first cuts overshot, and forty wobbling entrances
+ * is what reads as a template. Bounce is earned by momentum: something
+ * that was actually travelling gets `impact`, everything else lands.
+ */
 export const hero = (frame: number, fps: number, delay = 0) =>
   spring({
     frame: frame - delay,
     fps,
-    config: { damping: 11, stiffness: 220, mass: 0.7 },
+    config: { damping: 25, stiffness: 220, mass: 0.7 },
+  });
+
+/** The one spring allowed to overshoot: a mass that carried momentum. */
+export const impact = (frame: number, fps: number, delay = 0) =>
+  spring({
+    frame: frame - delay,
+    fps,
+    config: { damping: 19, stiffness: 240, mass: 0.6 },
   });
 
 /** A sentence arriving. Critically damped — the serious lines do not wobble. */
@@ -114,13 +128,29 @@ export const tracking = (size: number) => (size >= 150 ? "-0.015em" : "-0.005em"
  */
 export const HORIZON = 1080;
 
-export const Room: React.FC<{ drift?: number }> = ({ drift = 0 }) => (
+/**
+ * The light tone, taken from the card system rather than invented.
+ * Used for the two term beats only: a ground that changes is a chapter
+ * break, and it is the one device that costs nothing and reads at a
+ * glance.
+ */
+export const LIGHT = {
+  ink: "#3A3F44",
+  sub: "#7A8086",
+  rule: "#CFCBC4",
+};
+
+export const Room: React.FC<{ drift?: number; light?: boolean }> = ({
+  drift = 0,
+  light = false,
+}) => (
   <AbsoluteFill style={{ pointerEvents: "none" }}>
       {/* Wall: one soft light from upper left, falling off down and right. */}
       <AbsoluteFill
         style={{
-          background:
-            "radial-gradient(118% 82% at 26% 16%, #201F1C 0%, #161514 38%, #0C0C0B 74%, #070706 100%)",
+          background: light
+            ? "radial-gradient(118% 82% at 26% 16%, #F4F1EA 0%, #EDE9E1 40%, #E2DDD3 100%)"
+            : "radial-gradient(118% 82% at 26% 16%, #201F1C 0%, #161514 38%, #0C0C0B 74%, #070706 100%)",
           transform: `translateY(${drift * 0.35}px)`,
         }}
       />
@@ -132,8 +162,9 @@ export const Room: React.FC<{ drift?: number }> = ({ drift = 0 }) => (
           right: 0,
           top: HORIZON,
           bottom: 0,
-          background:
-            "linear-gradient(180deg, #111110 0%, #0B0B0A 28%, #080807 100%)",
+          background: light
+            ? "linear-gradient(180deg, #E6E1D8 0%, #DCD7CD 40%, #D3CDC2 100%)"
+            : "linear-gradient(180deg, #111110 0%, #0B0B0A 28%, #080807 100%)",
           transform: `translateY(${drift * 0.55}px)`,
         }}
       />
@@ -144,8 +175,9 @@ export const Room: React.FC<{ drift?: number }> = ({ drift = 0 }) => (
           right: 0,
           top: HORIZON,
           height: 1,
-          background:
-            "linear-gradient(90deg, rgba(236,232,226,0) 0%, rgba(236,232,226,0.16) 30%, rgba(236,232,226,0.05) 100%)",
+          background: light
+            ? "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.12) 30%, rgba(0,0,0,0.04) 100%)"
+            : "linear-gradient(90deg, rgba(236,232,226,0) 0%, rgba(236,232,226,0.16) 30%, rgba(236,232,226,0.05) 100%)",
           transform: `translateY(${drift * 0.55}px)`,
         }}
       />
@@ -196,6 +228,8 @@ export const Stage: React.FC<{
   amount?: number;
   /** Local frame of a hard beat: a brightness lift and a scale punch. */
   punchAt?: number | null;
+  /** Invert to the light tone: a chapter break in the argument. */
+  light?: boolean;
   /** Skip the exit: for the final beat, so the loop seam is not black. */
   hold?: boolean;
   children: React.ReactNode;
@@ -205,6 +239,7 @@ export const Stage: React.FC<{
   dir = "push",
   amount = 0.035,
   punchAt = null,
+  light = false,
   hold = true,
   children,
   graphic,
@@ -257,8 +292,13 @@ export const Stage: React.FC<{
         });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: BG, overflow: "hidden" }}>
-      <Room drift={(scale - 1) * 900} />
+    <AbsoluteFill
+      style={{
+        backgroundColor: light ? "#EDE9E1" : BG,
+        overflow: "hidden",
+      }}
+    >
+      <Room drift={(scale - 1) * 900} light={light} />
       <AbsoluteFill style={{ filter: `brightness(${lift})` }}>
         {graphic ? (
           <AbsoluteFill
@@ -276,6 +316,7 @@ export const Stage: React.FC<{
             opacity: 1 - words,
             transform: `scale(${1 + (scale - 1) * 0.55}) translateY(${-words * 44}px)`,
             transformOrigin: "20% 300px",
+            filter: `blur(${(scale - 1) * 26}px)`,
           }}
         >
           {children}
@@ -496,7 +537,8 @@ export const Term: React.FC<{
   size?: number;
   scaleFrom?: number;
   delay?: number;
-}> = ({ text, size = 168, scaleFrom = 1, delay = 8 }) => {
+  color?: string;
+}> = ({ text, size = 168, scaleFrom = 1, delay = 8, color = INK }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = hero(frame, fps, delay);
@@ -519,7 +561,7 @@ export const Term: React.FC<{
         fontSize: fitted,
         lineHeight: 1,
         letterSpacing: `${interpolate(s, [0, 1], [0.16, -0.012])}em`,
-        color: INK,
+        color,
         opacity: Math.min(1, s * 1.6),
         transform: `scale(${interpolate(s, [0, 1], [scaleFrom, 1])})`,
         transformOrigin: "left center",
@@ -561,10 +603,11 @@ export const Term: React.FC<{
 };
 
 /** The small tracked label above a headline. */
-export const Eyebrow: React.FC<{ text: string; delay?: number }> = ({
-  text,
-  delay = 0,
-}) => {
+export const Eyebrow: React.FC<{
+  text: string;
+  delay?: number;
+  color?: string;
+}> = ({ text, delay = 0, color = SUB }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = copy(frame, fps, delay);
@@ -575,7 +618,7 @@ export const Eyebrow: React.FC<{ text: string; delay?: number }> = ({
         fontWeight: 500,
         fontSize: 34,
         letterSpacing: "0.18em",
-        color: SUB,
+        color,
         opacity: s,
       }}
     >
@@ -597,7 +640,8 @@ export const Note: React.FC<{
   delay?: number;
   size?: number;
   width?: number;
-}> = ({ text, delay = 0, size = 40, width = DECK }) => {
+  color?: string;
+}> = ({ text, delay = 0, size = 40, width = DECK, color = SUB }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = copy(frame, fps, delay);
@@ -608,7 +652,7 @@ export const Note: React.FC<{
         fontWeight: 400,
         fontSize: size,
         lineHeight: 1.34,
-        color: SUB,
+        color,
         maxWidth: width,
         opacity: s,
         transform: `translateY(${(1 - s) * 16}px)`,
@@ -679,10 +723,12 @@ export const Hairline: React.FC<{
 };
 
 /** The lockup, on the foot rail where the cards put it. */
-export const Lockup: React.FC<{ delay?: number; instant?: boolean }> = ({
-  delay = 0,
-  instant = false,
-}) => {
+export const Lockup: React.FC<{
+  delay?: number;
+  instant?: boolean;
+  /** Dark ink, for the light chapter. */
+  dark?: boolean;
+}> = ({ delay = 0, instant = false, dark = false }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = instant ? 1 : copy(frame, fps, delay);
@@ -715,7 +761,7 @@ export const Lockup: React.FC<{ delay?: number; instant?: boolean }> = ({
           fontWeight: 500,
           fontSize: 34,
           letterSpacing: "0.2em",
-          color: INK,
+          color: dark ? LIGHT.ink : INK,
         }}
       >
         ADVIZEN
