@@ -1,4 +1,4 @@
-import { continueRender, delayRender, staticFile } from "remotion";
+import { cancelRender, continueRender, delayRender, staticFile } from "remotion";
 
 // Geist is variable, so the weight range has to be declared or every
 // weight renders at 400 and the headlines lose their punch.
@@ -11,11 +11,15 @@ const geist = new FontFace(
 
 geist
   .load()
-  .then((loaded) => {
+  .then(async (loaded) => {
     document.fonts.add(loaded);
+    // Adding the face does not mean layout has reflowed with it; without
+    // this the first frames can be measured on fallback metrics.
+    await document.fonts.ready;
     continueRender(handle);
   })
   .catch((err) => {
-    console.error("Geist failed to load", err);
-    continueRender(handle);
+    // Frames render across concurrent tabs. A tab that silently fell back
+    // would ship a block of frames in the wrong face, found only at QC.
+    cancelRender(err);
   });

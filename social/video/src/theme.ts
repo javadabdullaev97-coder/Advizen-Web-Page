@@ -9,7 +9,7 @@ export const INK = "#ECE8E2";
 export const SUB = "#9E9891";
 export const ACCENT = "#C6283A";
 export const RULE = "#4A4642";
-export const PANEL = "#1A1917";
+export const PANEL = "#1C1A18";
 
 export const FONT = "Geist";
 export const W = 1080;
