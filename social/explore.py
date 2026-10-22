@@ -383,7 +383,42 @@ def e_wrap(text, font, width):
 E_SOURCE = ROOT / "public" / "social" / "source" / "_test"
 
 
-def e_scrim(img, bottom, blur=16, target=226, feather=230):
+E_WHITE = (247, 244, 238)      # one warm white for the whole carousel
+
+
+def e_balance(img, target=E_WHITE):
+    """
+    Put every frame on the same white.
+
+    Generators do not agree on what white is. Five frames came back warm
+    and cream, the sixth — the architectural one — came back cool and
+    neutral, and side by side in a carousel that reads as a mistake
+    rather than as variety.
+
+    So the frame's own white point is measured off its brightest fifth
+    and each channel is scaled to land it on E_WHITE. The gains stay
+    close to 1, which moves the paper and leaves the one red object
+    where it was.
+    """
+    small = img.resize((img.width // 6, img.height // 6), Image.BILINEAR)
+    lum = small.convert("L")
+    cut = sorted(lum.getdata())[int(len(lum.getdata()) * 0.8)]
+    mask = lum.point(lambda v: 255 if v >= cut else 0)
+    stat = ImageStat.Stat(small, mask)
+    if not stat.count[0]:
+        return img
+    gains = [min(1.18, max(0.85, t / max(1.0, m))) for t, m in zip(target, stat.mean)]
+    return Image.merge("RGB", [
+        ch.point(lambda v, g=g: min(255, round(v * g)))
+        for ch, g in zip(img.split(), gains)])
+
+
+E_DARK_INK = (236, 232, 226)
+E_DARK_SUB = (158, 152, 145)
+E_DARK_RED = (198, 40, 58)     # the oxblood would vanish into the charcoal
+
+
+def e_scrim(img, bottom, blur=16, target=226, feather=230, dark=False):
     """
     Make the headline readable whatever the picture does under it.
 
@@ -400,7 +435,12 @@ def e_scrim(img, bottom, blur=16, target=226, feather=230):
     """
     mean = ImageStat.Stat(img.crop((0, 0, W, bottom)).convert("L")).mean[0]
     treated = img.filter(ImageFilter.GaussianBlur(blur))
-    if mean < target:
+    if dark:
+        # Same mechanism, opposite direction: a charcoal band over the
+        # head of the frame, deep enough that parchment type holds.
+        pull = min(0.94, max(0.0, (mean - 44) / max(1.0, mean)))
+        treated = Image.blend(treated, Image.new("RGB", img.size, (24, 23, 22)), pull)
+    elif mean < target:
         lift = min(0.88, (target - mean) / max(1.0, 255 - mean))
         treated = Image.blend(treated, Image.new("RGB", img.size, (255, 255, 255)), lift)
 
@@ -416,8 +456,9 @@ def e_scrim(img, bottom, blur=16, target=226, feather=230):
     return Image.composite(treated, img, col.resize((W, H)))
 
 
-def e_card(photo, headline, subline, align="left", size=62, items=None):
-    img = cover_photo(photo)
+def e_card(photo, headline, subline, align="left", size=62, items=None,
+           tone="light"):
+    img = e_balance(cover_photo(photo))
 
     fh = f("Geist", size, 800)
     fs = f("Geist", round(size * 0.52), 400)
@@ -432,7 +473,14 @@ def e_card(photo, headline, subline, align="left", size=62, items=None):
     block = 108 + len(lines) * lead + round(size * 0.22) + len(sub) * round(size * 0.66)
     if items:
         block += 54 + len(items) * 92
-    img = e_scrim(img, block + 24)
+    dark = tone == "dark"
+    ink = E_DARK_INK if dark else E_INK
+    sub_ink = E_DARK_SUB if dark else E_SUB
+    red = E_DARK_RED if dark else E_RED
+    rule = (74, 70, 66) if dark else (206, 206, 208)
+
+    img = e_scrim(img, block + 24, dark=dark,
+                  feather=330 if dark else 230)
     d = ImageDraw.Draw(img)
 
     y = 108
@@ -441,25 +489,25 @@ def e_card(photo, headline, subline, align="left", size=62, items=None):
         total = sum(fh.getlength(t) for t, _ in runs)
         x = M if align == "left" else W - M - total
         for t, hot in runs:
-            d.text((x, y), t, font=fh, fill=E_RED if hot else E_INK)
+            d.text((x, y), t, font=fh, fill=red if hot else ink)
             x += fh.getlength(t)
         y += lead
     y += round(size * 0.22)
     for line in sub:
         x = M if align == "left" else W - M - fs.getlength(line)
-        d.text((x, y), line, font=fs, fill=E_SUB)
+        d.text((x, y), line, font=fs, fill=sub_ink)
         y += round(size * 0.66)
 
     if items:
         y += 54
         fn, fi = f("Geist", 30, 800), f("Geist", 29, 400)
         for i, item in enumerate(items, 1):
-            d.text((M, y), f"{i:02d}", font=fn, fill=E_RED)
-            d.text((M + 74, y), item, font=fi, fill=E_INK)
-            d.line([(M, y + 62), (W - M, y + 62)], fill=(206, 206, 208), width=1)
+            d.text((M, y), f"{i:02d}", font=fn, fill=red)
+            d.text((M + 74, y), item, font=fi, fill=ink)
+            d.line([(M, y + 62), (W - M, y + 62)], fill=rule, width=1)
             y += 92
 
-    foot(img, d, E_INK, E_RED, y=1200)
+    foot(img, d, E_INK, red, y=1200)
     return img
 
 
@@ -493,15 +541,15 @@ PE_CARDS = [
 ]
 
 
-def permanent_establishment():
-    out = OUT / "PE"
+def permanent_establishment(tone="light"):
+    out = OUT / ("PE" if tone == "light" else "PE-dark")
     out.mkdir(parents=True, exist_ok=True)
     for i, spec in enumerate(PE_CARDS, 1):
         spec = dict(spec)
         photo = PE / f"{spec.pop('photo')}.jpg"
-        e_card(photo, spec.pop("headline"), spec.pop("subline"), **spec).save(
-            out / f"{i:02d}.png")
-    print(f"PE — Постоянное учреждение: {len(PE_CARDS)} cards → {out.relative_to(ROOT)}")
+        e_card(photo, spec.pop("headline"), spec.pop("subline"),
+               tone=tone, **spec).save(out / f"{i:02d}.png")
+    print(f"{out.name}: {len(PE_CARDS)} cards → {out.relative_to(ROOT)}")
 
 
 def e_cover():
@@ -529,4 +577,5 @@ if __name__ == "__main__":
         for i, make in enumerate(cards, 1):
             make().save(folder / f"{i:02d}.png")
         print(f"{key} — {name}: {len(cards)} cards → {folder.relative_to(ROOT)}")
-    permanent_establishment()
+    permanent_establishment("light")
+    permanent_establishment("dark")
