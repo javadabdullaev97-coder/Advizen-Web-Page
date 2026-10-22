@@ -533,7 +533,7 @@ PE_CARDS = [
          subline="Когда деятельность иностранной компании облагается налогом в Узбекистане"),
     dict(photo="02-place", align="left", size=66,
          headline="Правило *183 дней* здесь не работает",
-         subline="Для постоянного места деятельности порога в днях нет"),
+         subline="Для постоянного места деятельности порога нет"),
     dict(photo="03-city", align="right", size=62,
          headline="Место деятельности есть — *учреждение есть*",
          subline="Статья 36 Налогового кодекса не устанавливает срока"),
@@ -553,14 +553,21 @@ PE_CARDS = [
 
 
 def permanent_establishment(tone="light"):
+    # Each tone has its own frames: the dark set is regenerated in
+    # graphite, not the light set with a filter on it.
+    src = PE if tone == "light" else ROOT / "public" / "social" / "source" / "permanent-establishment-dark"
     out = OUT / ("PE" if tone == "light" else "PE-dark")
     out.mkdir(parents=True, exist_ok=True)
+    made = 0
     for i, spec in enumerate(PE_CARDS, 1):
         spec = dict(spec)
-        photo = PE / f"{spec.pop('photo')}.jpg"
+        photo = src / f"{spec.pop('photo')}.jpg"
+        if not photo.exists():          # a frame that has not been made yet
+            continue
         e_card(photo, spec.pop("headline"), spec.pop("subline"),
                tone=tone, **spec).save(out / f"{i:02d}.png")
-    print(f"{out.name}: {len(PE_CARDS)} cards → {out.relative_to(ROOT)}")
+        made += 1
+    print(f"{out.name}: {made} cards → {out.relative_to(ROOT)}")
 
 
 def e_cover():
