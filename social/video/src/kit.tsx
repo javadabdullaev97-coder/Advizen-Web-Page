@@ -49,6 +49,8 @@ export const MEASURE = 888; // 96 … 984, for headlines in the upper band
 export const DECK = 720; // notes stay visibly narrower than the headline
 export const HEAD_Y = 300; // cap-top of the primary line, every beat
 export const BAND_Y = 800; // where the graphic band starts
+export const RULE_Y = 648; // the crimson rule under a term, so a
+                           // carried line can land exactly on it
 export const FOOT_Y = 1420; // lockup rail, and the floor for read-critical type
 /**
  * The display scale, a 1.2 ratio. Sizes are chosen from it, never nudged

@@ -49,11 +49,13 @@ import {
   MEASURE,
   Note,
   Rail,
+  RULE_Y,
   Stage,
   Term as TermWord,
   hero,
 } from "./kit";
 import { Bar, Buyer, FILL, Legend, Reach } from "./Bar";
+import { Bridge } from "./Bridge";
 
 const HANDOFF = 12;
 
@@ -61,6 +63,7 @@ const BEATS = [
   { key: "stake", len: 105 },
   { key: "setup", len: 126 },
   { key: "refusal", len: 156 },
+  { key: "bridge", len: 84 },
   { key: "dragTerm", len: 156 },
   { key: "flip", len: 111 },
   { key: "stranded", len: 141 },
@@ -70,7 +73,7 @@ const BEATS = [
 
 /** A transition eats its own length out of the two beats it joins. */
 export const TOTAL =
-  BEATS.reduce((n, b) => n + b.len, 0) - (BEATS.length - 1) * HANDOFF;
+  BEATS.reduce((n, b) => n + b.len, 0) - 6 * HANDOFF;
 
 // ── beats ────────────────────────────────────────────────────────────
 
@@ -180,7 +183,9 @@ const Term: React.FC<{
   note: string;
   caption: string;
   mode: "drag" | "tag";
-}> = ({ len, lead, term, note, caption, mode }) => {
+  /** The rule was already drawn by the bridge, so it must not draw again. */
+  carried?: boolean;
+}> = ({ len, lead, term, note, caption, mode, carried = false }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = hero(frame, fps, 8);
@@ -221,15 +226,19 @@ const Term: React.FC<{
       <Rail gap={20}>
         <Eyebrow text={lead} />
         <TermWord text={term} scaleFrom={from} />
+      </Rail>
+      <div style={{ position: "absolute", left: 96, top: RULE_Y }}>
         <Hairline
-          delay={22}
+          delay={carried ? -40 : 22}
           from={mode === "drag" ? "left" : "right"}
           width={MEASURE}
-          weight={2}
+          weight={3}
           color={ACCENT}
         />
-        <Note text={note} delay={34} />
-      </Rail>
+      </div>
+      <div style={{ position: "absolute", left: 96, top: RULE_Y + 32 }}>
+        <Note text={note} delay={carried ? 6 : 34} />
+      </div>
       <div
         style={{
           position: "absolute",
@@ -386,14 +395,15 @@ export const DragAlong: React.FC = () => (
       <TransitionSeries.Sequence durationInFrames={at("refusal")}>
         <Refusal len={at("refusal")} />
       </TransitionSeries.Sequence>
-      <TransitionSeries.Transition
-        presentation={fade()}
-        timing={linearTiming({ durationInFrames: HANDOFF })}
-      />
+
+      <TransitionSeries.Sequence durationInFrames={at("bridge")}>
+        <Bridge len={at("bridge")} />
+      </TransitionSeries.Sequence>
 
       <TransitionSeries.Sequence durationInFrames={at("dragTerm")}>
         <Term
           len={at("dragTerm")}
+          carried
           mode="drag"
           lead="У ЭТОГО ПРАВА ЕСТЬ ИМЯ"
           term="DRAG-ALONG"
