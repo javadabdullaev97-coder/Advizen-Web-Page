@@ -108,6 +108,34 @@ result before trusting a change.
 - A `flow` takes two or three nodes. Four will fit and will not read.
 - Any figure on a card carries its source **on the same card**.
 
+## Two systems
+
+**`banner`** — a photograph that is the whole card, with the proposition
+set across its head in heavy uppercase. This is what the Advizen posts
+are built on. Lives in `banner.py`.
+
+- `*…*` in a headline marks the run that carries the operative fact; it
+  takes the accent and the rest stays ink.
+- `align` alternates `left` and `right` slide to slide. That is where the
+  rhythm comes from, and it is the author's to set.
+- `tone` is `dark` or `light`, set once at the top of the post. Each tone
+  has its own frames: the dark set is generated in graphite, never the
+  light set with a filter on it.
+- `items` adds a numbered list under the subline.
+- The cover is a slide like any other, so `align`, `size`, `items` and
+  `blur` may be written at the top of the post beside `title` and `deck`.
+- No grain, no vignette: those make a flat void read as a lit page, and
+  on a photograph that fills the frame they only darken the corners.
+
+**The void types** — `cover`, `quote`, `numbered`, `matrix`, `figures`,
+`scene`, `flow`, `structure`, `chain`, `timeline`, `compare`, `chart`.
+Type and diagrams on near-black, in `cards.py`. Still what the three
+text-only posts run on, and the only way to draw a structure in the
+brand's own hand.
+
+Prompts for banner frames: `prompts/DIRECTION-E.md` (light) and
+`prompts/DIRECTION-E-DARK.md` (dark).
+
 ## Editorial rules
 
 From DESIGN.md §10, and they are the point of the whole thing: no hook, no

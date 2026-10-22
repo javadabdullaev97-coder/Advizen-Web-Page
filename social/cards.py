@@ -20,6 +20,7 @@ from PIL import Image, ImageDraw, ImageStat
 
 import theme as T
 import typeset as ts
+from banner import banner
 
 
 _LOGO_CACHE: dict[int, Image.Image] = {}
@@ -710,4 +711,5 @@ TYPES = {
     "timeline": timeline,
     "compare": compare,
     "chart": chart,
+    "banner": banner,
 }

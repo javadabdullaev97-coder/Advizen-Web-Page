@@ -68,8 +68,16 @@ def render(post: dict) -> list[Path]:
     total = len(post["slide"]) + 1
     written: list[Path] = []
 
-    specs = [dict(type="cover", category=post["category"], title=post["title"],
-                  deck=post.get("deck", ""), image=post.get("image"))]
+    cover = dict(type=post.get("cover_type", "cover"), category=post["category"],
+                 title=post["title"], deck=post.get("deck", ""),
+                 image=post.get("image"))
+    # The cover is a slide like any other and may carry a slide's settings;
+    # they are written at the top of the post because the cover has no
+    # [[slide]] table of its own.
+    for key in ("align", "size", "items", "blur"):
+        if key in post:
+            cover[key] = post[key]
+    specs = [cover]
     specs += post["slide"]
 
     for index, spec in enumerate(specs, start=1):
@@ -77,6 +85,9 @@ def render(post: dict) -> list[Path]:
         kind = spec.pop("type")
         # A slide may name its own eyebrow; otherwise it inherits the category.
         spec.setdefault("eyebrow", post["category"])
+        # The tone is the post's, unless a slide overrides it. Every other
+        # card type swallows it through **_.
+        spec.setdefault("tone", post.get("tone", "light"))
         # Image paths are written relative to the repository root, on the
         # cover and on any slide that takes one.
         if spec.get("image"):
@@ -87,7 +98,10 @@ def render(post: dict) -> list[Path]:
         image = cards.TYPES[kind](counter=f"{index:02d}/{total:02d}", **spec)
 
         path = out_dir / f"{index:02d}.png"
-        ts.finish(image).save(path)
+        # Grain and a vignette belong to the void system: they make a flat
+        # near-black field read as a lit page. On a photograph that fills
+        # the frame they only darken the corners.
+        (image if kind == "banner" else ts.finish(image)).save(path)
         written.append(path)
     return written
 

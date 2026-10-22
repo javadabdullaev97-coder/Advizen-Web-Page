@@ -1,54 +1,54 @@
-slug     = "permanent-establishment"
-category = "Налоги"
-title    = "Постоянное учреждение"
-deck     = "Когда деятельность иностранной компании становится налогооблагаемой в Узбекистане"
-image    = "public/Articles Image/Permanent Establishment Risk.webp"
+slug       = "permanent-establishment"
+category   = "Налоги"
+cover_type = "banner"
+tone       = "dark"
+
+title = "Постоянное учреждение возникает *с первого дня*"
+deck  = "Когда деятельность иностранной компании облагается налогом в Узбекистане"
+image = "public/social/source/permanent-establishment-dark/01-corridor.jpg"
+align = "right"
+size  = 60
+
+# `*…*` marks the run that carries the operative fact; it takes the
+# accent and the rest of the headline stays ink. Alignment alternates
+# slide to slide — that is where the rhythm comes from.
 
 [[slide]]
-type = "quote"
-eyebrow = "Заблуждение"
-image = "public/Articles Image/Representative Offices.webp"
-text = """
-Правило 183 дней знают все.
-
-Для постоянного места деятельности оно не работает.
-"""
+type = "banner"
+align = "left"
+size = 66
+image = "public/social/source/permanent-establishment-dark/02-place.jpg"
+headline = "Правило *183 дней* здесь не работает"
+subline = "Для постоянного места деятельности порога нет"
 
 [[slide]]
-type = "flow"
-eyebrow = "Механика"
-gate = "Деятельность началась"
-outcome = "Постоянное учреждение"
-note = "Порога в днях нет. Ст. 36 НК РУз."
-nodes = [
-  { label = "Иностранная компания", value = "" },
-  { label = "Место деятельности", value = "" },
-]
+type = "banner"
+align = "right"
+size = 62
+image = "public/social/source/permanent-establishment-dark/03-city.jpg"
+headline = "Место деятельности есть — *учреждение есть*"
+subline = "Статья 36 Налогового кодекса не устанавливает срока"
 
 [[slide]]
-type = "numbered"
-eyebrow = "Где 183 дня действительно работают"
-image = "public/industries/energy-industrials.jpg"
-start = 1
-items = [
-  { name = "Строительная площадка", text = "Площадка, монтажный объект или надзор над ними — более 183 дней в любом последовательном 12-месячном периоде." },
-  { name = "Услуги через персонал", text = "Включая консультационные — не менее 183 дней в любом последовательном 12-месячном периоде." },
-  { name = "Установки для добычи", text = "Сооружения для разведки и разработки природных ресурсов — более 183 дней. Ст. 36 НК РУз." },
-]
+type = "banner"
+align = "left"
+size = 58
+image = "public/social/source/permanent-establishment-dark/04-three.jpg"
+headline = "*183 дня* считают только в трёх случаях"
+items = ["Строительная площадка", "Услуги через персонал", "Установки для добычи"]
 
 [[slide]]
-type = "quote"
-eyebrow = "Второй порог, которого тоже нет"
-text = """
-Если лицо в Узбекистане обычно заключает контракты от имени иностранной компании или играет главную роль в их заключении, постоянное учреждение возникает независимо от срока.
-"""
+type = "banner"
+align = "right"
+size = 58
+image = "public/social/source/permanent-establishment-dark/05-agent.jpg"
+headline = "Договор подписан от вашего имени — *учреждение возникает*"
+subline = "Независимо от срока, если лицо обычно заключает контракты"
 
 [[slide]]
-type = "quote"
-eyebrow = "Вывод"
-image = "public/Articles Image/Escrow Accounts.webp"
-text = """
-Дробить проект на короткие отрезки бесполезно: периоды по связанным проектам складываются.
-
-Порог может поднять соглашение об избежании двойного налогообложения — если оно применяется.
-"""
+type = "banner"
+align = "left"
+size = 60
+image = "public/social/source/permanent-establishment-dark/06-periods.jpg"
+headline = "Дробить проект бесполезно: периоды *складываются*"
+subline = "Порог может поднять соглашение об избежании двойного налогообложения"
