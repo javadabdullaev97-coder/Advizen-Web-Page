@@ -1,48 +1,54 @@
-slug     = "track-record"
-category = "Опыт"
-title    = "Послужной список"
-deck     = "Избранные проекты членов команды"
-image    = "public/social/source/advizen/04-record.jpg"
+slug       = "track-record"
+category   = "Опыт"
+cover_type = "banner"
+tone       = "dark"
 
-# Every figure and every headline here comes from src/lib/industries.ts —
-# the same list the website publishes under "Selected engagements of our
-# team members". Nothing on these cards may say more than that file does.
+title = "Избранные проекты *членов команды*"
+deck  = "Сделки, регистрации, due diligence и участие в разработке законов"
+image = "public/social/source/track-record-dark/01-archive.jpg"
+align = "right"
+size  = 62
 
-[[slide]]
-type = "engagement"
-eyebrow = "Энергетика"
-image = "public/social/source/track-record/02-energy.jpg"
-value = "$10 млрд+"
-label = "Бюджет проекта"
-headline = "Налоговое, бухгалтерское и таможенное структурирование строительства атомной электростанции."
+# Each card is a figure in the headline and what stands behind it in the
+# subline. Every number comes from src/lib/industries.ts, the same list
+# the site publishes as "Selected engagements of our team members".
 
 [[slide]]
-type = "engagement"
-eyebrow = "FMCG"
-image = "public/social/source/track-record/03-fmcg.jpg"
-value = "$250 млн"
-label = "Сделка"
-headline = "M&A крупного узбекского производителя напитков."
+type = "banner"
+align = "left"
+size = 66
+image = "public/social/source/track-record-dark/02-energy.jpg"
+headline = "*$10 млрд+* — бюджет проекта"
+subline = "Налоговое, бухгалтерское и таможенное структурирование строительства атомной электростанции"
 
 [[slide]]
-type = "engagement"
-eyebrow = "Финтех"
-image = "public/social/source/track-record/04-fintech.jpg"
-value = "$200 млн"
-label = "Сделка"
-headline = "Два крупных проекта реструктуризации международного цифрового банка в его узбекских дочерних компаниях."
+type = "banner"
+align = "right"
+size = 66
+image = "public/social/source/track-record-dark/03-fmcg.jpg"
+headline = "*$250 млн* — сделка"
+subline = "M&A крупного узбекского производителя напитков"
 
 [[slide]]
-type = "engagement"
-eyebrow = "Инвестиции"
-image = "public/social/source/track-record/05-fund.jpg"
-value = "UzFund"
-label = "Инвестиционный фонд"
-headline = "Реорганизация и структурирование узбекского государственного инвестиционного фонда."
+type = "banner"
+align = "left"
+size = 66
+image = "public/social/source/track-record-dark/04-fintech.jpg"
+headline = "*$200 млн* — сделка"
+subline = "Два проекта реструктуризации международного цифрового банка в его узбекских дочерних компаниях"
 
 [[slide]]
-type = "scene"
-foot = true
-eyebrow = "Законотворчество"
-image = "public/social/source/advizen/06-three.jpg"
-title = "Члены команды участвовали в разработке трёх законов Республики Узбекистан"
+type = "banner"
+align = "right"
+size = 60
+image = "public/social/source/track-record-dark/05-fund.jpg"
+headline = "*UzFund* — реорганизация и структурирование"
+subline = "Узбекский государственный инвестиционный фонд"
+
+[[slide]]
+type = "banner"
+align = "left"
+size = 58
+image = "public/social/source/track-record-dark/06-laws.jpg"
+headline = "Члены команды участвовали в разработке *трёх законов*"
+subline = "Рынки капитала, банковское регулирование, интеграция исламских финансов"
