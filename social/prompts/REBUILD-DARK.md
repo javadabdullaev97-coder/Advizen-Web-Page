@@ -37,12 +37,21 @@
 ### `01-corridor.jpg` — Обложка. Четыре практики, одна фирма.
 
 ```
-A long dark office corridor seen straight down its length, wide angle,
-the camera close to the first doorway. Four open doorways lead off it,
-two on each side, receding into soft focus. A single continuous runner
-of pure bright red carpet lies along the dark polished floor and passes
-through all four thresholds, joining them. Charcoal door frames,
-graphite walls, a slim brushed steel handrail along the left wall.
+A long dark office corridor seen straight down its length from inside
+it, the camera standing on the floor at the near end with nothing
+between it and the corridor. Exactly four doorways open off the
+corridor, arranged as two facing pairs: one pair close to the camera and
+one pair further down, each doorway directly opposite its partner. A
+pure bright red runner lies along the centre of the dark polished floor
+and splits into four equal branches, one into each doorway — the two
+branches of each pair leaving the centre line at the same point and at
+the same angle, so the pattern is perfectly symmetrical left and right.
+Charcoal door frames, graphite walls, a slim brushed steel handrail on
+both walls.
+
+Also in the negatives for this one: large dark arch in the foreground,
+doorway frame around the image, asymmetrical branches, uneven spacing,
+branches at different depths on each side.
 
 3D render, not photography. A dark interior or studio set built in matte
 charcoal and graphite: a seamless graphite back wall with a soft vertical
@@ -74,9 +83,10 @@ grain, vintage, low-poly, cartoon, toy, clay render.
 
 ```
 A long row of matte charcoal dominoes standing on the dark polished
-floor, curving away from the camera into soft focus. The nearest domino
-is large in frame and already tipping into the next. One domino
-part-way along the row is pure bright red.
+floor, curving away from the camera into soft focus, the nearest ones
+large in frame and already down. One domino part-way along the row is
+pure bright red, and it is the one currently tipping, caught mid-fall —
+the moment the cascade reaches it.
 
 3D render, not photography. A dark interior or studio set built in matte
 charcoal and graphite: a seamless graphite back wall with a soft vertical
@@ -176,10 +186,16 @@ grain, vintage, low-poly, cartoon, toy, clay render.
 
 ```
 Dozens of fine matte charcoal cables spread across the dark polished
-floor from the back of the frame, converging towards the camera and
-gathering into one large connector at the front, square-on and closest
-to the camera. One cable running through the bundle is pure bright
-red.
+floor from the back of the frame, sweeping forward in smooth even curves
+and gathering at the front into one single thick braided cord that runs
+out of the bottom of the frame towards the camera. One cable among them
+is pure bright red: it follows exactly the same smooth curve as its
+neighbours, the same thickness, differing only in colour. No connector,
+no plug, no socket.
+
+Also in the negatives for this one: coiled cable, spiral, corkscrew,
+spring, helix, connector, plug, socket, DB-25, serial port, USB,
+computer hardware, retro technology.
 
 3D render, not photography. A dark interior or studio set built in matte
 charcoal and graphite: a seamless graphite back wall with a soft vertical
@@ -434,3 +450,32 @@ python3.12 -c "from PIL import Image,ImageStat;print(round(ImageStat.Stat(Image.
 
 Средняя яркость между 50 и 85. И глазами: есть ли графитовая стена, есть
 ли отражение на полу, ровно ли один красный предмет.
+
+---
+
+## Правки после первой генерации «Advizen»
+
+Пять кадров пришли ровными — яркость 58–79, верх 62–87, контраст 28–38.
+Два пришлось переписать, и обе причины стоит помнить.
+
+**Коридор.** Ответвления ковра уходили не парами: слева одно у камеры,
+справа два на разной глубине, и центральная полоса от этого читалась
+кривой. Плюс спереди вырастала огромная тёмная арка и съедала треть
+кадра. Геометрию пришлось задать явно — четыре проёма двумя парами,
+друг напротив друга, ответвления из одной точки под одним углом.
+
+**Кабель.** Все серые шли плавными дугами, а красный был закручен
+пружиной: единственный другой по форме, и глаз читал это как дефект, а
+не как акцент. Разъём был DB-25 — компьютерный штекер из девяностых,
+который датирует кадр и ничего не говорит про точку контакта. Теперь
+красный кабель повторяет форму соседей и отличается только цветом, а
+разъёма нет вовсе.
+
+**Домино** сдвинулось по смыслу: красная костяшка теперь та, которая
+сейчас заваливается, а не та, до которой ещё не дошло. Карточка про
+передачу, и момент передачи должен быть на красном.
+
+**Ящики остаются как есть, а число уходит из заголовка.** В кадре их
+около тридцати, а заголовок говорил «семь операционных сервисов». Стена
+ящиков сильнее семи штук в ряд, и семёрка всё равно звучит в подписи —
+так что меняется текст, а не картинка.
