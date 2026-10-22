@@ -18,6 +18,14 @@ python3 -m pip install "Pillow>=10,<12"
 
 The fonts are not committed. They are binaries under the Open Font
 Licence, served from a stable path, so carrying copies here buys nothing.
+Both lines run again on a fresh container: nothing here survives one.
+
+**Check which interpreter has a working Pillow before assuming `python3`
+is it.** A container rebuild left `python3` at 3.11 while the system
+Pillow next to it was compiled for 3.12, so `import PIL` failed with
+`cannot import name '_imaging'` — which reads like a broken install and
+is really a version mismatch. `python3.12 social/render.py ...` worked
+untouched. Reinstalling Pillow over the top does not fix it.
 
 ## Drawing a post
 
