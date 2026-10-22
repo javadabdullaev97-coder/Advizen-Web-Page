@@ -337,11 +337,12 @@ DIRECTIONS = {
 # And the alignment alternates slide to slide, which is where the rhythm
 # comes from.
 #
-# A headline here is a question and the subline answers it. That is a
-# hook, which social/README.md § Editorial rules forbids. Direction E
-# exists because the rule was argued against on the evidence of a
-# competitor's feed; if E wins, the rule gets rewritten rather than
-# quietly broken.
+# What is borrowed is the visual system, not the copy. Key Consulting's
+# headlines are questions aimed at a worry — "Клиенты уходят, а вы не
+# знаете почему?" — and social/README.md § Editorial rules rules that
+# out. So the red run marks the operative fact rather than the reader's
+# fear, and every headline here is a complete proposition that survives
+# being read on its own.
 # ─────────────────────────────────────────────────────────────────────
 
 E_RED = (196, 22, 32)          # hotter than the brand oxblood: on white, #981A30 goes brown
@@ -414,24 +415,24 @@ def e_card(photo, headline, subline, align="left", size=62, lighten=0.0):
 def e_cover():
     return e_card(
         ROOT / "public" / "social" / "source" / "advizen" / "01-cover.jpg",
-        "*183 дня* — и налоги в Узбекистане?",
-        "Порога в днях для него нет",
-        align="right", size=66, lighten=0.52)
+        "Постоянное учреждение возникает *с первого дня*",
+        "Когда деятельность иностранной компании облагается налогом в Узбекистане",
+        align="right", size=62, lighten=0.52)
 
 
 def e_statement():
     return e_card(
         ROOT / "public" / "social" / "source" / "track-record" / "03-fmcg.jpg",
-        "*Работаете без офиса* и думаете, что чисты?",
-        "Оно возникает с первого дня деятельности",
-        align="left", size=62, lighten=0.6)
+        "Правило *183 дней* здесь не работает",
+        "Для постоянного места деятельности порога нет",
+        align="left", size=66, lighten=0.6)
 
 
 def e_list():
     return e_card(
         ROOT / "public" / "social" / "source" / "advizen" / "05-consequence.jpg",
-        "Где *183 дня* всё-таки считают?",
-        "Стройплощадка, услуги через персонал, добыча",
+        "*183 дня* считают только в трёх случаях",
+        "Стройплощадка, услуги через персонал, установки для добычи",
         align="left", size=64, lighten=0.66)
 
 
