@@ -324,6 +324,120 @@ DIRECTIONS = {
     "D": ("Чередование", [d_cover, d_statement, d_list]),
 }
 
+
+
+# ─────────────────────────────────────────────────────────────────────
+# E — Как у Key Consulting. The picture is the card: a bright, almost
+# white studio scene with one red object in it, and the type sits on top.
+#
+# Three things carry the look, and all three were missing from A–D.
+# The ground is near-white rather than dark. The headline is heavy
+# uppercase grotesque with tight leading, split across two colours — the
+# part that names the reader's problem in crimson, the rest in charcoal.
+# And the alignment alternates slide to slide, which is where the rhythm
+# comes from.
+#
+# A headline here is a question and the subline answers it. That is a
+# hook, which social/README.md § Editorial rules forbids. Direction E
+# exists because the rule was argued against on the evidence of a
+# competitor's feed; if E wins, the rule gets rewritten rather than
+# quietly broken.
+# ─────────────────────────────────────────────────────────────────────
+
+E_RED = (196, 22, 32)          # hotter than the brand oxblood: on white, #981A30 goes brown
+E_INK = (58, 63, 68)
+E_SUB = (122, 128, 134)
+
+
+def e_split(line):
+    """`*text*` marks the crimson run; everything else is charcoal."""
+    out, buf, hot = [], "", False
+    for ch in line:
+        if ch == "*":
+            if buf:
+                out.append((buf, hot))
+            buf, hot = "", not hot
+        else:
+            buf += ch
+    if buf:
+        out.append((buf, hot))
+    return out
+
+
+def e_wrap(text, font, width):
+    """Wrap on words while keeping the `*` markers attached to them."""
+    lines, cur = [], ""
+    for word in text.split():
+        cand = f"{cur} {word}".strip()
+        if font.getlength(cand.replace("*", "")) <= width or not cur:
+            cur = cand
+        else:
+            lines.append(cur)
+            cur = word
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def e_card(photo, headline, subline, align="left", size=62, lighten=0.0):
+    img = cover_photo(photo)
+    if lighten:
+        img = Image.blend(img, Image.new("RGB", img.size, (255, 255, 255)), lighten)
+    d = ImageDraw.Draw(img)
+
+    fh = f("Geist", size, 800)
+    fs = f("Geist", round(size * 0.52), 400)
+    lead = round(size * 1.06)
+
+    lines = e_wrap(headline.upper(), fh, W - 2 * M)
+    sub = ts.wrap(subline, fs, W - 2 * M) if subline else []
+
+    y = 108
+    for line in lines:
+        runs = e_split(line)
+        total = sum(fh.getlength(t) for t, _ in runs)
+        x = M if align == "left" else W - M - total
+        for t, hot in runs:
+            d.text((x, y), t, font=fh, fill=E_RED if hot else E_INK)
+            x += fh.getlength(t)
+        y += lead
+    y += round(size * 0.22)
+    for line in sub:
+        x = M if align == "left" else W - M - fs.getlength(line)
+        d.text((x, y), line, font=fs, fill=E_SUB)
+        y += round(size * 0.66)
+
+    foot(img, d, E_INK, E_RED, y=1200)
+    return img
+
+
+def e_cover():
+    return e_card(
+        ROOT / "public" / "social" / "source" / "advizen" / "01-cover.jpg",
+        "*183 дня* — и налоги в Узбекистане?",
+        "Порога в днях для него нет",
+        align="right", size=66, lighten=0.52)
+
+
+def e_statement():
+    return e_card(
+        ROOT / "public" / "social" / "source" / "track-record" / "03-fmcg.jpg",
+        "*Работаете без офиса* и думаете, что чисты?",
+        "Оно возникает с первого дня деятельности",
+        align="left", size=62, lighten=0.6)
+
+
+def e_list():
+    return e_card(
+        ROOT / "public" / "social" / "source" / "advizen" / "05-consequence.jpg",
+        "Где *183 дня* всё-таки считают?",
+        "Стройплощадка, услуги через персонал, добыча",
+        align="left", size=64, lighten=0.66)
+
+
+DIRECTIONS["E"] = ("Как у Key Consulting", [e_cover, e_statement, e_list])
+
+
 if __name__ == "__main__":
     for key, (name, cards) in DIRECTIONS.items():
         folder = OUT / key
