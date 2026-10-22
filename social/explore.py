@@ -63,7 +63,18 @@ def logo(height, colour):
 
 
 def foot(img, d, ink, mark_colour, y=1180, margin=96):
-    """Logo and wordmark, one lockup, every direction."""
+    """
+    Logo and wordmark, one lockup, every direction.
+
+    `ink` may be None, in which case it is read off what the lockup
+    actually sits on. The foot lies on the picture rather than on any
+    band, so a dark frame and a light one need opposite colours there and
+    neither the tone of the card nor the author should have to remember
+    which.
+    """
+    if ink is None:
+        patch = img.crop((margin, y - 6, margin + 420, y + 36)).convert("L")
+        ink = (236, 232, 226) if ImageStat.Stat(patch).mean[0] < 120 else E_INK
     font = f("Geist", 23, 500)
     mark = logo(26, mark_colour)
     img.paste(mark, (margin, y + font.getbbox("ADVIZEN")[3] - 26), mark)
@@ -507,7 +518,7 @@ def e_card(photo, headline, subline, align="left", size=62, items=None,
             d.line([(M, y + 62), (W - M, y + 62)], fill=rule, width=1)
             y += 92
 
-    foot(img, d, E_INK, red, y=1200)
+    foot(img, d, None, red, y=1200)
     return img
 
 
