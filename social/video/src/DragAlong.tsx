@@ -5,33 +5,23 @@
  * business, watches a sale die, and only then is told that the thing
  * which would have saved it has a name. The piece turns on a flip,
  * because drag-along is the larger holder's clause and tag-along the
- * smaller holder's — so the viewer changes sides halfway through, and
- * the close is that a contract needs both lines.
+ * smaller holder's — so the viewer holds 70% in the first half, changes
+ * sides, holds 30% in the second, and the close is that a contract needs
+ * both lines.
  *
- * Three things the first cut got wrong and this one fixes:
- *
- *   * It was too fast to read. Eleven beats at 2.6 seconds each left no
- *     time for a Russian headline and a sentence under it. Eight beats
- *     now, 3.5 to 5 seconds, sized to what the beat actually says.
- *   * Graphics landed on type. Everything below the type band now lives
- *     in one fixed lane with fixed coordinates, so the bar, the buyer
- *     and the arrow between them cannot reach the words.
- *   * Every beat looked the same. The ring is gone: a donut can only be
- *     redrawn or rotated, so it gave eleven identical frames and no
- *     picture of the mechanism. Blocks can be dragged and left behind,
- *     and half the beats now carry no graphic at all.
+ * The holdings are lit 3D objects in a studio (see world/World.tsx); the
+ * type stays in the DOM on top of them. Each beat is its own shot with
+ * its own slow camera move, and the edit cuts between shots the way a
+ * product film does.
  */
 
 import React from "react";
 import {
   AbsoluteFill,
-  Audio,
   Easing,
   interpolate,
   useCurrentFrame,
-  useVideoConfig,
 } from "remotion";
-import { staticFile } from "remotion";
 import {
   TransitionSeries,
   linearTiming,
@@ -46,6 +36,7 @@ import { ACCENT, BG, FONT, INK, SUB } from "./theme";
 import {
   Eyebrow,
   Hairline,
+  LIGHT,
   Lines,
   Lockup,
   MEASURE,
@@ -55,122 +46,222 @@ import {
   SIZE,
   Stage,
   Term as TermWord,
-  hero,
-  impact,
-  LIGHT,
 } from "./kit";
-import { Bar, Buyer, FILL, Legend, Reach } from "./Bar";
 import { Bridge } from "./Bridge";
+import { Cue, Sound } from "./Sound";
+import { deg, mixPose, Pose } from "./world/camera";
+import { Mark } from "./world/Mark";
+import {
+  BAR_L,
+  BlockState,
+  MAJOR_L,
+  MAJOR_X,
+  MINOR_L,
+  MINOR_X,
+  GAP,
+  BLOCK_H,
+  PAD_D,
+  World,
+} from "./world/World";
 
 const HANDOFF = 12;
 
-// Fitted to the 39.55s voiceover, not the other way round: the read is
-// the master clock and the beats stretch to it.
-const BEATS = [
-  { key: "stake", len: 105 },
-  { key: "setup", len: 126 },
-  { key: "refusal", len: 156 },
-  { key: "bridge", len: 84 },
-  { key: "dragTerm", len: 108 },
-  { key: "dragDemo", len: 84 },
-  { key: "flip", len: 111 },
-  { key: "stranded", len: 141 },
-  { key: "tagTerm", len: 108 },
-  { key: "tagDemo", len: 84 },
-  { key: "close", len: 175 },
+// ── the clock ────────────────────────────────────────────────────────
+
+/**
+ * Where each beat starts, in frames, read off the voiceover's word
+ * timings. The read is the master clock: a beat starts a few frames
+ * ahead of its first word, so the picture leads the voice.
+ */
+const START = {
+  stake: 0,
+  setup: 80,
+  buyer: 217,
+  refusal: 327,
+  bridge: 416,
+  dragTerm: 476,
+  dragDemo: 600,
+  flip: 693,
+  stranded: 800,
+  tagTerm: 924,
+  tagDemo: 999,
+  close: 1085,
+};
+type Key = keyof typeof START;
+const ORDER = Object.keys(START) as Key[];
+
+/** The voice ends at 42.2s; the last frame holds a second past it. */
+export const TOTAL = 1297;
+
+/** How each beat comes in. A cut costs no overlap; the rest eat HANDOFF. */
+const ENTRY: Record<Key, "cut" | "push-up" | "push-left" | "push-right" | "wipe" | "fade"> = {
+  stake: "cut",
+  setup: "push-up",
+  buyer: "wipe",
+  refusal: "cut",
+  bridge: "cut",
+  dragTerm: "cut",
+  dragDemo: "push-up",
+  flip: "push-left",
+  stranded: "push-right",
+  tagTerm: "fade",
+  tagDemo: "push-up",
+  close: "push-up",
+};
+
+const len = (k: Key) => {
+  const i = ORDER.indexOf(k);
+  const next = ORDER[i + 1];
+  if (!next) return TOTAL - START[k];
+  return START[next] - START[k] + (ENTRY[next] === "cut" ? 0 : HANDOFF);
+};
+
+// ── motion vocabulary ────────────────────────────────────────────────
+
+const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+/** Camera: slow in, slower out — a dolly on a track, not a spring. */
+const glide = Easing.bezier(0.45, 0, 0.2, 1);
+/** Objects arriving: fast, then a long settle. */
+const land = Easing.bezier(0.16, 1, 0.3, 1);
+const swap = Easing.bezier(0.65, 0, 0.35, 1);
+
+const ramp = (f: number, a: number, b: number, ease = swap) =>
+  interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
+
+// ── the shots ────────────────────────────────────────────────────────
+
+/** A long lens, the bar a little below centre, the type band left clear. */
+const lens = (p: Partial<Pose>): Pose => ({
+  az: 0,
+  el: deg(13),
+  dist: 21.5,
+  target: [0, 0.5, 0],
+  fov: 30,
+  shiftY: 110,
+  ...p,
+});
+
+const move = (frame: number, n: number, a: Pose, b: Pose) =>
+  mixPose(a, b, ramp(frame, 0, n, glide));
+
+/**
+ * Where the buyer's footprint sits: straight behind the bar, upstage. A
+ * portrait frame is too narrow to hold the bar and the whole-bar pad side
+ * by side, but it is tall — so the sale travels into depth, and the pad
+ * lands in the band between the headline and the bar.
+ */
+const PAD_Z = -6;
+
+const seats = (
+  major: Partial<BlockState> = {},
+  minor: Partial<BlockState> = {},
+): BlockState[] => [
+  { id: "major", x: MAJOR_X, len: MAJOR_L, tone: "ceramic", label: "70%", ...major },
+  { id: "minor", x: MINOR_X, len: MINOR_L, tone: "red", label: "30%", ...minor },
 ];
 
-/** A transition eats its own length out of the two beats it joins. */
-export const TOTAL =
-  BEATS.reduce((n, b) => n + b.len, 0) - 6 * HANDOFF;
+/** The wide shot that holds both the bar and the pad behind it. */
+const upstage = lens({ az: deg(8), el: deg(18), dist: 30, target: [0, 0.5, -3], shiftY: 40 });
+
+/** "ПОКУПАТЕЛЬ", written above the pad's silhouette. */
+const BuyerMark: React.FC<{ pose: Pose; opacity: number }> = ({ pose, opacity }) => (
+  <Mark
+    pose={pose}
+    x={0}
+    y={BLOCK_H}
+    z={PAD_Z - PAD_D / 2 - 0.4}
+    text="ПОКУПАТЕЛЬ"
+    color={INK}
+    opacity={opacity}
+    dy={-58}
+  />
+);
 
 // ── beats ────────────────────────────────────────────────────────────
 
 /**
- * Frame 0 is the cover frame in the feed, so it carries the whole stake
- * already arrived — no assembly, no empty black, no graphic to wait for.
+ * Frame 0 is the cover in the feed, so it carries the whole stake
+ * already arrived — and the one object the stake is about, alone.
  */
-const Stake: React.FC<{ len: number }> = ({ len }) => (
-  <Stage len={len} dir="push" amount={0.03}>
-    <Rail>
-      <Lines
-        lines={["30% МОГУТ", "ОТМЕНИТЬ", "ВАШУ СДЕЛКУ"]}
-        accent="30%"
-        instant
-      />
-    </Rail>
-    <Lockup instant />
-  </Stage>
-);
-
-const Setup: React.FC<{ len: number }> = ({ len }) => {
+const Stake: React.FC<{ len: number }> = ({ len }) => {
   const frame = useCurrentFrame();
-  // One bar arrives whole and divides. Drawing it on from nothing was
-  // what made the old ring read as a loading spinner.
-  const draw = interpolate(frame, [6, 24], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-    easing: Easing.bezier(0.16, 1, 0.3, 1),
-  });
-  const major = interpolate(frame, [26, 46], [1, 0.7], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-    easing: Easing.bezier(0.16, 1, 0.3, 1),
-  });
-  return (
-    <Stage
-      len={len}
-      dir="settle"
-      graphic={
-        <>
-          <Bar draw={draw} major={major} />
-          <Legend delay={48} />
-        </>
-      }
-    >
-      <Rail gap={40}>
-        <Lines lines={["КОФЕЙНЯ", "НА ДВОИХ"]} max={150} />
-        <Note text="У партнёра 70%, у вас 30%." delay={30} />
-      </Rail>
-      <Lockup delay={0} />
-    </Stage>
+  const pose = move(
+    frame,
+    len,
+    lens({ az: deg(30), el: deg(10), dist: 12.5, shiftY: 120 }),
+    lens({ az: deg(18), el: deg(11), dist: 11.3, shiftY: 120 }),
   );
-};
-
-/**
- * One beat for the whole collapse: the buyer reaches for the company,
- * the smaller block refuses, the reach breaks. Splitting the refusal and
- * the death across two beats spent eight seconds on one idea.
- */
-const Refusal: React.FC<{ len: number }> = ({ len }) => {
-  const frame = useCurrentFrame();
-  const kick =
-    frame >= 54 && frame < 76
-      ? Math.cos((frame - 54) * 1.1) *
-        interpolate(frame, [54, 76], [14, 0], { extrapolateRight: "clamp" })
-      : 0;
-  const refused = frame >= 54;
   return (
     <Stage
       len={len}
       dir="push"
       amount={0.03}
-      punchAt={54}
-      graphic={
-        <AbsoluteFill style={{ transform: `translateX(${kick}px)` }}>
-          <Bar minorColor={refused ? FILL.accent : FILL.sub} />
-          <Legend delay={0} />
-          <Buyer delay={6} />
-          <Reach delay={22} breakAt={54} />
-        </AbsoluteFill>
+      world={
+        <World
+          pose={pose}
+          focus={0}
+          blocks={[{ id: "minor", x: 0, len: MINOR_L, tone: "red", label: "30%" }]}
+        />
+      }
+    >
+      <Rail>
+        <Lines
+          lines={["30% МОГУТ", "ОТМЕНИТЬ", "ВАШУ СДЕЛКУ"]}
+          accent="30%"
+          instant
+        />
+      </Rail>
+      <Lockup instant />
+    </Stage>
+  );
+};
+
+/**
+ * The company arrives whole and divides. The smaller part slides clear,
+ * overshoots and settles, and changes material as it goes: from here on
+ * red is the 30%, whoever holds it.
+ */
+const Setup: React.FC<{ len: number }> = ({ len }) => {
+  const frame = useCurrentFrame();
+  const pose = move(
+    frame,
+    len,
+    lens({ az: deg(18), dist: 22.5 }),
+    lens({ az: deg(6), dist: 20.8 }),
+  );
+  const rise = interpolate(frame, [2, 26], [-1.06, 0], { ...clamp, easing: land });
+  const split = frame >= 48;
+  const open = interpolate(frame, [48, 60, 80], [0, GAP + 0.5, GAP], {
+    ...clamp,
+    easing: swap,
+  });
+  const blocks: BlockState[] = split
+    ? seats(
+        { labelOpacity: ramp(frame, 58, 72) },
+        {
+          x: MINOR_X - GAP + open,
+          tone: "ceramic",
+          toneTo: "red",
+          mix: ramp(frame, 52, 68),
+          labelOpacity: ramp(frame, 62, 76),
+        },
+      )
+    : [{ id: "whole", x: 0, y: rise, len: BAR_L, tone: "ceramic" }];
+  return (
+    <Stage
+      len={len}
+      dir="settle"
+      world={
+        <>
+          <World pose={pose} focus={MAJOR_X} blocks={blocks} />
+          <Mark pose={pose} x={MAJOR_X} text="ВЫ" color={ACCENT} opacity={ramp(frame, 54, 64)} />
+          <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" opacity={ramp(frame, 92, 102)} />
+        </>
       }
     >
       <Rail gap={40}>
-        <Lines lines={["ПАРТНЁР", "ГОВОРИТ НЕТ"]} max={150} delay={58} />
-        <Note
-          text="Покупателю нужна вся кофейня."
-          delay={78}
-        />
+        <Lines lines={["КОФЕЙНЯ", "НА ДВОИХ"]} max={150} delay={2} />
+        <Note text="У вас 70%, у партнёра 30%." delay={50} />
       </Rail>
       <Lockup delay={0} />
     </Stage>
@@ -178,22 +269,110 @@ const Refusal: React.FC<{ len: number }> = ({ len }) => {
 };
 
 /**
- * A term arriving after the problem it solves, and then acted out.
- *
- * The two of them rhyme without repeating: drag lands from above its own
- * size — the larger holder's power, something arriving on you — and tag
- * reaches up to it, something you take hold of. The rule under them
- * wipes from opposite sides.
+ * The buyer is a footprint of light the exact shape of the whole bar —
+ * so "he wants all of it" is a picture, not a sentence. The camera
+ * trucks across to find it.
+ */
+const Buyer: React.FC<{ len: number }> = ({ len }) => {
+  const frame = useCurrentFrame();
+  // A crane up and back from the last shot's framing, to find the pad.
+  const pose = mixPose(lens({ az: deg(6), dist: 20.8 }), upstage, ramp(frame, 0, 76, glide));
+  return (
+    <Stage
+      len={len}
+      dir="push"
+      amount={0.02}
+      world={
+        <>
+          <World
+            pose={pose}
+            focus={0}
+            blocks={seats()}
+            pad={{
+              x: 0,
+              z: PAD_Z,
+              on: ramp(frame, 8, 24, land),
+              ghost: ramp(frame, 82, 98),
+            }}
+          />
+          <Mark pose={pose} x={MAJOR_X} text="ВЫ" color={ACCENT} />
+          <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" />
+          <BuyerMark pose={pose} opacity={ramp(frame, 20, 32)} />
+        </>
+      }
+    >
+      <Rail gap={22}>
+        <Eyebrow text="ПРИХОДИТ ПОКУПАТЕЛЬ" delay={6} />
+        <Lines lines={["НУЖНА ВСЯ", "КОФЕЙНЯ"]} max={150} delay={44} />
+      </Rail>
+      <Lockup delay={0} />
+    </Stage>
+  );
+};
+
+/**
+ * A cut in, close on the 30%. It shakes its head on the word "нет", and
+ * on "сделки нет" the buyer's light goes red and out.
+ */
+const Refusal: React.FC<{ len: number }> = ({ len }) => {
+  const frame = useCurrentFrame();
+  const pose = move(
+    frame,
+    len,
+    lens({ az: deg(16), el: deg(15), dist: 22, target: [1, 0.5, -3], shiftY: 40 }),
+    lens({ az: deg(14), el: deg(14), dist: 20.5, target: [1, 0.5, -3], shiftY: 40 }),
+  );
+  const shake =
+    frame >= 26 && frame < 48
+      ? Math.sin((frame - 26) * 1.25) *
+        interpolate(frame, [26, 48], [0.2, 0], clamp)
+      : 0;
+  const alarm = ramp(frame, 62, 70);
+  const on = 1 - ramp(frame, 72, 92);
+  return (
+    <Stage
+      len={len}
+      dir="push"
+      amount={0.03}
+      punchAt={26}
+      world={
+        <>
+          <World
+            pose={pose}
+            focus={MINOR_X}
+            blocks={seats({}, { x: MINOR_X + shake })}
+            pad={{ x: 0, z: PAD_Z, on, alarm, ghost: 1 }}
+          />
+          <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" />
+        </>
+      }
+    >
+      <Rail gap={40}>
+        <Lines lines={["ПАРТНЁР", "ГОВОРИТ НЕТ"]} accent="НЕТ" max={150} delay={0} />
+        <Note text="Сделки нет." delay={60} />
+      </Rail>
+      <Lockup delay={0} />
+    </Stage>
+  );
+};
+
+/**
+ * A term arriving after the problem it solves. Type only, on the light
+ * ground: a chapter break, and the one shot with nothing to look at but
+ * the word.
  */
 const Term: React.FC<{
   len: number;
   lead: string;
   term: string;
-  note: string;
+  note?: string;
   mode: "drag" | "tag";
+  /** When the term itself lands, on the word in the voiceover. */
+  at?: number;
+  noteAt?: number;
   /** The rule was already drawn by the bridge, so it must not draw again. */
   carried?: boolean;
-}> = ({ len, lead, term, note, mode, carried = false }) => {
+}> = ({ len, lead, term, note, mode, at = 8, noteAt = 28, carried = false }) => {
   const from = mode === "drag" ? 1.1 : 0.9;
   return (
     <Stage
@@ -203,156 +382,223 @@ const Term: React.FC<{
       amount={0.022}
     >
       <Rail gap={22}>
-        <Eyebrow text={lead} color={LIGHT.sub} />
-        <TermWord text={term} scaleFrom={from} color={LIGHT.ink} />
+        <Eyebrow text={lead} color={LIGHT.sub} delay={carried ? 0 : 4} />
+        <TermWord text={term} scaleFrom={from} color={LIGHT.ink} delay={at} />
       </Rail>
       <div style={{ position: "absolute", left: 96, top: RULE_Y }}>
         <Hairline
-          delay={carried ? -40 : 18}
+          delay={carried ? -40 : at + 10}
           from={mode === "drag" ? "left" : "right"}
           width={MEASURE}
           weight={3}
           color={ACCENT}
         />
       </div>
-      <div style={{ position: "absolute", left: 96, top: RULE_Y + 32 }}>
-        <Note text={note} delay={carried ? 4 : 28} color={LIGHT.sub} />
-      </div>
+      {note ? (
+        <div style={{ position: "absolute", left: 96, top: RULE_Y + 32 }}>
+          <Note text={note} delay={noteAt} color={LIGHT.sub} />
+        </div>
+      ) : null}
       <Lockup delay={0} dark />
     </Stage>
   );
 };
 
+/** Wide, three-quarter, the buyer's light on: the stage for a sale. */
+const demoTo = lens({ az: deg(4), el: deg(20), dist: 26, target: [0, 0.5, -4.4], shiftY: 70 });
+
 /**
- * The clause acted out, back on the dark ground.
- *
- * Both demos are the same picture twice and the difference is the whole
- * lesson: under drag-along the smaller block leaves locked to the larger
- * one, under tag-along it starts late and catches up — taken, versus
- * choosing to come.
+ * The clause acted out. Both demos are the same picture twice and the
+ * difference is the lesson: under drag-along the 30% leaves locked to the
+ * 70%, one rigid body; under tag-along it starts late and catches up —
+ * taken, versus choosing to come.
  */
-const Demo: React.FC<{ len: number; mode: "drag" | "tag"; caption: string }> = ({
-  len,
-  mode,
-  caption,
-}) => {
+const Demo: React.FC<{
+  len: number;
+  mode: "drag" | "tag";
+  lead: string;
+  lines: string[];
+  note: string;
+  leadAt: number;
+  linesAt: number;
+  noteAt: number;
+  /** When the 70% sets off. */
+  go: number;
+}> = ({ len, mode, lead, lines, note, leadAt, linesAt, noteAt, go }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const trip = (delay: number) =>
-    interpolate(frame, [delay, delay + 30], [0, 270], {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp",
-      easing: Easing.bezier(0.16, 1, 0.3, 1),
-    });
-  const major = trip(16);
-  const minor = mode === "drag" ? major : trip(28);
-  // The one place a bounce is earned: a mass that was travelling
-  // arrives and settles into the buyer.
-  const landed = impact(frame, fps, 44);
-  return (
-    <Stage
-      len={len}
-      dir="push"
-      amount={0.045}
-      graphic={
-        <>
-          <Bar
-            majorPull={major}
-            minorPull={minor}
-            minorColor={mode === "tag" ? FILL.accent : FILL.sub}
-          />
-          <Buyer delay={4} landed={landed} />
-        </>
-      }
-    >
-      <Rail>
-        <Lines lines={[caption]} max={SIZE.caption} />
-      </Rail>
-      <Lockup delay={0} />
-    </Stage>
-  );
-};
-
-const Flip: React.FC<{ len: number }> = ({ len }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const marker = hero(frame, fps, 34);
-  return (
-    <Stage
-      len={len}
-      dir="settle"
-      punchAt={34}
-      graphic={
-        <>
-          <Bar marker={marker} />
-          <Legend delay={0} />
-        </>
-      }
-    >
-      <Rail gap={40}>
-        <Lines lines={["ТЕПЕРЬ", "НАОБОРОТ"]} max={168} />
-        <Note
-          text="Меньшая доля теперь ваша."
-          delay={44}
-        />
-      </Rail>
-      <Lockup delay={0} />
-    </Stage>
-  );
-};
-
-const Stranded: React.FC<{ len: number }> = ({ len }) => {
-  const frame = useCurrentFrame();
-  // A wind-up back towards the bar before the larger block leaves, so
-  // the one argument-carrying move has anticipation instead of a
-  // constant slide and a dead stop.
-  // A wind-up down into the seat, then up and out.
-  const back = interpolate(frame, [26, 34], [0, -16], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-    easing: Easing.out(Easing.quad),
-  });
-  const out = interpolate(frame, [34, 66], [0, 230], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-    easing: Easing.in(Easing.cubic),
-  });
-  const stranger = frame >= 66;
+  const trip = (start: number, n: number) =>
+    interpolate(frame, [start, start + n], [0, PAD_Z], { ...clamp, easing: swap });
+  const major = trip(go, 34);
+  const minor = mode === "drag" ? major : trip(go + 16, 30);
+  const arrived = Math.max(major, minor) / PAD_Z;
+  const pose = mixPose(upstage, demoTo, ramp(frame, go - 6, go + 50, glide));
+  const fill = ramp(frame, go + (mode === "drag" ? 30 : 42), go + (mode === "drag" ? 42 : 54));
+  const you = mode === "drag" ? "major" : "minor";
   return (
     <Stage
       len={len}
       dir="push"
       amount={0.03}
-      graphic={
+      world={
         <>
-          <Bar
-            majorLift={stranger ? 0 : back + out}
-            minorColor={FILL.accent}
-            stranger={stranger}
+          <World
+            pose={pose}
+            focus={you === "major" ? MAJOR_X : MINOR_X}
+            focusZ={you === "major" ? major : minor}
+            blocks={seats({ z: major }, { z: minor })}
+            pad={{ x: 0, z: PAD_Z, on: 1, fill, ghost: 1 - arrived }}
           />
-          <Buyer delay={40} landed={interpolate(frame, [64, 76], [0, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          })} />
+          <Mark
+            pose={pose}
+            x={MAJOR_X}
+            z={major}
+            text={you === "major" ? "ВЫ" : "ПАРТНЁР"}
+            color={you === "major" ? ACCENT : SUB}
+          />
+          <Mark
+            pose={pose}
+            x={MINOR_X}
+            z={minor}
+            text={you === "minor" ? "ВЫ" : "ПАРТНЁР"}
+            color={you === "minor" ? ACCENT : SUB}
+          />
         </>
       }
     >
-      <Rail gap={40}>
-        <Lines lines={["ПАРТНЁР", "ПРОДАЁТ", "ПЕРВЫМ"]} max={150} />
-        <Note text="На его месте — чужой человек." delay={82} />
+      <Rail gap={22}>
+        <Eyebrow text={lead} delay={leadAt} />
+        <Lines lines={lines} max={SIZE.caption + 24} delay={linesAt} />
+        <div style={{ height: 12 }} />
+        <Note text={note} delay={noteAt} />
       </Rail>
       <Lockup delay={0} />
     </Stage>
   );
 };
 
+/**
+ * "Change places" played as a camera move: the shot swings round the
+ * bar, and the light — which has followed "you" the whole first half —
+ * crosses from the 70% to the 30%.
+ */
+const Flip: React.FC<{ len: number }> = ({ len }) => {
+  const frame = useCurrentFrame();
+  const pose = mixPose(
+    lens({ az: deg(-30), el: deg(14), dist: 22.5 }),
+    lens({ az: deg(24), el: deg(13), dist: 21.5 }),
+    ramp(frame, 2, 72, glide),
+  );
+  const cross = ramp(frame, 62, 82);
+  return (
+    <Stage
+      len={len}
+      dir="settle"
+      punchAt={64}
+      world={
+        <>
+          <World
+            pose={pose}
+            focus={MAJOR_X + (MINOR_X - MAJOR_X) * cross}
+            blocks={seats()}
+          />
+          <Mark
+            pose={pose}
+            x={MAJOR_X + (MINOR_X - MAJOR_X) * cross}
+            text="ВЫ"
+            color={ACCENT}
+          />
+          <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" opacity={1 - ramp(frame, 56, 62)} />
+          <Mark pose={pose} x={MAJOR_X} text="ПАРТНЁР" opacity={ramp(frame, 80, 90)} />
+        </>
+      }
+    >
+      <Rail gap={40}>
+        <Lines lines={["ТЕПЕРЬ", "НАОБОРОТ"]} max={168} delay={2} />
+        <Note text="Меньшая доля — ваша." delay={62} />
+      </Rail>
+      <Lockup delay={0} />
+    </Stage>
+  );
+};
+
+/**
+ * The partner's 70% goes down through the floor like a stage lift, the
+ * seat stands empty for a breath, and a graphite block — a stranger —
+ * comes up into it.
+ */
+const Stranded: React.FC<{ len: number }> = ({ len }) => {
+  const frame = useCurrentFrame();
+  const pose = move(
+    frame,
+    len,
+    lens({ az: deg(14), dist: 22 }),
+    lens({ az: deg(5), dist: 20.8 }),
+  );
+  const down = interpolate(frame, [22, 46], [0, -1.08], {
+    ...clamp,
+    easing: Easing.in(Easing.cubic),
+  });
+  const up = interpolate(frame, [84, 108], [-1.08, 0], { ...clamp, easing: land });
+  const stranger = frame >= 84;
+  return (
+    <Stage
+      len={len}
+      dir="push"
+      amount={0.03}
+      world={
+        <>
+          <World
+            pose={pose}
+            focus={MINOR_X * 0.6}
+            blocks={seats(
+              stranger
+                ? { id: "stranger", y: up, tone: "graphite" }
+                : { y: down },
+            )}
+          />
+          <Mark pose={pose} x={MINOR_X} text="ВЫ" color={ACCENT} />
+          <Mark pose={pose} x={MAJOR_X} text="ПАРТНЁР" opacity={1 - ramp(frame, 22, 34)} />
+          <Mark pose={pose} x={MAJOR_X} text="ЧУЖОЙ" color={INK} opacity={ramp(frame, 100, 110)} />
+        </>
+      }
+    >
+      <Rail gap={40}>
+        <Lines lines={["ПАРТНЁР", "ПРОДАЁТ", "ПЕРВЫМ"]} max={150} delay={2} />
+        <Note text="На его месте — чужой человек." delay={88} />
+      </Rail>
+      <Lockup delay={0} />
+    </Stage>
+  );
+};
+
+/**
+ * The two blocks back together, the camera on a slow arc, and each line
+ * written under the holding it protects.
+ */
 const Close: React.FC<{ len: number }> = ({ len }) => {
   const frame = useCurrentFrame();
+  const pose = move(
+    frame,
+    len,
+    lens({ az: deg(-14), el: deg(12), dist: 22.5, shiftY: 140 }),
+    lens({ az: deg(12), el: deg(12), dist: 21.5, shiftY: 140 }),
+  );
   return (
-    <Stage len={len} dir="settle" amount={0.02}>
-      <Rail gap={38}>
-        <Lines lines={["НУЖНЫ ОБЕ", "СТРОКИ"]} accent="ОБЕ" max={168} />
-        <Note text="Какая защитит именно вас — зависит от доли." delay={14} />
+    <Stage
+      len={len}
+      dir="settle"
+      amount={0.02}
+      world={
+        <>
+          <World pose={pose} focus={0} blocks={seats()} />
+          <Mark pose={pose} x={MAJOR_X} text="DRAG-ALONG" color={INK} opacity={ramp(frame, 96, 108)} />
+          <Mark pose={pose} x={MINOR_X} text="TAG-ALONG" color={ACCENT} opacity={ramp(frame, 104, 116)} />
+        </>
+      }
+    >
+      <Rail gap={34}>
+        <Lines lines={["НУЖНЫ ОБЕ", "СТРОКИ"]} accent="ОБЕ" max={168} delay={2} />
+        <Note text="Какая защитит именно вас — зависит от доли." delay={52} />
         <div
           style={{
             fontFamily: FONT,
@@ -360,107 +606,154 @@ const Close: React.FC<{ len: number }> = ({ len }) => {
             fontSize: 52,
             letterSpacing: "0.02em",
             color: INK,
-            opacity: interpolate(frame, [34, 50], [0, 1], {
-              extrapolateLeft: "clamp",
-              extrapolateRight: "clamp",
-            }),
-            marginTop: 14,
+            opacity: interpolate(frame, [136, 150], [0, 1], clamp),
+            marginTop: 10,
           }}
         >
           ПРОВЕРЬТЕ СВОЙ ДОГОВОР
         </div>
       </Rail>
-      <Lockup delay={46} />
+      <Lockup delay={140} />
     </Stage>
   );
 };
 
 // ── the piece ────────────────────────────────────────────────────────
 
-const push = (direction: "from-right" | "from-left" | "from-bottom") => ({
-  presentation: slide({ direction }),
-  timing: springTiming({
-    config: { damping: 200 },
-    durationInFrames: HANDOFF,
-  }),
-});
-
-const at = (key: string) => BEATS.find((b) => b.key === key)!.len;
-
-export const DragAlong: React.FC = () => (
-  <AbsoluteFill style={{ backgroundColor: BG }}>
-    <Audio src={staticFile("audio/vo.mp3")} />
-    <TransitionSeries>
-      <TransitionSeries.Sequence durationInFrames={at("stake")}>
-        <Stake len={at("stake")} />
-      </TransitionSeries.Sequence>
-      <TransitionSeries.Transition {...push("from-bottom")} />
-
-      <TransitionSeries.Sequence durationInFrames={at("setup")}>
-        <Setup len={at("setup")} />
-      </TransitionSeries.Sequence>
+const entry = (k: Key) => {
+  const e = ENTRY[k];
+  if (e === "cut") return null;
+  if (e === "wipe")
+    return (
       <TransitionSeries.Transition
         presentation={wipe({ direction: "from-left" })}
         timing={linearTiming({ durationInFrames: HANDOFF })}
       />
-
-      <TransitionSeries.Sequence durationInFrames={at("refusal")}>
-        <Refusal len={at("refusal")} />
-      </TransitionSeries.Sequence>
-
-      <TransitionSeries.Sequence durationInFrames={at("bridge")}>
-        <Bridge len={at("bridge")} />
-      </TransitionSeries.Sequence>
-
-      <TransitionSeries.Sequence durationInFrames={at("dragTerm")}>
-        <Term
-          len={at("dragTerm")}
-          carried
-          mode="drag"
-          lead="У ЭТОГО ПРАВА ЕСТЬ ИМЯ"
-          term="DRAG-ALONG"
-          note="Вправе обязать остальных продать по той же цене."
-        />
-      </TransitionSeries.Sequence>
-      <TransitionSeries.Transition {...push("from-bottom")} />
-
-      <TransitionSeries.Sequence durationInFrames={at("dragDemo")}>
-        <Demo len={at("dragDemo")} mode="drag" caption="ВЫБОРА У НЕЁ НЕТ" />
-      </TransitionSeries.Sequence>
-      <TransitionSeries.Transition {...push("from-right")} />
-
-      <TransitionSeries.Sequence durationInFrames={at("flip")}>
-        <Flip len={at("flip")} />
-      </TransitionSeries.Sequence>
-      <TransitionSeries.Transition {...push("from-left")} />
-
-      <TransitionSeries.Sequence durationInFrames={at("stranded")}>
-        <Stranded len={at("stranded")} />
-      </TransitionSeries.Sequence>
+    );
+  if (e === "fade")
+    return (
       <TransitionSeries.Transition
         presentation={fade()}
         timing={linearTiming({ durationInFrames: HANDOFF })}
       />
+    );
+  const direction =
+    e === "push-up" ? "from-bottom" : e === "push-left" ? "from-right" : "from-left";
+  return (
+    <TransitionSeries.Transition
+      presentation={slide({ direction })}
+      timing={springTiming({ config: { damping: 200 }, durationInFrames: HANDOFF })}
+    />
+  );
+};
 
-      <TransitionSeries.Sequence durationInFrames={at("tagTerm")}>
-        <Term
-          len={at("tagTerm")}
-          mode="tag"
-          lead="ВАША ЗАЩИТА НАЗЫВАЕТСЯ"
-          term="TAG-ALONG"
-          note="Право уйти вместе с ним — на тех же условиях."
-        />
-      </TransitionSeries.Sequence>
-      <TransitionSeries.Transition {...push("from-bottom")} />
+const DragTerm: React.FC<{ len: number }> = ({ len }) => (
+  <Term
+    len={len}
+    carried
+    mode="drag"
+    lead="У ЭТОГО ПРАВА ЕСТЬ ИМЯ"
+    term="DRAG-ALONG"
+    at={0}
+    note="Большая доля вправе обязать остальных продать — по той же цене."
+    noteAt={34}
+  />
+);
 
-      <TransitionSeries.Sequence durationInFrames={at("tagDemo")}>
-        <Demo len={at("tagDemo")} mode="tag" caption="УХОДИТ САМА" />
-      </TransitionSeries.Sequence>
-      <TransitionSeries.Transition {...push("from-bottom")} />
+const DragDemo: React.FC<{ len: number }> = ({ len }) => (
+  <Demo
+    len={len}
+    mode="drag"
+    lead="ПО ТОЙ ЖЕ ЦЕНЕ"
+    lines={["ВЫБОРА НЕТ"]}
+    note="Меньшая доля продаётся вместе с большей."
+    leadAt={6}
+    linesAt={40}
+    noteAt={56}
+    go={12}
+  />
+);
 
-      <TransitionSeries.Sequence durationInFrames={at("close")}>
-        <Close len={at("close")} />
-      </TransitionSeries.Sequence>
+const TagTerm: React.FC<{ len: number }> = ({ len }) => (
+  <Term len={len} mode="tag" lead="ВАША ЗАЩИТА НАЗЫВАЕТСЯ" term="TAG-ALONG" at={40} />
+);
+
+const TagDemo: React.FC<{ len: number }> = ({ len }) => (
+  <Demo
+    len={len}
+    mode="tag"
+    lead="ПРАВО"
+    lines={["УЙТИ", "ВМЕСТЕ С НИМ"]}
+    note="На тех же условиях."
+    leadAt={4}
+    linesAt={14}
+    noteAt={48}
+    go={6}
+  />
+);
+
+const BEAT: Record<Key, React.FC<{ len: number }>> = {
+  stake: Stake,
+  setup: Setup,
+  buyer: Buyer,
+  refusal: Refusal,
+  bridge: Bridge,
+  dragTerm: DragTerm,
+  dragDemo: DragDemo,
+  flip: Flip,
+  stranded: Stranded,
+  tagTerm: TagTerm,
+  tagDemo: TagDemo,
+  close: Close,
+};
+
+// ── sound ────────────────────────────────────────────────────────────
+
+/** A push or wipe peaks halfway through its HANDOFF. */
+const mid = (k: Key) => START[k] + HANDOFF / 2;
+
+export const CUES: Cue[] = [
+  // The cover lands on a hit, so the first frame has weight.
+  { sfx: "hit", at: 0, gain: 0.55 },
+  ...(["setup", "buyer", "dragDemo", "flip", "stranded", "tagDemo", "close"] as Key[]).map(
+    (k): Cue => ({ sfx: "whoosh", at: mid(k), gain: 0.32 }),
+  ),
+  // The split settling into its seat.
+  { sfx: "click", at: START.setup + 80, gain: 0.5 },
+  // "нет": the head-shake and the punch.
+  { sfx: "hit", at: START.refusal + 26, gain: 0.9 },
+  // "и сделки нет": the buyer's light dying.
+  { sfx: "thud", at: START.refusal + 62, gain: 1 },
+  // The line turning its corner.
+  { sfx: "whoosh", at: START.bridge + 22, gain: 0.22 },
+  // Drag: one rigid body lands.
+  { sfx: "click", at: START.dragDemo + 12 + 34, gain: 0.8 },
+  // The partner going down, the stranger coming up.
+  { sfx: "thud", at: START.stranded + 46, gain: 1 },
+  { sfx: "click", at: START.stranded + 98, gain: 0.7 },
+  // Tag: two landings, the second one yours.
+  { sfx: "click", at: START.tagDemo + 6 + 34, gain: 0.6 },
+  { sfx: "click", at: START.tagDemo + 6 + 16 + 30, gain: 0.8 },
+];
+
+export const DragAlong: React.FC = () => (
+  <AbsoluteFill style={{ backgroundColor: BG }}>
+    <Sound cues={CUES} total={TOTAL} fps={30} />
+    <TransitionSeries>
+      {ORDER.map((k) => {
+        const Beat = BEAT[k];
+        return (
+          <React.Fragment key={k}>
+            {entry(k)}
+            <TransitionSeries.Sequence durationInFrames={len(k)}>
+              <Beat len={len(k)} />
+            </TransitionSeries.Sequence>
+          </React.Fragment>
+        );
+      })}
     </TransitionSeries>
   </AbsoluteFill>
 );
+
+/** Where each beat starts and how long it runs, for checking stills. */
+export const TIMELINE = ORDER.map((k) => ({ key: k, start: START[k], len: len(k) }));

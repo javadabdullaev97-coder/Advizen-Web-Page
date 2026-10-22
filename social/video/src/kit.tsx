@@ -234,6 +234,12 @@ export const Stage: React.FC<{
   hold?: boolean;
   children: React.ReactNode;
   graphic?: React.ReactNode;
+  /**
+   * A rendered 3D scene. It replaces the painted room and does its own
+   * camera work, so the 2D push is not applied to it — scaling a
+   * rendered frame only softens it.
+   */
+  world?: React.ReactNode;
 }> = ({
   len,
   dir = "push",
@@ -243,6 +249,7 @@ export const Stage: React.FC<{
   hold = true,
   children,
   graphic,
+  world,
 }) => {
   const frame = useCurrentFrame();
 
@@ -298,8 +305,11 @@ export const Stage: React.FC<{
         overflow: "hidden",
       }}
     >
-      <Room drift={(scale - 1) * 900} light={light} />
+      {world ? null : <Room drift={(scale - 1) * 900} light={light} />}
       <AbsoluteFill style={{ filter: `brightness(${lift})` }}>
+        {world ? (
+          <AbsoluteFill style={{ opacity: 1 - picture }}>{world}</AbsoluteFill>
+        ) : null}
         {graphic ? (
           <AbsoluteFill
             style={{
@@ -585,14 +595,14 @@ export const Term: React.FC<{
           backgroundImage:
             "linear-gradient(115deg, rgba(255,255,255,0) 42%, rgba(255,255,255,0.62) 50%, rgba(255,255,255,0) 58%)",
           backgroundSize: "260% 100%",
-          backgroundPosition: `${interpolate(frame, [26, 54], [140, -60], {
+          backgroundPosition: `${interpolate(frame, [delay + 18, delay + 46], [140, -60], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
             easing: Easing.inOut(Easing.cubic),
           })}% 0`,
           WebkitBackgroundClip: "text",
           backgroundClip: "text",
-          opacity: frame > 20 && frame < 60 ? 1 : 0,
+          opacity: frame > delay + 12 && frame < delay + 52 ? 1 : 0,
           pointerEvents: "none",
         }}
       >
