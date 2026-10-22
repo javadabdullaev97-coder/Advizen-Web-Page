@@ -25,6 +25,31 @@
 предмет съёмки. Половина кадров вообще не фотографии, а 3D-рендеры:
 белые макеты зданий, пешки, кубы, лупа.
 
+## Кадр должен быть полным, а не пустым
+
+Первый заход провалился предсказуемо. В промпте стояло «верхние 40% —
+пустое негативное пространство» и «один-единственный предмет» — и
+генератор отдал крошечную фигурку посреди белого поля. Текст на таком
+читается отлично, а смотреть не на что.
+
+У Key Consulting кадр **заполнен**. Он белый, но в нём стойка ресепшна,
+монитор, растения, кресла, люди на разных планах. Чистая зона наверху —
+это не пустота, а ровная верхняя часть той же стены.
+
+Поэтому в промпте должно быть сказано **и** про чистый верх, **и** про
+крупный сюжет:
+
+- «fills the lower two thirds of the frame edge to edge»
+- «large and close to the camera»
+- «several elements at different depths»
+
+И никогда — «negative space», «empty», «single object», «minimal
+composition». Эти три слова и сделали пустоту.
+
+Проверка перед тем, как брать кадр: закрой верхнюю треть ладонью. Если
+оставшееся выглядит как законченная фотография, кадр годится. Если
+выглядит как предмет на белом фоне — нет.
+
 ## Общий рецепт
 
 Добавлять к каждому промпту:
@@ -56,10 +81,14 @@ cartoon.
 Порог, за которым начинается налог.
 
 ```
-A long bright white corridor in a minimal modern office, photographed
-straight down its length. White walls, white doors on both sides, a
-glossy white floor. One door in the middle of the row is bright red and
-slightly ajar, with light coming through the gap. Nobody in the frame.
+A long bright white corridor in a modern office, photographed straight
+down its length, wide angle, close to the first doorway. Tall white
+doors line both sides and recede into the distance, a glossy pale floor
+reflects them, a handrail runs along the left wall. The nearest door, on
+the right and large in frame, is bright red and slightly ajar with light
+coming through the gap. The corridor fills the lower two thirds edge to
+edge. The upper third is the plain upper part of the white wall and the
+ceiling, evenly lit and free of fittings.
 ```
 
 ### 02 — «работаете без офиса»
@@ -78,10 +107,13 @@ reflections on the glossy floor.
 Деятельность началась — и этого достаточно.
 
 ```
-A 3D render of a small white architectural model of an office building
-standing alone on a smooth white plane. One bright red map pin is planted
-in the plane directly beside it, casting a soft shadow. Clean white
-studio backdrop.
+A 3D render of a dense cluster of white architectural models of office
+buildings covering the lower two thirds of the frame edge to edge, seen
+from a low angle close to the nearest one so it stands large in frame.
+The buildings recede into soft focus towards the back. One bright red
+map pin is planted among them, near the front. Soft studio light,
+gentle shadows, subtle reflections on the white plane. The upper third
+is plain seamless white backdrop, evenly lit.
 ```
 
 ### 04 — где 183 дня считают
