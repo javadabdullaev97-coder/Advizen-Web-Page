@@ -243,14 +243,20 @@ cartoon, toy, clay render.
 
 *Композиция: триптих.*
 
+Стекло из этого кадра убрано. В наборе оно было единственным прозрачным
+и глянцевым материалом среди пяти матовых, а пустая гравированная рамка
+читалась как наградная табличка, на которой ещё не написали имя —
+награду фирма не получала, и заявлять её нечем. Камень держит ту же
+композицию и говорит ровно то, что нужно: закон как скрижаль.
+
 ```
-Exactly three upright tablets of thick smoked glass standing side by
-side on the dark polished floor, evenly spaced, equal in size, large in
-frame and square-on to the camera. Each has a plain bordered panel
-etched into its face in frosted white and nothing else. The middle
-tablet is pure bright red all the way through; the outer two are dark
-smoked glass. Thick bevelled edges catching thin highlights, faint
-reflections on the floor beneath. No fourth tablet, no second row.
+Exactly three upright stone tablets standing side by side on the dark
+polished floor, evenly spaced, equal in size, large in frame and
+square-on to the camera. They are solid matte charcoal stone with
+slightly bevelled edges and a fine chiselled texture, plain and
+unmarked. The middle tablet is solid pure bright red stone of the same
+matte finish; the outer two are dark charcoal. Soft reflections on the
+floor beneath. No fourth tablet, no second row.
 
 3D render, not photography. A dark studio set built in matte charcoal
 and graphite: a seamless graphite back wall with a soft vertical
@@ -265,19 +271,17 @@ close to the camera, the rest receding into soft focus. The upper third
 is plain graphite wall with nothing on it at all. Corona render, 50mm,
 shallow depth of field, 4:5 vertical, 1620x2025.
 
-Negative prompt: photograph, photographic grain, documentary, reportage,
-outdoors, sky, clouds, grass, landscape, street, daylight, sunlight,
-window, face, portrait, eye contact, hands, people, empty, negative
-space, minimal composition, single tiny object, vast empty background,
-anything in the upper third, objects touching the top edge, coiled
-cable, spiral, corkscrew, spring, helix, braid, plait, rope, whip,
-spider web, tentacles, connector, plug, socket, rotary dial, vintage,
-retro, antique, ornate, gold, brass, rust, dirt, grime, black, pure
-black, underexposed, unlit, murky, pitch dark, night, horror, film
-noir, red light, coloured light, glow, neon, lens flare, bloom, text,
-letters, numbers, words, signage, labels, watermark, logo, saturated
-colours, blue, teal, green, yellow, orange, purple, pink, low-poly,
-cartoon, toy, clay render.
+Negative prompt: glass, transparent, translucent, glossy, acrylic,
+perspex, award, trophy, plaque, certificate, engraved frame, empty
+frame, border inset, picture frame, photograph, photographic grain,
+documentary, outdoors, sky, daylight, face, portrait, hands, people,
+empty, negative space, minimal composition, single tiny object, vast
+empty background, anything in the upper third, objects touching the top
+edge, black, pure black, underexposed, unlit, murky, pitch dark, night,
+horror, film noir, red light, coloured light, glow, neon, lens flare,
+bloom, text, letters, numbers, words, signage, labels, watermark, logo,
+saturated colours, blue, teal, green, yellow, orange, purple, pink,
+low-poly, cartoon, toy, clay render, four tablets, two tablets.
 ```
 
 ---

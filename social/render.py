@@ -93,7 +93,10 @@ def render(post: dict) -> list[Path]:
         if spec.get("image"):
             path = REPO / spec["image"]
             if not path.exists():
-                die(f"slide {index}: image not found: {spec['image']}")
+                # A frame that has not been made yet should not stop the
+                # rest of the post from being looked at.
+                print(f"  skipped {index:02d}: no {spec['image']}", file=sys.stderr)
+                continue
             spec["image"] = path
         image = cards.TYPES[kind](counter=f"{index:02d}/{total:02d}", **spec)
 
