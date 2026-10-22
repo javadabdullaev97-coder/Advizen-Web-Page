@@ -380,8 +380,21 @@ def e_wrap(text, font, width):
     return lines
 
 
+E_SOURCE = ROOT / "public" / "social" / "source" / "_test"
+
+
 def e_card(photo, headline, subline, align="left", size=62, lighten=0.0):
-    img = cover_photo(photo)
+    """
+    `lighten` fakes a white studio frame out of a dark photograph, and it
+    reads as exactly that — a filter laid over the top. It is only here
+    so the layout can be looked at before real frames exist; any frame
+    dropped into public/social/source/_test/ is used untouched instead.
+    """
+    override = sorted(E_SOURCE.glob(f"{photo.stem}.*")) if E_SOURCE.exists() else []
+    if override:
+        img, lighten = cover_photo(override[0]), 0.0
+    else:
+        img = cover_photo(photo)
     if lighten:
         img = Image.blend(img, Image.new("RGB", img.size, (255, 255, 255)), lighten)
     d = ImageDraw.Draw(img)
