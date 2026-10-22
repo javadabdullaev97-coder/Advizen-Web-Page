@@ -44,12 +44,19 @@ import {
 const POSE: Pose = {
   az: 0,
   el: deg(13),
-  dist: 21.5,
-  target: [0, 0.5, 0],
+  dist: 23.4,
+  target: [0.25, 0.5, 0],
   fov: 30,
   shiftY: 110,
 };
 const EDGE = project(POSE, [BAR_L / 2, 0, BLOCK_D / 2]);
+/**
+ * Screen pixels per world unit at the bar's front edge. The 3D camera
+ * trucks by the same amount as the 2D pan, so the rendered bar and the
+ * drawn line move as one — the canvas itself never slides, which is what
+ * left a seam of bare backdrop down the right of the frame.
+ */
+const PX_PER_UNIT = (EDGE.x - project(POSE, [-BAR_L / 2, 0, BLOCK_D / 2]).x) / BAR_L;
 
 // World coordinates. The camera shows 0…1080, then travels to 1080…2160.
 const BASE_Y = EDGE.y; // the bar's front edge, where it meets the floor
@@ -84,23 +91,30 @@ export const Bridge: React.FC<{ len: number }> = () => {
   const headOut = interpolate(frame, [48, 56], [1, 0], clamp);
   const light = interpolate(frame, [27, 52], [0, 1], clamp);
 
+  // The tail retracts into the corner and up into the rule before the
+  // cut, so the term card inherits exactly the one line it draws.
+  const tail = interpolate(frame, [42, 58], [0, 1], { ...clamp, easing: ease });
+  const baseFrom = interpolate(tail, [0, 0.5], [EDGE.x, TURN_X], clamp);
+  const riseFrom = interpolate(tail, [0.5, 1], [BASE_Y, RULE_Y], clamp);
+
   return (
     <AbsoluteFill style={{ backgroundColor: BG, overflow: "hidden" }}>
       <Room />
       <AbsoluteFill style={{ opacity: light }}>
         <Room light />
       </AbsoluteFill>
+      {/* The bar is carried out of frame by the truck, then lets the light in. */}
+      <AbsoluteFill style={{ opacity: interpolate(frame, [27, 44], [1, 0], clamp) }}>
+        <World
+          pose={{ ...POSE, target: [POSE.target[0] + cam / PX_PER_UNIT, 0.5, 0] }}
+          focus={MAJOR_X}
+          blocks={[
+            { id: "major", x: MAJOR_X, len: MAJOR_L, tone: "ceramic", label: "70%" },
+            { id: "minor", x: MINOR_X, len: MINOR_L, tone: "red", label: "30%" },
+          ]}
+        />
+      </AbsoluteFill>
       <AbsoluteFill style={{ transform: `translateX(${-cam}px)` }}>
-        <AbsoluteFill style={{ opacity: interpolate(frame, [0, 16], [1, 0], clamp) }}>
-          <World
-            pose={POSE}
-            focus={MAJOR_X}
-            blocks={[
-              { id: "major", x: MAJOR_X, len: MAJOR_L, tone: "ceramic", label: "70%" },
-              { id: "minor", x: MINOR_X, len: MINOR_L, tone: "red", label: "30%" },
-            ]}
-          />
-        </AbsoluteFill>
         <svg
           width={2160}
           height={1920}
@@ -108,7 +122,7 @@ export const Bridge: React.FC<{ len: number }> = () => {
           style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}
         >
           <line
-            x1={EDGE.x}
+            x1={baseFrom}
             y1={BASE_Y}
             x2={ext}
             y2={BASE_Y}
@@ -119,7 +133,7 @@ export const Bridge: React.FC<{ len: number }> = () => {
           {frame >= 18 ? (
             <line
               x1={TURN_X}
-              y1={BASE_Y}
+              y1={riseFrom}
               x2={TURN_X}
               y2={climb}
               stroke={ACCENT}

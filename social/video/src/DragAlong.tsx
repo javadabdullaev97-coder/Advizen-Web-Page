@@ -130,12 +130,16 @@ const ramp = (f: number, a: number, b: number, ease = swap) =>
 
 // ── the shots ────────────────────────────────────────────────────────
 
-/** A long lens, the bar a little below centre, the type band left clear. */
+/**
+ * A long lens, the bar a little below centre, the type band left clear.
+ * Pulled back and nudged left so the 30% never runs under Instagram's
+ * action rail (x > 900 through the middle of the frame).
+ */
 const lens = (p: Partial<Pose>): Pose => ({
   az: 0,
   el: deg(13),
-  dist: 21.5,
-  target: [0, 0.5, 0],
+  dist: 23.4,
+  target: [0.25, 0.5, 0],
   fov: 30,
   shiftY: 110,
   ...p,
@@ -161,21 +165,31 @@ const seats = (
 ];
 
 /** The wide shot that holds both the bar and the pad behind it. */
-const upstage = lens({ az: deg(8), el: deg(18), dist: 30, target: [0, 0.5, -3], shiftY: 40 });
+const upstage = lens({ az: deg(8), el: deg(18), dist: 31, target: [0.3, 0.5, -3], shiftY: 40 });
 
-/** "ПОКУПАТЕЛЬ", written above the pad's silhouette. */
-const BuyerMark: React.FC<{ pose: Pose; opacity: number }> = ({ pose, opacity }) => (
+/**
+ * "ПОКУПАТЕЛЬ", written just behind the pad, and lifted with the
+ * silhouette as it appears — so it never floats over empty floor.
+ */
+const BuyerMark: React.FC<{ pose: Pose; opacity: number; rise: number }> = ({
+  pose,
+  opacity,
+  rise,
+}) => (
   <Mark
     pose={pose}
     x={0}
-    y={BLOCK_H}
+    y={BLOCK_H * rise}
     z={PAD_Z - PAD_D / 2 - 0.4}
     text="ПОКУПАТЕЛЬ"
     color={INK}
     opacity={opacity}
-    dy={-58}
+    dy={-44 - 22 * rise}
   />
 );
+
+/** "Вы" is ink while you hold the ceramic 70%, and turns red with the flip. */
+const YOU_FIRST = INK;
 
 // ── beats ────────────────────────────────────────────────────────────
 
@@ -196,6 +210,7 @@ const Stake: React.FC<{ len: number }> = ({ len }) => {
       len={len}
       dir="push"
       amount={0.03}
+      foot={<Lockup instant />}
       world={
         <World
           pose={pose}
@@ -211,7 +226,6 @@ const Stake: React.FC<{ len: number }> = ({ len }) => {
           instant
         />
       </Rail>
-      <Lockup instant />
     </Stage>
   );
 };
@@ -226,8 +240,8 @@ const Setup: React.FC<{ len: number }> = ({ len }) => {
   const pose = move(
     frame,
     len,
-    lens({ az: deg(18), dist: 22.5 }),
-    lens({ az: deg(6), dist: 20.8 }),
+    lens({ az: deg(18), dist: 24.5 }),
+    lens({ az: deg(6) }),
   );
   const rise = interpolate(frame, [2, 26], [-1.06, 0], { ...clamp, easing: land });
   const split = frame >= 48;
@@ -251,10 +265,11 @@ const Setup: React.FC<{ len: number }> = ({ len }) => {
     <Stage
       len={len}
       dir="settle"
+      foot={<Lockup delay={0} />}
       world={
         <>
           <World pose={pose} focus={MAJOR_X} blocks={blocks} />
-          <Mark pose={pose} x={MAJOR_X} text="ВЫ" color={ACCENT} opacity={ramp(frame, 54, 64)} />
+          <Mark pose={pose} x={MAJOR_X} text="ВЫ" color={YOU_FIRST} opacity={ramp(frame, 54, 64)} />
           <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" opacity={ramp(frame, 92, 102)} />
         </>
       }
@@ -263,7 +278,6 @@ const Setup: React.FC<{ len: number }> = ({ len }) => {
         <Lines lines={["КОФЕЙНЯ", "НА ДВОИХ"]} max={150} delay={2} />
         <Note text="У вас 70%, у партнёра 30%." delay={50} />
       </Rail>
-      <Lockup delay={0} />
     </Stage>
   );
 };
@@ -276,12 +290,14 @@ const Setup: React.FC<{ len: number }> = ({ len }) => {
 const Buyer: React.FC<{ len: number }> = ({ len }) => {
   const frame = useCurrentFrame();
   // A crane up and back from the last shot's framing, to find the pad.
-  const pose = mixPose(lens({ az: deg(6), dist: 20.8 }), upstage, ramp(frame, 0, 76, glide));
+  const pose = mixPose(lens({ az: deg(6) }), upstage, ramp(frame, 0, 76, glide));
+  const ghost = ramp(frame, 82, 98);
   return (
     <Stage
       len={len}
       dir="push"
       amount={0.02}
+      foot={<Lockup delay={0} />}
       world={
         <>
           <World
@@ -292,12 +308,12 @@ const Buyer: React.FC<{ len: number }> = ({ len }) => {
               x: 0,
               z: PAD_Z,
               on: ramp(frame, 8, 24, land),
-              ghost: ramp(frame, 82, 98),
+              ghost,
             }}
           />
-          <Mark pose={pose} x={MAJOR_X} text="ВЫ" color={ACCENT} />
+          <Mark pose={pose} x={MAJOR_X} text="ВЫ" color={YOU_FIRST} />
           <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" />
-          <BuyerMark pose={pose} opacity={ramp(frame, 20, 32)} />
+          <BuyerMark pose={pose} opacity={ramp(frame, 20, 32)} rise={ghost} />
         </>
       }
     >
@@ -305,7 +321,6 @@ const Buyer: React.FC<{ len: number }> = ({ len }) => {
         <Eyebrow text="ПРИХОДИТ ПОКУПАТЕЛЬ" delay={6} />
         <Lines lines={["НУЖНА ВСЯ", "КОФЕЙНЯ"]} max={150} delay={44} />
       </Rail>
-      <Lockup delay={0} />
     </Stage>
   );
 };
@@ -319,8 +334,8 @@ const Refusal: React.FC<{ len: number }> = ({ len }) => {
   const pose = move(
     frame,
     len,
-    lens({ az: deg(16), el: deg(15), dist: 22, target: [1, 0.5, -3], shiftY: 40 }),
-    lens({ az: deg(14), el: deg(14), dist: 20.5, target: [1, 0.5, -3], shiftY: 40 }),
+    lens({ az: deg(12), el: deg(15), dist: 23.5, target: [0.5, 0.5, -3], shiftY: 40 }),
+    lens({ az: deg(10), el: deg(14), dist: 22, target: [0.5, 0.5, -3], shiftY: 40 }),
   );
   const shake =
     frame >= 26 && frame < 48
@@ -335,12 +350,14 @@ const Refusal: React.FC<{ len: number }> = ({ len }) => {
       dir="push"
       amount={0.03}
       punchAt={26}
+      foot={<Lockup instant />}
       world={
         <>
           <World
             pose={pose}
             focus={MINOR_X}
-            blocks={seats({}, { x: MINOR_X + shake })}
+            // The cut-in crops the 70%; its print would read "0%".
+            blocks={seats({ labelOpacity: 0 }, { x: MINOR_X + shake })}
             pad={{ x: 0, z: PAD_Z, on, alarm, ghost: 1 }}
           />
           <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" />
@@ -351,7 +368,6 @@ const Refusal: React.FC<{ len: number }> = ({ len }) => {
         <Lines lines={["ПАРТНЁР", "ГОВОРИТ НЕТ"]} accent="НЕТ" max={150} delay={0} />
         <Note text="Сделки нет." delay={60} />
       </Rail>
-      <Lockup delay={0} />
     </Stage>
   );
 };
@@ -373,13 +389,14 @@ const Term: React.FC<{
   /** The rule was already drawn by the bridge, so it must not draw again. */
   carried?: boolean;
 }> = ({ len, lead, term, note, mode, at = 8, noteAt = 28, carried = false }) => {
-  const from = mode === "drag" ? 1.1 : 0.9;
+  const from = mode === "drag" ? 1.04 : 0.94;
   return (
     <Stage
       len={len}
       light
       dir={mode === "drag" ? "push" : "settle"}
       amount={0.022}
+      foot={carried ? <Lockup instant dark /> : <Lockup delay={0} dark />}
     >
       <Rail gap={22}>
         <Eyebrow text={lead} color={LIGHT.sub} delay={carried ? 0 : 4} />
@@ -396,16 +413,15 @@ const Term: React.FC<{
       </div>
       {note ? (
         <div style={{ position: "absolute", left: 96, top: RULE_Y + 32 }}>
-          <Note text={note} delay={noteAt} color={LIGHT.sub} />
+          <Note text={note} delay={noteAt} color={LIGHT.sub} width={780} />
         </div>
       ) : null}
-      <Lockup delay={0} dark />
     </Stage>
   );
 };
 
 /** Wide, three-quarter, the buyer's light on: the stage for a sale. */
-const demoTo = lens({ az: deg(4), el: deg(20), dist: 26, target: [0, 0.5, -4.4], shiftY: 70 });
+const demoTo = lens({ az: deg(4), el: deg(20), dist: 27, target: [0.25, 0.5, -4.4], shiftY: 70 });
 
 /**
  * The clause acted out. Both demos are the same picture twice and the
@@ -418,10 +434,10 @@ const Demo: React.FC<{
   mode: "drag" | "tag";
   lead: string;
   lines: string[];
-  note: string;
+  note?: string;
   leadAt: number;
   linesAt: number;
-  noteAt: number;
+  noteAt?: number;
   /** When the 70% sets off. */
   go: number;
 }> = ({ len, mode, lead, lines, note, leadAt, linesAt, noteAt, go }) => {
@@ -439,6 +455,7 @@ const Demo: React.FC<{
       len={len}
       dir="push"
       amount={0.03}
+      foot={<Lockup delay={0} />}
       world={
         <>
           <World
@@ -453,7 +470,7 @@ const Demo: React.FC<{
             x={MAJOR_X}
             z={major}
             text={you === "major" ? "ВЫ" : "ПАРТНЁР"}
-            color={you === "major" ? ACCENT : SUB}
+            color={you === "major" ? YOU_FIRST : SUB}
           />
           <Mark
             pose={pose}
@@ -468,10 +485,13 @@ const Demo: React.FC<{
       <Rail gap={22}>
         <Eyebrow text={lead} delay={leadAt} />
         <Lines lines={lines} max={SIZE.caption + 24} delay={linesAt} />
-        <div style={{ height: 12 }} />
-        <Note text={note} delay={noteAt} />
+        {note ? (
+          <>
+            <div style={{ height: 12 }} />
+            <Note text={note} delay={noteAt} />
+          </>
+        ) : null}
       </Rail>
-      <Lockup delay={0} />
     </Stage>
   );
 };
@@ -484,8 +504,10 @@ const Demo: React.FC<{
 const Flip: React.FC<{ len: number }> = ({ len }) => {
   const frame = useCurrentFrame();
   const pose = mixPose(
-    lens({ az: deg(-30), el: deg(14), dist: 22.5 }),
-    lens({ az: deg(24), el: deg(13), dist: 21.5 }),
+    // Starting further round than -16° puts the rim light's mirror
+    // highlight on the floor in shot: a beige flash, not a camera move.
+    lens({ az: deg(-16), el: deg(14), dist: 24 }),
+    lens({ az: deg(24), el: deg(13), dist: 24.3, target: [0.35, 0.5, 0] }),
     ramp(frame, 2, 72, glide),
   );
   const cross = ramp(frame, 62, 82);
@@ -494,6 +516,7 @@ const Flip: React.FC<{ len: number }> = ({ len }) => {
       len={len}
       dir="settle"
       punchAt={64}
+      foot={<Lockup delay={0} />}
       world={
         <>
           <World
@@ -505,7 +528,7 @@ const Flip: React.FC<{ len: number }> = ({ len }) => {
             pose={pose}
             x={MAJOR_X + (MINOR_X - MAJOR_X) * cross}
             text="ВЫ"
-            color={ACCENT}
+            color={cross < 0.5 ? YOU_FIRST : ACCENT}
           />
           <Mark pose={pose} x={MINOR_X} text="ПАРТНЁР" opacity={1 - ramp(frame, 56, 62)} />
           <Mark pose={pose} x={MAJOR_X} text="ПАРТНЁР" opacity={ramp(frame, 80, 90)} />
@@ -514,9 +537,8 @@ const Flip: React.FC<{ len: number }> = ({ len }) => {
     >
       <Rail gap={40}>
         <Lines lines={["ТЕПЕРЬ", "НАОБОРОТ"]} max={168} delay={2} />
-        <Note text="Меньшая доля — ваша." delay={62} />
+        <Note text={"Меньшая доля\u00a0— ваша."} delay={62} />
       </Rail>
-      <Lockup delay={0} />
     </Stage>
   );
 };
@@ -531,8 +553,8 @@ const Stranded: React.FC<{ len: number }> = ({ len }) => {
   const pose = move(
     frame,
     len,
-    lens({ az: deg(14), dist: 22 }),
-    lens({ az: deg(5), dist: 20.8 }),
+    lens({ az: deg(14), dist: 24, target: [0.3, 0.5, 0] }),
+    lens({ az: deg(5), dist: 23.2 }),
   );
   const down = interpolate(frame, [22, 46], [0, -1.08], {
     ...clamp,
@@ -545,6 +567,7 @@ const Stranded: React.FC<{ len: number }> = ({ len }) => {
       len={len}
       dir="push"
       amount={0.03}
+      foot={<Lockup delay={0} />}
       world={
         <>
           <World
@@ -552,21 +575,20 @@ const Stranded: React.FC<{ len: number }> = ({ len }) => {
             focus={MINOR_X * 0.6}
             blocks={seats(
               stranger
-                ? { id: "stranger", y: up, tone: "graphite" }
-                : { y: down },
+                ? { id: "stranger", y: up, tone: "graphite", labelOpacity: ramp(frame, 96, 106) }
+                : { y: down, labelOpacity: 1 - ramp(frame, 22, 30) },
             )}
           />
           <Mark pose={pose} x={MINOR_X} text="ВЫ" color={ACCENT} />
           <Mark pose={pose} x={MAJOR_X} text="ПАРТНЁР" opacity={1 - ramp(frame, 22, 34)} />
-          <Mark pose={pose} x={MAJOR_X} text="ЧУЖОЙ" color={INK} opacity={ramp(frame, 100, 110)} />
+          <Mark pose={pose} x={MAJOR_X} text="ЧУЖОЙ" color={INK} opacity={ramp(frame, 92, 100)} />
         </>
       }
     >
       <Rail gap={40}>
         <Lines lines={["ПАРТНЁР", "ПРОДАЁТ", "ПЕРВЫМ"]} max={150} delay={2} />
-        <Note text="На его месте — чужой человек." delay={88} />
+        <Note text={"На\u00a0его месте\u00a0— чужой человек."} delay={56} />
       </Rail>
-      <Lockup delay={0} />
     </Stage>
   );
 };
@@ -580,14 +602,15 @@ const Close: React.FC<{ len: number }> = ({ len }) => {
   const pose = move(
     frame,
     len,
-    lens({ az: deg(-14), el: deg(12), dist: 22.5, shiftY: 140 }),
-    lens({ az: deg(12), el: deg(12), dist: 21.5, shiftY: 140 }),
+    lens({ az: deg(-12), el: deg(12), dist: 24.3, target: [0.2, 0.5, 0], shiftY: 140 }),
+    lens({ az: deg(8), el: deg(12), dist: 23.4, target: [0.3, 0.5, 0], shiftY: 140 }),
   );
   return (
     <Stage
       len={len}
       dir="settle"
       amount={0.02}
+      foot={<Lockup delay={0} />}
       world={
         <>
           <World pose={pose} focus={0} blocks={seats()} />
@@ -598,7 +621,7 @@ const Close: React.FC<{ len: number }> = ({ len }) => {
     >
       <Rail gap={34}>
         <Lines lines={["НУЖНЫ ОБЕ", "СТРОКИ"]} accent="ОБЕ" max={168} delay={2} />
-        <Note text="Какая защитит именно вас — зависит от доли." delay={52} />
+        <Note text={"Какая защитит именно вас\u00a0— зависит от\u00a0доли."} delay={52} />
         <div
           style={{
             fontFamily: FONT,
@@ -613,7 +636,6 @@ const Close: React.FC<{ len: number }> = ({ len }) => {
           ПРОВЕРЬТЕ СВОЙ ДОГОВОР
         </div>
       </Rail>
-      <Lockup delay={140} />
     </Stage>
   );
 };
@@ -652,11 +674,11 @@ const DragTerm: React.FC<{ len: number }> = ({ len }) => (
     len={len}
     carried
     mode="drag"
-    lead="У ЭТОГО ПРАВА ЕСТЬ ИМЯ"
+    lead="ЭТОЙ СТРОКИ НЕ БЫЛО В ДОГОВОРЕ"
     term="DRAG-ALONG"
     at={0}
-    note="Большая доля вправе обязать остальных продать — по той же цене."
-    noteAt={34}
+    note={"С ней вы могли бы обязать партнёра продать\u00a0— по\u00a0той же цене."}
+    noteAt={30}
   />
 );
 
@@ -666,16 +688,14 @@ const DragDemo: React.FC<{ len: number }> = ({ len }) => (
     mode="drag"
     lead="ПО ТОЙ ЖЕ ЦЕНЕ"
     lines={["ВЫБОРА НЕТ"]}
-    note="Меньшая доля продаётся вместе с большей."
     leadAt={6}
     linesAt={40}
-    noteAt={56}
     go={12}
   />
 );
 
 const TagTerm: React.FC<{ len: number }> = ({ len }) => (
-  <Term len={len} mode="tag" lead="ВАША ЗАЩИТА НАЗЫВАЕТСЯ" term="TAG-ALONG" at={40} />
+  <Term len={len} mode="tag" lead="ВАША СТРОКА В ДОГОВОРЕ" term="TAG-ALONG" at={40} />
 );
 
 const TagDemo: React.FC<{ len: number }> = ({ len }) => (
@@ -684,7 +704,7 @@ const TagDemo: React.FC<{ len: number }> = ({ len }) => (
     mode="tag"
     lead="ПРАВО"
     lines={["УЙТИ", "ВМЕСТЕ С НИМ"]}
-    note="На тех же условиях."
+    note={"На\u00a0тех же условиях."}
     leadAt={4}
     linesAt={14}
     noteAt={48}

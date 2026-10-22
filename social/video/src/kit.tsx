@@ -240,6 +240,12 @@ export const Stage: React.FC<{
    * rendered frame only softens it.
    */
   world?: React.ReactNode;
+  /**
+   * The lockup. It sits outside the push and the depth blur, so it holds
+   * one position across every beat instead of drifting and snapping at
+   * each cut.
+   */
+  foot?: React.ReactNode;
 }> = ({
   len,
   dir = "push",
@@ -250,6 +256,7 @@ export const Stage: React.FC<{
   children,
   graphic,
   world,
+  foot,
 }) => {
   const frame = useCurrentFrame();
 
@@ -331,6 +338,7 @@ export const Stage: React.FC<{
         >
           {children}
         </AbsoluteFill>
+        {foot}
       </AbsoluteFill>
       <Finish />
     </AbsoluteFill>
@@ -570,7 +578,7 @@ export const Term: React.FC<{
         fontWeight: 800,
         fontSize: fitted,
         lineHeight: 1,
-        letterSpacing: `${interpolate(s, [0, 1], [0.16, -0.012])}em`,
+        letterSpacing: `${interpolate(s, [0, 1], [0.05, -0.012])}em`,
         color,
         opacity: Math.min(1, s * 1.6),
         transform: `scale(${interpolate(s, [0, 1], [scaleFrom, 1])})`,
@@ -589,7 +597,7 @@ export const Term: React.FC<{
           fontWeight: 800,
           fontSize: fitted,
           lineHeight: 1,
-          letterSpacing: `${interpolate(s, [0, 1], [0.16, -0.012])}em`,
+          letterSpacing: `${interpolate(s, [0, 1], [0.05, -0.012])}em`,
           whiteSpace: "nowrap",
           color: "transparent",
           backgroundImage:

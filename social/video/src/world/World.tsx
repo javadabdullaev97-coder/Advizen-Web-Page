@@ -42,8 +42,8 @@ export const MINOR_L = (BAR_L - GAP) * 0.3;
 export const MAJOR_X = -BAR_L / 2 + MAJOR_L / 2;
 export const MINOR_X = BAR_L / 2 - MINOR_L / 2;
 /** The buyer's footprint: the whole company's shape, outlined in light. */
-export const PAD_L = BAR_L + 0.6;
-export const PAD_D = BLOCK_D + 0.6;
+export const PAD_L = BAR_L + 0.36;
+export const PAD_D = BLOCK_D + 0.36;
 
 export type Tone = "ceramic" | "red" | "graphite";
 
@@ -228,7 +228,8 @@ const Block: React.FC<{ b: BlockState; font: boolean; mirror?: boolean }> = ({
   mirror = false,
 }) => {
   const surface = useMemo(() => {
-    const m = new THREE.MeshPhysicalMaterial();
+    // Dithered: the near-black falloffs band badly once encoded.
+    const m = new THREE.MeshPhysicalMaterial({ dithering: true });
     m.clippingPlanes = [ABOVE];
     return (
       mirror ? Object.assign(mirrored(m), { clippingPlanes: [BELOW] }) : m
@@ -236,7 +237,9 @@ const Block: React.FC<{ b: BlockState; font: boolean; mirror?: boolean }> = ({
   }, [mirror]);
   paint(surface, b.tone, b.toneTo ?? b.tone, b.mix ?? 0);
   const print = useMemo(() => {
-    if (!b.label || !font) return null;
+    // The reflection carries the slab but not the print: mirrored digits
+    // sat right under the labels and read as a second, garbled number.
+    if (!b.label || !font || mirror) return null;
     const m = new THREE.MeshStandardMaterial({
       map: labelTexture(b.label, LABEL_INK[(b.mix ?? 0) > 0.5 ? b.toneTo ?? b.tone : b.tone]),
       transparent: true,
@@ -274,6 +277,9 @@ const Pad: React.FC<{ p: PadState }> = ({ p }) => {
   edge.set("#FFF6EC").lerp(new THREE.Color(ACCENT), alarm);
   // Emissive past 1.0 so the outline reads as a light source, not paint.
   const k = p.on * (1.6 + fill * 1.2) * (1 - alarm * 0.55);
+  // Strips across the line of sight are foreshortened by the camera's
+  // elevation, so they are drawn deeper to read the same weight as the
+  // sides.
   const strip = (w: number, d: number, x: number, z: number, key: string) => (
     <mesh key={key} position={[x, 0.006, z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
       <planeGeometry args={[w, d]} />
@@ -281,10 +287,11 @@ const Pad: React.FC<{ p: PadState }> = ({ p }) => {
     </mesh>
   );
   const t = 0.035;
+  const across = 0.1;
   return (
     <group position={[p.x, 0, p.z ?? 0]}>
-      {strip(PAD_L, t, 0, PAD_D / 2, "f")}
-      {strip(PAD_L, t, 0, -PAD_D / 2, "b")}
+      {strip(PAD_L + t, across, 0, PAD_D / 2, "f")}
+      {strip(PAD_L + t, across, 0, -PAD_D / 2, "b")}
       {strip(t, PAD_D, -PAD_L / 2, 0, "l")}
       {strip(t, PAD_D, PAD_L / 2, 0, "r")}
       <mesh position={[0, 0.004, 0]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
@@ -402,7 +409,7 @@ export const World: React.FC<{
       {/* Polished dark floor, laid over the reflections. */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow renderOrder={1}>
         <planeGeometry args={[200, 200]} />
-        <meshStandardMaterial color="#0D0C0B" roughness={0.42} metalness={0} transparent opacity={0.8} />
+        <meshStandardMaterial color="#0D0C0B" roughness={0.42} metalness={0} transparent opacity={0.8} dithering />
       </mesh>
     </ThreeCanvas>
   );
