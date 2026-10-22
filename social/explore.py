@@ -417,8 +417,7 @@ def e_scrim(img, bottom, blur=16, target=226, feather=230):
 
 
 def e_card(photo, headline, subline, align="left", size=62, items=None):
-    override = sorted(E_SOURCE.glob(f"{photo.stem}.*")) if E_SOURCE.exists() else []
-    img = cover_photo(override[0] if override else photo)
+    img = cover_photo(photo)
 
     fh = f("Geist", size, 800)
     fs = f("Geist", round(size * 0.52), 400)
@@ -464,30 +463,60 @@ def e_card(photo, headline, subline, align="left", size=62, items=None):
     return img
 
 
-TEST = ROOT / "public" / "social" / "source" / "_test"
+PE = ROOT / "public" / "social" / "source" / "permanent-establishment"
+
+# The post as it would publish: six cards, alignment alternating right and
+# left so the eye moves on every swipe, the red run marking the operative
+# fact in each proposition.
+PE_CARDS = [
+    dict(photo="01-corridor", align="right", size=60,
+         headline="Постоянное учреждение возникает *с первого дня*",
+         subline="Когда деятельность иностранной компании облагается налогом в Узбекистане"),
+    dict(photo="02-place", align="left", size=66,
+         headline="Правило *183 дней* здесь не работает",
+         subline="Для постоянного места деятельности порога в днях нет"),
+    dict(photo="03-city", align="right", size=62,
+         headline="Место деятельности есть — *учреждение есть*",
+         subline="Статья 36 Налогового кодекса не устанавливает срока"),
+    dict(photo="04-three", align="left", size=58,
+         headline="*183 дня* считают только в трёх случаях",
+         subline=None,
+         items=["Строительная площадка",
+                "Услуги через персонал",
+                "Установки для добычи"]),
+    dict(photo="05-agent", align="right", size=58,
+         headline="Договор подписан от вашего имени — *учреждение возникает*",
+         subline="Независимо от срока, если лицо обычно заключает контракты"),
+    dict(photo="06-periods", align="left", size=60,
+         headline="Дробить проект бесполезно: периоды *складываются*",
+         subline="Порог может поднять соглашение об избежании двойного налогообложения"),
+]
+
+
+def permanent_establishment():
+    out = OUT / "PE"
+    out.mkdir(parents=True, exist_ok=True)
+    for i, spec in enumerate(PE_CARDS, 1):
+        spec = dict(spec)
+        photo = PE / f"{spec.pop('photo')}.jpg"
+        e_card(photo, spec.pop("headline"), spec.pop("subline"), **spec).save(
+            out / f"{i:02d}.png")
+    print(f"PE — Постоянное учреждение: {len(PE_CARDS)} cards → {out.relative_to(ROOT)}")
 
 
 def e_cover():
-    return e_card(TEST / "01-cover.jpg",
-                  "Постоянное учреждение возникает *с первого дня*",
-                  "Когда деятельность иностранной компании облагается налогом в Узбекистане",
-                  align="right", size=62)
+    return e_card(PE / "01-corridor.jpg", PE_CARDS[0]["headline"],
+                  PE_CARDS[0]["subline"], align="right", size=60)
 
 
 def e_statement():
-    return e_card(TEST / "03-fmcg.jpg",
-                  "Правило *183 дней* здесь не работает",
-                  "Для постоянного места деятельности порога нет",
-                  align="left", size=66)
+    return e_card(PE / "02-place.jpg", PE_CARDS[1]["headline"],
+                  PE_CARDS[1]["subline"], align="left", size=66)
 
 
 def e_list():
-    return e_card(TEST / "01-cover.jpg",
-                  "*183 дня* считают только в трёх случаях",
-                  None, align="left", size=58,
-                  items=["Строительная площадка",
-                         "Услуги через персонал",
-                         "Установки для добычи"])
+    return e_card(PE / "04-three.jpg", PE_CARDS[3]["headline"], None,
+                  align="left", size=58, items=PE_CARDS[3]["items"])
 
 
 DIRECTIONS["E"] = ("Как у Key Consulting", [e_cover, e_statement, e_list])
@@ -500,3 +529,4 @@ if __name__ == "__main__":
         for i, make in enumerate(cards, 1):
             make().save(folder / f"{i:02d}.png")
         print(f"{key} — {name}: {len(cards)} cards → {folder.relative_to(ROOT)}")
+    permanent_establishment()
