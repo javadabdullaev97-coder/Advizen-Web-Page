@@ -12,17 +12,26 @@ import React, { useEffect, useMemo, useState } from "react";
 import * as THREE from "three";
 import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { clone as cloneRigged } from "three/examples/jsm/utils/SkeletonUtils.js";
-import { cancelRender, continueRender, delayRender, staticFile } from "remotion";
+import { cancelRender, continueRender, delayRender, getInputProps, staticFile } from "remotion";
 
 import { ABOVE, BELOW, mirrored, useMirror } from "./World";
 
 const cache = new Map<string, Promise<GLTF>>();
 
+/**
+ * Where a model is fetched from. On Lambda the models are not on the
+ * public site — some licences forbid passing the file on — so the render
+ * script hands each one in as a short-lived signed URL; locally they come
+ * from public/.
+ */
+const modelUrl = (file: string) =>
+  (getInputProps() as { assets?: Record<string, string> }).assets?.[file] ?? staticFile(file);
+
 const load = (file: string) => {
   let p = cache.get(file);
   if (!p) {
     p = new Promise<GLTF>((resolve, reject) =>
-      new GLTFLoader().load(staticFile(file), resolve, undefined, reject),
+      new GLTFLoader().load(modelUrl(file), resolve, undefined, reject),
     );
     cache.set(file, p);
   }

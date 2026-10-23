@@ -5,18 +5,22 @@
   "description": "Motion reels for Advizen social, rendered with Remotion.",
   "scripts": {
     "studio": "remotion studio",
-    "render": "remotion render"
+    "render": "remotion render",
+    "lambda:deploy": "node scripts/lambda.mjs deploy",
+    "lambda:render": "node scripts/lambda.mjs render"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "3.986.0",
     "@react-three/fiber": "9.3.0",
-    "@remotion/cli": "^4.0.538",
-    "@remotion/layout-utils": "^4.0.538",
+    "@remotion/cli": "4.0.538",
+    "@remotion/lambda": "4.0.538",
+    "@remotion/layout-utils": "4.0.538",
     "@remotion/three": "4.0.538",
-    "@remotion/transitions": "^4.0.538",
+    "@remotion/transitions": "4.0.538",
     "@types/three": "0.178.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "remotion": "^4.0.538",
+    "remotion": "4.0.538",
     "three": "0.178.0"
   },
   "devDependencies": {
