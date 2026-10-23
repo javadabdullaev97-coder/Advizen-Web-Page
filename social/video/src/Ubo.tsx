@@ -498,7 +498,7 @@ const Conduit: React.FC<{ len: number }> = ({ len }) => {
   const divX = onTray + onward * (RECIPIENT_X - 0.95 - onTray);
   const divY = 0.2 * (1 - ramp(frame, 76, 86, Easing.in(Easing.quad)));
   const relief = ramp(frame, 150, 176, Easing.in(Easing.cubic));
-  const tax = interpolate(frame, [206, 228], [2.2, 0], { ...clamp, easing: Easing.in(Easing.quad) });
+  const tax = interpolate(frame, [206, 228], [0.9, 0], { ...clamp, easing: Easing.in(Easing.quad) });
   return (
     <Stage
       len={len}
