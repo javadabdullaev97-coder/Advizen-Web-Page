@@ -5,7 +5,7 @@
  *   npm run lambda:deploy                 once, and again after a Remotion upgrade
  *                                         or a change to src/ or public/
  *   npm run lambda:render -- <composition> [--frames=0-199] [--out=out/x.mp4]
- *                                         [--frames-per-lambda=20]
+ *                                         [--frames-per-lambda=20 | --concurrency=8]
  *
  * Credentials come from REMOTION_AWS_ACCESS_KEY_ID and
  * REMOTION_AWS_SECRET_ACCESS_KEY in the environment — never from a file in
@@ -27,13 +27,19 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { HeadObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { GetServiceQuotaCommand, ServiceQuotasClient } from "@aws-sdk/client-service-quotas";
 import { deployFunction, deploySite, getFunctions, getOrCreateBucket } from "@remotion/lambda";
 import { getRenderProgress, presignUrl, renderMediaOnLambda } from "@remotion/lambda/client";
 
 const REGION = "eu-central-1";
 /** Hard to guess on purpose: the site is public, though nothing licensed is on it. */
 const SITE = "advizen-films-q7k3x9m2";
-const FUNCTION = { memorySizeInMb: 3009, timeoutInSeconds: 240, diskSizeInMb: 2048 };
+/**
+ * 3008 MB is the most a new AWS account may give a function. 900 s is
+ * Lambda's ceiling: while the account is still on the new-account limit of
+ * ten concurrent functions, each one renders a long stretch of the film.
+ */
+const FUNCTION = { memorySizeInMb: 3008, timeoutInSeconds: 900, diskSizeInMb: 2048 };
 const PRIVATE_PREFIX = "private-assets/";
 const SIGNED_FOR = 2 * 60 * 60;
 
@@ -49,7 +55,8 @@ const { REMOTION_AWS_ACCESS_KEY_ID: keyId, REMOTION_AWS_SECRET_ACCESS_KEY: secre
 if (!keyId || !secret) {
   die("REMOTION_AWS_ACCESS_KEY_ID / REMOTION_AWS_SECRET_ACCESS_KEY are not set. See lambda/README.md.");
 }
-const s3 = new S3Client({ region: REGION, credentials: { accessKeyId: keyId, secretAccessKey: secret } });
+const credentials = { accessKeyId: keyId, secretAccessKey: secret };
+const s3 = new S3Client({ region: REGION, credentials });
 
 const modelFiles = () => (fs.existsSync(MODELS) ? fs.readdirSync(MODELS).filter((f) => f.endsWith(".glb")) : []);
 
@@ -101,6 +108,15 @@ const deploy = async () => {
   console.log("Done.");
 };
 
+/** The account's Lambda concurrency limit in REGION, or null if it can't be read. */
+const concurrencyLimit = async () => {
+  const quotas = new ServiceQuotasClient({ region: REGION, credentials });
+  const res = await quotas
+    .send(new GetServiceQuotaCommand({ ServiceCode: "lambda", QuotaCode: "L-B99A9384" }))
+    .catch(() => null);
+  return res?.Quota?.Value ?? null;
+};
+
 const flag = (args, name, fallback) => {
   const hit = args.find((a) => a.startsWith(`--${name}=`));
   return hit ? hit.slice(name.length + 3) : fallback;
@@ -112,7 +128,19 @@ const render = async (args) => {
   const frames = flag(args, "frames", null);
   const frameRange = frames ? frames.split("-").map(Number) : null;
   const out = path.resolve(ROOT, flag(args, "out", `out/${composition}${frames ? `-${frames}` : ""}.mp4`));
-  const framesPerLambda = Number(flag(args, "frames-per-lambda", 20));
+  let framesPerLambda = flag(args, "frames-per-lambda", null);
+  let concurrency = flag(args, "concurrency", null);
+  if (framesPerLambda === null && concurrency === null) {
+    // 2370 frames at 20 a function is 119 functions. A new account may be
+    // held to 10 at once; then spread the film over what it may run, keeping
+    // one for the launch function and one for progress requests.
+    const limit = await concurrencyLimit();
+    if (limit !== null && limit < 130) {
+      concurrency = Math.max(1, limit - 2);
+      console.log(`Account concurrency limit is ${limit}: rendering on ${concurrency} functions.`);
+    } else framesPerLambda = 20;
+  }
+  const split = concurrency !== null ? { concurrency: Number(concurrency) } : { framesPerLambda: Number(framesPerLambda) };
 
   const [fn] = await getFunctions({ region: REGION, compatibleOnly: true });
   if (!fn) die("No Lambda function for this Remotion version. Run: npm run lambda:deploy");
@@ -142,7 +170,7 @@ const render = async (args) => {
     imageFormat: "jpeg",
     jpegQuality: 92,
     muted: true,
-    framesPerLambda,
+    ...split,
     ...(frameRange ? { frameRange } : {}),
     chromiumOptions: { gl: "swangle" },
     privacy: "private",
@@ -172,4 +200,4 @@ const render = async (args) => {
 const [cmd, ...rest] = process.argv.slice(2);
 if (cmd === "deploy") await deploy();
 else if (cmd === "render") await render(rest);
-else die("Usage: lambda.mjs deploy | render <composition> [--frames=a-b] [--out=path] [--frames-per-lambda=n]");
+else die("Usage: lambda.mjs deploy | render <composition> [--frames=a-b] [--out=path] [--frames-per-lambda=n | --concurrency=n]");
