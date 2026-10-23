@@ -2,6 +2,8 @@
 # Paste the whole block into AWS CloudShell (the >_ icon at the top of the AWS console).
 # It creates the policy, role, user and access key that lambda/README.md describes,
 # and asks AWS to raise the Lambda concurrency limit in eu-central-1.
+# Safe to paste again: whatever already exists is left as it is.
+(
 set -e
 cat > /tmp/remotion-role-policy.json <<'JSON'
 {"Version":"2012-10-17","Statement":[{"Sid":"0","Effect":"Allow","Action":["s3:ListAllMyBuckets"],"Resource":["*"]},{"Sid":"1","Effect":"Allow","Action":["s3:CreateBucket","s3:ListBucket","s3:PutBucketAcl","s3:GetObject","s3:DeleteObject","s3:PutObjectAcl","s3:PutObject","s3:GetBucketLocation"],"Resource":["arn:aws:s3:::remotionlambda-*"]},{"Sid":"2","Effect":"Allow","Action":["lambda:InvokeFunction"],"Resource":["arn:aws:lambda:*:*:function:remotion-render-*"]},{"Sid":"3","Effect":"Allow","Action":["logs:CreateLogGroup"],"Resource":["arn:aws:logs:*:*:log-group:/aws/lambda-insights"]},{"Sid":"4","Effect":"Allow","Action":["logs:CreateLogStream","logs:PutLogEvents"],"Resource":["arn:aws:logs:*:*:log-group:/aws/lambda/remotion-render-*","arn:aws:logs:*:*:log-group:/aws/lambda-insights:*"]}]}
@@ -12,13 +14,17 @@ JSON
 cat > /tmp/remotion-trust.json <<'JSON'
 {"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"lambda.amazonaws.com"},"Action":"sts:AssumeRole"}]}
 JSON
+# Runs an aws command; "already exists" counts as done, any other error stops the script.
+once() { out=$("$@" 2>&1) || { echo "$out" | grep -q EntityAlreadyExists || { echo "$out"; echo "Stopped: the step above failed."; exit 1; }; }; }
 ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
-aws iam create-policy --policy-name remotion-lambda-policy --policy-document file:///tmp/remotion-role-policy.json >/dev/null
-aws iam create-role --role-name remotion-lambda-role --assume-role-policy-document file:///tmp/remotion-trust.json >/dev/null
+once aws iam create-policy --policy-name remotion-lambda-policy --policy-document file:///tmp/remotion-role-policy.json
+once aws iam create-role --role-name remotion-lambda-role --assume-role-policy-document file:///tmp/remotion-trust.json
 aws iam attach-role-policy --role-name remotion-lambda-role --policy-arn arn:aws:iam::$ACCOUNT:policy/remotion-lambda-policy
-aws iam create-user --user-name remotion-user >/dev/null
+once aws iam create-user --user-name remotion-user
 aws iam put-user-policy --user-name remotion-user --policy-name remotion-user-policy --policy-document file:///tmp/remotion-user-policy.json
+echo "Policy, role and user are ready."
 aws service-quotas request-service-quota-increase --service-code lambda --quota-code L-B99A9384 --desired-value 1000 --region eu-central-1 >/dev/null 2>&1 && echo "Concurrency increase requested (eu-central-1, 1000)." || echo "Concurrency: no increase requested (already high, or ask in Service Quotas)."
 echo
 echo "Add these two to the Claude Code environment settings (not to the chat):"
 aws iam create-access-key --user-name remotion-user --query 'AccessKey.[AccessKeyId,SecretAccessKey]' --output text | awk '{print "REMOTION_AWS_ACCESS_KEY_ID=" $1 "\nREMOTION_AWS_SECRET_ACCESS_KEY=" $2}'
+)
