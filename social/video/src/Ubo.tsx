@@ -50,21 +50,29 @@ const HANDOFF = 12;
 const START = {
   hook: 0,
   bank: 184,
-  term: 376,
-  nest: 444,
-  open: 584,
-  layers: 690,
-  refuse: 905,
-  courier: 1012,
-  conduit: 1190,
-  sheet: 1465,
-  callback: 1717,
+  term: 399,
+  nest: 467,
+  open: 607,
+  layers: 713,
+  refuse: 928,
+  courier: 1035,
+  conduit: 1213,
+  sheet: 1488,
+  callback: 1740,
 };
 type Key = keyof typeof START;
 const ORDER = Object.keys(START) as Key[];
 
-/** The voice ends at 63.5 s; the last frame holds a second past it. */
-export const UBO_TOTAL = 1940;
+/** The voice ends at 64.3 s; the last frame holds a second past it. */
+export const UBO_TOTAL = 1963;
+
+/**
+ * The bank beat's animation runs for this many frames and then holds.
+ * The re-voiced line «Не — на кого́ она записана…» came out 23 frames
+ * longer than the first take; the shot was already at rest, so it holds
+ * still for the difference rather than everything else being re-timed.
+ */
+const BANK_ACTIVE = 192;
 
 const ENTRY: Record<Key, "cut" | "push" | "fade"> = {
   hook: "cut",
@@ -199,8 +207,9 @@ const Hook: React.FC<{ len: number }> = ({ len }) => {
  * The same question, asked of a company. The bank's look is a sheet of
  * light sweeping through it — and what it finds inside is not paper.
  */
-const Bank: React.FC<{ len: number }> = ({ len }) => {
-  const frame = useCurrentFrame();
+const Bank: React.FC<{ len: number }> = () => {
+  const frame = Math.min(useCurrentFrame(), BANK_ACTIVE - 1);
+  const len = BANK_ACTIVE;
   const pose = move(
     frame,
     len,
