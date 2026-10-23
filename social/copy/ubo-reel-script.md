@@ -78,3 +78,22 @@
 - «Не раскрыли — операции останавливаются»: по ст. 15 банк **отказывает**
   (в счёте, операции, отношениях).
 - «20% на остальное» — упрощение ставок ст. 353.
+
+## 3D-модели и подпись к посту
+
+Машина, человек и фургон — модели с Sketchfab (в git не хранятся, лежат в
+`social/video/public/models/`):
+
+- «Red Car» — Camay, CC BY 4.0 —
+  https://sketchfab.com/3d-models/red-car-595228b5dda74defb25a767a04b3da0d
+- «Dhl delivery van» — memoov, CC BY 4.0, **изменено**: перекрашен, без
+  символики DHL —
+  https://sketchfab.com/3d-models/dhl-delivery-van-6f952a34d1f44905af42c803cba2805f
+- «Businessman Character [Ankit] Rigged» — ankitanimationstudio, лицензия
+  Sketchfab Standard (коммерческое использование разрешено, указывать
+  автора не обязательно, сам файл распространять нельзя) —
+  https://sketchfab.com/3d-models/businessman-character-ankit-rigged-99d48204e75d4c63b432f37b73bddc9f
+
+CC BY требует указать автора и что модель изменена. Строка для подписи:
+
+> 3D: «Red Car» — Camay, «Delivery van» — memoov (изменено), CC BY 4.0, Sketchfab.

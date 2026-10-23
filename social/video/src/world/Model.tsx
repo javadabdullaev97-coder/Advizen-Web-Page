@@ -10,25 +10,26 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { clone as cloneRigged } from "three/examples/jsm/utils/SkeletonUtils.js";
 import { cancelRender, continueRender, delayRender, staticFile } from "remotion";
 
 import { ABOVE, BELOW, mirrored, useMirror } from "./World";
 
-const cache = new Map<string, Promise<THREE.Group>>();
+const cache = new Map<string, Promise<GLTF>>();
 
 const load = (file: string) => {
   let p = cache.get(file);
   if (!p) {
-    p = new Promise<THREE.Group>((resolve, reject) =>
-      new GLTFLoader().load(staticFile(file), (g) => resolve(g.scene), undefined, reject),
+    p = new Promise<GLTF>((resolve, reject) =>
+      new GLTFLoader().load(staticFile(file), resolve, undefined, reject),
     );
     cache.set(file, p);
   }
   return p;
 };
 
-const ready = new Map<string, THREE.Group>();
+const ready = new Map<string, GLTF>();
 
 /**
  * Loads models before the canvas exists. The canvas only draws when the
@@ -65,12 +66,19 @@ export const Model: React.FC<{
   height?: number;
   /** Swap one material's base colour, by material name. */
   recolor?: Record<string, string>;
-}> = ({ file, x = 0, y = 0, z = 0, ry = 0, length, height, recolor }) => {
+  /**
+   * Seconds into the model's first animation clip. Driven by the frame,
+   * never by a clock, so every frame renders the same way twice.
+   */
+  time?: number;
+}> = ({ file, x = 0, y = 0, z = 0, ry = 0, length, height, recolor, time }) => {
   const mirror = useMirror();
-  const scene = ready.get(file) ?? null;
+  const gltf = ready.get(file) ?? null;
   const fitted = useMemo(() => {
-    if (!scene) return null;
-    const root = scene.clone(true);
+    if (!gltf) return null;
+    // SkeletonUtils, not Object3D.clone: a plain clone of a rigged figure
+    // keeps pointing at the original's bones.
+    const root = cloneRigged(gltf.scene);
     // FBX exports bring their lights and cameras along.
     const strays: THREE.Object3D[] = [];
     root.traverse((o) => {
@@ -97,6 +105,16 @@ export const Model: React.FC<{
           base.map = null;
         }
         base.dithering = true;
+        // Real refraction costs a whole extra pass per frame on a CPU
+        // renderer; tinted, see-through glass reads the same at this size.
+        const phys = base as THREE.MeshPhysicalMaterial;
+        if (phys.transmission > 0) {
+          phys.transmission = 0;
+          phys.transparent = true;
+          phys.opacity = 0.45;
+          phys.color.set("#1A1C1F");
+          phys.roughness = 0.05;
+        }
         base.clippingPlanes = [ABOVE];
         if (!mirror) return base;
         const r = mirrored(base) as THREE.MeshStandardMaterial;
@@ -107,9 +125,15 @@ export const Model: React.FC<{
       mesh.castShadow = !mirror;
       mesh.receiveShadow = !mirror;
     });
-    return holder;
+    const clip = gltf.animations[0];
+    const mixer = clip ? new THREE.AnimationMixer(root) : null;
+    if (mixer && clip) mixer.clipAction(clip).play();
+    return { holder, mixer, clip };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scene, mirror, length, height, JSON.stringify(recolor ?? {})]);
+  }, [gltf, mirror, length, height, JSON.stringify(recolor ?? {})]);
   if (!fitted) return null;
-  return <primitive object={fitted} position={[x, y, z]} rotation={[0, ry, 0]} />;
+  if (fitted.mixer && fitted.clip && time !== undefined) {
+    fitted.mixer.setTime(time % fitted.clip.duration);
+  }
+  return <primitive object={fitted.holder} position={[x, y, z]} rotation={[0, ry, 0]} />;
 };

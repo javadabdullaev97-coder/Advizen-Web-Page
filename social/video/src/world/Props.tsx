@@ -42,55 +42,9 @@ const outline = (w: number, h: number, d: number) => {
   return g;
 };
 
-const WHEEL = new THREE.CylinderGeometry(0.34, 0.34, 0.28, 48);
-const HUB = new THREE.CylinderGeometry(0.15, 0.15, 0.3, 32);
 const BODY = new THREE.CapsuleGeometry(0.2, 0.36, 8, 24);
 const HEAD = new THREE.SphereGeometry(0.165, 40, 20);
 const PUCK = new THREE.CylinderGeometry(0.3, 0.3, 0.09, 48);
-
-// ── the car ──────────────────────────────────────────────────────────
-
-/**
- * A designer-toy car, nose to +x: ceramic body, glazed cabin, graphite
- * wheels. Simple enough to read at a glance as "a car", finished well
- * enough to sit in the same studio as the blocks.
- */
-export const Car: React.FC<{
-  x?: number;
-  z?: number;
-  /** Head- and tail-lights, 0 off … 1 on. */
-  lights?: number;
-}> = ({ x = 0, z = 0, lights = 0 }) => {
-  const mirror = useMirror();
-  const shell = useFinish("ceramic");
-  const glass = useFinish("glass");
-  const rubber = useFinish("graphite");
-  const head = useGlow("#FFF4E6", 0.4 + lights * 3.5);
-  const tail = useGlow(ACCENT, 0.3 + lights * 2.5);
-  const cast = !mirror;
-  return (
-    <group position={[x, 0, z]}>
-      <mesh geometry={box(3.5, 0.62, 1.6, 0.24, 6)} material={shell} position={[0, 0.53, 0]} castShadow={cast} receiveShadow={cast} />
-      {/* Ceramic cabin with a band of glazing wrapped round it. */}
-      <mesh geometry={box(1.8, 0.52, 1.34, 0.16, 5)} material={shell} position={[-0.25, 1.06, 0]} castShadow={cast} />
-      <mesh geometry={box(1.84, 0.27, 1.37, 0.08, 4)} material={glass} position={[-0.25, 1.07, 0]} />
-      {[1.12, -1.12].flatMap((wx) =>
-        [0.72, -0.72].map((wz) => (
-          <group key={`${wx}${wz}`} position={[wx, 0.34, wz]} rotation={[Math.PI / 2, 0, 0]}>
-            <mesh geometry={WHEEL} material={rubber} castShadow={cast} />
-            <mesh geometry={HUB} material={shell} />
-          </group>
-        )),
-      )}
-      {[0.5, -0.5].map((lz) => (
-        <React.Fragment key={lz}>
-          <mesh geometry={box(0.05, 0.1, 0.36, 0.02, 2)} material={head} position={[1.75, 0.66, lz]} />
-          <mesh geometry={box(0.05, 0.1, 0.36, 0.02, 2)} material={tail} position={[-1.75, 0.66, lz]} />
-        </React.Fragment>
-      ))}
-    </group>
-  );
-};
 
 // ── the person ───────────────────────────────────────────────────────
 

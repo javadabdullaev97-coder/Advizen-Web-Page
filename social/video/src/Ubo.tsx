@@ -38,8 +38,9 @@ import {
 } from "./kit";
 import { deg, mixPose, Pose } from "./world/camera";
 import { Mark } from "./world/Mark";
+import { Model } from "./world/Model";
 import { BLOCK_D, Reflect, Scene } from "./world/World";
-import { Barrier, Car, Doc, Parcel, Person, Puck, Rule, Scan, Sheet, Shell, Tray } from "./world/Props";
+import { Barrier, Doc, Parcel, Person, Puck, Rule, Scan, Sheet, Shell, Tray } from "./world/Props";
 import { Cue, Sound } from "./Sound";
 
 const HANDOFF = 12;
@@ -160,6 +161,30 @@ const Matryoshka: React.FC<{
 // ── beats ────────────────────────────────────────────────────────────
 
 const CAR_X = -0.4;
+
+/** The real-world cast: a car, a man, a van. Everything abstract stays built in. */
+const CAR = "models/red-car.glb";
+const MAN = "models/ankit.glb";
+const VAN = "models/van.glb";
+/** The van comes in DHL livery: repainted plain, stickered glass made plain glass. */
+const PLAIN_VAN: Record<string, string> = {
+  CARROCERIA: "#ECE9E3",
+  cajuela: "#ECE9E3",
+  cofre: "#ECE9E3",
+  puertasbake: "#ECE9E3",
+  puertastras: "#ECE9E3",
+  CRIST_LAT: "#15171A",
+  "CRIST_LAT.001": "#15171A",
+  cristtras: "#15171A",
+};
+/** Car length and a man's height, in world units, in real proportion. */
+const CAR_LEN = 3.6;
+const MAN_H = 1.32;
+
+/** Someone standing, breathing: the rig's idle clip, run off the frame. */
+const Man: React.FC<{ x: number; z?: number; ry?: number; frame: number }> = ({ x, z = 0, ry = 0, frame }) => (
+  <Model file={MAN} height={MAN_H} x={x} z={z} ry={ry} time={frame / 30} />
+);
 /** "You" stand just off the nose: clear of the body from either side. */
 const YOU = { x: 1.9, z: -0.1 };
 
@@ -184,10 +209,10 @@ const Hook: React.FC<{ len: number }> = ({ len }) => {
       foot={<Lockup instant />}
       world={
         <>
-          <Scene pose={pose} focus={CAR_X} focusZ={0.4}>
+          <Scene pose={pose} focus={CAR_X} focusZ={0.4} models={[CAR, MAN]}>
             <Reflect>
-              <Car x={CAR_X} lights={drive} />
-              <Person x={YOU.x} z={YOU.z} glow={0.15 + drive * 0.75} />
+              <Model file={CAR} length={CAR_LEN} x={CAR_X} ry={Math.PI / 2} />
+              <Man x={YOU.x} z={YOU.z} ry={-0.35} frame={frame} />
             </Reflect>
           </Scene>
           <Mark pose={pose} x={CAR_X} z={at(0.8)} text="ЗАПИСАНА НА МАМУ" dy={34} />
@@ -458,15 +483,28 @@ const RECIPIENT_X = 1.9;
 const ORIGIN_X = -2.5;
 const wide = lens({ az: deg(5), el: deg(14), dist: 24, target: [-0.1, 0.6, 0], shiftY: 110 });
 
-/** Tax asks the same thing about money. A courier carries a parcel — and the parcel is not his. */
+const VAN_STOP = -1.35;
+const VAN_LEN = 3.9;
+const HANDOVER = { x: 1.15, z: 1.0 };
+const RECEIVER = { x: 1.9, z: 0.55 };
+
+/** Tax asks the same thing about money. A van brings a parcel — and the parcel is not the van's. */
 const Courier: React.FC<{ len: number }> = ({ len }) => {
   const frame = useCurrentFrame();
-  const pose = move(frame, len, lens({ az: deg(12), el: deg(14), dist: 24.5, target: [-0.15, 0.6, 0], shiftY: 110 }), wide);
-  // The tray brings the parcel in, stops, and the parcel goes on without it.
-  const carry = interpolate(frame, [92, 136], [ORIGIN_X, -0.2], { ...clamp, easing: swap });
-  const handOff = ramp(frame, 140, 166);
-  const parcelX = carry + handOff * (RECIPIENT_X - 0.95 - carry);
-  const parcelY = 0.2 * (1 - ramp(frame, 150, 160, Easing.in(Easing.quad)));
+  const pose = move(
+    frame,
+    len,
+    lens({ az: deg(12), el: deg(13), dist: 23, target: [-0.3, 0.75, 0.4], shiftY: 110 }),
+    lens({ az: deg(6), el: deg(13), dist: 21.5, target: [-0.1, 0.75, 0.4], shiftY: 110 }),
+  );
+  // The van pulls up, the parcel comes out of its side door and goes on
+  // to the one it is for. The van stays where it stopped.
+  const vanX = interpolate(frame, [64, 112], [-7.5, VAN_STOP], { ...clamp, easing: land });
+  const out = ramp(frame, 116, 132);
+  const across = ramp(frame, 136, 166);
+  const parcelX = VAN_STOP + 0.3 + across * (HANDOVER.x - VAN_STOP - 0.3);
+  const parcelZ = 0.2 + out * (HANDOVER.z - 0.2);
+  const parcelY = 0.35 * (1 - ramp(frame, 124, 132, Easing.in(Easing.quad)));
   return (
     <Stage
       len={len}
@@ -475,14 +513,15 @@ const Courier: React.FC<{ len: number }> = ({ len }) => {
       foot={<Lockup delay={0} />}
       world={
         <>
-          <Scene pose={pose} focus={0}>
+          <Scene pose={pose} focus={0.2} focusZ={0.5} models={[VAN, MAN]}>
             <Reflect>
-              <Tray x={carry} label="КУРЬЕР" />
-              <Parcel x={parcelX} y={parcelY} />
-              <Person x={RECIPIENT_X} glow={0.25 + ramp(frame, 156, 170) * 0.9} />
+              <Model file={VAN} length={VAN_LEN} x={vanX} ry={Math.PI / 2} recolor={PLAIN_VAN} />
+              {frame >= 116 ? <Parcel x={parcelX} z={parcelZ} y={parcelY} /> : null}
+              <Man x={RECEIVER.x} z={RECEIVER.z} ry={-0.7} frame={frame + 200} />
             </Reflect>
           </Scene>
-          <Mark pose={pose} x={RECIPIENT_X} z={at(0.3)} text="ПОЛУЧАТЕЛЬ" color={ACCENT} opacity={ramp(frame, 152, 164)} />
+          <Mark pose={pose} x={vanX} z={at(0.85)} text="КУРЬЕР" opacity={ramp(frame, 104, 116)} />
+          <Mark pose={pose} x={RECEIVER.x} z={at(RECEIVER.z + 0.3)} text="ПОЛУЧАТЕЛЬ" color={ACCENT} opacity={ramp(frame, 158, 170)} />
         </>
       }
     >
@@ -516,7 +555,7 @@ const Conduit: React.FC<{ len: number }> = ({ len }) => {
       foot={<Lockup instant />}
       world={
         <>
-          <Scene pose={pose} focus={0.2}>
+          <Scene pose={pose} focus={0.2} models={[MAN]}>
             <Reflect>
               <Shell x={ORIGIN_X} w={1.4} h={0.95} d={1.2} tone="ceramic" label="ООО" />
               <Tray x={0} label="ХОЛДИНГ" />
@@ -527,7 +566,7 @@ const Conduit: React.FC<{ len: number }> = ({ len }) => {
                 // The tax lands on the money where it actually ends up.
                 <Shell x={RECIPIENT_X - 0.95} w={0.9} h={0.34} d={0.6} lift={0.46 + tax} tone="graphite" label="НАЛОГ" />
               ) : null}
-              <Person x={RECIPIENT_X} glow={0.5 + ramp(frame, 86, 100) * 0.7} />
+              <Man x={RECIPIENT_X + 0.15} z={0.2} ry={-0.55} frame={frame + 400} />
             </Reflect>
           </Scene>
           <Mark pose={pose} x={divX} y={0.9} z={at(0.34)} text="ДИВИДЕНДЫ" color={ACCENT} opacity={1 - ramp(frame, 96, 110)} dy={-40} />
@@ -626,10 +665,15 @@ const Callback: React.FC<{ len: number }> = ({ len }) => {
       foot={<Lockup instant />}
       world={
         <>
-          <Scene pose={pose} focus={CAR_X + (YOU.x - CAR_X) * told} focusZ={0.4 + (YOU.z - 0.4) * told}>
+          <Scene
+            pose={pose}
+            focus={CAR_X + (YOU.x - CAR_X) * told}
+            focusZ={0.4 + (YOU.z - 0.4) * told}
+            models={[CAR, MAN]}
+          >
             <Reflect>
-              <Car x={CAR_X} lights={1} />
-              <Person x={YOU.x} z={YOU.z} glow={0.7 + told * 0.9} />
+              <Model file={CAR} length={CAR_LEN} x={CAR_X} ry={Math.PI / 2} />
+              <Man x={YOU.x} z={YOU.z} ry={-0.2} frame={frame + 600} />
             </Reflect>
           </Scene>
           <Mark pose={pose} x={CAR_X} z={at(0.8)} text="ЗАПИСАНА НА МАМУ" dy={34} opacity={1 - told * 0.6} />
