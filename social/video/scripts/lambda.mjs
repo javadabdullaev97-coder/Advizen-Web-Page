@@ -31,7 +31,8 @@ import { GetServiceQuotaCommand, ServiceQuotasClient } from "@aws-sdk/client-ser
 import { deployFunction, deploySite, getFunctions, getOrCreateBucket } from "@remotion/lambda";
 import { getRenderProgress, presignUrl, renderMediaOnLambda } from "@remotion/lambda/client";
 
-const REGION = "eu-central-1";
+/** Sydney: the account's organization allows Lambda in this region only. */
+const REGION = "ap-southeast-2";
 /** Hard to guess on purpose: the site is public, though nothing licensed is on it. */
 const SITE = "advizen-films-q7k3x9m2";
 /**

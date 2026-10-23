@@ -1,7 +1,7 @@
 # Remotion Lambda — one-time AWS setup for Advizen.
 # Paste the whole block into AWS CloudShell (the >_ icon at the top of the AWS console).
 # It creates the policy, role, user and access key that lambda/README.md describes,
-# and asks AWS to raise the Lambda concurrency limit in eu-central-1.
+# and asks AWS to raise the Lambda concurrency limit in ap-southeast-2 (Sydney).
 # Safe to paste again: whatever already exists is left as it is.
 (
 set -e
@@ -23,7 +23,7 @@ aws iam attach-role-policy --role-name remotion-lambda-role --policy-arn arn:aws
 once aws iam create-user --user-name remotion-user
 aws iam put-user-policy --user-name remotion-user --policy-name remotion-user-policy --policy-document file:///tmp/remotion-user-policy.json
 echo "Policy, role and user are ready."
-aws service-quotas request-service-quota-increase --service-code lambda --quota-code L-B99A9384 --desired-value 1000 --region eu-central-1 >/dev/null 2>&1 && echo "Concurrency increase requested (eu-central-1, 1000)." || echo "Concurrency: no increase requested (already high, or ask in Service Quotas)."
+aws service-quotas request-service-quota-increase --service-code lambda --quota-code L-B99A9384 --desired-value 1000 --region ap-southeast-2 >/dev/null 2>&1 && echo "Concurrency increase requested (ap-southeast-2, 1000)." || echo "Concurrency: no increase requested (already high, or ask in Service Quotas)."
 echo
 echo "Add these two to the Claude Code environment settings (not to the chat):"
 aws iam create-access-key --user-name remotion-user --query 'AccessKey.[AccessKeyId,SecretAccessKey]' --output text | awk '{print "REMOTION_AWS_ACCESS_KEY_ID=" $1 "\nREMOTION_AWS_SECRET_ACCESS_KEY=" $2}'
