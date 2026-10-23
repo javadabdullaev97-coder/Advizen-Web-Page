@@ -22,6 +22,8 @@ export const MAP_W = data.width;
 export const MAP_D = data.depth;
 
 const THICK = 0.12;
+/** The top of the plate: where anything standing on the map stands. */
+export const MAP_TOP = THICK;
 
 /** A city's point on a map drawn at `scale` and placed at `at`. */
 export const cityAt = (name: string, scale = 1, at: [number, number] = [0, 0]): [number, number] => {

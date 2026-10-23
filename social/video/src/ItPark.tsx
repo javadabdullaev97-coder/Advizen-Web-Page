@@ -22,7 +22,7 @@ import { deg, Pose, project } from "./world/camera";
 import { Model } from "./world/Model";
 import { Desk, Laptop, LAPTOP, SITTING, Sitter } from "./world/Office";
 import { Shell } from "./world/Props";
-import { cityAt, UzMap } from "./world/UzMap";
+import { cityAt, MAP_TOP, UzMap } from "./world/UzMap";
 import { Reflect, Scene, useGlow } from "./world/World";
 
 const BUILDING = "models/building.glb";
@@ -160,7 +160,8 @@ export const Arc: React.FC<{ from: [number, number]; to: [number, number]; heigh
   const step = Math.round(Math.max(0, Math.min(1, draw)) * 48);
   const geometry = React.useMemo(() => {
     if (step === 0) return null;
-    const a = new THREE.Vector3(from[0], 0.32, from[1]);
+    // Out of the laptop's screen.
+    const a = new THREE.Vector3(from[0], MAP_TOP + 0.26, from[1]);
     const b = new THREE.Vector3(to[0], 0.05, to[1]);
     const mid = a.clone().lerp(b, 0.5).setY(height);
     const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
@@ -269,12 +270,12 @@ const Status: React.FC<{ ghost: boolean }> = ({ ghost }) => {
             <Reflect>
               <UzMap scale={MAP_SCALE} x={MAP_AT[0]} z={MAP_AT[1]} warmAll={ghost ? 0.04 : 0} />
               {ghost ? null : (
-                <Model file={BUILDING} height={1.5} x={tash[0]} z={tash[1] - 0.1} y={0.06} hide={["Plane.001", "Text_4", "leaf"]} />
+                <Model file={BUILDING} height={1.5} x={tash[0]} z={tash[1] - 0.1} y={MAP_TOP} hide={["Plane.001", "Text_4", "leaf"]} />
               )}
               {ghost
                 ? SPOTS.map(({ city }) => {
                     const [x, z] = at(city);
-                    return <Laptop key={city} x={x} z={z} y={0.06} length={0.36} ry={0} />;
+                    return <Laptop key={city} x={x} z={z} y={MAP_TOP} length={0.36} ry={0} />;
                   })
                 : null}
             </Reflect>
@@ -483,11 +484,11 @@ const Exporters: React.FC = () => {
               <UzMap scale={MAP_SCALE} x={MAP_AT[0]} z={MAP_AT[1]} />
               {EXPORTERS.map(({ city }) => {
                 const [x, z] = at(city);
-                return <Laptop key={city} x={x} z={z} y={0.06} length={0.36} />;
+                return <Laptop key={city} x={x} z={z} y={MAP_TOP} length={0.36} />;
               })}
               {LOCAL.map((city) => {
                 const [x, z] = at(city);
-                return <Laptop key={city} x={x} z={z} y={0.06} length={0.36} lit={false} />;
+                return <Laptop key={city} x={x} z={z} y={MAP_TOP} length={0.36} lit={false} />;
               })}
             </Reflect>
             {EXPORTERS.map(({ city, to }) => (

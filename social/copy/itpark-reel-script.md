@@ -75,6 +75,6 @@
 ## Подпись к посту — авторы моделей
 
 > 3D: «MacBook Laptop» — Issac Ghazanfar (изменено), «Contemplative Pose» —
-> restore50, CC BY 4.0, Sketchfab.
+> restore50 (упрощено), CC BY 4.0, Sketchfab.
 
 Здание — лицензия Sketchfab Standard, автора указывать не обязательно.

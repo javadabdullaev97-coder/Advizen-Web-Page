@@ -23,7 +23,7 @@ import { deg, mixPose } from "./world/camera";
 import { Model } from "./world/Model";
 import { Desk, Laptop, LAPTOP, SITTING, Sitter } from "./world/Office";
 import { Shell } from "./world/Props";
-import { UzMap } from "./world/UzMap";
+import { MAP_TOP, UzMap } from "./world/UzMap";
 import { Reflect, Scene } from "./world/World";
 import { Cue, Sound } from "./Sound";
 import {
@@ -251,7 +251,7 @@ const Status: React.FC<{ len: number }> = ({ len }) => {
                   height={1.5}
                   x={tash[0]}
                   z={tash[1] - 0.1}
-                  y={0.06 + (1 - drop) * 2.2}
+                  y={MAP_TOP + (1 - drop) * 2.2}
                   opacity={drop * (1 - gone)}
                   hide={["Plane.001", "Text_4", "leaf"]}
                 />
@@ -261,7 +261,7 @@ const Status: React.FC<{ len: number }> = ({ len }) => {
                 if (s < 0.01) return null;
                 const [x, z] = at(city);
                 return (
-                  <group key={city} position={[x, 0.06, z]} scale={[s, s, s]}>
+                  <group key={city} position={[x, MAP_TOP, z]} scale={[s, s, s]}>
                     <Laptop length={0.36} />
                   </group>
                 );
@@ -444,11 +444,11 @@ const ExportShot: React.FC<{ len: number }> = ({ len }) => {
               <UzMap scale={MAP_SCALE} x={MAP_AT[0]} z={MAP_AT[1]} />
               {EXPORTERS.map(({ city }) => {
                 const [x, z] = at(city);
-                return <Laptop key={city} x={x} z={z} y={0.06} length={0.36} />;
+                return <Laptop key={city} x={x} z={z} y={MAP_TOP} length={0.36} />;
               })}
               {LOCAL.map((city) => {
                 const [x, z] = at(city);
-                return <Laptop key={city} x={x} z={z} y={0.06} length={0.36} lit={frame < dark} />;
+                return <Laptop key={city} x={x} z={z} y={MAP_TOP} length={0.36} lit={frame < dark} />;
               })}
             </Reflect>
             {EXPORTERS.map(({ city, to }, i) => (

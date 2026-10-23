@@ -15,7 +15,7 @@ import { Model } from "./Model";
 import { Shell } from "./Props";
 
 export const LAPTOP = "models/laptop.glb";
-export const SITTING = "models/sitting.glb";
+export const SITTING = "models/sitting-lite.glb";
 
 /** Where the model's screen sits in its texture, in pixels of a 1024 square. */
 const SCREEN = { x: 275, y: 235, w: 455, h: 595 };

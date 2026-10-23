@@ -91,12 +91,15 @@ npm run lambda:render -- itpark --concurrency=8         # вручную: 8 фу
 
 ## Звук
 
-Звук по-прежнему собирается локально — там нет 3D, это секунды:
+Звук по-прежнему собирается локально — там нет 3D, это секунды. Картинка
+с Lambda уже в финальном качестве (crf 19), поэтому видео не
+перекодируется: поток копируется, ему только проставляются теги цвета
+bt709.
 
 ```
 npx remotion render src/index.ts itpark-sound out/itpark-soundtrack.wav --codec=wav
 ffmpeg -i out/itpark-soundtrack.wav -af "loudnorm=I=-14:TP=-2:LRA=11,aresample=48000,alimiter=limit=0.79:attack=1:release=60:level=false" out/itpark-mix.wav
-ffmpeg -i out/itpark.mp4 -i out/itpark-mix.wav -map 0:v -map 1:a -c:v libx264 -preset slow -crf 19 -tune grain -pix_fmt yuv420p -c:a aac -b:a 192k -shortest -movflags +faststart out/itpark-reel.mp4
+ffmpeg -i out/itpark.mp4 -i out/itpark-mix.wav -map 0:v -map 1:a -c:v copy -bsf:v h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1 -c:a aac -b:a 192k -shortest -movflags +faststart out/itpark-reel.mp4
 ```
 
 ## Что лежит в открытом доступе

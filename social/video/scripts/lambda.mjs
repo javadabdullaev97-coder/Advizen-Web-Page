@@ -18,8 +18,9 @@
  * the page as signed URLs that expire after two hours (see modelUrl() in
  * src/world/Model.tsx).
  *
- * Lambda renders the picture only, muted, as before: the soundtrack is
- * rendered and mixed locally in seconds (lambda/README.md, "Звук").
+ * Lambda renders the picture only, muted, at final quality: the soundtrack
+ * is rendered and mixed locally in seconds and put on with a stream copy
+ * (lambda/README.md, "Звук").
  */
 
 import fs from "node:fs";
@@ -167,7 +168,10 @@ const render = async (args) => {
     composition,
     inputProps: { assets },
     codec: "h264",
-    crf: 15,
+    // Final quality straight from Lambda: the soundtrack is then muxed on
+    // with a stream copy instead of a slow local re-encode.
+    crf: 19,
+    x264Preset: "slow",
     imageFormat: "jpeg",
     jpegQuality: 92,
     muted: true,
