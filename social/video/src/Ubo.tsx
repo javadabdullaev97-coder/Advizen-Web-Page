@@ -40,8 +40,9 @@ import { deg, mixPose, Pose } from "./world/camera";
 import { Mark } from "./world/Mark";
 import { Model } from "./world/Model";
 import { BLOCK_D, Reflect, Scene } from "./world/World";
-import { Barrier, Doc, Parcel, Person, Puck, Rule, Scan, Sheet, Shell, Tray } from "./world/Props";
+import { Barrier, Doc, Parcel, Person, Puck, Rule, Scan, Sheet, Shell } from "./world/Props";
 import { Cue, Sound } from "./Sound";
+import { Conduit, conduitCues } from "./UboConduit";
 
 const HANDOFF = 12;
 
@@ -479,10 +480,6 @@ const Refuse: React.FC<{ len: number }> = ({ len }) => {
   );
 };
 
-const RECIPIENT_X = 1.9;
-const ORIGIN_X = -2.5;
-const wide = lens({ az: deg(5), el: deg(14), dist: 24, target: [-0.1, 0.6, 0], shiftY: 110 });
-
 const VAN_STOP = -1.35;
 const VAN_LEN = 3.9;
 const HANDOVER = { x: 1.15, z: 1.0 };
@@ -528,55 +525,6 @@ const Courier: React.FC<{ len: number }> = ({ len }) => {
       <Rail gap={22}>
         <Eyebrow text="НАЛОГОВАЯ — ПРО ДЕНЬГИ" delay={6} />
         <Lines lines={["ПОСЫЛКА —", "НЕ КУРЬЕРА"]} max={150} delay={96} />
-      </Rail>
-    </Stage>
-  );
-};
-
-/**
- * Match cut: the courier's tray is now a holding, the parcel is a
- * dividend, and it does the same thing — rides across and moves on.
- */
-const Conduit: React.FC<{ len: number }> = ({ len }) => {
-  const frame = useCurrentFrame();
-  // Once the dividend has left the company, the shot closes in on where it ends up.
-  const pose = mixPose(wide, lens({ az: deg(2), el: deg(14), dist: 18.5, target: [0.6, 0.62, 0], shiftY: 110 }), ramp(frame, 60, 200, glide));
-  const onTray = interpolate(frame, [16, 54], [ORIGIN_X + 1.0, 0], { ...clamp, easing: swap });
-  const onward = ramp(frame, 62, 92);
-  const divX = onTray + onward * (RECIPIENT_X - 0.95 - onTray);
-  const divY = 0.2 * (1 - ramp(frame, 76, 86, Easing.in(Easing.quad)));
-  const relief = ramp(frame, 150, 176, Easing.in(Easing.cubic));
-  const tax = interpolate(frame, [206, 228], [0.9, 0], { ...clamp, easing: Easing.in(Easing.quad) });
-  return (
-    <Stage
-      len={len}
-      dir="push"
-      amount={0.02}
-      foot={<Lockup instant />}
-      world={
-        <>
-          <Scene pose={pose} focus={0.2} models={[MAN]}>
-            <Reflect>
-              <Shell x={ORIGIN_X} w={1.4} h={0.95} d={1.2} tone="ceramic" label="ООО" />
-              <Tray x={0} label="ХОЛДИНГ" />
-              {/* The treaty relief rides on the holding — and goes down with it. */}
-              <Shell x={0.1} z={-0.32} w={1.05} h={0.4} d={0.5} lift={0.2 - relief * 0.62} tone="ceramic" label="ЛЬГОТА" />
-              <Shell x={divX} w={0.9} h={0.46} d={0.68} lift={divY} tone="red" />
-              {frame >= 206 ? (
-                // The tax lands on the money where it actually ends up.
-                <Shell x={RECIPIENT_X - 0.95} w={0.9} h={0.34} d={0.6} lift={0.46 + tax} tone="graphite" label="НАЛОГ" />
-              ) : null}
-              <Man x={RECIPIENT_X + 0.15} z={0.2} ry={-0.55} frame={frame + 400} />
-            </Reflect>
-          </Scene>
-          <Mark pose={pose} x={divX} y={0.9} z={at(0.34)} text="ДИВИДЕНДЫ" color={ACCENT} opacity={1 - ramp(frame, 96, 110)} dy={-40} />
-          <Mark pose={pose} x={RECIPIENT_X} z={at(0.3)} text="ПОЛУЧАТЕЛЬ" color={ACCENT} opacity={1 - ramp(frame, 200, 210)} />
-        </>
-      }
-    >
-      <Rail gap={30}>
-        <Lines lines={["ПЕРЕСЫЛАЕТЕ —", "ЗНАЧИТ, КУРЬЕР"]} max={150} delay={6} />
-        <Note text={"Льготы по\u00a0налоговому соглашению нет: налог\u00a0— по\u00a0настоящему получателю."} delay={128} />
       </Rail>
     </Stage>
   );
@@ -711,8 +659,8 @@ export const UBO_CUES: Cue[] = [
   { sfx: "thud", at: START.layers + 82, gain: 0.9 },
   // The wall.
   { sfx: "hit", at: START.refuse + 68, gain: 0.85 },
-  // The relief going through the floor.
-  { sfx: "thud", at: START.conduit + 172, gain: 0.9 },
+  // The dividend going up the chain, and the relief struck out.
+  ...conduitCues(START.conduit),
   // The light finding the driver.
   { sfx: "hit", at: START.callback + 112, gain: 0.4 },
 ];

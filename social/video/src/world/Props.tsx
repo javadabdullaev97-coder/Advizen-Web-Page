@@ -299,27 +299,6 @@ export const Cash: React.FC<{ x?: number; z?: number; y?: number; length?: numbe
   );
 };
 
-/**
- * A graphite tray: something that carries a thing without owning it.
- * The courier and the pass-through holding are the same object, which is
- * the point.
- */
-export const Tray: React.FC<{ x: number; z?: number; label?: string; sink?: number }> = ({
-  x,
-  z = 0,
-  label,
-  sink = 0,
-}) => {
-  const mirror = useMirror();
-  const m = useFinish("graphite");
-  return (
-    <group position={[x, 0.1 - sink, z]}>
-      <mesh geometry={box(1.9, 0.2, 1.35, 0.05, 4)} material={m} castShadow={!mirror} receiveShadow={!mirror} />
-      {label ? <Print text={label} tone="graphite" width={1.1} position={[0, -0.005, 0.68]} /> : null}
-    </group>
-  );
-};
-
 // ── signals ──────────────────────────────────────────────────────────
 
 /** A payment in flight: a disc of light. */
