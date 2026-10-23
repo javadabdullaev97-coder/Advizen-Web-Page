@@ -66,12 +66,14 @@ export const Model: React.FC<{
   height?: number;
   /** Swap one material's base colour, by material name. */
   recolor?: Record<string, string>;
+  /** Multiply every material's colour, keeping its texture. */
+  tint?: string;
   /**
    * Seconds into the model's first animation clip. Driven by the frame,
    * never by a clock, so every frame renders the same way twice.
    */
   time?: number;
-}> = ({ file, x = 0, y = 0, z = 0, ry = 0, length, height, recolor, time }) => {
+}> = ({ file, x = 0, y = 0, z = 0, ry = 0, length, height, recolor, tint, time }) => {
   const mirror = useMirror();
   const gltf = ready.get(file) ?? null;
   const fitted = useMemo(() => {
@@ -98,12 +100,25 @@ export const Model: React.FC<{
       const mesh = o as THREE.Mesh;
       if (!mesh.isMesh) return;
       const swap = (m: THREE.Material) => {
-        const base = m.clone() as THREE.MeshStandardMaterial;
-        const tint = recolor?.[m.name];
-        if (tint && base.color) {
-          base.color.set(tint);
+        // An unlit export ignores the studio light and looks pasted in:
+        // give it the same surface as everything else.
+        const basic = m as THREE.MeshBasicMaterial;
+        const base = basic.isMeshBasicMaterial
+          ? new THREE.MeshStandardMaterial({
+              name: basic.name,
+              map: basic.map,
+              color: basic.color,
+              side: basic.side,
+              roughness: 0.78,
+              metalness: 0,
+            })
+          : (m.clone() as THREE.MeshStandardMaterial);
+        const swatch = recolor?.[m.name];
+        if (swatch && base.color) {
+          base.color.set(swatch);
           base.map = null;
         }
+        if (tint && base.color) base.color.multiply(new THREE.Color(tint));
         base.dithering = true;
         // Real refraction costs a whole extra pass per frame on a CPU
         // renderer; tinted, see-through glass reads the same at this size.
@@ -130,7 +145,7 @@ export const Model: React.FC<{
     if (mixer && clip) mixer.clipAction(clip).play();
     return { holder, mixer, clip };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gltf, mirror, length, height, JSON.stringify(recolor ?? {})]);
+  }, [gltf, mirror, length, height, tint, JSON.stringify(recolor ?? {})]);
   if (!fitted) return null;
   if (fitted.mixer && fitted.clip && time !== undefined) {
     fitted.mixer.setTime(time % fitted.clip.duration);

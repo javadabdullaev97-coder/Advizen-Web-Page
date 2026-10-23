@@ -13,6 +13,7 @@ import * as THREE from "three";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry.js";
 
 import { ACCENT } from "../theme";
+import { Model } from "./Model";
 import { Edges, Print, Tone, useFinish, useGlow, useMirror } from "./World";
 
 const rounded = new Map<string, THREE.BufferGeometry>();
@@ -233,6 +234,67 @@ export const Parcel: React.FC<{ x: number; z?: number; y?: number }> = ({ x, z =
       <mesh geometry={box(1.0, 0.72, 0.86, 0.05, 4)} material={card} castShadow={cast} receiveShadow={cast} />
       <mesh geometry={box(1.014, 0.734, 0.14, 0.02, 2)} material={tape} />
       <mesh geometry={box(0.14, 0.734, 0.874, 0.02, 2)} material={tape} />
+    </group>
+  );
+};
+
+let edgeTex: THREE.CanvasTexture | null = null;
+/** The side of a stack of notes: hundreds of paper edges. */
+const paperEdges = () => {
+  if (edgeTex) return edgeTex;
+  const c = document.createElement("canvas");
+  c.width = 64;
+  c.height = 256;
+  const g = c.getContext("2d")!;
+  g.fillStyle = "#E7E5DA";
+  g.fillRect(0, 0, 64, 256);
+  for (let y = 0; y < 256; y += 4) {
+    g.fillStyle = y % 12 === 0 ? "#C9C6B6" : "#D8D5C8";
+    g.fillRect(0, y, 64, 1);
+  }
+  edgeTex = new THREE.CanvasTexture(c);
+  edgeTex.colorSpace = THREE.SRGBColorSpace;
+  return edgeTex;
+};
+
+const BILL = "models/bill.glb";
+/** A US note is 156 × 66 mm. */
+const NOTE = 0.07 / 0.16;
+/** The scan is warm; under the warm key it goes pink. Pulled back towards the note's grey-green. */
+const NOTE_TINT = "#DCE6DA";
+
+/**
+ * Money, unmistakably: a strapped bundle of notes with a loose one on top.
+ * The note itself is the glTF (models/bill.glb); the stack under it is
+ * paper edges, the strap is the house red.
+ */
+export const Cash: React.FC<{ x?: number; z?: number; y?: number; length?: number; ry?: number }> = ({
+  x = 0,
+  z = 0,
+  y = 0,
+  length = 1.1,
+  ry = 0,
+}) => {
+  const mirror = useMirror();
+  const tape = useFinish("red");
+  const d = length * NOTE;
+  const h = length * 0.13;
+  const edges = useMemo(
+    () => new THREE.MeshStandardMaterial({ map: paperEdges(), roughness: 0.9, metalness: 0, dithering: true }),
+    [],
+  );
+  return (
+    <group position={[x, y, z]} rotation={[0, ry, 0]}>
+      <mesh position={[0, h / 2, 0]} material={edges} castShadow={!mirror} receiveShadow={!mirror}>
+        <boxGeometry args={[length * 0.985, h, d * 0.97]} />
+      </mesh>
+      {/* Turned so the portrait is the right way up from the front. */}
+      <Model file={BILL} length={length} y={h} ry={Math.PI} tint={NOTE_TINT} />
+      <mesh position={[0, h / 2 + 0.004, 0]} material={tape}>
+        <boxGeometry args={[length * 0.17, h + 0.016, d + 0.016]} />
+      </mesh>
+      {/* The loose note on top, knocked a little out of line. */}
+      <Model file={BILL} length={length} y={h + 0.02} x={length * 0.05} z={-d * 0.04} ry={Math.PI - 0.14} tint={NOTE_TINT} />
     </group>
   );
 };

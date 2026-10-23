@@ -41,14 +41,14 @@ const ramp = (f: number, a: number, b: number, ease = swap) =>
 const K = 0.4;
 const CARD = { w: 948 * K, h: 509 * K };
 const MAN = { w: 210 * K, h: 667 * K };
-const PARCEL = { w: 630 * 0.25, h: 505 * 0.25 };
+const CASH = { w: 640 * 0.3, h: 314 * 0.3 };
 /** Centre of a card's top face, where things stand on it. */
 const CARD_SEAT = { x: 0.506, y: 0.195 };
 /** The card's front face: its centre, and how far its top edge falls left to right. */
 const CARD_FRONT = { x: 0.407, y: 0.595, slope: 6.7 };
 /** The card's lowest point. */
 const CARD_BOTTOM = 0.982;
-const PARCEL_FOOT = { x: 0.508, y: 0.814 };
+const CASH_FOOT = { x: 0.478, y: 0.618 };
 const MAN_FOOT = { x: 0.49, y: 0.958 };
 
 /** The chain's axis runs through the top faces; each object stands on it. */
@@ -63,7 +63,7 @@ const HOLDING_BOTTOM = TOP.holding + CARD_BOTTOM * CARD.h;
 const FEET = TOP.man + MAN_FOOT.y * MAN.h;
 const MAN_X = AXIS - 80;
 /** Where the dividend ends up: on the ground beside the person. */
-const LANDING = { x: AXIS + 62, y: FEET };
+const LANDING = { x: AXIS + 72, y: FEET };
 
 /** Annotations hang on one column, clear of the right-hand buttons. */
 const NOTE_X = 540;
@@ -73,7 +73,7 @@ const BYPASS_X = 512;
 const Y = {
   owner: TOP.man + 0.35 * MAN.h,
   relief: TOP.holding + 0.5 * CARD.h,
-  money: SEAT.ooo - 0.42 * PARCEL.h,
+  money: SEAT.ooo - 0.42 * CASH.h,
 };
 
 // ── pieces ───────────────────────────────────────────────────────────
@@ -237,11 +237,11 @@ export const Conduit: React.FC<{ len: number }> = ({ len }) => {
   const up = ramp(frame, T.rise, T.land, Easing.bezier(0.5, 0, 0.25, 1));
   const footY = interpolate(up, [0, 1], [SEAT.ooo, LANDING.y]);
   const footX = interpolate(ramp(frame, T.land - 16, T.land), [0, 1], [AXIS, LANDING.x]);
-  const parcelX = footX - PARCEL_FOOT.x * PARCEL.w;
-  const parcelTop = footY - PARCEL_FOOT.y * PARCEL.h;
+  const cashX = footX - CASH_FOOT.x * CASH.w;
+  const cashTop = footY - CASH_FOOT.y * CASH.h;
   // While it overlaps the holding it is drawn under it: it goes in at the
   // bottom and comes out of the top face, which reads as passing through.
-  const behind = parcelTop < HOLDING_BOTTOM && footY > TOP.holding;
+  const behind = cashTop < HOLDING_BOTTOM && footY > TOP.holding;
 
   // Nothing stayed inside: the holding goes to glass.
   const glass = ramp(frame, T.courier, T.courier + 12);
@@ -260,7 +260,24 @@ export const Conduit: React.FC<{ len: number }> = ({ len }) => {
   const trailOpacity = 1 - 0.6 * ramp(frame, T.tax, T.tax + 12);
   const dividendName = ooo * (1 - ramp(frame, T.rise + 4, T.rise + 14));
 
-  const parcel = <Sprite name="parcel" x={parcelX} y={parcelTop} w={PARCEL.w} opacity={ooo} />;
+  // Grounded where it rests, airborne in between.
+  const grounded = 1 - 4 * up * (1 - up);
+  const cash = (
+    <>
+      <div
+        style={{
+          position: "absolute",
+          left: footX - CASH.w * 0.5,
+          top: footY - CASH.w * 0.07,
+          width: CASH.w,
+          height: CASH.w * 0.16,
+          background: "radial-gradient(closest-side, rgba(0,0,0,0.6), rgba(0,0,0,0))",
+          opacity: ooo * grounded,
+        }}
+      />
+      <Sprite name="cash" x={cashX} y={cashTop} w={CASH.w} opacity={ooo} />
+    </>
+  );
 
   return (
     <Stage
@@ -296,7 +313,7 @@ export const Conduit: React.FC<{ len: number }> = ({ len }) => {
           <div style={{ opacity: ooo, transform: `translateY(${(1 - ooo) * 18}px)` }}>
             <Sprite name="ooo" x={CARD_X} y={TOP.ooo} w={CARD.w} />
           </div>
-          {behind ? parcel : null}
+          {behind ? cash : null}
 
           {/* The holding: solid, then glass. */}
           <Pool x={AXIS} y={HOLDING_BOTTOM - 8} w={CARD.w * 1.05} opacity={holding} />
@@ -317,7 +334,7 @@ export const Conduit: React.FC<{ len: number }> = ({ len }) => {
               }}
             />
           </div>
-          {behind ? null : parcel}
+          {behind ? null : cash}
 
           {/* "Тоже курьер": printed on the empty box's front face, in its perspective. */}
           <div
@@ -338,7 +355,7 @@ export const Conduit: React.FC<{ len: number }> = ({ len }) => {
           </div>
 
           {/* The dividend's name, where it starts. */}
-          <Callout from={parcelX + PARCEL.w + 8} y={Y.money} show={dividendName}>
+          <Callout from={cashX + CASH.w + 8} y={Y.money} show={dividendName}>
             <Label lines={["ДИВИДЕНДЫ"]} x={NOTE_X} y={Y.money} show={dividendName} color={ACCENT} />
           </Callout>
 

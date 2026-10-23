@@ -81,14 +81,18 @@
 
 ## 3D-модели и подпись к посту
 
-Машина, человек и фургон — модели с Sketchfab (в git не хранятся, лежат в
-`social/video/public/models/`):
+Машина, человек, фургон и купюра — модели с Sketchfab (в git не хранятся,
+лежат в `social/video/public/models/`):
 
 - «Red Car» — Camay, CC BY 4.0 —
   https://sketchfab.com/3d-models/red-car-595228b5dda74defb25a767a04b3da0d
 - «Dhl delivery van» — memoov, CC BY 4.0, **изменено**: перекрашен, без
   символики DHL —
   https://sketchfab.com/3d-models/dhl-delivery-van-6f952a34d1f44905af42c803cba2805f
+- «(2-sided) $100 US Dollar Bill (Circa 2009)» — Nick Sklias, CC BY 4.0,
+  **изменено**: материал переведён на свет студии и подтонирован, из купюр
+  собрана пачка с лентой —
+  https://sketchfab.com/3d-models/2-sided-100-us-dollar-bill-circa-2009-49f31b8a421c4da1b9043fc53c9a5eb0
 - «Businessman Character [Ankit] Rigged» — ankitanimationstudio, лицензия
   Sketchfab Standard (коммерческое использование разрешено, указывать
   автора не обязательно, сам файл распространять нельзя) —
@@ -96,4 +100,4 @@
 
 CC BY требует указать автора и что модель изменена. Строка для подписи:
 
-> 3D: «Red Car» — Camay, «Delivery van» — memoov (изменено), CC BY 4.0, Sketchfab.
+> 3D: «Red Car» — Camay, «Delivery van» — memoov (изменено), «$100 Bill» — Nick Sklias (изменено), CC BY 4.0, Sketchfab.
