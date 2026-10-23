@@ -35,16 +35,18 @@ const Spot: React.FC<{ cue: Cue; fps: number }> = ({ cue, fps }) => {
   );
 };
 
-export const Sound: React.FC<{ cues: Cue[]; total: number; fps: number }> = ({
-  cues,
-  total,
-  fps,
-}) => (
+export const Sound: React.FC<{
+  cues: Cue[];
+  total: number;
+  fps: number;
+  vo?: string;
+  music?: string;
+}> = ({ cues, total, fps, vo = "audio/vo.wav", music = "audio/music.mp3" }) => (
   <>
-    <Audio src={staticFile("audio/vo.wav")} />
+    <Audio src={staticFile(vo)} />
     {/* A bed, not a song: low under the voice, out with the last frame. */}
     <Audio
-      src={staticFile("audio/music.mp3")}
+      src={staticFile(music)}
       volume={(f) =>
         interpolate(f, [0, 6, total - 45, total], [0, 0.13, 0.13, 0], {
           extrapolateLeft: "clamp",

@@ -20,7 +20,7 @@
  * kept for itself would flicker.
  */
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
@@ -45,7 +45,7 @@ export const MINOR_X = BAR_L / 2 - MINOR_L / 2;
 export const PAD_L = BAR_L + 0.36;
 export const PAD_D = BLOCK_D + 0.36;
 
-export type Tone = "ceramic" | "red" | "graphite";
+export type Tone = "ceramic" | "red" | "graphite" | "glass";
 
 export type BlockState = {
   id: string;
@@ -117,6 +117,15 @@ const FINISH: Record<Tone, Finish> = {
     clearcoatRoughness: 0.18,
     envMapIntensity: 1,
   },
+  /** Tinted glazing: nearly black, all of its look is in the reflections. */
+  glass: {
+    color: "#0E1013",
+    roughness: 0.06,
+    metalness: 0.1,
+    clearcoat: 1,
+    clearcoatRoughness: 0.03,
+    envMapIntensity: 1.4,
+  },
 };
 
 const ca = new THREE.Color();
@@ -172,11 +181,15 @@ const labelTexture = (text: string, ink: string) => {
   c.height = 384;
   const ctx = c.getContext("2d")!;
   ctx.fillStyle = ink;
-  ctx.font = `800 300px ${FONT}`;
   (ctx as CanvasRenderingContext2D & { letterSpacing: string }).letterSpacing = "-6px";
   ctx.textAlign = "center";
   ctx.textBaseline = "alphabetic";
-  ctx.fillText(text, 512, 300);
+  // A long word is set smaller rather than run off the face. Short ones
+  // ("70%") keep the full 300px.
+  ctx.font = `800 300px ${FONT}`;
+  const size = Math.min(300, (300 * 960) / Math.max(1, ctx.measureText(text).width));
+  ctx.font = `800 ${size}px ${FONT}`;
+  ctx.fillText(text, 512, 195 + size * 0.35);
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = 8;
@@ -184,10 +197,11 @@ const labelTexture = (text: string, ink: string) => {
   return tex;
 };
 
-const LABEL_INK: Record<Tone, string> = {
+export const LABEL_INK: Record<Tone, string> = {
   ceramic: "#24211E",
   red: "#FBF5EE",
   graphite: "#B9B3AC",
+  glass: "#ECE8E2",
 };
 
 /** Waits for the brand face before any label is drawn into a canvas. */
@@ -206,6 +220,140 @@ const useFont = () => {
   return ready;
 };
 
+// ── reflection, finishes and print, for any object ───────────────────
+
+const ABOVE = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
+const BELOW = new THREE.Plane(new THREE.Vector3(0, -1, 0), 0);
+
+const MirrorCtx = createContext(false);
+/** True inside the reflection pass. */
+export const useMirror = () => useContext(MirrorCtx);
+
+const FontCtx = createContext(false);
+
+/**
+ * Draws its children, then their reflection under the floor.
+ *
+ * The real pass sorts after the floor and the mirrored pass before it, so
+ * a translucent object is never washed over by the floor it stands on,
+ * and its reflection always is.
+ */
+export const Reflect: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <>
+    <group renderOrder={2}>
+      <MirrorCtx.Provider value={false}>{children}</MirrorCtx.Provider>
+    </group>
+    <group scale={[1, -1, 1]} renderOrder={0}>
+      <MirrorCtx.Provider value>{children}</MirrorCtx.Provider>
+    </group>
+  </>
+);
+
+const setOpacity = (m: THREE.Material, o: number) => {
+  const want = o < 0.999;
+  if (m.transparent !== want) {
+    m.transparent = want;
+    m.needsUpdate = true;
+  }
+  m.opacity = o;
+  m.depthWrite = !want;
+};
+
+/** One of the studio finishes, blendable, clipped to its side of the floor. */
+export const useFinish = (tone: Tone, toneTo?: Tone, mix = 0, opacity = 1) => {
+  const mirror = useMirror();
+  const m = useMemo(() => {
+    // Dithered: the near-black falloffs band badly once encoded.
+    const base = new THREE.MeshPhysicalMaterial({ dithering: true });
+    base.clippingPlanes = [ABOVE];
+    return (
+      mirror ? Object.assign(mirrored(base), { clippingPlanes: [BELOW] }) : base
+    ) as THREE.MeshPhysicalMaterial;
+  }, [mirror]);
+  paint(m, tone, toneTo ?? tone, mix);
+  setOpacity(m, opacity);
+  return m;
+};
+
+/** A surface that is its own light source: the person, a lamp, a signal. */
+export const useGlow = (color: string, strength = 1, opacity = 1) => {
+  const mirror = useMirror();
+  const m = useMemo(() => {
+    const base = new THREE.MeshPhysicalMaterial({
+      dithering: true,
+      roughness: 0.3,
+      clearcoat: 1,
+      clearcoatRoughness: 0.1,
+    });
+    base.clippingPlanes = [ABOVE];
+    return (
+      mirror ? Object.assign(mirrored(base), { clippingPlanes: [BELOW] }) : base
+    ) as THREE.MeshPhysicalMaterial;
+  }, [mirror]);
+  m.color.set(color);
+  m.emissive.set(color);
+  m.emissiveIntensity = strength;
+  setOpacity(m, opacity);
+  return m;
+};
+
+/** The hard outline of a shape, for a layer that has been opened. */
+export const Edges: React.FC<{
+  geometry: THREE.BufferGeometry;
+  color?: string;
+  opacity: number;
+}> = ({ geometry, color = "#ECE8E2", opacity }) => {
+  const mirror = useMirror();
+  const edges = useMemo(() => new THREE.EdgesGeometry(geometry, 20), [geometry]);
+  if (opacity <= 0.001) return null;
+  return (
+    <lineSegments geometry={edges}>
+      <lineBasicMaterial
+        color={color}
+        transparent
+        opacity={opacity * (mirror ? 0.22 : 1)}
+        toneMapped={false}
+        clippingPlanes={[mirror ? BELOW : ABOVE]}
+      />
+    </lineSegments>
+  );
+};
+
+/**
+ * Type printed flat on a face. Never reflected: mirrored digits under a
+ * label read as a second, garbled word.
+ */
+export const Print: React.FC<{
+  text: string;
+  tone: Tone;
+  width: number;
+  position: [number, number, number];
+  rotation?: [number, number, number];
+  opacity?: number;
+}> = ({ text, tone, width, position, rotation = [0, 0, 0], opacity = 1 }) => {
+  const mirror = useMirror();
+  const font = useContext(FontCtx);
+  const m = useMemo(() => {
+    if (!font) return null;
+    const mat = new THREE.MeshStandardMaterial({
+      map: labelTexture(text, LABEL_INK[tone]),
+      transparent: true,
+      roughness: 0.5,
+      polygonOffset: true,
+      polygonOffsetFactor: -2,
+    });
+    mat.clippingPlanes = [ABOVE];
+    return mat;
+  }, [text, tone, font]);
+  if (!m || mirror || opacity <= 0.001) return null;
+  m.opacity = opacity;
+  return (
+    <mesh position={position} rotation={rotation} material={m}>
+      <planeGeometry args={[width, width * 0.375]} />
+    </mesh>
+  );
+};
+
 // ── one block ────────────────────────────────────────────────────────
 
 const geometryCache = new Map<string, THREE.BufferGeometry>();
@@ -219,47 +367,22 @@ const slab = (len: number) => {
   return g;
 };
 
-const ABOVE = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
-const BELOW = new THREE.Plane(new THREE.Vector3(0, -1, 0), 0);
-
-const Block: React.FC<{ b: BlockState; font: boolean; mirror?: boolean }> = ({
-  b,
-  font,
-  mirror = false,
-}) => {
-  const surface = useMemo(() => {
-    // Dithered: the near-black falloffs band badly once encoded.
-    const m = new THREE.MeshPhysicalMaterial({ dithering: true });
-    m.clippingPlanes = [ABOVE];
-    return (
-      mirror ? Object.assign(mirrored(m), { clippingPlanes: [BELOW] }) : m
-    ) as THREE.MeshPhysicalMaterial;
-  }, [mirror]);
-  paint(surface, b.tone, b.toneTo ?? b.tone, b.mix ?? 0);
-  const print = useMemo(() => {
-    // The reflection carries the slab but not the print: mirrored digits
-    // sat right under the labels and read as a second, garbled number.
-    if (!b.label || !font || mirror) return null;
-    const m = new THREE.MeshStandardMaterial({
-      map: labelTexture(b.label, LABEL_INK[(b.mix ?? 0) > 0.5 ? b.toneTo ?? b.tone : b.tone]),
-      transparent: true,
-      roughness: 0.5,
-      polygonOffset: true,
-      polygonOffsetFactor: -2,
-    });
-    m.clippingPlanes = [ABOVE];
-    return mirror ? Object.assign(mirrored(m), { clippingPlanes: [BELOW] }) : m;
-  }, [b.label, b.tone, b.toneTo, (b.mix ?? 0) > 0.5, font, mirror]);
-  if (print) print.opacity = b.labelOpacity ?? 1;
-  const y = (b.y ?? 0) + BLOCK_H / 2;
+const Block: React.FC<{ b: BlockState }> = ({ b }) => {
+  const mirror = useMirror();
+  const surface = useFinish(b.tone, b.toneTo, b.mix ?? 0);
+  const ink = (b.mix ?? 0) > 0.5 ? b.toneTo ?? b.tone : b.tone;
   const labelW = Math.min(b.len * 0.78, 1.5);
   return (
-    <group position={[b.x, mirror ? -y : y, b.z ?? 0]} scale={[1, mirror ? -1 : 1, 1]}>
+    <group position={[b.x, (b.y ?? 0) + BLOCK_H / 2, b.z ?? 0]}>
       <mesh geometry={slab(b.len)} material={surface} castShadow={!mirror} receiveShadow={!mirror} />
-      {print ? (
-        <mesh position={[0, -0.02, BLOCK_D / 2 + 0.003]} material={print}>
-          <planeGeometry args={[labelW, labelW * 0.375]} />
-        </mesh>
+      {b.label ? (
+        <Print
+          text={b.label}
+          tone={ink}
+          width={labelW}
+          position={[0, -0.02, BLOCK_D / 2 + 0.003]}
+          opacity={b.labelOpacity ?? 1}
+        />
       ) : null}
     </group>
   );
@@ -317,7 +440,7 @@ const Pad: React.FC<{ p: PadState }> = ({ p }) => {
 // ── the studio ───────────────────────────────────────────────────────
 
 /** A black room with softboxes in it, baked into an environment map. */
-const Studio: React.FC = () => {
+const Softboxes: React.FC = () => {
   const { gl, scene } = useThree();
   useMemo(() => {
     const room = new THREE.Scene();
@@ -358,14 +481,20 @@ const Rig: React.FC<{ pose: Pose }> = ({ pose }) => {
   return null;
 };
 
-export const World: React.FC<{
+/**
+ * The studio itself: camera, softbox reflections, key light that follows
+ * a subject, rim light, and the polished floor. Anything placed inside is
+ * lit and shadowed; wrap it in <Reflect> to give it a floor reflection.
+ */
+export const Scene: React.FC<{
   pose: Pose;
-  blocks: BlockState[];
-  pad?: PadState;
-  /** The x the key light is aimed at: the light follows "you". */
+  /** The point the key light is aimed at: the light follows the subject. */
   focus?: number;
   focusZ?: number;
-}> = ({ pose, blocks, pad, focus = 0, focusZ = 0 }) => {
+  /** Key-light level, 1 = the house setting. */
+  keyLight?: number;
+  children?: React.ReactNode;
+}> = ({ pose, focus = 0, focusZ = 0, keyLight = 1, children }) => {
   const font = useFont();
   const target = useMemo(() => new THREE.Object3D(), []);
   target.position.set(focus, 0.4, focusZ);
@@ -380,7 +509,7 @@ export const World: React.FC<{
     >
       <color attach="background" args={[BG]} />
       <fog attach="fog" args={[BG, pose.dist + 2, pose.dist + 26]} />
-      <Studio />
+      <Softboxes />
       <Rig pose={pose} />
       <primitive object={target} />
       <spotLight
@@ -388,7 +517,7 @@ export const World: React.FC<{
         target={target}
         angle={0.42}
         penumbra={1}
-        intensity={420}
+        intensity={420 * keyLight}
         decay={2}
         color="#FFF3E6"
         castShadow
@@ -399,13 +528,7 @@ export const World: React.FC<{
       />
       <directionalLight position={[6, 4, -9]} intensity={2.2} color="#FFE2D2" />
       <hemisphereLight args={["#ffffff", "#000000", 0.12]} />
-      {blocks.map((b) => (
-        <React.Fragment key={b.id}>
-          <Block b={b} font={font} />
-          <Block b={b} font={font} mirror />
-        </React.Fragment>
-      ))}
-      {pad ? <Pad p={pad} /> : null}
+      <FontCtx.Provider value={font}>{children}</FontCtx.Provider>
       {/* Polished dark floor, laid over the reflections. */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow renderOrder={1}>
         <planeGeometry args={[200, 200]} />
@@ -414,3 +537,22 @@ export const World: React.FC<{
     </ThreeCanvas>
   );
 };
+
+/** The two holdings, and the buyer's footprint when there is one. */
+export const World: React.FC<{
+  pose: Pose;
+  blocks: BlockState[];
+  pad?: PadState;
+  /** The x the key light is aimed at: the light follows "you". */
+  focus?: number;
+  focusZ?: number;
+}> = ({ pose, blocks, pad, focus = 0, focusZ = 0 }) => (
+  <Scene pose={pose} focus={focus} focusZ={focusZ}>
+    <Reflect>
+      {blocks.map((b) => (
+        <Block key={b.id} b={b} />
+      ))}
+    </Reflect>
+    {pad ? <Pad p={pad} /> : null}
+  </Scene>
+);
