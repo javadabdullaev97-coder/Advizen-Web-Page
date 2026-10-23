@@ -27,7 +27,7 @@ import { Reflect, Scene, useGlow } from "./world/World";
 
 const BUILDING = "models/building.glb";
 
-const lens = (p: Partial<Pose>): Pose => ({
+export const lens = (p: Partial<Pose>): Pose => ({
   az: 0,
   el: deg(13),
   dist: 14,
@@ -40,7 +40,7 @@ const lens = (p: Partial<Pose>): Pose => ({
 // ── DOM pieces ───────────────────────────────────────────────────────
 
 /** Words pinned to a point in the scene. */
-const Pin: React.FC<{
+export const Pin: React.FC<{
   pose: Pose;
   at: [number, number, number];
   dy?: number;
@@ -54,13 +54,13 @@ const Pin: React.FC<{
   );
 };
 
-const CityName: React.FC<{ text: string }> = ({ text }) => (
+export const CityName: React.FC<{ text: string }> = ({ text }) => (
   <div style={{ fontFamily: FONT, fontWeight: 600, fontSize: 22, letterSpacing: "0.12em", color: "#5E5850", whiteSpace: "nowrap" }}>
     {text.toUpperCase()}
   </div>
 );
 
-const Badge: React.FC<{ text: string; dim?: boolean }> = ({ text, dim = false }) => (
+export const Badge: React.FC<{ text: string; dim?: boolean }> = ({ text, dim = false }) => (
   <div
     style={{
       padding: "7px 14px",
@@ -79,21 +79,27 @@ const Badge: React.FC<{ text: string; dim?: boolean }> = ({ text, dim = false })
   </div>
 );
 
-const money = (n: number) => n.toLocaleString("ru-RU").replace(/,/g, " ");
+export const money = (n: number) => n.toLocaleString("ru-RU").replace(/,/g, " ");
 
 /** A payslip: what was earned, what was held back, what is left. */
-const Payslip: React.FC<{ x: number; y: number; rate: string; tax: number; hot?: boolean }> = ({
-  x,
-  y,
-  rate,
-  tax,
-  hot = false,
-}) => (
+export const Payslip: React.FC<{
+  x: number;
+  y: number;
+  rate: string;
+  tax: number;
+  hot?: boolean;
+  /** 0–1: the card arriving, then the tax line, then the net. */
+  show?: number;
+  taxShow?: number;
+  netShow?: number;
+}> = ({ x, y, rate, tax, hot = false, show = 1, taxShow = 1, netShow = 1 }) => (
   <div
     style={{
       position: "absolute",
       left: x,
       top: y,
+      opacity: show,
+      transform: `translateY(${(1 - show) * 40}px)`,
       width: 410,
       padding: "26px 28px 24px",
       borderRadius: 22,
@@ -105,10 +111,10 @@ const Payslip: React.FC<{ x: number; y: number; rate: string; tax: number; hot?:
   >
     <div style={{ fontSize: 22, fontWeight: 600, letterSpacing: "0.16em", color: "#8A847C" }}>РАСЧЁТНЫЙ ЛИСТОК</div>
     {[
-      ["Начислено", money(10_000_000)],
-      [`НДФЛ ${rate}`, `−${money(tax)}`],
-    ].map(([k, v]) => (
-      <div key={k} style={{ display: "flex", justifyContent: "space-between", fontSize: 28, marginTop: 14 }}>
+      ["Начислено", money(10_000_000), 1],
+      [`НДФЛ ${rate}`, `−${money(tax)}`, taxShow],
+    ].map(([k, v, o]) => (
+      <div key={k as string} style={{ display: "flex", justifyContent: "space-between", fontSize: 28, marginTop: 14, opacity: o as number }}>
         <span>{k}</span>
         <span style={{ fontVariantNumeric: "tabular-nums" }}>{v}</span>
       </div>
@@ -116,7 +122,9 @@ const Payslip: React.FC<{ x: number; y: number; rate: string; tax: number; hot?:
     <div style={{ height: 2, backgroundColor: "#CFC8BD", margin: "16px 0 12px" }} />
     <div style={{ display: "flex", justifyContent: "space-between", fontSize: 32, fontWeight: 800 }}>
       <span>На руки</span>
-      <span style={{ fontVariantNumeric: "tabular-nums", color: hot ? ACCENT : undefined }}>{money(10_000_000 - tax)}</span>
+      <span style={{ fontVariantNumeric: "tabular-nums", color: hot ? ACCENT : undefined, opacity: netShow }}>
+        {money(Math.round((10_000_000 - tax * Math.min(1, netShow * 1.0001)) / 1000) * 1000)}
+      </span>
     </div>
   </div>
 );
@@ -124,7 +132,7 @@ const Payslip: React.FC<{ x: number; y: number; rate: string; tax: number; hot?:
 // ── 3D pieces ────────────────────────────────────────────────────────
 
 /** A labelled chip, tipped over by `tilt` — a tax falling away. */
-const Chip: React.FC<{ x: number; z: number; y: number; tilt: number; spin: number; label: string }> = ({
+export const Chip: React.FC<{ x: number; z: number; y: number; tilt: number; spin: number; label: string }> = ({
   x,
   z,
   y,
@@ -140,15 +148,26 @@ const Chip: React.FC<{ x: number; z: number; y: number; tilt: number; spin: numb
 );
 
 /** Export: an arc leaving the country from a laptop. */
-const Arc: React.FC<{ from: [number, number]; to: [number, number]; height?: number }> = ({ from, to, height = 1.3 }) => {
+export const Arc: React.FC<{ from: [number, number]; to: [number, number]; height?: number; draw?: number }> = ({
+  from,
+  to,
+  height = 1.3,
+  draw = 1,
+}) => {
   const m = useGlow(ACCENT, 1.6);
+  // Rebuilt in 1/48 steps as it draws on: the tube is cheap, and a step
+  // per segment is finer than a frame can show.
+  const step = Math.round(Math.max(0, Math.min(1, draw)) * 48);
   const geometry = React.useMemo(() => {
+    if (step === 0) return null;
     const a = new THREE.Vector3(from[0], 0.32, from[1]);
     const b = new THREE.Vector3(to[0], 0.05, to[1]);
     const mid = a.clone().lerp(b, 0.5).setY(height);
-    return new THREE.TubeGeometry(new THREE.QuadraticBezierCurve3(a, mid, b), 48, 0.018, 8, false);
-  }, [from, to, height]);
-  return <mesh geometry={geometry} material={m} />;
+    const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
+    const pts = curve.getPoints(48).slice(0, step + 1);
+    return new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), Math.max(2, step), 0.018, 8, false);
+  }, [from, to, height, step]);
+  return geometry ? <mesh geometry={geometry} material={m} /> : null;
 };
 
 // ── the shots ────────────────────────────────────────────────────────
@@ -225,11 +244,11 @@ const Why: React.FC = () => {
   );
 };
 
-const MAP_SCALE = 0.42;
-const MAP_AT: [number, number] = [0, 0.15];
-const at = (city: string) => cityAt(city, MAP_SCALE, MAP_AT);
-const mapPose = lens({ az: deg(0), el: deg(46), dist: 21, target: [0.05, 0, 0.2], fov: 24, shiftY: -60 });
-const SPOTS: { city: string; lift: number }[] = [
+export const MAP_SCALE = 0.42;
+export const MAP_AT: [number, number] = [0, 0.15];
+export const at = (city: string) => cityAt(city, MAP_SCALE, MAP_AT);
+export const mapPose = lens({ az: deg(0), el: deg(46), dist: 21, target: [0.05, 0, 0.2], fov: 24, shiftY: -60 });
+export const SPOTS: { city: string; lift: number }[] = [
   { city: "Нукус", lift: 0.55 },
   { city: "Бухара", lift: 0.55 },
   { city: "Термез", lift: 0.55 },
@@ -299,24 +318,34 @@ const Status: React.FC<{ ghost: boolean }> = ({ ghost }) => {
 };
 
 /** The student card: three exams, and the auditor's two questions. */
-const Card: React.FC<{ failed: boolean }> = ({ failed }) => {
+export const Card: React.FC<{
+  failed: boolean;
+  /** How many of the three exams are ticked; fractional = the next one landing. */
+  checks?: number;
+  /** 0–1: the stamp slamming down. */
+  stamp?: number;
+  /** 0–1: the card arriving. */
+  show?: number;
+  top?: number;
+}> = ({ failed, checks = 3, stamp = failed ? 1 : 0, show = 1, top = failed ? 640 : 700 }) => {
   const rows = ["Работа по перечню", "Отчисления парку", "Аудит до 1 июля"];
   return (
     <div
       style={{
         position: "absolute",
         left: 120,
-        top: failed ? 640 : 700,
+        top,
         width: 840,
         height: 500,
         padding: "40px 46px",
         boxSizing: "border-box",
         borderRadius: 34,
         background: "linear-gradient(160deg, #F4F0E9 0%, #E4DED4 60%, #D9D2C7 100%)",
-        boxShadow: failed ? `0 0 0 5px ${ACCENT}, 0 40px 80px rgba(0,0,0,0.6)` : "0 40px 80px rgba(0,0,0,0.6)",
+        boxShadow: `0 0 0 ${5 * stamp}px ${ACCENT}, 0 40px 80px rgba(0,0,0,0.6)`,
         fontFamily: FONT,
         color: "#2A2724",
-        transform: "rotate(-3deg)",
+        opacity: show,
+        transform: `translateY(${(1 - show) * 60}px) rotate(${-3 - (1 - show) * 4}deg)`,
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
@@ -328,7 +357,8 @@ const Card: React.FC<{ failed: boolean }> = ({ failed }) => {
       </div>
       <div style={{ marginTop: 34, display: "flex", flexDirection: "column", gap: 20 }}>
         {rows.map((r, i) => {
-          const bad = failed && i === 2;
+          const bad = failed && i === 2 && stamp > 0.01;
+          const tick = Math.max(0, Math.min(1, checks - i));
           return (
             <div key={r} style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 36, fontWeight: 600 }}>
               <div
@@ -336,28 +366,33 @@ const Card: React.FC<{ failed: boolean }> = ({ failed }) => {
                   width: 44,
                   height: 44,
                   borderRadius: 22,
-                  backgroundColor: bad ? ACCENT : "#2A2724",
+                  boxSizing: "border-box",
+                  border: tick > 0 || bad ? "none" : "3px solid #B9B1A6",
+                  backgroundColor: bad ? ACCENT : tick > 0 ? "#2A2724" : "transparent",
                   color: INK,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   fontSize: 28,
                   fontWeight: 800,
+                  transform: `scale(${tick > 0 && !bad ? 0.6 + 0.4 * tick : 1})`,
                 }}
               >
-                {bad ? "✕" : "✓"}
+                {bad ? "✕" : tick > 0 ? "✓" : ""}
               </div>
               <span style={{ color: bad ? ACCENT : undefined }}>{r}</span>
             </div>
           );
         })}
       </div>
-      {failed ? (
+      {failed && stamp > 0.01 ? (
         <div
           style={{
             position: "absolute",
             right: 40,
             top: 150,
+            opacity: Math.min(1, stamp * 1.5),
+            scale: `${1 + (1 - stamp) * 0.6}`,
             padding: "10px 22px",
             border: `5px solid ${ACCENT}`,
             borderRadius: 12,
@@ -427,12 +462,12 @@ const Lost: React.FC = () => (
   </Stage>
 );
 
-const EXPORTERS: { city: string; to: [number, number] }[] = [
+export const EXPORTERS: { city: string; to: [number, number] }[] = [
   { city: "Ташкент", to: [3.6, -0.6] },
   { city: "Бухара", to: [-3.4, 1.0] },
   { city: "Нукус", to: [-3.7, -0.9] },
 ];
-const LOCAL = ["Самарканд", "Термез"];
+export const LOCAL = ["Самарканд", "Термез"];
 
 /** 6. The club is becoming an exporters' club. */
 const Exporters: React.FC = () => {

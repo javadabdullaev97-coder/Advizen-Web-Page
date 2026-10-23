@@ -8,6 +8,7 @@ import { CONDUIT_LEN, ConduitPreview } from "./UboConduit";
 import { Sprite, SpriteKind } from "./UboSprites";
 import { ModelPreview, PreviewProps } from "./ModelPreview";
 import { ItParkMock, MockShot } from "./ItPark";
+import { ITPARK_TOTAL, ItParkFilm, ItParkSoundtrack } from "./ItParkFilm";
 import { FPS, H, W } from "./theme";
 
 const Soundtrack: React.FC = () => <Sound cues={CUES} total={TOTAL} fps={FPS} />;
@@ -41,6 +42,15 @@ export const Root: React.FC = () => (
       component={Sprite}
       defaultProps={{ kind: "man" as SpriteKind }}
       durationInFrames={1}
+      fps={FPS}
+      width={W}
+      height={H}
+    />
+    <Composition id="itpark" component={ItParkFilm} durationInFrames={ITPARK_TOTAL} fps={FPS} width={W} height={H} />
+    <Composition
+      id="itpark-sound"
+      component={ItParkSoundtrack}
+      durationInFrames={ITPARK_TOTAL}
       fps={FPS}
       width={W}
       height={H}

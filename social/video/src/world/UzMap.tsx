@@ -95,6 +95,8 @@ const Slab: React.FC<{ region: Region; lift: number; warm: number; seam: string 
 
 export const UzMap: React.FC<{
   x?: number;
+  /** Height of the plate's floor; below 0 it rises out of the studio floor. */
+  y?: number;
   z?: number;
   /** 1 = MAP_W units wide. */
   scale?: number;
@@ -105,8 +107,8 @@ export const UzMap: React.FC<{
   /** Warmth for every region, under the per-region values. */
   warmAll?: number;
   seam?: string;
-}> = ({ x = 0, z = 0, scale = 1, lift = {}, warm = {}, warmAll = 0, seam = "#8E877E" }) => (
-  <group position={[x, 0, z]} scale={[scale, 1, scale]}>
+}> = ({ x = 0, y = 0, z = 0, scale = 1, lift = {}, warm = {}, warmAll = 0, seam = "#8E877E" }) => (
+  <group position={[x, y, z]} scale={[scale, 1, scale]}>
     {REGIONS.map((r) => (
       <Slab key={r.name} region={r} lift={lift[r.name] ?? 0} warm={Math.max(warmAll, warm[r.name] ?? 0)} seam={seam} />
     ))}
