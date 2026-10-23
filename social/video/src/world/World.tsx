@@ -29,6 +29,7 @@ import { continueRender, delayRender } from "remotion";
 
 import { ACCENT, BG, FONT, H, W } from "../theme";
 import { applyPose, Pose } from "./camera";
+import { useModels } from "./Model";
 
 // ── the objects' fixed geometry, in world units ──────────────────────
 
@@ -148,7 +149,7 @@ const paint = (m: THREE.MeshPhysicalMaterial, a: Tone, b: Tone, t: number) => {
  * below the floor plane, so the reflection is strong at the contact line
  * and gone a block-height down — the way a polished floor behaves.
  */
-const mirrored = (base: THREE.Material) => {
+export const mirrored = (base: THREE.Material) => {
   const m = base.clone();
   m.side = THREE.DoubleSide;
   m.onBeforeCompile = (shader) => {
@@ -222,8 +223,8 @@ const useFont = () => {
 
 // ── reflection, finishes and print, for any object ───────────────────
 
-const ABOVE = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
-const BELOW = new THREE.Plane(new THREE.Vector3(0, -1, 0), 0);
+export const ABOVE = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
+export const BELOW = new THREE.Plane(new THREE.Vector3(0, -1, 0), 0);
 
 const MirrorCtx = createContext(false);
 /** True inside the reflection pass. */
@@ -493,12 +494,16 @@ export const Scene: React.FC<{
   focusZ?: number;
   /** Key-light level, 1 = the house setting. */
   keyLight?: number;
+  /** glTF files the children use; the canvas waits until they are loaded. */
+  models?: string[];
   children?: React.ReactNode;
-}> = ({ pose, focus = 0, focusZ = 0, keyLight = 1, children }) => {
+}> = ({ pose, focus = 0, focusZ = 0, keyLight = 1, models = [], children }) => {
   const font = useFont();
+  const loaded = useModels(models);
   const target = useMemo(() => new THREE.Object3D(), []);
   target.position.set(focus, 0.4, focusZ);
   target.updateMatrixWorld();
+  if (!loaded) return null;
   return (
     <ThreeCanvas
       width={W}
