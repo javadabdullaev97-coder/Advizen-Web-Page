@@ -4,6 +4,8 @@ import { Composition } from "remotion";
 import { CUES, DragAlong, TOTAL } from "./DragAlong";
 import { Sound } from "./Sound";
 import { Ubo, UBO_CUES, UBO_TOTAL } from "./Ubo";
+import { CONDUIT_LEN, ConduitPreview } from "./UboConduit";
+import { Sprite, SpriteKind } from "./UboSprites";
 import { FPS, H, W } from "./theme";
 
 const Soundtrack: React.FC = () => <Sound cues={CUES} total={TOTAL} fps={FPS} />;
@@ -31,6 +33,16 @@ export const Root: React.FC = () => (
       height={H}
     />
     <Composition id="ubo" component={Ubo} durationInFrames={UBO_TOTAL} fps={FPS} width={W} height={H} />
+    <Composition id="ubo-conduit" component={ConduitPreview} durationInFrames={CONDUIT_LEN} fps={FPS} width={W} height={H} />
+    <Composition
+      id="ubo-sprite"
+      component={Sprite}
+      defaultProps={{ kind: "man" as SpriteKind }}
+      durationInFrames={1}
+      fps={FPS}
+      width={W}
+      height={H}
+    />
     <Composition
       id="ubo-sound"
       component={UboSoundtrack}

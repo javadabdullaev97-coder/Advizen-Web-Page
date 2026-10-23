@@ -496,8 +496,10 @@ export const Scene: React.FC<{
   keyLight?: number;
   /** glTF files the children use; the canvas waits until they are loaded. */
   models?: string[];
+  /** No room and no floor: the lit object alone on a transparent canvas, for cut-outs. */
+  cutout?: boolean;
   children?: React.ReactNode;
-}> = ({ pose, focus = 0, focusZ = 0, keyLight = 1, models = [], children }) => {
+}> = ({ pose, focus = 0, focusZ = 0, keyLight = 1, models = [], cutout = false, children }) => {
   const font = useFont();
   const loaded = useModels(models);
   const target = useMemo(() => new THREE.Object3D(), []);
@@ -509,11 +511,11 @@ export const Scene: React.FC<{
       width={W}
       height={H}
       shadows
-      gl={{ antialias: true, alpha: false }}
+      gl={{ antialias: true, alpha: cutout }}
       style={{ position: "absolute", inset: 0 }}
     >
-      <color attach="background" args={[BG]} />
-      <fog attach="fog" args={[BG, pose.dist + 2, pose.dist + 26]} />
+      {cutout ? null : <color attach="background" args={[BG]} />}
+      {cutout ? null : <fog attach="fog" args={[BG, pose.dist + 2, pose.dist + 26]} />}
       <Softboxes />
       <Rig pose={pose} />
       <primitive object={target} />
@@ -535,10 +537,12 @@ export const Scene: React.FC<{
       <hemisphereLight args={["#ffffff", "#000000", 0.12]} />
       <FontCtx.Provider value={font}>{children}</FontCtx.Provider>
       {/* Polished dark floor, laid over the reflections. */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow renderOrder={1}>
-        <planeGeometry args={[200, 200]} />
-        <meshStandardMaterial color="#0D0C0B" roughness={0.42} metalness={0} transparent opacity={0.8} dithering />
-      </mesh>
+      {cutout ? null : (
+        <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow renderOrder={1}>
+          <planeGeometry args={[200, 200]} />
+          <meshStandardMaterial color="#0D0C0B" roughness={0.42} metalness={0} transparent opacity={0.8} dithering />
+        </mesh>
+      )}
     </ThreeCanvas>
   );
 };

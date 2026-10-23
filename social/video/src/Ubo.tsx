@@ -706,18 +706,13 @@ export const UBO_CUES: Cue[] = [
   // Three lids coming off.
   ...[0, 1, 2].map((i): Cue => ({ sfx: "whoosh", at: START.open + 14 + i * 22, gain: 0.14 })),
   { sfx: "hit", at: START.open + 86, gain: 0.45 },
-  // The extra layer landing over the set, and the paperwork.
+  // The extra layer landing over the set. No glassy click anywhere in this piece:
+  // it reads as cheap here, though it suits drag-along.
   { sfx: "thud", at: START.layers + 82, gain: 0.9 },
-  ...[118, 138, 158, 178, 198].map((t): Cue => ({ sfx: "click", at: START.layers + t + 10, gain: 0.55 })),
   // The wall.
   { sfx: "hit", at: START.refuse + 68, gain: 0.85 },
-  // The parcel arriving, the relief going through the floor, the tax arriving.
-  { sfx: "click", at: START.courier + 160, gain: 0.7 },
-  { sfx: "click", at: START.conduit + 92, gain: 0.6 },
+  // The relief going through the floor.
   { sfx: "thud", at: START.conduit + 172, gain: 0.9 },
-  { sfx: "click", at: START.conduit + 228, gain: 0.7 },
-  // The sheet docking, then the bank's light.
-  { sfx: "click", at: START.sheet + 222, gain: 0.8 },
   // The light finding the driver.
   { sfx: "hit", at: START.callback + 112, gain: 0.4 },
 ];
