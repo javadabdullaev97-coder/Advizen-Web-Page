@@ -18,7 +18,7 @@ import { slide } from "@remotion/transitions/slide";
 
 import "./font";
 import { ACCENT, BG, FONT, INK, RULE, SUB } from "./theme";
-import { copy, impact, Lines, Lockup, Note, Rail, Stage } from "./kit";
+import { copy, impact, Lines, Note, Rail, Stage } from "./kit";
 import { deg, mixPose } from "./world/camera";
 import { Model } from "./world/Model";
 import { Desk, Laptop, LAPTOP, SITTING, Sitter } from "./world/Office";
@@ -123,7 +123,6 @@ const Hook: React.FC<{ len: number }> = ({ len }) => {
       len={len}
       dir="push"
       amount={0.02}
-      foot={<Lockup instant />}
       world={
         <>
           <Scene pose={pose} focus={0} models={[SITTING, LAPTOP]}>
@@ -190,7 +189,6 @@ const Why: React.FC<{ len: number }> = ({ len }) => {
       len={len}
       dir="push"
       amount={0.02}
-      foot={<Lockup instant />}
       world={
         <Scene pose={pose} focus={0}>
           <Reflect>
@@ -242,7 +240,6 @@ const Status: React.FC<{ len: number }> = ({ len }) => {
       len={len}
       dir="push"
       amount={0.015}
-      foot={<Lockup instant />}
       world={
         <>
           <Scene pose={pose} focus={0} models={[BUILDING, LAPTOP]}>
@@ -350,7 +347,7 @@ const CardShot: React.FC<{ len: number }> = ({ len }) => {
   const forty = copy(frame, fps, C.forty + 2);
   const lostHead = frame >= C.fail;
   return (
-    <Stage len={len} dir="push" amount={0.015} foot={<Lockup instant />}>
+    <Stage len={len} dir="push" amount={0.015}>
       <Rail>
         {lostHead ? (
           <Lines lines={["НЕ СДАЛИ —", "НАЛОГИ ДОНАЧИСЛЯТ"]} max={150} delay={C.fail} />
@@ -440,7 +437,6 @@ const ExportShot: React.FC<{ len: number }> = ({ len }) => {
       len={len}
       dir="push"
       amount={0.015}
-      foot={<Lockup instant />}
       world={
         <>
           <Scene pose={pose} focus={0} models={[LAPTOP]}>
@@ -512,9 +508,8 @@ const GaugeShot: React.FC<{ len: number }> = ({ len }) => {
   const fill = interpolate(frame, [10, 70], [0, 0.62], { ...clamp, easing: Easing.inOut(Easing.cubic) });
   const crossed = fill >= 0.5;
   const help = copy(frame, FPS, local("gauge", 70.7));
-  const cta = copy(frame, FPS, local("gauge", 75.6));
   return (
-    <Stage len={len} dir="push" amount={0.015} hold foot={<Lockup instant />}>
+    <Stage len={len} dir="push" amount={0.015} hold>
       <Rail>
         <Lines lines={["ПОСЧИТАЙТЕ", "ДОЛЮ ЭКСПОРТА"]} max={150} delay={4} />
       </Rail>
@@ -556,10 +551,6 @@ const GaugeShot: React.FC<{ len: number }> = ({ len }) => {
       </div>
       <div style={{ position: "absolute", left: L, top: 1060, width: 860, opacity: help, transform: `translateY(${(1 - help) * 16}px)` }}>
         <Note text={"Поможем получить статус, пройти проверки и подготовиться к 2028 году."} size={34} width={860} />
-      </div>
-      <div style={{ position: "absolute", left: L, top: 1215, fontFamily: FONT, opacity: cta, transform: `translateY(${(1 - cta) * 20}px)` }}>
-        <div style={{ fontSize: 72, fontWeight: 800, color: INK, letterSpacing: "-0.01em" }}>НАПИШИТЕ НАМ</div>
-        <div style={{ fontSize: 34, color: ACCENT, letterSpacing: "0.06em", marginTop: 4 }}>advizenco.com</div>
       </div>
     </Stage>
   );
