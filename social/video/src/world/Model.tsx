@@ -68,12 +68,18 @@ export const Model: React.FC<{
   recolor?: Record<string, string>;
   /** Multiply every material's colour, keeping its texture. */
   tint?: string;
+  /** Replace one material's texture, by material name; `glow` makes it a lit screen. */
+  maps?: Record<string, { map: THREE.Texture; glow?: number }>;
+  /** Drop nodes by name before fitting: signs, logos, ground plates. */
+  hide?: string[];
+  /** Fade the whole model, 1 = solid. */
+  opacity?: number;
   /**
    * Seconds into the model's first animation clip. Driven by the frame,
    * never by a clock, so every frame renders the same way twice.
    */
   time?: number;
-}> = ({ file, x = 0, y = 0, z = 0, ry = 0, length, height, recolor, tint, time }) => {
+}> = ({ file, x = 0, y = 0, z = 0, ry = 0, length, height, recolor, tint, maps, hide, opacity, time }) => {
   const mirror = useMirror();
   const gltf = ready.get(file) ?? null;
   const fitted = useMemo(() => {
@@ -87,6 +93,11 @@ export const Model: React.FC<{
       if ((o as THREE.Light).isLight || (o as THREE.Camera).isCamera) strays.push(o);
     });
     strays.forEach((o) => o.parent?.remove(o));
+    const hidden: THREE.Object3D[] = [];
+    // GLTFLoader strips . : / [ ] from node names; match the same way.
+    const clean = (n: string) => n.replace(/[[\].:/]/g, "");
+    if (hide?.length) root.traverse((o) => hide.some((h) => clean(o.name).startsWith(clean(h))) && hidden.push(o));
+    hidden.forEach((o) => o.parent?.remove(o));
     root.updateMatrixWorld(true);
     const box = new THREE.Box3().setFromObject(root);
     const size = box.getSize(new THREE.Vector3());
@@ -119,6 +130,16 @@ export const Model: React.FC<{
           base.map = null;
         }
         if (tint && base.color) base.color.multiply(new THREE.Color(tint));
+        const own = maps?.[m.name];
+        if (own) {
+          base.map = own.map;
+          base.color.set("#ffffff");
+          if (own.glow) {
+            base.emissive = new THREE.Color("#ffffff");
+            base.emissiveMap = own.map;
+            base.emissiveIntensity = own.glow;
+          }
+        }
         base.dithering = true;
         // Real refraction costs a whole extra pass per frame on a CPU
         // renderer; tinted, see-through glass reads the same at this size.
@@ -145,8 +166,23 @@ export const Model: React.FC<{
     if (mixer && clip) mixer.clipAction(clip).play();
     return { holder, mixer, clip };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gltf, mirror, length, height, tint, JSON.stringify(recolor ?? {})]);
+  }, [gltf, mirror, length, height, tint, maps, (hide ?? []).join(), JSON.stringify(recolor ?? {})]);
   if (!fitted) return null;
+  if (opacity !== undefined) {
+    // Set on the built materials rather than rebuilding them every frame.
+    fitted.holder.traverse((o) => {
+      const mesh = o as THREE.Mesh;
+      if (!mesh.isMesh) return;
+      (Array.isArray(mesh.material) ? mesh.material : [mesh.material]).forEach((m) => {
+        const wasTransparent = m.transparent;
+        m.transparent = opacity < 0.999;
+        m.opacity = opacity;
+        m.depthWrite = opacity >= 0.999;
+        if (wasTransparent !== m.transparent) m.needsUpdate = true;
+      });
+      mesh.castShadow = !mirror && opacity > 0.6;
+    });
+  }
   if (fitted.mixer && fitted.clip && time !== undefined) {
     fitted.mixer.setTime(time % fitted.clip.duration);
   }

@@ -6,6 +6,8 @@ import { Sound } from "./Sound";
 import { Ubo, UBO_CUES, UBO_TOTAL } from "./Ubo";
 import { CONDUIT_LEN, ConduitPreview } from "./UboConduit";
 import { Sprite, SpriteKind } from "./UboSprites";
+import { ModelPreview, PreviewProps } from "./ModelPreview";
+import { ItParkMock, MockShot } from "./ItPark";
 import { FPS, H, W } from "./theme";
 
 const Soundtrack: React.FC = () => <Sound cues={CUES} total={TOTAL} fps={FPS} />;
@@ -38,6 +40,24 @@ export const Root: React.FC = () => (
       id="ubo-sprite"
       component={Sprite}
       defaultProps={{ kind: "man" as SpriteKind }}
+      durationInFrames={1}
+      fps={FPS}
+      width={W}
+      height={H}
+    />
+    <Composition
+      id="itpark-mock"
+      component={ItParkMock}
+      defaultProps={{ shot: "hook" as MockShot }}
+      durationInFrames={60}
+      fps={FPS}
+      width={W}
+      height={H}
+    />
+    <Composition
+      id="model-preview"
+      component={ModelPreview}
+      defaultProps={{ file: "models/laptop.glb", length: 1 } as PreviewProps}
       durationInFrames={1}
       fps={FPS}
       width={W}

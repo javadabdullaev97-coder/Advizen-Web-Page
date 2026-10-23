@@ -17,7 +17,7 @@ import { Model } from "./world/Model";
 import { Cash, Shell } from "./world/Props";
 import { Scene } from "./world/World";
 
-export type SpriteKind = "man" | "ooo" | "holding" | "hollow" | "cash";
+export type SpriteKind = "man" | "ooo" | "holding" | "hollow" | "cash" | "budget";
 
 const MAN = "models/ankit.glb";
 const BILL = "models/bill.glb";
@@ -38,6 +38,8 @@ const SUBJECT: Record<SpriteKind, { y: number; el?: number; node: React.ReactNod
   // and not just the side of a stack — it is a token travelling, not a
   // thing standing on the floor with them.
   cash: { y: 0.08, el: 30, node: <Cash /> },
+  // Where the relief goes back to when a status is lost (IT Park film).
+  budget: { y: CARD.h / 2, node: <Shell {...CARD} tone="graphite" label="БЮДЖЕТ" /> },
 };
 
 export const Sprite: React.FC<{ kind: SpriteKind }> = ({ kind }) => {

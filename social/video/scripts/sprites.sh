@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 npx remotion bundle src/index.ts --out-dir="$tmp/bundle" --log=error >/dev/null
-for kind in man ooo holding hollow cash; do
+for kind in man ooo holding hollow cash budget; do
   npx remotion still "$tmp/bundle" ubo-sprite "$tmp/$kind.png" \
     --props="{\"kind\":\"$kind\"}" --gl=swangle --image-format=png --log=error --timeout=120000
 done
