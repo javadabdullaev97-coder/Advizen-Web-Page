@@ -46,17 +46,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# social cards — fonts are fetched, rendered cards are output.
-# The photographs under source/ are input and stay tracked.
-/social/fonts/*.ttf
-__pycache__/
-/public/social/*
-!/public/social/source/
-
-# Remotion lives in social/video with its own dependencies; the renders
-# are output, like the cards.
-/social/video/node_modules/
-/social/video/out/
-/social/video/public/audio/
-/social/video/public/models/
-/social/video/public/sprites/
+# Social content moved to github.com/javadabdullaev97-coder/advizen-social
+/social/
+/public/social/
