@@ -154,7 +154,6 @@
     "multiNote": "Any three or more single documents: {percent}% off the order.",
     "noMatch": "No document matches “{q}”.",
     "updated": "Updated {date}",
-    "inKit": "In kit: {kits}",
     "add": "Add",
     "added": "Added",
     "addKit": "Add kit",
@@ -211,6 +210,16 @@
       "title": "Need a document that isn't here?",
       "text": "Our lawyers draft bespoke contracts and filings for your transaction.",
       "button": "Ask for a custom document"
-    }
+    },
+    "rail": {
+      "all": "Everything",
+      "kitsGroup": "Kits",
+      "kitsItem": "All kits",
+      "docsGroup": "Documents by area"
+    },
+    "kitTag": "Kit · 3 documents",
+    "docTag": "Single document · Word, two languages",
+    "includes": "Includes",
+    "yourOrder": "Your order"
   }
 }

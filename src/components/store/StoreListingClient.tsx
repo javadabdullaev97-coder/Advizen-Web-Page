@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { createPortal } from "react-dom";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import FaqSection from "@/components/FaqSection";
@@ -79,7 +80,6 @@ export default function StoreListingClient() {
   const kitName = (id: string) => t(`kitNames.${id}`);
   const kitById = (id: string) => KITS.find((k) => k.id === id)!;
   const inOrder = (id: string) => docs.includes(id) || kits.some((k) => kitById(k).items.includes(id));
-  const kitsOf = (id: string) => KITS.filter((k) => k.items.includes(id)).map((k) => kitName(k.id));
 
   const query = q.trim().toLowerCase();
   const visibleDocs = PRODUCTS.filter(
@@ -169,6 +169,17 @@ export default function StoreListingClient() {
     }
   }
 
+  useEffect(() => {
+    if (!sheet) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setSheet(false);
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [sheet]);
+
   const input = "h-12 rounded-[12px] bg-background border border-border px-3.5 text-[16px] text-foreground-hi focus:outline-2 focus:outline-foreground-hi";
   const field = (key: keyof typeof fields, label: string, opts: { type?: string; auto?: string; hint?: string; optional?: boolean; inputMode?: "numeric" } = {}) => (
     <div className="flex flex-col gap-1.5">
@@ -212,7 +223,7 @@ export default function StoreListingClient() {
     <div className="flex flex-col">
       <div className="flex justify-between items-center">
         <h2 className="text-[20px] font-bold tracking-[-0.02em] text-foreground-hi">{t("order.title")}</h2>
-        <button type="button" onClick={() => setSheet(false)} aria-label={t("order.close")} className="lg:hidden w-9 h-9 rounded-full bg-surface-light text-foreground-hi text-xl cursor-pointer">×</button>
+        <button type="button" onClick={() => setSheet(false)} aria-label={t("order.close")} className="w-9 h-9 rounded-full bg-surface-light text-foreground-hi text-xl cursor-pointer">×</button>
       </div>
       {step === "sent" ? (
         <div className="mt-5" role="status">
@@ -293,6 +304,56 @@ export default function StoreListingClient() {
     </div>
   );
 
+  const docRow = (p: StoreProduct) => {
+    const added = inOrder(p.id);
+    const includes = tP.raw(`items.${p.id}.includes`) as string[];
+    return (
+      <li key={p.id} className="border-t border-border py-6 grid gap-x-4 sm:gap-x-5 gap-y-1 grid-cols-[44px_minmax(0,1fr)] sm:grid-cols-[52px_minmax(0,1fr)_auto_auto] items-center">
+        <div className="self-start sm:self-center"><DocThumb word={t(`docWord.${p.category}`)} /></div>
+        <div className="min-w-0">
+          <p className="text-[13px] text-muted-dark">{t("docTag")}</p>
+          <Link href={`/store/${p.id}`} className="mt-1 inline-block text-[17.5px] font-semibold text-foreground-hi hover:underline underline-offset-4">{title(p.id)}</Link>
+          <p className="mt-1 text-[15px] text-muted">{tP(`items.${p.id}.description`)}</p>
+          <p className="mt-2 text-[13.5px] text-muted-dark">
+            {t("includes")}: {includes.join(", ")} · {t("updated", { date: fmtDate(p.updated) })}
+          </p>
+        </div>
+        <div className="col-start-2 flex items-center justify-between gap-4 mt-2 sm:mt-0 sm:contents">
+          <span className="m-fig text-[22px] sm:text-right whitespace-nowrap">{fmt(p.price)}</span>
+          <button
+            type="button"
+            aria-pressed={added}
+            onClick={() => toggleDoc(p.id)}
+            disabled={added && !docs.includes(p.id)}
+            className={`m-btn ${added ? "bg-[#2c2c2e] text-muted" : "m-btn-s"}`}
+            style={{ height: 40, padding: "0 16px", minWidth: 92 }}
+          >
+            {added ? t("added") : t("add")}
+          </button>
+        </div>
+      </li>
+    );
+  };
+
+  const railButton = (id: string, label: string, n: number) => (
+    <li key={id}>
+      <button
+        type="button"
+        aria-pressed={cat === id}
+        onClick={() => setCat(id)}
+        className={`w-full flex justify-between items-center gap-3 h-11 px-3.5 rounded-full lg:rounded-[12px] whitespace-nowrap text-[15px] cursor-pointer ${cat === id ? "bg-surface-light text-foreground-hi" : "max-lg:bg-surface text-foreground hover:text-foreground-hi"}`}
+      >
+        {label}
+        <span className="text-muted tabular-nums">{n}</span>
+      </button>
+    </li>
+  );
+  const railLabel = (text: string) => <li aria-hidden className="max-lg:hidden px-3.5 pt-5 pb-1.5 text-[13px] font-semibold text-muted-dark">{text}</li>;
+
+  const docGroups = (cat === "all" ? CATEGORIES : CATEGORIES.filter((c) => c === cat))
+    .map((c) => ({ c, items: visibleDocs.filter((p) => p.category === c) }))
+    .filter((g) => g.items.length > 0);
+
   return (
     <>
       <section className="m-wrap pt-36 pb-10 lg:pt-40 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
@@ -310,7 +371,7 @@ export default function StoreListingClient() {
         </ol>
       </section>
 
-      <div className="m-wrap grid gap-10 lg:grid-cols-[210px_minmax(0,1fr)_340px] items-start pb-10">
+      <div className="m-wrap grid gap-10 lg:gap-14 lg:grid-cols-[230px_minmax(0,1fr)] items-start pb-16">
         <nav aria-label={t("all")} className="lg:sticky lg:top-28 flex flex-col gap-4 min-w-0">
           <input
             type="search"
@@ -320,36 +381,31 @@ export default function StoreListingClient() {
             aria-label={t("search")}
             className="h-12 rounded-full bg-surface border border-border px-4 text-[16px] text-foreground-hi focus:outline-2 focus:outline-foreground-hi"
           />
-          <ul className="flex lg:flex-col gap-1.5 overflow-x-auto pb-1 lg:pb-0">
-            {[{ id: "all", label: t("all"), n: PRODUCTS.length }, { id: "kits", label: t("kits"), n: KITS.length }, ...CATEGORIES.map((c) => ({ id: c as string, label: tP(`categories.${c}`), n: PRODUCTS.filter((p) => p.category === c).length }))].map((c, i) => (
-              <li key={c.id} className={i === 2 ? "lg:mt-3" : ""}>
-                <button
-                  type="button"
-                  aria-pressed={cat === c.id}
-                  onClick={() => setCat(c.id)}
-                  className={`w-full flex justify-between items-center gap-3 h-11 px-3.5 rounded-full lg:rounded-[12px] whitespace-nowrap text-[15px] cursor-pointer ${cat === c.id ? "bg-surface-light text-foreground-hi" : "max-lg:bg-surface text-foreground hover:text-foreground-hi"}`}
-                >
-                  {c.label}
-                  <span className="text-muted tabular-nums">{c.n}</span>
-                </button>
-              </li>
-            ))}
+          <ul className="flex lg:flex-col gap-1.5 lg:gap-0.5 overflow-x-auto pb-1 lg:pb-0">
+            {railButton("all", t("rail.all"), PRODUCTS.length + KITS.length)}
+            {railLabel(t("rail.kitsGroup"))}
+            {railButton("kits", t("rail.kitsItem"), KITS.length)}
+            {railLabel(t("rail.docsGroup"))}
+            {CATEGORIES.map((c) => railButton(c, tP(`categories.${c}`), PRODUCTS.filter((p) => p.category === c).length))}
           </ul>
-          <div className="max-w-[220px]">{payToggle(true)}</div>
+          <div className="max-w-[230px] lg:mt-3">
+            <p className="max-lg:hidden px-1 pb-2 text-[13px] font-semibold text-muted-dark">{t("currency")}</p>
+            {payToggle(true)}
+          </div>
         </nav>
 
-        <div className="min-w-0 flex flex-col gap-14">
+        <div className="min-w-0 flex flex-col gap-16">
           {(cat === "all" || cat === "kits") && visibleKits.length > 0 && (
-            <section>
-              <h2 className="text-[24px] font-bold tracking-[-0.03em] text-foreground-hi">{t("kitsTitle")}</h2>
-              <p className="mt-1.5 text-[15.5px] text-muted">{t("kitsLede", { percent: pct(KIT_DISCOUNT) })}</p>
-              <ul className="mt-5 flex flex-col gap-2.5">
+            <section aria-labelledby="kits-h">
+              <h2 id="kits-h" className="m-h2 text-[30px] lg:text-[36px]">{t("kitsTitle")}</h2>
+              <p className="mt-2 text-[16px] text-muted">{t("kitsLede", { percent: pct(KIT_DISCOUNT) })}</p>
+              <ul className="mt-6 flex flex-col gap-3">
                 {visibleKits.map((k) => {
                   const full = sumOf(k.items);
                   const price = kitPrice(k.items);
                   const added = kits.includes(k.id);
                   return (
-                    <li key={k.id} className="m-tile p-5 lg:p-6 grid gap-5 grid-cols-[76px_minmax(0,1fr)] sm:grid-cols-[96px_minmax(0,1fr)_auto] items-center">
+                    <li key={k.id} className="m-tile p-5 lg:p-7 grid gap-5 grid-cols-[76px_minmax(0,1fr)] sm:grid-cols-[96px_minmax(0,1fr)_auto] items-center">
                       <div aria-hidden className="relative h-[110px]">
                         {k.items.map((id, i) => (
                           <div key={id} className="absolute top-1.5 left-3" style={{ transform: ["rotate(-8deg) translate(-10px,6px)", "rotate(-1deg)", "rotate(7deg) translate(12px,4px)"][i] }}>
@@ -358,15 +414,18 @@ export default function StoreListingClient() {
                         ))}
                       </div>
                       <div className="min-w-0">
-                        <h3 className="text-[19px] font-bold tracking-[-0.02em] text-foreground-hi">{kitName(k.id)}</h3>
-                        <p className="mt-1.5 text-[14.5px] leading-[1.5] text-muted">{k.items.map(title).join(" · ")}</p>
+                        <p className="inline-block rounded-full bg-primary/20 text-[#ff9fb0] text-[12.5px] font-semibold px-2.5 py-1">{t("kitTag")}</p>
+                        <h3 className="mt-2 text-[20px] font-bold tracking-[-0.02em] text-foreground-hi">{kitName(k.id)}</h3>
+                        <ul className="mt-1.5 text-[14.5px] leading-[1.6] text-muted">
+                          {k.items.map((id) => <li key={id}>{title(id)}</li>)}
+                        </ul>
                       </div>
-                      <div className="col-span-2 sm:col-span-1 flex items-center justify-between sm:justify-end gap-3 sm:gap-5 min-w-0">
+                      <div className="col-span-2 sm:col-span-1 flex max-sm:flex-col max-sm:items-stretch sm:items-center sm:justify-end gap-3 sm:gap-5 min-w-0">
                         <div className="sm:text-right">
                           <p className="m-fig text-[24px]">{fmt(price)}</p>
                           <p className="mt-1 text-[13.5px] text-muted whitespace-nowrap"><s className="text-muted-dark">{fmt(full)}</s> · {t("save", { amount: fmt(full - price) })}</p>
                         </div>
-                        <button type="button" aria-pressed={added} onClick={() => toggleKit(k.id)} className={`m-btn shrink-0 max-sm:px-4 ${added ? "bg-[#2c2c2e] text-muted" : "m-btn-s"}`} style={{ height: 42 }}>
+                        <button type="button" aria-pressed={added} onClick={() => toggleKit(k.id)} className={`m-btn shrink-0 max-sm:w-full ${added ? "bg-[#2c2c2e] text-muted" : "m-btn-s"}`} style={{ height: 44 }}>
                           {added ? t("added") : t("addKit")}
                         </button>
                       </div>
@@ -378,51 +437,27 @@ export default function StoreListingClient() {
           )}
 
           {cat !== "kits" && (
-            <section>
-              <h2 className="text-[24px] font-bold tracking-[-0.03em] text-foreground-hi">{cat === "all" ? t("allDocs") : tP(`categories.${cat}`)}</h2>
-              <p className="mt-1.5 text-[15.5px] text-muted">{t("multiNote", { percent: pct(MULTI_DISCOUNT) })}</p>
-              {visibleDocs.length === 0 ? (
+            <section aria-labelledby="docs-h">
+              <h2 id="docs-h" className="m-h2 text-[30px] lg:text-[36px]">{cat === "all" ? t("allDocs") : tP(`categories.${cat}`)}</h2>
+              <p className="mt-2 text-[16px] text-muted">{t("multiNote", { percent: pct(MULTI_DISCOUNT) })}</p>
+              {docGroups.length === 0 ? (
                 <p className="mt-6 text-muted">{t("noMatch", { q })}</p>
               ) : (
-                <ul className="mt-5 border-b border-border">
-                  {visibleDocs.map((p) => {
-                    const added = inOrder(p.id);
-                    const inKits = kitsOf(p.id);
-                    return (
-                      <li key={p.id} className="border-t border-border py-5 grid gap-x-4 sm:gap-x-5 gap-y-1 grid-cols-[44px_minmax(0,1fr)] sm:grid-cols-[52px_minmax(0,1fr)_auto_auto] items-center">
-                        <div className="self-start sm:self-center"><DocThumb word={t(`docWord.${p.category}`)} /></div>
-                        <div className="min-w-0">
-                          <Link href={`/store/${p.id}`} className="text-[17.5px] font-semibold text-foreground-hi hover:underline underline-offset-4">{title(p.id)}</Link>
-                          <p className="mt-1 text-[15px] text-muted">{tP(`items.${p.id}.description`)}</p>
-                          <p className="mt-2 flex flex-wrap gap-x-3.5 gap-y-1 text-[13.5px] text-muted-dark">
-                            <span>{tP(`categories.${p.category}`)}</span>
-                            <span>{t("updated", { date: fmtDate(p.updated) })}</span>
-                            {inKits.length > 0 && <span className="text-muted">{t("inKit", { kits: inKits.join(", ") })}</span>}
-                          </p>
-                        </div>
-                        <div className="col-start-2 flex items-center justify-between gap-4 mt-2 sm:mt-0 sm:contents">
-                          <span className="m-fig text-[22px] sm:text-right whitespace-nowrap">{fmt(p.price)}</span>
-                          <button
-                            type="button"
-                            aria-pressed={added}
-                            onClick={() => toggleDoc(p.id)}
-                            disabled={added && !docs.includes(p.id)}
-                            className={`m-btn ${added ? "bg-[#2c2c2e] text-muted" : "m-btn-s"}`}
-                            style={{ height: 40, padding: "0 16px", minWidth: 92 }}
-                          >
-                            {added ? t("added") : t("add")}
-                          </button>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
+                docGroups.map((g) => (
+                  <div key={g.c} className="mt-10 first-of-type:mt-8">
+                    {cat === "all" && (
+                      <h3 className="flex items-baseline gap-3 pb-3 text-[20px] font-bold tracking-[-0.02em] text-foreground-hi">
+                        {tP(`categories.${g.c}`)}
+                        <span className="text-[15px] font-medium text-muted">{t("docs", { count: g.items.length })}</span>
+                      </h3>
+                    )}
+                    <ul className="border-b border-border">{g.items.map(docRow)}</ul>
+                  </div>
+                ))
               )}
             </section>
           )}
         </div>
-
-        <aside aria-label={t("order.title")} className="hidden lg:block sticky top-28 m-tile p-6">{basket}</aside>
       </div>
 
       <section className="m-wrap pb-6">
@@ -437,26 +472,31 @@ export default function StoreListingClient() {
 
       <FaqSection page="store" />
 
-      <div className="lg:hidden h-20" aria-hidden />
-      <div className="lg:hidden fixed inset-x-0 bottom-0 z-40 bg-background border-t border-border m-wrap pt-2.5 pb-[calc(10px+env(safe-area-inset-bottom))] flex justify-between items-center gap-4">
-        <div>
-          <p className="m-fig text-[22px]">{fmt(total)}</p>
-          <p className="text-[13.5px] text-muted mt-1">{t("docs", { count })}</p>
-        </div>
-        <button type="button" onClick={() => setSheet(true)} className="m-btn m-btn-p" style={{ height: 46 }}>{t("order.review")}</button>
-      </div>
-      {sheet && (
-        <div className="lg:hidden fixed inset-0 z-[70] bg-black/60" onClick={() => setSheet(false)}>
+      {count > 0 && <div className="h-24" aria-hidden />}
+      {/* The order bar and panel sit on <body>: inside <main> they would stay under the site header. */}
+      {count > 0 && createPortal(
+          <div className="fixed z-[60] bottom-0 inset-x-0 lg:bottom-6 lg:left-1/2 lg:right-auto lg:-translate-x-1/2 lg:w-[min(560px,calc(100vw-40px))] bg-surface border-t lg:border border-border lg:rounded-full shadow-[0_18px_50px_-12px_rgba(0,0,0,.7)] pl-5 lg:pl-7 pr-3 pt-2.5 lg:pt-2 pb-[calc(10px+env(safe-area-inset-bottom))] lg:pb-2 flex justify-between items-center gap-4">
+            <div className="min-w-0">
+              <p className="text-[14px] text-muted whitespace-nowrap"><span className="max-sm:hidden">{t("yourOrder")} · </span>{t("docs", { count })}</p>
+              <p className="m-fig text-[22px]">{fmt(total)}</p>
+            </div>
+            <button type="button" onClick={() => setSheet(true)} className="m-btn m-btn-p" style={{ height: 46 }}>{t("order.review")}</button>
+          </div>,
+          document.body,
+      )}
+      {sheet && createPortal(
+        <div className="fixed inset-0 z-[70] bg-black/60" onClick={() => setSheet(false)}>
           <div
             role="dialog"
             aria-modal="true"
             aria-label={t("order.title")}
             onClick={(e) => e.stopPropagation()}
-            className="absolute inset-x-0 bottom-0 max-h-[88vh] overflow-y-auto bg-surface rounded-t-[26px] px-5 pt-6 pb-[calc(24px+env(safe-area-inset-bottom))]"
+            className="absolute bg-surface overflow-y-auto inset-x-0 bottom-0 max-h-[88vh] rounded-t-[26px] px-5 pt-6 pb-[calc(24px+env(safe-area-inset-bottom))] lg:inset-y-0 lg:left-auto lg:right-0 lg:max-h-none lg:w-[460px] lg:rounded-t-none lg:rounded-l-[26px] lg:p-8"
           >
             {basket}
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   );

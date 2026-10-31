@@ -154,7 +154,6 @@
     "multiNote": "Uch va undan ortiq alohida hujjat: buyurtmaga {percent}% chegirma.",
     "noMatch": "«{q}» bo'yicha hujjat topilmadi.",
     "updated": "Yangilangan: {date}",
-    "inKit": "To'plamda: {kits}",
     "add": "Qo'shish",
     "added": "Qo'shildi",
     "addKit": "To'plamni qo'shish",
@@ -211,6 +210,16 @@
       "title": "Kerakli hujjat yo'qmi?",
       "text": "Yuristlarimiz bitimingiz uchun shartnoma yoki ariza tayyorlab beradi.",
       "button": "Individual hujjat buyurtma qilish"
-    }
+    },
+    "rail": {
+      "all": "Barchasi",
+      "kitsGroup": "To'plamlar",
+      "kitsItem": "Barcha to'plamlar",
+      "docsGroup": "Bo'limlar bo'yicha hujjatlar"
+    },
+    "kitTag": "To'plam · 3 ta hujjat",
+    "docTag": "Alohida hujjat · Word, ikki tilda",
+    "includes": "Tarkibi",
+    "yourOrder": "Buyurtmangiz"
   }
 }
