@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "A practical guide to Uzbekistan's unified licensing, permitting, and notification framework under Law No. ЗРУ-701.",
     author: "Advizen Legal Practice",
@@ -381,3 +383,5 @@ export default {
     ],
   },
 };
+
+export default article;

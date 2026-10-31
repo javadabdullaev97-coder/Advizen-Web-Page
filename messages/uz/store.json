@@ -1,31 +1,8 @@
 {
   "StorePage": {
-    "hero": {
-      "eyebrow": "Hujjatlar do'koni",
-      "heading": "O'zbekistonda biznes yuritish uchun tayyor hujjatlar",
-      "description": "O'zbekiston me'yoriy bazasi uchun yaratilgan, ingliz, rus va o'zbek tillarida mavjud bo'lgan professional ravishda tayyorlangan yuridik, soliq, HR va compliance shablonlari.",
-      "feature1": "Tezkor yuklab olish",
-      "feature2": "EN / RU / UZ",
-      "feature3": "2025 uchun yangilangan",
-      "feature4": "Yuristlar ko'rib chiqgan"
-    },
-    "filters": {
-      "categoryAll": "Barchasi",
-      "noResults": "Bu kombinatsiyaga mos hujjatlar yo'q.",
-      "clearFilters": "Filtrlarni tozalash",
-      "documentsCount": "{count, plural, one {# hujjat} other {# hujjat}}",
-      "documentsInCategory": " {category} sohasida",
-      "documentsLang": " · {language}"
-    },
     "card": {
       "includes": "Tarkibi",
       "purchase": "Sotib olish"
-    },
-    "cta": {
-      "eyebrow": "Maxsus narsa kerakmi?",
-      "heading": "Izlagan narsangizni topmadingizmi?",
-      "description": "Bizning jamoamiz aniq bitim, struktura yoki yurisdiksiyangizga moslashtirilgan maxsus hujjatlarni tayyorlaydi.",
-      "button": "Jamoa bilan bog'lanish"
     }
   },
   "StoreProducts": {

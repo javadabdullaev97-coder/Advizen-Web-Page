@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "A practical overview of Uzbekistan's accounting law — who must comply, how books are kept, what reports are required, and what penalties apply.",
     author: "Advizen Legal Practice",
@@ -596,3 +598,5 @@ export default {
     ],
   },
 };
+
+export default article;

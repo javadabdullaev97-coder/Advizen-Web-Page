@@ -1,6 +1,7 @@
 "use client";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 import { W, H, REGIONS, ARAL_D, TASHKENT, CYCLE_ORDER } from "./uzbekistan-map.data";
 
@@ -10,15 +11,7 @@ export default function UzbekistanMap({ onActiveChange }: { onActiveChange?: (id
   const [hovered, setHovered] = useState<string | null>(null);
   const [cycleIdx, setCycleIdx] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setIsMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (reduced || isMobile) return;
@@ -35,7 +28,6 @@ export default function UzbekistanMap({ onActiveChange }: { onActiveChange?: (id
   }, [reduced, hovered, isMobile]);
 
   const activeId = isMobile ? (hovered ?? "UZ-TK") : (hovered ?? CYCLE_ORDER[cycleIdx]);
-  const regionName = REGIONS.find(r => r.id === activeId)?.name ?? "";
 
   useEffect(() => {
     onActiveChange?.(activeId);

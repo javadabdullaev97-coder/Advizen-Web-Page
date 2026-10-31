@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, type MouseEvent } from "react";
+import { useState, useEffect, useMemo, useRef, type MouseEvent } from "react";
 import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -90,13 +90,16 @@ export default function ArticlePageClient({ slug }: { slug: string }) {
     history.replaceState(null, "", `#${id}`);
   };
 
-  const article = getArticleBySlug(slug, locale);
+  const article = useMemo(() => getArticleBySlug(slug, locale), [slug, locale]);
 
   /* Build TOC whether or not article exists (keeps hook deps stable) */
-  const toc =
-    article?.content
-      .filter((b) => b.type === "h2" && b.text)
-      .map((b, i) => ({ id: slugify(b.text!) || `section-${i}`, text: b.text! })) ?? [];
+  const toc = useMemo(
+    () =>
+      article?.content
+        .filter((b) => b.type === "h2" && b.text)
+        .map((b, i) => ({ id: slugify(b.text!) || `section-${i}`, text: b.text! })) ?? [],
+    [article],
+  );
 
   /* ── Scroll-spy via IntersectionObserver ───────────────────────────────────── */
   useEffect(() => {

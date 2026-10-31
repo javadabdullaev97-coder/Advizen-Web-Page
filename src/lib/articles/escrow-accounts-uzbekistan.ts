@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "What the 2025–2026 legislative reforms mean for buyers, sellers, and developers",
     author: "Advizen Legal Practice",
@@ -279,3 +281,5 @@ export default {
     ],
   },
 };
+
+export default article;

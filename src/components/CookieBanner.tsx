@@ -1,11 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 const STORAGE_KEY = "cookie_consent";
+const CHANGE_EVENT = "cookie-consent-change";
+
+function subscribe(onChange: () => void) {
+  window.addEventListener("storage", onChange);
+  window.addEventListener(CHANGE_EVENT, onChange);
+  return () => {
+    window.removeEventListener("storage", onChange);
+    window.removeEventListener(CHANGE_EVENT, onChange);
+  };
+}
+
+function hasConsent() {
+  try {
+    return localStorage.getItem(STORAGE_KEY) !== null;
+  } catch {
+    return false;
+  }
+}
 
 const COPY = {
   en: {
@@ -27,15 +45,14 @@ const COPY = {
 
 export default function CookieBanner() {
   const locale = useLocale() as keyof typeof COPY;
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
-  }, []);
+  // On the server and during hydration the banner stays hidden, so the HTML matches.
+  const visible = !useSyncExternalStore(subscribe, hasConsent, () => true);
 
   const accept = () => {
-    localStorage.setItem(STORAGE_KEY, "1");
-    setVisible(false);
+    try {
+      localStorage.setItem(STORAGE_KEY, "1");
+    } catch {}
+    window.dispatchEvent(new Event(CHANGE_EVENT));
   };
 
   const copy = COPY[locale] ?? COPY.en;

@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "A practical guide for employers operating in Uzbekistan",
     author: "Advizen HR Practice",
@@ -279,3 +281,5 @@ export default {
     ],
   },
 };
+
+export default article;

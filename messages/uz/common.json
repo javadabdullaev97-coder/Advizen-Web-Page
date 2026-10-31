@@ -38,17 +38,5 @@
     "virtualOffice": "Virtual ofis",
     "tashkent": "Toshkent, O'zbekiston",
     "location": "Mirzo Ulug'bek tumani, Toshkent"
-  },
-  "LanguageSwitcher": {
-    "label": "Til",
-    "en": "Ingliz",
-    "ru": "Rus",
-    "uz": "O'zbek"
-  },
-  "Hero": {
-    "eyebrow": "Biznes konsalting · O'zbekiston",
-    "subtitle": "Markaziy Osiyoda biznes ochayotgan va faoliyat yuritayotgan kompaniyalar uchun strategik maslahat.",
-    "cta": "Maslahatga yozilish",
-    "location": "Toshkent, O'zbekiston"
   }
 }

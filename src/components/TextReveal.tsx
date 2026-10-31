@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { motion } from "framer-motion";
 import {
   textRevealContainer,
@@ -25,14 +25,7 @@ export default function TextReveal({
   mode = "word",
   delay = 0,
 }: TextRevealProps) {
-  const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 768);
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setIsMobile(mq.matches);
-    const h = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", h);
-    return () => mq.removeEventListener("change", h);
-  }, []);
+  const isMobile = useIsMobile();
 
   if (isMobile) {
     return <Tag className={className}>{text}</Tag>;
@@ -98,14 +91,7 @@ export function RevealLine({
   delay = 0,
   className = "",
 }: RevealLineProps) {
-  const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 768);
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setIsMobile(mq.matches);
-    const h = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", h);
-    return () => mq.removeEventListener("change", h);
-  }, []);
+  const isMobile = useIsMobile();
 
   if (isMobile) {
     return <div className={className}>{children}</div>;

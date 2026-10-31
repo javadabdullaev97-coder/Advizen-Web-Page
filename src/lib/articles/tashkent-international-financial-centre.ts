@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle:
       "A neutral analysis of Constitutional Law No. ЎРҚ-1158 of 13 July 2026 establishing the Tashkent International Financial Centre — its legal architecture, tax regime, operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.",
@@ -843,3 +845,5 @@ export default {
     ],
   },
 };
+
+export default article;

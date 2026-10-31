@@ -78,22 +78,9 @@ export default function CheckoutModal({
   const [legalEmail, setLegalEmail] = useState("");
   const [legalPhone, setLegalPhone] = useState("");
 
-  const [selectedDocs, setSelectedDocs] = useState<string[]>([]);
+  const [selectedDocs, setSelectedDocs] = useState<string[]>(productId ? [productId] : []);
   const [termsChecked, setTermsChecked] = useState(false);
   const [confirming, setConfirming] = useState(false);
-
-  useEffect(() => {
-    if (open) {
-      setStep(1);
-      setLanguage(null);
-      setOrderType("individual");
-      setFirstName(""); setLastName(""); setEmail(""); setPhone(""); setPinfl("");
-      setCompanyName(""); setInn(""); setLegalEmail(""); setLegalPhone("");
-      setSelectedDocs(productId ? [productId] : []);
-      setTermsChecked(false);
-      setConfirming(false);
-    }
-  }, [open, productId]);
 
   useEffect(() => {
     if (!open) return;

@@ -38,17 +38,5 @@
     "virtualOffice": "Virtual Office",
     "tashkent": "Tashkent, Uzbekistan",
     "location": "Mirzo Ulugbek district, Tashkent"
-  },
-  "LanguageSwitcher": {
-    "label": "Language",
-    "en": "English",
-    "ru": "Russian",
-    "uz": "Uzbek"
-  },
-  "Hero": {
-    "eyebrow": "Business Advisory · Uzbekistan",
-    "subtitle": "Strategic counsel for businesses entering and operating across Central Asia.",
-    "cta": "Schedule a consultation",
-    "location": "Tashkent, Uzbekistan"
   }
 }

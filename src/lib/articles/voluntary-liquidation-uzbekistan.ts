@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "A practical walkthrough of Uzbekistan's simplified voluntary liquidation procedure for commercial entities, following the 2019 presidential reform.",
     author: "Advizen Legal Practice",
@@ -633,3 +635,5 @@ export default {
     },
   },
 };
+
+export default article;

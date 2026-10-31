@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { motion, useReducedMotion } from "framer-motion";
 import { ReactNode } from "react";
 import {
@@ -23,15 +23,7 @@ export default function AnimatedSection({
   delay = 0,
 }: Props) {
   const shouldReduce = useReducedMotion();
-  const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 768);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setIsMobile(mq.matches);
-    const h = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", h);
-    return () => mq.removeEventListener("change", h);
-  }, []);
+  const isMobile = useIsMobile();
 
   const simple = shouldReduce || isMobile;
 

@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "A structured guide to the tax, customs, legal, and currency benefits available to participants of Uzbekistan's Special Economic Zones.",
     author: "Advizen Legal Practice",
@@ -426,3 +428,5 @@ export default {
     ],
   },
 };
+
+export default article;

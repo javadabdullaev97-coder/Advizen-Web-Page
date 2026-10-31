@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "Explore the specialized legal framework, significant tax incentives, and unique support mechanisms available for businesses and professionals within Uzbekistan's rapidly developing Creative Industry Park.",
     author: "Advizen Legal Practice",
@@ -273,3 +275,5 @@ export default {
     ],
   },
 };
+
+export default article;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
 import {
   AlertTriangle,
@@ -97,22 +97,34 @@ const AT_RISK_LABEL: Record<string, string> = {
   uz: "Bu holatsiz xatarlar",
 };
 
+// The currency lives in a cookie (the middleware sets it from CF-IPCountry); the page reads it
+// as an external store so the server render and hydration both start from USD.
+const CURRENCY_EVENT = "currency-change";
+
+function subscribeCurrency(onChange: () => void) {
+  window.addEventListener(CURRENCY_EVENT, onChange);
+  return () => window.removeEventListener(CURRENCY_EVENT, onChange);
+}
+
+function readCurrency(): Currency {
+  const match = document.cookie.match(/(?:^|;\s*)currency=(USD|UZS)/);
+  return (match?.[1] as Currency) ?? "USD";
+}
+
+function saveCurrency(curr: Currency) {
+  document.cookie = `currency=${curr}; path=/; max-age=31536000; SameSite=Lax`;
+  window.dispatchEvent(new Event(CURRENCY_EVENT));
+}
+
 export default function ProductDetailClient({ slug }: { slug: string }) {
   const product = getProductById(slug);
-  const [currency, setCurrency] = useState<Currency>("USD");
+  const currency = useSyncExternalStore(subscribeCurrency, readCurrency, () => "USD" as Currency);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [checkoutKey, setCheckoutKey] = useState(0);
+  const openCheckout = () => { setCheckoutKey((k) => k + 1); setCheckoutOpen(true); };
   const locale = useLocale() as Locale;
 
-  // On mount: read currency cookie set by middleware (CF-IPCountry detection)
-  useEffect(() => {
-    const match = document.cookie.match(/(?:^|;\s*)currency=(USD|UZS)/);
-    if (match) setCurrency(match[1] as Currency);
-  }, []);
-
-  const handleCurrencyChange = (curr: Currency) => {
-    setCurrency(curr);
-    document.cookie = `currency=${curr}; path=/; max-age=31536000; SameSite=Lax`;
-  };
+  const handleCurrencyChange = (curr: Currency) => saveCurrency(curr);
   const tProducts = useTranslations("StoreProducts");
   const t = useTranslations("StorePage.card");
 
@@ -366,7 +378,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                   {/* Purchase button */}
                   <button
                     type="button"
-                    onClick={() => setCheckoutOpen(true)}
+                    onClick={openCheckout}
                     className="w-full rounded-lg bg-primary hover:bg-primary-light py-3 text-center text-[11px] tracking-[0.18em] uppercase font-medium text-foreground/90 hover:text-white transition-all duration-200 cursor-pointer mb-5"
                   >
                     {t("purchase")}
@@ -477,7 +489,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
         </div>
         <button
           type="button"
-          onClick={() => setCheckoutOpen(true)}
+          onClick={openCheckout}
           className="shrink-0 rounded-full bg-primary hover:bg-primary-light active:scale-95 px-6 py-3 text-[11px] tracking-[0.18em] uppercase font-medium text-foreground/90 hover:text-white transition-all duration-200 cursor-pointer"
         >
           {t("purchase")}
@@ -485,6 +497,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </div>
 
       <CheckoutModal
+        key={checkoutKey}
         open={checkoutOpen}
         onClose={() => setCheckoutOpen(false)}
         productId={slug}

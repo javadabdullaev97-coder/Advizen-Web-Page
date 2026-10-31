@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, Calculator, Scale, LineChart, Users, Landmark, Handshake, ScanSearch, LayoutDashboard, Briefcase, UserCheck, Wallet, Globe, MapPin, ShieldCheck, ChevronDown } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
@@ -146,14 +147,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
   const tEng = useTranslations("Engagements");
   const service = getServiceBySlug(slug);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setIsMobile(mq.matches);
-    const h = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", h);
-    return () => mq.removeEventListener("change", h);
-  }, []);
+  const isMobile = useIsMobile();
 
   if (!service) return null;
 

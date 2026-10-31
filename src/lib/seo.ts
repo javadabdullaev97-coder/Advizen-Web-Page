@@ -8,7 +8,7 @@ import { routing, type Locale } from "@/i18n/routing";
 const SITE_URL = "https://www.advizenco.com";
 const ORG_NAME = "Advizen Consulting";
 const ORG_LOGO = `${SITE_URL}/Advizen Logo/android-chrome-512x512.png`;
-const OG_IMAGE = `${SITE_URL}/Advizen Logo/OG-clean.png`;
+const OG_IMAGE = `${SITE_URL}/Advizen Logo/og.jpg`;
 
 const OG_LOCALE: Record<Locale, string> = {
   en: "en_US",

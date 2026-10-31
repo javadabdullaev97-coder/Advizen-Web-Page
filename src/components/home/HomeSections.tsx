@@ -5,6 +5,7 @@ import { allEngagements } from "@/lib/industries";
 import { publications, sortedPublications } from "@/lib/publications";
 
 const TELEGRAM = "https://t.me/advizen";
+const UZ_MONTHS = ["yan", "fev", "mar", "apr", "may", "iyn", "iyl", "avg", "sen", "okt", "noy", "dek"];
 const WHATSAPP = "https://wa.me/message/EKU3HEOTSK43O1";
 
 type Proof = { fig: string; text: string };
@@ -153,7 +154,11 @@ export function HomeInsights() {
   const tPub = useTranslations("Publications");
   const locale = useLocale();
   const recent = sortedPublications(publications.filter((p) => p.hasRead)).slice(0, 3);
-  const dateFmt = new Intl.DateTimeFormat(locale === "uz" ? "uz-Latn" : locale, { month: "short", year: "numeric" });
+  const dateFmt = new Intl.DateTimeFormat(locale, { month: "short", year: "numeric" });
+  const fmtDate = (iso: string) => {
+    const d = new Date(iso);
+    return locale === "uz" ? `${UZ_MONTHS[d.getMonth()]} ${d.getFullYear()}` : dateFmt.format(d);
+  };
   return (
     <section className="m-wrap pb-24 lg:pb-36">
       <SectionHead title={t("title")} lede={t("lede")}>
@@ -178,7 +183,7 @@ export function HomeInsights() {
                 <div className="min-w-0">
                   <p className="text-[14px] text-muted">
                     {tPub(`tags.${p.tag}`)}
-                    {p.date ? ` · ${dateFmt.format(new Date(p.date))}` : ""}
+                    {p.date ? ` · ${fmtDate(p.date)}` : ""}
                   </p>
                   <h4 className="mt-2 text-[20px] lg:text-[22px] font-bold leading-[1.25] tracking-[-0.02em] text-foreground-hi">{tPub(`items.${p.slug}.title`)}</h4>
                 </div>

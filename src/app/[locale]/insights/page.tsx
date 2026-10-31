@@ -1,8 +1,9 @@
 "use client";
 
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
@@ -124,14 +125,7 @@ export default function LibraryPage() {
   const [activeFilter, setActiveFilter] = useState<FilterTag>("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setIsMobile(mq.matches);
-    const h = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", h);
-    return () => mq.removeEventListener("change", h);
-  }, []);
+  const isMobile = useIsMobile();
   const tHero = useTranslations("InsightsPage.hero");
   const tFlagship = useTranslations("InsightsPage.flagship");
   const tPubs = useTranslations("InsightsPage.publications");
@@ -161,8 +155,6 @@ export default function LibraryPage() {
     }
     return result;
   }, [activeFilter, searchQuery]);
-
-  useEffect(() => { setCurrentPage(1); }, [activeFilter, searchQuery]);
 
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
   const paginated = filtered.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
@@ -349,7 +341,7 @@ export default function LibraryPage() {
                 {filters.map((f) => (
                   <button
                     key={f}
-                    onClick={() => setActiveFilter(f)}
+                    onClick={() => { setActiveFilter(f); setCurrentPage(1); }}
                     className="relative px-4 py-2.5 rounded-full text-xs uppercase tracking-[0.14em] transition-colors duration-200 cursor-pointer"
                   >
                     {activeFilter === f && (
@@ -379,13 +371,13 @@ export default function LibraryPage() {
                 <input
                   type="text"
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
                   placeholder={tPubs("searchPlaceholder")}
                   className="w-full bg-white/[0.03] border border-white/[0.08] rounded-full pl-11 pr-10 py-2.5 text-sm text-white/80 placeholder-white/25 outline-none focus:border-white/20 focus:bg-white/[0.05] transition-all duration-200"
                 />
                 {searchQuery && (
                   <button
-                    onClick={() => setSearchQuery("")}
+                    onClick={() => { setSearchQuery(""); setCurrentPage(1); }}
                     className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 transition-colors duration-150 cursor-pointer"
                   >
                     <X className="w-3.5 h-3.5" />
@@ -413,7 +405,7 @@ export default function LibraryPage() {
                     : tPubs("noResultsCategory")}
                 </p>
                 <button
-                  onClick={() => { setActiveFilter("All"); setSearchQuery(""); }}
+                  onClick={() => { setActiveFilter("All"); setSearchQuery(""); setCurrentPage(1); }}
                   className="mt-4 text-xs text-primary-light/70 hover:text-primary-light underline underline-offset-4 transition-colors cursor-pointer"
                 >
                   {tPubs("clearFilters")}

@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Advizen website
 
-## Getting Started
+The site at [advizenco.com](https://www.advizenco.com): tax, legal and
+accounting advisory in Uzbekistan, in English, Russian and Uzbek.
 
-First, run the development server:
+Next.js 16 (App Router) with next-intl, Tailwind CSS 4, deployed to
+Cloudflare Workers through OpenNext. Social content lives in its own
+repository, [advizen-social](https://github.com/javadabdullaev97-coder/advizen-social).
+
+## Run it
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build:next   # Next.js production build, the quickest full check
+npm run build        # the Cloudflare build that deploys
+npm run lint
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Every push to `main` deploys: Cloudflare Workers Builds runs `npm run build`
+and `npx wrangler deploy`. See `AGENTS.md` for the push rules.
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+Set them on the Cloudflare Worker (`advizen`); `wrangler.jsonc` holds the
+ones that are not secret.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable | Used by |
+| --- | --- |
+| `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` | contact and order notifications to the team |
+| `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `RESEND_TO_EMAIL` | emails for contact requests and orders |
+| `INDEXNOW_SECRET` | `/api/indexnow`, which pings Bing and Yandex about new pages |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Where things are
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Path | What |
+| --- | --- |
+| `src/app/[locale]/` | pages; English has no prefix (`src/app/(en)/` re-exports them) |
+| `src/components/home/` | homepage sections |
+| `src/components/store/` | document store and product pages |
+| `src/app/api/` | contact form, store orders, IndexNow |
+| `src/lib/` | content and data: services, articles, products, FAQ, SEO |
+| `messages/{en,ru,uz}/` | interface text, one file per area |
+| `public/` | images, favicons, `llms.txt`, verification files |
+| `DESIGN.md` | brand and design rules |

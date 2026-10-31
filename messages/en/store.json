@@ -1,31 +1,8 @@
 {
   "StorePage": {
-    "hero": {
-      "eyebrow": "Templates",
-      "heading": "Ready-to-use documents for doing business in Uzbekistan",
-      "description": "Professionally drafted legal, tax, HR, and compliance templates — built for Uzbekistan's regulatory framework, available in English, Russian, and Uzbek.",
-      "feature1": "Instant download",
-      "feature2": "EN / RU / UZ",
-      "feature3": "Updated for 2025",
-      "feature4": "Lawyer-reviewed"
-    },
-    "filters": {
-      "categoryAll": "All",
-      "noResults": "No documents match this combination.",
-      "clearFilters": "Clear filters",
-      "documentsCount": "{count, plural, one {# document} other {# documents}}",
-      "documentsInCategory": " in {category}",
-      "documentsLang": " · {language}"
-    },
     "card": {
       "includes": "Includes",
       "purchase": "Purchase"
-    },
-    "cta": {
-      "eyebrow": "Need something custom?",
-      "heading": "Can't find what you're looking for?",
-      "description": "Our team drafts bespoke documents tailored to your specific transaction, structure, or jurisdiction.",
-      "button": "Talk to our team"
     }
   },
   "StoreProducts": {

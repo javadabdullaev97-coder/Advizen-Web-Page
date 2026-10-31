@@ -89,12 +89,6 @@ function IndustriesSection() {
     text: tFeatured(`${active.name}.text`),
   };
 
-  useEffect(() => {
-    industryGroups.forEach(({ image }) => {
-      if (image) { const img = new window.Image(); img.src = image; }
-    });
-  }, []);
-
   return (
     <section className="py-20 md:py-28 bg-black relative overflow-hidden border-y border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">

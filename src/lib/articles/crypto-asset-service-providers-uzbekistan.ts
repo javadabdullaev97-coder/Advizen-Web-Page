@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "A practical guide to obtaining and maintaining a licence as a crypto-asset service provider in Uzbekistan under the NAPP regulatory framework.",
     author: "Advizen Legal Practice",
@@ -504,3 +506,5 @@ export default {
     ],
   },
 };
+
+export default article;

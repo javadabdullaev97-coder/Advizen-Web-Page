@@ -1,4 +1,6 @@
-export default {
+import type { LocalizedArticle } from "../publications";
+
+const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle: "A practical guide to Uzbekistan's emerging Islamic finance framework — legislation, permitted instruments, and the regulatory obligations for MFOs.",
     author: "Advizen Legal Practice",
@@ -432,3 +434,5 @@ export default {
     ],
   },
 };
+
+export default article;

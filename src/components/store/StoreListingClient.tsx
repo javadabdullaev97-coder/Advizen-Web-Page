@@ -24,6 +24,9 @@ const KITS: { id: string; items: string[] }[] = [
 
 const CATEGORIES = ["Company Formation", "Legal", "HR", "Tax", "Compliance", "Finance"] as const;
 const MONTHS: Record<string, number> = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+// Uzbek month names are spelled out here: Node and browsers ship different ICU data for uz,
+// and any difference breaks hydration.
+const UZ_MONTHS = ["yan", "fev", "mar", "apr", "may", "iyn", "iyl", "avg", "sen", "okt", "noy", "dek"];
 
 const byId = (id: string) => PRODUCTS.find((p) => p.id === id) as StoreProduct;
 const sumOf = (ids: string[]) => ids.reduce((s, id) => s + byId(id).price, 0);
@@ -62,13 +65,14 @@ export default function StoreListingClient() {
   const [fields, setFields] = useState({ name: "", email: "", company: "", country: "", tin: "", phone: "" });
   const [fieldErr, setFieldErr] = useState<Record<string, string>>({});
 
-  const numFmt = useMemo(() => new Intl.NumberFormat(locale === "uz" ? "uz-Latn" : locale), [locale]);
-  const dateFmt = useMemo(() => new Intl.DateTimeFormat(locale === "uz" ? "uz-Latn" : locale, { month: "short", year: "numeric" }), [locale]);
+  const numFmt = useMemo(() => new Intl.NumberFormat(locale === "uz" ? "ru" : locale), [locale]);
+  const dateFmt = useMemo(() => new Intl.DateTimeFormat(locale, { month: "short", year: "numeric" }), [locale]);
   const fmt = (usd: number) =>
     buyer === "uz" ? `${numFmt.format(Math.round((usd * UZS_RATE) / 1000) * 1000)} UZS` : `$${numFmt.format(usd)}`;
   const fmtDate = (s: string) => {
     const [m, y] = s.split(" ");
-    return MONTHS[m] !== undefined ? dateFmt.format(new Date(Number(y), MONTHS[m], 1)) : s;
+    if (MONTHS[m] === undefined) return s;
+    return locale === "uz" ? `${UZ_MONTHS[MONTHS[m]]} ${y}` : dateFmt.format(new Date(Number(y), MONTHS[m], 1));
   };
 
   const title = (id: string) => tP(`items.${id}.title`);
