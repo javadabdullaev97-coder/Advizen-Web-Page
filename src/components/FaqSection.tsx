@@ -34,9 +34,9 @@ function FaqItem({
   const isOpen = open === i;
 
   return (
-    <div className="border-b border-white/10">
+    <div className="border-b border-border">
       <button
-        className="w-full flex items-center justify-between py-5 text-left gap-4 focus-visible:outline-none touch-manipulation"
+        className="w-full flex items-center justify-between py-5 text-left gap-4 focus-visible:outline-2 focus-visible:outline-foreground-hi touch-manipulation cursor-pointer"
         onTouchStart={(e) => {
           startYRef.current = e.touches[0].clientY;
           scrolledRef.current = false;
@@ -62,11 +62,11 @@ function FaqItem({
         }}
         aria-expanded={isOpen}
       >
-        <span className="faq-question text-white/90 font-medium">{q}</span>
+        <span className="faq-question text-[17px] lg:text-[19px] text-foreground-hi font-semibold tracking-[-0.01em]">{q}</span>
         {isOpen ? (
-          <Minus className="w-4 h-4 text-white/40 shrink-0" />
+          <Minus className="w-5 h-5 text-muted shrink-0" />
         ) : (
-          <Plus className="w-4 h-4 text-white/40 shrink-0" />
+          <Plus className="w-5 h-5 text-muted shrink-0" />
         )}
       </button>
       {/* CSS grid accordion — no JS measurement, no Framer Motion overhead */}
@@ -79,7 +79,7 @@ function FaqItem({
       >
         <div className="overflow-hidden">
           <p
-            className="pb-5 text-white/55 leading-relaxed"
+            className="pb-6 text-[16px] text-foreground leading-relaxed max-w-[40em]"
             style={{
               opacity: isOpen ? 1 : 0,
               transition: isOpen ? "opacity 0.18s ease 0.08s" : "opacity 0.12s ease",
@@ -101,7 +101,7 @@ export default function FaqSection({
   variant?: "page" | "sidebar";
 }) {
   const locale = useLocale() as Locale;
-  const [open, setOpen] = useState<number | null>(null);
+  const [open, setOpen] = useState<number | null>(variant === "page" ? 0 : null);
   const items = FAQ_DATA[page][locale] ?? FAQ_DATA[page].en;
 
   const handleToggle = useCallback((i: number) => {
@@ -175,16 +175,16 @@ export default function FaqSection({
   }
 
   return (
-    <section id="faq-section" className="py-24 md:py-32 bg-black border-t border-white/5">
+    <section id="faq-section" className="m-wrap py-24 lg:py-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="max-w-3xl mx-auto px-6 lg:px-8">
-        <h2 className="heading-luxury text-2xl md:text-3xl text-foreground mb-12 text-center">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] lg:gap-20">
+        <h2 className="m-h2 text-[34px] lg:text-[clamp(36px,3.8vw,58px)]">
           {HEADINGS[locale]}
         </h2>
-        <div className="space-y-px">
+        <div className="border-t border-border">
           {items.map(({ q, a }, i) => (
             <FaqItem key={i} q={q} a={a} i={i} open={open} onToggle={handleToggle} />
           ))}

@@ -104,5 +104,126 @@
     "flagshipDescription": "The definitive guide for foreign investors — market entry, regulatory frameworks, and operational best practices.",
     "flagshipCta": "Read the guide",
     "readMore": "Read more"
+  },
+  "HomeModern": {
+    "hero": {
+      "title": "Tax, legal and accounting advisory in Uzbekistan",
+      "lede": "One team for companies entering and operating in Uzbekistan: tax, law, accounting, HR and funding, coordinated by a single partner. In English, Russian or Uzbek.",
+      "book": "Book a consultation",
+      "telegram": "Message us on Telegram",
+      "imageAlt": "Tashkent at dusk",
+      "proof": [
+        {
+          "fig": "$10B+",
+          "text": "nuclear power plant: tax, accounting and customs structuring"
+        },
+        {
+          "fig": "$2B+",
+          "text": "Chinese energy group: due diligence and holding structure"
+        },
+        {
+          "fig": "80+",
+          "text": "companies registered for local and foreign clients"
+        }
+      ]
+    },
+    "services": {
+      "title": "Every discipline, one point of contact",
+      "lede": "Most firms hand you a lawyer, an accountant and a tax adviser who never speak. We run them as one team, so the structure that saves you tax also survives a legal review.",
+      "tax": {
+        "title": "Tax consulting",
+        "text": "Planning, compliance and structuring for foreign-owned companies, holdings and cross-border operations. We tell you which regime and incentives apply to your structure.",
+        "items": [
+          "Tax planning",
+          "VAT",
+          "Transfer pricing",
+          "Tax audit representation",
+          "Customs and excise",
+          "Incentive applications"
+        ]
+      },
+      "rates": [
+        {
+          "fig": "15%",
+          "label": "corporate profit tax"
+        },
+        {
+          "fig": "12%",
+          "label": "VAT"
+        },
+        {
+          "fig": "12%",
+          "label": "personal income tax"
+        },
+        {
+          "fig": "12%",
+          "label": "social tax"
+        }
+      ],
+      "legal": {
+        "title": "Legal advisory",
+        "text": "Company formation, contracts, governance and regulatory compliance under Uzbek law."
+      },
+      "accounting": {
+        "title": "Accounting",
+        "text": "Bookkeeping, reporting and statutory filings, in IFRS and Uzbek standards."
+      },
+      "hr": {
+        "title": "HR and payroll",
+        "text": "Payroll, labour contracts and contributions for local and expatriate staff."
+      },
+      "funding": {
+        "title": "Funding and M&A",
+        "text": "IFI programmes, grants, due diligence and deal structuring."
+      },
+      "operations": {
+        "title": "Operations",
+        "text": "Entity management, Employer of Record, corporate services and a virtual office."
+      }
+    },
+    "track": {
+      "title": "Work our advisers have led",
+      "lede": "From a nuclear power plant budget to Islamic finance law: six of the fifteen engagements on record.",
+      "law": "Law",
+      "foot": "Engagements led by Advizen advisers. Client names withheld.",
+      "all": "All 15 engagements"
+    },
+    "regions": {
+      "title": "All fourteen regions, one adviser",
+      "lede": "Free economic zones, regional incentives and registration practice differ by region. Pick one to see where it fits your plans."
+    },
+    "insights": {
+      "title": "Read before you invest",
+      "lede": "Plain-language briefings on Uzbek tax, law and regulation, written by the advisers who do the work.",
+      "all": "All articles",
+      "guideMeta": "Flagship guide · 2026 edition",
+      "guideTitle": "Doing Business in Uzbekistan",
+      "guideText": "Market entry, regulation and day-to-day operations in one guide for foreign investors.",
+      "guideCta": "Request the guide",
+      "read": "Read"
+    },
+    "contact": {
+      "title": "Start with a conversation",
+      "lede": "Tell us what you are planning. We reply to every enquiry within one business day; on Telegram and WhatsApp, usually within the hour.",
+      "book": "Book a consultation",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "hoursValue": "Mon–Fri, 9:00–18:00 (Tashkent)",
+      "steps": [
+        {
+          "title": "Introductory call",
+          "text": "We learn what you plan and which questions you need answered first."
+        },
+        {
+          "title": "Written scope and fee",
+          "text": "A clear scope, timeline and fee before any work begins."
+        },
+        {
+          "title": "One coordinating partner",
+          "text": "Tax, legal and accounting work runs through a single point of contact."
+        }
+      ]
+    }
   }
 }

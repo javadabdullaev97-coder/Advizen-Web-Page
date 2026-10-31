@@ -5,7 +5,10 @@
     "store": "Shablonlar",
     "insights": "Tahlillar",
     "contact": "Aloqa",
-    "inquire": "Bog'lanish"
+    "inquire": "Bog'lanish",
+    "book": "Konsultatsiyaga yozilish",
+    "openMenu": "Menyuni ochish",
+    "closeMenu": "Menyuni yopish"
   },
   "Footer": {
     "expertise": "Xizmatlar",
@@ -33,7 +36,8 @@
     "employerOfRecord": "Employer of Record",
     "corporateServices": "Korporativ xizmatlar",
     "virtualOffice": "Virtual ofis",
-    "tashkent": "Toshkent, O'zbekiston"
+    "tashkent": "Toshkent, O'zbekiston",
+    "location": "Mirzo Ulug'bek tumani, Toshkent"
   },
   "LanguageSwitcher": {
     "label": "Til",

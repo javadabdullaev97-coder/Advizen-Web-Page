@@ -5,7 +5,10 @@
     "store": "Шаблоны",
     "insights": "Аналитика",
     "contact": "Контакты",
-    "inquire": "Связаться"
+    "inquire": "Связаться",
+    "book": "Записаться на консультацию",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню"
   },
   "Footer": {
     "expertise": "Услуги",
@@ -33,7 +36,8 @@
     "employerOfRecord": "Employer of Record",
     "corporateServices": "Корпоративные услуги",
     "virtualOffice": "Виртуальный офис",
-    "tashkent": "Ташкент, Узбекистан"
+    "tashkent": "Ташкент, Узбекистан",
+    "location": "Мирзо-Улугбекский район, Ташкент"
   },
   "LanguageSwitcher": {
     "label": "Язык",

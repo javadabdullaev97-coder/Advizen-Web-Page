@@ -106,5 +106,126 @@
     "flagshipDescription": "Xorijiy investorlar uchun to'liq qo'llanma — bozorga kirish, me'yoriy asoslar va faoliyat yuritishning eng yaxshi amaliyotlari.",
     "flagshipCta": "Qo'llanmani o'qish",
     "readMore": "O'qish"
+  },
+  "HomeModern": {
+    "hero": {
+      "title": "Toshkentda konsalting: soliq, huquq, buxgalteriya",
+      "lede": "O'zbekistonda faoliyat boshlayotgan va yuritayotgan kompaniyalar uchun bitta jamoa: soliq, huquq, buxgalteriya, kadrlar va moliyalashtirish, bitta hamkor boshchiligida. O'zbek, rus yoki ingliz tilida.",
+      "book": "Konsultatsiyaga yozilish",
+      "telegram": "Telegram orqali yozish",
+      "imageAlt": "Kechki Toshkent",
+      "proof": [
+        {
+          "fig": "$10B+",
+          "text": "AES: soliq, buxgalteriya va bojxona tuzilmasi"
+        },
+        {
+          "fig": "$2B+",
+          "text": "Xitoy energetika guruhi: due diligence va xolding tuzilmasi"
+        },
+        {
+          "fig": "80+",
+          "text": "mahalliy va xorijiy mijozlar uchun ro'yxatdan o'tkazilgan kompaniyalar"
+        }
+      ]
+    },
+    "services": {
+      "title": "Barcha yo'nalishlar, bitta aloqa",
+      "lede": "Odatda mijozning yuristi, buxgalteri va soliq maslahatchisi bir-biri bilan gaplashmaydi. Bizda ular bitta jamoa, shuning uchun soliqni tejaydigan tuzilma huquqiy tekshiruvdan ham o'tadi.",
+      "tax": {
+        "title": "Soliq maslahati",
+        "text": "Xorijiy kapitalli kompaniyalar, xoldinglar va transchegaraviy operatsiyalar uchun rejalashtirish, hisobot va tuzilma. Tuzilmangizga qaysi rejim va imtiyozlar mos kelishini aytamiz.",
+        "items": [
+          "Soliq rejalashtirish",
+          "QQS",
+          "Transfer narxlari",
+          "Soliq tekshiruvlarida vakillik",
+          "Bojxona va aksiz",
+          "Imtiyozlarni rasmiylashtirish"
+        ]
+      },
+      "rates": [
+        {
+          "fig": "15%",
+          "label": "foyda solig'i"
+        },
+        {
+          "fig": "12%",
+          "label": "QQS"
+        },
+        {
+          "fig": "12%",
+          "label": "jismoniy shaxslar daromad solig'i"
+        },
+        {
+          "fig": "12%",
+          "label": "ijtimoiy soliq"
+        }
+      ],
+      "legal": {
+        "title": "Yuridik xizmatlar",
+        "text": "Kompaniya ochish, shartnomalar, korporativ boshqaruv va O'zbekiston qonunchiligiga muvofiqlik."
+      },
+      "accounting": {
+        "title": "Buxgalteriya",
+        "text": "Buxgalteriya hisobi, MHXS va milliy standartlar bo'yicha hisobot, majburiy hisobotlar."
+      },
+      "hr": {
+        "title": "Kadrlar va ish haqi",
+        "text": "Mahalliy va xorijiy xodimlar uchun ish haqi, mehnat shartnomalari va badallar."
+      },
+      "funding": {
+        "title": "Moliyalashtirish va M&A",
+        "text": "XMI dasturlari, grantlar, due diligence va bitimlarni tuzish."
+      },
+      "operations": {
+        "title": "Operatsion xizmatlar",
+        "text": "Kompaniyani boshqarish, Employer of Record, korporativ xizmatlar va virtual ofis."
+      }
+    },
+    "track": {
+      "title": "Maslahatchilarimiz olib borgan loyihalar",
+      "lede": "Atom elektr stansiyasi byudjetidan islomiy moliya qonunchiligigacha: o'n beshta loyihadan oltitasi.",
+      "law": "Qonun",
+      "foot": "Advizen maslahatchilari olib borgan loyihalar. Mijozlar nomi oshkor qilinmaydi.",
+      "all": "Barcha 15 ta loyiha"
+    },
+    "regions": {
+      "title": "O'n to'rtta hudud, bitta maslahatchi",
+      "lede": "Erkin iqtisodiy zonalar, hududiy imtiyozlar va ro'yxatdan o'tkazish amaliyoti hududga qarab farq qiladi. Rejalaringizga mosligini ko'rish uchun hududni tanlang."
+    },
+    "insights": {
+      "title": "Investitsiyadan oldin o'qing",
+      "lede": "O'zbekiston soliqlari, huquqi va tartibga solinishi bo'yicha sodda tilda yozilgan tahlillar, bunday loyihalarni o'zi olib boradigan maslahatchilardan.",
+      "all": "Barcha maqolalar",
+      "guideMeta": "Asosiy qo'llanma · 2026 nashri",
+      "guideTitle": "Doing Business in Uzbekistan",
+      "guideText": "Bozorga kirish, tartibga solish va kundalik faoliyat: xorijiy investorlar uchun bitta qo'llanmada.",
+      "guideCta": "Qo'llanmani so'rash",
+      "read": "O'qish"
+    },
+    "contact": {
+      "title": "Suhbatdan boshlang",
+      "lede": "Nima rejalashtirayotganingizni ayting. Har bir murojaatga bir ish kuni ichida javob beramiz, Telegram va WhatsApp'da odatda bir soat ichida.",
+      "book": "Konsultatsiyaga yozilish",
+      "phone": "Telefon",
+      "email": "Email",
+      "hours": "Ish vaqti",
+      "hoursValue": "Du–Ju, 9:00–18:00 (Toshkent)",
+      "steps": [
+        {
+          "title": "Tanishuv qo'ng'irog'i",
+          "text": "Nima rejalashtirayotganingizni va birinchi navbatda qaysi savollarga javob kerakligini bilib olamiz."
+        },
+        {
+          "title": "Yozma ish hajmi va narx",
+          "text": "Ish boshlanishidan oldin aniq hajm, muddat va narx."
+        },
+        {
+          "title": "Bitta muvofiqlashtiruvchi hamkor",
+          "text": "Soliq, yuridik va buxgalteriya ishlari bitta aloqa orqali olib boriladi."
+        }
+      ]
+    }
   }
 }

@@ -5,7 +5,10 @@
     "store": "Templates",
     "insights": "Insights",
     "contact": "Contact",
-    "inquire": "Inquire"
+    "inquire": "Inquire",
+    "book": "Book a consultation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "Footer": {
     "expertise": "Expertise",
@@ -33,7 +36,8 @@
     "employerOfRecord": "Employer of Record",
     "corporateServices": "Corporate Services",
     "virtualOffice": "Virtual Office",
-    "tashkent": "Tashkent, Uzbekistan"
+    "tashkent": "Tashkent, Uzbekistan",
+    "location": "Mirzo Ulugbek district, Tashkent"
   },
   "LanguageSwitcher": {
     "label": "Language",

@@ -3,13 +3,9 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
-import MagneticButton from "@/components/MagneticButton";
 import LanguageSwitcher, { MobileLanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Link, usePathname } from "@/i18n/navigation";
-
-const inter = "var(--font-inter), Inter, system-ui, sans-serif";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,9 +14,9 @@ export default function Navbar() {
   const t = useTranslations("Nav");
 
   const navLinks = [
-    { href: "/", label: t("home") },
     { href: "/expertise", label: t("expertise") },
     { href: "/insights", label: t("insights") },
+    { href: "/store", label: t("store") },
     { href: "/contact", label: t("contact") },
   ];
 
@@ -28,7 +24,7 @@ export default function Navbar() {
     let rafId: number;
     const handler = () => {
       cancelAnimationFrame(rafId);
-      rafId = requestAnimationFrame(() => setScrolled(window.scrollY > 40));
+      rafId = requestAnimationFrame(() => setScrolled(window.scrollY > 8));
     };
     window.addEventListener("scroll", handler, { passive: true });
     return () => {
@@ -37,20 +33,24 @@ export default function Navbar() {
     };
   }, []);
 
+  // The open menu covers the page, so the page behind it must not scroll.
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+
   return (
-    <motion.header
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 0.2 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled
-          ? "bg-[#0A0A0A]/95 border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
-          : "bg-transparent border-b border-transparent"
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-background transition-[border-color] duration-200 border-b ${
+        scrolled || mobileOpen ? "border-border" : "border-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center h-20 relative">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-1.5">
+      <nav className="m-wrap flex items-center h-20 relative">
+        <Link href="/" className="flex items-center gap-2 shrink-0" onClick={() => setMobileOpen(false)}>
           <Image
             src="/Logo.webp"
             alt="Advizen"
@@ -58,106 +58,80 @@ export default function Navbar() {
             height={35}
             unoptimized
             priority
-            style={{ width: "auto", height: "35px" }}
+            style={{ width: "auto", height: "32px" }}
           />
           <span
             style={{
               fontFamily: "var(--font-hero), sans-serif",
-              fontSize: "25px",
+              fontSize: "23px",
               fontWeight: 500,
               letterSpacing: "0.12em",
               lineHeight: 1,
-              color: "#D6CFC8",
+              color: "var(--foreground-hi)",
             }}
           >
             ADVIZEN
           </span>
         </Link>
 
-        {/* Desktop Nav — absolutely centred on the viewport */}
-        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                style={{ fontFamily: inter }}
-                className={`relative hover-line text-[14px] font-medium tracking-[0.04em] transition-colors cursor-pointer ${
-                  isActive ? "text-foreground" : "text-muted hover:text-foreground"
-                }`}
-              >
-                {link.label}
-                {isActive && (
-                  <motion.span
-                    layoutId="nav-active"
-                    className="absolute bottom-[-2px] left-0 right-0 h-px bg-primary"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </Link>
-            );
-          })}
+        <div className="hidden lg:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              aria-current={isActive(link.href) ? "page" : undefined}
+              className={`text-[15px] font-medium transition-colors ${
+                isActive(link.href) ? "text-foreground-hi" : "text-muted hover:text-foreground-hi"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
-        {/* Right side — Language + Store CTA */}
-        <div className="hidden md:flex items-center gap-5 ml-auto">
+        <div className="hidden lg:flex items-center gap-5 ml-auto">
           <LanguageSwitcher />
-          <MagneticButton as="a" href="/store" className="px-6 py-2.5 text-[12px]">
-            Store
-          </MagneticButton>
+          <Link href="/contact" className="m-btn m-btn-p" style={{ height: 44, padding: "0 20px" }}>
+            {t("book")}
+          </Link>
         </div>
 
-        {/* Mobile Toggle */}
         <button
-          className="md:hidden p-3 ml-auto text-foreground cursor-pointer"
+          className="lg:hidden ml-auto w-11 h-11 flex items-center justify-center text-foreground-hi cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
+          aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
         >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#0A0A0A]/97 border-b border-white/[0.06] px-6 pb-8 pt-4"
-          >
-            {navLinks.map((link, i) => (
-              <motion.div
-                key={link.href}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.05 }}
-              >
+      {mobileOpen && (
+        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-background m-wrap pt-6 pb-10 flex flex-col overflow-y-auto">
+          <ul className="flex flex-col">
+            {navLinks.map((link) => (
+              <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  style={{ fontFamily: inter }}
-                  className={`block py-4 font-medium tracking-wide transition-colors border-b border-white/[0.06] cursor-pointer ${
-                    pathname === link.href ? "text-foreground" : "text-foreground/70 hover:text-foreground"
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                  className={`flex items-center min-h-14 text-[28px] font-bold tracking-[-0.03em] ${
+                    isActive(link.href) ? "text-foreground-hi" : "text-foreground"
                   }`}
                 >
                   {link.label}
                 </Link>
-              </motion.div>
+              </li>
             ))}
-            <div className="mt-6 flex items-center justify-between gap-4">
-              <span onClick={() => setMobileOpen(false)}>
-                <MagneticButton as="a" href="/store" className="px-6 py-3 text-sm">
-                  Store
-                </MagneticButton>
-              </span>
-              <MobileLanguageSwitcher />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+          </ul>
+          <div className="mt-auto pt-8 flex flex-col gap-5">
+            <MobileLanguageSwitcher />
+            <Link href="/contact" onClick={() => setMobileOpen(false)} className="m-btn m-btn-p w-full">
+              {t("book")}
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }

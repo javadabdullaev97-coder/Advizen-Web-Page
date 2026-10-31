@@ -157,5 +157,83 @@
         ]
       }
     }
+  },
+  "StoreModern": {
+    "title": "O'zbekiston uchun biznes hujjatlari shablonlari",
+    "lede": "O'zbekiston qonunchiligi bo'yicha yuristlarimiz tayyorlagan shartnomalar, ustavlar va arizalar. Ikki tilli Word fayllari: o'zbek, rus va ingliz tillaridan ikkitasini tanlang. Hujjatni alohida yoki vazifangiz uchun to'plamni {percent}% chegirma bilan xarid qiling.",
+    "flow": [
+      "Buyurtmaga qo'shing",
+      "Email orqali tasdiqlaymiz",
+      "USD yoki UZS'da to'lov",
+      "Fayllarni olasiz"
+    ],
+    "search": "Hujjatlarni qidirish",
+    "all": "Barchasi",
+    "kits": "To'plamlar",
+    "currency": "Narxlar",
+    "kitsTitle": "Odatiy vazifalar uchun to'plamlar",
+    "kitsLede": "Birga kerak bo'ladigan uchta hujjat, alohida olgandan {percent}% arzonroq.",
+    "allDocs": "Barcha hujjatlar",
+    "multiNote": "Uch va undan ortiq alohida hujjat: buyurtmaga {percent}% chegirma.",
+    "noMatch": "«{q}» bo'yicha hujjat topilmadi.",
+    "updated": "Yangilangan: {date}",
+    "inKit": "To'plamda: {kits}",
+    "add": "Qo'shish",
+    "added": "Qo'shildi",
+    "addKit": "To'plamni qo'shish",
+    "save": "tejash {amount}",
+    "docs": "{count, plural, one {# hujjat} other {# hujjat}}",
+    "kitNames": {
+      "llc": "MChJ ochish",
+      "hire": "Xodim yollash",
+      "inv": "Investor jalb qilish",
+      "sez": "Erkin zonadagi loyiha"
+    },
+    "docWord": {
+      "Company Formation": "Ustav",
+      "Legal": "Shartnoma",
+      "HR": "Mehnat",
+      "Tax": "Soliq",
+      "Compliance": "Ariza",
+      "Finance": "Chek-list"
+    },
+    "order": {
+      "title": "Buyurtmangiz",
+      "empty": "Hujjat yoki to'plam qo'shing. To'lov faqat biz tasdiqlaganimizdan keyin.",
+      "continue": "Davom etish",
+      "abroad": "Xorijdan · USD",
+      "uz": "O'zbekistondagi kompaniya · UZS",
+      "noteAbroad": "AQSh dollarida karta yoki bank o'tkazmasi orqali to'lov. Buyurtmani bir ish kuni ichida email orqali tasdiqlaymiz va hisob-faktura yuboramiz.",
+      "noteUz": "O'zbekistondagi kompaniyalar hisob-faktura sanasidagi Markaziy bank kursi bo'yicha so'mda bank o'tkazmasi orqali to'laydi. Rezidentlar o'rtasidagi hisob-kitoblar milliy valyutada amalga oshiriladi.",
+      "multiLine": "3 va undan ortiq hujjat, {percent}% chegirma",
+      "review": "Buyurtmaga o'tish",
+      "close": "Buyurtmani yopish",
+      "remove": "{name}ni olib tashlash",
+      "fullName": "Ism va familiya",
+      "email": "Email",
+      "company": "Kompaniya",
+      "optional": "ixtiyoriy",
+      "country": "Mamlakat",
+      "companyName": "Kompaniya nomi",
+      "tin": "STIR (hisob-faktura uchun)",
+      "tinHint": "9 ta raqam",
+      "contact": "Mas'ul shaxs",
+      "phone": "Telefon",
+      "send": "So'rov yuborish",
+      "sending": "Yuborilmoqda…",
+      "back": "Buyurtmaga qaytish",
+      "sentTitle": "So'rov yuborildi",
+      "sentText": "Bir ish kuni ichida buyurtmani email orqali tasdiqlaymiz va {total} miqdoridagi hisob-fakturani yuboramiz.",
+      "again": "Yangi buyurtma",
+      "error": "So'rovni yuborib bo'lmadi. Qayta urinib ko'ring yoki info@advizenco.com manziliga yozing.",
+      "invalidEmail": "To'g'ri email kiriting.",
+      "required": "Ushbu maydonni to'ldiring.",
+      "tinInvalid": "STIR 9 ta raqamdan iborat."
+    },
+    "custom": {
+      "title": "Kerakli hujjat yo'qmi?",
+      "text": "Yuristlarimiz bitimingiz uchun shartnoma yoki ariza tayyorlab beradi.",
+      "button": "Individual hujjat buyurtma qilish"
+    }
   }
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Josefin_Sans, Raleway, Inter, Inter_Tight, Onest } from "next/font/google";
+import { Raleway, Manrope, Onest } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -8,7 +8,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import ScrollToTop from "@/components/ScrollToTop";
-import LoadingScreen from "@/components/LoadingScreen";
 import { GtmScript, GtmNoScript } from "@/components/Analytics";
 import { organizationJsonLd, websiteJsonLd, OG_IMAGE } from "@/lib/seo";
 import CookieBanner from "@/components/CookieBanner";
@@ -43,13 +42,6 @@ function localePath(path: string, locale: string) {
   return `${SITE_URL}${prefix}${path}`;
 }
 
-const syne = Josefin_Sans({
-  subsets: ["latin"],
-  weight: ["300"],
-  variable: "--font-display",
-  display: "swap",
-});
-
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600"],
@@ -57,17 +49,10 @@ const raleway = Raleway({
   display: "swap",
 });
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const interTight = Inter_Tight({
-  subsets: ["latin"],
-  weight: ["500"],
-  variable: "--font-inter-tight",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -157,10 +142,10 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`h-full antialiased ${syne.variable} ${raleway.variable} ${inter.variable} ${interTight.variable} ${onest.variable}`}
+      className={`h-full antialiased ${raleway.variable} ${manrope.variable} ${onest.variable}`}
     >
       <head>
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#0b0b0c" />
         <link rel="manifest" href="/Advizen Logo/site.webmanifest" />
         <script dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual'" }} />
         <script
@@ -176,7 +161,6 @@ export default async function LocaleLayout({
       <body className="min-h-full flex flex-col relative">
         <GtmNoScript />
         <NextIntlClientProvider>
-          <LoadingScreen />
           <ScrollProgress />
           <Navbar />
           <main className="flex-1 relative z-10">{children}</main>

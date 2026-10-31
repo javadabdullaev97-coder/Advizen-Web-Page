@@ -181,7 +181,16 @@ export async function POST(request: NextRequest) {
     totalPrice,
     language,
     locale,
+    source, currency, totalUzs, country, contactPerson, kits, discountUsd,
   } = body;
+
+  if (!Array.isArray(selectedDocs) || selectedDocs.length === 0) {
+    return NextResponse.json({ ok: false, error: "No documents in the order" }, { status: 400 });
+  }
+  const isStore = source === "store";
+  const totalLabel = currency === "UZS" && typeof totalUzs === "number"
+    ? `${totalUzs.toLocaleString("en-US")} UZS ($${totalPrice})`
+    : `$${totalPrice}`;
 
   const lang: Locale = locale === "ru" || locale === "uz" ? locale : "en";
   const t = autoreply[lang];
@@ -224,11 +233,17 @@ export async function POST(request: NextRequest) {
       `📱 <b>Phone:</b> ${escapeHtml(contactPhone)}`,
       orderType === "individual" && pinfl ? `🪪 <b>PINFL:</b> ${escapeHtml(pinfl)}` : null,
       orderType === "legal" && inn ? `🏢 <b>INN:</b> ${escapeHtml(inn)}` : null,
-      `🌐 <b>Language:</b> ${escapeHtml(langLabel)}`,
+      isStore && orderType === "legal" && contactPerson ? `🙋 <b>Contact:</b> ${escapeHtml(String(contactPerson))}` : null,
+      isStore && orderType === "individual" && companyName ? `🏢 <b>Company:</b> ${escapeHtml(String(companyName))}` : null,
+      isStore && country ? `🌍 <b>Country:</b> ${escapeHtml(String(country))}` : null,
+      isStore ? `💱 <b>Pays in:</b> ${currency === "UZS" ? "UZS (bank transfer)" : "USD"}` : null,
+      Array.isArray(kits) && kits.length ? `🧰 <b>Kits:</b> ${escapeHtml(kits.join(", "))}` : null,
+      langLabel ? `🌐 <b>Language:</b> ${escapeHtml(langLabel)}` : null,
       ``,
       `📄 <b>Documents:</b>\n${docLines}`,
       ``,
-      `💰 <b>Total: $${totalPrice}</b>`,
+      typeof discountUsd === "number" && discountUsd > 0 ? `🏷 <b>Discount:</b> −$${discountUsd}` : null,
+      `💰 <b>Total: ${escapeHtml(totalLabel)}</b>`,
       ``,
       `🕐 <i>${timestamp} (Tashkent)</i>`,
       ``,
@@ -289,6 +304,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         from: fromEmail,
         to: [contactEmail],
+        bcc: [toAdminEmail],
         reply_to: toAdminEmail,
         subject: t.subject,
         html: autoHtml,
@@ -296,6 +312,13 @@ export async function POST(request: NextRequest) {
     }).catch(() => null);
 
     if (!autoRes?.ok) errors.push("autoreply");
+  }
+
+  // The order counts as received only if the team got it: by Telegram, or as the copy of the email.
+  const telegramOk = Boolean(tgToken && tgChat) && !errors.includes("telegram");
+  const emailOk = Boolean(resendKey) && !errors.includes("autoreply");
+  if (!telegramOk && !emailOk) {
+    return NextResponse.json({ ok: false, errors }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true, errors: errors.length ? errors : undefined });

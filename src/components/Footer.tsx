@@ -1,18 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import SocialIcons from "@/components/SocialIcons";
-import { Phone, Mail, MapPin } from "lucide-react";
-
-const inter = "var(--font-inter), sans-serif";
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
-};
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -34,7 +25,7 @@ export default function Footer() {
       { label: t("virtualOffice"),       href: "/expertise/virtual-office" },
     ],
     [t("firm")]: [
-      { label: "Store",       href: "/store" },
+      { label: t("store"),    href: "/store" },
       { label: t("insights"), href: "/insights" },
       { label: t("contact"),  href: "/contact" },
     ],
@@ -48,96 +39,54 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#0A0A0A] border-t border-white/[0.06]" style={{ fontFamily: inter }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
-        {/* Main footer */}
-        <div className="py-12 md:py-20 flex flex-col md:flex-row gap-8 md:gap-0">
-
-          {/* Brand */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            variants={itemVariants}
-            className="md:w-[380px] shrink-0 md:mr-16"
-          >
-            <div className="flex items-center gap-1.5">
-              <Image src="/Logo.webp" alt="Advizen" width={35} height={35} unoptimized style={{ width: "auto", height: "35px" }} />
-              <span style={{ fontFamily: "var(--font-hero), sans-serif", fontSize: "25px", fontWeight: 500, letterSpacing: "0.12em", lineHeight: 1, color: "#D6CFC8" }}>
+    <footer className="bg-background border-t border-border">
+      <div className="m-wrap">
+        <div className="py-16 md:py-20 grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,3fr)] lg:gap-16">
+          <div>
+            <div className="flex items-center gap-2">
+              <Image src="/Logo.webp" alt="Advizen" width={35} height={35} unoptimized style={{ width: "auto", height: "30px" }} />
+              <span style={{ fontFamily: "var(--font-hero), sans-serif", fontSize: "22px", fontWeight: 500, letterSpacing: "0.12em", lineHeight: 1, color: "var(--foreground-hi)" }}>
                 ADVIZEN
               </span>
             </div>
-            <p className="mt-6 text-sm text-white/50 leading-relaxed">
-              {t("tagline")}
-            </p>
-            <div className="mt-8 space-y-1">
-              <a
-                href="tel:+998334884888"
-                className="flex items-center gap-3 text-sm text-white/50 hover:text-foreground transition-colors cursor-pointer w-fit py-2"
-              >
-                <Phone className="w-4 h-4 text-primary shrink-0" />
-                +998 (33) 488 48 88
+            <p className="mt-5 text-[15px] text-muted leading-relaxed max-w-[34ch]">{t("tagline")}</p>
+            <div className="mt-6 flex flex-col gap-1 text-[15px]">
+              <a href="tel:+998334884888" className="text-foreground-hi w-fit py-1.5 hover:underline underline-offset-4">
+                +998 33 488 48 88
               </a>
-              <a
-                href="mailto:info@advizenco.com"
-                className="flex items-center gap-3 text-sm text-white/50 hover:text-foreground transition-colors cursor-pointer w-fit py-2"
-              >
-                <Mail className="w-4 h-4 text-primary shrink-0" />
+              <a href="mailto:info@advizenco.com" className="text-foreground-hi w-fit py-1.5 hover:underline underline-offset-4">
                 info@advizenco.com
               </a>
-              <p className="flex items-center gap-3 text-sm text-muted-dark w-fit py-2">
-                <MapPin className="w-4 h-4 text-primary shrink-0" />
-                {t("tashkent")}
-              </p>
+              <p className="text-muted py-1.5">{t("tashkent")}</p>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Link columns */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.08 } },
-            }}
-            className="flex-1 grid grid-cols-2 md:flex md:flex-row md:justify-end gap-8 md:gap-16"
-          >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
             {Object.entries(footerLinks).map(([title, links]) => (
-              <motion.div key={title} variants={itemVariants}>
-                <h3 className="text-[13px] font-bold tracking-[0.18em] uppercase text-white/60 mb-6">
-                  {title}
-                </h3>
-                <ul className="space-y-3">
+              <div key={title} className="min-w-0">
+                <h3 className="text-[15px] font-semibold text-foreground-hi mb-4">{title}</h3>
+                <ul className="flex flex-col gap-2.5">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-[13px] text-white/50 hover:text-foreground transition-colors cursor-pointer"
-                      >
+                      <Link href={link.href} className="text-[15px] text-muted hover:text-foreground-hi transition-colors">
                         {link.label}
                       </Link>
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
-        {/* Social Icons Bar */}
-        <div className="py-8 border-t border-white/[0.06]">
+        <div className="py-8 border-t border-border">
           <SocialIcons />
         </div>
 
-        {/* Bottom */}
-        <div className="py-6 border-t border-white/[0.06]">
-          <p className="text-xs text-muted-dark tracking-wide">
-            &copy; {new Date().getFullYear()} Advizen Consulting. {t("rights")}
-          </p>
+        <div className="py-6 border-t border-border flex flex-wrap justify-between gap-3 text-sm text-muted-dark">
+          <p>&copy; {new Date().getFullYear()} Advizen Consulting LLC. {t("rights")}</p>
+          <p>{t("location")}</p>
         </div>
-
       </div>
     </footer>
   );
