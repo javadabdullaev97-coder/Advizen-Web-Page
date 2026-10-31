@@ -15,7 +15,6 @@ export async function POST(req: Request) {
     "",
     "/expertise",
     "/insights",
-    "/store",
     "/contact",
   ].map((p) => `${SITE_URL}${p}`);
 

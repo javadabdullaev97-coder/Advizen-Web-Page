@@ -3,7 +3,6 @@ import { getRequestConfig } from "next-intl/server";
 import { routing } from "./routing";
 
 const moduleNames = [
-  "checkout",
   "common",
   "contact",
   "expertise",
@@ -11,10 +10,8 @@ const moduleNames = [
   "insights",
   "legal-policies",
   "legal-privacy",
-  "legal-sale",
   "legal-terms",
   "services",
-  "store",
 ] as const;
 
 function deepMerge(

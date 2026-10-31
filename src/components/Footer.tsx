@@ -25,12 +25,10 @@ export default function Footer() {
       { label: t("virtualOffice"),       href: "/expertise/virtual-office" },
     ],
     [t("firm")]: [
-      { label: t("store"),    href: "/store" },
       { label: t("insights"), href: "/insights" },
       { label: t("contact"),  href: "/contact" },
     ],
     [t("legal")]: [
-      { label: t("termsOfSale"),  href: "/terms-of-sale" },
       { label: t("cookiePolicy"), href: "/cookies" },
       { label: t("privacy"),      href: "/privacy" },
       { label: t("termsOfUse"),   href: "/terms" },

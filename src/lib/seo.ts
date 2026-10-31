@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getArticleBySlug } from "./articles";
 import { servicesData, getServiceBySlug } from "./services";
-import { PRODUCTS, getProductById } from "./products";
 import { routing, type Locale } from "@/i18n/routing";
 
 const SITE_URL = "https://www.advizenco.com";
@@ -258,49 +257,16 @@ export function howToJsonLd(slug: string, locale: string) {
 
 const PAGE_PATHS = {
   expertise: "/expertise",
-  store: "/store",
   contact: "/contact",
   insights: "/insights",
   privacy: "/privacy",
   terms: "/terms",
-  "terms-of-sale": "/terms-of-sale",
   cookies: "/cookies",
   disclaimer: "/disclaimer",
 } as const;
 
 export type PageKey = keyof typeof PAGE_PATHS;
 export { OG_IMAGE };
-
-export function storeJsonLd() {
-  const storeUrl = `${SITE_URL}/store`;
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Business Document Templates — Advizen Consulting",
-    description: "Lawyer-drafted business document templates for companies operating in Uzbekistan.",
-    url: storeUrl,
-    itemListElement: PRODUCTS.map((p, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      item: {
-        "@type": "Product",
-        "@id": `${SITE_URL}/store/${p.id}#product`,
-        name: p.nameEn,
-        description: p.descriptionEn,
-        url: `${SITE_URL}/store/${p.id}`,
-        brand: { "@type": "Brand", name: ORG_NAME },
-        offers: {
-          "@type": "Offer",
-          price: p.price,
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          seller: { "@id": `${SITE_URL}#organization` },
-        },
-        category: p.category,
-      },
-    })),
-  };
-}
 
 export function breadcrumbJsonLd(slug: string, locale: string) {
   const article = getArticleBySlug(slug, locale);
@@ -322,19 +288,16 @@ const BREADCRUMB_LABELS: Record<Locale, { home: string } & Partial<Record<PageKe
   en: {
     home: "Home",
     expertise: "Expertise",
-    store: "Store",
     contact: "Contact",
   },
   ru: {
     home: "Главная",
     expertise: "Услуги",
-    store: "Магазин",
     contact: "Контакты",
   },
   uz: {
     home: "Bosh sahifa",
     expertise: "Xizmatlar",
-    store: "Do'kon",
     contact: "Bog'lanish",
   },
 };
@@ -490,23 +453,6 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
         "O'zbekistonda soliq, huquq, moliya, buxgalteriya, HR va korporativ xizmatlar bo'yicha integratsiyalashgan konsalting. 15+ sohada 80+ mijoz ishonchini qozongan.",
     },
   },
-  store: {
-    en: {
-      title: "Legal & Business Document Templates for Uzbekistan | Advizen Consulting",
-      description:
-        "Lawyer-drafted document templates for businesses in Uzbekistan — contracts, HR, compliance, tax forms, corporate filings. Instant download in editable Word format.",
-    },
-    ru: {
-      title: "Шаблоны правовых и бизнес-документов в Узбекистане | Advizen Consulting",
-      description:
-        "Шаблоны документов для бизнеса в Узбекистане — договоры, HR, компленс, налоговые формы, корпоративные документы. Мгновенная загрузка в формате Word.",
-    },
-    uz: {
-      title: "O'zbekistonda biznes va huquqiy hujjat shablonlari | Advizen Consulting",
-      description:
-        "O'zbekistonda biznes uchun huquqshunoslar tayyorlagan hujjat shablonlari — shartnomalar, HR, kompliayens, soliq formalari. Tez yuklab olish, Word formatida.",
-    },
-  },
   contact: {
     en: {
       title: "Contact Advizen Consulting | Business Advisory in Tashkent, Uzbekistan",
@@ -575,23 +521,6 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
         "advizenco.com saytidan va Advizen Consulting raqamli xizmatlaridan foydalanish shartlari.",
     },
   },
-  "terms-of-sale": {
-    en: {
-      title: "Terms of Sale | Advizen Consulting",
-      description:
-        "Terms governing purchases of document templates and digital products from Advizen Consulting.",
-    },
-    ru: {
-      title: "Условия продажи | Advizen Consulting",
-      description:
-        "Условия покупки шаблонов документов и цифровых продуктов Advizen Consulting.",
-    },
-    uz: {
-      title: "Sotish shartlari | Advizen Consulting",
-      description:
-        "Advizen Consultingdan hujjat shablonlari va raqamli mahsulotlarni sotib olish shartlari.",
-    },
-  },
   cookies: {
     en: {
       title: "Cookie Policy | Advizen Consulting",
@@ -631,98 +560,6 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
 function pagePath(key: PageKey, locale: string) {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
   return `${SITE_URL}${prefix}${PAGE_PATHS[key]}`;
-}
-
-function productUrl(id: string, locale: string) {
-  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
-  return `${SITE_URL}${prefix}/store/${id}`;
-}
-
-export function productPageMetadata(id: string, locale: string): Metadata {
-  const product = getProductById(id);
-  if (!product) return {};
-  const safe: Locale = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
-  const canonical = productUrl(id, safe);
-  const title = `${product.nameEn} | Advizen Consulting`;
-  const description = product.descriptionEn;
-  const languages = Object.fromEntries(
-    routing.locales.map((l: Locale) => [l, productUrl(id, l)]),
-  );
-  return {
-    title,
-    description,
-    alternates: {
-      canonical,
-      languages: { ...languages, "x-default": productUrl(id, routing.defaultLocale) },
-    },
-    openGraph: {
-      title,
-      description,
-      type: "website",
-      url: canonical,
-      siteName: ORG_NAME,
-      locale: OG_LOCALE[safe],
-      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `${product.nameEn} | Advizen Consulting` }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [OG_IMAGE],
-    },
-  };
-}
-
-export function productJsonLd(id: string, locale: string) {
-  const product = getProductById(id);
-  if (!product) return null;
-  const safe: Locale = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
-  const url = productUrl(id, safe);
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${url}#product`,
-    name: product.nameEn,
-    description: product.descriptionEn,
-    sku: id,
-    category: product.category,
-    brand: { "@type": "Brand", name: ORG_NAME },
-    url,
-    image: OG_IMAGE,
-    additionalProperty: product.includesEn.map((item) => ({
-      "@type": "PropertyValue",
-      name: "Includes",
-      value: item,
-    })),
-    offers: {
-      "@type": "Offer",
-      "@id": `${url}#offer`,
-      url,
-      price: product.price,
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@id": `${SITE_URL}#organization` },
-    },
-  };
-}
-
-export function productPageBreadcrumbJsonLd(id: string, locale: string) {
-  const product = getProductById(id);
-  if (!product) return null;
-  const safe: Locale = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
-  const labels = BREADCRUMB_LABELS[safe];
-  const homeUrl = safe === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${safe}`;
-  const storeUrl = `${homeUrl}/store`;
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: labels.home,         item: homeUrl },
-      { "@type": "ListItem", position: 2, name: labels.store ?? "Store", item: storeUrl },
-      { "@type": "ListItem", position: 3, name: product.nameEn,      item: productUrl(id, safe) },
-    ],
-  };
 }
 
 export function pageMetadata(key: PageKey, locale: string): Metadata {

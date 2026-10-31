@@ -8,7 +8,6 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getServiceBySlug, servicesData } from "@/lib/services";
 import { allEngagements } from "@/lib/industries";
-import { PRODUCTS } from "@/lib/products";
 import { SERVICE_FAQ_DATA } from "@/lib/serviceFaqData";
 import MagneticButton from "@/components/MagneticButton";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -102,41 +101,24 @@ const RELATED_SERVICES_MAP: Record<string, string[]> = {
   compliance:        ["entity-management", "tax", "legal"],
 };
 
-const RELATED_PRODUCTS_MAP: Record<string, string[]> = {
-  tax:               ["tax-compliance-starter", "transfer-pricing"],
-  legal:             ["shareholder-agreement", "nda-bilateral", "commercial-lease"],
-  finance:           ["tax-compliance-starter", "transfer-pricing"],
-  hr:                ["employment-contract", "hr-policy-manual"],
-  funding:           ["sez-entry-pack", "due-diligence-pack"],
-  "ma-advisory":     ["due-diligence-pack", "shareholder-agreement"],
-  "due-diligence":   ["due-diligence-pack", "shareholder-agreement"],
-  "entity-management": ["llc-formation", "jsc-formation"],
-  corporate:         ["llc-formation", "jsc-formation", "shareholder-agreement"],
-  eor:               ["employment-contract", "hr-policy-manual"],
-  payroll:           ["employment-contract", "hr-policy-manual"],
-  immigration:       ["work-permit-pack"],
-  "virtual-office":  ["llc-formation", "commercial-lease"],
-  compliance:        ["tax-compliance-starter", "work-permit-pack"],
-};
-
 const CHROME: Record<string, Record<string, string>> = {
   en: {
     about: "About this service", whoFor: "Who this is for", capabilities: "Capabilities", deliver: "What we deliver",
     discuss: "Discuss this service", ctaPrefix: "Ready to discuss", ctaBody: "Our team is available to scope your engagement and answer initial questions.", start: "Start a conversation",
-    selectedWork: "Selected work", viewAll: "View all projects", relatedServices: "Related services", fromStore: "From our store",
-    faqTitle: "Frequently asked", faqSubtitle: "Quick answers on the practical details that matter most.", storeFrom: "from",
+    selectedWork: "Selected work", viewAll: "View all projects", relatedServices: "Related services",
+    faqTitle: "Frequently asked", faqSubtitle: "Quick answers on the practical details that matter most.",
   },
   ru: {
     about: "Об этой услуге", whoFor: "Кому подходит", capabilities: "Возможности", deliver: "Что мы делаем",
     discuss: "Обсудить эту услугу", ctaPrefix: "Готовы обсудить", ctaBody: "Наша команда готова обсудить объём работ и ответить на ваши вопросы.", start: "Начать диалог",
-    selectedWork: "Избранные проекты", viewAll: "Все проекты", relatedServices: "Связанные услуги", fromStore: "Из нашего магазина",
-    faqTitle: "Частые вопросы", faqSubtitle: "Краткие ответы на самые практичные вопросы.", storeFrom: "от",
+    selectedWork: "Избранные проекты", viewAll: "Все проекты", relatedServices: "Связанные услуги",
+    faqTitle: "Частые вопросы", faqSubtitle: "Краткие ответы на самые практичные вопросы.",
   },
   uz: {
     about: "Bu xizmat haqida", whoFor: "Bu kim uchun", capabilities: "Imkoniyatlar", deliver: "Biz nima qilamiz",
     discuss: "Bu xizmatni muhokama qilish", ctaPrefix: "Muhokama qilishga tayyormisiz", ctaBody: "Jamoamiz hamkorlik doʼirasini muhokama qilish va savollarga javob berish uchun tayyor.", start: "Suhbatni boshlash",
-    selectedWork: "Tanlangan loyihalar", viewAll: "Barcha loyihalar", relatedServices: "Bogʼliq xizmatlar", fromStore: "Doʼkonimizdan",
-    faqTitle: "Koʼp soʻraladigan", faqSubtitle: "Eng muhim amaliy savollarga qisqa javoblar.", storeFrom: "dan",
+    selectedWork: "Tanlangan loyihalar", viewAll: "Barcha loyihalar", relatedServices: "Bogʼliq xizmatlar",
+    faqTitle: "Koʼp soʻraladigan", faqSubtitle: "Eng muhim amaliy savollarga qisqa javoblar.",
   },
 };
 
@@ -174,11 +156,6 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
     .map((s) => servicesData.find((svc) => svc.slug === s))
     .filter(Boolean) as (typeof servicesData)[number][];
 
-  // Related products
-  const relatedProductIds = RELATED_PRODUCTS_MAP[slug] ?? [];
-  const relatedProducts = relatedProductIds
-    .map((id) => PRODUCTS.find((p) => p.id === id))
-    .filter(Boolean) as (typeof PRODUCTS)[number][];
 
   // FAQ
   const faqLocale: "en" | "ru" | "uz" = locale === "ru" ? "ru" : locale === "uz" ? "uz" : "en";
@@ -421,10 +398,10 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
         </section>
       )}
 
-      {/* ── Related services + From our store ────────────────────── */}
+      {/* ── Related services ─────────────────────────────────────── */}
       <section className="py-14 md:py-20 lg:py-28 bg-black border-t border-white/[0.05]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+          <div className="max-w-2xl">
 
             {/* Related services */}
             <AnimatedSection>
@@ -457,38 +434,6 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                 })}
               </div>
             </AnimatedSection>
-
-            {/* Related products */}
-            {relatedProducts.length > 0 && (
-              <AnimatedSection delay={0.1}>
-                <p className="tracking-luxury text-white/40 mb-7">{c.fromStore}</p>
-                <div className="flex flex-col gap-3">
-                  {relatedProducts.map((prod) => (
-                    <Link
-                      key={prod.id}
-                      href={`/store/${prod.id}`}
-                      className="group flex items-center gap-4 p-4 rounded-xl border border-white/[0.06] bg-white/[0.02] hover:border-white/[0.12] hover:bg-white/[0.04] transition-all duration-200"
-                    >
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[15px] text-white/70 group-hover:text-white/90 transition-colors leading-tight">
-                          {prod.nameEn}
-                        </p>
-                        <p className="text-[11px] tracking-[0.14em] uppercase text-white/28 mt-0.5">{prod.category}</p>
-                      </div>
-                      <div className="flex items-center gap-3 shrink-0">
-                        <span
-                          className="text-[13px] font-medium tabular-nums"
-                          style={{ color: `rgba(${accent},0.75)` }}
-                        >
-                          ${prod.price}
-                        </span>
-                        <ArrowRight className="w-3.5 h-3.5 text-white/20 group-hover:text-white/50 group-hover:translate-x-0.5 transition-all duration-200" />
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </AnimatedSection>
-            )}
 
           </div>
         </div>

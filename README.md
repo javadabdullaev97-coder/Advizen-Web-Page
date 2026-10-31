@@ -32,8 +32,8 @@ ones that are not secret.
 
 | Variable | Used by |
 | --- | --- |
-| `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` | contact and order notifications to the team |
-| `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `RESEND_TO_EMAIL` | emails for contact requests and orders |
+| `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` | contact-form notifications to the team |
+| `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `RESEND_TO_EMAIL` | emails for contact requests |
 | `INDEXNOW_SECRET` | `/api/indexnow`, which pings Bing and Yandex about new pages |
 
 ## Where things are
@@ -42,9 +42,8 @@ ones that are not secret.
 | --- | --- |
 | `src/app/[locale]/` | pages; English has no prefix (`src/app/(en)/` re-exports them) |
 | `src/components/home/` | homepage sections |
-| `src/components/store/` | document store and product pages |
-| `src/app/api/` | contact form, store orders, IndexNow |
-| `src/lib/` | content and data: services, articles, products, FAQ, SEO |
+| `src/app/api/` | contact form and IndexNow |
+| `src/lib/` | content and data: services, articles, FAQ, SEO |
 | `messages/{en,ru,uz}/` | interface text, one file per area |
 | `public/` | images, favicons, `llms.txt`, verification files |
 | `DESIGN.md` | brand and design rules |

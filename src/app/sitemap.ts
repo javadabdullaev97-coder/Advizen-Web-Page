@@ -11,13 +11,11 @@ const STATIC_PATHS = [
   "",
   "/expertise",
   "/insights",
-  "/store",
   "/contact",
   "/privacy",
   "/terms",
   "/cookies",
   "/disclaimer",
-  "/terms-of-sale",
 ];
 
 function localizedUrl(path: string, locale: string): string {
