@@ -41,11 +41,15 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+  // On the homepage the bar sits clear over the photo until the page moves; elsewhere it is always glass.
+  const clear = pathname === "/" && !scrolled && !mobileOpen;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-background transition-[border-color] duration-200 border-b ${
-        scrolled || mobileOpen ? "border-border" : "border-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color] duration-300 border-b ${
+        clear
+          ? "bg-transparent border-transparent"
+          : `backdrop-blur-xl backdrop-saturate-[1.8] ${mobileOpen ? "bg-background" : "bg-background/75"} ${scrolled || mobileOpen ? "border-line" : "border-transparent"}`
       }`}
     >
       <nav className="m-wrap flex items-center h-20 relative">
@@ -80,7 +84,7 @@ export default function Navbar() {
               href={link.href}
               aria-current={isActive(link.href) ? "page" : undefined}
               className={`text-[15px] font-medium transition-colors ${
-                isActive(link.href) ? "text-foreground-hi" : "text-muted hover:text-foreground-hi"
+                isActive(link.href) ? "text-foreground-hi" : "text-foreground-2 hover:text-foreground-hi"
               }`}
             >
               {link.label}

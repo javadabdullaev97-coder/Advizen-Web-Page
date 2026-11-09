@@ -13,12 +13,14 @@ import CookieBanner from "@/components/CookieBanner";
 import ScrollRestoration from "@/components/ScrollRestoration";
 
 const SITE_URL = "https://www.advizenco.com";
+const TITLE = "Tax, Legal & Accounting Advisory in Uzbekistan | Advizen";
+const DESCRIPTION =
+  "Tax, legal, accounting and HR advisory for companies entering and operating in Uzbekistan. One team and one coordinating partner, in English, Russian or Uzbek.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Advizen Consulting | Premier Business Advisory in Uzbekistan",
-  description:
-    "Advizen Consulting — your trusted partner for expert tax, legal, finance, accounting, HR, and business consulting in Uzbekistan. 8+ years of integrated advisory across 15+ industries in Central Asia.",
+  title: TITLE,
+  description: DESCRIPTION,
   icons: {
     icon: [
       { url: "/Advizen Logo/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -46,9 +48,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Advizen Consulting | Premier Business Advisory in Uzbekistan",
-    description:
-      "Advizen Consulting — your trusted partner for expert tax, legal, finance, accounting, HR, and business consulting in Uzbekistan. 8+ years of integrated advisory across 15+ industries in Central Asia.",
+    title: TITLE,
+    description: DESCRIPTION,
     type: "website",
     locale: "en_US",
     siteName: "Advizen Consulting",
@@ -57,9 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Advizen Consulting | Premier Business Advisory in Uzbekistan",
-    description:
-      "Advizen Consulting — your trusted partner for expert tax, legal, finance, accounting, HR, and business consulting in Uzbekistan. 8+ years of integrated advisory across 15+ industries in Central Asia.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: [OG_IMAGE],
   },
 };

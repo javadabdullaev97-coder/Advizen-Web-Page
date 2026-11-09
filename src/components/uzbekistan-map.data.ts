@@ -20,8 +20,3 @@ export const REGIONS = [
   ...regionsR6,
   ...regionsR7,
 ];
-
-export const TASHKENT = { cx: 612, cy: 264 };
-
-/* Geographic sweep: west to east */
-export const CYCLE_ORDER = ["UZ-QR", "UZ-XO", "UZ-NW", "UZ-BU", "UZ-SA", "UZ-QA", "UZ-SU", "UZ-JI", "UZ-SI", "UZ-TO", "UZ-NG", "UZ-FA", "UZ-AN"];

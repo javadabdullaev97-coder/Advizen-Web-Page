@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import FaqSection from "@/components/FaqSection";
 import HomeRegions from "@/components/home/HomeRegions";
+import HomeReveal from "@/components/home/HomeReveal";
 import {
   HomeHero,
   HomeServices,
@@ -16,12 +17,13 @@ export default async function HomePage({ params }: { params?: Promise<{ locale?:
   return (
     <>
       <HomeHero />
-      <HomeServices />
       <HomeTrackRecord />
+      <HomeServices />
       <HomeRegions />
       <HomeInsights />
       <HomeContact />
       <FaqSection page="home" />
+      <HomeReveal />
     </>
   );
 }

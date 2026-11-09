@@ -37,7 +37,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-background border-t border-line">
       <div className="m-wrap">
         <div className="py-16 md:py-20 grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,3fr)] lg:gap-16">
           <div>
@@ -55,7 +55,6 @@ export default function Footer() {
               <a href="mailto:info@advizenco.com" className="text-foreground-hi w-fit py-1.5 hover:underline underline-offset-4">
                 info@advizenco.com
               </a>
-              <p className="text-muted py-1.5">{t("tashkent")}</p>
             </div>
           </div>
 
@@ -77,13 +76,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-8 border-t border-border">
+        <div className="py-8 border-t border-line">
           <SocialIcons />
         </div>
 
-        <div className="py-6 border-t border-border flex flex-wrap justify-between gap-3 text-sm text-muted-dark">
+        <div className="py-6 border-t border-line flex flex-wrap justify-between gap-3 text-sm text-muted-dark">
           <p>&copy; {new Date().getFullYear()} Advizen Consulting LLC. {t("rights")}</p>
-          <p>{t("location")}</p>
+          <p>{t("tashkent")}</p>
         </div>
       </div>
     </footer>

@@ -68,7 +68,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
           "flex items-center gap-1.5 cursor-pointer transition-colors duration-200",
           compact
             ? "text-[12px] text-foreground/70 hover:text-foreground py-1"
-            : "text-[12px] text-muted hover:text-foreground"
+            : "text-[12px] text-foreground-2 hover:text-foreground-hi"
         )}
       >
         <FlagBadge code={locale} size={17} />

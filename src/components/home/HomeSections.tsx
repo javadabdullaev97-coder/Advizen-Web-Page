@@ -1,78 +1,111 @@
 import Image from "next/image";
+import type { CSSProperties, ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { allEngagements } from "@/lib/industries";
 import { publications, sortedPublications } from "@/lib/publications";
+import { SectionHead } from "@/components/home/SectionHead";
 
 const TELEGRAM = "https://t.me/advizen";
-const UZ_MONTHS = ["yan", "fev", "mar", "apr", "may", "iyn", "iyl", "avg", "sen", "okt", "noy", "dek"];
 const WHATSAPP = "https://wa.me/message/EKU3HEOTSK43O1";
+const PHONE = "+998 33 488 48 88";
+const EMAIL = "info@advizenco.com";
+const UZ_MONTHS = ["yan", "fev", "mar", "apr", "may", "iyn", "iyl", "avg", "sen", "okt", "noy", "dek"];
 
-type Proof = { fig: string; text: string };
 type Rate = { fig: string; label: string };
 type Step = { title: string; text: string };
 
+const delay = (d: number) => ({ "--d": `${d}s` }) as CSSProperties;
+
 export function HomeHero() {
   const t = useTranslations("HomeModern.hero");
-  const proof = t.raw("proof") as Proof[];
   return (
-    <section className="relative overflow-hidden pt-20">
-      <div className="relative min-h-[calc(100svh-5rem)] grid grid-rows-[1fr_auto] max-lg:min-h-0">
-        <div className="absolute inset-y-0 right-0 left-[38%] max-lg:relative max-lg:left-0 max-lg:h-[260px] max-lg:row-start-1">
-          <Image
-            src="/home/tashkent-dusk.webp"
-            alt={t("imageAlt")}
-            fill
-            priority
-            unoptimized
-            sizes="(max-width: 1023px) 100vw, 62vw"
-            className="object-cover object-[60%_40%]"
-          />
-          <div
-            aria-hidden
-            className="absolute inset-0 max-lg:hidden"
-            style={{ background: "linear-gradient(90deg, var(--background) 0%, rgba(11,11,12,.86) 18%, rgba(11,11,12,.25) 55%, rgba(11,11,12,.1) 100%), linear-gradient(0deg, var(--background) 0%, rgba(11,11,12,0) 34%)" }}
-          />
-          <div aria-hidden className="absolute inset-0 lg:hidden" style={{ background: "linear-gradient(0deg, var(--background) 0%, rgba(11,11,12,0) 45%)" }} />
+    <section className="relative isolate flex items-end min-h-[min(100svh,920px)] overflow-hidden max-sm:block max-sm:min-h-0 max-sm:pt-20">
+      <div className="absolute inset-0 -z-10 overflow-hidden max-sm:relative max-sm:z-0 max-sm:h-[56svh] max-sm:min-h-[340px]">
+        <Image
+          src="/home/tashkent-dusk.webp"
+          alt={t("imageAlt")}
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="object-cover object-[22%_45%] max-sm:object-[72%_45%] home-settle"
+        />
+        <div aria-hidden className="absolute inset-0 home-hero-shade" />
+      </div>
+      <div className="relative m-wrap w-full pb-[clamp(56px,8vw,104px)] max-sm:-mt-16 max-sm:pb-16">
+        <h1 className="m-h1 text-[44px] sm:text-[56px] lg:text-[clamp(56px,5.8vw,84px)] max-w-[15ch] home-rise">{t("title")}</h1>
+        <p className="mt-6 text-[18px] lg:text-[21px] leading-[1.5] text-[#e8e8ed] max-w-[34em] text-pretty home-rise" style={delay(0.08)}>
+          {t("lede")}
+        </p>
+        <div className="mt-9 flex flex-wrap gap-3 home-rise" style={delay(0.16)}>
+          <Link href="/contact" className="m-btn m-btn-p max-sm:w-full">{t("book")}</Link>
+          <a href={TELEGRAM} target="_blank" rel="noopener noreferrer" className="m-btn m-btn-g max-sm:w-full">{t("telegram")}</a>
         </div>
-
-        <div className="relative m-wrap self-center pt-16 pb-10 max-lg:pt-4 max-w-[calc(860px+13vw)]">
-          <h1 className="m-h1 text-[40px] sm:text-[52px] lg:text-[clamp(52px,5vw,76px)] max-w-[14ch]">{t("title")}</h1>
-          <p className="mt-6 text-[17px] lg:text-[20px] leading-[1.55] text-foreground max-w-[34em]">{t("lede")}</p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <Link href="/contact" className="m-btn m-btn-p max-sm:w-full">{t("book")}</Link>
-            <a href={TELEGRAM} target="_blank" rel="noopener noreferrer" className="m-btn m-btn-s max-sm:w-full">{t("telegram")}</a>
-          </div>
-        </div>
-
-        <ul className="relative m-wrap grid gap-5 pb-12 pt-6 lg:grid-cols-3 lg:gap-10 lg:pb-11">
-          {proof.map((p) => (
-            <li key={p.fig} className="flex lg:flex-col gap-4 lg:gap-2 items-baseline lg:items-start max-w-[320px] max-lg:max-w-none">
-              <span className="m-fig text-[30px] lg:text-[40px] min-w-[96px]">{p.fig}</span>
-              <span className="text-[15px] leading-[1.45] text-muted">{p.text}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
 }
 
-function SectionHead({ title, lede, children }: { title: string; lede: string; children?: React.ReactNode }) {
+// Three headline figures, then three more engagements as quiet rows.
+const FIG_IDX = [0, 1, 13];
+const ROW_IDX = [2, 3, 10];
+
+export function HomeTrackRecord() {
+  const t = useTranslations("HomeModern.track");
+  const tEng = useTranslations("Engagements");
+  const metric = (idx: number) => (allEngagements[idx].metric === "Policy" ? t("law") : allEngagements[idx].metric);
+  const caption = (idx: number) =>
+    `${tEng(`sectors.${allEngagements[idx].sector}`)} · ${tEng(`metricLabels.${allEngagements[idx].metricLabel}`)}`;
   return (
-    <div className="grid gap-6 lg:grid-cols-2 lg:gap-20 lg:items-end mb-10 lg:mb-14">
-      <h2 className="m-h2 text-[34px] lg:text-[clamp(36px,3.8vw,58px)]">{title}</h2>
-      <div>
-        <p className="text-[17px] lg:text-[18px] leading-[1.55] text-muted max-w-[32em]">{lede}</p>
-        {children}
+    <section className="m-wrap py-28 lg:py-40">
+      <SectionHead title={t("title")} lede={t("lede")} />
+      <ul className="grid gap-10 md:grid-cols-3">
+        {FIG_IDX.map((idx, i) => (
+          <li key={idx} data-reveal style={delay(i * 0.08)} className="border-t border-line pt-7">
+            <span className="m-fig block text-[72px] lg:text-[clamp(72px,8vw,116px)] tracking-[-0.05em] leading-[.95]">{metric(idx)}</span>
+            <p className="mt-5 text-[16px] lg:text-[17px] leading-[1.55] text-foreground-2 max-w-[24em]">{tEng(`headlines.${idx}`)}</p>
+            <p className="mt-2 text-[14px] text-muted">{caption(idx)}</p>
+          </li>
+        ))}
+      </ul>
+      <ul data-reveal className="mt-16 lg:mt-20 border-t border-line">
+        {ROW_IDX.map((idx) => (
+          <li key={idx} className="grid gap-1.5 md:grid-cols-[200px_minmax(0,1fr)_auto] md:gap-8 md:items-baseline py-6 border-b border-line">
+            <span className="m-fig text-[30px] lg:text-[32px]">{metric(idx)}</span>
+            <span className="text-[16px] lg:text-[17px] leading-[1.5] text-foreground">{tEng(`headlines.${idx}`)}</span>
+            <span className="text-[14px] text-muted">{caption(idx)}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-8 flex flex-wrap justify-between items-center gap-4 text-[14px] text-muted">
+        <span>{t("foot")}</span>
+        <Link href="/expertise" className="m-more text-[16px]">{t("all")}</Link>
       </div>
-    </div>
+    </section>
+  );
+}
+
+function ServiceTile({ href, title, text, more, big = false, style, children }: {
+  href: string; title: string; text: string; more: string; big?: boolean; style?: CSSProperties; children?: ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      data-reveal
+      style={style}
+      className={`m-tile flex flex-col p-7 lg:p-9 min-h-[260px] transition-colors duration-300 hover:bg-[#232325] ${big ? "md:col-span-2 lg:row-span-2" : ""}`}
+    >
+      <h3 className={`font-semibold leading-[1.15] tracking-[-0.025em] text-foreground-hi ${big ? "text-[30px] lg:text-[clamp(30px,2.6vw,40px)]" : "text-[23px] lg:text-[26px]"}`}>{title}</h3>
+      <p className="mt-3 text-[16px] leading-[1.55] text-foreground-2 max-w-[32em]">{text}</p>
+      {children}
+      <span className="m-more mt-auto pt-7 text-[15px]">{more}</span>
+    </Link>
   );
 }
 
 export function HomeServices() {
   const t = useTranslations("HomeModern.services");
-  const items = t.raw("tax.items") as string[];
   const rates = t.raw("rates") as Rate[];
   const small = [
     { key: "legal", href: "/expertise/legal" },
@@ -82,68 +115,35 @@ export function HomeServices() {
     { key: "operations", href: "/expertise" },
   ] as const;
   return (
-    <section className="m-wrap py-24 lg:py-36">
+    <section className="m-wrap pb-28 lg:pb-40">
       <SectionHead title={t("title")} lede={t("lede")} />
-      <div className="grid gap-3 lg:grid-cols-6">
-        <div className="m-tile p-7 lg:p-9 flex flex-col gap-3 lg:col-span-4 lg:row-span-2">
-          <h3 className="text-[28px] lg:text-[34px] font-bold tracking-[-0.03em] text-foreground-hi">{t("tax.title")}</h3>
-          <p className="text-[16px] leading-[1.6] text-muted max-w-[36em]">{t("tax.text")}</p>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2 mt-1 text-[15px] text-foreground">
-            {items.map((i) => <li key={i}>{i}</li>)}
-          </ul>
-          <dl className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-auto pt-8">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <ServiceTile
+          href="/expertise/tax"
+          title={t("tax.title")}
+          text={t("tax.text")}
+          more={t("tax.title")}
+          big
+        >
+          <dl className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-auto pt-12">
             {rates.map((r) => (
               <div key={r.label}>
-                <dt className="m-fig text-[34px]">{r.fig}</dt>
-                <dd className="text-[14px] text-muted mt-1.5">{r.label}</dd>
+                <dt className="m-fig text-[44px] lg:text-[clamp(44px,4.6vw,68px)] tracking-[-0.05em]">{r.fig}</dt>
+                <dd className="mt-2.5 text-[14px] text-muted">{r.label}</dd>
               </div>
             ))}
           </dl>
-          <Link href="/expertise/tax" className="m-more mt-4">{t("tax.title")} ›</Link>
-        </div>
-        {small.map((s) => (
-          <div key={s.key} className="m-tile p-7 lg:p-9 flex flex-col gap-3 lg:col-span-2">
-            <h3 className="text-[22px] lg:text-[24px] font-bold tracking-[-0.03em] text-foreground-hi">{t(`${s.key}.title`)}</h3>
-            <p className="text-[16px] leading-[1.6] text-muted">{t(`${s.key}.text`)}</p>
-            <Link href={s.href} className="m-more mt-auto pt-3">{t(`${s.key}.title`)} ›</Link>
-          </div>
+        </ServiceTile>
+        {small.map((s, i) => (
+          <ServiceTile
+            key={s.key}
+            href={s.href}
+            title={t(`${s.key}.title`)}
+            text={t(`${s.key}.text`)}
+            more={t("more")}
+            style={delay((i % 3) * 0.06)}
+          />
         ))}
-      </div>
-    </section>
-  );
-}
-
-const TRACK_IDX = [0, 1, 2, 3, 10, 11];
-
-export function HomeTrackRecord() {
-  const t = useTranslations("HomeModern.track");
-  const tEng = useTranslations("Engagements");
-  const rows = TRACK_IDX.map((idx) => ({ idx, ...allEngagements[idx] }));
-  return (
-    <section className="m-wrap pb-24 lg:pb-36">
-      <SectionHead title={t("title")} lede={t("lede")} />
-      <div className="m-tile px-6 lg:px-9 py-2">
-        <table className="w-full border-collapse">
-          <tbody>
-            {rows.map((e, i) => (
-              <tr key={e.idx} className={`max-lg:grid max-lg:py-5 ${i > 0 ? "border-t border-border" : ""}`}>
-                <td className="lg:w-[26%] lg:py-6 lg:pr-8 align-baseline">
-                  <span className="m-fig block text-[36px] lg:text-[46px] whitespace-nowrap">{e.metric === "Policy" ? t("law") : e.metric}</span>
-                  <span className="block text-[14px] text-muted mt-2">
-                    {tEng(`sectors.${e.sector}`)} · {tEng(`metricLabels.${e.metricLabel}`)}
-                  </span>
-                </td>
-                <td className="lg:py-6 align-baseline text-[17px] lg:text-[18px] leading-[1.5] text-foreground max-lg:mt-3">
-                  {tEng(`headlines.${e.idx}`)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="flex flex-wrap justify-between items-center gap-4 mt-6 text-[15px] text-muted">
-        <span>{t("foot")}</span>
-        <Link href="/expertise" className="m-more">{t("all")} ›</Link>
       </div>
     </section>
   );
@@ -160,80 +160,116 @@ export function HomeInsights() {
     return locale === "uz" ? `${UZ_MONTHS[d.getMonth()]} ${d.getFullYear()}` : dateFmt.format(d);
   };
   return (
-    <section className="m-wrap pb-24 lg:pb-36">
+    <section className="m-wrap pb-28 lg:pb-40">
       <SectionHead title={t("title")} lede={t("lede")}>
-        <Link href="/insights" className="m-more mt-4">{t("all")} ›</Link>
+        <Link href="/insights" className="m-more mt-5 text-[16px]">{t("all")}</Link>
       </SectionHead>
-      <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)]">
-        <div className="m-tile p-8 lg:p-10 flex flex-col justify-between gap-10 min-h-[420px] lg:min-h-[540px] relative overflow-hidden">
-          <div aria-hidden className="absolute inset-0 opacity-[0.09]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%23e3e3e6' stroke-width='1'%3E%3Cpath d='M44 4l11.7 28.3L84 44 55.7 55.7 44 84 32.3 55.7 4 44l28.3-11.7z'/%3E%3Crect x='26' y='26' width='36' height='36' transform='rotate(45 44 44)'/%3E%3Ccircle cx='44' cy='44' r='9'/%3E%3C/g%3E%3C/svg%3E\")" }} />
-          <div className="relative">
-            <p className="text-[14px] text-muted">{t("guideMeta")}</p>
-            <h3 className="mt-3 text-[36px] lg:text-[46px] font-bold leading-[1.05] tracking-[-0.04em] text-foreground-hi max-w-[11ch]">{t("guideTitle")}</h3>
-            <p className="mt-4 text-[16px] leading-[1.6] text-foreground max-w-[26em]">{t("guideText")}</p>
-          </div>
-          <div className="relative">
-            <Link href="/contact" className="m-btn m-btn-p">{t("guideCta")}</Link>
-          </div>
+
+      <div data-reveal className="group m-tile grid gap-10 sm:grid-cols-[minmax(0,1fr)_auto] items-center p-8 lg:p-14 overflow-hidden">
+        <div>
+          <p className="text-[14px] text-muted">{t("guideMeta")}</p>
+          <h3 className="mt-3 text-[32px] lg:text-[clamp(32px,3.4vw,48px)] font-semibold leading-[1.04] tracking-[-0.04em] text-foreground-hi">{t("guideTitle")}</h3>
+          <p className="mt-4 text-[16px] lg:text-[17px] leading-[1.55] text-foreground-2 max-w-[30em]">{t("guideText")}</p>
+          <Link href="/contact" className="m-btn m-btn-p mt-7 max-sm:w-full">{t("guideCta")}</Link>
         </div>
-        <ul className="flex flex-col gap-3">
-          {recent.map((p) => (
-            <li key={p.slug}>
-              <Link href={`/insights/${p.slug}`} className="m-tile grid gap-5 sm:grid-cols-[minmax(0,1fr)_170px] items-center p-6 lg:p-7 hover:bg-surface-light transition-colors">
-                <div className="min-w-0">
-                  <p className="text-[14px] text-muted">
-                    {tPub(`tags.${p.tag}`)}
-                    {p.date ? ` · ${fmtDate(p.date)}` : ""}
-                  </p>
-                  <h4 className="mt-2 text-[20px] lg:text-[22px] font-bold leading-[1.25] tracking-[-0.02em] text-foreground-hi">{tPub(`items.${p.slug}.title`)}</h4>
-                </div>
-                <div aria-hidden className="max-sm:hidden aspect-[4/3] rounded-[16px] bg-surface-light p-4 flex flex-col justify-between">
-                  <span className="text-[26px] font-bold tracking-[-0.03em] text-foreground-hi leading-none">{tPub(`categories.${p.category}`)}</span>
-                  <span className="self-end w-6 h-6 rotate-45 border-2 border-primary-light" />
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <Image
+          src="/Articles Image/DBU_cover.webp"
+          alt=""
+          width={200}
+          height={241}
+          unoptimized
+          className="w-[130px] sm:w-[200px] h-auto rounded-xl shadow-[0_30px_60px_rgba(0,0,0,.55)] -rotate-[4deg] translate-y-2 transition-transform duration-700 ease-[var(--ease-out)] group-hover:-rotate-2 group-hover:translate-y-0 max-sm:order-first"
+        />
       </div>
+
+      <ul className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        {recent.map((p, i) => (
+          <li key={p.slug} data-reveal style={delay(i * 0.08)} className={i === 2 ? "sm:max-lg:hidden" : ""}>
+            <Link href={`/insights/${p.slug}`} className="group block">
+              <div className="relative aspect-[16/10] rounded-[18px] overflow-hidden bg-surface">
+                {p.image && (
+                  <Image
+                    src={p.image}
+                    alt=""
+                    fill
+                    unoptimized
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.04]"
+                  />
+                )}
+              </div>
+              <p className="mt-5 text-[14px] text-muted">
+                {tPub(`tags.${p.tag}`)}
+                {p.date ? ` · ${fmtDate(p.date)}` : ""}
+              </p>
+              <h3 className="mt-2 text-[20px] lg:text-[21px] font-semibold leading-[1.25] tracking-[-0.02em] text-foreground-hi">{tPub(`items.${p.slug}.title`)}</h3>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
 
+const ICONS = {
+  telegram: <path fill="currentColor" d="M21.9 4.6 18.7 19.7c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.4l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 3.1c.9-.3 1.6.2 1.4 1.5Z" />,
+  whatsapp: <path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.7-.4Z" />,
+  phone: <path fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" d="M5 3.5h3.2l1.6 4-2 1.3a10.5 10.5 0 0 0 5.4 5.4l1.3-2 4 1.6V17a2 2 0 0 1-2 2A15.5 15.5 0 0 1 3 5.5a2 2 0 0 1 2-2Z" />,
+  email: <path fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" d="M3.5 6h17v12h-17zM3.5 6.5l8.5 6.5 8.5-6.5" />,
+};
+
 export function HomeContact() {
   const t = useTranslations("HomeModern.contact");
   const steps = t.raw("steps") as Step[];
+  const ways = [
+    { icon: ICONS.telegram, title: "Telegram", sub: "@advizen", href: TELEGRAM, external: true },
+    { icon: ICONS.whatsapp, title: "WhatsApp", sub: PHONE, href: WHATSAPP, external: true },
+    { icon: ICONS.phone, title: t("phone"), sub: `${PHONE} · ${t("hoursValue")}`, href: "tel:+998334884888" },
+    { icon: ICONS.email, title: t("email"), sub: EMAIL, href: `mailto:${EMAIL}` },
+  ];
+  // No bottom padding: the FAQ that follows brings its own top spacing.
   return (
-    <section className="m-wrap pb-24 lg:pb-36">
-      <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+    <section className="m-wrap">
+      <div data-reveal className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-[clamp(40px,5vw,80px)] bg-surface rounded-[28px] lg:rounded-[36px] p-7 sm:p-10 lg:p-[clamp(40px,5vw,72px)]">
         <div>
-          <h2 className="m-h2 text-[34px] lg:text-[clamp(36px,3.8vw,58px)]">{t("title")}</h2>
-          <p className="mt-5 text-[17px] lg:text-[18px] leading-[1.55] text-muted max-w-[32em]">{t("lede")}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/contact" className="m-btn m-btn-p">{t("book")}</Link>
-            <a href={TELEGRAM} target="_blank" rel="noopener noreferrer" className="m-btn m-btn-s">Telegram</a>
-            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="m-btn m-btn-s">WhatsApp</a>
-          </div>
-          <dl className="mt-9 grid grid-cols-[auto_1fr] gap-x-7 gap-y-3 text-[16px]">
-            <dt className="text-muted">{t("phone")}</dt>
-            <dd><a href="tel:+998334884888" className="text-foreground-hi hover:underline underline-offset-4">+998 33 488 48 88</a></dd>
-            <dt className="text-muted">{t("email")}</dt>
-            <dd><a href="mailto:info@advizenco.com" className="text-foreground-hi hover:underline underline-offset-4">info@advizenco.com</a></dd>
-            <dt className="text-muted">{t("hours")}</dt>
-            <dd className="text-foreground-hi">{t("hoursValue")}</dd>
-          </dl>
+          <h2 className="m-h2 text-[36px] sm:text-[44px] lg:text-[clamp(44px,4.4vw,64px)]">{t("title")}</h2>
+          <p className="mt-5 text-[18px] lg:text-[20px] leading-[1.5] text-foreground-2 max-w-[30em]">{t("lede")}</p>
+          <Link href="/contact" className="m-btn m-btn-p mt-8 max-sm:w-full">{t("book")}</Link>
+          <ol className="mt-12 grid gap-5">
+            {steps.map((s, i) => (
+              <li key={s.title} className="grid grid-cols-[28px_minmax(0,1fr)] gap-3.5">
+                <span aria-hidden className="w-7 h-7 rounded-full border border-white/20 grid place-items-center text-[13px] font-semibold text-foreground-2">{i + 1}</span>
+                <div>
+                  <h3 className="text-[17px] font-semibold tracking-[-0.01em] text-foreground-hi">{s.title}</h3>
+                  <p className="mt-1 text-[15px] leading-[1.5] text-muted">{s.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
-        <ol className="flex flex-col gap-3">
-          {steps.map((s, i) => (
-            <li key={s.title} className="m-tile grid grid-cols-[44px_1fr] gap-x-3 p-7 lg:p-8">
-              <span className="m-fig text-[28px] text-muted">{i + 1}</span>
-              <div>
-                <p className="text-[19px] font-bold tracking-[-0.02em] text-foreground-hi">{s.title}</p>
-                <p className="mt-1.5 text-[16px] leading-[1.55] text-muted">{s.text}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div className="self-center">
+          <p className="mb-4 text-[14px] text-muted">{t("direct")}</p>
+          <ul className="grid gap-2.5">
+            {ways.map((w) => (
+              <li key={w.title}>
+                <a
+                  href={w.href}
+                  {...(w.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="group grid grid-cols-[48px_minmax(0,1fr)_12px] items-center gap-4 rounded-[20px] bg-white/[0.05] py-4 pl-4 pr-5 transition-[background-color,transform] duration-200 hover:bg-white/[0.09] active:scale-[.985]"
+                >
+                  <span className="w-12 h-12 rounded-[14px] bg-white/[0.08] grid place-items-center text-foreground-hi">
+                    <svg viewBox="0 0 24 24" className="w-[22px] h-[22px]" aria-hidden>{w.icon}</svg>
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-[17px] font-semibold tracking-[-0.01em] text-foreground-hi">{w.title}</span>
+                    <span className="block mt-0.5 text-[14px] text-muted [overflow-wrap:anywhere]">{w.sub}</span>
+                  </span>
+                  <span aria-hidden className="w-2 h-2 border-r-[1.6px] border-t-[1.6px] border-muted rotate-45 transition-transform duration-300 group-hover:translate-x-[3px] group-hover:border-foreground-hi" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

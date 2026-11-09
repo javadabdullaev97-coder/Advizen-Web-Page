@@ -18,21 +18,21 @@ const SITE_URL = "https://www.advizenco.com";
 
 const localeMetadata: Record<Locale, { title: string; description: string; ogLocale: string }> = {
   en: {
-    title: "Advizen Consulting | Premier Business Advisory in Uzbekistan",
+    title: "Tax, Legal & Accounting Advisory in Uzbekistan | Advizen",
     description:
-      "Advizen Consulting — your trusted partner for expert tax, legal, finance, accounting, HR, and business consulting in Uzbekistan. 8+ years of integrated advisory across 15+ industries in Central Asia.",
+      "Tax, legal, accounting and HR advisory for companies entering and operating in Uzbekistan. One team and one coordinating partner, in English, Russian or Uzbek.",
     ogLocale: "en_US",
   },
   ru: {
-    title: "Advizen Consulting | Ведущий бизнес-консультант в Узбекистане",
+    title: "Налоговый, юридический и бухгалтерский консалтинг в Узбекистане | Advizen",
     description:
-      "Advizen Consulting — надёжный партнёр в области налогового, юридического, финансового консалтинга, бухгалтерии и HR в Узбекистане. 8+ лет интегрированной экспертизы в 15+ отраслях Центраньной Азии.",
+      "Налоговые, юридические, бухгалтерские и HR-услуги для компаний, которые выходят на рынок Узбекистана и работают в нём. Одна команда и один координирующий партнёр.",
     ogLocale: "ru_RU",
   },
   uz: {
-    title: "Advizen Consulting | O'zbekistondagi yetakchi biznes maslahatchi",
+    title: "O'zbekistonda soliq, yuridik va buxgalteriya maslahati | Advizen",
     description:
-      "Advizen Consulting — O'zbekistonda soliq, huquqiy, moliyaviy konsalting, buxgalteriya va HR sohasidagi ishonchli hamkoringiz. Markaziy Osiyodagi 15+ sohada 8+ yillik integratsiyalashgan tajriba.",
+      "O'zbekistonga kirib kelayotgan va faoliyat yuritayotgan kompaniyalar uchun soliq, yuridik, buxgalteriya va HR xizmatlari. Bitta jamoa va bitta mas'ul hamkor.",
     ogLocale: "uz_UZ",
   },
 };

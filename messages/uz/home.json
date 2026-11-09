@@ -8,7 +8,7 @@
         "regionalGdp": "Hudud YaIMi",
         "sezs": "Erkin iqtisodiy zonalar",
         "keySectors": "Asosiy tarmoqlar",
-        "hint": "Hududni tanlang"
+        "hint": "Hududni tanlang."
       },
       "regions": {
         "UZ-QR": "Qoraqalpog'iston Respublikasi",
@@ -53,36 +53,14 @@
       "lede": "O'zbekistonda faoliyat boshlayotgan va yuritayotgan kompaniyalar uchun bitta jamoa: soliq, huquq, buxgalteriya, kadrlar va moliyalashtirish, bitta hamkor boshchiligida. O'zbek, rus yoki ingliz tilida.",
       "book": "Konsultatsiyaga yozilish",
       "telegram": "Telegram orqali yozish",
-      "imageAlt": "Kechki Toshkent",
-      "proof": [
-        {
-          "fig": "$10B+",
-          "text": "AES: soliq, buxgalteriya va bojxona tuzilmasi"
-        },
-        {
-          "fig": "$2B+",
-          "text": "Xitoy energetika guruhi: due diligence va xolding tuzilmasi"
-        },
-        {
-          "fig": "80+",
-          "text": "mahalliy va xorijiy mijozlar uchun ro'yxatdan o'tkazilgan kompaniyalar"
-        }
-      ]
+      "imageAlt": "Kechki Toshkent"
     },
     "services": {
       "title": "Barcha yo'nalishlar, bitta aloqa",
       "lede": "Odatda mijozning yuristi, buxgalteri va soliq maslahatchisi bir-biri bilan gaplashmaydi. Bizda ular bitta jamoa, shuning uchun soliqni tejaydigan tuzilma huquqiy tekshiruvdan ham o'tadi.",
       "tax": {
         "title": "Soliq maslahati",
-        "text": "Xorijiy kapitalli kompaniyalar, xoldinglar va transchegaraviy operatsiyalar uchun rejalashtirish, hisobot va tuzilma. Tuzilmangizga qaysi rejim va imtiyozlar mos kelishini aytamiz.",
-        "items": [
-          "Soliq rejalashtirish",
-          "QQS",
-          "Transfer narxlari",
-          "Soliq tekshiruvlarida vakillik",
-          "Bojxona va aksiz",
-          "Imtiyozlarni rasmiylashtirish"
-        ]
+        "text": "Xorijiy kapitalli kompaniyalar, xoldinglar va transchegaraviy operatsiyalar uchun rejalashtirish, hisobot va tuzilma. Tuzilmangizga qaysi rejim va imtiyozlar mos kelishini aytamiz."
       },
       "rates": [
         {
@@ -121,7 +99,8 @@
       "operations": {
         "title": "Operatsion xizmatlar",
         "text": "Kompaniyani boshqarish, Employer of Record, korporativ xizmatlar va virtual ofis."
-      }
+      },
+      "more": "Batafsil"
     },
     "track": {
       "title": "Maslahatchilarimiz olib borgan loyihalar",
@@ -146,11 +125,10 @@
     },
     "contact": {
       "title": "Suhbatdan boshlang",
-      "lede": "Nima rejalashtirayotganingizni ayting. Har bir murojaatga bir ish kuni ichida javob beramiz, Telegram va WhatsApp'da odatda bir soat ichida.",
+      "lede": "Rejalaringiz haqida o'zbek, rus yoki ingliz tilida yozing.",
       "book": "Konsultatsiyaga yozilish",
       "phone": "Telefon",
       "email": "Email",
-      "hours": "Ish vaqti",
       "hoursValue": "Du–Ju, 9:00–18:00 (Toshkent)",
       "steps": [
         {
@@ -165,7 +143,8 @@
           "title": "Bitta muvofiqlashtiruvchi hamkor",
           "text": "Soliq, yuridik va buxgalteriya ishlari bitta aloqa orqali olib boriladi."
         }
-      ]
+      ],
+      "direct": "Yoki bizga to'g'ridan-to'g'ri yozing"
     }
   }
 }

@@ -14,7 +14,7 @@
     "operations": "Operations",
     "firm": "Firm",
     "legal": "Legal",
-    "tagline": "Premier business advisory in Uzbekistan. Integrated consulting across tax, legal, finance, and HR — a single point of contact for your entire operation.",
+    "tagline": "Tax, legal and accounting advisory in Uzbekistan.",
     "rights": "All rights reserved.",
     "insights": "Insights",
     "contact": "Contact",
@@ -33,7 +33,6 @@
     "employerOfRecord": "Employer of Record",
     "corporateServices": "Corporate Services",
     "virtualOffice": "Virtual Office",
-    "tashkent": "Tashkent, Uzbekistan",
-    "location": "Mirzo Ulugbek district, Tashkent"
+    "tashkent": "Tashkent, Uzbekistan"
   }
 }

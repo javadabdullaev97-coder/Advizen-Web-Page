@@ -18,17 +18,12 @@
   --border-light: #3a3a3d;
   --radius-tile: 26px;
   --radius-inner: 16px;
+  --foreground-2: #c7c7cc;
+  --line: rgba(255, 255, 255, 0.09);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 
   /* Legacy name kept for components that set it inline */
   --font-inter: var(--font-manrope);
-
-  /* Map colors (UzbekistanMap component) */
-  --map-region-active-fill: var(--primary-dark);
-  --map-region-active-stroke: var(--primary);
-  --map-pulse-ring: rgba(176, 21, 53, 0.5);
-  --map-pulse-ring-soft: rgba(176, 21, 53, 0.3);
-  --map-dot: var(--primary-light);
-  --map-label: rgba(245, 245, 245, 0.65);
 
   /* Brand red as RGB triples (for rgba() with custom alpha) */
   --primary-rgb: 148, 14, 39;
@@ -48,6 +43,8 @@
   --color-surface: var(--surface);
   --color-surface-light: var(--surface-light);
   --color-muted: var(--muted);
+  --color-foreground-2: var(--foreground-2);
+  --color-line: var(--line);
   --color-muted-dark: var(--muted-dark);
   --color-border: var(--border);
   --color-border-light: var(--border-light);
@@ -155,8 +152,8 @@ select:-webkit-autofill:focus {
 
 /* ── Modern building blocks (homepage and store) ──────────────────────────── */
 .m-wrap { padding-left: max(20px, 6.5vw); padding-right: max(20px, 6.5vw); }
-.m-h1 { font-weight: 700; letter-spacing: -0.045em; line-height: 1; color: var(--foreground-hi); text-wrap: balance; }
-.m-h2 { font-weight: 700; letter-spacing: -0.04em; line-height: 1.06; color: var(--foreground-hi); text-wrap: balance; }
+.m-h1 { font-weight: 600; letter-spacing: -0.045em; line-height: 1; color: var(--foreground-hi); text-wrap: balance; }
+.m-h2 { font-weight: 600; letter-spacing: -0.04em; line-height: 1.04; color: var(--foreground-hi); text-wrap: balance; }
 .m-tile { background: var(--surface); border-radius: var(--radius-tile); }
 .m-fig { font-weight: 700; letter-spacing: -0.04em; color: var(--foreground-hi); font-variant-numeric: tabular-nums; line-height: 1; }
 .m-btn {
@@ -172,8 +169,55 @@ select:-webkit-autofill:focus {
 .m-btn-s { background: var(--surface-light); color: var(--foreground-hi); }
 .m-btn-s:hover { background: #3a3a3d; }
 .m-btn:disabled { opacity: .45; cursor: default; transform: none; }
-.m-more { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--foreground-hi); }
-.m-more:hover { text-decoration: underline; text-underline-offset: 4px; }
+.m-btn-g {
+  background: rgba(255, 255, 255, 0.1); color: var(--foreground-hi);
+  -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%);
+}
+.m-btn-g:hover { background: rgba(255, 255, 255, 0.16); }
+/* "Learn more" link with a chevron that steps forward on hover */
+.m-more { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; color: var(--foreground-hi); }
+.m-more::after {
+  content: ""; width: 7px; height: 7px; border-right: 1.6px solid currentColor; border-top: 1.6px solid currentColor;
+  transform: rotate(45deg); transition: transform .3s var(--ease-out);
+}
+.m-more:hover::after, a:hover > .m-more::after { transform: translateX(3px) rotate(45deg); }
 @media (prefers-reduced-motion: reduce) {
   .m-btn { transition: none; }
 }
+
+/* ── Homepage ─────────────────────────────────────────────────────────────── */
+/* Sections rise into view once; the observer in HomeReveal marks them shown.
+   Without scripts, or with reduced motion, everything is simply visible.     */
+[data-reveal] { transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); transition-delay: var(--d, 0s); }
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal]:not([data-shown]) { opacity: 0; transform: translateY(18px); }
+}
+
+@keyframes home-rise { from { opacity: 0; transform: translateY(18px); } }
+@keyframes home-settle { from { transform: scale(1.05); } }
+@keyframes home-fade { from { opacity: 0; } }
+.home-rise { animation: home-rise .9s var(--ease-out) both; animation-delay: var(--d, 0s); }
+.home-settle { animation: home-settle 2.2s var(--ease-out) both; }
+.home-fade { animation: home-fade .6s var(--ease-out) both; }
+@media (prefers-reduced-motion: reduce) {
+  .home-rise, .home-settle, .home-fade { animation: none; }
+}
+
+/* Hero photo: darkened toward the text on the left and the page below */
+.home-hero-shade {
+  background:
+    linear-gradient(0deg, var(--background) 0%, rgba(11, 11, 12, .78) 30%, rgba(11, 11, 12, .25) 58%, rgba(11, 11, 12, 0) 75%),
+    linear-gradient(90deg, rgba(11, 11, 12, .6) 0%, rgba(11, 11, 12, .15) 50%, rgba(11, 11, 12, 0) 70%);
+}
+@media (max-width: 639px) {
+  .home-hero-shade { background: linear-gradient(0deg, var(--background) 0%, rgba(11, 11, 12, 0) 50%); }
+}
+
+/* Region map */
+.uz-region {
+  fill: rgba(255, 255, 255, .1); stroke: rgba(255, 255, 255, .22); stroke-width: .8;
+  cursor: pointer; outline: none; transition: fill .25s ease-out;
+}
+.uz-region:hover { fill: rgba(255, 255, 255, .18); }
+.uz-region:focus-visible { stroke: var(--foreground-hi); stroke-width: 1.6; }
+.uz-region-on { fill: var(--primary); stroke: #d23a57; stroke-width: 1; pointer-events: none; }

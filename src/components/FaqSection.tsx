@@ -34,9 +34,9 @@ function FaqItem({
   const isOpen = open === i;
 
   return (
-    <div className="border-b border-border">
+    <div className="border-b border-line">
       <button
-        className="w-full flex items-center justify-between py-5 text-left gap-4 focus-visible:outline-2 focus-visible:outline-foreground-hi touch-manipulation cursor-pointer"
+        className="w-full flex items-center justify-between py-6 text-left gap-4 focus-visible:outline-2 focus-visible:outline-foreground-hi touch-manipulation cursor-pointer"
         onTouchStart={(e) => {
           startYRef.current = e.touches[0].clientY;
           scrolledRef.current = false;
@@ -63,23 +63,22 @@ function FaqItem({
         aria-expanded={isOpen}
       >
         <span className="faq-question text-[17px] lg:text-[19px] text-foreground-hi font-semibold tracking-[-0.01em]">{q}</span>
-        {isOpen ? (
-          <Minus className="w-5 h-5 text-muted shrink-0" />
-        ) : (
-          <Plus className="w-5 h-5 text-muted shrink-0" />
-        )}
+        <Plus
+          aria-hidden
+          className={`w-5 h-5 text-foreground-2 shrink-0 transition-transform duration-300 ease-[var(--ease-out)] ${isOpen ? "rotate-45" : ""}`}
+        />
       </button>
       {/* CSS grid accordion — no JS measurement, no Framer Motion overhead */}
       <div
         style={{
           display: "grid",
           gridTemplateRows: isOpen ? "1fr" : "0fr",
-          transition: "grid-template-rows 0.28s cubic-bezier(0.16,1,0.3,1)",
+          transition: "grid-template-rows 0.4s var(--ease-out)",
         }}
       >
         <div className="overflow-hidden">
           <p
-            className="pb-6 text-[16px] text-foreground leading-relaxed max-w-[40em]"
+            className="pb-7 text-[16px] lg:text-[17px] text-foreground-2 leading-relaxed max-w-[40em]"
             style={{
               opacity: isOpen ? 1 : 0,
               transition: isOpen ? "opacity 0.18s ease 0.08s" : "opacity 0.12s ease",
@@ -175,16 +174,16 @@ export default function FaqSection({
   }
 
   return (
-    <section id="faq-section" className="m-wrap py-24 lg:py-32">
+    <section id="faq-section" className="m-wrap pt-24 lg:pt-32 pb-28 lg:pb-40">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="grid gap-10 lg:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] lg:gap-20">
-        <h2 className="m-h2 text-[34px] lg:text-[clamp(36px,3.8vw,58px)]">
+        <h2 className="m-h2 text-[36px] sm:text-[44px] lg:text-[clamp(44px,4.4vw,64px)]">
           {HEADINGS[locale]}
         </h2>
-        <div className="border-t border-border">
+        <div className="border-t border-line">
           {items.map(({ q, a }, i) => (
             <FaqItem key={i} q={q} a={a} i={i} open={open} onToggle={handleToggle} />
           ))}

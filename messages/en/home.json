@@ -8,7 +8,7 @@
         "regionalGdp": "Regional GDP",
         "sezs": "Special Economic Zones",
         "keySectors": "Key Sectors",
-        "hint": "Hover a region to explore"
+        "hint": "Tap or hover a region."
       },
       "regions": {
         "UZ-QR": "Republic of Karakalpakstan",
@@ -51,36 +51,14 @@
       "lede": "One team for companies entering and operating in Uzbekistan: tax, law, accounting, HR and funding, coordinated by a single partner. In English, Russian or Uzbek.",
       "book": "Book a consultation",
       "telegram": "Message us on Telegram",
-      "imageAlt": "Tashkent at dusk",
-      "proof": [
-        {
-          "fig": "$10B+",
-          "text": "nuclear power plant: tax, accounting and customs structuring"
-        },
-        {
-          "fig": "$2B+",
-          "text": "Chinese energy group: due diligence and holding structure"
-        },
-        {
-          "fig": "80+",
-          "text": "companies registered for local and foreign clients"
-        }
-      ]
+      "imageAlt": "Tashkent at dusk"
     },
     "services": {
       "title": "Every discipline, one point of contact",
       "lede": "Most firms hand you a lawyer, an accountant and a tax adviser who never speak. We run them as one team, so the structure that saves you tax also survives a legal review.",
       "tax": {
         "title": "Tax consulting",
-        "text": "Planning, compliance and structuring for foreign-owned companies, holdings and cross-border operations. We tell you which regime and incentives apply to your structure.",
-        "items": [
-          "Tax planning",
-          "VAT",
-          "Transfer pricing",
-          "Tax audit representation",
-          "Customs and excise",
-          "Incentive applications"
-        ]
+        "text": "Planning, compliance and structuring for foreign-owned companies, holdings and cross-border operations. We tell you which regime and incentives apply to your structure."
       },
       "rates": [
         {
@@ -119,7 +97,8 @@
       "operations": {
         "title": "Operations",
         "text": "Entity management, Employer of Record, corporate services and a virtual office."
-      }
+      },
+      "more": "Learn more"
     },
     "track": {
       "title": "Work our advisers have led",
@@ -144,11 +123,10 @@
     },
     "contact": {
       "title": "Start with a conversation",
-      "lede": "Tell us what you are planning. We reply to every enquiry within one business day; on Telegram and WhatsApp, usually within the hour.",
+      "lede": "Tell us what you are planning, in English, Russian or Uzbek.",
       "book": "Book a consultation",
       "phone": "Phone",
       "email": "Email",
-      "hours": "Hours",
       "hoursValue": "Mon–Fri, 9:00–18:00 (Tashkent)",
       "steps": [
         {
@@ -163,7 +141,8 @@
           "title": "One coordinating partner",
           "text": "Tax, legal and accounting work runs through a single point of contact."
         }
-      ]
+      ],
+      "direct": "Or write to us directly"
     }
   }
 }

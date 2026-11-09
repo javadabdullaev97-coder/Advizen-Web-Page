@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { useTranslations } from "next-intl";
 import UzbekistanMap from "@/components/UzbekistanMap";
+import { SectionHead } from "@/components/home/SectionHead";
 
 /* ── Region data ─────────────────── */
 
@@ -133,68 +134,69 @@ const REGION_IMAGE: Record<string, string> = {
   "UZ-TO": "/Regions/Tashkent region.webp",
 };
 
-function RegionPanel({ activeId }: { activeId: string | null }) {
+function RegionPanel({ activeId }: { activeId: string }) {
   const t = useTranslations("Home.geography.panel");
   const tRegions = useTranslations("Home.geography.regions");
-  const region = activeId ? REGION_DATA[activeId] : null;
-  if (!activeId || !region) {
-    return (
-      <div className="m-tile p-8 min-h-[300px] flex items-center justify-center">
-        <p className="text-[15px] text-muted">{t("hint")}</p>
-      </div>
-    );
-  }
+  // The previous photo stays underneath while the new one fades in, so a change never flashes the background.
+  const [shown, setShown] = useState({ current: activeId, previous: null as string | null });
+  if (shown.current !== activeId) setShown({ current: activeId, previous: shown.current });
+  const region = REGION_DATA[activeId];
   const regionName = tRegions(activeId);
   return (
-    <div className="m-tile overflow-hidden">
-      <div className="relative aspect-[16/9] bg-surface-light">
+    <article className="m-tile overflow-hidden" aria-live="polite">
+      <div className="relative aspect-[4/3] bg-surface-light">
+        {shown.previous && (
+          <Image src={REGION_IMAGE[shown.previous]} alt="" fill unoptimized sizes="(max-width: 1023px) 100vw, 40vw" className="object-cover" />
+        )}
         <Image
-          src={REGION_IMAGE[activeId] ?? "/Regions/Andijan.webp"}
+          key={activeId}
+          src={REGION_IMAGE[activeId]}
           alt={regionName}
           fill
           unoptimized
-          sizes="(max-width: 1023px) 100vw, 520px"
-          className="object-cover object-top"
+          sizes="(max-width: 1023px) 100vw, 40vw"
+          className="object-cover home-fade"
         />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 via-45%" />
+        <h3 className="absolute left-7 bottom-5 text-[28px] lg:text-[32px] font-semibold tracking-[-0.035em] text-foreground-hi">{regionName}</h3>
       </div>
-      <div className="p-7">
-        <h3 className="text-[24px] font-bold tracking-[-0.03em] text-foreground-hi">{regionName}</h3>
-        <dl className="grid grid-cols-2 gap-4 mt-5">
+      <div key={activeId} className="px-7 pt-6 pb-7 home-fade">
+        <dl className="grid grid-cols-2 gap-5">
           <div>
             <dt className="text-[14px] text-muted">{t("population")}</dt>
-            <dd className="m-fig text-[30px] mt-1.5">{region.population}</dd>
+            <dd className="m-fig text-[26px] lg:text-[28px] mt-1.5">{region.population}</dd>
           </div>
           <div>
             <dt className="text-[14px] text-muted">{t("regionalGdp")}</dt>
-            <dd className="m-fig text-[30px] mt-1.5">{region.gdp}</dd>
+            <dd className="m-fig text-[26px] lg:text-[28px] mt-1.5">{region.gdp}</dd>
           </div>
         </dl>
-        <p className="mt-5 text-[14px] text-muted">{t("sezs")}</p>
-        <ul className="mt-2 flex flex-wrap gap-2">
+        <ul className="mt-5 flex flex-wrap gap-2" aria-label={t("sezs")}>
           {region.sezs.map((s) => (
-            <li key={s} className="text-[14px] text-foreground bg-surface-light rounded-full px-3.5 py-1.5">{s}</li>
+            <li key={s} className="text-[13px] text-foreground-2 bg-white/[0.07] rounded-full px-3 py-1.5">{s}</li>
           ))}
         </ul>
       </div>
-    </div>
+    </article>
   );
 }
 
 export default function HomeRegions() {
   const t = useTranslations("HomeModern.regions");
-  const [activeId, setActiveId] = useState<string | null>("UZ-TK");
-  const handleActiveChange = useCallback((id: string | null) => {
-    if (id) setActiveId(id);
-  }, []);
+  const tPanel = useTranslations("Home.geography.panel");
+  const tRegions = useTranslations("Home.geography.regions");
+  const [activeId, setActiveId] = useState("UZ-TK");
   return (
-    <section className="m-wrap pb-24 lg:pb-36">
-      <div className="grid gap-6 lg:grid-cols-2 lg:gap-20 lg:items-end mb-10 lg:mb-14">
-        <h2 className="m-h2 text-[34px] lg:text-[clamp(36px,3.8vw,58px)]">{t("title")}</h2>
-        <p className="text-[17px] lg:text-[18px] leading-[1.55] text-muted max-w-[32em]">{t("lede")}</p>
-      </div>
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-14 items-center">
-        <UzbekistanMap onActiveChange={handleActiveChange} />
-        <RegionPanel activeId={activeId} />
+    <section className="m-wrap pb-28 lg:pb-40">
+      <SectionHead title={t("title")} lede={t("lede")} />
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-12 items-center">
+        <div data-reveal>
+          <UzbekistanMap activeId={activeId} onSelect={setActiveId} regionName={(id) => tRegions(id)} label={t("title")} />
+          <p className="mt-3.5 text-[14px] text-muted">{tPanel("hint")}</p>
+        </div>
+        <div data-reveal style={{ "--d": ".1s" } as CSSProperties}>
+          <RegionPanel activeId={activeId} />
+        </div>
       </div>
     </section>
   );
