@@ -2,67 +2,97 @@ import { NextRequest, NextResponse } from "next/server";
 
 type Locale = "en" | "ru" | "uz";
 
+// Keys are the service slugs the contact form sends (the expertise pages' slugs);
+// tax, legal, finance, hr, funding and other are also what earlier versions of the form sent.
 const serviceLabels: Record<Locale, Record<string, string>> = {
   en: {
-    tax: "Tax Consulting",
-    legal: "Legal Advisory",
+    tax: "Tax consulting",
+    legal: "Legal advisory",
     finance: "Accounting",
-    hr: "Human Resources",
-    funding: "Funding & Grants",
+    hr: "Human resources",
+    funding: "Funding and grants",
+    "ma-advisory": "M&A advisory",
+    "due-diligence": "Due diligence",
+    "entity-management": "Entity management",
+    corporate: "Corporate services",
+    eor: "Employer of Record",
+    payroll: "Payroll bureau",
+    immigration: "Work permits and immigration",
+    "virtual-office": "Virtual office",
+    compliance: "Compliance monitoring",
     other: "Other",
   },
   ru: {
     tax: "Налоговый консалтинг",
     legal: "Юридический консалтинг",
-    finance: "Бухгалтерский учёт",
+    finance: "Бухгалтерия",
     hr: "HR-услуги",
     funding: "Финансирование и гранты",
+    "ma-advisory": "M&A консалтинг",
+    "due-diligence": "Due diligence",
+    "entity-management": "Управление компанией",
+    corporate: "Корпоративные услуги",
+    eor: "Employer of Record",
+    payroll: "Расчёт зарплаты",
+    immigration: "Разрешения на работу",
+    "virtual-office": "Виртуальный офис",
+    compliance: "Комплаенс-мониторинг",
     other: "Другое",
   },
   uz: {
     tax: "Soliq konsaltingi",
     legal: "Yuridik konsalting",
-    finance: "Buxgalteriya hisobi",
+    finance: "Buxgalteriya",
     hr: "HR xizmatlari",
     funding: "Moliyalashtirish va grantlar",
+    "ma-advisory": "M&A konsaltingi",
+    "due-diligence": "Due diligence",
+    "entity-management": "Kompaniyani boshqarish",
+    corporate: "Korporativ xizmatlar",
+    eor: "Employer of Record",
+    payroll: "Ish haqi hisob-kitobi",
+    immigration: "Ishlash uchun ruxsatnomalar",
+    "virtual-office": "Virtual ofis",
+    compliance: "Komplayens monitoringi",
     other: "Boshqa",
   },
 };
 
+// No reply-time promises here: the site does not commit to response times.
 const autoreply: Record<Locale, {
   subject: string; heading: string; body: string;
-  summaryLabel: string; nameLabel: string; emailLabel: string;
+  summaryLabel: string; nameLabel: string; emailLabel: string; phoneLabel: string;
   companyLabel: string; serviceLabel: string; messageLabel: string;
   urgent: string; signature: string;
 }> = {
   en: {
     subject: "Thank you for contacting Advizen",
     heading: "Thank you for reaching out",
-    body: "We've received your message and will get back to you within one business day. In the meantime, here's a copy of what you submitted for your records.",
+    body: "We have received your message, and we will reply to this email address. Here is a copy of what you sent, for your records.",
     summaryLabel: "Your submission",
-    nameLabel: "Name", emailLabel: "Email", companyLabel: "Company",
+    nameLabel: "Name", emailLabel: "Email", phoneLabel: "Phone", companyLabel: "Company",
     serviceLabel: "Service", messageLabel: "Message",
-    urgent: "If your matter is urgent, reach us on Telegram or WhatsApp — average response under 30 minutes during business hours.",
-    signature: "Advizen Team",
+    urgent: "You can also write to us on Telegram (@advizen) or WhatsApp. Our hours are Mon–Fri, 9:00–18:00 Tashkent time.",
+    signature: "Advizen team",
   },
   ru: {
     subject: "Спасибо за обращение в Advizen",
     heading: "Спасибо за обращение",
-    body: "Мы получили ваше сообщение и свяжемся с вами в течение одного рабочего дня. Ниже копия вашей заявки для ваших записей.",
+    body: "Мы получили ваше сообщение и ответим на этот адрес эл. почты. Ниже — копия вашей заявки.",
     summaryLabel: "Ваша заявка",
-    nameLabel: "Имя", emailLabel: "Email", companyLabel: "Компания",
+    nameLabel: "Имя", emailLabel: "Email", phoneLabel: "Телефон", companyLabel: "Компания",
     serviceLabel: "Услуга", messageLabel: "Сообщение",
-    urgent: "Если вопрос срочный — напишите нам в Telegram или WhatsApp. Среднее время ответа — менее 30 минут в рабочие часы.",
+    urgent: "Также можно написать нам в Telegram (@advizen) или WhatsApp. Мы работаем Пн–Пт, 9:00–18:00 по ташкентскому времени.",
     signature: "Команда Advizen",
   },
   uz: {
-    subject: "Advizen bilan bog'langaningiz uchun rahmat",
+    subject: "Advizen bilan bogʻlanganingiz uchun rahmat",
     heading: "Murojaatingiz uchun rahmat",
-    body: "Xabaringizni qabul qildik va bir ish kuni ichida siz bilan bog'lanamiz. Quyida sizning so'rovingiz nusxasi.",
-    summaryLabel: "Sizning so'rovingiz",
-    nameLabel: "Ism", emailLabel: "Email", companyLabel: "Kompaniya",
+    body: "Xabaringizni qabul qildik va javobni shu elektron pochta manziliga yuboramiz. Quyida soʻrovingiz nusxasi.",
+    summaryLabel: "Sizning soʻrovingiz",
+    nameLabel: "Ism", emailLabel: "Email", phoneLabel: "Telefon", companyLabel: "Kompaniya",
     serviceLabel: "Xizmat", messageLabel: "Xabar",
-    urgent: "Agar masala shoshilinch bo'lsa — bizga Telegram yoki WhatsApp orqali yozing. Ish vaqtida o'rtacha javob vaqti 30 daqiqadan kam.",
+    urgent: "Bizga Telegram (@advizen) yoki WhatsApp orqali ham yozishingiz mumkin. Ish vaqtimiz: Du–Ju, 9:00–18:00, Toshkent vaqti bilan.",
     signature: "Advizen jamoasi",
   },
 };
@@ -187,15 +217,52 @@ function brandedEmail(p: BrandedEmailParams): string {
 </html>`;
 }
 
-export async function POST(request: NextRequest) {
-  const { firstName, lastName, email, company, service, message, locale } =
-    await request.json();
+// Submissions faster than this after the form appeared are treated as automated.
+const MIN_FILL_MS = 3000;
 
-  if (!firstName || !lastName || !email) {
+const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
+
+export async function POST(request: NextRequest) {
+  let body: Record<string, unknown>;
+  try {
+    const parsed: unknown = await request.json();
+    if (!parsed || typeof parsed !== "object") throw new Error("not an object");
+    body = parsed as Record<string, unknown>;
+  } catch {
+    return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
+  }
+
+  // The form sends a single `name`; earlier versions sent firstName and lastName.
+  const firstNameField = str(body.firstName);
+  const lastNameField = str(body.lastName);
+  const name = str(body.name) || `${firstNameField} ${lastNameField}`.trim();
+  const email = str(body.email);
+  const company = str(body.company);
+  const phone = str(body.phone);
+  const service = str(body.service);
+  const message = str(body.message);
+  const locale = body.locale;
+
+  if (!name || !email) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  const name = `${firstName} ${lastName}`.trim();
+  // ── Spam checks: answer as if sent, deliver nothing ───────────────
+  // A hidden "website" field that people never see, so only bots fill it.
+  if (str(body.website)) {
+    return NextResponse.json({ ok: true });
+  }
+  // startedAt and sentAt both come from the browser's clock, so clock skew
+  // between browser and server does not matter; sentAt is optional.
+  const startedAt = typeof body.startedAt === "number" ? body.startedAt : null;
+  if (startedAt !== null && startedAt > 0) {
+    const sentAt = typeof body.sentAt === "number" ? body.sentAt : Date.now();
+    if (sentAt - startedAt < MIN_FILL_MS) {
+      return NextResponse.json({ ok: true });
+    }
+  }
+
+  const firstName = firstNameField || name.split(/\s+/)[0];
   const lang: Locale = locale === "ru" || locale === "uz" ? locale : "en";
   const t = autoreply[lang];
   const timestamp = new Date().toLocaleString("en-GB", {
@@ -205,6 +272,8 @@ export async function POST(request: NextRequest) {
   });
 
   const errors: string[] = [];
+  // True once the message has reached the team through at least one channel.
+  let delivered = false;
 
   // ── Telegram ──────────────────────────────────────────────────────
   const tgToken = process.env.TELEGRAM_BOT_TOKEN;
@@ -216,6 +285,7 @@ export async function POST(request: NextRequest) {
       ``,
       `👤 <b>Name:</b> ${escapeHtml(name)}`,
       `📧 <b>Email:</b> ${escapeHtml(email)}`,
+      phone ? `📞 <b>Phone:</b> ${escapeHtml(phone)}` : null,
       company ? `🏢 <b>Company:</b> ${escapeHtml(company)}` : null,
       service ? `📋 <b>Service:</b> ${escapeHtml(serviceLabels.en[service] ?? service)}` : null,
       message ? `\n💬 <b>Message:</b>\n${escapeHtml(message)}` : null,
@@ -232,7 +302,8 @@ export async function POST(request: NextRequest) {
       }
     ).catch(() => null);
 
-    if (!tgRes?.ok) errors.push("telegram");
+    if (tgRes?.ok) delivered = true;
+    else errors.push("telegram");
   }
 
   // ── Resend email ──────────────────────────────────────────────────
@@ -248,6 +319,7 @@ export async function POST(request: NextRequest) {
       { label: "Name", value: name },
       { label: "Email", value: email },
     ];
+    if (phone) adminSummary.push({ label: "Phone", value: phone });
     if (company) adminSummary.push({ label: "Company", value: company });
     if (serviceEn) adminSummary.push({ label: "Service", value: serviceEn });
 
@@ -255,6 +327,7 @@ export async function POST(request: NextRequest) {
       { label: t.nameLabel, value: name },
       { label: t.emailLabel, value: email },
     ];
+    if (phone) autoSummary.push({ label: t.phoneLabel, value: phone });
     if (company) autoSummary.push({ label: t.companyLabel, value: company });
     if (serviceLoc) autoSummary.push({ label: t.serviceLabel, value: serviceLoc });
 
@@ -283,41 +356,52 @@ export async function POST(request: NextRequest) {
       }),
     }).catch(() => null);
 
-    if (!emailRes?.ok) errors.push("email");
+    if (emailRes?.ok) delivered = true;
+    else errors.push("email");
 
     // ── Autoreply to the submitter ────────────────────────────────
-    const autoHtml = brandedEmail({
-      preheader: t.body,
-      heading: `${t.heading}, ${firstName}`,
-      intro: t.body,
-      summary: autoSummary,
-      messageLabel: t.messageLabel,
-      messageText: message || undefined,
-      outro: t.urgent,
-      signature: t.signature,
-      timestamp,
-    });
+    // Only once the team has the message, so nobody is thanked for a
+    // message that went nowhere.
+    if (delivered) {
+      const autoHtml = brandedEmail({
+        preheader: t.body,
+        heading: `${t.heading}, ${firstName}`,
+        intro: t.body,
+        summary: autoSummary,
+        messageLabel: t.messageLabel,
+        messageText: message || undefined,
+        outro: t.urgent,
+        signature: t.signature,
+        timestamp,
+      });
 
-    const autoRes = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${resendKey}`,
-      },
-      body: JSON.stringify({
-        from: fromEmail,
-        to: [email],
-        reply_to: toEmail,
-        subject: t.subject,
-        html: autoHtml,
-      }),
-    }).catch(() => null);
+      const autoRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${resendKey}`,
+        },
+        body: JSON.stringify({
+          from: fromEmail,
+          to: [email],
+          reply_to: toEmail,
+          subject: t.subject,
+          html: autoHtml,
+        }),
+      }).catch(() => null);
 
-    if (!autoRes?.ok) errors.push("autoreply");
+      if (!autoRes?.ok) errors.push("autoreply");
+    }
   }
 
-  // Return ok even if one channel failed — we never want to show an error to
-  // the user just because Telegram is temporarily down.
+  // Success means the team has the message (Telegram or the admin email).
+  // A failed autoreply alone does not count as a failure. If nothing reached
+  // the team — every channel failed, or none is configured — say so, so the
+  // form can tell the person and keep their text.
+  if (!delivered) {
+    console.error("contact: delivery failed", errors.length ? errors : "no channel configured");
+    return NextResponse.json({ ok: false, error: "delivery_failed" }, { status: 502 });
+  }
   return NextResponse.json({ ok: true, errors: errors.length ? errors : undefined });
 }
 

@@ -1,63 +1,72 @@
 {
-  "ContactPage": {
+  "ContactModern": {
     "hero": {
-      "eyebrow": "Contact",
-      "heading": "Begin a conversation",
-      "description": "Tell us what you are planning. Write to info@advizenco.com, call +998 33 488 48 88 or message us on Telegram @advizen."
-    },
-    "info": {
-      "office": "Our Office",
-      "officeValue": "Tashkent, Uzbekistan",
-      "phone": "Phone",
-      "email": "Email",
-      "workingHours": "Working Hours",
-      "workingHoursValue": "Mon – Fri, 9:00 – 18:00"
+      "title": "Contact Advizen in Tashkent",
+      "lede": "Write to us about tax, legal, accounting or HR matters in Uzbekistan, in English, Russian or Uzbek."
     },
     "form": {
-      "eyebrow": "Inquiry",
-      "heading": "Send us a message",
-      "description": "For detailed inquiries — share project context, timeline, and area of interest. We'll get back to you with a tailored response.",
-      "firstName": "First Name",
-      "firstNamePlaceholder": "John",
-      "lastName": "Last Name",
-      "lastNamePlaceholder": "Doe",
-      "email": "Email",
-      "emailPlaceholder": "john@company.com",
+      "title": "Send a message",
+      "sub": "Tell us what you are planning and any deadline. Documents can follow later.",
+      "name": "Name",
       "company": "Company",
-      "companyPlaceholder": "Company name",
-      "service": "Area of Interest",
-      "selectService": "Select a service",
-      "serviceTax": "Tax Consulting",
-      "serviceLegal": "Legal Advisory",
-      "serviceFinance": "Accounting",
-      "serviceHr": "Human Resources",
-      "serviceFunding": "Funding & Grants",
-      "serviceOther": "Other",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service",
       "message": "Message",
-      "messagePlaceholder": "Tell us about your project or question...",
-      "consentBefore": "I consent to the processing of my personal data in accordance with the",
-      "consentPrivacy": "Privacy Policy",
-      "consentAnd": "and",
-      "consentTerms": "Terms of Use",
-      "consentAfter": ". By submitting this form you confirm your agreement to the storage and processing of the provided data.",
+      "optional": "optional",
+      "emailPlaceholder": "name@company.com",
+      "phonePlaceholder": "+998",
+      "selectService": "Select a service",
+      "serviceOther": "Other",
+      "messagePlaceholder": "What you are planning, where you are now, and any deadline",
+      "errors": {
+        "name": "Enter your name",
+        "email": "Enter an email address, for example name@company.com",
+        "message": "Tell us briefly what you need help with",
+        "consent": "Tick the box to agree, so we can store and answer your message"
+      },
+      "summary": "{count, plural, one {Check the field marked below} other {Check the # fields marked below}}",
+      "consent": "I agree to the processing of my personal data under the <privacy>Privacy Policy</privacy> and <terms>Terms of Use</terms>.",
       "send": "Send message",
       "sending": "Sending…",
-      "successHeading": "Message sent!",
-      "successBody": "Thank you — we will get back to you within one business day.",
-      "sendAnother": "Send another message",
-      "errorMessage": "Something went wrong. Please try again or email us directly at info@advizenco.com."
+      "required": "Fields not marked optional are required.",
+      "failedTitle": "The message did not send",
+      "failedBody": "Your text is still here. Try again, or write to <email>info@advizenco.com</email>.",
+      "website": "Website",
+      "sentTitle": "Message sent",
+      "sentBody": "Thank you, {name}. Your message is with our team, and we will reply to {email}.",
+      "sentNote": "Mon–Fri, 9:00–18:00 Tashkent time. You can also reach us on Telegram, @advizen.",
+      "again": "Send another message"
     },
-    "quick": {
-      "eyebrow": "Quick chat",
-      "heading": "Need a faster reply?",
-      "description": "Skip the form — message us directly on Telegram or WhatsApp. Average response in under 30 minutes during business hours.",
-      "telegram": "Telegram",
-      "telegramHint": "@advizen  ·  Fastest response",
-      "whatsapp": "WhatsApp",
-      "whatsappHint": "Send a message instantly",
-      "businessHours": "Business hours",
-      "hoursValue": "Mon – Fri, 9:00 – 18:00",
-      "timezone": "UTC+5 · Tashkent, Uzbekistan"
+    "side": {
+      "label": "Other ways to reach us",
+      "direct": "Or write to us directly",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "hoursValue": "Mon–Fri, 9:00–18:00 Tashkent time",
+      "location": "Location",
+      "locationValue": "Tashkent, Uzbekistan",
+      "languages": "Languages",
+      "languagesValue": "English, Russian, Uzbek"
+    },
+    "next": {
+      "title": "What happens next",
+      "lede": "Three steps from your first message to the start of work.",
+      "steps": [
+        {
+          "title": "Introductory call",
+          "text": "We arrange a call to learn what you plan and which questions come first."
+        },
+        {
+          "title": "Written scope and fee",
+          "text": "You receive a clear scope, timeline and fee before any work begins."
+        },
+        {
+          "title": "One coordinating partner",
+          "text": "Tax, legal and accounting work then runs through a single contact."
+        }
+      ]
     }
   }
 }

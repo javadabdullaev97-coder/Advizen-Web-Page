@@ -1,6 +1,6 @@
 type FaqItem = { q: string; a: string };
 type LocaleData = { en: FaqItem[]; ru: FaqItem[]; uz: FaqItem[] };
-export type FaqPage = "home" | "expertise";
+export type FaqPage = "home" | "expertise" | "contact";
 
 export const FAQ_DATA: Record<FaqPage, LocaleData> = {
   home: {
@@ -232,6 +232,50 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       {
         q: "Oʻzbekistonda kripto va fintech litsenziyasini olishda yordam bera olasizmi?",
         a: "Ha. Kripto-aktivlar aylanmasi sohasidagi xizmat provayderlari Istiqbolli loyihalar milliy agentligi (NAPP) tomonidan litsenziyalanadi; uning ochiq litsenziyalar reyestrida kripto-birjalar, kripto-depozitariylar va kripto-doʻkonlar alohida koʻrsatilgan (napp.uz). Toʻlov tashkilotlari va toʻlov tizimlari operatorlari esa Markaziy bank tomonidan alohida litsenziyalanadi («Toʻlovlar va toʻlov tizimlari toʻgʻrisida»gi 2019-yil 1-noyabrdagi OʻRQ-578-son Qonun, 15, 21-moddalar). Kripto va fintech kompaniyalariga litsenziya arizalari, korporativ tuzilma, AML/KYC tartiblari va joriy muvofiqlik boʻyicha maslahat beramiz.",
+      },
+    ],
+  },
+  contact: {
+    en: [
+      {
+        q: "What should I put in my first message?",
+        a: "Your company, what you plan to do in Uzbekistan, where you are now and any deadline. That is enough to arrange the introductory call. Documents can follow later, under an NDA if you need one.",
+      },
+      {
+        q: "How is the fee agreed?",
+        a: "After the introductory call you receive a written scope with the work, the timeline and the fee. Work starts only once you approve it.",
+      },
+      {
+        q: "Can you help before we have a company in Uzbekistan?",
+        a: "Yes. We advise foreign companies before they register, by video call, Telegram or email, and handle the registration itself. Through Employer of Record you can also hire staff before you have a local entity.",
+      },
+    ],
+    ru: [
+      {
+        q: "Что написать в первом сообщении?",
+        a: "Вашу компанию, что вы планируете в Узбекистане, на каком вы этапе и есть ли сроки. Этого достаточно, чтобы договориться о вводном звонке. Документы можно прислать позже, при необходимости — после подписания NDA.",
+      },
+      {
+        q: "Как согласуется стоимость?",
+        a: "После вводного звонка вы получаете письменное описание объёма работ со сроками и стоимостью. Работа начинается только после вашего согласия.",
+      },
+      {
+        q: "Можете ли вы помочь, пока у нас нет компании в Узбекистане?",
+        a: "Да. Мы консультируем иностранные компании до регистрации — по видеосвязи, в Telegram или по эл. почте — и берём на себя саму регистрацию. Через Employer of Record можно нанять сотрудников ещё до создания местного юрлица.",
+      },
+    ],
+    uz: [
+      {
+        q: "Birinchi xabarda nimalarni yozish kerak?",
+        a: "Kompaniyangiz, Oʻzbekistonda nima qilishni rejalashtirayotganingiz, hozir qaysi bosqichdaligingiz va muddatlar boʻlsa, ular. Tanishuv qoʻngʻirogʻini belgilash uchun shu yetarli. Hujjatlarni keyinroq, kerak boʻlsa NDA imzolangandan soʻng yuborishingiz mumkin.",
+      },
+      {
+        q: "Narx qanday kelishiladi?",
+        a: "Tanishuv qoʻngʻirogʻidan keyin ish hajmi, muddat va narx yozilgan taklifni olasiz. Ish faqat siz uni tasdiqlaganingizdan keyin boshlanadi.",
+      },
+      {
+        q: "Oʻzbekistonda kompaniyamiz boʻlmasa ham yordam bera olasizmi?",
+        a: "Ha. Xorijiy kompaniyalarga roʻyxatdan oʻtishdan oldin video qoʻngʻiroq, Telegram yoki elektron pochta orqali maslahat beramiz va roʻyxatdan oʻtkazishning oʻzini ham bajaramiz. Employer of Record orqali mahalliy yuridik shaxs ochilmasdan oldin xodimlarni ham yollash mumkin.",
       },
     ],
   },

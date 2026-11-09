@@ -1,63 +1,72 @@
 {
-  "ContactPage": {
+  "ContactModern": {
     "hero": {
-      "eyebrow": "Aloqa",
-      "heading": "Suhbatni boshlang",
-      "description": "Rejalaringiz haqida yozing: info@advizenco.com, +998 33 488 48 88 yoki Telegram @advizen."
-    },
-    "info": {
-      "office": "Bizning ofis",
-      "officeValue": "Toshkent, O'zbekiston",
-      "phone": "Telefon",
-      "email": "Email",
-      "workingHours": "Ish vaqti",
-      "workingHoursValue": "Du – Ju, 9:00 – 18:00"
+      "title": "Toshkentdagi Advizen bilan bogʻlaning",
+      "lede": "Oʻzbekistondagi soliq, yuridik, buxgalteriya yoki kadrlar masalalari boʻyicha bizga oʻzbek, rus yoki ingliz tilida yozing."
     },
     "form": {
-      "eyebrow": "So'rov",
-      "heading": "Bizga xabar yuboring",
-      "description": "Batafsil so'rovlar uchun — loyiha kontekstini, muddatlarini va qiziqish sohasini ulashing. Biz sizga maxsus javob bilan qaytamiz.",
-      "firstName": "Ism",
-      "firstNamePlaceholder": "Akmal",
-      "lastName": "Familiya",
-      "lastNamePlaceholder": "Karimov",
-      "email": "Email",
-      "emailPlaceholder": "akmal@company.com",
+      "title": "Bizga xabar yuboring",
+      "sub": "Nimani rejalashtirayotganingizni va muddatlar boʻlsa, ularni yozing. Hujjatlarni keyinroq yuborish mumkin.",
+      "name": "Ism",
       "company": "Kompaniya",
-      "companyPlaceholder": "Kompaniya nomi",
-      "service": "Qiziqish sohasi",
-      "selectService": "Xizmatni tanlang",
-      "serviceTax": "Soliq konsaltingi",
-      "serviceLegal": "Yuridik konsalting",
-      "serviceFinance": "Buxgalteriya hisobi",
-      "serviceHr": "HR xizmatlari",
-      "serviceFunding": "Moliyalashtirish va grantlar",
-      "serviceOther": "Boshqa",
+      "email": "Elektron pochta",
+      "phone": "Telefon",
+      "service": "Xizmat",
       "message": "Xabar",
-      "messagePlaceholder": "Loyihangiz yoki savolingiz haqida ayting...",
-      "consentBefore": "Mening shaxsiy ma'lumotlarimni quyidagilarga muvofiq qayta ishlashga roziman:",
-      "consentPrivacy": "Maxfiylik siyosati",
-      "consentAnd": "va",
-      "consentTerms": "Foydalanish shartlari",
-      "consentAfter": ". Ushbu shaklni yuborish orqali siz taqdim etilgan ma'lumotlarni saqlash va qayta ishlashga roziligingizni tasdiqlaysiz.",
-      "send": "Yuborish",
+      "optional": "ixtiyoriy",
+      "emailPlaceholder": "name@company.com",
+      "phonePlaceholder": "+998",
+      "selectService": "Xizmatni tanlang",
+      "serviceOther": "Boshqa",
+      "messagePlaceholder": "Nimani rejalashtiryapsiz, hozir qaysi bosqichdasiz va muddatlar bormi",
+      "errors": {
+        "name": "Ismingizni kiriting",
+        "email": "Elektron pochta manzilini kiriting, masalan name@company.com",
+        "message": "Qanday yordam kerakligini qisqacha yozing",
+        "consent": "Xabaringizni saqlashimiz va javob berishimiz uchun rozilik belgisini qoʻying"
+      },
+      "summary": "{count, plural, one {Quyida belgilangan maydonni tekshiring} other {Quyida belgilangan # ta maydonni tekshiring}}",
+      "consent": "Shaxsiy maʼlumotlarimni <privacy>Maxfiylik siyosati</privacy> va <terms>Foydalanish shartlari</terms>ga muvofiq qayta ishlashga roziman.",
+      "send": "Xabarni yuborish",
       "sending": "Yuborilmoqda…",
-      "successHeading": "Xabar yuborildi!",
-      "successBody": "Rahmat — bir ish kuni ichida siz bilan bog'lanamiz.",
-      "sendAnother": "Yana xabar yuborish",
-      "errorMessage": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring yoki info@advizenco.com manziliga yozing."
+      "required": "«ixtiyoriy» deb belgilanmagan maydonlar majburiy.",
+      "failedTitle": "Xabar yuborilmadi",
+      "failedBody": "Matningiz saqlanib qoldi. Qayta urinib koʻring yoki <email>info@advizenco.com</email> manziliga yozing.",
+      "website": "Veb-sayt",
+      "sentTitle": "Xabar yuborildi",
+      "sentBody": "Rahmat, {name}. Xabaringiz jamoamizga yetib keldi, javobni {email} manziliga yuboramiz.",
+      "sentNote": "Du–Ju, 9:00–18:00, Toshkent vaqti bilan. Bizga Telegramʼda ham yozishingiz mumkin: @advizen.",
+      "again": "Yana xabar yuborish"
     },
-    "quick": {
-      "eyebrow": "Tezkor chat",
-      "heading": "Tezroq javob kerakmi?",
-      "description": "Shaklni o'tkazib yuboring — bizga to'g'ridan-to'g'ri Telegram yoki WhatsApp orqali yozing. Ish vaqtida o'rtacha javob 30 daqiqadan kam.",
-      "telegram": "Telegram",
-      "telegramHint": "@advizen  ·  Eng tez javob",
-      "whatsapp": "WhatsApp",
-      "whatsappHint": "Darhol xabar yuboring",
-      "businessHours": "Ish vaqti",
-      "hoursValue": "Du – Ju, 9:00 – 18:00",
-      "timezone": "UTC+5 · Toshkent, O'zbekiston"
+    "side": {
+      "label": "Boshqa aloqa usullari",
+      "direct": "Yoki bizga toʻgʻridan-toʻgʻri yozing",
+      "phone": "Telefon",
+      "email": "Elektron pochta",
+      "hours": "Ish vaqti",
+      "hoursValue": "Du–Ju, 9:00–18:00, Toshkent vaqti bilan",
+      "location": "Joylashuv",
+      "locationValue": "Toshkent, Oʻzbekiston",
+      "languages": "Tillar",
+      "languagesValue": "Oʻzbek, rus, ingliz"
+    },
+    "next": {
+      "title": "Keyingi qadamlar",
+      "lede": "Birinchi xabardan ish boshlanishigacha uch qadam.",
+      "steps": [
+        {
+          "title": "Tanishuv qoʻngʻirogʻi",
+          "text": "Nimani rejalashtirayotganingizni va qaysi savollar birinchi navbatda turganini bilish uchun qoʻngʻiroq belgilaymiz."
+        },
+        {
+          "title": "Yozma ish hajmi va narx",
+          "text": "Ish boshlanishidan oldin aniq hajm, muddat va narxni olasiz."
+        },
+        {
+          "title": "Bitta muvofiqlashtiruvchi hamkor",
+          "text": "Keyin soliq, yuridik va buxgalteriya ishlari bitta aloqa orqali olib boriladi."
+        }
+      ]
     }
   }
 }

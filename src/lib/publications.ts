@@ -115,7 +115,7 @@ export const publications: Publication[] = [
     year: "2025",
     date: "2025-08-30",
     pages: 11,
-    image: "/Articles Image/Payroll & Social Contributions.webp",
+    image: "/Articles Image/Payroll and Social Contributions.webp",
     hasRead: true,
   },
   {

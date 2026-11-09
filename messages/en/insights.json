@@ -1,45 +1,4 @@
 {
-  "InsightsPage": {
-    "hero": {
-      "eyebrow": "Insights",
-      "heading": "Knowledge that empowers decisions",
-      "description": "Guides, briefings, and market intelligence from our practice — rigorous, practical, and freely available.",
-      "statPublications": "Publications",
-      "statAccess": "Access",
-      "statAccessValue": "Free",
-      "statLanguages": "Languages",
-      "statLatestEdition": "Latest edition"
-    },
-    "flagship": {
-      "eyebrow": "Featured Publication",
-      "tag": "Flagship Publication",
-      "subtitle": "The Definitive Guide — 2026 Edition",
-      "description": "A comprehensive resource for international investors and companies entering the Uzbekistan market. Covers regulatory frameworks, tax structures, labour law, market entry strategies, and operational best practices.",
-      "year": "Year",
-      "pages": "Pages",
-      "languages": "Languages",
-      "downloadPdf": "Download PDF",
-      "readOnline": "Read online",
-      "contents": "Contents"
-    },
-    "publications": {
-      "eyebrow": "Publications",
-      "heading": "Briefings & guides",
-      "filterAll": "All",
-      "searchPlaceholder": "Search by keyword…",
-      "noResults": "No results for \"{query}\"",
-      "noResultsCategory": "No publications in this category yet.",
-      "clearFilters": "Clear filters",
-      "readMore": "Read more"
-    },
-    "cta": {
-      "eyebrow": "Bespoke Intelligence",
-      "heading": "Need tailored analysis?",
-      "description": "Our advisory team produces bespoke reports, market studies, and regulatory briefings. Contact us to discuss your requirements.",
-      "primary": "Commission a report",
-      "secondary": "Our practice areas"
-    }
-  },
   "ArticlePage": {
     "back": "Insights",
     "contents": "Contents",
@@ -144,6 +103,63 @@
         "title": "Islamic Finance in Uzbekistan: A Practical Guide",
         "description": "Uzbekistan's Islamic finance framework explained — from the legislative foundation and permitted MFO instruments to Special Council requirements and Sharia-compliant penalty mechanics."
       }
+    }
+  },
+  "InsightsModern": {
+    "hero": {
+      "title": "Articles and guides on Uzbek tax, law and business",
+      "lede": "Briefings and practical guides written by our tax, legal, accounting and HR advisers. Free to read.",
+      "metaPublications": "{count, plural, one {publication} other {publications}}",
+      "metaAreas": "{count, plural, one {practice area} other {practice areas}}",
+      "metaLatest": "latest update"
+    },
+    "guide": {
+      "meta": "Flagship guide · 2026 edition",
+      "title": "Doing Business in Uzbekistan",
+      "text": "Market entry, regulation and day-to-day operations in one guide for foreign investors and companies setting up in the country.",
+      "chapters": [
+        "Market overview and economy",
+        "Legal framework for foreign investment",
+        "Tax system and incentives",
+        "Labour law and employment",
+        "Banking, finance and currency controls",
+        "Company registration in practice"
+      ],
+      "cta": "Request the guide",
+      "facts": "{pages} pages · {languages}",
+      "languages": {
+        "en": "English",
+        "ru": "Russian",
+        "uz": "Uzbek"
+      },
+      "and": "and",
+      "coverAlt": "Cover of Doing Business in Uzbekistan, 2026 edition"
+    },
+    "latest": {
+      "title": "Latest",
+      "badge": "New",
+      "read": "Read the briefing",
+      "pages": "{count, plural, one {# page} other {# pages}}"
+    },
+    "all": {
+      "title": "All publications",
+      "count": "{count, plural, one {# article} other {# articles}}",
+      "filterLabel": "Filter by category",
+      "all": "All",
+      "search": "Search articles",
+      "clearSearch": "Clear search",
+      "emptyQuery": "No articles match “{query}”.",
+      "emptyQueryIn": "No articles match “{query}” in {category}.",
+      "emptyCategory": "No articles in this category yet.",
+      "clear": "Clear filters",
+      "showing": "Showing {shown} of {total}",
+      "more": "Show more"
+    },
+    "cta": {
+      "title": "Need analysis for your own case?",
+      "text": "We prepare written briefings and market studies on request, on the questions your board or investors are asking.",
+      "primary": "Commission a report",
+      "telegram": "Message us on Telegram"
     }
   }
 }

@@ -1,45 +1,4 @@
 {
-  "InsightsPage": {
-    "hero": {
-      "eyebrow": "Tahlillar",
-      "heading": "Qarorlar qabul qilishga yordam beradigan bilimlar",
-      "description": "Bizning amaliyotimizdan qo'llanmalar, brifinglar va bozor tahlili — qattiq, amaliy va bepul.",
-      "statPublications": "Nashrlar",
-      "statAccess": "Kirish",
-      "statAccessValue": "Bepul",
-      "statLanguages": "Tillar",
-      "statLatestEdition": "Eng yangi nashri"
-    },
-    "flagship": {
-      "eyebrow": "Tanlangan nashr",
-      "tag": "Bayroqdor nashr",
-      "subtitle": "To'liq qo'llanma — 2026 nashri",
-      "description": "O'zbekiston bozoriga kirayotgan xalqaro investorlar va kompaniyalar uchun keng qamrovli manba. Me'yoriy asoslar, soliq tuzilmalari, mehnat huquqi, bozorga kirish strategiyalari va operatsion eng yaxshi amaliyotlarni qamrab oladi.",
-      "year": "Yil",
-      "pages": "Sahifa",
-      "languages": "Tillar",
-      "downloadPdf": "PDF yuklab olish",
-      "readOnline": "Onlayn o'qish",
-      "contents": "Mundarija"
-    },
-    "publications": {
-      "eyebrow": "Nashrlar",
-      "heading": "Brifinglar va qo'llanmalar",
-      "filterAll": "Barchasi",
-      "searchPlaceholder": "Kalit so'z bo'yicha qidirish…",
-      "noResults": "\"{query}\" uchun natija yo'q",
-      "noResultsCategory": "Bu toifada hali nashr yo'q.",
-      "clearFilters": "Filtrlarni tozalash",
-      "readMore": "O'qish"
-    },
-    "cta": {
-      "eyebrow": "Maxsus tahlil",
-      "heading": "Maxsus tahlil kerakmi?",
-      "description": "Bizning konsalting jamoamiz maxsus hisobotlar, bozor tadqiqotlari va me'yoriy brifinglar tayyorlaydi. Talablaringizni muhokama qilish uchun biz bilan bog'laning.",
-      "primary": "Hisobot buyurtma berish",
-      "secondary": "Bizning amaliyotlar"
-    }
-  },
   "ArticlePage": {
     "back": "Tahlillar",
     "contents": "Mundarija",
@@ -144,6 +103,63 @@
         "title": "O'zbekistonda islom moliyasi: amaliy qo'llanma",
         "description": "O'zbekistonning islom moliyasi asosi tushuntirilgan — qonuniy asosdan va ruxsat etilgan MFO vositalaridan to Maxsus Kengash talablari va Shariatga muvofiq jazo mexanikalarigacha."
       }
+    }
+  },
+  "InsightsModern": {
+    "hero": {
+      "title": "Oʻzbekiston soliqlari, huquqi va biznesi boʻyicha maqolalar va qoʻllanmalar",
+      "lede": "Soliq, huquq, buxgalteriya va HR boʻyicha maslahatchilarimiz yozgan sharhlar va amaliy qoʻllanmalar. Bepul oʻqish mumkin.",
+      "metaPublications": "nashr",
+      "metaAreas": "amaliyot yoʻnalishi",
+      "metaLatest": "soʻnggi yangilanish"
+    },
+    "guide": {
+      "meta": "Asosiy qoʻllanma · 2026 nashri",
+      "title": "Doing Business in Uzbekistan",
+      "text": "Bozorga kirish, tartibga solish va kundalik faoliyat: mamlakatda biznes ochayotgan xorijiy investorlar va kompaniyalar uchun bitta qoʻllanmada.",
+      "chapters": [
+        "Bozor va iqtisodiyot sharhi",
+        "Xorijiy investitsiyalarning huquqiy asoslari",
+        "Soliq tizimi va imtiyozlar",
+        "Mehnat huquqi va ishga yollash",
+        "Bank, moliya va valyuta nazorati",
+        "Kompaniyani roʻyxatdan oʻtkazish amaliyoti"
+      ],
+      "cta": "Qoʻllanmani soʻrash",
+      "facts": "{pages} sahifa · {languages} tillarida",
+      "languages": {
+        "en": "ingliz",
+        "ru": "rus",
+        "uz": "oʻzbek"
+      },
+      "and": "va",
+      "coverAlt": "Doing Business in Uzbekistan qoʻllanmasining muqovasi, 2026 nashri"
+    },
+    "latest": {
+      "title": "Soʻnggi nashr",
+      "badge": "Yangi",
+      "read": "Sharhni oʻqish",
+      "pages": "{count} sahifa"
+    },
+    "all": {
+      "title": "Barcha nashrlar",
+      "count": "{count} ta maqola",
+      "filterLabel": "Yoʻnalish boʻyicha saralash",
+      "all": "Barchasi",
+      "search": "Maqolalarni qidirish",
+      "clearSearch": "Qidiruvni tozalash",
+      "emptyQuery": "“{query}” boʻyicha maqola topilmadi.",
+      "emptyQueryIn": "“{category}” boʻlimida “{query}” boʻyicha maqola topilmadi.",
+      "emptyCategory": "Bu boʻlimda hozircha maqola yoʻq.",
+      "clear": "Filtrlarni tozalash",
+      "showing": "{total} tadan {shown} tasi koʻrsatilgan",
+      "more": "Yana koʻrsatish"
+    },
+    "cta": {
+      "title": "Oʻz holatingiz boʻyicha tahlil kerakmi?",
+      "text": "Direktorlar kengashingiz yoki investorlaringiz beradigan savollar boʻyicha soʻrovga koʻra yozma sharhlar va bozor tadqiqotlarini tayyorlaymiz.",
+      "primary": "Hisobot buyurtma qilish",
+      "telegram": "Telegramda yozish"
     }
   }
 }
