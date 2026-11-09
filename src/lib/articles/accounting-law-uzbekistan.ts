@@ -8,7 +8,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "Every legal entity operating in Uzbekistan is required to maintain accounting records. The rules are set out in Law No. ЗРУ-404 of 13 April 2016 \"On Accounting\" and a body of supporting legislation. This guide covers the core concepts, organisational requirements, reporting obligations, and the penalties for getting it wrong.",
+        text: "Every legal entity operating in Uzbekistan is required to maintain accounting records. The rules are set out in Law No. ZRU-404 of 13 April 2016 \"On Accounting\" and a body of supporting legislation. This guide covers the core concepts, organisational requirements, reporting obligations, and the penalties for getting it wrong.",
       },
       { type: "h2" as const, text: "Legislative Framework" },
       {
@@ -18,9 +18,9 @@ const article: Record<string, LocalizedArticle> = {
           "Civil Code of the Republic of Uzbekistan",
           "Criminal Code of the Republic of Uzbekistan",
           "Tax Code of the Republic of Uzbekistan",
-          "Law No. ЗРУ-404 of 13 April 2016 \"On Accounting\"",
-          "Law No. ЗРУ-580 of 5 November 2019 \"On Banks and Banking Activity\"",
-          "Law No. ЗРУ-582 of 11 November 2019 \"On the Central Bank of the Republic of Uzbekistan\"",
+          "Law No. ZRU-404 of 13 April 2016 \"On Accounting\"",
+          "Law No. ZRU-580 of 5 November 2019 \"On Banks and Banking Activity\"",
+          "Law No. ZRU-582 of 11 November 2019 \"On the Central Bank of the Republic of Uzbekistan\"",
           "Presidential Resolution No. PP-419 of 10 November 2022 \"On measures to optimise reporting and archival document storage procedures\"",
         ],
       },
@@ -184,7 +184,7 @@ const article: Record<string, LocalizedArticle> = {
       faq: [
       {
         question: "Which entities must maintain accounting records in Uzbekistan?",
-        answer: "Under Law No. ЗРУ-404, all legal entities registered in Uzbekistan are required to maintain accounting records — including their subsidiaries, representative offices, branches, and other structural subdivisions, whether located inside or outside Uzbekistan. State authorities and management bodies are also accounting subjects. The director (head of the entity) is personally responsible for organising the accounting function.",
+        answer: "Under Law No. ZRU-404, all legal entities registered in Uzbekistan are required to maintain accounting records — including their subsidiaries, representative offices, branches, and other structural subdivisions, whether located inside or outside Uzbekistan. State authorities and management bodies are also accounting subjects. The director (head of the entity) is personally responsible for organising the accounting function.",
       },
       {
         question: "Who is responsible for organising accounting in a company in Uzbekistan?",
@@ -405,7 +405,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "O'zbekistonda faoliyat yurituvchi har bir yuridik shaxs buxgalteriya hisobini yuritishi shart. Qoidalar 2016 yil 13 apreldagi «Buxgalteriya hisobi to'g'risida»gi ЗРУ-404-sonli Qonun va qo'shimcha qonun hujjatlari to'plamida belgilangan. Ushbu qo'llanma asosiy tushunchalarni, tashkiliy talablarni, hisobot majburiyatlarini va talablarni buzganlik uchun jarimalarni qamrab oladi.",
+        text: "O'zbekistonda faoliyat yurituvchi har bir yuridik shaxs buxgalteriya hisobini yuritishi shart. Qoidalar 2016 yil 13 apreldagi «Buxgalteriya hisobi to'g'risida»gi OʻRQ-404-sonli Qonun va qo'shimcha qonun hujjatlari to'plamida belgilangan. Ushbu qo'llanma asosiy tushunchalarni, tashkiliy talablarni, hisobot majburiyatlarini va talablarni buzganlik uchun jarimalarni qamrab oladi.",
       },
       { type: "h2" as const, text: "Qonunchilik bazasi" },
       {
@@ -415,10 +415,10 @@ const article: Record<string, LocalizedArticle> = {
           "O'zbekiston Respublikasi Fuqarolik kodeksi",
           "O'zbekiston Respublikasi Jinoyat kodeksi",
           "O'zbekiston Respublikasi Soliq kodeksi",
-          "2016 yil 13 apreldagi «Buxgalteriya hisobi to'g'risida»gi ЗРУ-404-sonli Qonun",
-          "2019 yil 5 noyabrdagi «Banklar va bank faoliyati to'g'risida»gi ЗРУ-580-sonli Qonun",
-          "2019 yil 11 noyabrdagi «O'zbekiston Respublikasi Markaziy banki to'g'risida»gi ЗРУ-582-sonli Qonun",
-          "2022 yil 10 noyabrdagi «Hisobot va arxiv hujjatlarini saqlash tartibini optimallashtirish chora-tadbirlari to'g'risida»gi ПП-419-sonli Prezident Qarori",
+          "2016 yil 13 apreldagi «Buxgalteriya hisobi to'g'risida»gi OʻRQ-404-sonli Qonun",
+          "2019 yil 5 noyabrdagi «Banklar va bank faoliyati to'g'risida»gi OʻRQ-580-sonli Qonun",
+          "2019 yil 11 noyabrdagi «O'zbekiston Respublikasi Markaziy banki to'g'risida»gi OʻRQ-582-sonli Qonun",
+          "2022 yil 10 noyabrdagi «Hisobot va arxiv hujjatlarini saqlash tartibini optimallashtirish chora-tadbirlari to'g'risida»gi PQ-419-sonli Prezident Qarori",
         ],
       },
       { type: "h2" as const, text: "Buxgalteriya hisobi nima?" },
@@ -546,7 +546,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "So'nggi islohot: hisobot majburiyatlarining qisqarishi" },
       {
         type: "p" as const,
-        text: "ПП-419-sonli Prezident Qarori (2022 yil noyabr) sezilarli soddalashtirishlarni joriy etdi:",
+        text: "PQ-419-sonli Prezident Qarori (2022 yil noyabr) sezilarli soddalashtirishlarni joriy etdi:",
       },
       {
         type: "ul" as const,
@@ -581,7 +581,7 @@ const article: Record<string, LocalizedArticle> = {
       faq: [
       {
         question: "O'zbekistonda qaysi tashkilotlar buxgalteriya hisobini yuritishi shart?",
-        answer: "ЗРУ-404-sonli Qonunga muvofiq, O'zbekistonda ro'yxatdan o'tgan barcha yuridik shaxslar buxgalteriya hisobini yuritishi shart — jumladan ularning sho'ba korxonalari, vakolatxonalari, filiallari va boshqa tarkibiy bo'linmalari, O'zbekiston ichida yoki tashqarisida joylashganligidan qat'i nazar. Davlat hokimiyati va boshqaruv organlari ham hisob subyektlari hisoblanadi. Direktor (tashkilot rahbari) buxgalteriya funksiyasini tashkil etish uchun shaxsan javobgardir.",
+        answer: "OʻRQ-404-sonli Qonunga muvofiq, O'zbekistonda ro'yxatdan o'tgan barcha yuridik shaxslar buxgalteriya hisobini yuritishi shart — jumladan ularning sho'ba korxonalari, vakolatxonalari, filiallari va boshqa tarkibiy bo'linmalari, O'zbekiston ichida yoki tashqarisida joylashganligidan qat'i nazar. Davlat hokimiyati va boshqaruv organlari ham hisob subyektlari hisoblanadi. Direktor (tashkilot rahbari) buxgalteriya funksiyasini tashkil etish uchun shaxsan javobgardir.",
       },
       {
         question: "O'zbekistonda kompaniyada buxgalteriya hisobini tashkil etish uchun kim javobgardir?",

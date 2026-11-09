@@ -430,13 +430,13 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "O'zbekistonda biznes faoliyatini tugatish belgilangan ketma-ketlikdagi majburiy bosqichlardan iborat. 2019 yil 7 iyundagi UP-5739-sonli Prezident Farmoni kuchga kirgandan beri ixtiyoriy tugatish tartibi sezilarli darajada soddalashtirildi: tugatish to'g'risidagi e'lonni bosma OAVda chop etish endi talab qilinmaydi; butun jarayon Davlat xizmatlari markazining avtomatlashtirilgan tizimi orqali boshqariladi; ixtiyoriy tugatishning umumiy muddati Markaz tugatish to'g'risidagi xabarnomani olgan kundan boshlab olti oydan oshmasligi kerak.",
+        text: "O'zbekistonda biznes faoliyatini tugatish belgilangan ketma-ketlikdagi majburiy bosqichlardan iborat. 2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoni kuchga kirgandan beri ixtiyoriy tugatish tartibi sezilarli darajada soddalashtirildi: tugatish to'g'risidagi e'lonni bosma OAVda chop etish endi talab qilinmaydi; butun jarayon Davlat xizmatlari markazining avtomatlashtirilgan tizimi orqali boshqariladi; ixtiyoriy tugatishning umumiy muddati Markaz tugatish to'g'risidagi xabarnomani olgan kundan boshlab olti oydan oshmasligi kerak.",
       },
       { type: "h2" as const, text: "Qonunchilik bazasi" },
       {
         type: "ul" as const,
         items: [
-          "2019 yil 7 iyundagi «Tadbirkorlik subyektlarini tugatish tartibini soddalashtirish chora-tadbirlari to'g'risida»gi UP-5739-sonli Prezident Farmoni",
+          "2019 yil 7 iyundagi «Tadbirkorlik subyektlarini tugatish tartibini soddalashtirish chora-tadbirlari to'g'risida»gi PF-5739-sonli Prezident Farmoni",
           "Vazirlar Mahkamasining 2019 yil 21 avgustdagi 704-sonli Qarori, 1-ilova «Tadbirkorlik subyektlarini ixtiyoriy tugatish va ularning faoliyatini to'xtatish tartibi to'g'risida Nizom»",
         ],
       },
@@ -560,7 +560,7 @@ const article: Record<string, LocalizedArticle> = {
       faq: [
       {
         question: "O'zbekistonda ixtiyoriy tugatish qancha vaqt oladi?",
-        answer: "Maksimal muddat — Davlat xizmatlari markazi tugatish to'g'risidagi xabarnomani olgan kundan boshlab 6 oy. Bu soddalashtirilgan muddat 2019 yil 7 iyundagi UP-5739-sonli Prezident Farmoni bilan kiritilgan va oldingi murakkabroq tartibni almashtirdi. Soddalashtirilgan tartib gazetada e'lon chop etish talabini ham bekor qildi — tugatish to'g'risidagi e'lonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi.",
+        answer: "Maksimal muddat — Davlat xizmatlari markazi tugatish to'g'risidagi xabarnomani olgan kundan boshlab 6 oy. Bu soddalashtirilgan muddat 2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoni bilan kiritilgan va oldingi murakkabroq tartibni almashtirdi. Soddalashtirilgan tartib gazetada e'lon chop etish talabini ham bekor qildi — tugatish to'g'risidagi e'lonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi.",
       },
       {
         question: "O'zbekistonda ixtiyoriy tugatish uchun gazetada e'lon chop etish talab etiladimi?",
@@ -577,7 +577,7 @@ const article: Record<string, LocalizedArticle> = {
     ],
     howTo: {
       name: "O'zbekistonda kompaniyani ixtiyoriy tugatish tartibi",
-      description: "2019 yil 7 iyundagi UP-5739-sonli Prezident Farmoniga muvofiq O'zbekistonda tadbirkorlik subyektini ixtiyoriy tugatishning 13 bosqichli tartibi.",
+      description: "2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoniga muvofiq O'zbekistonda tadbirkorlik subyektini ixtiyoriy tugatishning 13 bosqichli tartibi.",
       steps: [
         {
           name: "Tugatish to'g'risida qaror qabul qilish",

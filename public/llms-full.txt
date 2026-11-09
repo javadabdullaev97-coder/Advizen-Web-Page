@@ -12,12 +12,12 @@ Contact: +998 33 488 48 88 (phone and WhatsApp), info@advizenco.com, Telegram @a
 ## Tashkent International Financial Centre: The 2026 Constitutional Law
 URL: https://www.advizenco.com/insights/tashkent-international-financial-centre
 
-A neutral analysis of Constitutional Law No. ЎРҚ-1158 of 13 July 2026 establishing the Tashkent International Financial Centre — its legal architecture, tax regime, operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.
+A neutral analysis of Constitutional Law No. ZRU-1158 of 13 July 2026 establishing the Tashkent International Financial Centre — its legal architecture, tax regime, operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.
 
 ### Frequently Asked Questions
 
 **Is TIFC a special economic zone?**
-No. A special economic zone grants tax and customs incentives but leaves companies subject to ordinary Uzbek civil, corporate, and commercial law and to the ordinary courts. TIFC is established by Constitutional Law No. ЎРҚ-1158 as a territory with its own legal regime, its own regulator (the Financial Services Authority), and its own court (the Tashkent International Commercial Court). Within the centre, TIFC decisions prevail over conflicting national legislation, and matters not covered by TIFC rules are governed subsidiarily by the common law and equity of England and Wales.
+No. A special economic zone grants tax and customs incentives but leaves companies subject to ordinary Uzbek civil, corporate, and commercial law and to the ordinary courts. TIFC is established by Constitutional Law No. ZRU-1158 as a territory with its own legal regime, its own regulator (the Financial Services Authority), and its own court (the Tashkent International Commercial Court). Within the centre, TIFC decisions prevail over conflicting national legislation, and matters not covered by TIFC rules are governed subsidiarily by the common law and equity of England and Wales.
 
 **What tax applies inside TIFC?**
 The national Tax Code applies inside the centre only where the Constitutional Law or a TIFC resolution expressly provides. TIFC bodies and their wholly-owned entities are exempt from corporate profit tax and social tax until 1 January 2076, and qualified participants are exempt on income from financial services over the same period, subject to economic-substance and governance conditions. The exception is large multinational groups — those with consolidated annual revenue of EUR 750 million or more — which receive no exemption and instead pay a qualified domestic minimum top-up tax at the standard national rate (15%), in line with the OECD Pillar Two global minimum tax.
@@ -40,7 +40,7 @@ The Constitutional Law is in force, but the centre is not yet operational. The T
 URL: https://www.advizenco.com/insights/accounting-law-uzbekistan
 
 
-Uzbekistan's primary accounting legislation is Law No. ЗРУ-404, enacted on April 13, 2016. The law applies to all legal entities incorporated or operating in Uzbekistan, including foreign-invested enterprises, branches, and representative offices. The core obligation is to maintain proper accounting records using the double-entry method, supported by mandatory primary documents for every business transaction.
+Uzbekistan's primary accounting legislation is Law No. ZRU-404, enacted on April 13, 2016. The law applies to all legal entities incorporated or operating in Uzbekistan, including foreign-invested enterprises, branches, and representative offices. The core obligation is to maintain proper accounting records using the double-entry method, supported by mandatory primary documents for every business transaction.
 
 ### Who Must Keep Accounting Records
 
@@ -302,7 +302,7 @@ A: No. Uzbekistan competition law prohibits price-fixing between licensor and fr
 URL: https://www.advizenco.com/insights/islamic-finance-uzbekistan
 
 
-Uzbekistan enacted Law No. ЗРУ-765 on April 20, 2022, formally authorizing Islamic (Sharia-compliant) financial instruments. The operational framework was completed by Central Bank Resolution No. 23/4 on July 19, 2024. Under current rules, only microfinance organizations (MFOs) are licensed to provide Islamic finance products; commercial banks remain outside the Islamic finance framework.
+Uzbekistan enacted Law No. ZRU-765 on April 20, 2022, formally authorizing Islamic (Sharia-compliant) financial instruments. The operational framework was completed by Central Bank Resolution No. 23/4 on July 19, 2024. Under current rules, only microfinance organizations (MFOs) are licensed to provide Islamic finance products; commercial banks remain outside the Islamic finance framework.
 
 ### Financing Caps
 
@@ -340,7 +340,7 @@ A: All penalty payments must be directed to charitable purposes and cannot be re
 URL: https://www.advizenco.com/insights/licensing-procedures-uzbekistan
 
 
-Law No. ЗРУ-701, enacted on July 14, 2021, consolidated Uzbekistan's regulatory access framework into three tracks: licensing (high-risk activities listed in Appendix 1), permitting documents (activities in Appendix 2), and notifications (low-risk activities in Appendix 3 requiring no prior approval).
+Law No. ZRU-701, enacted on July 14, 2021, consolidated Uzbekistan's regulatory access framework into three tracks: licensing (high-risk activities listed in Appendix 1), permitting documents (activities in Appendix 2), and notifications (low-risk activities in Appendix 3 requiring no prior approval).
 
 ### The Three-Track System
 

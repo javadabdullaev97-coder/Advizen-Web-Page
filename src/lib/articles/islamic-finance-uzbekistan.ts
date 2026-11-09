@@ -18,7 +18,7 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Law of the Republic of Uzbekistan 'On Non-Banking Credit Organisations and Microfinance Activities' dated 20 April 2022, No. ЗРУ-765.",
+          "Law of the Republic of Uzbekistan 'On Non-Banking Credit Organisations and Microfinance Activities' dated 20 April 2022, No. ZRU-765.",
           "Presidential Decree 'On Additional Measures to Increase the Role and Share of Microfinance Services in Entrepreneurship Development' (Decree of the President).",
           "Presidential Decree 'On Measures for the Further Development of the Capital Market' dated 13 April 2021, No. С6207.",
           "Central Bank Resolution 'On Approval of the Regulation on the Procedure for the Provision of Islamic Finance Services by Microfinance Organisations' dated 19 July 2024, No. 23/4.",
@@ -133,7 +133,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Who can provide Islamic finance services in Uzbekistan?",
-        answer: "Exclusively microfinance organisations (MFOs) licensed under Law No. ЗРУ-765 and regulated by the Central Bank of Uzbekistan. Any MFO offering Islamic finance must establish a Special Council for the Coordination of Islamic Finance Issues — minimum 5 members: at least 1 with a higher education degree in Islamic law, 1 with a higher legal education degree, and the remaining members each with an international Islamic finance certificate. Alternatively, the Special Council may be outsourced on a contractual basis to a specialised association or union.",
+        answer: "Exclusively microfinance organisations (MFOs) licensed under Law No. ZRU-765 and regulated by the Central Bank of Uzbekistan. Any MFO offering Islamic finance must establish a Special Council for the Coordination of Islamic Finance Issues — minimum 5 members: at least 1 with a higher education degree in Islamic law, 1 with a higher legal education degree, and the remaining members each with an international Islamic finance certificate. Alternatively, the Special Council may be outsourced on a contractual basis to a specialised association or union.",
       },
       {
         question: "How does Murabaha work in Uzbekistan?",
@@ -306,7 +306,7 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "O'zbekiston Respublikasining 2022 yil 20 apreldagi «Nobank kredit tashkilotlari va mikromoliya faoliyati to'g'risida»gi ЗРУ-765-sonli Qonuni.",
+          "O'zbekiston Respublikasining 2022 yil 20 apreldagi «Nobank kredit tashkilotlari va mikromoliya faoliyati to'g'risida»gi OʻRQ-765-sonli Qonuni.",
           "«Tadbirkorlikni rivojlantirishda mikromoliya xizmatlarining roli va ulushini oshirishga doir qo'shimcha chora-tadbirlar to'g'risida»gi Prezident Farmoni.",
           "2021 yil 13 apreldagi «Kapital bozorini yanada rivojlantirish chora-tadbirlari to'g'risida»gi С6207-sonli Prezident Farmoni.",
           "Markaziy bankning 2024 yil 19 iyuldagi «Mikromoliya tashkilotlari tomonidan islom moliyasi xizmatlarini ko'rsatish tartibi to'g'risidagi Nizomni tasdiqlash haqida»gi 23/4-sonli Qarori.",
@@ -421,7 +421,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "O'zbekistonda islom moliyasi xizmatlarini kim ko'rsatishi mumkin?",
-        answer: "Faqat ЗРУ-765-sonli Qonun asosida litsenziyalangan va O'zbekiston Markaziy banki tomonidan tartibga solinadigan mikromoliya tashkilotlari (MMTlar). Islom moliyasi xizmatlarini ko'rsatuvchi har qanday MMT islom moliyasi masalalarini muvofiqlashtirish bo'yicha Maxsus kengash tashkil etishi shart — kamida 5 a'zo: kamida 1 islom huquqi bo'yicha oliy ma'lumotli, 1 oliy yuridik ma'lumotli, qolganlar islom moliyasi bo'yicha xalqaro sertifikatga ega. Muqobil ravishda, Maxsus kengash ixtisoslashgan uyushma yoki ittifoq huzurida shartnoma asosida autsorsing yo'li bilan jalb qilinishi mumkin.",
+        answer: "Faqat OʻRQ-765-sonli Qonun asosida litsenziyalangan va O'zbekiston Markaziy banki tomonidan tartibga solinadigan mikromoliya tashkilotlari (MMTlar). Islom moliyasi xizmatlarini ko'rsatuvchi har qanday MMT islom moliyasi masalalarini muvofiqlashtirish bo'yicha Maxsus kengash tashkil etishi shart — kamida 5 a'zo: kamida 1 islom huquqi bo'yicha oliy ma'lumotli, 1 oliy yuridik ma'lumotli, qolganlar islom moliyasi bo'yicha xalqaro sertifikatga ega. Muqobil ravishda, Maxsus kengash ixtisoslashgan uyushma yoki ittifoq huzurida shartnoma asosida autsorsing yo'li bilan jalb qilinishi mumkin.",
       },
       {
         question: "O'zbekistonda Murabaha qanday ishlaydi?",

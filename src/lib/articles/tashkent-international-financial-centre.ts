@@ -3,13 +3,13 @@ import type { LocalizedArticle } from "../publications";
 const article: Record<string, LocalizedArticle> = {
   en: {
     subtitle:
-      "A neutral analysis of Constitutional Law No. ЎРҚ-1158 of 13 July 2026 establishing the Tashkent International Financial Centre — its legal architecture, tax regime, operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.",
+      "A neutral analysis of Constitutional Law No. ZRU-1158 of 13 July 2026 establishing the Tashkent International Financial Centre — its legal architecture, tax regime, operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.",
     author: "Advizen Legal Practice",
     readTime: "16 min read",
     content: [
       {
         type: "p" as const,
-        text: "On 13 July 2026, the President of Uzbekistan signed Constitutional Law No. ЎРҚ-1158 establishing the Tashkent International Financial Centre (TIFC). The law was published in the National Database of Legislation on 14 July 2026 and enters into force ten days after official publication. It is not an amendment to the tax code or a new incentive package — it is a constitutional-level instrument that carves out a defined territory within Uzbekistan and places it under a distinct legal order. This briefing sets out what the law actually establishes, how the regime works in practice, and how it measures against the established financial centres it is modelled on.",
+        text: "On 13 July 2026, the President of Uzbekistan signed Constitutional Law No. ZRU-1158 establishing the Tashkent International Financial Centre (TIFC). The law was published in the National Database of Legislation on 14 July 2026 and enters into force ten days after official publication. It is not an amendment to the tax code or a new incentive package — it is a constitutional-level instrument that carves out a defined territory within Uzbekistan and places it under a distinct legal order. This briefing sets out what the law actually establishes, how the regime works in practice, and how it measures against the established financial centres it is modelled on.",
       },
       { type: "h2" as const, text: "What TIFC Is — and What It Is Not" },
       {
@@ -258,7 +258,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "Is TIFC a special economic zone?",
-        answer: "No. A special economic zone grants tax and customs incentives but leaves companies subject to ordinary Uzbek civil, corporate, and commercial law and to the ordinary courts. TIFC is established by Constitutional Law No. ЎРҚ-1158 as a territory with its own legal regime, its own regulator (the Financial Services Authority), and its own court (the Tashkent International Commercial Court). Within the centre, TIFC decisions prevail over conflicting national legislation, and matters not covered by TIFC rules are governed subsidiarily by the common law and equity of England and Wales.",
+        answer: "No. A special economic zone grants tax and customs incentives but leaves companies subject to ordinary Uzbek civil, corporate, and commercial law and to the ordinary courts. TIFC is established by Constitutional Law No. ZRU-1158 as a territory with its own legal regime, its own regulator (the Financial Services Authority), and its own court (the Tashkent International Commercial Court). Within the centre, TIFC decisions prevail over conflicting national legislation, and matters not covered by TIFC rules are governed subsidiarily by the common law and equity of England and Wales.",
       },
       {
         question: "What tax applies inside TIFC?",
@@ -284,13 +284,13 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle:
-      "Нейтральный анализ Конституционного закона № ЎРҚ-1158 от 13 июля 2026 года об учреждении Ташкентского международного финансового центра — его правовая архитектура, налоговый режим, операционный режим и сравнение с DIFC, ADGM, AIFC и QFC.",
+      "Нейтральный анализ Конституционного закона № ЗРУ-1158 от 13 июля 2026 года об учреждении Ташкентского международного финансового центра — его правовая архитектура, налоговый режим, операционный режим и сравнение с DIFC, ADGM, AIFC и QFC.",
     author: "Advizen Legal Practice",
     readTime: "16 мин чтения",
     content: [
       {
         type: "p" as const,
-        text: "13 июля 2026 года Президент Узбекистана подписал Конституционный закон № ЎРҚ-1158 об учреждении Ташкентского международного финансового центра (ТМФЦ). Закон опубликован в Национальной базе данных законодательства 14 июля 2026 года и вступает в силу через десять дней после официального опубликования. Это не поправка к налоговому кодексу и не новый пакет льгот — это акт конституционного уровня, который выделяет определённую территорию внутри Узбекистана и помещает её под самостоятельный правовой порядок. В настоящем обзоре изложено, что закон в действительности устанавливает, как режим работает на практике и как он соотносится с признанными финансовыми центрами, по образцу которых он создан.",
+        text: "13 июля 2026 года Президент Узбекистана подписал Конституционный закон № ЗРУ-1158 об учреждении Ташкентского международного финансового центра (ТМФЦ). Закон опубликован в Национальной базе данных законодательства 14 июля 2026 года и вступает в силу через десять дней после официального опубликования. Это не поправка к налоговому кодексу и не новый пакет льгот — это акт конституционного уровня, который выделяет определённую территорию внутри Узбекистана и помещает её под самостоятельный правовой порядок. В настоящем обзоре изложено, что закон в действительности устанавливает, как режим работает на практике и как он соотносится с признанными финансовыми центрами, по образцу которых он создан.",
       },
       { type: "h2" as const, text: "Чем ТМФЦ является — и чем не является" },
       {
@@ -539,7 +539,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "Является ли ТМФЦ свободной экономической зоной?",
-        answer: "Нет. Свободная экономическая зона предоставляет налоговые и таможенные льготы, но оставляет компании подчинёнными обычному узбекскому гражданскому, корпоративному и коммерческому праву и обычным судам. ТМФЦ учреждён Конституционным законом № ЎРҚ-1158 как территория с собственным правовым режимом, собственным регулятором (Управление финансовых услуг) и собственным судом (Ташкентский международный коммерческий суд). В пределах центра решения ТМФЦ имеют приоритет над противоречащим национальным законодательством, а вопросы, не урегулированные правилами ТМФЦ, регулируются субсидиарно общим правом и правом справедливости Англии и Уэльса.",
+        answer: "Нет. Свободная экономическая зона предоставляет налоговые и таможенные льготы, но оставляет компании подчинёнными обычному узбекскому гражданскому, корпоративному и коммерческому праву и обычным судам. ТМФЦ учреждён Конституционным законом № ЗРУ-1158 как территория с собственным правовым режимом, собственным регулятором (Управление финансовых услуг) и собственным судом (Ташкентский международный коммерческий суд). В пределах центра решения ТМФЦ имеют приоритет над противоречащим национальным законодательством, а вопросы, не урегулированные правилами ТМФЦ, регулируются субсидиарно общим правом и правом справедливости Англии и Уэльса.",
       },
       {
         question: "Какие налоги применяются внутри ТМФЦ?",
@@ -565,13 +565,13 @@ const article: Record<string, LocalizedArticle> = {
   },
   uz: {
     subtitle:
-      "Toshkent xalqaro moliya markazini tashkil etuvchi 2026 yil 13 iyuldagi ЎРҚ-1158-sonli Konstitutsiyaviy qonunning neytral tahlili — uning huquqiy arxitekturasi, soliq rejimi, operatsion rejimi hamda DIFC, ADGM, AIFC va QFC bilan taqqoslash.",
+      "Toshkent xalqaro moliya markazini tashkil etuvchi 2026 yil 13 iyuldagi OʻRQ-1158-sonli Konstitutsiyaviy qonunning neytral tahlili — uning huquqiy arxitekturasi, soliq rejimi, operatsion rejimi hamda DIFC, ADGM, AIFC va QFC bilan taqqoslash.",
     author: "Advizen Legal Practice",
     readTime: "16 daqiqa o'qish",
     content: [
       {
         type: "p" as const,
-        text: "2026 yil 13 iyulda O'zbekiston Prezidenti Toshkent xalqaro moliya markazini (TXMM) tashkil etuvchi ЎРҚ-1158-sonli Konstitutsiyaviy qonunni imzoladi. Qonun 2026 yil 14 iyulda Qonunchilik ma'lumotlari milliy bazasida e'lon qilingan va rasmiy e'lon qilingan kundan o'n kun o'tgach kuchga kiradi. Bu soliq kodeksiga tuzatish yoki yangi imtiyozlar to'plami emas — bu O'zbekiston ichida ma'lum bir hududni ajratib, uni alohida huquqiy tartibga bo'ysundiradigan konstitutsiyaviy darajadagi hujjatdir. Ushbu sharhda qonun aslida nimani o'rnatishi, rejim amalda qanday ishlashi hamda u qaysi tan olingan moliya markazlari namunasida yaratilgani va ular bilan qanday taqqoslanishi bayon etilgan.",
+        text: "2026 yil 13 iyulda O'zbekiston Prezidenti Toshkent xalqaro moliya markazini (TXMM) tashkil etuvchi OʻRQ-1158-sonli Konstitutsiyaviy qonunni imzoladi. Qonun 2026 yil 14 iyulda Qonunchilik ma'lumotlari milliy bazasida e'lon qilingan va rasmiy e'lon qilingan kundan o'n kun o'tgach kuchga kiradi. Bu soliq kodeksiga tuzatish yoki yangi imtiyozlar to'plami emas — bu O'zbekiston ichida ma'lum bir hududni ajratib, uni alohida huquqiy tartibga bo'ysundiradigan konstitutsiyaviy darajadagi hujjatdir. Ushbu sharhda qonun aslida nimani o'rnatishi, rejim amalda qanday ishlashi hamda u qaysi tan olingan moliya markazlari namunasida yaratilgani va ular bilan qanday taqqoslanishi bayon etilgan.",
       },
       { type: "h2" as const, text: "TXMM nima — va nima emas" },
       {
@@ -820,7 +820,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "TXMM erkin iqtisodiy zonami?",
-        answer: "Yo'q. Erkin iqtisodiy zona soliq va bojxona imtiyozlarini beradi, biroq kompaniyalarni oddiy o'zbek fuqarolik, korporativ va tijorat huquqiga hamda oddiy sudlarga bo'ysundirib qoldiradi. TXMM ЎРҚ-1158-sonli Konstitutsiyaviy qonun bilan o'z huquqiy rejimiga, o'z regulyatoriga (Moliyaviy xizmatlar boshqarmasi) va o'z sudiga (Toshkent xalqaro tijorat sudi) ega hudud sifatida tashkil etilgan. Markaz doirasida TXMM qarorlari zid milliy qonunchilikdan ustunlikka ega, TXMM qoidalari bilan qamrab olinmagan masalalar esa subsidiar tarzda Angliya va Uels umumiy huquqi va adolat huquqi bilan tartibga solinadi.",
+        answer: "Yo'q. Erkin iqtisodiy zona soliq va bojxona imtiyozlarini beradi, biroq kompaniyalarni oddiy o'zbek fuqarolik, korporativ va tijorat huquqiga hamda oddiy sudlarga bo'ysundirib qoldiradi. TXMM OʻRQ-1158-sonli Konstitutsiyaviy qonun bilan o'z huquqiy rejimiga, o'z regulyatoriga (Moliyaviy xizmatlar boshqarmasi) va o'z sudiga (Toshkent xalqaro tijorat sudi) ega hudud sifatida tashkil etilgan. Markaz doirasida TXMM qarorlari zid milliy qonunchilikdan ustunlikka ega, TXMM qoidalari bilan qamrab olinmagan masalalar esa subsidiar tarzda Angliya va Uels umumiy huquqi va adolat huquqi bilan tartibga solinadi.",
       },
       {
         question: "TXMM ichida qanday soliqlar qo'llaniladi?",

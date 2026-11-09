@@ -195,7 +195,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Kreativ industriyalar parki nima?" },
       {
         type: "p" as const,
-        text: "2025 yil 26 martdagi UP-61-sonli Prezident Farmoni bilan tashkil etilgan Kreativ industriyalar parki kreativ iqtisodiyotni rag'batlantirish va qo'llab-quvvatlash uchun milliy markaz sifatida yaratilgan. Jismoniy makon taqdim etishdan tashqari, uning asosiy maqsadlari qatoriga xilma-xil kreativ industriyalarni rivojlantirish uchun qulay sharoit yaratish, sektorga mahalliy va xorijiy investitsiyalarni jalb qilish, hamda rezidentlarni zaruriy resurslar va infratuzilma bilan ta'minlash kiradi.",
+        text: "2025 yil 26 martdagi PF-61-sonli Prezident Farmoni bilan tashkil etilgan Kreativ industriyalar parki kreativ iqtisodiyotni rag'batlantirish va qo'llab-quvvatlash uchun milliy markaz sifatida yaratilgan. Jismoniy makon taqdim etishdan tashqari, uning asosiy maqsadlari qatoriga xilma-xil kreativ industriyalarni rivojlantirish uchun qulay sharoit yaratish, sektorga mahalliy va xorijiy investitsiyalarni jalb qilish, hamda rezidentlarni zaruriy resurslar va infratuzilma bilan ta'minlash kiradi.",
       },
       {
         type: "ul" as const,
@@ -209,7 +209,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Kreativ industriyalarni aniqlash: kim rezident bo'lishi mumkin?" },
       {
         type: "p" as const,
-        text: "2024 yil 3 oktyabrdagi \"Kreativ industriya to'g'risida\"gi ZRU-970-sonli Qonunga muvofiq kreativ industriyalar doirasi keng ma'noda belgilangan. Quyidagi sohalarda faoliyat yurituvchi va kreativ mahsulotlarni rivojlantirish hamda tijoratlashtirish maqsadidagi yuridik shaxslar va jismoniy shaxslar rezidentlikka asosiy nomzodlar hisoblanadi:",
+        text: "2024 yil 3 oktyabrdagi \"Kreativ industriya to'g'risida\"gi OʻRQ-970-sonli Qonunga muvofiq kreativ industriyalar doirasi keng ma'noda belgilangan. Quyidagi sohalarda faoliyat yurituvchi va kreativ mahsulotlarni rivojlantirish hamda tijoratlashtirish maqsadidagi yuridik shaxslar va jismoniy shaxslar rezidentlikka asosiy nomzodlar hisoblanadi:",
       },
       {
         type: "ul" as const,
@@ -262,11 +262,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "O'zbekistonning Kreativ industriyalar parki rezidenti bo'lish uchun kim munosib?",
-        answer: "Rezidentlik 2024 yil 3 oktyabrdagi ZRU-970-sonli Qonun ta'rifiga muvofiq kreativ industriyalarda faoliyat yurituvchi tijorat tashkilotlari va jismoniy shaxslar uchun mavjud. Mos faoliyat turlariga quyidagilar kiradi: adabiy ijod (mualliflik, kontent yaratish), amaliy san'at va hunarmandchilik, arxitektura va dizayn, shaharni rejalashtirish, tasviriy san'at (rassomlik, haykaltaroshlik, grafika san'ati), shuningdek kreativ mahsulotlarni yaratish, ishlab chiqarish, tarqatish va targ'ib qilish bilan bog'liq boshqa faoliyat turlari.",
+        answer: "Rezidentlik 2024 yil 3 oktyabrdagi OʻRQ-970-sonli Qonun ta'rifiga muvofiq kreativ industriyalarda faoliyat yurituvchi tijorat tashkilotlari va jismoniy shaxslar uchun mavjud. Mos faoliyat turlariga quyidagilar kiradi: adabiy ijod (mualliflik, kontent yaratish), amaliy san'at va hunarmandchilik, arxitektura va dizayn, shaharni rejalashtirish, tasviriy san'at (rassomlik, haykaltaroshlik, grafika san'ati), shuningdek kreativ mahsulotlarni yaratish, ishlab chiqarish, tarqatish va targ'ib qilish bilan bog'liq boshqa faoliyat turlari.",
       },
       {
         question: "O'zbekistonning Kreativ industriyalar parki qachon tashkil etilgan va imtiyozlar qachondan amal qiladi?",
-        answer: "Kreativ industriyalar parki 2025 yil 26 martdagi UP-61-sonli Prezident Farmoni bilan tashkil etilgan. Rezidentlar uchun soliq va moliyaviy imtiyozlar 2025 yil 1 maydan kuchga kirgan va 2031 yil 1 yanvargacha amal qilishi qonuniy jihatdan belgilangan. Biroq soliq imtiyozlarining amaliy tatbiq etilishi uchun O'zbekiston Respublikasi Soliq kodeksiga tegishli o'zgartishlar kiritilishi talab etiladi, ular farmon sanasida hali kutilmoqda edi.",
+        answer: "Kreativ industriyalar parki 2025 yil 26 martdagi PF-61-sonli Prezident Farmoni bilan tashkil etilgan. Rezidentlar uchun soliq va moliyaviy imtiyozlar 2025 yil 1 maydan kuchga kirgan va 2031 yil 1 yanvargacha amal qilishi qonuniy jihatdan belgilangan. Biroq soliq imtiyozlarining amaliy tatbiq etilishi uchun O'zbekiston Respublikasi Soliq kodeksiga tegishli o'zgartishlar kiritilishi talab etiladi, ular farmon sanasida hali kutilmoqda edi.",
       },
       {
         question: "O'zbekistonning Kreativ industriyalar parki soliq imtiyozlari hozirda kuchda bo'lgan?",

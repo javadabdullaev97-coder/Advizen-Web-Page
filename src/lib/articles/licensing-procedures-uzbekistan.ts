@@ -2,13 +2,13 @@ import type { LocalizedArticle } from "../publications";
 
 const article: Record<string, LocalizedArticle> = {
   en: {
-    subtitle: "A practical guide to Uzbekistan's unified licensing, permitting, and notification framework under Law No. ЗРУ-701.",
+    subtitle: "A practical guide to Uzbekistan's unified licensing, permitting, and notification framework under Law No. ZRU-701.",
     author: "Advizen Legal Practice",
     readTime: "8 min read",
     content: [
       {
         type: "p" as const,
-        text: "Uzbekistan consolidated its rules on business authorisation into a single Law No. ЗРУ-701 dated 14 July 2021 \"On Licensing, Permitting and Notification Procedures\". The law establishes three distinct tracks — licensing, permitting documents, and notifications — and moves the entire process onto a unified electronic platform called the \"License\" system (license.gov.uz).",
+        text: "Uzbekistan consolidated its rules on business authorisation into a single Law No. ZRU-701 dated 14 July 2021 \"On Licensing, Permitting and Notification Procedures\". The law establishes three distinct tracks — licensing, permitting documents, and notifications — and moves the entire process onto a unified electronic platform called the \"License\" system (license.gov.uz).",
       },
       { type: "h2" as const, text: "Three Tracks at a Glance" },
       {
@@ -112,7 +112,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "What are the three authorisation tracks for businesses in Uzbekistan?",
-        answer: "Law No. ЗРУ-701 establishes three tracks: (1) Licensing — required for activities that could harm public health, safety, or the environment without restriction, listed in Appendix 1; (2) Permitting documents — a lighter authorisation for Appendix 2 activities, requiring advance approval under simpler conditions; (3) Notifications — the most flexible track, where you notify the relevant authority before starting with no approval needed, covering activities in Appendix 3. All applications are filed electronically via the License system (license.gov.uz) or the EPAGU portal with a digital signature.",
+        answer: "Law No. ZRU-701 establishes three tracks: (1) Licensing — required for activities that could harm public health, safety, or the environment without restriction, listed in Appendix 1; (2) Permitting documents — a lighter authorisation for Appendix 2 activities, requiring advance approval under simpler conditions; (3) Notifications — the most flexible track, where you notify the relevant authority before starting with no approval needed, covering activities in Appendix 3. All applications are filed electronically via the License system (license.gov.uz) or the EPAGU portal with a digital signature.",
       },
       {
         question: "How long does it take to obtain a licence or permitting document in Uzbekistan?",
@@ -256,13 +256,13 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "O'zbekistonda ЗРУ-701-sonli Qonun asosidagi yagona litsenziyalash, ruxsat berish va xabardor qilish tartibi bo'yicha amaliy qo'llanma.",
+    subtitle: "O'zbekistonda OʻRQ-701-sonli Qonun asosidagi yagona litsenziyalash, ruxsat berish va xabardor qilish tartibi bo'yicha amaliy qo'llanma.",
     author: "Advizen Legal Practice",
     readTime: "8 daqiqa o'qish",
     content: [
       {
         type: "p" as const,
-        text: "O'zbekiston biznes-avtorizatsiya qoidalarini 2021 yil 14 iyuldagi «Litsenziyalash, ruxsat berish va xabardor qilish tartibi to'g'risida»gi ЗРУ-701-sonli yagona Qonunda birlashtirdi. Qonun uchta alohida yo'nalish — litsenziyalash, ruxsat hujjatlari va xabarnomalar — ni belgilab, butun jarayonni «Litsenziya» deb nomlangan yagona elektron platformaga (license.gov.uz) o'tkazadi.",
+        text: "O'zbekiston biznes-avtorizatsiya qoidalarini 2021 yil 14 iyuldagi «Litsenziyalash, ruxsat berish va xabardor qilish tartibi to'g'risida»gi OʻRQ-701-sonli yagona Qonunda birlashtirdi. Qonun uchta alohida yo'nalish — litsenziyalash, ruxsat hujjatlari va xabarnomalar — ni belgilab, butun jarayonni «Litsenziya» deb nomlangan yagona elektron platformaga (license.gov.uz) o'tkazadi.",
       },
       { type: "h2" as const, text: "Uch yo'nalishga umumiy nazar" },
       {
@@ -366,7 +366,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "O'zbekistondagi biznes uchun qanday uchta avtorizatsiya yo'nalishi mavjud?",
-        answer: "ЗРУ-701-sonli Qonun uchta yo'nalishni belgilaydi: (1) Litsenziyalash — cheklovlarsiz amalga oshirilishi sog'liq, xavfsizlik yoki atrof-muhitga zarar etkazishi mumkin bo'lgan faoliyat turlari uchun majburiy (1-ilova); (2) Ruxsat hujjatlari — 2-ilovadagi faoliyat turlari uchun yengilroq avtorizatsiya shakli, oldindan tasdiqlashni talab qiladi; (3) Xabarnomalar — eng moslashuvchan yo'nalish: faoliyatni boshlamasdan oldin organni xabardor qiling — tasdiqlash talab etilmaydi (3-ilova). Barcha arizalar «Litsenziya» tizimi (license.gov.uz) yoki EPAGU portali orqali elektron raqamli imzo bilan taqdim etiladi.",
+        answer: "OʻRQ-701-sonli Qonun uchta yo'nalishni belgilaydi: (1) Litsenziyalash — cheklovlarsiz amalga oshirilishi sog'liq, xavfsizlik yoki atrof-muhitga zarar etkazishi mumkin bo'lgan faoliyat turlari uchun majburiy (1-ilova); (2) Ruxsat hujjatlari — 2-ilovadagi faoliyat turlari uchun yengilroq avtorizatsiya shakli, oldindan tasdiqlashni talab qiladi; (3) Xabarnomalar — eng moslashuvchan yo'nalish: faoliyatni boshlamasdan oldin organni xabardor qiling — tasdiqlash talab etilmaydi (3-ilova). Barcha arizalar «Litsenziya» tizimi (license.gov.uz) yoki EPAGU portali orqali elektron raqamli imzo bilan taqdim etiladi.",
       },
       {
         question: "O'zbekistonda litsenziya yoki ruxsat hujjatini olish qancha vaqt oladi?",
