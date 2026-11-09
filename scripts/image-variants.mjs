@@ -35,7 +35,7 @@ for await (const file of walk(PUBLIC)) {
 
   const made = [];
   for (const w of WIDTHS) {
-    if (w >= width * 0.8) continue; // not worth a copy this close to the original
+    if (w >= width * 0.9) continue; // not worth a copy this close to the original
     const dest = path.join(OUT, String(w), rel);
     await mkdir(path.dirname(dest), { recursive: true });
     const info = await sharp(file).resize({ width: w }).webp({ quality: 78 }).toFile(dest);

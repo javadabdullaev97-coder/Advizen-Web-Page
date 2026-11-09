@@ -101,7 +101,7 @@ export default async function LegalPage({ doc }: { doc: LegalDoc }) {
               </li>
             </ol>
           </nav>
-          <h1 className="m-h1 mt-8 text-[40px] sm:text-[clamp(44px,5vw,68px)] max-w-[16ch] home-rise">{title}</h1>
+          <h1 className="m-h1 mt-8 text-[40px] sm:text-[clamp(44px,5vw,68px)] max-w-[16ch] break-words max-sm:hyphens-auto home-rise">{title}</h1>
           <p className="mt-5 max-w-[36em] text-[17px] sm:text-[19px] leading-[1.5] text-foreground-2 text-pretty home-rise">{t("subtitle")}</p>
           <p className="mt-4 text-[14px] text-muted home-rise">{tCommon("lastUpdated")}</p>
         </header>

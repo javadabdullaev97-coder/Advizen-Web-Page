@@ -35,9 +35,11 @@ function localizedUrl(path: string, locale: string): string {
 }
 
 function alternates(path: string): Record<string, string> {
-  return Object.fromEntries(
-    routing.locales.map((locale) => [locale, localizedUrl(path, locale)]),
-  );
+  return {
+    ...Object.fromEntries(routing.locales.map((locale) => [locale, localizedUrl(path, locale)])),
+    // Matches the x-default the pages themselves declare.
+    "x-default": localizedUrl(path, routing.defaultLocale),
+  };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {

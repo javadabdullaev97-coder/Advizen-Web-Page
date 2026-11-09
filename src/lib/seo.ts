@@ -440,7 +440,7 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
   },
   insights: {
     en: {
-      title: "Insights on Uzbekistan Business, Tax & Legal Updates | Advizen Consulting",
+      title: "Insights on Uzbekistan Business, Tax & Legal Updates | Advizen",
       description:
         "Expert analysis on tax, legal, finance, HR and regulatory developments in Uzbekistan and Central Asia from the Advizen Consulting advisory team.",
     },

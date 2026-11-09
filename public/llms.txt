@@ -59,6 +59,8 @@ Fifteen engagements led by Advizen advisers are on record (client names withheld
 - [Insights — Russian](https://www.advizenco.com/ru/insights): Статьи и аналитика на русском языке
 - [Insights — Uzbek](https://www.advizenco.com/uz/insights): Maqolalar va tahlillar oʻzbek tilida
 - [Contact](https://www.advizenco.com/contact): Schedule a consultation or get in touch
+- [Contact — Russian](https://www.advizenco.com/ru/contact): Контакты на русском языке
+- [Contact — Uzbek](https://www.advizenco.com/uz/contact): Bogʻlanish oʻzbek tilida
 
 ## Insights — Articles & Guides
 
@@ -90,3 +92,11 @@ Fifteen engagements led by Advizen advisers are on record (client names withheld
 - Entrepreneurs registering a company in Uzbekistan
 - Companies requiring EOR / payroll outsourcing in Central Asia
 - Fintech and crypto businesses seeking NAPP licensing guidance
+
+## Optional
+
+- [Full knowledge base](https://www.advizenco.com/llms-full.txt): every article in full, with FAQs
+- [Privacy policy](https://www.advizenco.com/privacy): how personal data is collected, used and protected
+- [Terms of use](https://www.advizenco.com/terms): terms governing the use of advizenco.com
+- [Cookie policy](https://www.advizenco.com/cookies): cookies and similar technologies on the site
+- [Disclaimer](https://www.advizenco.com/disclaimer): limits of the information published on the site

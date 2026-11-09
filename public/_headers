@@ -1,0 +1,27 @@
+# Cache rules for files served straight from Workers static assets (pages are served by the worker).
+# https://developers.cloudflare.com/workers/static-assets/headers
+# https://opennext.js.org/cloudflare/caching#static-assets-caching
+
+# Build output, including fonts: every file name carries a content hash.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Photos keep their names when replaced, so they are cached for 30 days rather than for good.
+/_img/*
+  Cache-Control: public, max-age=2592000
+/home/*
+  Cache-Control: public, max-age=2592000
+/Regions/*
+  Cache-Control: public, max-age=2592000
+/Sectors/*
+  Cache-Control: public, max-age=2592000
+/Articles%20Image/*
+  Cache-Control: public, max-age=2592000
+/Hero%20and%20CTA%20images/*
+  Cache-Control: public, max-age=2592000
+/Advizen%20Logo/*
+  Cache-Control: public, max-age=2592000
+/404.webp
+  Cache-Control: public, max-age=2592000
+/Logo.webp
+  Cache-Control: public, max-age=2592000

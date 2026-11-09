@@ -6,8 +6,9 @@ const HOST = "www.advizenco.com";
 const SITE_URL = "https://www.advizenco.com";
 
 export async function POST(req: Request) {
-  const { authorization } = Object.fromEntries(req.headers);
-  if (authorization !== `Bearer ${process.env.INDEXNOW_SECRET}`) {
+  const secret = process.env.INDEXNOW_SECRET;
+  // Without a configured secret the check would accept the literal "Bearer undefined".
+  if (!secret || req.headers.get("authorization") !== `Bearer ${secret}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
