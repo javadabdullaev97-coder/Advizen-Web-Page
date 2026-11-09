@@ -116,5 +116,117 @@
       "Mahalliy va xalqaro kompaniyalar uchun turli sohalarda to'liq ro'yxatga olish va sopravoditelnaya konsalting",
       "Qayta tiklanuvchi energetika, qazib olish, neft va gaz, FMCG va sanoat sohalarida soliq va yuridik due diligence"
     ]
+  },
+  "ExpertiseModern": {
+    "lede": "Yettita maslahat amaliyoti va yettita operatsion xizmat — bitta jamoa va bitta muvofiqlashtiruvchi hamkor, oʻzbek, rus yoki ingliz tilida.",
+    "advisory": {
+      "title": "Maslahat xizmatlari",
+      "lede": "Qarorni siz qabul qilasiz, biz soliq, huquq, buxgalteriya, kadrlar va bitimlar boʻyicha chuqur bilim beramiz."
+    },
+    "managed": {
+      "title": "Operatsion xizmatlar",
+      "lede": "Siz topshirasiz, biz bajaramiz: bitta shartnoma, bitta aloqa va barcha hisobotlar oʻz vaqtida.",
+      "unsure": "Qaysi biri kerakligini bilmayapsizmi?",
+      "talk": "Bizga yozing"
+    },
+    "sectors": {
+      "title": "Sohalar",
+      "lede": "Ichidan biladigan oltita soha: har birining oʻz litsenziyalari, imtiyozlari va xatarlari bor."
+    },
+    "work": {
+      "lede": "Portfelda oʻn beshta loyiha. Mijozlar nomi oshkor qilinmaydi; tafsilotlar NDA asosida soʻrov boʻyicha.",
+      "showAll": "Barcha 15 tasini koʻrsatish"
+    },
+    "more": "Batafsil",
+    "services": {
+      "tax": [
+        "Soliq konsaltingi",
+        "Rejalashtirish, QQS, transfer narxlar, tekshiruvlar va imtiyozlar."
+      ],
+      "legal": [
+        "Yuridik konsalting",
+        "Kompaniya tashkil etish, litsenziyalar, shartnomalar va boshqaruv."
+      ],
+      "finance": [
+        "Buxgalteriya",
+        "Hisob, MHXS va milliy standartlar, auditga tayyorgarlik."
+      ],
+      "hr": [
+        "HR xizmatlari",
+        "Xodim tanlash, HR autsorsing, audit va oʻqitish."
+      ],
+      "funding": [
+        "Moliyalashtirish va grantlar",
+        "Grantlar, investitsiyaga tayyorgarlik, biznes-rejalar."
+      ],
+      "ma-advisory": [
+        "M&A konsaltingi",
+        "Xaridor va sotuvchini qoʻllab-quvvatlash, tuzilma, baholash."
+      ],
+      "due-diligence": [
+        "Due diligence",
+        "Bitimdan oldin soliq, yuridik va moliyaviy tekshiruv."
+      ],
+      "entity-management": [
+        "Kompaniyani boshqarish",
+        "Buxgalteriya, hisobotlar, komplayens va ish haqi autsorsingda."
+      ],
+      "corporate": [
+        "Korporativ xizmatlar",
+        "Roʻyxatdan oʻtkazish, nominal direktor, yuridik manzil."
+      ],
+      "eor": [
+        "Employer of Record",
+        "Oʻz kompaniyangizni ochmasdan xodim yollash."
+      ],
+      "payroll": [
+        "Ish haqi hisob-kitobi",
+        "Oylik ish haqi, ushlab qolishlar va hisob varaqalari."
+      ],
+      "immigration": [
+        "Ishlash uchun ruxsatnomalar",
+        "Mehnat faoliyatini amalga oshirish huquqiga doir tasdiqnomalar, vizalar, yashash."
+      ],
+      "virtual-office": [
+        "Virtual ofis",
+        "Yuridik manzil, pochta va uchrashuv xonalari."
+      ],
+      "compliance": [
+        "Komplayens monitoringi",
+        "Hisobot kalendari, eslatmalar va oʻzgarishlarni kuzatish."
+      ]
+    },
+    "sectorList": [
+      [
+        "Moliyaviy xizmatlar",
+        "Banklar, fondlar, PE va raqamli aktiv operatorlari: litsenziyalar, fond tuzilmasi, transchegaraviy bitimlar."
+      ],
+      [
+        "Energetika va sanoat",
+        "Atom energetikasi, qayta tiklanuvchi energiya, neft va gaz, ogʻir sanoat: yirik loyihalar uchun soliq, bojxona va huquq."
+      ],
+      [
+        "Texnologiya va raqamli iqtisodiyot",
+        "IT kompaniyalar, fintech va telekom: soliq tuzilmasi, litsenziyalar, IT Park rezidentligi."
+      ],
+      [
+        "Koʻchmas mulk va infratuzilma",
+        "Developerlar, pudratchilar va investorlar: loyiha tuzilmasi, ruxsatnomalar, soliqlar."
+      ],
+      [
+        "Isteʼmol sektori",
+        "FMCG, chakana savdo, mehmonxonalar va media: bozorga kirish, kadrlar, ish haqi."
+      ],
+      [
+        "Sogʻliqni saqlash va ijtimoiy soha",
+        "Farma, klinikalar, maktablar va universitetlar: litsenziyalar va komplayens."
+      ]
+    ],
+    "disciplines": {
+      "Tax": "Soliq",
+      "Legal": "Huquq",
+      "Finance": "Moliya",
+      "HR": "HR"
+    }
   }
 }

@@ -1,5 +1,6 @@
+import { setRequestLocale } from "next-intl/server";
 import { pageBreadcrumbJsonLd, expertiseServicesJsonLd } from "@/lib/seo";
-import ExpertiseListingClient from "@/components/expertise/ExpertiseListingClient";
+import ExpertiseContent from "@/components/expertise/ExpertiseContent";
 
 export default async function ExpertisePage({
   params,
@@ -7,6 +8,7 @@ export default async function ExpertisePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const breadcrumb = pageBreadcrumbJsonLd("expertise", locale);
   const services = await expertiseServicesJsonLd(locale);
   return (
@@ -21,7 +23,7 @@ export default async function ExpertisePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(services) }}
       />
-      <ExpertiseListingClient />
+      <ExpertiseContent />
     </>
   );
 }

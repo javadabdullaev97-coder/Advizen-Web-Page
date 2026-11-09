@@ -182,5 +182,117 @@
       "End-to-end incorporation and registration advisory for both local and international companies across multiple industries",
       "Tax and legal due diligence across renewable energy, mining, oil & gas, FMCG, and manufacturing sectors"
     ]
+  },
+  "ExpertiseModern": {
+    "lede": "Seven advisory practices and seven managed services, run as one team and coordinated by one partner, in English, Russian or Uzbek.",
+    "advisory": {
+      "title": "Advisory services",
+      "lede": "You make the decisions; we bring the depth in tax, law, accounting, people and deals."
+    },
+    "managed": {
+      "title": "Managed services",
+      "lede": "You delegate, we run it: one contract, one point of contact, every filing on time.",
+      "unsure": "Not sure which you need?",
+      "talk": "Talk to us"
+    },
+    "sectors": {
+      "title": "Sectors",
+      "lede": "Six sectors we know from the inside, each with its own licences, incentives and traps."
+    },
+    "work": {
+      "lede": "Fifteen engagements on record. Client names withheld; details on request under NDA.",
+      "showAll": "Show all 15"
+    },
+    "more": "Learn more",
+    "services": {
+      "tax": [
+        "Tax consulting",
+        "Planning, VAT, transfer pricing, audits and incentives."
+      ],
+      "legal": [
+        "Legal advisory",
+        "Formation, licensing, contracts and governance."
+      ],
+      "finance": [
+        "Accounting",
+        "Bookkeeping, IFRS and national standards, audits."
+      ],
+      "hr": [
+        "Human resources",
+        "Recruitment, HR outsourcing, audits and training."
+      ],
+      "funding": [
+        "Funding and grants",
+        "Grants, investment readiness, business plans."
+      ],
+      "ma-advisory": [
+        "M&A advisory",
+        "Buy-side and sell-side, structuring, valuation."
+      ],
+      "due-diligence": [
+        "Due diligence",
+        "Tax, legal and financial review before you buy."
+      ],
+      "entity-management": [
+        "Entity management",
+        "Accounting, filings, compliance and payroll, outsourced."
+      ],
+      "corporate": [
+        "Corporate services",
+        "Formation, nominee director, registered address."
+      ],
+      "eor": [
+        "Employer of Record",
+        "Hire staff before you have an entity."
+      ],
+      "payroll": [
+        "Payroll bureau",
+        "Monthly payroll, withholding and payslips."
+      ],
+      "immigration": [
+        "Work permits and immigration",
+        "Right-to-work confirmations, visas, residency."
+      ],
+      "virtual-office": [
+        "Virtual office",
+        "Registered address, mail and meeting rooms."
+      ],
+      "compliance": [
+        "Compliance monitoring",
+        "Filing calendar, alerts and change tracking."
+      ]
+    },
+    "sectorList": [
+      [
+        "Financial services",
+        "Banks, funds, PE firms and digital-asset operators: licensing, fund structuring, cross-border deals."
+      ],
+      [
+        "Energy and industrials",
+        "Nuclear, renewables, oil and gas, heavy industry: tax, customs and legal advice for large projects."
+      ],
+      [
+        "Technology and digital",
+        "Tech companies, fintechs and telecoms: tax structuring, licensing, IT Park residency."
+      ],
+      [
+        "Real estate and infrastructure",
+        "Developers, contractors and investors: project structuring, permits, tax on large builds."
+      ],
+      [
+        "Consumer and lifestyle",
+        "FMCG, retail, hospitality and media: market entry, HR at scale, payroll."
+      ],
+      [
+        "Healthcare and social",
+        "Pharma, healthcare operators, schools and universities: licensing and compliance."
+      ]
+    ],
+    "disciplines": {
+      "Tax": "Tax",
+      "Legal": "Legal",
+      "Finance": "Finance",
+      "HR": "HR"
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { pageBreadcrumbJsonLd, expertiseServicesJsonLd } from "@/lib/seo";
-import ExpertiseListingClient from "@/components/expertise/ExpertiseListingClient";
+import ExpertiseContent from "@/components/expertise/ExpertiseContent";
 
 export default async function ExpertisePage() {
   const breadcrumb = pageBreadcrumbJsonLd("expertise", "en");
@@ -16,7 +16,7 @@ export default async function ExpertisePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(services) }}
       />
-      <ExpertiseListingClient />
+      <ExpertiseContent />
     </>
   );
 }
