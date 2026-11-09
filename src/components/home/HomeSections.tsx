@@ -122,7 +122,7 @@ export function HomeServices() {
       <div data-reveal className="grid gap-4 md:grid-cols-6 max-sm:gap-0">
         <Link
           href="/expertise/tax"
-          className="group home-light m-tile md:col-span-6 grid gap-7 lg:grid-cols-2 lg:gap-12 lg:items-center p-8 lg:p-11 pr-16 transition-colors duration-200 hover:bg-[#232325] active:scale-[.985] max-sm:mb-3"
+          className="group m-tile md:col-span-6 grid gap-7 lg:grid-cols-2 lg:gap-12 lg:items-center p-8 lg:p-11 pr-16 transition-colors duration-200 hover:bg-[#232325] active:scale-[.985] max-sm:mb-3"
         >
           <div>
             <h3 className="text-[30px] lg:text-[clamp(30px,2.8vw,40px)] font-semibold leading-[1.1] tracking-[-0.03em] text-foreground-hi">{t("tax.title")}</h3>
@@ -141,7 +141,7 @@ export function HomeServices() {
           <Link
             key={s.key}
             href={s.href}
-            className={`group home-light relative bg-surface transition-colors duration-200 hover:bg-[#232325] active:scale-[.985] sm:rounded-[var(--radius-tile)] sm:min-h-[210px] sm:p-8 sm:pb-16 ${i < 3 ? "md:col-span-2" : "md:col-span-3"} max-sm:py-5 max-sm:pl-6 max-sm:pr-16 ${i === 0 ? "max-sm:rounded-t-[var(--radius-tile)]" : "max-sm:border-t max-sm:border-line"} ${i === small.length - 1 ? "max-sm:rounded-b-[var(--radius-tile)]" : ""}`}
+            className={`group relative bg-surface transition-colors duration-200 hover:bg-[#232325] active:scale-[.985] sm:rounded-[var(--radius-tile)] sm:min-h-[210px] sm:p-8 sm:pb-16 ${i < 3 ? "md:col-span-2" : "md:col-span-3"} max-sm:py-5 max-sm:pl-6 max-sm:pr-16 ${i === 0 ? "max-sm:rounded-t-[var(--radius-tile)]" : "max-sm:border-t max-sm:border-line"} ${i === small.length - 1 ? "max-sm:rounded-b-[var(--radius-tile)]" : ""}`}
           >
             <h3 className="text-[19px] sm:text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-foreground-hi sm:pr-11">{t(`${s.key}.title`)}</h3>
             <p className="mt-1 sm:mt-2.5 text-[15px] sm:text-[16px] leading-[1.55] text-foreground-2 max-w-[30em]">{t(`${s.key}.text`)}</p>
@@ -170,7 +170,7 @@ export function HomeInsights() {
         <Link href="/insights" className="m-more">{t("all")}</Link>
       </div>
 
-      <div data-reveal data-tilt className="group home-light m-tile grid gap-8 sm:grid-cols-[minmax(0,1fr)_minmax(0,.55fr)] items-center p-7 sm:p-10 lg:px-14 lg:py-12 overflow-hidden">
+      <div data-reveal data-tilt className="group m-tile grid gap-8 sm:grid-cols-[minmax(0,1fr)_minmax(0,.55fr)] items-center p-7 sm:p-10 lg:px-14 lg:py-12 overflow-hidden">
         <div>
           <p className="text-[14px] text-muted">{t("guideMeta")}</p>
           <h3 className="mt-3 text-[30px] lg:text-[clamp(30px,3vw,44px)] font-semibold leading-[1.05] tracking-[-0.035em] text-foreground-hi">{t("guideTitle")}</h3>

@@ -254,16 +254,6 @@ select:-webkit-autofill:focus {
 }
 .home-mask { display: inline-block; overflow: hidden; vertical-align: bottom; line-height: .95; }
 
-/* A soft light that follows a fine pointer across a tile (HomeReveal sets --x and --y) */
-.home-light { position: relative; }
-@media (hover: hover) and (pointer: fine) {
-  .home-light::before {
-    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
-    background: radial-gradient(440px circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, .07), transparent 60%);
-  }
-  .home-light:hover::before { opacity: 1; }
-}
-
 /* The guide cover leans toward the pointer and lifts on hover */
 .home-cover { transform: perspective(900px) rotate(-3deg) rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)); }
 @media (hover: hover) and (pointer: fine) {

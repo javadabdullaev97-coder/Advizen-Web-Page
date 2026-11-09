@@ -4,8 +4,7 @@ import { useEffect } from "react";
 
 /* The homepage's small motion layer; globals.css does the visual part.
    - [data-reveal] blocks are marked shown the first time they scroll into view.
-   - .home-light tiles get the pointer position for their soft light, and
-     [data-tilt] cards also lean toward it (fine pointers only).
+   - [data-tilt] cards lean toward a fine pointer.
    - The hero photo drifts at 15% of the scroll speed on wider screens. */
 export default function HomeReveal() {
   useEffect(() => {
@@ -25,17 +24,13 @@ export default function HomeReveal() {
     const cleanups: (() => void)[] = [() => io.disconnect()];
 
     if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
-      document.querySelectorAll<HTMLElement>(".home-light").forEach((el) => {
+      document.querySelectorAll<HTMLElement>("[data-tilt]").forEach((el) => {
         const move = (e: PointerEvent) => {
           const r = el.getBoundingClientRect();
           const x = e.clientX - r.left;
           const y = e.clientY - r.top;
-          el.style.setProperty("--x", `${x}px`);
-          el.style.setProperty("--y", `${y}px`);
-          if (el.hasAttribute("data-tilt")) {
-            el.style.setProperty("--ry", `${(x / r.width - 0.5) * 10}deg`);
-            el.style.setProperty("--rx", `${(0.5 - y / r.height) * 8}deg`);
-          }
+          el.style.setProperty("--ry", `${(x / r.width - 0.5) * 10}deg`);
+          el.style.setProperty("--rx", `${(0.5 - y / r.height) * 8}deg`);
         };
         const leave = () => {
           el.style.setProperty("--ry", "0deg");
