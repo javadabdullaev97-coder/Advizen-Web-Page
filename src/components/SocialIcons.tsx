@@ -24,7 +24,7 @@ const socials: SocialLink[] = [
   },
   {
     name: "Telegram",
-    href: "https://t.me/advizen_consulting",
+    href: "https://t.me/advizen",
     color: "#0088CC",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
