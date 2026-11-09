@@ -46,7 +46,7 @@ export default function Footer() {
         <div className="border-t border-line py-16 grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,4fr)] lg:gap-10">
           <div>
             <div className="flex items-center gap-2">
-              <Image src="/Logo.webp" alt="Advizen" width={35} height={35} style={{ width: "auto", height: "30px" }} />
+              <Image src="/Logo.webp" alt="" width={35} height={35} style={{ width: "auto", height: "30px" }} />
               <span style={{ fontFamily: "var(--font-hero), sans-serif", fontSize: "22px", fontWeight: 500, letterSpacing: "0.12em", lineHeight: 1, color: "var(--foreground-hi)" }}>
                 ADVIZEN
               </span>

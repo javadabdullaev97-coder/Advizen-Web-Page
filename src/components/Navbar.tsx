@@ -60,7 +60,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 shrink-0" onClick={() => setMobileOpen(false)}>
           <Image
             src="/Logo.webp"
-            alt="Advizen"
+            alt=""
             width={35}
             height={35}
             preload
