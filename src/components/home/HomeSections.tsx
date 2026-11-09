@@ -47,8 +47,12 @@ export function HomeHero() {
   );
 }
 
-// Three headline figures, then three more engagements as quiet rows.
-const FIG_IDX = [0, 1, 13];
+// Three headline figures with photos, then three more engagements as quiet rows.
+const FIGS = [
+  { idx: 0, photo: "/home/track-nuclear.webp" },
+  { idx: 1, photo: "/home/track-energy.webp" },
+  { idx: 13, photo: "/home/track-companies.webp" },
+];
 const ROW_IDX = [2, 3, 10];
 
 export function HomeTrackRecord() {
@@ -61,8 +65,11 @@ export function HomeTrackRecord() {
     <section className="m-wrap py-28 lg:py-40">
       <SectionHead title={t("title")} lede={t("lede")} />
       <ul className="grid gap-10 md:grid-cols-3">
-        {FIG_IDX.map((idx, i) => (
-          <li key={idx} data-reveal style={delay(i * 0.08)} className="border-t border-line pt-7">
+        {FIGS.map(({ idx, photo }, i) => (
+          <li key={idx} data-reveal style={delay(i * 0.08)}>
+            <div className="relative aspect-[16/10] rounded-[18px] overflow-hidden bg-surface mb-8">
+              <Image src={photo} alt="" fill unoptimized sizes="(max-width: 767px) 100vw, 33vw" className="object-cover" />
+            </div>
             <span className="m-fig block text-[72px] lg:text-[clamp(72px,8vw,116px)] tracking-[-0.05em] leading-[.95]">{metric(idx)}</span>
             <p className="mt-5 text-[16px] lg:text-[17px] leading-[1.55] text-foreground-2 max-w-[24em]">{tEng(`headlines.${idx}`)}</p>
             <p className="mt-2 text-[14px] text-muted">{caption(idx)}</p>
