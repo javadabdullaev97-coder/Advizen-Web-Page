@@ -2,6 +2,8 @@
   "Services": {
     "tax": {
       "title": "Tax Consulting",
+      "whoFor": "Foreign-invested companies, holding structures, and cross-border operators navigating Uzbekistan's fiscal complexity.",
+      "whoForItems": ["Foreign-invested companies", "Holding structures", "Cross-border operators"],
       "description": "Our tax practice navigates Uzbekistan's evolving fiscal landscape with precision — designing structures that optimise your position while maintaining full regulatory compliance across cross-border transactions, local VAT obligations, and everything in between.",
       "capabilities": [
         "Tax planning & optimization",
@@ -16,6 +18,7 @@
     },
     "legal": {
       "title": "Legal Advisory",
+      "whoFor": "International businesses entering Uzbekistan, M&A counterparties, and companies requiring regulatory clearances.",
       "description": "Our legal team provides end-to-end counsel for businesses operating in Uzbekistan — from entity formation and contract architecture to regulatory compliance and corporate structuring — protecting your interests with the rigour that complex, multi-jurisdictional operations demand.",
       "capabilities": [
         "Company formation & licensing",
@@ -29,6 +32,7 @@
     },
     "finance": {
       "title": "Accounting",
+      "whoFor": "Foreign subsidiaries needing IFRS-compliant reporting, investor-ready financials, or audit-prepared books.",
       "description": "We deliver full-cycle financial management — precise bookkeeping, transparent reporting, and strategic advisory that transforms your numbers into actionable intelligence, with full compliance across National Accounting Standards and IFRS.",
       "capabilities": [
         "Bookkeeping & accounting",
@@ -43,6 +47,7 @@
     },
     "hr": {
       "title": "Human Resources",
+      "whoFor": "Growing businesses requiring compliant HR infrastructure, executive hiring, or workforce compliance reviews.",
       "description": "Our HR advisory practice covers the strategic and compliance dimensions of human capital — from organisational design and executive search to HR audits and labour law guidance — advising on the frameworks that underpin a compliant, high-performing workforce in Uzbekistan.",
       "capabilities": [
         "Recruitment & executive search",
@@ -56,6 +61,7 @@
     },
     "funding": {
       "title": "Funding & Grants",
+      "whoFor": "Startups seeking grants, companies preparing for investment rounds, and businesses applying for state incentives.",
       "description": "We guide businesses through the landscape of available funding — grants, investment readiness, donor engagement, and financial structuring for growth — drawing on deep relationships across the institutional funding ecosystem in Central Asia.",
       "capabilities": [
         "Grant identification & applications",
@@ -70,6 +76,7 @@
     },
     "ma-advisory": {
       "title": "M&A Advisory",
+      "whoFor": "Strategic acquirers, PE funds, and founders seeking M&A transactions in Uzbekistan and Central Asia.",
       "description": "Our M&A practice guides buyers and sellers through every stage of a transaction in Uzbekistan — from structuring and due diligence to negotiation and post-deal integration — with a track record spanning $250M+ deals across FMCG, fintech, energy, and manufacturing.",
       "capabilities": [
         "Buy-side & sell-side advisory",
@@ -84,6 +91,7 @@
     },
     "due-diligence": {
       "title": "Due Diligence",
+      "whoFor": "Buyers, lenders, and investors requiring independent risk assessment before a transaction closes.",
       "description": "Our due diligence practice provides comprehensive tax, legal, and financial assessment of Uzbek targets — giving acquirers, investors, and lenders a clear picture of what they are buying, with 30+ engagements completed across energy, mining, FMCG, and manufacturing.",
       "capabilities": [
         "Tax due diligence",
@@ -98,6 +106,7 @@
     },
     "entity-management": {
       "title": "Entity Management",
+      "whoFor": "Foreign companies that need a complete operational presence in Uzbekistan without building an in-house management team.",
       "description1": "For foreign companies that want a full presence in Uzbekistan without building an internal team, we take complete operational control — acting as your on-the-ground management layer across accounting, tax, legal, and HR.",
       "description2": "One contract, one point of contact, full compliance. Everything your entity needs to operate correctly and efficiently.",
       "capabilities": [
@@ -113,6 +122,7 @@
     },
     "corporate": {
       "title": "Corporate Services",
+      "whoFor": "International businesses establishing or maintaining a legal presence in Uzbekistan — from incorporation to ongoing secretarial administration.",
       "description1": "We handle the full lifecycle of your corporate presence in Uzbekistan — from incorporation and ongoing administration to nominal services that let foreign companies operate without a physical footprint.",
       "description2": "Our corporate services team manages the paperwork, deadlines, and compliance so you can focus on your business.",
       "capabilities": [
@@ -127,6 +137,7 @@
     },
     "eor": {
       "title": "Employer of Record",
+      "whoFor": "International companies that want to hire staff in Uzbekistan immediately, without first incorporating a local entity.",
       "description1": "We become the legal employer for your staff in Uzbekistan — handling all employment contracts, payroll, tax withholding, and statutory compliance while your team works entirely for you.",
       "description2": "EOR is the fastest way to build a local presence without the cost and complexity of entity formation.",
       "capabilities": [
@@ -141,6 +152,7 @@
     },
     "payroll": {
       "title": "Payroll Bureau",
+      "whoFor": "Companies with Uzbekistan-based employees that need accurate, fully compliant payroll processing every cycle.",
       "description1": "We handle the complete payroll cycle for your Uzbekistan workforce — calculation, withholding, reporting, and payment — with full compliance with local tax and labour law.",
       "description2": "Whether you have 5 or 500 employees, our payroll bureau runs accurately and on time, every month.",
       "capabilities": [
@@ -156,6 +168,7 @@
     },
     "immigration": {
       "title": "Work Permits & Immigration",
+      "whoFor": "Foreign nationals relocating to Uzbekistan for work, and the international companies employing them.",
       "description1": "We manage the full cycle of work permit applications, visa support, and immigration compliance for foreign nationals working in Uzbekistan — removing complexity and reducing processing time.",
       "description2": "From initial application to renewal and exit, our team handles every interaction with the relevant authorities on your behalf.",
       "capabilities": [
@@ -171,6 +184,7 @@
     },
     "virtual-office": {
       "title": "Virtual Office",
+      "whoFor": "Overseas companies exploring the Uzbekistan market, or businesses that need a registered address without committing to physical office space.",
       "description1": "Establish a credible Uzbekistan address for your business without committing to physical space. Our virtual office service provides a registered address, mail handling, and access to meeting facilities when you need them.",
       "description2": "Ideal for companies exploring the market, managing compliance obligations, or running a lean local presence.",
       "capabilities": [
@@ -184,6 +198,7 @@
     },
     "compliance": {
       "title": "Compliance Monitoring",
+      "whoFor": "Entities that need continuous assurance their Uzbekistan operations are meeting every regulatory, tax, and filing obligation.",
       "description1": "Uzbekistan's regulatory environment evolves rapidly. Our compliance monitoring service tracks filing deadlines, legislative changes, and reporting obligations across tax, legal, and corporate — keeping your entity permanently in good standing.",
       "description2": "We operate as your regulatory early-warning system, flagging what matters before it becomes a problem.",
       "capabilities": [
@@ -197,5 +212,47 @@
         "Proactive risk flagging"
       ]
     }
+  },
+  "ServicePage": {
+    "breadcrumb": "Breadcrumb",
+    "heading": "{title} in Uzbekistan",
+    "keyFigures": {
+      "title": "Key figures",
+      "caption": "Main tax rates",
+      "note": "Rates as of 2026, Tax Code of Uzbekistan.",
+      "items": [
+        {
+          "label": "Corporate profit tax",
+          "value": "15%",
+          "source": "Tax Code, Art. 337"
+        },
+        {
+          "label": "Value added tax",
+          "value": "12%",
+          "source": "Tax Code, Art. 258"
+        },
+        {
+          "label": "Personal income tax",
+          "value": "12%",
+          "source": "Tax Code, Art. 381"
+        },
+        {
+          "label": "Social tax",
+          "value": "12%",
+          "source": "Tax Code, Art. 405"
+        }
+      ]
+    },
+    "whoFor": "Who this is for",
+    "capabilities": "What we do",
+    "selectedWork": "Selected work",
+    "viewAll": "View all projects",
+    "faqTitle": "Frequently asked questions",
+    "relatedServices": "Related services",
+    "allServices": "All services",
+    "relatedReading": "Related reading",
+    "allInsights": "All insights",
+    "ctaTitle": "Ready to discuss {title}?",
+    "ctaBody": "Our team is available to scope your engagement and answer initial questions."
   }
 }

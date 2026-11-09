@@ -2,6 +2,8 @@
   "Services": {
     "tax": {
       "title": "Soliq konsaltingi",
+      "whoFor": "Oʻzbekistonning murakkab soliq tizimida faoliyat yuritayotgan xorijiy investitsiyali korxonalar, xolding tuzilmalari va transchegaraviy operatorlar.",
+      "whoForItems": ["Xorijiy investitsiyali korxonalar", "Xolding tuzilmalari", "Transchegaraviy operatorlar"],
       "description": "Bizning soliq amaliyotimiz O'zbekistonning rivojlanayotgan fiskal muhitida aniq harakat qiladi — chegaralararo bitimlar, mahalliy QQS majburiyatlari va boshqa barcha jihatlar bo'yicha to'liq me'yoriy muvofiqlikni saqlagan holda pozitsiyangizni optimallashtiradigan tuzilmalarni ishlab chiqadi.",
       "capabilities": [
         "Soliq rejalashtirish va optimallashtirish",
@@ -16,6 +18,7 @@
     },
     "legal": {
       "title": "Yuridik konsalting",
+      "whoFor": "Oʻzbekiston bozoriga kirayotgan xalqaro kompaniyalar, M&A bitimlari tomonlari va regulyator ruxsatnomalari kerak boʻlgan kompaniyalar.",
       "description": "Yuridik jamoamiz O'zbekistonda faoliyat yurituvchi biznesga to'liq qamrovli maslahat beradi — kompaniya ro'yxatga olishdan tortib shartnomalar arxitekturasi, me'yoriy muvofiqlik va korporativ tuzilishgacha — manfaatlaringizni murakkab ko'p yurisdiksiyali operatsiyalar talab qiladigan qattiqlik bilan himoya qiladi.",
       "capabilities": [
         "Kompaniya ro'yxatga olish va litsenziyalash",
@@ -29,6 +32,7 @@
     },
     "finance": {
       "title": "Buxgalteriya hisobi",
+      "whoFor": "MHXS boʻyicha hisobot, investorlar uchun moliyaviy hisobot yoki auditga tayyor buxgalteriya hisobi kerak boʻlgan xorijiy shoʻba kompaniyalar.",
       "description": "Biz to'liq tsiklli moliyaviy boshqaruvni taqdim etamiz — aniq buxgalteriya, shaffof hisobot va strategik konsalting raqamlaringizni amaliy ma'lumotlarga aylantiradi, MHHM va MHHS bo'yicha to'liq muvofiqlikda.",
       "capabilities": [
         "Buxgalteriya va hisob",
@@ -43,6 +47,7 @@
     },
     "hr": {
       "title": "HR xizmatlari",
+      "whoFor": "Qonunga muvofiq HR tizimi, rahbar xodimlarni yollash yoki mehnat qonunchiligiga rioya etilishini tekshirish kerak boʻlgan oʻsib borayotgan kompaniyalar.",
       "description": "Bizning HR amaliyotimiz inson kapitalining strategik va muvofiqlik tomonlarini qamrab oladi — tashkiliy dizayn va rahbar izlashdan tortib HR auditlari va mehnat huquqi bo'yicha maslahatgacha — O'zbekistonda muvofiq va yuqori samarali jamoa uchun asoslar bo'yicha maslahat beradi.",
       "capabilities": [
         "Ishga olish va executive search",
@@ -56,6 +61,7 @@
     },
     "funding": {
       "title": "Moliyalashtirish va grantlar",
+      "whoFor": "Grant izlayotgan startaplar, investitsiya raundlariga tayyorlanayotgan kompaniyalar va davlat imtiyozlariga ariza berayotgan korxonalar.",
       "description": "Biz kompaniyalarga mavjud moliyalashtirish manbalari bo'yicha yo'l ko'rsatamiz — grantlar, investitsiyalarga tayyorlik, donorlar bilan ishlash va o'sish uchun moliyaviy tuzilish — Markaziy Osiyodagi institutsional moliyalashtirish ekotizimida chuqur aloqalarga tayanib.",
       "capabilities": [
         "Grantlarni topish va arizalar",
@@ -70,6 +76,7 @@
     },
     "ma-advisory": {
       "title": "M&A konsaltingi",
+      "whoFor": "Oʻzbekiston va Markaziy Osiyoda M&A bitimlarini rejalashtirayotgan strategik xaridorlar, toʻgʻridan-toʻgʻri investitsiya fondlari va asoschilar.",
       "description": "Bizning M&A amaliyotimiz xaridorlar va sotuvchilarni O'zbekistondagi bitimning barcha bosqichlarida kuzatib boradi — tuzilish va due diligence dan tortib muzokaralar va bitimdan keyingi integratsiyagacha — FMCG, fintex, energetika va sanoat sohalarida $250M+ bitimlar tajribasi bilan.",
       "capabilities": [
         "Buy-side va sell-side konsalting",
@@ -84,6 +91,7 @@
     },
     "due-diligence": {
       "title": "Due Diligence",
+      "whoFor": "Bitim yopilishidan oldin risklarni mustaqil baholash kerak boʻlgan xaridorlar, kreditorlar va investorlar.",
       "description": "Bizning due diligence amaliyotimiz O'zbek obyektlarini har tomonlama soliq, yuridik va moliyaviy baholash bilan ta'minlaydi — xaridorlar, investorlar va kreditorlarga sotib olayotgan narsalarining aniq manzarasini beradi, energetika, qazib olish, FMCG va sanoatda 30+ tugatilgan loyihalar bilan.",
       "capabilities": [
         "Soliq due diligence",
@@ -98,6 +106,7 @@
     },
     "entity-management": {
       "title": "Kompaniyalarni boshqarish",
+      "whoFor": "Oʻz boshqaruv jamoasini tuzmasdan Oʻzbekistonda toʻliq faoliyat yuritmoqchi boʻlgan xorijiy kompaniyalar.",
       "description1": "O'zbekistonda ichki jamoa qurmasdan to'liq mavjudlikni xohlovchi xorijiy kompaniyalar uchun biz to'liq operatsion nazoratni o'z zimmamizga olamiz — buxgalteriya, soliq, huquq va HR sohalarida sizning joydagi boshqaruv qatlamingiz sifatida harakat qilamiz.",
       "description2": "Bitta shartnoma, bitta aloqa nuqtasi, to'liq muvofiqlik. Kompaniyangizga to'g'ri va samarali ishlash uchun zarur bo'lgan barcha narsa.",
       "capabilities": [
@@ -113,6 +122,7 @@
     },
     "corporate": {
       "title": "Korporativ xizmatlar",
+      "whoFor": "Oʻzbekistonda yuridik shaxs ochayotgan yoki uni yuritayotgan xalqaro kompaniyalar: roʻyxatdan oʻtkazishdan tortib doimiy korporativ kotiblik xizmatigacha.",
       "description1": "Biz O'zbekistondagi korporativ mavjudligingizning to'liq tsiklini boshqaramiz — tashkil etishdan davom etayotgan ma'muriyatgacha va xorijiy kompaniyalarga jismoniy mavjudliksiz ishlashga imkon beradigan nominal xizmatlargacha.",
       "description2": "Bizning korporativ xizmatlar jamoasi hujjatlarni, muddatlarni va muvofiqlikni boshqaradi, shunda siz biznesingizga e'tibor qaratishingiz mumkin.",
       "capabilities": [
@@ -127,6 +137,7 @@
     },
     "eor": {
       "title": "Employer of Record",
+      "whoFor": "Avval mahalliy yuridik shaxs ochmasdan, Oʻzbekistonda darhol xodim yollamoqchi boʻlgan xalqaro kompaniyalar.",
       "description1": "Biz O'zbekistondagi xodimlaringiz uchun yuridik ish beruvchiga aylanamiz — barcha mehnat shartnomalari, payroll, soliqlarni ushlab qolish va qonuniy muvofiqlikni boshqaramiz, jamoangiz esa to'liq sizning uchun ishlaydi.",
       "description2": "EOR — kompaniya ro'yxatdan o'tkazishning xarajatlari va murakkabligisiz mahalliy mavjudlik yaratishning eng tezkor usuli.",
       "capabilities": [
@@ -141,6 +152,7 @@
     },
     "payroll": {
       "title": "Payroll byurosi",
+      "whoFor": "Oʻzbekistonda xodimlari bor va har oy ish haqini aniq hamda qonunga toʻliq muvofiq hisoblashi kerak boʻlgan kompaniyalar.",
       "description1": "Biz O'zbekistondagi xodimlaringiz uchun to'liq ish haqi tsiklini boshqaramiz — hisoblash, ushlab qolishlar, hisobot va to'lovlar — mahalliy soliq va mehnat qonunchiligiga to'liq muvofiq.",
       "description2": "Sizda 5 yoki 500 xodim bo'lsa ham, bizning payroll byuromiz har oy aniq va o'z vaqtida ishlaydi.",
       "capabilities": [
@@ -156,6 +168,7 @@
     },
     "immigration": {
       "title": "Mehnat ruxsatnomalari va immigratsiya",
+      "whoFor": "Ishlash uchun Oʻzbekistonga koʻchib kelayotgan xorijiy fuqarolar va ularni ishga olayotgan xalqaro kompaniyalar.",
       "description1": "Biz O'zbekistonda ishlayotgan xorijiy fuqarolar uchun mehnat ruxsatnomalari, viza qo'llab-quvvatlash va immigratsion muvofiqlikning to'liq tsiklini boshqaramiz — murakkablikni bartaraf etib va qayta ishlash vaqtini qisqartiramiz.",
       "description2": "Birinchi arizadan yangilash va chiqishgacha bizning jamoamiz tegishli organlar bilan barcha o'zaro aloqalarni siz nomingizdan boshqaradi.",
       "capabilities": [
@@ -171,6 +184,7 @@
     },
     "virtual-office": {
       "title": "Virtual ofis",
+      "whoFor": "Oʻzbekiston bozorini oʻrganayotgan xorijiy kompaniyalar yoki ofis ijaraga olmasdan yuridik manzilga ega boʻlmoqchi boʻlgan korxonalar.",
       "description1": "Jismoniy joyni ijaraga olmasdan biznesingiz uchun O'zbekistonda ishonchli manzil yarating. Bizning virtual ofis xizmatimiz ro'yxatga olingan manzil, pochta qabul qilish va kerak bo'lganda yig'ilish xonalariga kirishni ta'minlaydi.",
       "description2": "Bozorni o'rganayotgan, muvofiqlik majburiyatlarini boshqarayotgan yoki kichik mahalliy mavjudlikni saqlayotgan kompaniyalar uchun ideal.",
       "capabilities": [
@@ -184,6 +198,7 @@
     },
     "compliance": {
       "title": "Muvofiqlik monitoringi",
+      "whoFor": "Oʻzbekistondagi faoliyati barcha regulyator, soliq va hisobot talablariga doimo javob berishiga ishonch hosil qilmoqchi boʻlgan kompaniyalar.",
       "description1": "O'zbekistonning me'yoriy muhiti tez rivojlanmoqda. Bizning muvofiqlik monitoringi xizmatimiz hisobot topshirish muddatlarini, qonunchilik o'zgarishlarini va soliq, huquqiy va korporativ sohalardagi hisobot majburiyatlarini kuzatib boradi — kompaniyangizni doimiy ravishda yaxshi holatda saqlaydi.",
       "description2": "Biz sizning me'yoriy erta ogohlantirish tizimingiz sifatida ishlaymiz, muammoga aylanishidan oldin muhim narsalarni belgilaymiz.",
       "capabilities": [
@@ -197,5 +212,47 @@
         "Faol risklarni belgilash"
       ]
     }
+  },
+  "ServicePage": {
+    "breadcrumb": "Navigatsiya zanjiri",
+    "heading": "Oʻzbekistonda {title}",
+    "keyFigures": {
+      "title": "Asosiy koʻrsatkichlar",
+      "caption": "Asosiy soliq stavkalari",
+      "note": "Stavkalar 2026-yil holatiga, Oʻzbekiston Respublikasi Soliq kodeksi.",
+      "items": [
+        {
+          "label": "Foyda soligʻi",
+          "value": "15%",
+          "source": "Soliq kodeksi, 337-modda"
+        },
+        {
+          "label": "Qoʻshilgan qiymat soligʻi",
+          "value": "12%",
+          "source": "Soliq kodeksi, 258-modda"
+        },
+        {
+          "label": "Jismoniy shaxslarning daromad soligʻi",
+          "value": "12%",
+          "source": "Soliq kodeksi, 381-modda"
+        },
+        {
+          "label": "Ijtimoiy soliq",
+          "value": "12%",
+          "source": "Soliq kodeksi, 405-modda"
+        }
+      ]
+    },
+    "whoFor": "Bu xizmat kim uchun",
+    "capabilities": "Biz nima qilamiz",
+    "selectedWork": "Tanlangan loyihalar",
+    "viewAll": "Barcha loyihalar",
+    "faqTitle": "Koʻp soʻraladigan savollar",
+    "relatedServices": "Bogʻliq xizmatlar",
+    "allServices": "Barcha xizmatlar",
+    "relatedReading": "Mavzuga oid maqolalar",
+    "allInsights": "Barcha maqolalar",
+    "ctaTitle": "{title}: muhokama qilishga tayyormisiz?",
+    "ctaBody": "Jamoamiz ish hajmini belgilash va savollaringizga javob berishga tayyor."
   }
 }

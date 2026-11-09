@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllServiceSlugs, getServiceBySlug } from "@/lib/services";
 import { servicePageMetadata, serviceJsonLd, servicePageBreadcrumbJsonLd } from "@/lib/seo";
-import ServiceDetailClient from "@/components/expertise/ServiceDetailClient";
+import ServicePageContent from "@/components/expertise/ServicePageContent";
 
 export const dynamicParams = false;
 
@@ -44,7 +44,7 @@ export default async function ServicePage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ServiceDetailClient slug={slug} />
+      <ServicePageContent slug={slug} locale="en" />
     </>
   );
 }

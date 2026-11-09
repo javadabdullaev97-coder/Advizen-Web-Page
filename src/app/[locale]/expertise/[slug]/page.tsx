@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import { getAllServiceSlugs, getServiceBySlug } from "@/lib/services";
 import { servicePageMetadata, serviceJsonLd, servicePageBreadcrumbJsonLd } from "@/lib/seo";
-import ServiceDetailClient from "@/components/expertise/ServiceDetailClient";
+import ServicePageContent from "@/components/expertise/ServicePageContent";
 
 export const dynamicParams = false;
 
@@ -27,6 +28,7 @@ export default async function ServicePage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   if (!getServiceBySlug(slug)) notFound();
 
   const jsonLd = await serviceJsonLd(slug, locale);
@@ -46,7 +48,7 @@ export default async function ServicePage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ServiceDetailClient slug={slug} />
+      <ServicePageContent slug={slug} locale={locale} />
     </>
   );
 }
