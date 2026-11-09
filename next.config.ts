@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
   // The document store and its terms of sale were retired; their URLs point to the closest pages.
   async redirects() {
     return [
+      // English has no prefix, so /en would otherwise serve a second copy of the English pages.
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/en/:path*", destination: "/:path*", permanent: true },
       { source: "/store/:path*", destination: "/expertise/legal", permanent: true },
       { source: "/:locale(ru|uz)/store/:path*", destination: "/:locale/expertise/legal", permanent: true },
       { source: "/terms-of-sale", destination: "/terms", permanent: true },
