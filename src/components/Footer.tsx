@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="py-6 border-t border-line flex flex-wrap justify-between gap-3 text-sm text-muted-dark">
-          <p>&copy; {new Date().getFullYear()} Advizen Consulting LLC. {t("rights")}</p>
+          <p>&copy; 2024 Advizen Consulting LLC. {t("rights")}</p>
           <p>{t("tashkent")}</p>
         </div>
       </div>
