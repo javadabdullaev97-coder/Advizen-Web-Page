@@ -2,16 +2,35 @@
   "ArticlePage": {
     "back": "Tahlillar",
     "contents": "Mundarija",
-    "ourServices": "Bizning xizmatlar",
-    "pages": "{count} sahifa",
-    "freeAccess": "{count} sahifa — Bepul kirish",
-    "downloadPdf": "PDF yuklab olish",
-    "downloadFullPdf": "To'liq PDF yuklab olish",
-    "previous": "Oldingi",
-    "next": "Keyingi",
-    "ctaHeading": "Ekspert maslahati kerakmi?",
-    "ctaDescription": "Bizning konsalting jamoamiz O'zbekistonda ishlash murakkabliklarida sizga yordam berishga tayyor.",
-    "ctaButton": "Bog'lanish"
+    "breadcrumb": "Navigatsiya zanjiri",
+    "published": "Chop etilgan: {date}",
+    "inShort": "Qisqacha",
+    "faqTitle": "Koʻp beriladigan savollar",
+    "related": "Oʻxshash maqolalar",
+    "allInsights": "Barcha tahlillar",
+    "telegram": "Telegramda yozish",
+    "cta": {
+      "Tax": {
+        "title": "Soliq boʻyicha savollaringiz bormi?",
+        "text": "Soliq amaliyotimiz ushbu qoidalar biznesingizga qanday taʼsir qilishini baholab, keyingi qadamlarni taklif qiladi.",
+        "button": "Soliq konsaltingi"
+      },
+      "Legal": {
+        "title": "Yuridik maslahat kerakmi?",
+        "text": "Yuridik amaliyotimiz ushbu qoidalar tuzilmangizga qanday taʼsir qilishini baholab, keyingi qadamlarni taklif qiladi.",
+        "button": "Yuridik konsalting"
+      },
+      "HR": {
+        "title": "Oʻzbekistonda xodim yollayapsizmi?",
+        "text": "HR amaliyotimiz ushbu qoidalar jamoangizga qanday taʼsir qilishini baholab, keyingi qadamlarni taklif qiladi.",
+        "button": "HR xizmatlari"
+      },
+      "Advisory": {
+        "title": "Ushbu mavzu boʻyicha maslahat kerakmi?",
+        "text": "Maslahatchilarimiz ushbu qoidalar biznesingizga qanday taʼsir qilishini baholab, keyingi qadamlarni taklif qiladi.",
+        "button": "Barcha yoʻnalishlar"
+      }
+    }
   },
   "Publications": {
     "tags": {
@@ -108,10 +127,7 @@
   "InsightsModern": {
     "hero": {
       "title": "Oʻzbekiston soliqlari, huquqi va biznesi boʻyicha maqolalar va qoʻllanmalar",
-      "lede": "Soliq, huquq, buxgalteriya va HR boʻyicha maslahatchilarimiz yozgan sharhlar va amaliy qoʻllanmalar. Bepul oʻqish mumkin.",
-      "metaPublications": "nashr",
-      "metaAreas": "amaliyot yoʻnalishi",
-      "metaLatest": "soʻnggi yangilanish"
+      "lede": "Soliq, huquq, buxgalteriya va HR boʻyicha maslahatchilarimiz yozgan sharhlar va amaliy qoʻllanmalar. Bepul oʻqish mumkin."
     },
     "guide": {
       "meta": "Asosiy qoʻllanma · 2026 nashri",
@@ -126,24 +142,15 @@
         "Kompaniyani roʻyxatdan oʻtkazish amaliyoti"
       ],
       "cta": "Qoʻllanmani soʻrash",
-      "facts": "{pages} sahifa · {languages} tillarida",
-      "languages": {
-        "en": "ingliz",
-        "ru": "rus",
-        "uz": "oʻzbek"
-      },
-      "and": "va",
       "coverAlt": "Doing Business in Uzbekistan qoʻllanmasining muqovasi, 2026 nashri"
     },
     "latest": {
       "title": "Soʻnggi nashr",
       "badge": "Yangi",
-      "read": "Sharhni oʻqish",
-      "pages": "{count} sahifa"
+      "read": "Sharhni oʻqish"
     },
     "all": {
       "title": "Barcha nashrlar",
-      "count": "{count} ta maqola",
       "filterLabel": "Yoʻnalish boʻyicha saralash",
       "all": "Barchasi",
       "search": "Maqolalarni qidirish",
@@ -152,7 +159,6 @@
       "emptyQueryIn": "“{category}” boʻlimida “{query}” boʻyicha maqola topilmadi.",
       "emptyCategory": "Bu boʻlimda hozircha maqola yoʻq.",
       "clear": "Filtrlarni tozalash",
-      "showing": "{total} tadan {shown} tasi koʻrsatilgan",
       "more": "Yana koʻrsatish"
     },
     "cta": {

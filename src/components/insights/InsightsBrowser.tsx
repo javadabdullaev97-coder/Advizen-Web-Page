@@ -83,9 +83,6 @@ export default function InsightsBrowser({
     <>
       <div data-reveal className="flex flex-wrap justify-between items-baseline gap-x-6 gap-y-4 mb-7">
         <h2 className="m-h2 text-[32px] lg:text-[clamp(32px,3.2vw,44px)] leading-[1.08]">{t("title")}</h2>
-        <span className="text-[14px] text-muted" aria-live="polite">
-          {total > 0 ? t("count", { count: total }) : ""}
-        </span>
       </div>
 
       <div className="flex flex-wrap justify-between items-center gap-4 pb-7 mb-7 sm:mb-10 border-b border-line max-sm:flex-col max-sm:items-stretch">
@@ -103,7 +100,6 @@ export default function InsightsBrowser({
                 }`}
               >
                 {c.label}
-                <small className={`text-[13px] tabular-nums ${on ? "text-[#55555a]" : "text-muted"}`}>{c.count}</small>
               </button>
             );
           })}
@@ -197,13 +193,6 @@ export default function InsightsBrowser({
         </div>
       ) : (
         <div className="mt-14 max-sm:mt-9 flex flex-col items-center gap-4">
-          <span aria-hidden className="block w-[200px] h-[3px] rounded-[3px] bg-white/10 overflow-hidden">
-            <span
-              className="block h-full rounded-[inherit] bg-foreground-2 transition-[width] duration-[400ms] ease-[var(--ease-out)]"
-              style={{ width: `${(visible / total) * 100}%` }}
-            />
-          </span>
-          <span className="text-[14px] text-muted">{t("showing", { shown: visible, total })}</span>
           {visible < total && (
             <button
               type="button"

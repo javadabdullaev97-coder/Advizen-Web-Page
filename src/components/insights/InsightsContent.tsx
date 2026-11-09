@@ -11,7 +11,6 @@ const UZ_MONTHS = ["yan", "fev", "mar", "apr", "may", "iyn", "iyl", "avg", "sen"
 const CATEGORIES = ["Advisory", "Tax", "Legal", "HR"];
 
 // The flagship guide is not an article; it is sent on request.
-const FLAGSHIP = { pages: 148, languages: ["en", "ru"] as const };
 
 const delay = (d: number) => ({ "--d": `${d}s` }) as CSSProperties;
 
@@ -43,15 +42,7 @@ export default function InsightsContent() {
     count: pubs.filter((p) => p.category === c).length,
   }));
 
-  const langs = FLAGSHIP.languages.map((l) => t(`guide.languages.${l}`));
-  const languages = langs.length > 1 ? `${langs.slice(0, -1).join(", ")} ${t("guide.and")} ${langs[langs.length - 1]}` : langs[0];
   const chapters = t.raw("guide.chapters") as string[];
-
-  const meta = [
-    { fig: String(pubs.length), label: t("hero.metaPublications", { count: pubs.length }) },
-    { fig: String(categories.length), label: t("hero.metaAreas", { count: categories.length }) },
-    ...(latest?.date ? [{ fig: fmtDate(latest.date), label: t("hero.metaLatest") }] : []),
-  ];
 
   return (
     <>
@@ -72,14 +63,6 @@ export default function InsightsContent() {
           <h1 className="m-h1 text-[44px] sm:text-[56px] lg:text-[clamp(56px,5.8vw,84px)] max-w-[15ch] home-rise">{t("hero.title")}</h1>
           <p className="mt-[22px] text-[18px] lg:text-[20px] leading-[1.5] text-foreground max-w-[32em] text-pretty home-rise" style={delay(0.08)}>
             {t("hero.lede")}
-          </p>
-          <p className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-[15px] text-foreground-2 home-rise" style={delay(0.16)}>
-            {meta.map((m) => (
-              <span key={m.label}>
-                <b className="font-semibold text-foreground-hi mr-1.5">{m.fig}</b>
-                {m.label}
-              </span>
-            ))}
           </p>
         </div>
       </section>
@@ -103,7 +86,6 @@ export default function InsightsContent() {
             </ol>
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-4">
               <Link href="/contact" className="m-btn m-btn-p max-sm:w-full">{t("guide.cta")}</Link>
-              <span className="text-[14px] text-muted">{t("guide.facts", { pages: FLAGSHIP.pages, languages })}</span>
             </div>
           </div>
           <Image
@@ -152,7 +134,6 @@ export default function InsightsContent() {
               <p className="mt-3.5 text-[16px] leading-[1.55] text-foreground-2 max-w-[34em]">{tPub(`items.${latest.slug}.description`)}</p>
               <div className="mt-auto pt-7 flex flex-wrap justify-between items-center gap-4">
                 <span className="m-more">{t("latest.read")}</span>
-                <span className="text-[14px] text-muted">{t("latest.pages", { count: latest.pages })}</span>
               </div>
             </div>
           </Link>

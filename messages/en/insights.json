@@ -2,16 +2,35 @@
   "ArticlePage": {
     "back": "Insights",
     "contents": "Contents",
-    "ourServices": "Our Services",
-    "pages": "{count} pages",
-    "freeAccess": "{count} pages — Free access",
-    "downloadPdf": "Download PDF",
-    "downloadFullPdf": "Download the full PDF",
-    "previous": "Previous",
-    "next": "Next",
-    "ctaHeading": "Need expert guidance?",
-    "ctaDescription": "Our advisory team is ready to help you navigate the complexities of operating in Uzbekistan.",
-    "ctaButton": "Get in touch"
+    "breadcrumb": "Breadcrumb",
+    "published": "Published {date}",
+    "inShort": "In short",
+    "faqTitle": "Frequently asked questions",
+    "related": "Related articles",
+    "allInsights": "All insights",
+    "telegram": "Message us on Telegram",
+    "cta": {
+      "Tax": {
+        "title": "Questions about your tax position?",
+        "text": "Our tax practice can review how these rules apply to your business and what to do next.",
+        "button": "Explore tax consulting"
+      },
+      "Legal": {
+        "title": "Need legal advice on this?",
+        "text": "Our legal practice can assess how these rules apply to your structure and what to do next.",
+        "button": "Explore legal advisory"
+      },
+      "HR": {
+        "title": "Employing people in Uzbekistan?",
+        "text": "Our HR practice can review how these rules apply to your team and what to do next.",
+        "button": "Explore HR services"
+      },
+      "Advisory": {
+        "title": "Need advice on this topic?",
+        "text": "Our advisers can review how these rules apply to your business and what to do next.",
+        "button": "Explore our expertise"
+      }
+    }
   },
   "Publications": {
     "tags": {
@@ -108,10 +127,7 @@
   "InsightsModern": {
     "hero": {
       "title": "Articles and guides on Uzbek tax, law and business",
-      "lede": "Briefings and practical guides written by our tax, legal, accounting and HR advisers. Free to read.",
-      "metaPublications": "{count, plural, one {publication} other {publications}}",
-      "metaAreas": "{count, plural, one {practice area} other {practice areas}}",
-      "metaLatest": "latest update"
+      "lede": "Briefings and practical guides written by our tax, legal, accounting and HR advisers. Free to read."
     },
     "guide": {
       "meta": "Flagship guide · 2026 edition",
@@ -126,24 +142,15 @@
         "Company registration in practice"
       ],
       "cta": "Request the guide",
-      "facts": "{pages} pages · {languages}",
-      "languages": {
-        "en": "English",
-        "ru": "Russian",
-        "uz": "Uzbek"
-      },
-      "and": "and",
       "coverAlt": "Cover of Doing Business in Uzbekistan, 2026 edition"
     },
     "latest": {
       "title": "Latest",
       "badge": "New",
-      "read": "Read the briefing",
-      "pages": "{count, plural, one {# page} other {# pages}}"
+      "read": "Read the briefing"
     },
     "all": {
       "title": "All publications",
-      "count": "{count, plural, one {# article} other {# articles}}",
       "filterLabel": "Filter by category",
       "all": "All",
       "search": "Search articles",
@@ -152,7 +159,6 @@
       "emptyQueryIn": "No articles match “{query}” in {category}.",
       "emptyCategory": "No articles in this category yet.",
       "clear": "Clear filters",
-      "showing": "Showing {shown} of {total}",
       "more": "Show more"
     },
     "cta": {
