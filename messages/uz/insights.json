@@ -3,7 +3,7 @@
     "back": "Tahlillar",
     "contents": "Mundarija",
     "breadcrumb": "Navigatsiya zanjiri",
-    "published": "Chop etilgan: {date}",
+    "published": "Chop etilgan: <time>{date}</time>",
     "inShort": "Qisqacha",
     "faqTitle": "Koʻp beriladigan savollar",
     "related": "Oʻxshash maqolalar",

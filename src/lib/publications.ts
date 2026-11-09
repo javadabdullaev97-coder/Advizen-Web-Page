@@ -34,10 +34,17 @@ export interface ArticleHowTo {
   steps: ArticleHowToStep[];
 }
 
+/** Key facts shown above an article body. Fill only with facts stated in the article itself. */
+export interface ArticleInShort {
+  figures: { value: string; label: string }[];
+  points: string[];
+}
+
 export interface LocalizedArticle {
   subtitle?: string;
   author?: string;
   readTime?: string;
+  inShort?: ArticleInShort;
   content: ArticleContentBlock[];
   faq?: ArticleFaqItem[];
   howTo?: ArticleHowTo;
@@ -47,6 +54,7 @@ export interface PublicationArticle extends Publication {
   subtitle?: string;
   author?: string;
   readTime?: string;
+  inShort?: ArticleInShort;
   content: ArticleContentBlock[];
   faq?: ArticleFaqItem[];
   howTo?: ArticleHowTo;

@@ -6,6 +6,20 @@ const article: Record<string, LocalizedArticle> = {
       "A neutral analysis of Constitutional Law No. ZRU-1158 of 13 July 2026 establishing the Tashkent International Financial Centre — its legal architecture, tax regime, operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.",
     author: "Advizen Legal Practice",
     readTime: "16 min read",
+    inShort: {
+      figures: [
+        { value: "ZRU-1158", label: "Constitutional Law establishing TIFC, signed on 13 July 2026" },
+        { value: "1 Jan 2076", label: "End date of the profit tax and social tax exemptions" },
+        { value: "EUR 750m", label: "Group revenue at which the exemption is switched off and a top-up tax at 15% applies" },
+        { value: "12 months", label: "For TIFC bodies to adopt the founding resolutions, extendable by up to six" },
+      ],
+      points: [
+        "TIFC is not a special economic zone. It has its own legal regime, its own regulator and its own court, and its decisions prevail over conflicting national law inside the centre.",
+        "Where TIFC rules are silent, the common law and equity of England and Wales apply.",
+        "Foreign employees whose principal place of work is the centre need no Uzbek work permit, and national currency-control requirements do not apply to participants’ currency operations within the centre, unless a TIFC resolution provides otherwise.",
+        "The law is in force, but the centre is not yet operational. The detailed tax, currency and residency rules will follow in TIFC resolutions.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -287,6 +301,20 @@ const article: Record<string, LocalizedArticle> = {
       "Нейтральный анализ Конституционного закона № ЗРУ-1158 от 13 июля 2026 года об учреждении Ташкентского международного финансового центра — его правовая архитектура, налоговый режим, операционный режим и сравнение с DIFC, ADGM, AIFC и QFC.",
     author: "Advizen Legal Practice",
     readTime: "16 мин чтения",
+    inShort: {
+      figures: [
+        { value: "ЗРУ-1158", label: "Конституционный закон об учреждении ТМФЦ, подписан 13 июля 2026 года" },
+        { value: "1 января 2076", label: "Дата окончания освобождения от налога на прибыль и социального налога" },
+        { value: "750 млн евро", label: "Доход группы, при котором освобождение не применяется и взимается минимальный налог по ставке 15%" },
+        { value: "12 месяцев", label: "На принятие органами ТМФЦ основополагающих решений, с продлением до шести месяцев" },
+      ],
+      points: [
+        "ТМФЦ — не свободная экономическая зона. У него собственный правовой режим, собственный регулятор и собственный суд, а его решения в пределах центра имеют приоритет над противоречащим национальным законодательством.",
+        "Там, где правила ТМФЦ не дают ответа, применяются общее право и право справедливости Англии и Уэльса.",
+        "Иностранным сотрудникам, для которых центр является основным местом работы, не нужно узбекское разрешение на работу, а требования национального валютного контроля не применяются к валютным операциям участников в пределах центра, если решение ТМФЦ не предусматривает иное.",
+        "Закон вступил в силу, но центр ещё не действует. Детальные правила по налогам, валюте и резидентности будут установлены решениями ТМФЦ.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -568,6 +596,20 @@ const article: Record<string, LocalizedArticle> = {
       "Toshkent xalqaro moliya markazini tashkil etuvchi 2026 yil 13 iyuldagi OʻRQ-1158-sonli Konstitutsiyaviy qonunning neytral tahlili — uning huquqiy arxitekturasi, soliq rejimi, operatsion rejimi hamda DIFC, ADGM, AIFC va QFC bilan taqqoslash.",
     author: "Advizen Legal Practice",
     readTime: "16 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "OʻRQ-1158", label: "TXMMni tashkil etuvchi Konstitutsiyaviy qonun, 2026-yil 13-iyulda imzolangan" },
+        { value: "2076-yil 1-yanvar", label: "Foyda soligʻi va ijtimoiy soliq boʻyicha ozod etishlarning tugash sanasi" },
+        { value: "750 mln yevro", label: "Guruh daromadi, undan boshlab ozod etish qoʻllanilmaydi va 15% stavkada minimal soliq undiriladi" },
+        { value: "12 oy", label: "TXMM organlari asosiy qarorlarni qabul qilishi uchun, olti oygacha uzaytirilishi mumkin" },
+      ],
+      points: [
+        "TXMM erkin iqtisodiy zona emas. Uning oʻz huquqiy rejimi, oʻz regulyatori va oʻz sudi bor, markaz doirasida esa uning qarorlari milliy qonunchilikning zid qoidalaridan ustun turadi.",
+        "TXMM qoidalari javob bermagan hollarda Angliya va Uelsning umumiy huquqi va adolat huquqi qoʻllaniladi.",
+        "Asosiy ish joyi markaz boʻlgan chet el xodimlariga oʻzbek mehnat ruxsatnomasi kerak emas, milliy valyuta nazorati talablari esa ishtirokchilarning markaz doirasidagi valyuta operatsiyalariga nisbatan qoʻllanilmaydi, agar TXMM qarorida boshqacha tartib nazarda tutilmagan boʻlsa.",
+        "Qonun kuchga kirgan, biroq markaz hali ishlamaydi. Soliq, valyuta va rezidentlik boʻyicha batafsil qoidalar TXMM qarorlarida belgilanadi.",
+      ],
+    },
     content: [
       {
         type: "p" as const,

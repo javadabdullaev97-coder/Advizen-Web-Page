@@ -81,7 +81,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
+        <div className="hidden xl:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -96,7 +96,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden lg:flex items-center gap-5 ml-auto">
+        <div className="hidden xl:flex items-center gap-5 ml-auto">
           <LanguageSwitcher />
           <Link href="/contact" className="m-btn m-btn-p" style={{ height: 44, padding: "0 20px" }}>
             {t("book")}
@@ -104,7 +104,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="lg:hidden ml-auto w-11 h-11 flex items-center justify-center text-foreground-hi cursor-pointer"
+          className="xl:hidden ml-auto w-11 h-11 flex items-center justify-center text-foreground-hi cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
@@ -114,7 +114,7 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-background m-wrap pt-6 pb-10 flex flex-col overflow-y-auto">
+        <div className="xl:hidden fixed inset-x-0 top-20 bottom-0 bg-background m-wrap pt-6 pb-10 flex flex-col overflow-y-auto">
           <ul className="flex flex-col">
             {navLinks.map((link) => (
               <li key={link.href}>

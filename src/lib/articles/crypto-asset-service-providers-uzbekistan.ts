@@ -18,10 +18,10 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Crypto exchange (крипто-биржа) — an electronic platform for buying, selling, and/or exchanging crypto-assets.",
-          "Mining pool (майнинг-пул) — a platform that consolidates computing power for the mining process.",
-          "Crypto depository (крипто-депозитарий) — a platform providing issuance, primary placement, and custody of crypto-assets.",
-          "Crypto shop (крипто-магазин) — a platform for the purchase and/or sale of crypto-assets.",
+          "Crypto exchange — an electronic platform for buying, selling, and/or exchanging crypto-assets.",
+          "Mining pool — a platform that consolidates computing power for the mining process.",
+          "Crypto depository — a platform providing issuance, primary placement, and custody of crypto-assets.",
+          "Crypto shop — a platform for the purchase and/or sale of crypto-assets.",
         ],
       },
       {

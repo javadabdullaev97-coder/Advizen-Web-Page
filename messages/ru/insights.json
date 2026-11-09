@@ -3,7 +3,7 @@
     "back": "Аналитика",
     "contents": "Содержание",
     "breadcrumb": "Навигационная цепочка",
-    "published": "Опубликовано {date}",
+    "published": "Опубликовано <time>{date}</time>",
     "inShort": "Коротко",
     "faqTitle": "Часто задаваемые вопросы",
     "related": "Похожие публикации",

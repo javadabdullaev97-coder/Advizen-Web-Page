@@ -3,7 +3,7 @@
     "back": "Insights",
     "contents": "Contents",
     "breadcrumb": "Breadcrumb",
-    "published": "Published {date}",
+    "published": "Published <time>{date}</time>",
     "inShort": "In short",
     "faqTitle": "Frequently asked questions",
     "related": "Related articles",
