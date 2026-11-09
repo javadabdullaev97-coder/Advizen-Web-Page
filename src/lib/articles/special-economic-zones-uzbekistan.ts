@@ -314,9 +314,9 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "O'zbekiston maxsus iqtisodiy zonalari ishtirokchilari uchun mavjud soliq, bojxona, huquqiy va valyuta imtiyozlari bo'yicha tizimli qo'llanma.",
+    subtitle: "Oʻzbekiston maxsus iqtisodiy zonalari ishtirokchilari uchun mavjud soliq, bojxona, huquqiy va valyuta imtiyozlari boʻyicha tizimli qoʻllanma.",
     author: "Advizen Legal Practice",
-    readTime: "7 daqiqa o'qish",
+    readTime: "7 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "604-sonli Qonun", label: "2020-yil 17-fevraldagi «Maxsus iqtisodiy zonalar toʻgʻrisida»gi Qonun" },
@@ -334,24 +334,24 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "Maxsus iqtisodiy zonalar (MIZ) — investitsiyalarni jalb qilish va iqtisodiy o'sishni rag'batlantirish uchun yaratilgan maxsus huquqiy rejim asosida faoliyat yuritadigan belgilangan hududlardir. Ishtirokchilar soliq imtiyozlari, bojxona imtiyozlari, huquqiy kafolatlar va valyuta erkinliklarining keng to'plamidan foydalanadilar. O'zbekiston bir nechta MIZ turlarini tan oladi, ularning har birining o'z tartibga soluvchi tizimi va tarmoq yo'nalishi mavjud.",
+        text: "Maxsus iqtisodiy zonalar (MIZ) — investitsiyalarni jalb qilish va iqtisodiy oʻsishni ragʻbatlantirish uchun yaratilgan maxsus huquqiy rejim asosida faoliyat yuritadigan belgilangan hududlardir. Ishtirokchilar soliq imtiyozlari, bojxona imtiyozlari, huquqiy kafolatlar va valyuta erkinliklarining keng toʻplamidan foydalanadilar. Oʻzbekiston bir nechta MIZ turlarini tan oladi, ularning har birining oʻz tartibga soluvchi tizimi va tarmoq yoʻnalishi mavjud.",
       },
       { type: "h2" as const, text: "Qonunchilik bazasi" },
       {
         type: "ul" as const,
         items: [
-          "O'zbekiston Respublikasi Bojxona kodeksi",
-          "O'zbekiston Respublikasi Soliq kodeksi",
-          "2020 yil 17 fevraldagi «Maxsus iqtisodiy zonalar to'g'risida»gi 604-sonli Qonun",
-          "2021 yil 14 sentabrdagi «MIZ ishtirokchilarini yanada qo'llab-quvvatlash chora-tadbirlari to'g'risida»gi PQ-5243-sonli Prezident Qarori",
-          "2018 yil 21 dekabrdagi «Erkin iqtisodiy zonalarni muvofiqlashtirish va boshqarish tizimini yanada takomillashtirish to'g'risida»gi PF-5600-sonli Prezident Farmoni",
-          "2022 yil 13 iyundagi «Maxsus iqtisodiy, kichik sanoat, yoshlar sanoat va tadbirkorlik zonalarining samaradorligini oshirish bo'yicha qo'shimcha chora-tadbirlar to'g'risida»gi PF-153-sonli Prezident Farmoni",
+          "Oʻzbekiston Respublikasi Bojxona kodeksi",
+          "Oʻzbekiston Respublikasi Soliq kodeksi",
+          "2020 yil 17 fevraldagi «Maxsus iqtisodiy zonalar toʻgʻrisida»gi 604-sonli Qonun",
+          "2021 yil 14 sentabrdagi «MIZ ishtirokchilarini yanada qoʻllab-quvvatlash chora-tadbirlari toʻgʻrisida»gi PQ-5243-sonli Prezident Qarori",
+          "2018 yil 21 dekabrdagi «Erkin iqtisodiy zonalarni muvofiqlashtirish va boshqarish tizimini yanada takomillashtirish toʻgʻrisida»gi PF-5600-sonli Prezident Farmoni",
+          "2022 yil 13 iyundagi «Maxsus iqtisodiy, kichik sanoat, yoshlar sanoat va tadbirkorlik zonalarining samaradorligini oshirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisida»gi PF-153-sonli Prezident Farmoni",
         ],
       },
       { type: "h2" as const, text: "Maxsus iqtisodiy zonalar turlari" },
       {
         type: "p" as const,
-        text: "Maxsus iqtisodiy zona — mintaqaning jadal ijtimoiy-iqtisodiy rivojlanishi uchun xorijiy va ichki investitsiyalarni, ilg'or texnologiyalarni va boshqaruv tajribasini jalb qilish maqsadida yaratilgan, belgilangan chegaralari va maxsus huquqiy rejimi mavjud hududdir. MIZlar quyidagi shakllarda tashkil etilishi mumkin:",
+        text: "Maxsus iqtisodiy zona — mintaqaning jadal ijtimoiy-iqtisodiy rivojlanishi uchun xorijiy va ichki investitsiyalarni, ilgʻor texnologiyalarni va boshqaruv tajribasini jalb qilish maqsadida yaratilgan, belgilangan chegaralari va maxsus huquqiy rejimi mavjud hududdir. MIZlar quyidagi shakllarda tashkil etilishi mumkin:",
       },
       {
         type: "ul" as const,
@@ -366,39 +366,39 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Maxsus huquqiy rejim" },
       {
         type: "p" as const,
-        text: "MIZ ishtirokchilari qonun hujjatlarida nazarda tutilgan huquqiy himoya kafolatlari, imtiyozlar va afzalliklarga haqlidirlar. Soliq qonunchiligi o'zgarganda ishtirokchilar — imtiyozlar muddati davomida, lekin o'n yildan ko'p bo'lmagan holda — MIZ reestriga ro'yxatdan o'tgan sanada amal qilgan soliq stavkalari va to'lov shartlarini qo'llashda davom etishlari mumkin. Ushbu barqarorlik kafolati aksiz tovarlarga nisbatan qo'llanilmaydi.",
+        text: "MIZ ishtirokchilari qonun hujjatlarida nazarda tutilgan huquqiy himoya kafolatlari, imtiyozlar va afzalliklarga haqlidirlar. Soliq qonunchiligi oʻzgarganda ishtirokchilar — imtiyozlar muddati davomida, lekin oʻn yildan koʻp boʻlmagan holda — MIZ reestriga roʻyxatdan oʻtgan sanada amal qilgan soliq stavkalari va toʻlov shartlarini qoʻllashda davom etishlari mumkin. Ushbu barqarorlik kafolati aksiz tovarlarga nisbatan qoʻllanilmaydi.",
       },
       {
         type: "p" as const,
-        text: "Ishtirokchilar eksport va import qilinadigan tovarlar uchun o'zlari uchun qulay to'lov shartlari va hisob-kitob shakllaridan foydalanishi mumkin. Qo'shimcha kafolatlar Prezident qarori bilan belgilanishi mumkin. Davlat organlari tomonidan asossiz aralashuv natijasida etkazilgan zararlar, boy berilgan foyda va ma'naviy zarar sud qarori bilan qoplanishga tortiladi.",
+        text: "Ishtirokchilar eksport va import qilinadigan tovarlar uchun oʻzlari uchun qulay toʻlov shartlari va hisob-kitob shakllaridan foydalanishi mumkin. Qoʻshimcha kafolatlar Prezident qarori bilan belgilanishi mumkin. Davlat organlari tomonidan asossiz aralashuv natijasida etkazilgan zararlar, boy berilgan foyda va maʼnaviy zarar sud qarori bilan qoplanishga tortiladi.",
       },
       { type: "h2" as const, text: "Maxsus bojxona rejimi" },
       {
         type: "p" as const,
-        text: "Maxsus bojxona rejimi bojxona to'lovlaridan vaqtincha ozod etish yoki ularni kamaytirishni, hamda eksport yoki importga nisbatan noitarif cheklovlarni bekor qilish yoki yumshatishni o'z ichiga olishi mumkin. Amalda MIZ ishtirokchilari quyidagi hollarda bojxona to'lovlaridan (QQS va bojxona rasmiylashtiruv yig'imlaridan tashqari) ozod qilingan:",
+        text: "Maxsus bojxona rejimi bojxona toʻlovlaridan vaqtincha ozod etish yoki ularni kamaytirishni, hamda eksport yoki importga nisbatan noitarif cheklovlarni bekor qilish yoki yumshatishni oʻz ichiga olishi mumkin. Amalda MIZ ishtirokchilari quyidagi hollarda bojxona toʻlovlaridan (QQS va bojxona rasmiylashtiruv yigʻimlaridan tashqari) ozod qilingan:",
       },
       {
         type: "ul" as const,
         items: [
-          "O'zbekistonda ishlab chiqarilmaydigan qurilish materiallarini investitsiya shartnomasi doirasida qurilish davrida olib kirishda.",
-          "Ichki muqobili bo'lmagan texnologik uskunalarni tasdiqlangan hukumat ro'yxati bo'yicha olib kirishda (bojxona rasmiylashtiruv yig'imlari saqlanib qoladi).",
-          "Eksportga mo'ljallangan mahsulotlar ishlab chiqarishda ishlatiladigan xom ashyo, komplektlovchilar va sarflanadigan materiallarni olib kirishda (bojxona rasmiylashtiruv yig'imlari saqlanib qoladi).",
+          "Oʻzbekistonda ishlab chiqarilmaydigan qurilish materiallarini investitsiya shartnomasi doirasida qurilish davrida olib kirishda.",
+          "Ichki muqobili boʻlmagan texnologik uskunalarni tasdiqlangan hukumat roʻyxati boʻyicha olib kirishda (bojxona rasmiylashtiruv yigʻimlari saqlanib qoladi).",
+          "Eksportga moʻljallangan mahsulotlar ishlab chiqarishda ishlatiladigan xom ashyo, komplektlovchilar va sarflanadigan materiallarni olib kirishda (bojxona rasmiylashtiruv yigʻimlari saqlanib qoladi).",
         ],
       },
       { type: "h2" as const, text: "Maxsus soliq rejimi" },
       {
         type: "p" as const,
-        text: "MIZ ishtirokchilari quyidagi soliq va majburiy to'lovlardan ozod etiladi:",
+        text: "MIZ ishtirokchilari quyidagi soliq va majburiy toʻlovlardan ozod etiladi:",
       },
       {
         type: "ul" as const,
         items: [
-          "Yer solig'i",
-          "Yuridik shaxslarning foyda solig'i",
-          "Yuridik shaxslarning mulk solig'i",
-          "Yagona soliq to'lovi (mikro va kichik korxonalarga qo'llaniladigan)",
-          "Vazirlar Mahkamasi huzuridagi Respublika yo'l fondiga majburiy ajratmalar",
-          "Moliya vazirligi huzuridagi Ta'lim va tibbiyot muassasalarini rivojlantirish byudjetdan tashqari fondiga majburiy ajratmalar",
+          "Yer soligʻi",
+          "Yuridik shaxslarning foyda soligʻi",
+          "Yuridik shaxslarning mulk soligʻi",
+          "Yagona soliq toʻlovi (mikro va kichik korxonalarga qoʻllaniladigan)",
+          "Vazirlar Mahkamasi huzuridagi Respublika yoʻl fondiga majburiy ajratmalar",
+          "Moliya vazirligi huzuridagi Taʼlim va tibbiyot muassasalarini rivojlantirish byudjetdan tashqari fondiga majburiy ajratmalar",
         ],
       },
       {
@@ -416,22 +416,22 @@ const article: Record<string, LocalizedArticle> = {
           "300 000 – 3 000 000 AQSh dollari — 3 yilga imtiyozlar",
           "3 000 000 – 5 000 000 AQSh dollari — 5 yilga imtiyozlar",
           "5 000 000 – 10 000 000 AQSh dollari — 7 yilga imtiyozlar",
-          "10 000 000 AQSh dollari va undan ko'p — 10 yilga imtiyozlar",
+          "10 000 000 AQSh dollari va undan koʻp — 10 yilga imtiyozlar",
         ],
       },
       { type: "h2" as const, text: "Valyuta rejimi" },
       {
         type: "p" as const,
-        text: "MIZ ishtirokchilari xizmat ko'rsatuvchi bankni erkin tanlashi va O'zbekistondagi bir yoki bir nechta tijorat bankida xorijiy valyutadagi hisobvaraqlar ochishi, shuningdek chet elda hisobvaraqlar yuritishi mumkin. Xorijiy valyuta tushumlari — tovarlar, ishlar va xizmatlardan olingan eksport tushumlari jumladan — ishtirokchining hisobvarag'iga o'tkazilishi kerak. MIZ chegarasida hatto MIZ ishtirokchisi bo'lmagan o'zbek rezidenti yuridik shaxslar ham MIZ ishtirokchilariga tovarlar sotish va xizmatlar ko'rsatish huquqiga xorijiy valyutada ega.",
+        text: "MIZ ishtirokchilari xizmat koʻrsatuvchi bankni erkin tanlashi va Oʻzbekistondagi bir yoki bir nechta tijorat bankida xorijiy valyutadagi hisobvaraqlar ochishi, shuningdek chet elda hisobvaraqlar yuritishi mumkin. Xorijiy valyuta tushumlari — tovarlar, ishlar va xizmatlardan olingan eksport tushumlari jumladan — ishtirokchining hisobvaragʻiga oʻtkazilishi kerak. MIZ chegarasida hatto MIZ ishtirokchisi boʻlmagan oʻzbek rezidenti yuridik shaxslar ham MIZ ishtirokchilariga tovarlar sotish va xizmatlar koʻrsatish huquqiga xorijiy valyutada ega.",
       },
-      { type: "h2" as const, text: "MIZ ishtirokchilarining qo'shimcha huquqlari" },
+      { type: "h2" as const, text: "MIZ ishtirokchilarining qoʻshimcha huquqlari" },
       {
         type: "ul" as const,
         items: [
           "Elektron onlayn auktsion orqali yer uchastkalarini ijaraga olish; binolar va inshootlardan ijara shartlarida foydalanish; qonun hujjatlarida belgilangan tartibda ishlab chiqarish faoliyati uchun infratuzilma barpo etish.",
-          "MIZ direksiyasidan investitsiya shartnomasi va loyiha jadvali bilan muvofiq ravishda muhandislik, kommunal va transport infratuzilmasini o'z vaqtida ta'minlashni talab qilish.",
+          "MIZ direksiyasidan investitsiya shartnomasi va loyiha jadvali bilan muvofiq ravishda muhandislik, kommunal va transport infratuzilmasini oʻz vaqtida taʼminlashni talab qilish.",
           "MIZ direksiyasi tomonidan taqdim etiladigan barcha xizmatlardan teng shartlarda, jumladan shartnoma asosida foydalanish.",
-          "MIZ bosh rejasiga muvofiq o'z hisobidan infratuzilma barpo etish.",
+          "MIZ bosh rejasiga muvofiq oʻz hisobidan infratuzilma barpo etish.",
         ],
       },
       { type: "h2" as const, text: "Zonaga xos imtiyozlar" },
@@ -439,33 +439,33 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Rezidentlar 2028 yil 1 yanvargacha ijtimoiy soliq jumladan barcha soliqlar va davlat maqsadli jamg'armalariga majburiy ajratmalardan ozod etilgan.",
-          "IT-Park rezidentlarining xodimlari 2028 yil 1 yanvargacha olingan daromadlaridan standart 12% o'rniga 7,5% kamaytirilgan stavkada jismoniy shaxslardan daromad solig'i to'laydilar.",
-          "Rezidentlar faqat ruxsat etilgan IT-ga oid faoliyat turlarini amalga oshirishi va har bir hisobot davridan keyingi oyning 20-sanasigacha direksiyaning talab qilib qaytarib olish hisobvarag'iga ajratmalar o'tkazishi shart.",
+          "Rezidentlar 2028 yil 1 yanvargacha ijtimoiy soliq jumladan barcha soliqlar va davlat maqsadli jamgʻarmalariga majburiy ajratmalardan ozod etilgan.",
+          "IT-Park rezidentlarining xodimlari 2028 yil 1 yanvargacha olingan daromadlaridan standart 12% oʻrniga 7,5% kamaytirilgan stavkada jismoniy shaxslardan daromad soligʻi toʻlaydilar.",
+          "Rezidentlar faqat ruxsat etilgan IT-ga oid faoliyat turlarini amalga oshirishi va har bir hisobot davridan keyingi oyning 20-sanasigacha direksiyaning talab qilib qaytarib olish hisobvaragʻiga ajratmalar oʻtkazishi shart.",
         ],
       },
       { type: "h2" as const, text: "Advizen qanday yordam bera oladi" },
       {
         type: "p" as const,
-        text: "To'g'ri MIZni tanlash, mavjud imtiyozlardan maksimal darajada foydalanish uchun investitsiya loyihasini tuzish va doimiy muvofiqlik majburiyatlarini boshqarish puxta huquqiy va soliqqa oid rejalashtirish talab etadi. Advizen jamoasi mijozlarga muvofiqligi baholashda, MIZ ishtirokchisi maqomini olish uchun arizalar tayyorlashda, investitsiya shartnomalari tuzishda va zona direksiyasining tartibga soluvchi talablarida mo'ljal olishda yordam beradi.",
+        text: "Toʻgʻri MIZni tanlash, mavjud imtiyozlardan maksimal darajada foydalanish uchun investitsiya loyihasini tuzish va doimiy muvofiqlik majburiyatlarini boshqarish puxta huquqiy va soliqqa oid rejalashtirish talab etadi. Advizen jamoasi mijozlarga muvofiqligi baholashda, MIZ ishtirokchisi maqomini olish uchun arizalar tayyorlashda, investitsiya shartnomalari tuzishda va zona direksiyasining tartibga soluvchi talablarida moʻljal olishda yordam beradi.",
       },
     ],
     faq: [
       {
-        question: "O'zbekistonda SEZ ishtirokchilari qanday soliq imtiyozlariga ega?",
-        answer: "O'zbekistonda SEZ ishtirokchilari to'liq imtiyozlar paketini oladilar: korporativ daromad solig'i, mulk solig'i va yer solig'idan o'n yilgacha ozodlik. Importqilinadigan uskunalar va xom ashyo uchun bojxona to'lovlaridan ozodlik qo'llaniladi. IT-Park rezidentlari 2028 yil 1 yanvargacha ijtimoiy soliq jumladan barcha soliqlar va davlat maqsadli jamg'armalariga majburiy ajratmalardan ozod etilgan, ularning xodimlari esa shu sanagacha olingan daromadlaridan 7,5% kamaytirilgan stavkada jismoniy shaxslardan daromad solig'i to'laydilar.",
+        question: "Oʻzbekistonda SEZ ishtirokchilari qanday soliq imtiyozlariga ega?",
+        answer: "Oʻzbekistonda SEZ ishtirokchilari toʻliq imtiyozlar paketini oladilar: korporativ daromad soligʻi, mulk soligʻi va yer soligʻidan oʻn yilgacha ozodlik. Importqilinadigan uskunalar va xom ashyo uchun bojxona toʻlovlaridan ozodlik qoʻllaniladi. IT-Park rezidentlari 2028 yil 1 yanvargacha ijtimoiy soliq jumladan barcha soliqlar va davlat maqsadli jamgʻarmalariga majburiy ajratmalardan ozod etilgan, ularning xodimlari esa shu sanagacha olingan daromadlaridan 7,5% kamaytirilgan stavkada jismoniy shaxslardan daromad soligʻi toʻlaydilar.",
       },
       {
-        question: "O'zbekistonda qanday turdagi maxsus iqtisodiy zonalar mavjud?",
-        answer: "O'zbekiston beshta turdagi SEZni tan oladi: erkin iqtisodiy zonalar, maxsus ilmiy-texnologik zonalar, turistik-rekreatsion zonalar, erkin savdo zonalari va maxsus sanoat zonalari. Har bir tur o'zining tartibga solish tizimi va tarmoq yo'nalishiga ega.",
+        question: "Oʻzbekistonda qanday turdagi maxsus iqtisodiy zonalar mavjud?",
+        answer: "Oʻzbekiston beshta turdagi SEZni tan oladi: erkin iqtisodiy zonalar, maxsus ilmiy-texnologik zonalar, turistik-rekreatsion zonalar, erkin savdo zonalari va maxsus sanoat zonalari. Har bir tur oʻzining tartibga solish tizimi va tarmoq yoʻnalishiga ega.",
       },
       {
-        question: "Qonunchilik o'zgarganda SEZ soliq imtiyozlari saqlanadimi?",
-        answer: "Ha. Soliq qonunchiligi o'zgarganda SEZ ishtirokchilari zona ishtirokchilari reestriga ro'yxatdan o'tgan sanada amal qilgan soliq stavkalari va to'lov shartlarini imtiyozlari amal qilgan davr mobaynida, lekin o'n yildan ko'p bo'lmagan muddatda qo'llashni davom ettirishga haqli. Qonunchilik barqarorligi kafolati aksiz tovarlarga tatbiq etilmaydi.",
+        question: "Qonunchilik oʻzgarganda SEZ soliq imtiyozlari saqlanadimi?",
+        answer: "Ha. Soliq qonunchiligi oʻzgarganda SEZ ishtirokchilari zona ishtirokchilari reestriga roʻyxatdan oʻtgan sanada amal qilgan soliq stavkalari va toʻlov shartlarini imtiyozlari amal qilgan davr mobaynida, lekin oʻn yildan koʻp boʻlmagan muddatda qoʻllashni davom ettirishga haqli. Qonunchilik barqarorligi kafolati aksiz tovarlarga tatbiq etilmaydi.",
       },
       {
-        question: "O'zbekistonda kompaniyalar SEZ ishtirokchisi maqomini qanday oladi?",
-        answer: "Kompaniyalar tegishli SEZ ma'muriyatiga murojaat qilib, zona operatori tomonidan belgilangan minimal investitsiya chegarasini bajaradilar. Jarayon investitsiya shartnomasini imzolash, ishtirokchilar reestriga ro'yxatdan o'tish va ishtirokchi sertifikati olishni o'z ichiga oladi. Advizen muvofiqligi baholash, ariza tayyorlash va tartibga solish talablariga javob berishda yordam beradi.",
+        question: "Oʻzbekistonda kompaniyalar SEZ ishtirokchisi maqomini qanday oladi?",
+        answer: "Kompaniyalar tegishli SEZ maʼmuriyatiga murojaat qilib, zona operatori tomonidan belgilangan minimal investitsiya chegarasini bajaradilar. Jarayon investitsiya shartnomasini imzolash, ishtirokchilar reestriga roʻyxatdan oʻtish va ishtirokchi sertifikati olishni oʻz ichiga oladi. Advizen muvofiqligi baholash, ariza tayyorlash va tartibga solish talablariga javob berishda yordam beradi.",
       },
     ],
   },

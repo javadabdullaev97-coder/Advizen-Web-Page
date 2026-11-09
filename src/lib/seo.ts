@@ -244,7 +244,7 @@ const BREADCRUMB_LABELS: Record<Locale, { home: string; expertise: string; insig
   uz: {
     home: "Bosh sahifa",
     expertise: "Xizmatlar",
-    contact: "Bog'lanish",
+    contact: "Bogʻlanish",
     insights: "Tahlillar",
   },
 };
@@ -302,13 +302,13 @@ function midSentence(title: string) {
 const SERVICE_TITLE: Record<Locale, (title: string) => string> = {
   en: (title) => `${title} in Uzbekistan | ${ORG_NAME}`,
   ru: (title) => `${title} в Узбекистане | ${ORG_NAME}`,
-  uz: (title) => `O'zbekistonda ${midSentence(title)} | ${ORG_NAME}`,
+  uz: (title) => `Oʻzbekistonda ${midSentence(title)} | ${ORG_NAME}`,
 };
 
 const SERVICE_LEAD: Record<Locale, (title: string) => string> = {
   en: (title) => `${title} in Uzbekistan for foreign and local companies: `,
   ru: (title) => `${title} в Узбекистане для иностранных и местных компаний: `,
-  uz: (title) => `O'zbekistondagi xorijiy va mahalliy kompaniyalar uchun ${midSentence(title)}: `,
+  uz: (title) => `Oʻzbekistondagi xorijiy va mahalliy kompaniyalar uchun ${midSentence(title)}: `,
 };
 
 // A factual description from the localized capability list, kept within what results show.
@@ -416,9 +416,9 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
         "14 услуг для компаний в Узбекистане: налоги, право, бухгалтерия, HR, финансирование, M&A, due diligence, управление компанией, EOR, зарплата и разрешения.",
     },
     uz: {
-      title: "O'zbekistonda soliq, yuridik, buxgalteriya va HR xizmatlari | Advizen",
+      title: "Oʻzbekistonda soliq, yuridik, buxgalteriya va HR xizmatlari | Advizen",
       description:
-        "O'zbekistondagi kompaniyalar uchun 14 xizmat: soliq, huquq, buxgalteriya, HR, moliyalashtirish, M&A, due diligence, EOR, ish haqi va ish ruxsatnomalari.",
+        "Oʻzbekistondagi kompaniyalar uchun 14 xizmat: soliq, huquq, buxgalteriya, HR, moliyalashtirish, M&A, due diligence, EOR, ish haqi va ish ruxsatnomalari.",
     },
   },
   contact: {
@@ -433,9 +433,9 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
         "Свяжитесь с Advizen Consulting в Ташкенте. Обсудите налоговое, правовое, финансовое, HR и корпоративное консультирование в Узбекистане и Центральной Азии.",
     },
     uz: {
-      title: "Advizen Consulting bilan bog'lanish | Toshkentda biznes konsalting",
+      title: "Advizen Consulting bilan bogʻlanish | Toshkentda biznes konsalting",
       description:
-        "Toshkentda Advizen Consulting bilan bog'laning. O'zbekiston va Markaziy Osiyoda soliq, huquq, moliya, HR va korporativ konsalting masalalarini muhokama qiling.",
+        "Toshkentda Advizen Consulting bilan bogʻlaning. Oʻzbekiston va Markaziy Osiyoda soliq, huquq, moliya, HR va korporativ konsalting masalalarini muhokama qiling.",
     },
   },
   insights: {
@@ -450,14 +450,14 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
         "Экспертная аналитика по налогам, праву, финансам, HR и регуляторным изменениям в Узбекистане и Центральной Азии от команды Advizen Consulting.",
     },
     uz: {
-      title: "O'zbekiston biznesi, soliqlari va huquqi bo'yicha tahlillar | Advizen Consulting",
+      title: "Oʻzbekiston biznesi, soliqlari va huquqi boʻyicha tahlillar | Advizen Consulting",
       description:
-        "O'zbekiston va Markaziy Osiyoda soliq, huquq, moliya, HR va tartibga solish o'zgarishlari bo'yicha Advizen Consulting jamoasidan ekspert tahlillari.",
+        "Oʻzbekiston va Markaziy Osiyoda soliq, huquq, moliya, HR va tartibga solish oʻzgarishlari boʻyicha Advizen Consulting jamoasidan ekspert tahlillari.",
     },
   },
   privacy: {
     en: {
-      title: "Privacy Policy | Advizen Consulting",
+      title: "Privacy policy | Advizen Consulting",
       description:
         "How Advizen Consulting collects, uses and protects personal data in compliance with applicable privacy laws in Uzbekistan.",
     },
@@ -469,29 +469,29 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
     uz: {
       title: "Maxfiylik siyosati | Advizen Consulting",
       description:
-        "Advizen Consulting O'zbekiston qonunlariga muvofiq shaxsiy ma'lumotlarni qanday yig'ishi, ishlatishi va himoya qilishini bilib oling.",
+        "Advizen Consulting Oʻzbekiston qonunlariga muvofiq shaxsiy maʼlumotlarni qanday yigʻishi, ishlatishi va himoya qilishini bilib oling.",
     },
   },
   terms: {
     en: {
-      title: "Terms of Use | Advizen Consulting",
+      title: "Terms of use | Advizen Consulting",
       description:
-        "Terms governing the use of advizenco.com and digital services provided by Advizen Consulting.",
+        "Terms governing the use of advizenco.com, the website of Advizen Consulting.",
     },
     ru: {
       title: "Условия использования | Advizen Consulting",
       description:
-        "Условия использования сайта advizenco.com и цифровых сервисов Advizen Consulting.",
+        "Условия использования advizenco.com — сайта Advizen Consulting.",
     },
     uz: {
       title: "Foydalanish shartlari | Advizen Consulting",
       description:
-        "advizenco.com saytidan va Advizen Consulting raqamli xizmatlaridan foydalanish shartlari.",
+        "Advizen Consulting sayti advizenco.com dan foydalanish shartlari.",
     },
   },
   cookies: {
     en: {
-      title: "Cookie Policy | Advizen Consulting",
+      title: "Cookie policy | Advizen Consulting",
       description:
         "How Advizen Consulting uses cookies and similar technologies on advizenco.com.",
     },
@@ -503,7 +503,7 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
     uz: {
       title: "Cookie siyosati | Advizen Consulting",
       description:
-        "Advizen Consulting advizenco.com saytida cookie va shunga o'xshash texnologiyalardan qanday foydalanadi.",
+        "Advizen Consulting advizenco.com saytida cookie va shunga oʻxshash texnologiyalardan qanday foydalanadi.",
     },
   },
   disclaimer: {

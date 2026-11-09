@@ -216,9 +216,9 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "O'zbekistonda faoliyat yurituvchi ish beruvchilar uchun amaliy qo'llanma",
+    subtitle: "Oʻzbekistonda faoliyat yurituvchi ish beruvchilar uchun amaliy qoʻllanma",
     author: "Advizen HR Practice",
-    readTime: "8 daqiqa o'qish",
+    readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "12%", label: "Barcha mehnat daromadlariga yagona jismoniy shaxslardan daromad soligʻi stavkasi, ish beruvchi ushlab qoladi" },
@@ -236,59 +236,59 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "O'zbekistonda ish haqi hisoblash tizimi so'nggi yillarda muhim islohotlarga uchradi: hukumat stavkalarni soddalashtirib, ijtimoiy to'lovlarni birlashtirdi va raqamli hisobot majburiyatlarini joriy etdi. Mahalliy xodimlarni yollovchi xorijiy kompaniyalar uchun — sho'ba korxona, vakolatxona yoki Employer of Record sxemasi orqali bo'lishidan qat'i nazar — bu majburiyatlarni tushunish qonuniy faoliyat yuritishning zaruriy shartidir.",
+        text: "Oʻzbekistonda ish haqi hisoblash tizimi soʻnggi yillarda muhim islohotlarga uchradi: hukumat stavkalarni soddalashtirib, ijtimoiy toʻlovlarni birlashtirdi va raqamli hisobot majburiyatlarini joriy etdi. Mahalliy xodimlarni yollovchi xorijiy kompaniyalar uchun — shoʻba korxona, vakolatxona yoki Employer of Record sxemasi orqali boʻlishidan qatʼi nazar — bu majburiyatlarni tushunish qonuniy faoliyat yuritishning zaruriy shartidir.",
       },
-      { type: "h2" as const, text: "Jismoniy shaxslardan daromad solig'i" },
+      { type: "h2" as const, text: "Jismoniy shaxslardan daromad soligʻi" },
       {
         type: "p" as const,
-        text: "2023 yil yanvardan O'zbekiston barcha mehnat daromadlariga 12% miqdorida yagona jismoniy shaxslardan daromad solig'i (JSDS) stavkasini qo'llaydi. Soliq ish beruvchi tomonidan manba bo'yicha ushlab qolinadi va har oy Davlat soliq qo'mitasiga o'tkaziladi.",
+        text: "2023 yil yanvardan Oʻzbekiston barcha mehnat daromadlariga 12% miqdorida yagona jismoniy shaxslardan daromad soligʻi (JSDS) stavkasini qoʻllaydi. Soliq ish beruvchi tomonidan manba boʻyicha ushlab qolinadi va har oy Davlat soliq qoʻmitasiga oʻtkaziladi.",
       },
       {
         type: "ul" as const,
         items: [
           "Yagona stavka: yalpi ish haqining 12%",
-          "Ushlab qolish: ish beruvchining majburiyati, har oy o'tkaziladi",
-          "Norezidentlar: 12% stavka bir xil tarzda qo'llaniladi; qo'shimcha ustama yo'q",
+          "Ushlab qolish: ish beruvchining majburiyati, har oy oʻtkaziladi",
+          "Norezidentlar: 12% stavka bir xil tarzda qoʻllaniladi; qoʻshimcha ustama yoʻq",
           "Dividend daromadi: 5% stavkada alohida soliqqa tortiladi",
         ],
       },
-      { type: "h2" as const, text: "Yagona ijtimoiy to'lov (YIT)" },
+      { type: "h2" as const, text: "Yagona ijtimoiy toʻlov (YIT)" },
       {
         type: "blockquote" as const,
-        text: "YIT ish beruvchining xarajati bo'lib, xodimning ish haqidan ushlab qolinmaydi. U yalpi ish haqiga qo'shimcha ravishda hisoblanadi.",
+        text: "YIT ish beruvchining xarajati boʻlib, xodimning ish haqidan ushlab qolinmaydi. U yalpi ish haqiga qoʻshimcha ravishda hisoblanadi.",
       },
       {
         type: "ul" as const,
         items: [
           "Standart stavka: yalpi ish haqi fondining 12% (ish beruvchi xarajati)",
-          "Byudjet tashkilotlari va ba'zi kichik biznes sub'ektlari: pasaytirilgan stavkalar qo'llanilishi mumkin",
-          "JSDS o'tkazilishi bilan bir vaqtda har oy to'lanadi",
-          "Kech to'lash Markaziy bank qayta moliyalash stavkasida penya hisoblashga olib keladi",
+          "Byudjet tashkilotlari va baʼzi kichik biznes subʼektlari: pasaytirilgan stavkalar qoʻllanilishi mumkin",
+          "JSDS oʻtkazilishi bilan bir vaqtda har oy toʻlanadi",
+          "Kech toʻlash Markaziy bank qayta moliyalash stavkasida penya hisoblashga olib keladi",
         ],
       },
-      { type: "h2" as const, text: "Individual jamg'arma pensiya badali" },
+      { type: "h2" as const, text: "Individual jamgʻarma pensiya badali" },
       {
         type: "p" as const,
-        text: "Xodimlar o'zlarining yalpi ish haqining 0,1% ini individual jamg'arma pensiya hisobiga o'tkazadilar. Bu chegirma JSDS hisobiga kiritiladi va ish beruvchi tomonidan umumiy daromad solig'i o'tkazmasi doirasida ushlab qolinadi.",
+        text: "Xodimlar oʻzlarining yalpi ish haqining 0,1% ini individual jamgʻarma pensiya hisobiga oʻtkazadilar. Bu chegirma JSDS hisobiga kiritiladi va ish beruvchi tomonidan umumiy daromad soligʻi oʻtkazmasi doirasida ushlab qolinadi.",
       },
       { type: "h2" as const, text: "Hisobot majburiyatlari" },
       {
         type: "ul" as const,
         items: [
-          "JSDS ushlab qolish bo'yicha oylik hisobot — keyingi oyning 10-sanasigacha topshiriladi",
-          "YIT bo'yicha oylik deklaratsiya — JSDS hisoboti bilan birga topshiriladi",
-          "Yillik ish haqi bo'yicha saldo — 1 fevralga qadar topshiriladi",
-          "Xodimlar daromadi haqidagi ma'lumotnomalar — so'rov yoki ishdan bo'shatish bo'yicha beriladi",
+          "JSDS ushlab qolish boʻyicha oylik hisobot — keyingi oyning 10-sanasigacha topshiriladi",
+          "YIT boʻyicha oylik deklaratsiya — JSDS hisoboti bilan birga topshiriladi",
+          "Yillik ish haqi boʻyicha saldo — 1 fevralga qadar topshiriladi",
+          "Xodimlar daromadi haqidagi maʼlumotnomalar — soʻrov yoki ishdan boʻshatish boʻyicha beriladi",
         ],
       },
       { type: "h2" as const, text: "Keng tarqalgan muvofiqlik risklari" },
       {
         type: "ul" as const,
         items: [
-          "Pudratchilarni noto'g'ri tasniflash — xodim vazifalarini bajaradigan jismoniy shaxslar shtatga kiritilishi shart",
-          "Natura shaklida berilgan imtiyozlar (uy-joy, transport, ovqat) bozor qiymati bo'yicha soliqqa tortiladi",
-          "Mukofotlar va bir martalik to'lovlar standart 12% stavkada JSDS ga tortiladi",
-          "Oylik hisobotlarni topshirmaslik ma'muriy jarimaga olib keladi",
+          "Pudratchilarni notoʻgʻri tasniflash — xodim vazifalarini bajaradigan jismoniy shaxslar shtatga kiritilishi shart",
+          "Natura shaklida berilgan imtiyozlar (uy-joy, transport, ovqat) bozor qiymati boʻyicha soliqqa tortiladi",
+          "Mukofotlar va bir martalik toʻlovlar standart 12% stavkada JSDS ga tortiladi",
+          "Oylik hisobotlarni topshirmaslik maʼmuriy jarimaga olib keladi",
         ],
       },
       { type: "divider" as const },
@@ -296,29 +296,29 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Jismoniy shaxslardan daromad solig'i: 12% (yagona stavka, ish beruvchi ushlab qoladi)",
-          "Yagona ijtimoiy to'lov: 12% (ish beruvchi xarajati, yalpi ish haqi fondidan)",
-          "Jamg'arma pensiya badali: 0,1% (JSDS ga kiritilgan)",
-          "Ish beruvchining o'z xarajati: yalpi ish haqiga qo'shimcha 12% YIT; 12% JSDS xodimning ish haqidan ushlab qolinadi",
+          "Jismoniy shaxslardan daromad soligʻi: 12% (yagona stavka, ish beruvchi ushlab qoladi)",
+          "Yagona ijtimoiy toʻlov: 12% (ish beruvchi xarajati, yalpi ish haqi fondidan)",
+          "Jamgʻarma pensiya badali: 0,1% (JSDS ga kiritilgan)",
+          "Ish beruvchining oʻz xarajati: yalpi ish haqiga qoʻshimcha 12% YIT; 12% JSDS xodimning ish haqidan ushlab qolinadi",
         ],
       },
     ],
     faq: [
       {
-        question: "O'zbekistonda mehnat daromadlariga jismoniy shaxslardan daromad solig'i (JSDS) stavkasi qancha?",
-        answer: "2023 yil yanvardan O'zbekiston barcha mehnat daromadlariga 12% miqdorida yagona JSDS stavkasini qo'llaydi. Soliq ish beruvchi tomonidan manba bo'yicha ushlab qolinadi va har oy Davlat soliq qo'mitasiga o'tkaziladi. Norezident xodimlarga ham xuddi shu stavka qo'llaniladi — qo'shimcha ustama yo'q.",
+        question: "Oʻzbekistonda mehnat daromadlariga jismoniy shaxslardan daromad soligʻi (JSDS) stavkasi qancha?",
+        answer: "2023 yil yanvardan Oʻzbekiston barcha mehnat daromadlariga 12% miqdorida yagona JSDS stavkasini qoʻllaydi. Soliq ish beruvchi tomonidan manba boʻyicha ushlab qolinadi va har oy Davlat soliq qoʻmitasiga oʻtkaziladi. Norezident xodimlarga ham xuddi shu stavka qoʻllaniladi — qoʻshimcha ustama yoʻq.",
       },
       {
-        question: "O'zbekistonda yagona ijtimoiy to'lov (YIT) stavkasi qancha?",
-        answer: "YIT yalpi ish haqi fondining 12% miqdorida undiriladi va ish beruvchi xarajati hisoblanadi — u xodimning ish haqidan ushlab qolinmaydi. To'lov har oy JSDS o'tkazmasi bilan bir vaqtda amalga oshiriladi. Kech to'lash Markaziy bank qayta moliyalash stavkasida penya hisoblashga olib keladi.",
+        question: "Oʻzbekistonda yagona ijtimoiy toʻlov (YIT) stavkasi qancha?",
+        answer: "YIT yalpi ish haqi fondining 12% miqdorida undiriladi va ish beruvchi xarajati hisoblanadi — u xodimning ish haqidan ushlab qolinmaydi. Toʻlov har oy JSDS oʻtkazmasi bilan bir vaqtda amalga oshiriladi. Kech toʻlash Markaziy bank qayta moliyalash stavkasida penya hisoblashga olib keladi.",
       },
       {
-        question: "O'zbekistonda ish haqi ish beruvchiga qanchaga tushadi?",
-        answer: "Ish beruvchining o'z xarajati — 12% miqdoridagi yagona ijtimoiy to'lov (YIT) bo'lib, u yalpi ish haqi fondiga qo'shimcha hisoblanadi va xodimning ish haqidan ushlab qolinmaydi. 12% stavkadagi JSDS xodimning ish haqidan ushlab qolinadi va ish beruvchi tomonidan o'tkaziladi, shuning uchun u ish beruvchining xarajati hisoblanmaydi. Xodimning individual jamg'arma pensiya hisobiga 0,1% badali shu JSDS tarkibidan olinadi.",
+        question: "Oʻzbekistonda ish haqi ish beruvchiga qanchaga tushadi?",
+        answer: "Ish beruvchining oʻz xarajati — 12% miqdoridagi yagona ijtimoiy toʻlov (YIT) boʻlib, u yalpi ish haqi fondiga qoʻshimcha hisoblanadi va xodimning ish haqidan ushlab qolinmaydi. 12% stavkadagi JSDS xodimning ish haqidan ushlab qolinadi va ish beruvchi tomonidan oʻtkaziladi, shuning uchun u ish beruvchining xarajati hisoblanmaydi. Xodimning individual jamgʻarma pensiya hisobiga 0,1% badali shu JSDS tarkibidan olinadi.",
       },
       {
-        question: "O'zbekistonda ish beruvchilar uchun ish haqi hisobot muddatlari qanday?",
-        answer: "Ish beruvchilar keyingi oyning 10-sanasiga qadar oylik JSDS ushlab qolish hisobotini topshirishlari, bir vaqtda YIT deklaratsiyasini berishlari va 1 fevralga qadar yillik ish haqi saldosini o'tkazishlari shart. Xodimlar daromad ma'lumotnomasi so'rov yoki ishdan bo'shatish bo'yicha beriladi.",
+        question: "Oʻzbekistonda ish beruvchilar uchun ish haqi hisobot muddatlari qanday?",
+        answer: "Ish beruvchilar keyingi oyning 10-sanasiga qadar oylik JSDS ushlab qolish hisobotini topshirishlari, bir vaqtda YIT deklaratsiyasini berishlari va 1 fevralga qadar yillik ish haqi saldosini oʻtkazishlari shart. Xodimlar daromad maʼlumotnomasi soʻrov yoki ishdan boʻshatish boʻyicha beriladi.",
       },
     ],
   },

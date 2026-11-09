@@ -282,7 +282,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Roʻyxatga olinmagan Doimiy muassasaning oqibatlari qanday?",
-        answer: "Oʻzbekistonda roʻyxatga olinmagan DM orqali faoliyat olib borish roʻyxatga olinmagan barcha davr uchun soliq qoʻshib hisoblash, moliyaviy jarimalar va obroʻga zarar ko'rishga olib kelishi mumkin. DM maqomi yuzaga kelgandan soʻng chet el kompaniyasi mahalliy soliq organlarida roʻyxatdan oʻtishi shart. DM faoliyatining boshlanish sanasi odatda eng erta sanadan hisoblanadi: tegishli shartnomani imzolash, ishlarning boshlanishi yoki xodimlarning kelishi — shuning uchun roʻyxatdan oʻtish majburiyati toʻliq faoliyat boshlanishidan oldin ham yuzaga kelishi mumkin.",
+        answer: "Oʻzbekistonda roʻyxatga olinmagan DM orqali faoliyat olib borish roʻyxatga olinmagan barcha davr uchun soliq qoʻshib hisoblash, moliyaviy jarimalar va obroʻga zarar koʻrishga olib kelishi mumkin. DM maqomi yuzaga kelgandan soʻng chet el kompaniyasi mahalliy soliq organlarida roʻyxatdan oʻtishi shart. DM faoliyatining boshlanish sanasi odatda eng erta sanadan hisoblanadi: tegishli shartnomani imzolash, ishlarning boshlanishi yoki xodimlarning kelishi — shuning uchun roʻyxatdan oʻtish majburiyati toʻliq faoliyat boshlanishidan oldin ham yuzaga kelishi mumkin.",
       },
     ],
   },

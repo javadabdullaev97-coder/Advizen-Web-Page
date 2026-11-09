@@ -245,20 +245,20 @@ const article: Record<string, LocalizedArticle> = {
     ],
     faq: [
       {
-        question: "O'zbekistonda onlayn qimor o'yinlari qonuniymi?",
-        answer: "Ha. Onlayn qimor o'yinlari, lotereya va bukmekerlik faoliyati O'zbekistonda 2025 yil 1 yanvardan Vazirlar Mahkamasining 814-son qarori asosida qonuniylashtirildi. Sektor Istiqbolli loyihalar milliy agentligi (ILMA) tomonidan tartibga solinadi va litsenziyalanadi. Ushbu sanagacha ko'rsatilgan faoliyat turlari taqiqlangan edi.",
+        question: "Oʻzbekistonda onlayn qimor oʻyinlari qonuniymi?",
+        answer: "Ha. Onlayn qimor oʻyinlari, lotereya va bukmekerlik faoliyati Oʻzbekistonda 2025 yil 1 yanvardan Vazirlar Mahkamasining 814-son qarori asosida qonuniylashtirildi. Sektor Istiqbolli loyihalar milliy agentligi (ILMA) tomonidan tartibga solinadi va litsenziyalanadi. Ushbu sanagacha koʻrsatilgan faoliyat turlari taqiqlangan edi.",
       },
       {
-        question: "O'zbekistonda onlayn qimor uchun litsenziyalovchi organ kim?",
-        answer: "Istiqbolli loyihalar milliy agentligi (ILMA) O'zbekistonda onlayn qimor o'yinlari, lotereya va bukmekerlik sohasidagi asosiy tartibga soluvchi va litsenziyalovchi organdir. Litsenziyalar O'zbekistonda rezident yuridik shaxslarga besh yil muddatga beriladi.",
+        question: "Oʻzbekistonda onlayn qimor uchun litsenziyalovchi organ kim?",
+        answer: "Istiqbolli loyihalar milliy agentligi (ILMA) Oʻzbekistonda onlayn qimor oʻyinlari, lotereya va bukmekerlik sohasidagi asosiy tartibga soluvchi va litsenziyalovchi organdir. Litsenziyalar Oʻzbekistonda rezident yuridik shaxslarga besh yil muddatga beriladi.",
       },
       {
-        question: "O'zbek qimor tartibga solishi platformamga qachon qo'llaniladi?",
-        answer: "Quyidagi mezonlardan biri bajarilganda O'zbekiston qimor joyi hisoblanadi va uning tartibga solish bazasi qo'llaniladi: o'yinchi O'zbekiston fuqarosi bo'lsa yoki jismonan O'zbekiston hududida bo'lsa, o'yinchining IP-manzili o'zbek bo'lsa, tranzaksiyalar uchun o'zbek bank kartalaridan foydalanilsa yoki o'yin yoki tikish xizmati o'zbek auditoriyasiga mo'ljallangan bo'lsa. Ushbu mezonlardan biriga javob beradigan platformalar o'zbek qonunchiligiga rioya qilishi shart.",
+        question: "Oʻzbek qimor tartibga solishi platformamga qachon qoʻllaniladi?",
+        answer: "Quyidagi mezonlardan biri bajarilganda Oʻzbekiston qimor joyi hisoblanadi va uning tartibga solish bazasi qoʻllaniladi: oʻyinchi Oʻzbekiston fuqarosi boʻlsa yoki jismonan Oʻzbekiston hududida boʻlsa, oʻyinchining IP-manzili oʻzbek boʻlsa, tranzaksiyalar uchun oʻzbek bank kartalaridan foydalanilsa yoki oʻyin yoki tikish xizmati oʻzbek auditoriyasiga moʻljallangan boʻlsa. Ushbu mezonlardan biriga javob beradigan platformalar oʻzbek qonunchiligiga rioya qilishi shart.",
       },
       {
-        question: "O'zbekistonda qimor litsenziyasi olish uchun asosiy talablar qanday?",
-        answer: "ILMAdan qimor litsenziyasi olish uchun ariza beruvchi O'zbekistonda ro'yxatdan o'tgan va rezident yuridik shaxs bo'lishi kerak (xorijiy kompaniyalar bevosita ariza bera olmaydi). Elektron platforma jismonan O'zbekistonda joylashgan serverlarda bo'lishi shart. Operatorlar yetarli moliyaviy barqarorlikni tasdiqlash uchun ustav fondida va zaxira fondida belgilangan minimal miqdorlarni saqlashi ham talab etiladi.",
+        question: "Oʻzbekistonda qimor litsenziyasi olish uchun asosiy talablar qanday?",
+        answer: "ILMAdan qimor litsenziyasi olish uchun ariza beruvchi Oʻzbekistonda roʻyxatdan oʻtgan va rezident yuridik shaxs boʻlishi kerak (xorijiy kompaniyalar bevosita ariza bera olmaydi). Elektron platforma jismonan Oʻzbekistonda joylashgan serverlarda boʻlishi shart. Operatorlar yetarli moliyaviy barqarorlikni tasdiqlash uchun ustav fondida va zaxira fondida belgilangan minimal miqdorlarni saqlashi ham talab etiladi.",
       },
     ],
   },

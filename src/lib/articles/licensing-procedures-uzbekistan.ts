@@ -284,9 +284,9 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "O'zbekistonda OʻRQ-701-sonli Qonun asosidagi yagona litsenziyalash, ruxsat berish va xabardor qilish tartibi bo'yicha amaliy qo'llanma.",
+    subtitle: "Oʻzbekistonda OʻRQ-701-sonli Qonun asosidagi yagona litsenziyalash, ruxsat berish va xabardor qilish tartibi boʻyicha amaliy qoʻllanma.",
     author: "Advizen Legal Practice",
-    readTime: "8 daqiqa o'qish",
+    readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "OʻRQ-701", label: "Litsenziyalash, ruxsat berish va xabardor qilish tartibi toʻgʻrisidagi 2021-yil 14-iyuldagi Qonun" },
@@ -304,60 +304,60 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "O'zbekiston biznes-avtorizatsiya qoidalarini 2021 yil 14 iyuldagi «Litsenziyalash, ruxsat berish va xabardor qilish tartibi to'g'risida»gi OʻRQ-701-sonli yagona Qonunda birlashtirdi. Qonun uchta alohida yo'nalish — litsenziyalash, ruxsat hujjatlari va xabarnomalar — ni belgilab, butun jarayonni «Litsenziya» deb nomlangan yagona elektron platformaga (license.gov.uz) o'tkazadi.",
+        text: "Oʻzbekiston biznes-avtorizatsiya qoidalarini 2021 yil 14 iyuldagi «Litsenziyalash, ruxsat berish va xabardor qilish tartibi toʻgʻrisida»gi OʻRQ-701-sonli yagona Qonunda birlashtirdi. Qonun uchta alohida yoʻnalish — litsenziyalash, ruxsat hujjatlari va xabarnomalar — ni belgilab, butun jarayonni «Litsenziya» deb nomlangan yagona elektron platformaga (license.gov.uz) oʻtkazadi.",
       },
-      { type: "h2" as const, text: "Uch yo'nalishga umumiy nazar" },
+      { type: "h2" as const, text: "Uch yoʻnalishga umumiy nazar" },
       {
         type: "ul" as const,
         items: [
-          "Litsenziyalash: cheklovlarsiz amalga oshirilishi aholining sog'lig'iga, xavfsizligiga yoki atrof-muhitga zarar etkazishi mumkin bo'lgan faoliyat turlari uchun majburiy. To'liq ro'yxat Qonunning 1-ilovasida keltirilgan.",
-          "Ruxsat hujjatlari: 2-ilovada keltirilgan faoliyat turlari uchun yengilroq avtorizatsiya shakli. Ular ham oldindan tasdiqlashni talab qiladi, lekin oddiyroq shartlarga bo'ysunadi.",
-          "Xabarnomalar: eng moslashuvchan yo'nalish. Faoliyatni boshlamasdan oldin tegishli organ xabardor qilinadi — tasdiqlash talab etilmaydi. Xabarnoma talab qiladigan faoliyat turlari 3-ilovada keltirilgan.",
+          "Litsenziyalash: cheklovlarsiz amalga oshirilishi aholining sogʻligʻiga, xavfsizligiga yoki atrof-muhitga zarar etkazishi mumkin boʻlgan faoliyat turlari uchun majburiy. Toʻliq roʻyxat Qonunning 1-ilovasida keltirilgan.",
+          "Ruxsat hujjatlari: 2-ilovada keltirilgan faoliyat turlari uchun yengilroq avtorizatsiya shakli. Ular ham oldindan tasdiqlashni talab qiladi, lekin oddiyroq shartlarga boʻysunadi.",
+          "Xabarnomalar: eng moslashuvchan yoʻnalish. Faoliyatni boshlamasdan oldin tegishli organ xabardor qilinadi — tasdiqlash talab etilmaydi. Xabarnoma talab qiladigan faoliyat turlari 3-ilovada keltirilgan.",
         ],
       },
       { type: "h2" as const, text: "Litsenziya turlari" },
       {
         type: "p" as const,
-        text: "Qonun ikki litsenziya toifasi o'rtasida aniq chegara o'rnatadi:",
+        text: "Qonun ikki litsenziya toifasi oʻrtasida aniq chegara oʻrnatadi:",
       },
       {
         type: "ul" as const,
         items: [
-          "Namunaviy (tipovye) litsenziyalar — yagona shartlarga javob beradigan istalgan arizachiga beriladi. Bu ko'pgina tartibga solinadigan faoliyat turlari uchun me'yordir.",
-          "Individual litsenziyalar — maxsus shartlarda beriladi va eksklyuziv huquqlar beradi. Ular soni, hududi yoki ob'ekti jihatidan cheklangan bo'lib, odatda tender orqali beriladi. Efir spektrini taqsimlash bunga tipik misol.",
+          "Namunaviy (tipovye) litsenziyalar — yagona shartlarga javob beradigan istalgan arizachiga beriladi. Bu koʻpgina tartibga solinadigan faoliyat turlari uchun meʼyordir.",
+          "Individual litsenziyalar — maxsus shartlarda beriladi va eksklyuziv huquqlar beradi. Ular soni, hududi yoki obʼekti jihatidan cheklangan boʻlib, odatda tender orqali beriladi. Efir spektrini taqsimlash bunga tipik misol.",
         ],
       },
       {
         type: "p" as const,
-        text: "Har bir litsenziya bir turdagi faoliyatni qamrab oladi (bunda kichik turlar ham mumkin). Qoidaga ko'ra litsenziyalar muddatsiz amal qiladi. Istisno: tibbiy va farmatsevtika faoliyati, giyohvand moddalarga oid operatsiyalar, mobil telekommunikatsiya, neft va gaz qazib olish, loteriya va onlayn qimorbozlik operatsiyalari hamda boshqa bir qator sezgir sohalarga kamida 5 yillik muddat qo'llaniladi.",
+        text: "Har bir litsenziya bir turdagi faoliyatni qamrab oladi (bunda kichik turlar ham mumkin). Qoidaga koʻra litsenziyalar muddatsiz amal qiladi. Istisno: tibbiy va farmatsevtika faoliyati, giyohvand moddalarga oid operatsiyalar, mobil telekommunikatsiya, neft va gaz qazib olish, loteriya va onlayn qimorbozlik operatsiyalari hamda boshqa bir qator sezgir sohalarga kamida 5 yillik muddat qoʻllaniladi.",
       },
       { type: "h2" as const, text: "Ariza berish tartibi" },
       {
         type: "p" as const,
-        text: "Barcha arizalar — litsenziyalar, ruxsat hujjatlari va xabarnomalar uchun — «Litsenziya» tizimi yoki Interaktiv davlat xizmatlari yagona portali (EPAGU) orqali elektron shaklda, elektron raqamli imzo bilan taqdim etiladi. Portal haftaning etti kuni, kechayu kunduz ishlaydi. Davlat yig'imlari va ko'rib chiqish xarajatlari har bir faoliyat turining pasportida belgilanib, ariza vakolatli organga jo'natilgunga qadar to'lanishi shart.",
+        text: "Barcha arizalar — litsenziyalar, ruxsat hujjatlari va xabarnomalar uchun — «Litsenziya» tizimi yoki Interaktiv davlat xizmatlari yagona portali (EPAGU) orqali elektron shaklda, elektron raqamli imzo bilan taqdim etiladi. Portal haftaning etti kuni, kechayu kunduz ishlaydi. Davlat yigʻimlari va koʻrib chiqish xarajatlari har bir faoliyat turining pasportida belgilanib, ariza vakolatli organga joʻnatilgunga qadar toʻlanishi shart.",
       },
       {
         type: "ul" as const,
         items: [
-          "Yuridik shaxslar soliq to'lovchisining identifikatsiya raqamini (INN) ko'rsatadilar.",
-          "Jismoniy shaxslar to'liq ism-sharif, shaxsni tasdiqlovchi hujjat ma'lumotlari yoki shaxsiy identifikatsiya raqamini (PINFL) ko'rsatadilar.",
-          "Barcha arizachilar faoliyat turini (va kichik turini) ko'rsatadilar hamda litsenziya shartlariga muvofiqligini tasdiqlovchi hujjatlarni ilova qiladilar.",
+          "Yuridik shaxslar soliq toʻlovchisining identifikatsiya raqamini (INN) koʻrsatadilar.",
+          "Jismoniy shaxslar toʻliq ism-sharif, shaxsni tasdiqlovchi hujjat maʼlumotlari yoki shaxsiy identifikatsiya raqamini (PINFL) koʻrsatadilar.",
+          "Barcha arizachilar faoliyat turini (va kichik turini) koʻrsatadilar hamda litsenziya shartlariga muvofiqligini tasdiqlovchi hujjatlarni ilova qiladilar.",
         ],
       },
       {
         type: "p" as const,
         text: "Vakolatli organ ariza sanasidan boshlab 20 ish kuni ichida litsenziya yoki ruxsat hujjatini berishi yoki berishdan bosh tortishi shart. Qaror bir kun ichida «Litsenziya» tizimida joylashtirilishi, ariza beruvchi esa ushbu joylashtiruvdan bir ish soati ichida xabardor qilinishi kerak. Belgilangan muddatda qaror qabul qilinmasa, ariza beruvchi organni elektron tarzda xabardor qilgan taqdirda faoliyatni boshlash huquqiga ega.",
       },
-      { type: "h2" as const, text: "Rad etish, to'xtatib qo'yish va bekor qilish asoslari" },
+      { type: "h2" as const, text: "Rad etish, toʻxtatib qoʻyish va bekor qilish asoslari" },
       { type: "h3" as const, text: "Rad etish" },
       {
         type: "p" as const,
-        text: "Litsenziya yoki ruxsat hujjati faqat uchta asosda rad etilishi mumkin: to'liq bo'lmagan hujjatlar; noto'g'ri yoki buzib ko'rsatilgan ma'lumotlar; litsenziya shartlariga mos kelmaslik. Boshqa asoslarda — jumladan «maqsadga muvofiq emaslik» sababli — rad etishga yo'l qo'yilmaydi. Hujjatlar to'liq bo'lmaganda ariza beruvchiga ularni bartaraf qilish uchun 30 ish kunigacha vaqt beriladi.",
+        text: "Litsenziya yoki ruxsat hujjati faqat uchta asosda rad etilishi mumkin: toʻliq boʻlmagan hujjatlar; notoʻgʻri yoki buzib koʻrsatilgan maʼlumotlar; litsenziya shartlariga mos kelmaslik. Boshqa asoslarda — jumladan «maqsadga muvofiq emaslik» sababli — rad etishga yoʻl qoʻyilmaydi. Hujjatlar toʻliq boʻlmaganda ariza beruvchiga ularni bartaraf qilish uchun 30 ish kunigacha vaqt beriladi.",
       },
-      { type: "h3" as const, text: "To'xtatib qo'yish" },
+      { type: "h3" as const, text: "Toʻxtatib qoʻyish" },
       {
         type: "p" as const,
-        text: "Vakolatli organ buzilishlar aniqlanganda litsenziyani 10 kungacha to'xtatib qo'yishi mumkin. 10 kundan ortiq (6 oygacha) to'xtatib qo'yish uchun sud qarori talab etiladi. Buzilishlar bartaraf etilgandan so'ng organ tasdiqlash olinganidan 3 kun ichida to'xtatib qo'yishni bekor qilishi shart.",
+        text: "Vakolatli organ buzilishlar aniqlanganda litsenziyani 10 kungacha toʻxtatib qoʻyishi mumkin. 10 kundan ortiq (6 oygacha) toʻxtatib qoʻyish uchun sud qarori talab etiladi. Buzilishlar bartaraf etilgandan soʻng organ tasdiqlash olinganidan 3 kun ichida toʻxtatib qoʻyishni bekor qilishi shart.",
       },
       { type: "h3" as const, text: "Bekor qilish (annullash)" },
       {
@@ -365,62 +365,62 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Litsenziya egasining ixtiyoriy arizasi.",
           "Yuridik shaxsning tugatilishi yoki jismoniy shaxsning vafoti.",
-          "Belgilangan muddatda yig'imlar to'lanmasligi.",
-          "Belgilangan muddatda to'xtatib qo'yish asoslarini bartaraf etmaslik.",
-          "Litsenziya shartlarining takroriy (bir yil ichida ikki va undan ko'p marta) yoki bir martalik jiddiy buzilishi.",
+          "Belgilangan muddatda yigʻimlar toʻlanmasligi.",
+          "Belgilangan muddatda toʻxtatib qoʻyish asoslarini bartaraf etmaslik.",
+          "Litsenziya shartlarining takroriy (bir yil ichida ikki va undan koʻp marta) yoki bir martalik jiddiy buzilishi.",
           "Soxta hujjatlardan foydalanish.",
         ],
       },
       { type: "h2" as const, text: "Xabardor qilish tartibi" },
       {
         type: "p" as const,
-        text: "Xabardor qilish tartibidagi faoliyat turlari uchun oldindan tasdiqlash talab etilmaydi — tadbirkor shunchaki xabarnoma topshiradi va faoliyatni boshlashi mumkin. Barcha shartlar bajarilgan taqdirda xabarnoma avtomatik qabul qilinadi va darhol tasdiqlash beriladi. Ko'pgina xabarnomalar uchun asosiy hisob-kitob qiymatining (AHQ) 50 barobarigacha yig'im undiriladi; chakana spirtli ichimliklarni sotish bundan mustasnodir.",
+        text: "Xabardor qilish tartibidagi faoliyat turlari uchun oldindan tasdiqlash talab etilmaydi — tadbirkor shunchaki xabarnoma topshiradi va faoliyatni boshlashi mumkin. Barcha shartlar bajarilgan taqdirda xabarnoma avtomatik qabul qilinadi va darhol tasdiqlash beriladi. Koʻpgina xabarnomalar uchun asosiy hisob-kitob qiymatining (AHQ) 50 barobarigacha yigʻim undiriladi; chakana spirtli ichimliklarni sotish bundan mustasnodir.",
       },
       {
         type: "p" as const,
-        text: "Organ xabarnomani faqat beshta aniq holatda rad etishi mumkin: noto'g'ri ma'lumotlar; yig'im to'lanmaganligi; talablarga muvofiqlik tasdiqlanmaganligi; amaldagi to'xtatib qo'yish ko'rsatmasi; yoki sud taqiqi. Organ buzilishlar aniqlangan taqdirda xabardor qilingan faoliyatni 10 ish kunigacha to'xtatib qo'yishi mumkin; uzoqroq muddatlar uchun sud ishtiroki talab etiladi.",
+        text: "Organ xabarnomani faqat beshta aniq holatda rad etishi mumkin: notoʻgʻri maʼlumotlar; yigʻim toʻlanmaganligi; talablarga muvofiqlik tasdiqlanmaganligi; amaldagi toʻxtatib qoʻyish koʻrsatmasi; yoki sud taqiqi. Organ buzilishlar aniqlangan taqdirda xabardor qilingan faoliyatni 10 ish kunigacha toʻxtatib qoʻyishi mumkin; uzoqroq muddatlar uchun sud ishtiroki talab etiladi.",
       },
       { type: "h2" as const, text: "Filiallar va vakolatxonalar" },
       {
         type: "p" as const,
-        text: "Yuridik shaxsning filiallari va vakolatxonalari alohida litsenziya yoki ruxsat hujjatlariga muhtoj emas. Buning o'rniga ularning manzillari vakolatli organga topshiriladigan o'zgartirish orqali ona tashkilotning mavjud litsenziyasiga qo'shiladi. Allaqachon filiallari mavjud tashkilotlar uchun qo'shish «Litsenziya» tizimi yoki EPAGU orqali organga xabarnoma yuborish yo'li bilan amalga oshiriladi.",
+        text: "Yuridik shaxsning filiallari va vakolatxonalari alohida litsenziya yoki ruxsat hujjatlariga muhtoj emas. Buning oʻrniga ularning manzillari vakolatli organga topshiriladigan oʻzgartirish orqali ona tashkilotning mavjud litsenziyasiga qoʻshiladi. Allaqachon filiallari mavjud tashkilotlar uchun qoʻshish «Litsenziya» tizimi yoki EPAGU orqali organga xabarnoma yuborish yoʻli bilan amalga oshiriladi.",
       },
       { type: "h2" as const, text: "Doimiy muassasa ariza bera oladimi?" },
       {
         type: "p" as const,
-        text: "Doimiy muassasa (DM) — bu yuridik shaxs emas, balki soliq maqomi bo'lib, fuqarolik huquqining mustaqil sub'ekti sifatida huquqiy layoqatga ega emas. Qonunga ko'ra litsenziya yoki ruxsat hujjatiga faqat jismoniy va yuridik shaxslar murojaat qilishi mumkin. Amalda, biroq, organlar ba'zan so'rov bo'yicha DMga hujjat beradi, soliq organlari esa ko'pincha DMni yuridik shaxs sifatida ko'rib chiqadi. Bu huquqiy jihatdan nomuvofiqdir va DM orqali faoliyat yurituvchi korxonalar DM nomiga berilgan ruxsatlarga tayanishdan oldin maxsus maslahat olishlari kerak.",
+        text: "Doimiy muassasa (DM) — bu yuridik shaxs emas, balki soliq maqomi boʻlib, fuqarolik huquqining mustaqil subʼekti sifatida huquqiy layoqatga ega emas. Qonunga koʻra litsenziya yoki ruxsat hujjatiga faqat jismoniy va yuridik shaxslar murojaat qilishi mumkin. Amalda, biroq, organlar baʼzan soʻrov boʻyicha DMga hujjat beradi, soliq organlari esa koʻpincha DMni yuridik shaxs sifatida koʻrib chiqadi. Bu huquqiy jihatdan nomuvofiqdir va DM orqali faoliyat yurituvchi korxonalar DM nomiga berilgan ruxsatlarga tayanishdan oldin maxsus maslahat olishlari kerak.",
       },
       { type: "h2" as const, text: "Buzilishlar uchun javobgarlik" },
       {
         type: "p" as const,
-        text: "Jismoniy shaxslar litsenziya, ruxsat hujjati yoki xabarnomasisiz faoliyat yuritganligi uchun Ma'muriy javobgarlik to'g'risidagi kodeksning 165, 176³ va 241⁵-moddalari bo'yicha ma'muriy va Jinoyat kodeksining 190 va 192⁵-moddalari bo'yicha jinoiy javobgarlikka tortiladi.",
+        text: "Jismoniy shaxslar litsenziya, ruxsat hujjati yoki xabarnomasisiz faoliyat yuritganligi uchun Maʼmuriy javobgarlik toʻgʻrisidagi kodeksning 165, 176³ va 241⁵-moddalari boʻyicha maʼmuriy va Jinoyat kodeksining 190 va 192⁵-moddalari boʻyicha jinoiy javobgarlikka tortiladi.",
       },
       {
         type: "p" as const,
-        text: "Yuridik shaxslar quyidagi hollarda jarima (Qonunning 4-ilovasida belgilangan) to'lashga majbur: zarur avtorizatsiyasiz faoliyat yuritish; soxta hujjatlardan foydalanish; yoki noto'g'ri ma'lumotlar taqdim etish. Vakolatli organ buzilish aniqlangandan 5 ish kuni ichida jarima to'g'risida qaror chiqaradi. Tashkilot jarimasining 70%ini ixtiyoriy to'lasa va shu bilan birga zarur litsenziya yoki ruxsat hujjatiga ariza bersa, qolgan 30% bekor qilinadi. To'lanmagan jarimalar 5 ish kuni ichida sudga o'tkaziladi.",
+        text: "Yuridik shaxslar quyidagi hollarda jarima (Qonunning 4-ilovasida belgilangan) toʻlashga majbur: zarur avtorizatsiyasiz faoliyat yuritish; soxta hujjatlardan foydalanish; yoki notoʻgʻri maʼlumotlar taqdim etish. Vakolatli organ buzilish aniqlangandan 5 ish kuni ichida jarima toʻgʻrisida qaror chiqaradi. Tashkilot jarimasining 70%ini ixtiyoriy toʻlasa va shu bilan birga zarur litsenziya yoki ruxsat hujjatiga ariza bersa, qolgan 30% bekor qilinadi. Toʻlanmagan jarimalar 5 ish kuni ichida sudga oʻtkaziladi.",
       },
       { type: "h2" as const, text: "Advizen qanday yordam bera oladi" },
       {
         type: "p" as const,
-        text: "O'zbekistonning litsenziyalash va ruxsat berish tizimida mo'ljal olish faoliyatingizga qaysi yo'nalish qo'llanilishini, qanday shartlar bajarilishi kerakligini va organ qarshi chiqgan taqdirda qanday javob berishni bilishni talab etadi. Advizen yuridik jamoasi mijozlarga har bir bosqichda yordam beradi — to'g'ri avtorizatsiya yo'lini aniqlash va ariza paketlarini tayyorlashdan tortib, to'xtatib qo'yishlarni boshqarish, o'zgartirish kiritish va tartibga soluvchi nizolarni hal etishgacha.",
+        text: "Oʻzbekistonning litsenziyalash va ruxsat berish tizimida moʻljal olish faoliyatingizga qaysi yoʻnalish qoʻllanilishini, qanday shartlar bajarilishi kerakligini va organ qarshi chiqgan taqdirda qanday javob berishni bilishni talab etadi. Advizen yuridik jamoasi mijozlarga har bir bosqichda yordam beradi — toʻgʻri avtorizatsiya yoʻlini aniqlash va ariza paketlarini tayyorlashdan tortib, toʻxtatib qoʻyishlarni boshqarish, oʻzgartirish kiritish va tartibga soluvchi nizolarni hal etishgacha.",
       },
     ],
     faq: [
       {
-        question: "O'zbekistondagi biznes uchun qanday uchta avtorizatsiya yo'nalishi mavjud?",
-        answer: "OʻRQ-701-sonli Qonun uchta yo'nalishni belgilaydi: (1) Litsenziyalash — cheklovlarsiz amalga oshirilishi sog'liq, xavfsizlik yoki atrof-muhitga zarar etkazishi mumkin bo'lgan faoliyat turlari uchun majburiy (1-ilova); (2) Ruxsat hujjatlari — 2-ilovadagi faoliyat turlari uchun yengilroq avtorizatsiya shakli, oldindan tasdiqlashni talab qiladi; (3) Xabarnomalar — eng moslashuvchan yo'nalish: faoliyatni boshlamasdan oldin organni xabardor qiling — tasdiqlash talab etilmaydi (3-ilova). Barcha arizalar «Litsenziya» tizimi (license.gov.uz) yoki EPAGU portali orqali elektron raqamli imzo bilan taqdim etiladi.",
+        question: "Oʻzbekistondagi biznes uchun qanday uchta avtorizatsiya yoʻnalishi mavjud?",
+        answer: "OʻRQ-701-sonli Qonun uchta yoʻnalishni belgilaydi: (1) Litsenziyalash — cheklovlarsiz amalga oshirilishi sogʻliq, xavfsizlik yoki atrof-muhitga zarar etkazishi mumkin boʻlgan faoliyat turlari uchun majburiy (1-ilova); (2) Ruxsat hujjatlari — 2-ilovadagi faoliyat turlari uchun yengilroq avtorizatsiya shakli, oldindan tasdiqlashni talab qiladi; (3) Xabarnomalar — eng moslashuvchan yoʻnalish: faoliyatni boshlamasdan oldin organni xabardor qiling — tasdiqlash talab etilmaydi (3-ilova). Barcha arizalar «Litsenziya» tizimi (license.gov.uz) yoki EPAGU portali orqali elektron raqamli imzo bilan taqdim etiladi.",
       },
       {
-        question: "O'zbekistonda litsenziya yoki ruxsat hujjatini olish qancha vaqt oladi?",
-        answer: "Vakolatli organ ariza sanasidan boshlab 20 ish kuni ichida litsenziya yoki ruxsat hujjatini berishi yoki berishdan bosh tortishi shart. Belgilangan muddatda qaror qabul qilinmasa, ariza beruvchi organni elektron tarzda xabardor qilib faoliyatni boshlash huquqiga ega. Hujjatlar to'liq bo'lmagan taqdirda ariza beruvchiga ularni bartaraf qilish uchun 30 ish kunigacha vaqt beriladi. Qaror bir kun ichida «Litsenziya» tizimida joylashtiriladi, ariza beruvchi esa bir ish soati ichida xabardor qilinadi.",
+        question: "Oʻzbekistonda litsenziya yoki ruxsat hujjatini olish qancha vaqt oladi?",
+        answer: "Vakolatli organ ariza sanasidan boshlab 20 ish kuni ichida litsenziya yoki ruxsat hujjatini berishi yoki berishdan bosh tortishi shart. Belgilangan muddatda qaror qabul qilinmasa, ariza beruvchi organni elektron tarzda xabardor qilib faoliyatni boshlash huquqiga ega. Hujjatlar toʻliq boʻlmagan taqdirda ariza beruvchiga ularni bartaraf qilish uchun 30 ish kunigacha vaqt beriladi. Qaror bir kun ichida «Litsenziya» tizimida joylashtiriladi, ariza beruvchi esa bir ish soati ichida xabardor qilinadi.",
       },
       {
-        question: "O'zbekistonda litsenziya berishdan qanday asoslarda bosh tortilishi mumkin?",
-        answer: "Litsenziya yoki ruxsat hujjati faqat uchta asosda rad etilishi mumkin: to'liq bo'lmagan hujjatlar; noto'g'ri yoki buzib ko'rsatilgan ma'lumotlar; litsenziya shartlariga mos kelmaslik. Boshqa asoslarda — jumladan «maqsadga muvofiq emaslik» sababli — rad etishga qonun bo'yicha yo'l qo'yilmaydi. Hujjatlar to'liq bo'lmagan taqdirda ariza beruvchiga ularni bartaraf qilish uchun 30 ish kunigacha vaqt beriladi.",
+        question: "Oʻzbekistonda litsenziya berishdan qanday asoslarda bosh tortilishi mumkin?",
+        answer: "Litsenziya yoki ruxsat hujjati faqat uchta asosda rad etilishi mumkin: toʻliq boʻlmagan hujjatlar; notoʻgʻri yoki buzib koʻrsatilgan maʼlumotlar; litsenziya shartlariga mos kelmaslik. Boshqa asoslarda — jumladan «maqsadga muvofiq emaslik» sababli — rad etishga qonun boʻyicha yoʻl qoʻyilmaydi. Hujjatlar toʻliq boʻlmagan taqdirda ariza beruvchiga ularni bartaraf qilish uchun 30 ish kunigacha vaqt beriladi.",
       },
       {
-        question: "O'zbekistonda litsenziyasiz faoliyat yuritganlik uchun qanday jarimalar qo'llaniladi?",
-        answer: "Jismoniy shaxslar Ma'muriy javobgarlik to'g'risidagi kodeksning 165, 176³ va 241⁵-moddalari bo'yicha ma'muriy va Jinoyat kodeksining 190 va 192⁵-moddalari bo'yicha jinoiy javobgarlikka tortiladi. Yuridik shaxslar Qonunning 4-ilovasida belgilangan jarimalar to'laydi. Tashkilot jarimasining 70%ini ixtiyoriy to'lasa va shu bilan birga zarur litsenziyaga ariza bersa, qolgan 30% bekor qilinadi. To'lanmagan jarimalar 5 ish kuni ichida sudga o'tkaziladi.",
+        question: "Oʻzbekistonda litsenziyasiz faoliyat yuritganlik uchun qanday jarimalar qoʻllaniladi?",
+        answer: "Jismoniy shaxslar Maʼmuriy javobgarlik toʻgʻrisidagi kodeksning 165, 176³ va 241⁵-moddalari boʻyicha maʼmuriy va Jinoyat kodeksining 190 va 192⁵-moddalari boʻyicha jinoiy javobgarlikka tortiladi. Yuridik shaxslar Qonunning 4-ilovasida belgilangan jarimalar toʻlaydi. Tashkilot jarimasining 70%ini ixtiyoriy toʻlasa va shu bilan birga zarur litsenziyaga ariza bersa, qolgan 30% bekor qilinadi. Toʻlanmagan jarimalar 5 ish kuni ichida sudga oʻtkaziladi.",
       },
     ],
   },

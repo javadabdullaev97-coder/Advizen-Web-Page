@@ -230,20 +230,20 @@ const article: Record<string, LocalizedArticle> = {
     ],
     faq: [
       {
-        question: "O'zbekistonda o'zini-o'zi band qiluvchi sifatida qanday ro'yxatdan o'tish mumkin?",
-        answer: "O'zbekistonda o'zini-o'zi band qiluvchi sifatida ro'yxatdan o'tish Soliq mobil ilovasi yoki soliq to'lovchining shaxsiy kabineti orqali amalga oshiriladi — bu bir necha daqiqa vaqt oladi, davlat boji to'lanmaydi va maqom dalili sifatida QR-kod beriladi. Vaqtinchalik mehnat sertifikati talab qilinmaydi.",
+        question: "Oʻzbekistonda oʻzini-oʻzi band qiluvchi sifatida qanday roʻyxatdan oʻtish mumkin?",
+        answer: "Oʻzbekistonda oʻzini-oʻzi band qiluvchi sifatida roʻyxatdan oʻtish Soliq mobil ilovasi yoki soliq toʻlovchining shaxsiy kabineti orqali amalga oshiriladi — bu bir necha daqiqa vaqt oladi, davlat boji toʻlanmaydi va maqom dalili sifatida QR-kod beriladi. Vaqtinchalik mehnat sertifikati talab qilinmaydi.",
       },
       {
-        question: "O'zbekistonda o'zini-o'zi band qiluvchilar qanday soliqlar to'laydi?",
-        answer: "O'zbekistonda o'zini-o'zi band qiluvchilar yillik 100 mln so'mgacha bo'lgan daromadga jismoniy shaxslar daromad solig'idan ozod. Bu chegara oshirilsa, yakka tartibdagi tadbirkorlar kabi 4% aylanma soliq stavkasi qo'llaniladi. To'liq buxgalteriya hisobi yuritish shart emas.",
+        question: "Oʻzbekistonda oʻzini-oʻzi band qiluvchilar qanday soliqlar toʻlaydi?",
+        answer: "Oʻzbekistonda oʻzini-oʻzi band qiluvchilar yillik 100 mln soʻmgacha boʻlgan daromadga jismoniy shaxslar daromad soligʻidan ozod. Bu chegara oshirilsa, yakka tartibdagi tadbirkorlar kabi 4% aylanma soliq stavkasi qoʻllaniladi. Toʻliq buxgalteriya hisobi yuritish shart emas.",
       },
       {
-        question: "O'zbekistonda o'zini-o'zi band qilish maqomi uchun qanday faoliyat turlari ruxsat etilgan?",
-        answer: "100 dan ortiq faoliyat turi ruxsat etilgan: repetitorlik, IT xizmatlari, kreativ kasblar, bolalar parvarishi, hunarmandchilik va qishloq xo'jaligi ishlari. Bir vaqtning o'zida uchta faoliyatgacha ro'yxatdan o'tish mumkin.",
+        question: "Oʻzbekistonda oʻzini-oʻzi band qilish maqomi uchun qanday faoliyat turlari ruxsat etilgan?",
+        answer: "100 dan ortiq faoliyat turi ruxsat etilgan: repetitorlik, IT xizmatlari, kreativ kasblar, bolalar parvarishi, hunarmandchilik va qishloq xoʻjaligi ishlari. Bir vaqtning oʻzida uchta faoliyatgacha roʻyxatdan oʻtish mumkin.",
       },
       {
-        question: "O'zbekistondagi o'zini-o'zi band qiluvchilar pensiyaga badallar to'lashi mumkinmi?",
-        answer: "Ha. O'zini-o'zi band qiluvchilar kamida 1 Bazaviy hisoblash miqdori (BHM) miqdorida yillik ijtimoiy soliqni har yil 31 dekabrgacha to'lab, davlat Pensiya jamg'armasiga ixtiyoriy ravishda badal qo'shishlari mumkin.",
+        question: "Oʻzbekistondagi oʻzini-oʻzi band qiluvchilar pensiyaga badallar toʻlashi mumkinmi?",
+        answer: "Ha. Oʻzini-oʻzi band qiluvchilar kamida 1 Bazaviy hisoblash miqdori (BHM) miqdorida yillik ijtimoiy soliqni har yil 31 dekabrgacha toʻlab, davlat Pensiya jamgʻarmasiga ixtiyoriy ravishda badal qoʻshishlari mumkin.",
       },
     ],
   },

@@ -248,7 +248,7 @@ const article: Record<string, LocalizedArticle> = {
     ],
     faq: [
       {
-        question: "Oʻzbekistonda franchayzing shartnomalari roʻyxatga olinishi shart bo'ladimi?",
+        question: "Oʻzbekistonda franchayzing shartnomalari roʻyxatga olinishi shart boʻladimi?",
         answer: "Ha. Barcha franchayzing shartnomalari va ularga muhim oʻzgartirishlar ikkita organda roʻyxatga olinishi kerak: birlamchi roʻyxatga olishni odatda bir ish kuni ichida amalga oshiradigan Davlat xizmatlari markazida (DXM) va intellektual mulk huquqlari oʻtkazilishini (masalan, tovar belgilari) roʻyxatga oladigan Adliya vazirligi huzuridagi Intellektual mulk boshqarmasida. Roʻxatga olinmagan shartnoma yuridik jihatdan haqiqiy emas hisoblanadi.",
       },
       {

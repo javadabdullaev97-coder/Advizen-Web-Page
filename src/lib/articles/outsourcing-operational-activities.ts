@@ -206,20 +206,20 @@ const article: Record<string, LocalizedArticle> = {
     ],
     faq: [
       {
-        question: "O'zbekistonda qaysi biznes funksiyalarini autsorsinga topshirish mumkin?",
-        answer: "O'zbekistondagi kompaniyalar odatda buxgalteriya, soliq muvofiqlik, yuridik maslahat, HR boshqaruv, ish haqi hisoblash va bojxona rasmiylashtirishni autsorsinga topshiradilar. Mutaxassislik va doimiy tartibga solish muvofiqligini talab qiladigan har qanday asosiy bo'lmagan funksiya autsorsing uchun yaxshi nomzoddir.",
+        question: "Oʻzbekistonda qaysi biznes funksiyalarini autsorsinga topshirish mumkin?",
+        answer: "Oʻzbekistondagi kompaniyalar odatda buxgalteriya, soliq muvofiqlik, yuridik maslahat, HR boshqaruv, ish haqi hisoblash va bojxona rasmiylashtirishni autsorsinga topshiradilar. Mutaxassislik va doimiy tartibga solish muvofiqligini talab qiladigan har qanday asosiy boʻlmagan funksiya autsorsing uchun yaxshi nomzoddir.",
       },
       {
-        question: "O'zbekistonda autsorsing muvofiqlik funksiyalari uchun yuridik mas'uliyatni provayderga o'tkazadimi?",
-        answer: "Ha. Buxgalteriya yoki HR boshqaruv kabi muvofiqlik funksiyalari autsorsinga topshirilganda, xizmat ko'rsatuvchi tartibga solish talablariga rioya qilish uchun mas'uliyatni o'z zimmasiga oladi. Bu O'zbekistonning doimo o'zgarib turadigan soliq va mehnat qonunchiligi sharoitida kompaniyaning jarimalarga duchor bo'lish xavfini sezilarli darajada kamaytiradi.",
+        question: "Oʻzbekistonda autsorsing muvofiqlik funksiyalari uchun yuridik masʼuliyatni provayderga oʻtkazadimi?",
+        answer: "Ha. Buxgalteriya yoki HR boshqaruv kabi muvofiqlik funksiyalari autsorsinga topshirilganda, xizmat koʻrsatuvchi tartibga solish talablariga rioya qilish uchun masʼuliyatni oʻz zimmasiga oladi. Bu Oʻzbekistonning doimo oʻzgarib turadigan soliq va mehnat qonunchiligi sharoitida kompaniyaning jarimalarga duchor boʻlish xavfini sezilarli darajada kamaytiradi.",
       },
       {
-        question: "O'zbekistonda autsorsing va to'liq shtatlı xodim yollash o'rtasidagi farq nima?",
-        answer: "Autsorsing mehnat shartnomalari, ijtimoiy to'lovlar, ofis joyi, dasturiy ta'minot va o'qitish xarajatlarini bartaraf etadi. Shtatlı xodimlardan farqli o'laroq, autsorsing mutaxassislari operatsiyalarni buzadigan kasallik yoki ta'tilga chiqishmaydi. Bundan tashqari, autsorsing masshtablanadigan — xizmatlar ishga olish yoki qisqartirish murakkabliklarisiz biznes ehtiyojlariga muvofiq sozlanishi mumkin.",
+        question: "Oʻzbekistonda autsorsing va toʻliq shtatlı xodim yollash oʻrtasidagi farq nima?",
+        answer: "Autsorsing mehnat shartnomalari, ijtimoiy toʻlovlar, ofis joyi, dasturiy taʼminot va oʻqitish xarajatlarini bartaraf etadi. Shtatlı xodimlardan farqli oʻlaroq, autsorsing mutaxassislari operatsiyalarni buzadigan kasallik yoki taʼtilga chiqishmaydi. Bundan tashqari, autsorsing masshtablanadigan — xizmatlar ishga olish yoki qisqartirish murakkabliklarisiz biznes ehtiyojlariga muvofiq sozlanishi mumkin.",
       },
       {
-        question: "O'zbekistonda qaysi kompaniyalar autsorsingdan ko'proq foyda oladi?",
-        answer: "O'zbekiston bozoriga kirayotgan xorijiy investitsiyali kompaniyalar, to'liq ichki bo'limlarni oqlash uchun hajmi etarli bo'lmagan kichik va o'rta korxonalar, hamda tezda operatsiyalarni kengaytirishga muhtoj tez o'sib borayotgan biznes eng ko'p foyda oladi. Autsorsing bu tashkilotlarga ichki jamoalar tuzishning qo'shimcha xarajatlarisiz darhol mutaxassis ekspertizasiga ega bo'lish imkonini beradi.",
+        question: "Oʻzbekistonda qaysi kompaniyalar autsorsingdan koʻproq foyda oladi?",
+        answer: "Oʻzbekiston bozoriga kirayotgan xorijiy investitsiyali kompaniyalar, toʻliq ichki boʻlimlarni oqlash uchun hajmi etarli boʻlmagan kichik va oʻrta korxonalar, hamda tezda operatsiyalarni kengaytirishga muhtoj tez oʻsib borayotgan biznes eng koʻp foyda oladi. Autsorsing bu tashkilotlarga ichki jamoalar tuzishning qoʻshimcha xarajatlarisiz darhol mutaxassis ekspertizasiga ega boʻlish imkonini beradi.",
       },
     ],
   },

@@ -2,7 +2,7 @@
   "Home": {
     "geography": {
       "eyebrow": "Faoliyat hududi",
-      "heading": "Butun O'zbekiston — yagona konsalting hamkordan",
+      "heading": "Butun Oʻzbekiston — yagona konsalting hamkordan",
       "panel": {
         "population": "Aholi",
         "regionalGdp": "Hudud YaIMi",
@@ -11,7 +11,7 @@
         "hint": "Hududni bosing yoki kursorni ustida biroz ushlab turing."
       },
       "regions": {
-        "UZ-QR": "Qoraqalpog'iston Respublikasi",
+        "UZ-QR": "Qoraqalpogʻiston Respublikasi",
         "UZ-AN": "Andijon viloyati",
         "UZ-BU": "Buxoro viloyati",
         "UZ-JI": "Jizzax viloyati",
@@ -22,7 +22,7 @@
         "UZ-SU": "Surxondaryo viloyati",
         "UZ-SI": "Sirdaryo viloyati",
         "UZ-TO": "Toshkent viloyati",
-        "UZ-FA": "Farg'ona viloyati",
+        "UZ-FA": "Fargʻona viloyati",
         "UZ-XO": "Xorazm viloyati",
         "UZ-TK": "Toshkent shahri"
       }
@@ -30,34 +30,34 @@
   },
   "AdvisorySection": {
     "eyebrow": "Konsalting",
-    "heading": "Siz maslahat olasiz — biz yo'naltiramiz",
-    "description": "Soliq, huquq, moliya, HR, moliyalashtirish, M&A va due diligence bo'yicha strategik rahbarlik. Qarorlar siznikida; biz tahlil chuqurligini ta'minlaymiz.",
+    "heading": "Siz maslahat olasiz — biz yoʻnaltiramiz",
+    "description": "Soliq, huquq, moliya, HR, moliyalashtirish, M&A va due diligence boʻyicha strategik rahbarlik. Qarorlar siznikida; biz tahlil chuqurligini taʼminlaymiz.",
     "advisoryLabel": "Konsalting",
-    "whoThisIsFor": "Bu kimga mo'ljallangan",
+    "whoThisIsFor": "Bu kimga moʻljallangan",
     "capabilities": "Imkoniyatlar",
-    "relatedReading": "Mavzu bo'yicha"
+    "relatedReading": "Mavzu boʻyicha"
   },
   "OperationsSection": {
     "eyebrow": "Operatsiyalar",
     "heading": "Siz topshirasiz — biz bajaramiz",
-    "description": "Biz ijroni o'z zimmamizga oladigan to'liq boshqariladigan xizmatlar — bitta shartnoma, bitta aloqa nuqtasi, to'liq muvofiqlik.",
+    "description": "Biz ijroni oʻz zimmamizga oladigan toʻliq boshqariladigan xizmatlar — bitta shartnoma, bitta aloqa nuqtasi, toʻliq muvofiqlik.",
     "operationsLabel": "Operatsiyalar",
-    "whoThisIsFor": "Bu kimga mo'ljallangan",
+    "whoThisIsFor": "Bu kimga moʻljallangan",
     "servicesCount": "{count} xizmat",
     "capabilities": "Imkoniyatlar",
-    "relatedReading": "Mavzu bo'yicha"
+    "relatedReading": "Mavzu boʻyicha"
   },
   "HomeModern": {
     "hero": {
       "title": "Toshkentda konsalting: soliq, huquq, buxgalteriya",
-      "lede": "O'zbekistonda faoliyat boshlayotgan va yuritayotgan kompaniyalar uchun bitta jamoa: soliq, huquq, buxgalteriya, kadrlar va moliyalashtirish, bitta hamkor boshchiligida. O'zbek, rus yoki ingliz tilida.",
+      "lede": "Oʻzbekistonda faoliyat boshlayotgan va yuritayotgan kompaniyalar uchun bitta jamoa: soliq, huquq, buxgalteriya, kadrlar va moliyalashtirish, bitta hamkor boshchiligida. Oʻzbek, rus yoki ingliz tilida.",
       "book": "Konsultatsiyaga yozilish",
       "telegram": "Telegram orqali yozish",
       "imageAlt": "Kechki Toshkent"
     },
     "services": {
-      "title": "Barcha yo'nalishlar, bitta aloqa",
-      "lede": "Odatda mijozning yuristi, buxgalteri va soliq maslahatchisi bir-biri bilan gaplashmaydi. Bizda ular bitta jamoa, shuning uchun soliqni tejaydigan tuzilma huquqiy tekshiruvdan ham o'tadi.",
+      "title": "Barcha yoʻnalishlar, bitta aloqa",
+      "lede": "Odatda mijozning yuristi, buxgalteri va soliq maslahatchisi bir-biri bilan gaplashmaydi. Bizda ular bitta jamoa, shuning uchun soliqni tejaydigan tuzilma huquqiy tekshiruvdan ham oʻtadi.",
       "tax": {
         "title": "Soliq maslahati",
         "text": "Xorijiy kapitalli kompaniyalar, xoldinglar va transchegaraviy operatsiyalar uchun rejalashtirish, hisobot va tuzilma. Tuzilmangizga qaysi rejim va imtiyozlar mos kelishini aytamiz."
@@ -65,7 +65,7 @@
       "rates": [
         {
           "fig": "15%",
-          "label": "foyda solig'i"
+          "label": "foyda soligʻi"
         },
         {
           "fig": "12%",
@@ -73,7 +73,7 @@
         },
         {
           "fig": "12%",
-          "label": "jismoniy shaxslar daromad solig'i"
+          "label": "jismoniy shaxslar daromad soligʻi"
         },
         {
           "fig": "12%",
@@ -82,11 +82,11 @@
       ],
       "legal": {
         "title": "Yuridik xizmatlar",
-        "text": "Kompaniya ochish, shartnomalar, korporativ boshqaruv va O'zbekiston qonunchiligiga muvofiqlik."
+        "text": "Kompaniya ochish, shartnomalar, korporativ boshqaruv va Oʻzbekiston qonunchiligiga muvofiqlik."
       },
       "accounting": {
         "title": "Buxgalteriya",
-        "text": "Buxgalteriya hisobi, MHXS va milliy standartlar bo'yicha hisobot, majburiy hisobotlar."
+        "text": "Buxgalteriya hisobi, MHXS va milliy standartlar boʻyicha hisobot, majburiy hisobotlar."
       },
       "hr": {
         "title": "Kadrlar va ish haqi",
@@ -104,35 +104,35 @@
     },
     "track": {
       "title": "Maslahatchilarimiz olib borgan loyihalar",
-      "lede": "Atom elektr stansiyasi byudjetidan islomiy moliya qonunchiligigacha: o'n beshta loyihadan oltitasi.",
+      "lede": "Atom elektr stansiyasi byudjetidan islomiy moliya qonunchiligigacha: oʻn beshta loyihadan oltitasi.",
       "law": "Qonun",
       "foot": "Advizen maslahatchilari olib borgan loyihalar. Mijozlar nomi oshkor qilinmaydi.",
       "all": "Barcha 15 ta loyiha"
     },
     "regions": {
-      "title": "O'n to'rtta hudud, bitta maslahatchi",
-      "lede": "Erkin iqtisodiy zonalar, hududiy imtiyozlar va ro'yxatdan o'tkazish amaliyoti hududga qarab farq qiladi. Rejalaringizga mosligini ko'rish uchun hududni tanlang."
+      "title": "Oʻn toʻrtta hudud, bitta maslahatchi",
+      "lede": "Erkin iqtisodiy zonalar, hududiy imtiyozlar va roʻyxatdan oʻtkazish amaliyoti hududga qarab farq qiladi. Rejalaringizga mosligini koʻrish uchun hududni tanlang."
     },
     "insights": {
-      "title": "Investitsiyadan oldin o'qing",
-      "lede": "O'zbekiston soliqlari, huquqi va tartibga solinishi bo'yicha sodda tilda yozilgan tahlillar, bunday loyihalarni o'zi olib boradigan maslahatchilardan.",
+      "title": "Investitsiyadan oldin oʻqing",
+      "lede": "Oʻzbekiston soliqlari, huquqi va tartibga solinishi boʻyicha sodda tilda yozilgan tahlillar, bunday loyihalarni oʻzi olib boradigan maslahatchilardan.",
       "all": "Barcha maqolalar",
-      "guideMeta": "Asosiy qo'llanma · 2026 nashri",
+      "guideMeta": "Asosiy qoʻllanma · 2026 nashri",
       "guideTitle": "Doing Business in Uzbekistan",
-      "guideText": "Bozorga kirish, tartibga solish va kundalik faoliyat: xorijiy investorlar uchun bitta qo'llanmada.",
-      "guideCta": "Qo'llanmani so'rash",
-      "read": "O'qish"
+      "guideText": "Bozorga kirish, tartibga solish va kundalik faoliyat: xorijiy investorlar uchun bitta qoʻllanmada.",
+      "guideCta": "Qoʻllanmani soʻrash",
+      "read": "Oʻqish"
     },
     "contact": {
       "title": "Suhbatdan boshlang",
-      "lede": "Rejalaringiz haqida o'zbek, rus yoki ingliz tilida yozing.",
+      "lede": "Rejalaringiz haqida oʻzbek, rus yoki ingliz tilida yozing.",
       "book": "Konsultatsiyaga yozilish",
       "phone": "Telefon",
       "email": "Elektron pochta",
       "hoursValue": "Du–Ju, 9:00–18:00 (Toshkent)",
       "steps": [
         {
-          "title": "Tanishuv qo'ng'irog'i",
+          "title": "Tanishuv qoʻngʻirogʻi",
           "text": "Nima rejalashtirayotganingizni va birinchi navbatda qaysi savollarga javob kerakligini bilib olamiz."
         },
         {
@@ -144,7 +144,7 @@
           "text": "Soliq, yuridik va buxgalteriya ishlari bitta aloqa orqali olib boriladi."
         }
       ],
-      "direct": "Yoki bizga to'g'ridan-to'g'ri yozing"
+      "direct": "Yoki bizga toʻgʻridan-toʻgʻri yozing"
     }
   }
 }

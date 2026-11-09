@@ -29,9 +29,9 @@ const localeMetadata: Record<Locale, { title: string; description: string; ogLoc
     ogLocale: "ru_RU",
   },
   uz: {
-    title: "O'zbekistonda soliq, yuridik va buxgalteriya maslahati | Advizen",
+    title: "Oʻzbekistonda soliq, yuridik va buxgalteriya maslahati | Advizen",
     description:
-      "O'zbekistonga kirib kelayotgan va faoliyat yuritayotgan kompaniyalar uchun soliq, yuridik, buxgalteriya va HR xizmatlari. Bitta jamoa va bitta mas'ul hamkor.",
+      "Oʻzbekistonga kirib kelayotgan va faoliyat yuritayotgan kompaniyalar uchun soliq, yuridik, buxgalteriya va HR xizmatlari. Bitta jamoa va bitta masʼul hamkor.",
     ogLocale: "uz_UZ",
   },
 };

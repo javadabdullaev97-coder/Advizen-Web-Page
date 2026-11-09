@@ -452,9 +452,9 @@ const article: Record<string, LocalizedArticle> = {
     },
   },
   uz: {
-    subtitle: "2019 yilgi prezident islohotidan keyin O'zbekistondagi tijorat tashkilotlari uchun ixtiyoriy tugatishning soddalashtirilgan tartibi bo'yicha amaliy qo'llanma.",
+    subtitle: "2019 yilgi prezident islohotidan keyin Oʻzbekistondagi tijorat tashkilotlari uchun ixtiyoriy tugatishning soddalashtirilgan tartibi boʻyicha amaliy qoʻllanma.",
     author: "Advizen Legal Practice",
-    readTime: "8 daqiqa o'qish",
+    readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "PF-5739", label: "Ixtiyoriy tugatishni soddalashtirgan 2019-yil 7-iyundagi Prezident Farmoni" },
@@ -472,85 +472,85 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "O'zbekistonda biznes faoliyatini tugatish belgilangan ketma-ketlikdagi majburiy bosqichlardan iborat. 2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoni kuchga kirgandan beri ixtiyoriy tugatish tartibi sezilarli darajada soddalashtirildi: tugatish to'g'risidagi e'lonni bosma OAVda chop etish endi talab qilinmaydi; butun jarayon Davlat xizmatlari markazining avtomatlashtirilgan tizimi orqali boshqariladi; ixtiyoriy tugatishning umumiy muddati Markaz tugatish to'g'risidagi xabarnomani olgan kundan boshlab olti oydan oshmasligi kerak.",
+        text: "Oʻzbekistonda biznes faoliyatini tugatish belgilangan ketma-ketlikdagi majburiy bosqichlardan iborat. 2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoni kuchga kirgandan beri ixtiyoriy tugatish tartibi sezilarli darajada soddalashtirildi: tugatish toʻgʻrisidagi eʼlonni bosma OAVda chop etish endi talab qilinmaydi; butun jarayon Davlat xizmatlari markazining avtomatlashtirilgan tizimi orqali boshqariladi; ixtiyoriy tugatishning umumiy muddati Markaz tugatish toʻgʻrisidagi xabarnomani olgan kundan boshlab olti oydan oshmasligi kerak.",
       },
       { type: "h2" as const, text: "Qonunchilik bazasi" },
       {
         type: "ul" as const,
         items: [
-          "2019 yil 7 iyundagi «Tadbirkorlik subyektlarini tugatish tartibini soddalashtirish chora-tadbirlari to'g'risida»gi PF-5739-sonli Prezident Farmoni",
-          "Vazirlar Mahkamasining 2019 yil 21 avgustdagi 704-sonli Qarori, 1-ilova «Tadbirkorlik subyektlarini ixtiyoriy tugatish va ularning faoliyatini to'xtatish tartibi to'g'risida Nizom»",
+          "2019 yil 7 iyundagi «Tadbirkorlik subyektlarini tugatish tartibini soddalashtirish chora-tadbirlari toʻgʻrisida»gi PF-5739-sonli Prezident Farmoni",
+          "Vazirlar Mahkamasining 2019 yil 21 avgustdagi 704-sonli Qarori, 1-ilova «Tadbirkorlik subyektlarini ixtiyoriy tugatish va ularning faoliyatini toʻxtatish tartibi toʻgʻrisida Nizom»",
         ],
       },
       { type: "h2" as const, text: "2019 yilda kiritilgan asosiy soddalashtirishlar" },
       {
         type: "ul" as const,
         items: [
-          "Gazetada chop etish talab qilinmaydi — tugatish to'g'risidagi e'lonlar Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi.",
-          "Agar kompaniya ro'yxatdan o'tgandan beri hech qanday xo'jalik faoliyati yuritmagan bo'lsa va soliq qarzlari bo'lmasa, moliyaviy audit talab qilinmaydi.",
+          "Gazetada chop etish talab qilinmaydi — tugatish toʻgʻrisidagi eʼlonlar Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi.",
+          "Agar kompaniya roʻyxatdan oʻtgandan beri hech qanday xoʻjalik faoliyati yuritmagan boʻlsa va soliq qarzlari boʻlmasa, moliyaviy audit talab qilinmaydi.",
           "Tugatilayotgan tashkilotning soliq tekshiruvlari maksimal uch yilni qamrab oladi.",
-          "Tugatish ma'lumotlari yagona avtomatlashtirilgan biznes ro'yxatga olish tizimi orqali qayta ishlanadi.",
+          "Tugatish maʼlumotlari yagona avtomatlashtirilgan biznes roʻyxatga olish tizimi orqali qayta ishlanadi.",
           "Maksimal tugatish muddati: xabardor qilish kunidan boshlab olti oy.",
         ],
       },
-      { type: "h2" as const, text: "Qo'llanish doirasi — tartib kimga nisbatan qo'llanilmaydi" },
+      { type: "h2" as const, text: "Qoʻllanish doirasi — tartib kimga nisbatan qoʻllanilmaydi" },
       {
         type: "p" as const,
-        text: "Soddalashtirilgan ixtiyoriy tugatish tartibi quyidagilarga nisbatan qo'llanilmaydi:",
+        text: "Soddalashtirilgan ixtiyoriy tugatish tartibi quyidagilarga nisbatan qoʻllanilmaydi:",
       },
       {
         type: "ul" as const,
         items: [
           "Banklar, kredit byurolari va ularning filiallari hamda vakolatxonalari",
           "Shahar shakllantiruvchi tijorat tashkilotlari va ularga tenglashtirilgan subyektlar",
-          "Davlat organlari, notijorat nodavlat tashkilotlari (jumladan, ularning huquqiy jihatdan ajratilgan tarkibiy bo'linmalari) va xalqaro hamda xorijiy NNTlarning vakolatxonalari",
-          "Amaldagi qonunchilikka muvofiq to'lovga qobiliyatsizlik belgilariga ega tijorat tashkilotlari",
+          "Davlat organlari, notijorat nodavlat tashkilotlari (jumladan, ularning huquqiy jihatdan ajratilgan tarkibiy boʻlinmalari) va xalqaro hamda xorijiy NNTlarning vakolatxonalari",
+          "Amaldagi qonunchilikka muvofiq toʻlovga qobiliyatsizlik belgilariga ega tijorat tashkilotlari",
         ],
       },
       { type: "h2" as const, text: "Bosqichma-bosqich tartib" },
-      { type: "h3" as const, text: "1-bosqich — Tugatish to'g'risida qaror qabul qilish" },
+      { type: "h3" as const, text: "1-bosqich — Tugatish toʻgʻrisida qaror qabul qilish" },
       {
         type: "p" as const,
-        text: "Qaror ta'sischi(lar), ishtirokchilar yoki vakolatli boshqaruv organi tomonidan qabul qilinadi. Qarorda quyidagilar ko'rsatilishi shart: tashkilotning to'liq va qisqa nomi, INN va pochta manzili; tugatuvchining pasport ma'lumotlari, telefon raqami va elektron pochtasi; kreditorlar talablarini qabul qilish joyi va muddati; tugatish sababi. Yakka tartibdagi tadbirkor uchun shaxsiy yozma ariza yetarli.",
+        text: "Qaror taʼsischi(lar), ishtirokchilar yoki vakolatli boshqaruv organi tomonidan qabul qilinadi. Qarorda quyidagilar koʻrsatilishi shart: tashkilotning toʻliq va qisqa nomi, INN va pochta manzili; tugatuvchining pasport maʼlumotlari, telefon raqami va elektron pochtasi; kreditorlar talablarini qabul qilish joyi va muddati; tugatish sababi. Yakka tartibdagi tadbirkor uchun shaxsiy yozma ariza yetarli.",
       },
       { type: "h3" as const, text: "2-bosqich — Tugatuvchini tayinlash" },
       {
         type: "p" as const,
-        text: "Tayinlangan paytdan boshlab barcha boshqaruv vakolatlari tugatuvchiga o'tadi, u esa ta'sischilar/ishtirokchilardan biri yoki ta'sischi tomonidan tayinlangan tugatish komissiyasi bo'lishi shart. Komissiya tashkil etilgan taqdirda qarorlar oddiy ko'pchilik ovoz bilan qabul qilinadi; raisning ovozi hal qiluvchi hisoblanadi. Tugatuvchining vakolatlari quyidagilarni o'z ichiga oladi: tugatishni amalga oshirish va kreditorlar hamda ishtirokchilar manfaatlarini himoya qilish; kompaniya qarzdor bo'lgan ijro hujjatlarini boshqarish; barcha moliyaviy va operatsion hujjatlarni ishonchnomasiz imzolash; barcha xodimlar uchun majburiy bo'lgan buyruqlarni chiqarish; ta'sis qarorida nazarda tutilgan boshqa vakolatlar.",
+        text: "Tayinlangan paytdan boshlab barcha boshqaruv vakolatlari tugatuvchiga oʻtadi, u esa taʼsischilar/ishtirokchilardan biri yoki taʼsischi tomonidan tayinlangan tugatish komissiyasi boʻlishi shart. Komissiya tashkil etilgan taqdirda qarorlar oddiy koʻpchilik ovoz bilan qabul qilinadi; raisning ovozi hal qiluvchi hisoblanadi. Tugatuvchining vakolatlari quyidagilarni oʻz ichiga oladi: tugatishni amalga oshirish va kreditorlar hamda ishtirokchilar manfaatlarini himoya qilish; kompaniya qarzdor boʻlgan ijro hujjatlarini boshqarish; barcha moliyaviy va operatsion hujjatlarni ishonchnomasiz imzolash; barcha xodimlar uchun majburiy boʻlgan buyruqlarni chiqarish; taʼsis qarorida nazarda tutilgan boshqa vakolatlar.",
       },
       { type: "h3" as const, text: "3-bosqich — Aktivlar va hujjatlarni tugatuvchiga topshirish" },
       {
         type: "p" as const,
-        text: "Tayinlangan paytdan boshlab uch kun ichida kompaniyaning boshqaruv organlari tugatuvchiga ro'yxat asosida barcha tijorat hujjatlarini, muhrlarni, shtamplarni va boshqa kompaniya mulkini topshirishi shart.",
+        text: "Tayinlangan paytdan boshlab uch kun ichida kompaniyaning boshqaruv organlari tugatuvchiga roʻyxat asosida barcha tijorat hujjatlarini, muhrlarni, shtamplarni va boshqa kompaniya mulkini topshirishi shart.",
       },
       { type: "h3" as const, text: "4-bosqich — Davlat xizmatlari markazini xabardor qilish" },
       {
         type: "p" as const,
-        text: "Tugatish to'g'risidagi qaror qabul qilinganidan boshlab bir ish kuni ichida tugatuvchi uning nusxasini tegishli Davlat xizmatlari markaziga taqdim etadi. Markaz: tugatish maqomini davlat reyestriga kiritadi; soliq organlarini, statistika organini, Ijro byurosini, ko'chmas mulk va transport vositalarini ro'yxatga oluvchi organlarni, Moliya vazirligini va kommunal xizmatlarni avtomatik ravishda xabardor qiladi; o'z saytida tashkilot nomini, INNni, manzilni, qaror sanasi va raqamini hamda kreditorlar talablarni taqdim etish muddatini (kamida ikki oy) ko'rsatuvchi e'lonni e'lon qiladi.",
+        text: "Tugatish toʻgʻrisidagi qaror qabul qilinganidan boshlab bir ish kuni ichida tugatuvchi uning nusxasini tegishli Davlat xizmatlari markaziga taqdim etadi. Markaz: tugatish maqomini davlat reyestriga kiritadi; soliq organlarini, statistika organini, Ijro byurosini, koʻchmas mulk va transport vositalarini roʻyxatga oluvchi organlarni, Moliya vazirligini va kommunal xizmatlarni avtomatik ravishda xabardor qiladi; oʻz saytida tashkilot nomini, INNni, manzilni, qaror sanasi va raqamini hamda kreditorlar talablarni taqdim etish muddatini (kamida ikki oy) koʻrsatuvchi eʼlonni eʼlon qiladi.",
       },
       {
         type: "p" as const,
-        text: "Xabardor qilish sanasidan boshlab xo'jalik faoliyati to'xtatiladi va quyidagi soliqlarning hisoblanishi to'xtatiladi: yer solig'i; yagona yer solig'i; mulk solig'i; suvdan foydalanganlik uchun soliq; barcha soliqlar va majburiy to'lovlar bo'yicha penyalar. Kreditorlarni himoya qilish choralari bekor qilinadi, ustavga o'zgartirishlar kiritish taqiqlanadi, bitimlar tugatish doirasi bilan cheklanadi va barcha majburiyatlar darhol bajarilishi kerak bo'lib qoladi.",
+        text: "Xabardor qilish sanasidan boshlab xoʻjalik faoliyati toʻxtatiladi va quyidagi soliqlarning hisoblanishi toʻxtatiladi: yer soligʻi; yagona yer soligʻi; mulk soligʻi; suvdan foydalanganlik uchun soliq; barcha soliqlar va majburiy toʻlovlar boʻyicha penyalar. Kreditorlarni himoya qilish choralari bekor qilinadi, ustavga oʻzgartirishlar kiritish taqiqlanadi, bitimlar tugatish doirasi bilan cheklanadi va barcha majburiyatlar darhol bajarilishi kerak boʻlib qoladi.",
       },
       { type: "h3" as const, text: "5-bosqich — Banklarni xabardor qilish" },
       {
         type: "p" as const,
-        text: "Qaror qabul qilinganidan boshlab bir ish kuni ichida tugatuvchi tugatish to'g'risidagi qaror nusxasini va imzo/muhr namunalari bilan ikki kartochkani asosiy hisobvaraqni yurituvchi bankka va xorijiy valyuta mablag'larini saqlovchi har qanday bankka jo'natadi. Bir vaqtning o'zida tugatuvchi qo'shimcha hisobvaraqlarga ega bo'lgan barcha boshqa banklarga bu hisobvaraqlarni yopish va qoldiqlarni asosiy hisobvaraqqa o'tkazishni topshiradi.",
+        text: "Qaror qabul qilinganidan boshlab bir ish kuni ichida tugatuvchi tugatish toʻgʻrisidagi qaror nusxasini va imzo/muhr namunalari bilan ikki kartochkani asosiy hisobvaraqni yurituvchi bankka va xorijiy valyuta mablagʻlarini saqlovchi har qanday bankka joʻnatadi. Bir vaqtning oʻzida tugatuvchi qoʻshimcha hisobvaraqlarga ega boʻlgan barcha boshqa banklarga bu hisobvaraqlarni yopish va qoldiqlarni asosiy hisobvaraqqa oʻtkazishni topshiradi.",
       },
-      { type: "h3" as const, text: "6-bosqich — Inventarizatsiya o'tkazish va soliq majburiyatlarini hisoblash" },
+      { type: "h3" as const, text: "6-bosqich — Inventarizatsiya oʻtkazish va soliq majburiyatlarini hisoblash" },
       {
         type: "p" as const,
-        text: "Tugatuvchi aktivlar va majburiyatlarning to'liq inventarizatsiyasini o'tkazadi, bajarilmagan ijro hujjatlari reyestrini tuzadi va yil boshidan Davlat xizmatlari markazini xabardor qilish sanasigacha bo'lgan davr uchun soliq hisob-kitoblarini tayyorlaydi.",
+        text: "Tugatuvchi aktivlar va majburiyatlarning toʻliq inventarizatsiyasini oʻtkazadi, bajarilmagan ijro hujjatlari reyestrini tuzadi va yil boshidan Davlat xizmatlari markazini xabardor qilish sanasigacha boʻlgan davr uchun soliq hisob-kitoblarini tayyorlaydi.",
       },
       { type: "h3" as const, text: "7-bosqich — Soliq organi va Ijro byurosi tekshiruvlari" },
       {
         type: "p" as const,
-        text: "Xabarnomani olgan kundan boshlab 19 ish kuni ichida Ijro byurosi va soliq organi tugatuvchiga bajarilmagan ijro hujjatlarini yuboradi va kompaniyaning moliya-xo'jalik faoliyati tekshiruvini o'tkazadi. Tekshiruv 30 kalendar kun ichida tugatilishi shart va so'nggi tekshiruv sanasidan tugatish to'g'risidagi xabarnoma sanasigacha, lekin uch yildan ko'p bo'lmagan davrdagi faoliyatni qamrab oladi.",
+        text: "Xabarnomani olgan kundan boshlab 19 ish kuni ichida Ijro byurosi va soliq organi tugatuvchiga bajarilmagan ijro hujjatlarini yuboradi va kompaniyaning moliya-xoʻjalik faoliyati tekshiruvini oʻtkazadi. Tekshiruv 30 kalendar kun ichida tugatilishi shart va soʻnggi tekshiruv sanasidan tugatish toʻgʻrisidagi xabarnoma sanasigacha, lekin uch yildan koʻp boʻlmagan davrdagi faoliyatni qamrab oladi.",
       },
       { type: "h3" as const, text: "8-bosqich — Oraliq tugatish balansini tasdiqlash" },
       {
         type: "p" as const,
-        text: "Kreditorlar talablarini taqdim etish muddati tugagandan so'ng tugatuvchi ta'sischilar/ishtirokchilar tomonidan tasdiqlash uchun oraliq tugatish balansi loyihasini tayyorlaydi.",
+        text: "Kreditorlar talablarini taqdim etish muddati tugagandan soʻng tugatuvchi taʼsischilar/ishtirokchilar tomonidan tasdiqlash uchun oraliq tugatish balansi loyihasini tayyorlaydi.",
       },
       { type: "h3" as const, text: "9-bosqich — Kreditorlar talablarini qondirish" },
       {
@@ -560,28 +560,28 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Birinchi navbat: mehnat shartnomalari bo'yicha xodimlar talablari; kompaniya tomonidan jismoniy shaxslarning hayotiga yoki sog'lig'iga yetkazilgan zararni qoplash bo'yicha talablar.",
-          "Ikkinchi navbat: davlat byudjetiga va davlat maqsadli jamg'armalariga to'lovlar.",
+          "Birinchi navbat: mehnat shartnomalari boʻyicha xodimlar talablari; kompaniya tomonidan jismoniy shaxslarning hayotiga yoki sogʻligʻiga yetkazilgan zararni qoplash boʻyicha talablar.",
+          "Ikkinchi navbat: davlat byudjetiga va davlat maqsadli jamgʻarmalariga toʻlovlar.",
           "Uchinchi navbat: barcha qolgan talablar.",
         ],
       },
       {
         type: "p" as const,
-        text: "Garov bilan ta'minlangan talablar garovga qo'yilgan aktivni sotishdan tushgan mablag' hisobidan qondiriladi. Yetishmayotgan summa yuqorida ko'rsatilgan navbatda qoplanadi.",
+        text: "Garov bilan taʼminlangan talablar garovga qoʻyilgan aktivni sotishdan tushgan mablag' hisobidan qondiriladi. Yetishmayotgan summa yuqorida koʻrsatilgan navbatda qoplanadi.",
       },
       { type: "h3" as const, text: "10-bosqich — Yakuniy tugatish balansini tasdiqlash" },
       {
         type: "p" as const,
-        text: "Barcha kreditorlar bilan hisob-kitob qilingach, soliqlar to'langach va qolgan aktivlar ta'sischilar o'rtasida taqsimlangach, tugatuvchi ta'sischilar tomonidan tasdiqlash va soliq organiga taqdim etish uchun yakuniy tugatish balansini tayyorlaydi. Tugatuvchi shuningdek Ijro byurosidan bajarilmagan ijro hujjatlari yo'qligi haqida tasdiq so'raydi.",
+        text: "Barcha kreditorlar bilan hisob-kitob qilingach, soliqlar toʻlangach va qolgan aktivlar taʼsischilar oʻrtasida taqsimlangach, tugatuvchi taʼsischilar tomonidan tasdiqlash va soliq organiga taqdim etish uchun yakuniy tugatish balansini tayyorlaydi. Tugatuvchi shuningdek Ijro byurosidan bajarilmagan ijro hujjatlari yoʻqligi haqida tasdiq soʻraydi.",
       },
       {
         type: "p" as const,
-        text: "Soliq qarzdorligi bo'lmagan taqdirda soliq organi bir ish kuni ichida qarzdorlik yo'qligi to'g'risida ma'lumotnoma beradi va uni Davlat xizmatlari markaziga avtomatik tarzda yuboradi. Ijro byurosi bajarilmagan hujjatlar yo'qligi haqidagi xabarnomani uch ish kuni ichida beradi.",
+        text: "Soliq qarzdorligi boʻlmagan taqdirda soliq organi bir ish kuni ichida qarzdorlik yoʻqligi toʻgʻrisida maʼlumotnoma beradi va uni Davlat xizmatlari markaziga avtomatik tarzda yuboradi. Ijro byurosi bajarilmagan hujjatlar yoʻqligi haqidagi xabarnomani uch ish kuni ichida beradi.",
       },
-      { type: "h3" as const, text: "11-bosqich — Asosiy bank hisobvarag'ini yopish" },
+      { type: "h3" as const, text: "11-bosqich — Asosiy bank hisobvaragʻini yopish" },
       {
         type: "p" as const,
-        text: "Soliq ma'lumotnomasi va Ijro byurosi tasdig'i qo'lga kelgach, tugatuvchi asosiy bank hisobvarag'ini yopish uchun ariza beradi. Sud hibsidagi hisobvaraqni yopish mumkin emas.",
+        text: "Soliq maʼlumotnomasi va Ijro byurosi tasdigʻi qoʻlga kelgach, tugatuvchi asosiy bank hisobvaragʻini yopish uchun ariza beradi. Sud hibsidagi hisobvaraqni yopish mumkin emas.",
       },
       { type: "h3" as const, text: "12-bosqich — Hujjatlarni davlat arxiviga topshirish" },
       {
@@ -591,47 +591,47 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "13-bosqich — Davlat xizmatlari markaziga yakuniy murojaat" },
       {
         type: "p" as const,
-        text: "Ro'yxatdan chiqarishni yakunlash uchun tugatuvchi Davlat xizmatlari markaziga quyidagilarni taqdim etadi: barcha hisobvaraqlarning yopilganligini tasdiqlovchi bank ma'lumotnomalari; kompaniyaning muhrlari va shtamplari; chiqarilgan qimmatli qog'ozlarni bekor qilish to'g'risidagi ma'lumotnoma (mavjud bo'lsa); hujjatlarning davlat arxiviga topshirilganligi haqidagi ma'lumotnoma. Markaz ikki ish kuni ichida barcha talablarning bajarilganligini tekshiradi va tugatish to'g'risidagi yozuvni davlat reyestriga kiritadi. Qaror tugatuvchiga uni qabul qilingan kundan boshlab bir ish kuni ichida beriladi.",
+        text: "Roʻyxatdan chiqarishni yakunlash uchun tugatuvchi Davlat xizmatlari markaziga quyidagilarni taqdim etadi: barcha hisobvaraqlarning yopilganligini tasdiqlovchi bank maʼlumotnomalari; kompaniyaning muhrlari va shtamplari; chiqarilgan qimmatli qogʻozlarni bekor qilish toʻgʻrisidagi maʼlumotnoma (mavjud boʻlsa); hujjatlarning davlat arxiviga topshirilganligi haqidagi maʼlumotnoma. Markaz ikki ish kuni ichida barcha talablarning bajarilganligini tekshiradi va tugatish toʻgʻrisidagi yozuvni davlat reyestriga kiritadi. Qaror tugatuvchiga uni qabul qilingan kundan boshlab bir ish kuni ichida beriladi.",
       },
       { type: "h2" as const, text: "Advizen qanday yordam bera oladi" },
       {
         type: "p" as const,
-        text: "Ixtiyoriy tugatish bir nechta davlat organlari — Davlat xizmatlari markazi, soliq xizmati, Ijro byurosi, banklar va davlat arxivi — bilan qonunda belgilangan qisqa muddatlar ichida muvofiqlashtirishni talab qiladi. Advizen kompaniyalarga tugatish to'g'risidagi qarorni tayyorlash, tugatuvchini tayinlash, kreditorlarni xabardor qilishni boshqarish, soliq majburiyatlarini hal etish va jarayonni yakuniy ro'yxatdan chiqarishgacha olib borishda yordam beradi.",
+        text: "Ixtiyoriy tugatish bir nechta davlat organlari — Davlat xizmatlari markazi, soliq xizmati, Ijro byurosi, banklar va davlat arxivi — bilan qonunda belgilangan qisqa muddatlar ichida muvofiqlashtirishni talab qiladi. Advizen kompaniyalarga tugatish toʻgʻrisidagi qarorni tayyorlash, tugatuvchini tayinlash, kreditorlarni xabardor qilishni boshqarish, soliq majburiyatlarini hal etish va jarayonni yakuniy roʻyxatdan chiqarishgacha olib borishda yordam beradi.",
       },
     ],
       faq: [
       {
-        question: "O'zbekistonda ixtiyoriy tugatish qancha vaqt oladi?",
-        answer: "Maksimal muddat — Davlat xizmatlari markazi tugatish to'g'risidagi xabarnomani olgan kundan boshlab 6 oy. Bu soddalashtirilgan muddat 2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoni bilan kiritilgan va oldingi murakkabroq tartibni almashtirdi. Soddalashtirilgan tartib gazetada e'lon chop etish talabini ham bekor qildi — tugatish to'g'risidagi e'lonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi.",
+        question: "Oʻzbekistonda ixtiyoriy tugatish qancha vaqt oladi?",
+        answer: "Maksimal muddat — Davlat xizmatlari markazi tugatish toʻgʻrisidagi xabarnomani olgan kundan boshlab 6 oy. Bu soddalashtirilgan muddat 2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoni bilan kiritilgan va oldingi murakkabroq tartibni almashtirdi. Soddalashtirilgan tartib gazetada eʼlon chop etish talabini ham bekor qildi — tugatish toʻgʻrisidagi eʼlonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi.",
       },
       {
-        question: "O'zbekistonda ixtiyoriy tugatish uchun gazetada e'lon chop etish talab etiladimi?",
-        answer: "Yo'q. 2019 yilgi islohot gazetada e'lon chop etish talabini bekor qildi. Tugatish to'g'risidagi e'lonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi. Kreditorlar talablarini taqdim etishning minimal muddati veb-saytda joylashtirilgan kundan boshlab 2 oyni tashkil etadi. Kompaniya ro'yxatdan o'tgandan beri hech qanday xo'jalik faoliyati yuritmagan bo'lsa va soliq qarzlari bo'lmasa, moliyaviy audit ham talab qilinmaydi.",
+        question: "Oʻzbekistonda ixtiyoriy tugatish uchun gazetada eʼlon chop etish talab etiladimi?",
+        answer: "Yoʻq. 2019 yilgi islohot gazetada eʼlon chop etish talabini bekor qildi. Tugatish toʻgʻrisidagi eʼlonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi. Kreditorlar talablarini taqdim etishning minimal muddati veb-saytda joylashtirilgan kundan boshlab 2 oyni tashkil etadi. Kompaniya roʻyxatdan oʻtgandan beri hech qanday xoʻjalik faoliyati yuritmagan boʻlsa va soliq qarzlari boʻlmasa, moliyaviy audit ham talab qilinmaydi.",
       },
       {
-        question: "O'zbekistonda tugatish jarayonida kreditorlar talablarini qondirish navbati qanday?",
-        answer: "Talablar quyidagi navbatda qondiriladi: birinchi navbat — mehnat shartnomalari bo'yicha xodimlar talablari va kompaniya tomonidan jismoniy shaxslarning hayotiga yoki sog'lig'iga yetkazilgan zararni qoplash bo'yicha talablar; ikkinchi navbat — davlat byudjetiga va davlat maqsadli jamg'armalariga to'lovlar; uchinchi navbat — barcha qolgan talablar. Garov bilan ta'minlangan talablar birinchi navbatda garovga qo'yilgan aktivni sotishdan tushgan mablag' hisobidan qondiriladi; yetishmayotgan summa yuqoridagi navbatda qoplanadi.",
+        question: "Oʻzbekistonda tugatish jarayonida kreditorlar talablarini qondirish navbati qanday?",
+        answer: "Talablar quyidagi navbatda qondiriladi: birinchi navbat — mehnat shartnomalari boʻyicha xodimlar talablari va kompaniya tomonidan jismoniy shaxslarning hayotiga yoki sogʻligʻiga yetkazilgan zararni qoplash boʻyicha talablar; ikkinchi navbat — davlat byudjetiga va davlat maqsadli jamgʻarmalariga toʻlovlar; uchinchi navbat — barcha qolgan talablar. Garov bilan taʼminlangan talablar birinchi navbatda garovga qoʻyilgan aktivni sotishdan tushgan mablag' hisobidan qondiriladi; yetishmayotgan summa yuqoridagi navbatda qoplanadi.",
       },
       {
-        question: "O'zbekistonda ixtiyoriy tugatishni yakunlash uchun asosiy bosqichlar qanday?",
-        answer: "13 bosqichli tartib quyidagilarni o'z ichiga oladi: (1) tugatish to'g'risida qaror qabul qilish; (2) ta'sischilar yoki ishtirokchilardan tugatuvchi tayinlash; (3) Davlat xizmatlari markazini 1 ish kuni ichida xabardor qilish — u soliq organlari, statistika, banklar va boshqalarni avtomatik xabardor qiladi; (4) banklarni xabardor qilish; (5) soliq organi va Ijro byurosining 3 yilgacha bo'lgan davrni qamrovchi tekshiruvi; (6) 2 oylik e'lon muddati tugagandan so'ng kreditorlar talablarini qondirish; (7) oraliq tugatish balansini tasdiqlash; (8) yakuniy tugatish balansini tasdiqlash; (9) soliq qarzdorligi yo'qligi to'g'risida ma'lumotnoma olish; (10) asosiy bank hisobvarag'ini yopish; (11) hujjatlarni davlat arxiviga topshirish; (12) bank ma'lumotnomalari va arxiv tasdig'i bilan Davlat xizmatlari markaziga yakuniy murojaat.",
+        question: "Oʻzbekistonda ixtiyoriy tugatishni yakunlash uchun asosiy bosqichlar qanday?",
+        answer: "13 bosqichli tartib quyidagilarni oʻz ichiga oladi: (1) tugatish toʻgʻrisida qaror qabul qilish; (2) taʼsischilar yoki ishtirokchilardan tugatuvchi tayinlash; (3) Davlat xizmatlari markazini 1 ish kuni ichida xabardor qilish — u soliq organlari, statistika, banklar va boshqalarni avtomatik xabardor qiladi; (4) banklarni xabardor qilish; (5) soliq organi va Ijro byurosining 3 yilgacha boʻlgan davrni qamrovchi tekshiruvi; (6) 2 oylik eʼlon muddati tugagandan soʻng kreditorlar talablarini qondirish; (7) oraliq tugatish balansini tasdiqlash; (8) yakuniy tugatish balansini tasdiqlash; (9) soliq qarzdorligi yoʻqligi toʻgʻrisida maʼlumotnoma olish; (10) asosiy bank hisobvaragʻini yopish; (11) hujjatlarni davlat arxiviga topshirish; (12) bank maʼlumotnomalari va arxiv tasdigʻi bilan Davlat xizmatlari markaziga yakuniy murojaat.",
       },
     ],
     howTo: {
-      name: "O'zbekistonda kompaniyani ixtiyoriy tugatish tartibi",
-      description: "2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoniga muvofiq O'zbekistonda tadbirkorlik subyektini ixtiyoriy tugatishning 13 bosqichli tartibi.",
+      name: "Oʻzbekistonda kompaniyani ixtiyoriy tugatish tartibi",
+      description: "2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoniga muvofiq Oʻzbekistonda tadbirkorlik subyektini ixtiyoriy tugatishning 13 bosqichli tartibi.",
       steps: [
         {
-          name: "Tugatish to'g'risida qaror qabul qilish",
-          text: "Ta'sischi(lar), ishtirokchilar yoki vakolatli boshqaruv organi tashkilot nomi, INN, manzili, tugatuvchi ma'lumotlari, kreditorlar talablarini qabul qilish muddati va tugatish sababini ko'rsatuvchi qaror qabul qiladi.",
+          name: "Tugatish toʻgʻrisida qaror qabul qilish",
+          text: "Taʼsischi(lar), ishtirokchilar yoki vakolatli boshqaruv organi tashkilot nomi, INN, manzili, tugatuvchi maʼlumotlari, kreditorlar talablarini qabul qilish muddati va tugatish sababini koʻrsatuvchi qaror qabul qiladi.",
         },
         {
           name: "Tugatuvchini tayinlash",
-          text: "Barcha boshqaruv vakolatlari tugatuvchiga o'tadi — ta'sischi/ishtirokchi yoki tugatish komissiyasi. Tugatuvchi barcha hujjatlarni ishonchnomasiz imzolaydi va xodimlar uchun majburiy buyruqlar chiqaradi.",
+          text: "Barcha boshqaruv vakolatlari tugatuvchiga oʻtadi — taʼsischi/ishtirokchi yoki tugatish komissiyasi. Tugatuvchi barcha hujjatlarni ishonchnomasiz imzolaydi va xodimlar uchun majburiy buyruqlar chiqaradi.",
         },
         {
           name: "Aktivlar va hujjatlarni tugatuvchiga topshirish",
-          text: "Tayinlangan paytdan boshlab uch kun ichida boshqaruv organlari ro'yxat asosida barcha tijorat hujjatlari, muhrlar, shtamplar va kompaniya mulkini tugatuvchiga topshiradi.",
+          text: "Tayinlangan paytdan boshlab uch kun ichida boshqaruv organlari roʻyxat asosida barcha tijorat hujjatlari, muhrlar, shtamplar va kompaniya mulkini tugatuvchiga topshiradi.",
         },
         {
           name: "Davlat xizmatlari markazini xabardor qilish",
@@ -639,31 +639,31 @@ const article: Record<string, LocalizedArticle> = {
         },
         {
           name: "Banklarni xabardor qilish",
-          text: "Bir ish kuni ichida tugatish qarorini va imzo/muhr namunalari kartochkalarini asosiy hisobvaraq bankiga va valyuta mablag'lari saqlanadigan banklarga yuborish. Qolgan banklarga qo'shimcha hisobvaraqlarni yopish va qoldiqlarni asosiy hisobvaraqqa o'tkazishni topshirish.",
+          text: "Bir ish kuni ichida tugatish qarorini va imzo/muhr namunalari kartochkalarini asosiy hisobvaraq bankiga va valyuta mablagʻlari saqlanadigan banklarga yuborish. Qolgan banklarga qoʻshimcha hisobvaraqlarni yopish va qoldiqlarni asosiy hisobvaraqqa oʻtkazishni topshirish.",
         },
         {
-          name: "Inventarizatsiya o'tkazish va soliq majburiyatlarini hisoblash",
-          text: "Aktivlar va majburiyatlarning to'liq inventarizatsiyasini o'tkazish, bajarilmagan ijro hujjatlari reyestrini tuzish va yil boshidan Markaz xabardor qilingan sanagacha bo'lgan davr uchun soliq hisob-kitoblarini tayyorlash.",
+          name: "Inventarizatsiya oʻtkazish va soliq majburiyatlarini hisoblash",
+          text: "Aktivlar va majburiyatlarning toʻliq inventarizatsiyasini oʻtkazish, bajarilmagan ijro hujjatlari reyestrini tuzish va yil boshidan Markaz xabardor qilingan sanagacha boʻlgan davr uchun soliq hisob-kitoblarini tayyorlash.",
         },
         {
           name: "Soliq organi va Ijro byurosi tekshiruvlari",
-          text: "19 ish kuni ichida Ijro byurosi va soliq organi bajarilmagan ijro hujjatlarini yuboradi va uch yilgacha bo'lgan davrning moliya-xo'jalik faoliyatini tekshiradi (30 kalendar kun ichida yakunlanadi).",
+          text: "19 ish kuni ichida Ijro byurosi va soliq organi bajarilmagan ijro hujjatlarini yuboradi va uch yilgacha boʻlgan davrning moliya-xoʻjalik faoliyatini tekshiradi (30 kalendar kun ichida yakunlanadi).",
         },
         {
           name: "Oraliq tugatish balansini tasdiqlash",
-          text: "Kreditorlar talablarini taqdim etish muddati tugagandan so'ng oraliq tugatish balansi loyihasini tayyorlab, ta'sischilar/ishtirokchilar tomonidan tasdiqlatish.",
+          text: "Kreditorlar talablarini taqdim etish muddati tugagandan soʻng oraliq tugatish balansi loyihasini tayyorlab, taʼsischilar/ishtirokchilar tomonidan tasdiqlatish.",
         },
         {
           name: "Kreditorlar talablarini qondirish",
-          text: "Oraliq balans tasdiqlanganidan boshlab besh ish kuni ichida barcha kreditorlarni xabardor qilish va talablarni navbatda qondirish: (1) xodimlar va shaxsiy zarar; (2) davlat byudjeti va jamg'armalari; (3) barcha qolgan kreditorlar.",
+          text: "Oraliq balans tasdiqlanganidan boshlab besh ish kuni ichida barcha kreditorlarni xabardor qilish va talablarni navbatda qondirish: (1) xodimlar va shaxsiy zarar; (2) davlat byudjeti va jamgʻarmalari; (3) barcha qolgan kreditorlar.",
         },
         {
           name: "Yakuniy tugatish balansini tasdiqlash",
-          text: "Barcha kreditorlar bilan hisob-kitob qilib, aktivlarni taqsimlashdan so'ng yakuniy tugatish balansini ta'sischilar tomonidan tasdiqlatish va soliq organiga topshirish. Soliq qarzdorligi yo'qligi to'g'risida ma'lumotnoma va Ijro byurosidan tasdiq olish.",
+          text: "Barcha kreditorlar bilan hisob-kitob qilib, aktivlarni taqsimlashdan soʻng yakuniy tugatish balansini taʼsischilar tomonidan tasdiqlatish va soliq organiga topshirish. Soliq qarzdorligi yoʻqligi toʻgʻrisida maʼlumotnoma va Ijro byurosidan tasdiq olish.",
         },
         {
-          name: "Asosiy bank hisobvarag'ini yopish",
-          text: "Soliq ma'lumotnomasi va Ijro byurosi tasdig'i qo'lga kelgach, asosiy bank hisobvarag'ini yopish uchun ariza berish. Sud hibsidagi hisobvaraqni yopib bo'lmaydi.",
+          name: "Asosiy bank hisobvaragʻini yopish",
+          text: "Soliq maʼlumotnomasi va Ijro byurosi tasdigʻi qoʻlga kelgach, asosiy bank hisobvaragʻini yopish uchun ariza berish. Sud hibsidagi hisobvaraqni yopib boʻlmaydi.",
         },
         {
           name: "Hujjatlarni davlat arxiviga topshirish",
@@ -671,7 +671,7 @@ const article: Record<string, LocalizedArticle> = {
         },
         {
           name: "Davlat xizmatlari markaziga yakuniy murojaat",
-          text: "Barcha hisobvaraqlar yopilganligini tasdiqlovchi bank ma'lumotnomalari, kompaniya muhrlari va shtamplari, qimmatli qog'ozlarni bekor qilish to'g'risidagi ma'lumotnoma (mavjud bo'lsa) va arxiv tasdig'ini topshirish. Markaz ikki ish kuni ichida barcha talablarni tekshirib, davlat reyestriga tugatish yozuvini kiritadi.",
+          text: "Barcha hisobvaraqlar yopilganligini tasdiqlovchi bank maʼlumotnomalari, kompaniya muhrlari va shtamplari, qimmatli qogʻozlarni bekor qilish toʻgʻrisidagi maʼlumotnoma (mavjud boʻlsa) va arxiv tasdigʻini topshirish. Markaz ikki ish kuni ichida barcha talablarni tekshirib, davlat reyestriga tugatish yozuvini kiritadi.",
         },
       ],
     },

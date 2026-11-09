@@ -51,13 +51,13 @@ Fifteen engagements led by Advizen advisers are on record (client names withheld
 
 - [Home](https://www.advizenco.com): Overview of Advizen Consulting, services, and value proposition
 - [Home — Russian](https://www.advizenco.com/ru): Главная страница на русском языке
-- [Home — Uzbek](https://www.advizenco.com/uz): Bosh sahifa o'zbek tilida
+- [Home — Uzbek](https://www.advizenco.com/uz): Bosh sahifa oʻzbek tilida
 - [Expertise](https://www.advizenco.com/expertise): Detailed breakdown of advisory and managed operations services
 - [Expertise — Russian](https://www.advizenco.com/ru/expertise): Услуги на русском языке
-- [Expertise — Uzbek](https://www.advizenco.com/uz/expertise): Xizmatlar o'zbek tilida
+- [Expertise — Uzbek](https://www.advizenco.com/uz/expertise): Xizmatlar oʻzbek tilida
 - [Insights](https://www.advizenco.com/insights): Articles, guides, and analysis on Uzbekistan business, tax, and legal topics
 - [Insights — Russian](https://www.advizenco.com/ru/insights): Статьи и аналитика на русском языке
-- [Insights — Uzbek](https://www.advizenco.com/uz/insights): Maqolalar va tahlillar o'zbek tilida
+- [Insights — Uzbek](https://www.advizenco.com/uz/insights): Maqolalar va tahlillar oʻzbek tilida
 - [Contact](https://www.advizenco.com/contact): Schedule a consultation or get in touch
 
 ## Insights — Articles & Guides

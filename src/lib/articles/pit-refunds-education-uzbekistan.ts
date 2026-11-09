@@ -264,33 +264,33 @@ const article: Record<string, LocalizedArticle> = {
     ],
       faq: [
       {
-        question: "O'zbekistonda JShDSdan ozodlik uchun qanday ta'lim xarajatlari hisobga olinadi?",
-        answer: "O'zbekiston oliy ta'lim muassasalarida o'zingiz, turmush o'rtog'ingiz yoki bolalaringiz (26 yoshgacha) uchun to'langan o'quv haqi JShDSdan ozod etiladi — jumladan ta'lim kreditlari va ularning foizlari. Ota-onalar yoki farzandlikka olganlar nodavlat maktabgacha ta'lim muassasalari va xususiy maktablar xizmatlari uchun bola boshiga oyiga 3 000 000 so'mgacha ozodlik olishlari ham mumkin. Imtiyozlar standart 12% JShDS stavkasi doirasida qo'llaniladi.",
+        question: "Oʻzbekistonda JShDSdan ozodlik uchun qanday taʼlim xarajatlari hisobga olinadi?",
+        answer: "Oʻzbekiston oliy taʼlim muassasalarida oʻzingiz, turmush oʻrtogʻingiz yoki bolalaringiz (26 yoshgacha) uchun toʻlangan oʻquv haqi JShDSdan ozod etiladi — jumladan taʼlim kreditlari va ularning foizlari. Ota-onalar yoki farzandlikka olganlar nodavlat maktabgacha taʼlim muassasalari va xususiy maktablar xizmatlari uchun bola boshiga oyiga 3 000 000 soʻmgacha ozodlik olishlari ham mumkin. Imtiyozlar standart 12% JShDS stavkasi doirasida qoʻllaniladi.",
       },
       {
-        question: "O'zbekistonda JShDS qaytarimini talab qilish muddati qanday?",
-        answer: "Yillik daromad deklaratsiyasi hisobot yilidan keyingi yilning 1 aprelgacha topshirilishi shart (masalan, 2024 yil daromadi uchun 2025 yil 1 aprelgacha). Deklaratsiya my3.soliq.uz orqali Elektron raqamli imzo (ERI) yordamida elektron tarzda topshiriladi. «Soliq imtiyozlari» bo'limida tasdiqlovchi hujjatlar (shartnomalar va to'lov hujjatlari) biriktiriladi — tizim qaytariladigan summani avtomatik hisoblaydi. Qaytarish odatda ariza topshirilganidan 15 kun ichida bank kartasiga o'tkaziladi.",
+        question: "Oʻzbekistonda JShDS qaytarimini talab qilish muddati qanday?",
+        answer: "Yillik daromad deklaratsiyasi hisobot yilidan keyingi yilning 1 aprelgacha topshirilishi shart (masalan, 2024 yil daromadi uchun 2025 yil 1 aprelgacha). Deklaratsiya my3.soliq.uz orqali Elektron raqamli imzo (ERI) yordamida elektron tarzda topshiriladi. «Soliq imtiyozlari» boʻlimida tasdiqlovchi hujjatlar (shartnomalar va toʻlov hujjatlari) biriktiriladi — tizim qaytariladigan summani avtomatik hisoblaydi. Qaytarish odatda ariza topshirilganidan 15 kun ichida bank kartasiga oʻtkaziladi.",
       },
       {
-        question: "O'zbekistonda ipoteka to'lovlari JShDS imtiyoziga ega bo'la oladimi?",
-        answer: "Ha. Uy-joy byudjet subsidiyasi bilan olingan taqdirda, ipoteka kreditlari va hisoblangan foizlarga to'langan summalar yiliga Pensiyaning eng kam miqdori (MROT)ning 80 baravarigacha JShDSdan ozod etiladi. Imtiyoz ERI yordamida my3.soliq.uz saytida yillik daromad deklaratsiyasi orqali talab qilinadi.",
+        question: "Oʻzbekistonda ipoteka toʻlovlari JShDS imtiyoziga ega boʻla oladimi?",
+        answer: "Ha. Uy-joy byudjet subsidiyasi bilan olingan taqdirda, ipoteka kreditlari va hisoblangan foizlarga toʻlangan summalar yiliga Pensiyaning eng kam miqdori (MROT)ning 80 baravarigacha JShDSdan ozod etiladi. Imtiyoz ERI yordamida my3.soliq.uz saytida yillik daromad deklaratsiyasi orqali talab qilinadi.",
       },
       {
-        question: "O'zbekistonda boshqa qanday daromad toifalari JShDSdan ozod etilgan?",
-        answer: "Qo'shimcha JShDS imtiyozlari: Xalq bankidagi Individual jamg'arib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yo'naltirilgan maosh summalari; aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yo'naltirilgan maosh (yiliga MROTning 100 baravarigacha, mablag'lar 12 oyga blokirovka qilinadi); belgilangan limitlar doirasidagi ish beruvchi tomonidan beriladigan imtiyozlar — jumladan moddiy yordam, tibbiy kompensatsiya, bolalar lagerlari yo'llanmalari va naqd bo'lmagan sovg'alar.",
+        question: "Oʻzbekistonda boshqa qanday daromad toifalari JShDSdan ozod etilgan?",
+        answer: "Qoʻshimcha JShDS imtiyozlari: Xalq bankidagi Individual jamgʻarib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yoʻnaltirilgan maosh summalari; aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yoʻnaltirilgan maosh (yiliga MROTning 100 baravarigacha, mablagʻlar 12 oyga blokirovka qilinadi); belgilangan limitlar doirasidagi ish beruvchi tomonidan beriladigan imtiyozlar — jumladan moddiy yordam, tibbiy kompensatsiya, bolalar lagerlari yoʻllanmalari va naqd boʻlmagan sovgʻalar.",
       },
     ],
     howTo: {
-      name: "O'zbekistonda ta'lim xarajatlari uchun JShDS qaytarimini olish tartibi",
-      description: "O'zbekistonda ta'lim, ipoteka va pensiya xarajatlari bo'yicha ortiqcha to'langan JShDSni my3.soliq.uz orqali qaytarishning 2 bosqichli onlayn jarayoni.",
+      name: "Oʻzbekistonda taʼlim xarajatlari uchun JShDS qaytarimini olish tartibi",
+      description: "Oʻzbekistonda taʼlim, ipoteka va pensiya xarajatlari boʻyicha ortiqcha toʻlangan JShDSni my3.soliq.uz orqali qaytarishning 2 bosqichli onlayn jarayoni.",
       steps: [
         {
           name: "Yillik daromad deklaratsiyangizni topshiring",
-          text: "Hisobot yilidan keyingi yilning 1 aprelgacha my3.soliq.uz saytida Elektron raqamli imzo (ERI) yordamida deklaratsiya topshiring. Barcha ish joylaridan daromad ma'lumotnomalarini, universitet, xususiy maktab yoki ipoteka shartnomalarining skan nusxalarini va to'lov hujjatlarini biriktiring. «Soliq imtiyozlari» bo'limida tegishli imtiyoz toifasini tanlang — tizim qaytariladigan summani avtomatik hisoblaydi.",
+          text: "Hisobot yilidan keyingi yilning 1 aprelgacha my3.soliq.uz saytida Elektron raqamli imzo (ERI) yordamida deklaratsiya topshiring. Barcha ish joylaridan daromad maʼlumotnomalarini, universitet, xususiy maktab yoki ipoteka shartnomalarining skan nusxalarini va toʻlov hujjatlarini biriktiring. «Soliq imtiyozlari» boʻlimida tegishli imtiyoz toifasini tanlang — tizim qaytariladigan summani avtomatik hisoblaydi.",
         },
         {
           name: "Qaytarish arizasini topshiring",
-          text: "Deklaratsiya qayta ishlangandan so'ng my3.soliq.uz yoki my.soliq.uz orqali qaytarish arizasini topshiring. Bank karta raqami, tranzit hisobvaraq va bank MFO kodini kiriting. Qaytarish odatda 15 kun ichida ko'rsatilgan bank kartasiga o'tkaziladi.",
+          text: "Deklaratsiya qayta ishlangandan soʻng my3.soliq.uz yoki my.soliq.uz orqali qaytarish arizasini topshiring. Bank karta raqami, tranzit hisobvaraq va bank MFO kodini kiriting. Qaytarish odatda 15 kun ichida koʻrsatilgan bank kartasiga oʻtkaziladi.",
         },
       ],
     },
