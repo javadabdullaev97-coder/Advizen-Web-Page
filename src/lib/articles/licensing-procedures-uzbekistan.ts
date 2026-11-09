@@ -144,7 +144,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle: "Практическое руководство по единой системе лицензирования, разрешительных документов и уведомлений в Узбекистане согласно Закону № ЗРУ-701.",
-    author: "Advizen Legal Practice",
+    author: "Юридическая практика Advizen",
     readTime: "8 мин чтения",
     inShort: {
       figures: [
@@ -285,7 +285,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   uz: {
     subtitle: "Oʻzbekistonda OʻRQ-701-sonli Qonun asosidagi yagona litsenziyalash, ruxsat berish va xabardor qilish tartibi boʻyicha amaliy qoʻllanma.",
-    author: "Advizen Legal Practice",
+    author: "Advizen yuridik amaliyoti",
     readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
@@ -298,19 +298,19 @@ const article: Record<string, LocalizedArticle> = {
         "Oʻzbekistonda uchta ruxsat yoʻnalishi bor: litsenziyalar, ruxsat hujjatlari va xabarnomalar; barcha arizalar «Litsenziya» tizimi (license.gov.uz) yoki EPAGU orqali elektron topshiriladi.",
         "Organ belgilangan muddatda qaror qabul qilmasa, ariza beruvchi organni elektron xabardor qilib, faoliyatni boshlashi mumkin.",
         "Litsenziya yoki ruxsat hujjati faqat hujjatlar toʻliq boʻlmaganda, maʼlumotlar soxta yoki buzib koʻrsatilganda yoki litsenziya shartlariga javob berilmaganda rad etilishi mumkin.",
-        "Litsenziyalar odatda muddatsiz, biroq tibbiy va farmatsevtika faoliyati, mobil telekommunikatsiya, neft va gaz qazib olish, loteriya va onlayn qimorbozlik kabi sohalarga kamida 5 yillik muddat qoʻllaniladi.",
+        "Litsenziyalar odatda muddatsiz, biroq tibbiy va farmatsevtika faoliyati, mobil telekommunikatsiya, neft va gaz qazib olish, lotereya va onlayn qimor oʻyinlari kabi sohalarga kamida 5 yillik muddat qoʻllaniladi.",
       ],
     },
     content: [
       {
         type: "p" as const,
-        text: "Oʻzbekiston biznes-avtorizatsiya qoidalarini 2021 yil 14 iyuldagi «Litsenziyalash, ruxsat berish va xabardor qilish tartibi toʻgʻrisida»gi OʻRQ-701-sonli yagona Qonunda birlashtirdi. Qonun uchta alohida yoʻnalish — litsenziyalash, ruxsat hujjatlari va xabarnomalar — ni belgilab, butun jarayonni «Litsenziya» deb nomlangan yagona elektron platformaga (license.gov.uz) oʻtkazadi.",
+        text: "Oʻzbekiston biznes-avtorizatsiya qoidalarini 2021-yil 14-iyuldagi «Litsenziyalash, ruxsat berish va xabardor qilish tartibi toʻgʻrisida»gi OʻRQ-701-sonli yagona Qonunda birlashtirdi. Qonun uchta alohida yoʻnalish — litsenziyalash, ruxsat hujjatlari va xabarnomalar — ni belgilab, butun jarayonni «Litsenziya» deb nomlangan yagona elektron platformaga (license.gov.uz) oʻtkazadi.",
       },
       { type: "h2" as const, text: "Uch yoʻnalishga umumiy nazar" },
       {
         type: "ul" as const,
         items: [
-          "Litsenziyalash: cheklovlarsiz amalga oshirilishi aholining sogʻligʻiga, xavfsizligiga yoki atrof-muhitga zarar etkazishi mumkin boʻlgan faoliyat turlari uchun majburiy. Toʻliq roʻyxat Qonunning 1-ilovasida keltirilgan.",
+          "Litsenziyalash: cheklovlarsiz amalga oshirilishi aholining sogʻligʻiga, xavfsizligiga yoki atrof-muhitga zarar yetkazishi mumkin boʻlgan faoliyat turlari uchun majburiy. Toʻliq roʻyxat Qonunning 1-ilovasida keltirilgan.",
           "Ruxsat hujjatlari: 2-ilovada keltirilgan faoliyat turlari uchun yengilroq avtorizatsiya shakli. Ular ham oldindan tasdiqlashni talab qiladi, lekin oddiyroq shartlarga boʻysunadi.",
           "Xabarnomalar: eng moslashuvchan yoʻnalish. Faoliyatni boshlamasdan oldin tegishli organ xabardor qilinadi — tasdiqlash talab etilmaydi. Xabarnoma talab qiladigan faoliyat turlari 3-ilovada keltirilgan.",
         ],
@@ -323,13 +323,13 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Namunaviy (tipovye) litsenziyalar — yagona shartlarga javob beradigan istalgan arizachiga beriladi. Bu koʻpgina tartibga solinadigan faoliyat turlari uchun meʼyordir.",
-          "Individual litsenziyalar — maxsus shartlarda beriladi va eksklyuziv huquqlar beradi. Ular soni, hududi yoki obʼekti jihatidan cheklangan boʻlib, odatda tender orqali beriladi. Efir spektrini taqsimlash bunga tipik misol.",
+          "Namunaviy litsenziyalar — yagona shartlarga javob beradigan istalgan arizachiga beriladi. Bu koʻpgina tartibga solinadigan faoliyat turlari uchun meʼyordir.",
+          "Individual litsenziyalar — maxsus shartlarda beriladi va eksklyuziv huquqlar beradi. Ular soni, hududi yoki obyekti jihatidan cheklangan boʻlib, odatda tender orqali beriladi. Efir spektrini taqsimlash bunga tipik misol.",
         ],
       },
       {
         type: "p" as const,
-        text: "Har bir litsenziya bir turdagi faoliyatni qamrab oladi (bunda kichik turlar ham mumkin). Qoidaga koʻra litsenziyalar muddatsiz amal qiladi. Istisno: tibbiy va farmatsevtika faoliyati, giyohvand moddalarga oid operatsiyalar, mobil telekommunikatsiya, neft va gaz qazib olish, loteriya va onlayn qimorbozlik operatsiyalari hamda boshqa bir qator sezgir sohalarga kamida 5 yillik muddat qoʻllaniladi.",
+        text: "Har bir litsenziya bir turdagi faoliyatni qamrab oladi (bunda kichik turlar ham mumkin). Qoidaga koʻra litsenziyalar muddatsiz amal qiladi. Istisno: tibbiy va farmatsevtika faoliyati, giyohvand moddalarga oid operatsiyalar, mobil telekommunikatsiya, neft va gaz qazib olish, lotereya va onlayn qimor oʻyinlari operatsiyalari hamda boshqa bir qator sezgir sohalarga kamida 5 yillik muddat qoʻllaniladi.",
       },
       { type: "h2" as const, text: "Ariza berish tartibi" },
       {
@@ -339,8 +339,8 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Yuridik shaxslar soliq toʻlovchisining identifikatsiya raqamini (INN) koʻrsatadilar.",
-          "Jismoniy shaxslar toʻliq ism-sharif, shaxsni tasdiqlovchi hujjat maʼlumotlari yoki shaxsiy identifikatsiya raqamini (PINFL) koʻrsatadilar.",
+          "Yuridik shaxslar soliq toʻlovchisining identifikatsiya raqamini (STIR) koʻrsatadilar.",
+          "Jismoniy shaxslar toʻliq ism-sharif, shaxsni tasdiqlovchi hujjat maʼlumotlari yoki shaxsiy identifikatsiya raqamini (JShShIR) koʻrsatadilar.",
           "Barcha arizachilar faoliyat turini (va kichik turini) koʻrsatadilar hamda litsenziya shartlariga muvofiqligini tasdiqlovchi hujjatlarni ilova qiladilar.",
         ],
       },
@@ -374,7 +374,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Xabardor qilish tartibi" },
       {
         type: "p" as const,
-        text: "Xabardor qilish tartibidagi faoliyat turlari uchun oldindan tasdiqlash talab etilmaydi — tadbirkor shunchaki xabarnoma topshiradi va faoliyatni boshlashi mumkin. Barcha shartlar bajarilgan taqdirda xabarnoma avtomatik qabul qilinadi va darhol tasdiqlash beriladi. Koʻpgina xabarnomalar uchun asosiy hisob-kitob qiymatining (AHQ) 50 barobarigacha yigʻim undiriladi; chakana spirtli ichimliklarni sotish bundan mustasnodir.",
+        text: "Xabardor qilish tartibidagi faoliyat turlari uchun oldindan tasdiqlash talab etilmaydi — tadbirkor shunchaki xabarnoma topshiradi va faoliyatni boshlashi mumkin. Barcha shartlar bajarilgan taqdirda xabarnoma avtomatik qabul qilinadi va darhol tasdiqlash beriladi. Koʻpgina xabarnomalar uchun bazaviy hisoblash miqdorining (BHM) 50 baravarigacha yigʻim undiriladi; chakana spirtli ichimliklarni sotish bundan mustasnodir.",
       },
       {
         type: "p" as const,
@@ -388,7 +388,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Doimiy muassasa ariza bera oladimi?" },
       {
         type: "p" as const,
-        text: "Doimiy muassasa (DM) — bu yuridik shaxs emas, balki soliq maqomi boʻlib, fuqarolik huquqining mustaqil subʼekti sifatida huquqiy layoqatga ega emas. Qonunga koʻra litsenziya yoki ruxsat hujjatiga faqat jismoniy va yuridik shaxslar murojaat qilishi mumkin. Amalda, biroq, organlar baʼzan soʻrov boʻyicha DMga hujjat beradi, soliq organlari esa koʻpincha DMni yuridik shaxs sifatida koʻrib chiqadi. Bu huquqiy jihatdan nomuvofiqdir va DM orqali faoliyat yurituvchi korxonalar DM nomiga berilgan ruxsatlarga tayanishdan oldin maxsus maslahat olishlari kerak.",
+        text: "Doimiy muassasa (DM) — bu yuridik shaxs emas, balki soliq maqomi boʻlib, fuqarolik huquqining mustaqil subyekti sifatida huquqiy layoqatga ega emas. Qonunga koʻra litsenziya yoki ruxsat hujjatiga faqat jismoniy va yuridik shaxslar murojaat qilishi mumkin. Biroq amalda organlar baʼzan soʻrov boʻyicha DMga hujjat beradi, soliq organlari esa koʻpincha DMni yuridik shaxs sifatida koʻrib chiqadi. Bu huquqiy jihatdan nomuvofiqdir va DM orqali faoliyat yurituvchi korxonalar DM nomiga berilgan ruxsatlarga tayanishdan oldin maxsus maslahat olishlari kerak.",
       },
       { type: "h2" as const, text: "Buzilishlar uchun javobgarlik" },
       {
@@ -402,13 +402,13 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Advizen qanday yordam bera oladi" },
       {
         type: "p" as const,
-        text: "Oʻzbekistonning litsenziyalash va ruxsat berish tizimida moʻljal olish faoliyatingizga qaysi yoʻnalish qoʻllanilishini, qanday shartlar bajarilishi kerakligini va organ qarshi chiqgan taqdirda qanday javob berishni bilishni talab etadi. Advizen yuridik jamoasi mijozlarga har bir bosqichda yordam beradi — toʻgʻri avtorizatsiya yoʻlini aniqlash va ariza paketlarini tayyorlashdan tortib, toʻxtatib qoʻyishlarni boshqarish, oʻzgartirish kiritish va tartibga soluvchi nizolarni hal etishgacha.",
+        text: "Oʻzbekistonning litsenziyalash va ruxsat berish tizimida moʻljal olish faoliyatingizga qaysi yoʻnalish qoʻllanilishini, qanday shartlar bajarilishi kerakligini va organ qarshi chiqqan taqdirda qanday javob berishni bilishni talab etadi. Advizen yuridik jamoasi mijozlarga har bir bosqichda yordam beradi — toʻgʻri avtorizatsiya yoʻlini aniqlash va ariza paketlarini tayyorlashdan tortib, toʻxtatib qoʻyishlarni boshqarish, oʻzgartirish kiritish va tartibga soluvchi nizolarni hal etishgacha.",
       },
     ],
     faq: [
       {
         question: "Oʻzbekistondagi biznes uchun qanday uchta avtorizatsiya yoʻnalishi mavjud?",
-        answer: "OʻRQ-701-sonli Qonun uchta yoʻnalishni belgilaydi: (1) Litsenziyalash — cheklovlarsiz amalga oshirilishi sogʻliq, xavfsizlik yoki atrof-muhitga zarar etkazishi mumkin boʻlgan faoliyat turlari uchun majburiy (1-ilova); (2) Ruxsat hujjatlari — 2-ilovadagi faoliyat turlari uchun yengilroq avtorizatsiya shakli, oldindan tasdiqlashni talab qiladi; (3) Xabarnomalar — eng moslashuvchan yoʻnalish: faoliyatni boshlamasdan oldin organni xabardor qiling — tasdiqlash talab etilmaydi (3-ilova). Barcha arizalar «Litsenziya» tizimi (license.gov.uz) yoki EPAGU portali orqali elektron raqamli imzo bilan taqdim etiladi.",
+        answer: "OʻRQ-701-sonli Qonun uchta yoʻnalishni belgilaydi: (1) Litsenziyalash — cheklovlarsiz amalga oshirilishi sogʻliq, xavfsizlik yoki atrof-muhitga zarar yetkazishi mumkin boʻlgan faoliyat turlari uchun majburiy (1-ilova); (2) Ruxsat hujjatlari — 2-ilovadagi faoliyat turlari uchun yengilroq avtorizatsiya shakli, oldindan tasdiqlashni talab qiladi; (3) Xabarnomalar — eng moslashuvchan yoʻnalish: faoliyatni boshlamasdan oldin organni xabardor qiling — tasdiqlash talab etilmaydi (3-ilova). Barcha arizalar «Litsenziya» tizimi (license.gov.uz) yoki EPAGU portali orqali elektron raqamli imzo bilan taqdim etiladi.",
       },
       {
         question: "Oʻzbekistonda litsenziya yoki ruxsat hujjatini olish qancha vaqt oladi?",

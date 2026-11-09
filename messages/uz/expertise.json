@@ -3,14 +3,14 @@
     "hero": {
       "eyebrow": "Bizning ekspertizamiz",
       "heading": "Oʻzbekistonda soliq, yuridik, buxgalteriya va HR xizmatlari",
-      "description": "Yetti konsalting yoʻnalishi. Yetti boshqaruv operatsiyalari xizmati. Markaziy Osiyo bozorlari murakkabligi uchun yaratilgan yagona amaliyot."
+      "description": "Yettita konsalting yoʻnalishi. Yettita tayyor operatsion xizmat. Markaziy Osiyo bozorlarining murakkab sharoitlari uchun yaratilgan yagona amaliyot."
     },
     "stats": {
       "eyebrow": "Bizning yutuqlarimiz",
       "dealsAdvised": "Maslahatchilarimiz tuzgan eng yirik loyiha",
-      "registrations": "Roʻyxatdan oʻtish",
+      "registrations": "Roʻyxatdan oʻtkazishlar",
       "dueDiligences": "Due diligence",
-      "lawsShaped": "Ishtirok etilgan qonunlar"
+      "lawsShaped": "Biz ishtirok etgan qonunlar"
     },
     "industries": {
       "eyebrow": "Sohaviy tajriba",
@@ -25,7 +25,7 @@
     "cta": {
       "eyebrow": "Biz bilan ishlash",
       "heading": "Hamkorlikka tayyormisiz?",
-      "description": "Biznesingiz haqida gapirib bering — biz qaerda eng koʻp foyda keltirishimiz mumkinligini aniqlaymiz va mos keladigan ish hajmini shakllantiramiz.",
+      "description": "Biznesingiz haqida gapirib bering — qayerda eng koʻp foyda keltira olishimizni aniqlaymiz va mos ish hajmini shakllantiramiz.",
       "primary": "Maslahatga yozilish",
       "secondary": "Tahlillarni koʻrish"
     }
@@ -36,7 +36,7 @@
       "Structured investment": "Tuzilgan investitsiya",
       "Transaction": "Bitim",
       "Investment": "Investitsiya",
-      "Seed round": "Seed raund",
+      "Seed round": "Seed raundi",
       "State-owned": "Davlat kompaniyasi",
       "Built from scratch": "Noldan qurilgan",
       "Companies": "Kompaniya",
@@ -54,26 +54,26 @@
       "Public Sector": "Davlat sektori",
       "Capital Markets": "Kapital bozorlari",
       "Banking": "Bank ishi",
-      "Islamic Finance": "Islomiy moliya",
+      "Islamic Finance": "Islom moliyasi",
       "Pharma": "Farma",
-      "Cross-Industry": "Kross-soha",
-      "Due Diligence": "Due Diligence"
+      "Cross-Industry": "Turli sohalar",
+      "Due Diligence": "Due diligence"
     },
     "headlines": [
-      "Rossiya korxonasi uchun atom elektr stantsiyasi qurilishining soliq, buxgalteriya va bojxona tuzilishi",
-      "Xitoy energetika guruhi kompaniyalarining Oʻzbekistondagi barcha operatsiyalari uchun soliq va yuridik due diligence, holding tuzilishi va transfer narxlash hujjatlari",
-      "Yirik oʻzbek shisha toʻldiruvchi kompaniyaning M&A bitimi",
-      "Xalqaro raqamli bankning Oʻzbekistondagi shoʻba kompaniyalarini ikkita yirik qayta tashkil etish loyihalari",
-      "Yirik oʻzbek tsement ishlab chiqaruvchisining M&A va korporativ qayta tashkil etish",
-      "Yirik rossiyalik IT kompaniyaning Oʻzbekiston bozoriga chiqishi paytida soliq tuzilishi va ad-hoc konsalting",
-      "Yirik mahalliy chakana sotuvchi uchun M&A va tuzilish",
-      "Islom moliyasi tamoyillariga asoslangan oʻzbek fintex startapining seed investitsiya bosqichini tuzish uchun soliq va yuridik konsalting",
-      "Oʻzbekiston davlat investitsiya fondining qayta tashkil etilishi va tuzilishi",
-      "Hukumat tomonidan kapital bozori qonunchiligini ishlab chiqish uchun yollangan xalqaro firmalar uchun mahalliy soliq, yuridik va moliyaviy maslahatchi sifatida xizmat qildik",
-      "Hukumatga bank qonunchiligi, jumladan derivativlar va REPO boʻyicha maslahat beruvchi xalqaro firmalar uchun mahalliy maslahatchi sifatida xizmat qildik",
-      "Hukumatga islom moliyasi vositalarini Oʻzbekiston qonunchiligiga integratsiya qilish boʻyicha maslahat beruvchi xalqaro firma uchun mahalliy maslahatchi sifatida xizmat qildik",
-      "Oʻzbekistondagi xalqaro farma kompaniyalari uchun tashkil etish, tuzish, payroll konsalting va davom etayotgan muvofiqlik konsaltingi",
-      "Mahalliy va xalqaro kompaniyalar uchun turli sohalarda toʻliq roʻyxatga olish va sopravoditelnaya konsalting",
+      "Rossiya korxonasi uchun atom elektr stansiyasi qurilishini soliq, buxgalteriya va bojxona jihatidan tuzilmalash",
+      "Xitoy energetika kompaniyalari guruhining Oʻzbekistondagi barcha operatsiyalari uchun soliq va yuridik due diligence, xolding tuzilmasini shakllantirish va transfer narxlari boʻyicha hujjatlar",
+      "Yirik oʻzbek ichimlik ishlab chiqaruvchi kompaniyasi bilan M&A bitimi",
+      "Xalqaro raqamli bankning Oʻzbekistondagi shoʻba kompaniyalarida ikkita yirik qayta tuzish loyihasi",
+      "Yirik oʻzbek sement ishlab chiqaruvchisi uchun M&A va korporativ qayta tashkil etish",
+      "Yirik rossiyalik IT kompaniyasi Oʻzbekiston bozoriga chiqishida soliq tuzilmasini shakllantirish va bir martalik maslahatlar",
+      "Yirik mahalliy chakana savdo tarmogʻi uchun M&A va tuzilmalash",
+      "Islom moliyasi tamoyillari asosida ishlaydigan oʻzbek fintex startapining seed investitsiya bosqichini tuzilmalash boʻyicha soliq va yuridik maslahat",
+      "Oʻzbekiston davlat investitsiya fondini qayta tashkil etish va tuzilmalash",
+      "Kapital bozori qonunchiligini ishlab chiqish uchun hukumat jalb qilgan xalqaro firmalarga mahalliy soliq, yuridik va moliyaviy maslahatchi sifatida xizmat koʻrsatdik",
+      "Hukumatga bank qonunchiligi, jumladan derivativlar va REPO boʻyicha maslahat bergan xalqaro firmalarga mahalliy maslahatchi sifatida xizmat koʻrsatdik",
+      "Hukumatga islom moliyasi vositalarini Oʻzbekiston qonunchiligiga joriy etish boʻyicha maslahat bergan xalqaro firmaga mahalliy maslahatchi sifatida xizmat koʻrsatdik",
+      "Oʻzbekistondagi xalqaro farmatsevtika kompaniyalari uchun tashkil etish, tuzilmalash, ish haqi boʻyicha maslahat va doimiy muvofiqlik konsaltingi",
+      "Turli sohalardagi mahalliy va xalqaro kompaniyalarni roʻyxatdan oʻtkazish va kuzatib borishning toʻliq sikli",
       "Qayta tiklanuvchi energetika, qazib olish, neft va gaz, FMCG va sanoat sohalarida soliq va yuridik due diligence"
     ]
   },
@@ -81,7 +81,7 @@
     "lede": "Yettita maslahat amaliyoti va yettita operatsion xizmat — bitta jamoa va bitta muvofiqlashtiruvchi hamkor, oʻzbek, rus yoki ingliz tilida.",
     "advisory": {
       "title": "Maslahat xizmatlari",
-      "lede": "Qarorni siz qabul qilasiz, biz soliq, huquq, buxgalteriya, kadrlar va bitimlar boʻyicha chuqur bilim beramiz."
+      "lede": "Qarorni siz qabul qilasiz, biz esa soliq, huquq, buxgalteriya, kadrlar va bitimlar boʻyicha chuqur bilim va tajribani taqdim etamiz."
     },
     "managed": {
       "title": "Operatsion xizmatlar",
@@ -101,7 +101,7 @@
     "services": {
       "tax": [
         "Soliq konsaltingi",
-        "Rejalashtirish, QQS, transfer narxlar, tekshiruvlar va imtiyozlar."
+        "Rejalashtirish, QQS, transfer narxlari, tekshiruvlar va imtiyozlar."
       ],
       "legal": [
         "Yuridik konsalting",
@@ -129,7 +129,7 @@
       ],
       "entity-management": [
         "Kompaniyani boshqarish",
-        "Buxgalteriya, hisobotlar, komplayens va ish haqi autsorsingda."
+        "Buxgalteriya, hisobotlar, muvofiqlik nazorati va ish haqi — autsorsing asosida."
       ],
       "corporate": [
         "Korporativ xizmatlar",
@@ -145,14 +145,14 @@
       ],
       "immigration": [
         "Ishlash uchun ruxsatnomalar",
-        "Mehnat faoliyatini amalga oshirish huquqiga doir tasdiqnomalar, vizalar, yashash."
+        "Mehnat faoliyatini amalga oshirish huquqiga doir tasdiqnomalar, vizalar, yashash uchun ruxsat."
       ],
       "virtual-office": [
         "Virtual ofis",
         "Yuridik manzil, pochta va uchrashuv xonalari."
       ],
       "compliance": [
-        "Komplayens monitoringi",
+        "Muvofiqlik monitoringi",
         "Hisobot kalendari, eslatmalar va oʻzgarishlarni kuzatish."
       ]
     },
@@ -167,7 +167,7 @@
       ],
       [
         "Texnologiya va raqamli iqtisodiyot",
-        "IT kompaniyalar, fintech va telekom: soliq tuzilmasi, litsenziyalar, IT Park rezidentligi."
+        "IT kompaniyalar, fintex va telekom: soliq tuzilmasi, litsenziyalar, IT Park rezidentligi."
       ],
       [
         "Koʻchmas mulk va infratuzilma",
@@ -179,7 +179,7 @@
       ],
       [
         "Sogʻliqni saqlash va ijtimoiy soha",
-        "Farma, klinikalar, maktablar va universitetlar: litsenziyalar va komplayens."
+        "Farmatsevtika, klinikalar, maktablar va universitetlar: litsenziyalar va muvofiqlik."
       ]
     ],
     "disciplines": {

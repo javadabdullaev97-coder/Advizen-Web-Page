@@ -228,7 +228,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle: "Практическое руководство по упрощённой процедуре добровольной ликвидации коммерческих организаций в Узбекистане после президентской реформы 2019 года.",
-    author: "Advizen Legal Practice",
+    author: "Юридическая практика Advizen",
     readTime: "8 мин чтения",
     inShort: {
       figures: [
@@ -452,8 +452,8 @@ const article: Record<string, LocalizedArticle> = {
     },
   },
   uz: {
-    subtitle: "2019 yilgi prezident islohotidan keyin Oʻzbekistondagi tijorat tashkilotlari uchun ixtiyoriy tugatishning soddalashtirilgan tartibi boʻyicha amaliy qoʻllanma.",
-    author: "Advizen Legal Practice",
+    subtitle: "Prezidentning 2019-yilgi islohotidan keyin Oʻzbekistondagi tijorat tashkilotlari uchun ixtiyoriy tugatishning soddalashtirilgan tartibi boʻyicha amaliy qoʻllanma.",
+    author: "Advizen yuridik amaliyoti",
     readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
@@ -472,17 +472,17 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "Oʻzbekistonda biznes faoliyatini tugatish belgilangan ketma-ketlikdagi majburiy bosqichlardan iborat. 2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoni kuchga kirgandan beri ixtiyoriy tugatish tartibi sezilarli darajada soddalashtirildi: tugatish toʻgʻrisidagi eʼlonni bosma OAVda chop etish endi talab qilinmaydi; butun jarayon Davlat xizmatlari markazining avtomatlashtirilgan tizimi orqali boshqariladi; ixtiyoriy tugatishning umumiy muddati Markaz tugatish toʻgʻrisidagi xabarnomani olgan kundan boshlab olti oydan oshmasligi kerak.",
+        text: "Oʻzbekistonda biznes faoliyatini tugatish belgilangan ketma-ketlikdagi majburiy bosqichlardan iborat. 2019-yil 7-iyundagi PF-5739-sonli Prezident Farmoni kuchga kirgandan beri ixtiyoriy tugatish tartibi sezilarli darajada soddalashtirildi: tugatish toʻgʻrisidagi eʼlonni bosma OAVda chop etish endi talab qilinmaydi; butun jarayon Davlat xizmatlari markazining avtomatlashtirilgan tizimi orqali boshqariladi; ixtiyoriy tugatishning umumiy muddati Markaz tugatish toʻgʻrisidagi xabarnomani olgan kundan boshlab olti oydan oshmasligi kerak.",
       },
       { type: "h2" as const, text: "Qonunchilik bazasi" },
       {
         type: "ul" as const,
         items: [
-          "2019 yil 7 iyundagi «Tadbirkorlik subyektlarini tugatish tartibini soddalashtirish chora-tadbirlari toʻgʻrisida»gi PF-5739-sonli Prezident Farmoni",
-          "Vazirlar Mahkamasining 2019 yil 21 avgustdagi 704-sonli Qarori, 1-ilova «Tadbirkorlik subyektlarini ixtiyoriy tugatish va ularning faoliyatini toʻxtatish tartibi toʻgʻrisida Nizom»",
+          "2019-yil 7-iyundagi «Tadbirkorlik subyektlarini tugatish tartibini soddalashtirish chora-tadbirlari toʻgʻrisida»gi PF-5739-sonli Prezident Farmoni",
+          "Vazirlar Mahkamasining 2019-yil 21-avgustdagi 704-son qarori, 1-ilova «Tadbirkorlik subyektlarini ixtiyoriy tugatish va ularning faoliyatini toʻxtatish tartibi toʻgʻrisida Nizom»",
         ],
       },
-      { type: "h2" as const, text: "2019 yilda kiritilgan asosiy soddalashtirishlar" },
+      { type: "h2" as const, text: "2019-yilda kiritilgan asosiy soddalashtirishlar" },
       {
         type: "ul" as const,
         items: [
@@ -511,7 +511,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "1-bosqich — Tugatish toʻgʻrisida qaror qabul qilish" },
       {
         type: "p" as const,
-        text: "Qaror taʼsischi(lar), ishtirokchilar yoki vakolatli boshqaruv organi tomonidan qabul qilinadi. Qarorda quyidagilar koʻrsatilishi shart: tashkilotning toʻliq va qisqa nomi, INN va pochta manzili; tugatuvchining pasport maʼlumotlari, telefon raqami va elektron pochtasi; kreditorlar talablarini qabul qilish joyi va muddati; tugatish sababi. Yakka tartibdagi tadbirkor uchun shaxsiy yozma ariza yetarli.",
+        text: "Qaror taʼsischi(lar), ishtirokchilar yoki vakolatli boshqaruv organi tomonidan qabul qilinadi. Qarorda quyidagilar koʻrsatilishi shart: tashkilotning toʻliq va qisqa nomi, STIR va pochta manzili; tugatuvchining pasport maʼlumotlari, telefon raqami va elektron pochtasi; kreditorlar talablarini qabul qilish joyi va muddati; tugatish sababi. Yakka tartibdagi tadbirkor uchun shaxsiy yozma ariza yetarli.",
       },
       { type: "h3" as const, text: "2-bosqich — Tugatuvchini tayinlash" },
       {
@@ -526,7 +526,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "4-bosqich — Davlat xizmatlari markazini xabardor qilish" },
       {
         type: "p" as const,
-        text: "Tugatish toʻgʻrisidagi qaror qabul qilinganidan boshlab bir ish kuni ichida tugatuvchi uning nusxasini tegishli Davlat xizmatlari markaziga taqdim etadi. Markaz: tugatish maqomini davlat reyestriga kiritadi; soliq organlarini, statistika organini, Ijro byurosini, koʻchmas mulk va transport vositalarini roʻyxatga oluvchi organlarni, Moliya vazirligini va kommunal xizmatlarni avtomatik ravishda xabardor qiladi; oʻz saytida tashkilot nomini, INNni, manzilni, qaror sanasi va raqamini hamda kreditorlar talablarni taqdim etish muddatini (kamida ikki oy) koʻrsatuvchi eʼlonni eʼlon qiladi.",
+        text: "Tugatish toʻgʻrisidagi qaror qabul qilinganidan boshlab bir ish kuni ichida tugatuvchi uning nusxasini tegishli Davlat xizmatlari markaziga taqdim etadi. Markaz: tugatish maqomini davlat reyestriga kiritadi; soliq organlarini, statistika organini, Ijro byurosini, koʻchmas mulk va transport vositalarini roʻyxatga oluvchi organlarni, Moliya vazirligini va kommunal xizmatlarni avtomatik ravishda xabardor qiladi; oʻz saytida tashkilot nomini, STIRni, manzilni, qaror sanasi va raqamini hamda kreditorlar talablarini taqdim etish muddatini (kamida ikki oy) koʻrsatuvchi eʼlonni joylashtiradi.",
       },
       {
         type: "p" as const,
@@ -567,7 +567,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "Garov bilan taʼminlangan talablar garovga qoʻyilgan aktivni sotishdan tushgan mablag' hisobidan qondiriladi. Yetishmayotgan summa yuqorida koʻrsatilgan navbatda qoplanadi.",
+        text: "Garov bilan taʼminlangan talablar garovga qoʻyilgan aktivni sotishdan tushgan mablagʻ hisobidan qondiriladi. Yetishmayotgan summa yuqorida koʻrsatilgan navbatda qoplanadi.",
       },
       { type: "h3" as const, text: "10-bosqich — Yakuniy tugatish balansini tasdiqlash" },
       {
@@ -581,7 +581,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "11-bosqich — Asosiy bank hisobvaragʻini yopish" },
       {
         type: "p" as const,
-        text: "Soliq maʼlumotnomasi va Ijro byurosi tasdigʻi qoʻlga kelgach, tugatuvchi asosiy bank hisobvaragʻini yopish uchun ariza beradi. Sud hibsidagi hisobvaraqni yopish mumkin emas.",
+        text: "Soliq maʼlumotnomasi va Ijro byurosi tasdigʻi qoʻlga kelgach, tugatuvchi asosiy bank hisobvaragʻini yopish uchun ariza beradi. Sud tomonidan xatlangan hisobvaraqni yopish mumkin emas.",
       },
       { type: "h3" as const, text: "12-bosqich — Hujjatlarni davlat arxiviga topshirish" },
       {
@@ -602,15 +602,15 @@ const article: Record<string, LocalizedArticle> = {
       faq: [
       {
         question: "Oʻzbekistonda ixtiyoriy tugatish qancha vaqt oladi?",
-        answer: "Maksimal muddat — Davlat xizmatlari markazi tugatish toʻgʻrisidagi xabarnomani olgan kundan boshlab 6 oy. Bu soddalashtirilgan muddat 2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoni bilan kiritilgan va oldingi murakkabroq tartibni almashtirdi. Soddalashtirilgan tartib gazetada eʼlon chop etish talabini ham bekor qildi — tugatish toʻgʻrisidagi eʼlonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi.",
+        answer: "Maksimal muddat — Davlat xizmatlari markazi tugatish toʻgʻrisidagi xabarnomani olgan kundan boshlab 6 oy. Bu soddalashtirilgan muddat 2019-yil 7-iyundagi PF-5739-sonli Prezident Farmoni bilan kiritilgan va oldingi murakkabroq tartibni almashtirdi. Soddalashtirilgan tartib gazetada eʼlon chop etish talabini ham bekor qildi — tugatish toʻgʻrisidagi eʼlonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi.",
       },
       {
         question: "Oʻzbekistonda ixtiyoriy tugatish uchun gazetada eʼlon chop etish talab etiladimi?",
-        answer: "Yoʻq. 2019 yilgi islohot gazetada eʼlon chop etish talabini bekor qildi. Tugatish toʻgʻrisidagi eʼlonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi. Kreditorlar talablarini taqdim etishning minimal muddati veb-saytda joylashtirilgan kundan boshlab 2 oyni tashkil etadi. Kompaniya roʻyxatdan oʻtgandan beri hech qanday xoʻjalik faoliyati yuritmagan boʻlsa va soliq qarzlari boʻlmasa, moliyaviy audit ham talab qilinmaydi.",
+        answer: "Yoʻq. 2019-yilgi islohot gazetada eʼlon chop etish talabini bekor qildi. Tugatish toʻgʻrisidagi eʼlonlar endi faqat Davlat xizmatlari markazining rasmiy veb-saytida joylashtiriladi. Kreditorlar talablarini taqdim etishning minimal muddati veb-saytda joylashtirilgan kundan boshlab 2 oyni tashkil etadi. Kompaniya roʻyxatdan oʻtgandan beri hech qanday xoʻjalik faoliyati yuritmagan boʻlsa va soliq qarzlari boʻlmasa, moliyaviy audit ham talab qilinmaydi.",
       },
       {
         question: "Oʻzbekistonda tugatish jarayonida kreditorlar talablarini qondirish navbati qanday?",
-        answer: "Talablar quyidagi navbatda qondiriladi: birinchi navbat — mehnat shartnomalari boʻyicha xodimlar talablari va kompaniya tomonidan jismoniy shaxslarning hayotiga yoki sogʻligʻiga yetkazilgan zararni qoplash boʻyicha talablar; ikkinchi navbat — davlat byudjetiga va davlat maqsadli jamgʻarmalariga toʻlovlar; uchinchi navbat — barcha qolgan talablar. Garov bilan taʼminlangan talablar birinchi navbatda garovga qoʻyilgan aktivni sotishdan tushgan mablag' hisobidan qondiriladi; yetishmayotgan summa yuqoridagi navbatda qoplanadi.",
+        answer: "Talablar quyidagi navbatda qondiriladi: birinchi navbat — mehnat shartnomalari boʻyicha xodimlar talablari va kompaniya tomonidan jismoniy shaxslarning hayotiga yoki sogʻligʻiga yetkazilgan zararni qoplash boʻyicha talablar; ikkinchi navbat — davlat byudjetiga va davlat maqsadli jamgʻarmalariga toʻlovlar; uchinchi navbat — barcha qolgan talablar. Garov bilan taʼminlangan talablar birinchi navbatda garovga qoʻyilgan aktivni sotishdan tushgan mablagʻ hisobidan qondiriladi; yetishmayotgan summa yuqoridagi navbatda qoplanadi.",
       },
       {
         question: "Oʻzbekistonda ixtiyoriy tugatishni yakunlash uchun asosiy bosqichlar qanday?",
@@ -619,11 +619,11 @@ const article: Record<string, LocalizedArticle> = {
     ],
     howTo: {
       name: "Oʻzbekistonda kompaniyani ixtiyoriy tugatish tartibi",
-      description: "2019 yil 7 iyundagi PF-5739-sonli Prezident Farmoniga muvofiq Oʻzbekistonda tadbirkorlik subyektini ixtiyoriy tugatishning 13 bosqichli tartibi.",
+      description: "2019-yil 7-iyundagi PF-5739-sonli Prezident Farmoniga muvofiq Oʻzbekistonda tadbirkorlik subyektini ixtiyoriy tugatishning 13 bosqichli tartibi.",
       steps: [
         {
           name: "Tugatish toʻgʻrisida qaror qabul qilish",
-          text: "Taʼsischi(lar), ishtirokchilar yoki vakolatli boshqaruv organi tashkilot nomi, INN, manzili, tugatuvchi maʼlumotlari, kreditorlar talablarini qabul qilish muddati va tugatish sababini koʻrsatuvchi qaror qabul qiladi.",
+          text: "Taʼsischi(lar), ishtirokchilar yoki vakolatli boshqaruv organi tashkilot nomi, STIR, manzili, tugatuvchi maʼlumotlari, kreditorlar talablarini qabul qilish muddati va tugatish sababini koʻrsatuvchi qaror qabul qiladi.",
         },
         {
           name: "Tugatuvchini tayinlash",
@@ -663,7 +663,7 @@ const article: Record<string, LocalizedArticle> = {
         },
         {
           name: "Asosiy bank hisobvaragʻini yopish",
-          text: "Soliq maʼlumotnomasi va Ijro byurosi tasdigʻi qoʻlga kelgach, asosiy bank hisobvaragʻini yopish uchun ariza berish. Sud hibsidagi hisobvaraqni yopib boʻlmaydi.",
+          text: "Soliq maʼlumotnomasi va Ijro byurosi tasdigʻi qoʻlga kelgach, asosiy bank hisobvaragʻini yopish uchun ariza berish. Sud tomonidan xatlangan hisobvaraqni yopib boʻlmaydi.",
         },
         {
           name: "Hujjatlarni davlat arxiviga topshirish",

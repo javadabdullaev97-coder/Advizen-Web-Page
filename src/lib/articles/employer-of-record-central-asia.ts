@@ -140,7 +140,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle: "Как иностранные компании могут нанимать и оплачивать труд специалистов в Узбекистане без регистрации местного юридического лица.",
-    author: "Advizen HR Advisory",
+    author: "HR-практика Advizen",
     readTime: "8 мин чтения",
     inShort: {
       figures: [
@@ -277,7 +277,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   uz: {
     subtitle: "Xorijiy kompaniyalar Oʻzbekistonda mahalliy yuridik shaxs roʻyxatdan oʻtkazmasdan qanday qilib isteʼdod topib, ularga haq toʻlashi mumkin.",
-    author: "Advizen HR Advisory",
+    author: "Advizen HR amaliyoti",
     readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
@@ -310,7 +310,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Employer of Record nima?" },
       {
         type: "p" as const,
-        text: "Employer of Record — koʻpincha EoR deb ataladigan — xorijiy kompaniya nomidan xodimlarni yollaydigan mahalliy yuridik shaxsdir. EoR qogʻozda qonuniy ish beruvchiga aylanadi: mehnat shartnomasini imzolaydi, ish haqini hisoblaydi, daromad soligʻi va ijtimoiy toʻlovlarni ushlab qoladi, majburiy imtiyozlar taqdim etadi va barcha HR hamda mehnat qonunchiligi muvofiqligini taʼminlaydi. Xorijiy kompaniya xodimning ishi, yoʻnalishi va masʼuliyatlari ustidan toʻliq kunlik nazoratni saqlab qoladi. EoR shunchaki huquqiy va maʼmuriy qatlamni oʻz zimmasiga oladi.",
+        text: "Employer of Record — koʻpincha EoR deb ataladigan — xorijiy kompaniya nomidan xodimlarni yollaydigan mahalliy yuridik shaxsdir. EoR qogʻozda qonuniy ish beruvchiga aylanadi: mehnat shartnomasini imzolaydi, ish haqini hisoblaydi, daromad soligʻi va ijtimoiy toʻlovlarni ushlab qoladi, majburiy imtiyozlar taqdim etadi va barcha HR hamda mehnat qonunchiligi muvofiqligini taʼminlaydi. Xorijiy kompaniya xodimning ishi, yoʻnalishi va masʼuliyatlari ustidan toʻliq kundalik nazoratni saqlab qoladi. EoR shunchaki huquqiy va maʼmuriy qatlamni oʻz zimmasiga oladi.",
       },
       {
         type: "blockquote" as const,
@@ -319,11 +319,11 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Bu Oʻzbekiston va Markaziy Osiyoda nima uchun muhim" },
       {
         type: "p" as const,
-        text: "Oʻzbekistonning Mehnat kodeksi barcha mehnat munosabatlarini amaldagi soliq identifikatsiya raqamiga ega ish beruvchi bilan yozma shartnoma orqali rasmiylashtirilishini talab etadi. Ijtimoiy sugʻurta badallari, daromad soligʻini ushlab qolish va majburiy taʼtil yigʻish muhandislik emas. Odamni norasmiy yollash — yoki mehnat munosabati ish shartnomasi sifatida koʻrinib turgan holda xizmat shartnomasi orqali haq toʻlash — jiddiy huquqiy va obroʻga putur etkazadigan riskni oʻz ichiga oladi. Davlat mehnat inspeksiyasi xorijiy aloqali korxonalarni faol tekshiradi va notoʻgʻri tasniflash uchun jarimalar sezilarli boʻlishi mumkin.",
+        text: "Oʻzbekistonning Mehnat kodeksi barcha mehnat munosabatlarini amaldagi soliq identifikatsiya raqamiga ega ish beruvchi bilan yozma shartnoma orqali rasmiylashtirilishini talab etadi. Ijtimoiy sugʻurta badallari, daromad soligʻini ushlab qolish va majburiy taʼtil pullarini hisoblash — muhokama qilinmaydigan majburiyatlar. Odamni norasmiy yollash — yoki mehnat munosabati ish shartnomasi sifatida koʻrinib turgan holda xizmat shartnomasi orqali haq toʻlash — jiddiy huquqiy va obroʻga putur yetkazadigan xatarni oʻz ichiga oladi. Davlat mehnat inspeksiyasi xorijiy aloqali korxonalarni faol tekshiradi va notoʻgʻri tasniflash uchun jarimalar sezilarli boʻlishi mumkin.",
       },
       {
         type: "p" as const,
-        text: "Oʻzbekistondan tashqarida mintaqadagi har bir mamlakatning oʻz tizimi mavjud. Qozogʻiston oʻziga xos mehnat shartnomasini bekor qilish talablariga ega boshqa Mehnat kodeksi asosida ishlaydi. Qirgʻiziston oʻzining ijtimoiy jamgʻarma badellarini qoʻllaydi. Har bir yurisdiksiyada alohida ishlash — biznesni boshqarish bilan bir vaqtda — koʻpchilik tashkilotlar uddalay olmaydigan chalgʻitishdir.",
+        text: "Oʻzbekistondan tashqarida mintaqadagi har bir mamlakatning oʻz tizimi mavjud. Qozogʻiston oʻziga xos mehnat shartnomasini bekor qilish talablariga ega boshqa Mehnat kodeksi asosida ishlaydi. Qirgʻiziston oʻzining ijtimoiy jamgʻarma badallarini qoʻllaydi. Har bir yurisdiksiyada alohida ishlash — biznesni boshqarish bilan bir vaqtda — koʻpchilik tashkilotlar uddalay olmaydigan chalgʻitishdir.",
       },
       { type: "h2" as const, text: "EoR modeli amalda qanday ishlaydi" },
       {
@@ -340,11 +340,11 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Strategik afzalliklar" },
       {
         type: "p" as const,
-        text: "Tezlik — eng darhol afzallik. Yuridik shaxsni roʻyxatdan oʻtkazish oylar talab qiladigan joyda, EoR xodimni bir necha kunda ish boshlata oladi. Giperoʻsish rejimidagi biznes yoki mintaqada vaqtga bogʻliq loyihalarni amalga oshirayotganlar uchun bu farq hal qiluvchi ahamiyatga ega.",
+        text: "Tezlik — eng birinchi afzallik. Yuridik shaxsni roʻyxatdan oʻtkazish oylar talab qiladigan joyda, EoR xodimni bir necha kunda ish boshlata oladi. Giperoʻsish rejimidagi biznes yoki mintaqada vaqtga bogʻliq loyihalarni amalga oshirayotganlar uchun bu farq hal qiluvchi ahamiyatga ega.",
       },
       {
         type: "p" as const,
-        text: "Ikkinchi — narx. Mahalliy yuridik shaxsni roʻyxatdan oʻtkazish roʻyxatdan oʻtish xarajatlarini, notarial xarajatlarni, baʼzi yurisdiksiyalarda minimal kapital talablarini va yillik muvofiqlik xarajatlarini — buxgalteriya, audit, hisobotlar — hatto yuridik shaxsning faoliyati minimal boʻlsa ham oʻz ichiga oladi. EoR barcha ushbu doimiy xarajatlarni har bir xodim uchun xizmat toʻloviga aylantiradi va bu modelni bir dan oʻn beshgacha xodimli jamoalar uchun juda samarali qiladi.",
+        text: "Ikkinchi — narx. Mahalliy yuridik shaxsni roʻyxatdan oʻtkazish roʻyxatdan oʻtish xarajatlarini, notarial xarajatlarni, baʼzi yurisdiksiyalarda minimal kapital talablarini va yillik muvofiqlik xarajatlarini — buxgalteriya, audit, hisobotlar — hatto yuridik shaxsning faoliyati minimal boʻlsa ham oʻz ichiga oladi. EoR barcha ushbu doimiy xarajatlarni har bir xodim uchun xizmat toʻloviga aylantiradi va bu modelni birdan oʻn beshtagacha xodimi boʻlgan jamoalar uchun juda samarali qiladi.",
       },
       {
         type: "ul" as const,
@@ -360,11 +360,11 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "EoR qachon ishlatiladi — va qachon yuridik shaxs roʻyxatdan oʻtkaziladi" },
       {
         type: "p" as const,
-        text: "EoR har bir holda yuridik shaxsning doimiy oʻrnini bosuvchi emas. Agar siz ofis ochishni, muhim mahalliy shartnomalar tuzishni, aktivlar saqlashni yoki uzoq muddatda yigirmadan ortiq kishilik jamoa qurishni rejalashtirmoqchi boʻlsangiz, toʻliq mulkchilikdagi shoʻba korxona yoki vakolatxona tashkil etish odatda tijorat nuqtai nazaridan toʻgʻriroq boʻladi. EoR modeli kirish mexanizmi sifatida eng samarali — yuridik shaxs roʻyxatdan oʻtayotgan paytda darhol faoliyat yuritish imkonini beradi — yoki mahalliy yuridik shaxs xarajatlari xodimlar soni bilan oqlanmaydigan kichik tarqoq jamoalar uchun doimiy yechim sifatida.",
+        text: "EoR har bir holda yuridik shaxsning doimiy oʻrnini bosuvchi emas. Agar siz ofis ochishni, muhim mahalliy shartnomalar tuzishni, aktivlar saqlashni yoki uzoq muddatda yigirmadan ortiq kishilik jamoa qurishni rejalashtirayotgan boʻlsangiz, toʻliq mulkchilikdagi shoʻba korxona yoki vakolatxona tashkil etish odatda tijorat nuqtai nazaridan toʻgʻriroq boʻladi. EoR modeli kirish mexanizmi sifatida eng samarali — yuridik shaxs roʻyxatdan oʻtayotgan paytda darhol faoliyat yuritish imkonini beradi — yoki mahalliy yuridik shaxs xarajatlari xodimlar soni bilan oqlanmaydigan kichik tarqoq jamoalar uchun doimiy yechim sifatida.",
       },
       {
         type: "p" as const,
-        text: "Biz har bir muayyan holda ushbu qarorni qabul qilishda mijozlarga yordam beramiz. Toʻgʻri javob xodimlar soni bashoratlariga, ishning xarakteriga, mijozning risk tolerantligiga va maqsadli mamlakatning tartibga solish oʻziga xosligiga bogʻliq.",
+        text: "Biz har bir muayyan holda ushbu qarorni qabul qilishda mijozlarga yordam beramiz. Toʻgʻri javob xodimlar soni bashoratlariga, ishning xarakteriga, mijozning xatarga tayyorligiga va maqsadli mamlakatning tartibga solish oʻziga xosligiga bogʻliq.",
       },
       { type: "h2" as const, text: "Advizen EoR xizmati nimani oʻz ichiga oladi" },
       {
@@ -376,7 +376,7 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Mehnat shartnomalarini tuzish va mahalliy mehnat organlarida roʻyxatdan oʻtkazish.",
           "Toʻliq ish haqi hujjatlari bilan oylik ish haqi hisoblash.",
-          "Jismoniy shaxslardan daromad soligʻi va ijtimoiy toʻlovlarni ushlab qolish va oʻtkazish.",
+          "Jismoniy shaxslardan olinadigan daromad soligʻi va ijtimoiy toʻlovlarni ushlab qolish va oʻtkazish.",
           "Majburiy taʼtil, kasallik nafaqasi va ishdan boʻshatish nafaqasi hisob-kitoblari.",
           "Kerak boʻlganda chet el xodimlari uchun ish ruxsatnomalari va immigratsiya boʻyicha maslahat.",
           "Doimiy HR qoʻllab-quvvatlash: siyosat boʻyicha koʻrsatmalar, intizom tartiblari, ishdan boʻshatishda muvofiqlik.",
@@ -386,7 +386,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Isteʼdod oynasi ochiq — yopilishidan oldin harakat qiling" },
       {
         type: "p" as const,
-        text: "Markaziy Osiyo isteʼdod bozori tez etilmoqda. Maoshlar oʻsmoqda, nomzodlarda koʻproq imkoniyat bor va tez harakatlayotgan kompaniyalar mintaqadagi keyingi oʻn yillikni belgilaydigan jamoalarni quryapti. Mahalliy yollashning huquqiy va maʼmuriy murakkabligi real — ammo u toʻliq yechilishi mumkin. EoR modeli aynan shu toʻsiqni olib tashlash uchun mavjud. Yagona savol — siz birinchi harakat qilasizmi yoki boshqa birov buni amalga oshirishini kuzatasizmi.",
+        text: "Markaziy Osiyo isteʼdod bozori tez yetilmoqda. Maoshlar oʻsmoqda, nomzodlarda koʻproq imkoniyat bor va tez harakat qilayotgan kompaniyalar mintaqadagi keyingi oʻn yillikni belgilaydigan jamoalarni shakllantirmoqda. Mahalliy yollashning huquqiy va maʼmuriy murakkabligi real — ammo u toʻliq yechilishi mumkin. EoR modeli aynan shu toʻsiqni olib tashlash uchun mavjud. Yagona savol — siz birinchi harakat qilasizmi yoki boshqa birov buni amalga oshirishini kuzatasizmi.",
       },
       {
         type: "blockquote" as const,
@@ -396,7 +396,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "Employer of Record nima va u qanday ishlaydi?",
-        answer: "Employer of Record (EoR) — bu xorijiy kompaniya nomidan xodimlarni yollaydigan mahalliy yuridik shaxs. EoR mehnat shartnomasini imzolaydi, ish haqini hisoblaydi, daromad soligʻi va ijtimoiy toʻlovlarni ushlab qoladi va HR muvofiqligini boshqaradi. Xorijiy kompaniya xodimning ishi ustidan toʻliq kunlik nazoratni saqlab qoladi, EoR esa barcha huquqiy va maʼmuriy majburiyatlarni oʻz zimmasiga oladi.",
+        answer: "Employer of Record (EoR) — bu xorijiy kompaniya nomidan xodimlarni yollaydigan mahalliy yuridik shaxs. EoR mehnat shartnomasini imzolaydi, ish haqini hisoblaydi, daromad soligʻi va ijtimoiy toʻlovlarni ushlab qoladi va HR muvofiqligini boshqaradi. Xorijiy kompaniya xodimning ishi ustidan toʻliq kundalik nazoratni saqlab qoladi, EoR esa barcha huquqiy va maʼmuriy majburiyatlarni oʻz zimmasiga oladi.",
       },
       {
         question: "Xorijiy kompaniya mahalliy yuridik shaxssiz Oʻzbekistonda xodimlarni qanchalik tez yollashi mumkin?",
@@ -407,8 +407,8 @@ const article: Record<string, LocalizedArticle> = {
         answer: "Advizen Employer of Record xizmati Oʻzbekiston, Qozogʻiston va Qirgʻizistonni qamrab oladi va Markaziy Osiyoning uchala yurisdiksiyasida mehnat muvofiqligini boshqarish uchun yagona aloqa nuqtasini taqdim etadi.",
       },
       {
-        question: "Kompaniya Oʻzbekistonda mahalliy yuridik shaxs oʻrnatish oʻrniga qachon EoR dan foydalanishi kerak?",
-        answer: "EoR kichik jamoa (odatda 20 xodimsizdan kam) yollayotgan, yuridik shaxs roʻyxatdan oʻtayotgan paytda tezda bozorga kirayotgan yoki mahalliy yuridik shaxs xarajatlari oqlanmaydigan kichik tarqoq jamoani saqlab turmoqchi boʻlgan kompaniyalar uchun ideal. Katta jamoalar, muhim mahalliy shartnomalar yoki aktivlar bilan bogʻliq operatsiyalar uchun odatda toʻliq mulkchilikdagi shoʻba korxona maqsadga muvofiqroq.",
+        question: "Kompaniya Oʻzbekistonda mahalliy yuridik shaxs tashkil etish oʻrniga qachon EoRdan foydalanishi kerak?",
+        answer: "EoR kichik jamoa (odatda 20 nafardan kam xodim) yollayotgan, yuridik shaxs roʻyxatdan oʻtayotgan paytda tezda bozorga kirayotgan yoki mahalliy yuridik shaxs xarajatlari oqlanmaydigan kichik tarqoq jamoani saqlab turmoqchi boʻlgan kompaniyalar uchun ideal. Katta jamoalar, muhim mahalliy shartnomalar yoki aktivlar bilan bogʻliq operatsiyalar uchun odatda toʻliq mulkchilikdagi shoʻba korxona maqsadga muvofiqroq.",
       },
     ],
   },

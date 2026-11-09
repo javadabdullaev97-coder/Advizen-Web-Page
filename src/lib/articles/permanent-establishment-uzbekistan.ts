@@ -192,9 +192,9 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "Chet ellik investorlar uchun Oʻzbekistondagi Doimiy muassasa talablarini tushunish va bajarish uchun muhim maslahatlar.",
+    subtitle: "Chet ellik investorlar uchun Oʻzbekistondagi doimiy muassasa talablarini tushunish va bajarish uchun muhim maslahatlar.",
     author: "Advizen soliq amaliyoti",
-    readTime: "7 daqiqalik oʻqish",
+    readTime: "7 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "1 oy", label: "Bundan uzoq mavjud boʻlgan ish joyi odatda doimiy hisoblanadi" },
@@ -212,12 +212,12 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p",
-        text: "Oʻzbekistonda faoliyat yuritmoqchi boʻlgan chet el kompaniyalari uchun Doimiy muassasa (DM) tushunchasini bilish asosiydir. Mohiyatan, DM chet el kompaniyasi Oʻzbekistonda biznes faoliyatini yuritish uchun doimiy joyga ega boʻlganda paydo boʻladi. Bu jismoniy joy yoki mamlakatda davom etayotgan muayyan turdagi faoliyat boʻlishi mumkin. Bir oydan ortiq mavjud boʻlgan ish joyi odatda doimiy hisoblanadi.",
+        text: "Oʻzbekistonda faoliyat yuritmoqchi boʻlgan chet el kompaniyalari uchun doimiy muassasa (DM) tushunchasini bilish asosiydir. Mohiyatan, DM chet el kompaniyasi Oʻzbekistonda biznes faoliyatini yuritish uchun doimiy joyga ega boʻlganda paydo boʻladi. Bu jismoniy joy yoki mamlakatda davom etayotgan muayyan turdagi faoliyat boʻlishi mumkin. Bir oydan ortiq mavjud boʻlgan ish joyi odatda doimiy hisoblanadi.",
       },
       { type: "h2", text: "DM deb hisoblanishi mumkin boʻlgan narsalar" },
       {
         type: "p",
-        text: "Turli faoliyat va mavjudlik DM maqomiga olib kelishi mumkin:",
+        text: "Turli faoliyat turlari va mavjudlik shakllari DM maqomiga olib kelishi mumkin:",
       },
       {
         type: "ul",
@@ -232,7 +232,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "DM qachon paydo boʻlmaydi?" },
       {
         type: "p",
-        text: "Muayyan faoliyat odatda tayyorgarlik yoki yordamchi xarakterga ega va avtomatik ravishda DM ga olib kelmaydi:",
+        text: "Ayrim faoliyat turlari odatda tayyorgarlik yoki yordamchi xarakterga ega va avtomatik ravishda DMga olib kelmaydi:",
       },
       {
         type: "ul",
@@ -245,43 +245,43 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Faoliyatni boshlash va roʻyxatga olish" },
       {
         type: "p",
-        text: "Agar faoliyatingiz DM ga ishora qilsa, odatda Oʻzbekistonda bir nechta asosiy sanalardan eng erta sanasida — masalan, tegishli shartnomalarni imzolash yoki shartnomani bajarish uchun xodimlar kelishi sanasida — faoliyat boshlangan deb hisoblanadi. DM paydo boʻlganda, chet el kompaniyangiz mahalliy soliq organlarida roʻyxatdan oʻtishi shart.",
+        text: "Agar faoliyatingiz DMga ishora qilsa, odatda Oʻzbekistonda bir nechta asosiy sanalardan eng erta sanasida — masalan, tegishli shartnomalarni imzolash yoki shartnomani bajarish uchun xodimlar kelishi sanasida — faoliyat boshlangan deb hisoblanadi. DM paydo boʻlganda, chet el kompaniyangiz mahalliy soliq organlarida roʻyxatdan oʻtishi shart.",
       },
       { type: "h2", text: "Soliq solish va chegirib tashlanadigan xarajatlar" },
       {
         type: "ul",
         items: [
-          "Sizning DM ingiz tomonidan Oʻzbekistonda yaratilgan daromad mahalliy foyda soligʻiga tortiladi",
-          "Soliq bazasi odatda DM ning umumiy daromadi boʻlib, biznes bilan bogʻliq xarajatlar uchun muayyan chegirmalar hisobga olinadi",
-          "DM dan chet el bosh ofisi yoki boshqa bogʻliq shaxslarga ayrim toʻlovlar chegirib tashlanmasligi mumkin",
-          "Soliqdan keyingi DM ning sof foydasi dividend sifatida koʻrib chiqiladi va 10% soliqqa tortilishi mumkin — xalqaro soliq shartnomalari pastroq stavkalarni taklif qilishi mumkin",
+          "Sizning DMingiz tomonidan Oʻzbekistonda yaratilgan daromad mahalliy foyda soligʻiga tortiladi",
+          "Soliq bazasi odatda DMning umumiy daromadi boʻlib, biznes bilan bogʻliq xarajatlar uchun muayyan chegirmalar hisobga olinadi",
+          "DMdan chet el bosh ofisi yoki boshqa bogʻliq shaxslarga ayrim toʻlovlar chegirib tashlanmasligi mumkin",
+          "Soliqdan keyingi DMning sof foydasi dividend sifatida koʻrib chiqiladi va 10% soliqqa tortilishi mumkin — xalqaro soliq shartnomalari pastroq stavkalarni taklif qilishi mumkin",
         ],
       },
       {
         type: "blockquote",
-        text: "Oʻzbekistonda DM qoidalari OECD tamoyillariga juda yaqin, biroq mahalliy oʻziga xosliklarga ega. Chet el kompaniyalari kutilmagan soliq taʼsiridan qochish uchun faoliyatni boshlashdan oldin professional baholash olishi kerak.",
+        text: "Oʻzbekistonda DM qoidalari OECD tamoyillariga juda yaqin, biroq mahalliy oʻziga xosliklarga ega. Chet el kompaniyalari kutilmagan soliq oqibatlaridan qochish uchun faoliyatni boshlashdan oldin professional baholash olishi kerak.",
       },
       { type: "h2", text: "Amaliy oqibatlar" },
       {
         type: "p",
-        text: "Faoliyatingiz Oʻzbekistonda DM yaratadimi degan savolni tushunish har qanday bozorga kirish tahlilida muhim qadamdir. Roʻyxatga olinmagan DM faoliyatining oqibatlari orasida soliq qoʻshib hisoblash, jarimalar va obroʻga zarar bor. Biznes tuzilmasini tanlashdan oldin faoliyatingizni Oʻzbekiston Soliq kodeksi va tegishli qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi shartnomalar belgilagan DM chegaralariga proaktiv baholash tavsiya etiladi.",
+        text: "Faoliyatingiz Oʻzbekistonda DM yaratadimi degan savolni tushunish har qanday bozorga kirish tahlilida muhim qadamdir. Roʻyxatga olinmagan DM faoliyatining oqibatlari orasida soliq qoʻshib hisoblash, jarimalar va obroʻga zarar bor. Biznes tuzilmasini tanlashdan oldin faoliyatingizni Oʻzbekiston Soliq kodeksi va tegishli qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi shartnomalar belgilagan DM mezonlari asosida oldindan baholash tavsiya etiladi.",
       },
     ],
     faq: [
       {
-        question: "Qaysi faoliyat Oʻzbekistonda Doimiy muassasa yaratadi?",
-        answer: "Chet el kompaniyasi Oʻzbekistonda bir oydan ortiq doimiy faoliyat joyiga ega boʻlganda Doimiy muassasa (DM) paydo boʻladi, shu jumladan har qanday turdagi ofis, zavod, ustaxona yoki laboratoriya. DM maqomi quyidagi hollarda ham yuzaga keladi: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; kamida 183 kun davomida xodimlar orqali xizmatlar koʻrsatish; chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzadigan bogʻliq agentlar; bogʻliq agent orqali sugʻurta mukofotlarini yigʻuvchi chet el sugʻurta kompaniyalari.",
+        question: "Qaysi faoliyat Oʻzbekistonda doimiy muassasa yaratadi?",
+        answer: "Chet el kompaniyasi Oʻzbekistonda bir oydan ortiq doimiy faoliyat joyiga ega boʻlganda doimiy muassasa (DM) paydo boʻladi, shu jumladan har qanday turdagi ofis, zavod, ustaxona yoki laboratoriya. DM maqomi quyidagi hollarda ham yuzaga keladi: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; kamida 183 kun davomida xodimlar orqali xizmatlar koʻrsatish; chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzadigan bogʻliq agentlar; bogʻliq agent orqali sugʻurta mukofotlarini yigʻuvchi chet el sugʻurta kompaniyalari.",
       },
       {
-        question: "Qaysi faoliyat Oʻzbekistonda Doimiy muassasa yaratmaydi?",
+        question: "Qaysi faoliyat Oʻzbekistonda doimiy muassasa yaratmaydi?",
         answer: "Bir qator tayyorgarlik va yordamchi faoliyat turlari Oʻzbekistonda avtomatik ravishda DM yaratmaydi: obyektlarni faqat tovarlarni saqlash yoki namoyish qilish uchun ishlatish; faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼlumot toʻplash uchun doimiy biznes joyini saqlash; Oʻzbekistondagi boshqa kompaniyaga chet el xodimlarini taqdim etish — agar chet el kompaniyasi ularning ish natijalari uchun javobgar boʻlmasa va bundan oladigan daromad bunday xodimlarni taqdim etish jami xarajatlarining 10% dan oshmasa.",
       },
       {
-        question: "Oʻzbekistondagi Doimiy muassasaga qanday soliqlar qoʻllaniladi?",
-        answer: "Oʻzbekistondagi DM tomonidan yaratilgan daromad mahalliy foyda soligʻiga tortiladi. Soliq bazasi odatda DM ning faoliyat bilan bogʻliq xarajatlar chegirib tashlanganidan keyingi umumiy daromadi hisoblanadi. Eʼtibor bering: DMdan chet el bosh ofisi yoki bogʻliq shaxslarga ayrim toʻlovlar chegirib tashlanmasligi mumkin. DMning soliqdan keyingi sof foydasi dividend sifatida koʻriladi va qoʻshimcha 10% soliqqa tortilishi mumkin, garchi qoʻllanadigan qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi shartnomalar ushbu stavkani kamaytirishi mumkin.",
+        question: "Oʻzbekistondagi doimiy muassasaga qanday soliqlar qoʻllaniladi?",
+        answer: "Oʻzbekistondagi DM tomonidan yaratilgan daromad mahalliy foyda soligʻiga tortiladi. Soliq bazasi odatda DMning faoliyat bilan bogʻliq xarajatlar chegirib tashlanganidan keyingi umumiy daromadi hisoblanadi. Eʼtibor bering: DMdan chet el bosh ofisi yoki bogʻliq shaxslarga ayrim toʻlovlar chegirib tashlanmasligi mumkin. DMning soliqdan keyingi sof foydasi dividend sifatida koʻriladi va qoʻshimcha 10% soliqqa tortilishi mumkin, garchi qoʻllanadigan qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi shartnomalar ushbu stavkani kamaytirishi mumkin.",
       },
       {
-        question: "Roʻyxatga olinmagan Doimiy muassasaning oqibatlari qanday?",
+        question: "Roʻyxatga olinmagan doimiy muassasaning oqibatlari qanday?",
         answer: "Oʻzbekistonda roʻyxatga olinmagan DM orqali faoliyat olib borish roʻyxatga olinmagan barcha davr uchun soliq qoʻshib hisoblash, moliyaviy jarimalar va obroʻga zarar koʻrishga olib kelishi mumkin. DM maqomi yuzaga kelgandan soʻng chet el kompaniyasi mahalliy soliq organlarida roʻyxatdan oʻtishi shart. DM faoliyatining boshlanish sanasi odatda eng erta sanadan hisoblanadi: tegishli shartnomani imzolash, ishlarning boshlanishi yoki xodimlarning kelishi — shuning uchun roʻyxatdan oʻtish majburiyati toʻliq faoliyat boshlanishidan oldin ham yuzaga kelishi mumkin.",
       },
     ],

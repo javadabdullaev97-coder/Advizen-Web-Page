@@ -193,7 +193,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "Помогаете ли вы с лицензированием крипто- и финтех-бизнеса в Узбекистане?",
-        a: "Да. Поставщики услуг в сфере оборота крипто-активов лицензируются Национальным агентством перспективных проектов (НАПП); в его открытом реестре лицензий отдельно выделены криптобиржи, криптодепозитарии и криптомагазины (napp.uz). Платёжные организации и операторы платёжных систем лицензируются отдельно Центральным банком (Закон «О платежах и платёжных системах» № ЗРУ-578 от 01.11.2019, ст. 15, 21). Мы консультируем по лицензионным заявкам, корпоративной структуре, процедурам ПОД/ФТ и KYC и текущему комплаенсу крипто- и финтех-компаний.",
+        a: "Да. Поставщики услуг в сфере оборота криптоактивов лицензируются Национальным агентством перспективных проектов (НАПП); в его открытом реестре лицензий отдельно выделены криптобиржи, криптодепозитарии и криптомагазины (napp.uz). Платёжные организации и операторы платёжных систем лицензируются отдельно Центральным банком (Закон «О платежах и платёжных системах» № ЗРУ-578 от 01.11.2019, ст. 15, 21). Мы консультируем по лицензионным заявкам, корпоративной структуре, процедурам ПОД/ФТ и KYC и текущему комплаенсу крипто- и финтех-компаний.",
       },
     ],
     uz: [
@@ -203,11 +203,11 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "Soliq va yuridik masalalarni bir vaqtda hal qila olasizmi?",
-        a: "Ha. Soliq va yuridik maslahatchilar bitta loyiha ustida bitta hamkor muvofiqlashtiruvida ishlaydi, shuning uchun tuzilma joriy etilishidan oldin ikkala tomondan tekshiriladi.",
+        a: "Ha. Soliq va yuridik maslahatchilar bitta loyiha ustida bitta hamkor muvofiqlashtiruvi ostida ishlaydi, shuning uchun tuzilma joriy etilishidan oldin ikkala tomondan tekshiriladi.",
       },
       {
         q: "Qaysi sohalarda ixtisoslashasiz?",
-        a: "Oltita soha: moliyaviy xizmatlar, energetika va sanoat, texnologiyalar va raqamli soha, koʻchmas mulk va infratuzilma, isteʼmol sektori, sogʻliqni saqlash va ijtimoiy soha. Maslahatchilarimiz ishlari byudjeti 10 mlrd dollardan ortiq atom elektr stansiyasi qurilishini soliq, buxgalteriya va bojxona boʻyicha tuzishdan tortib bank va islom moliyasi qonunchiligi boʻyicha mahalliy maslahatchi sifatida ishtirok etishgacha.",
+        a: "Oltita soha: moliyaviy xizmatlar, energetika va sanoat, texnologiyalar va raqamli soha, koʻchmas mulk va infratuzilma, isteʼmol sektori, sogʻliqni saqlash va ijtimoiy soha. Maslahatchilarimiz ishlari byudjeti 10 mlrd dollardan ortiq atom elektr stansiyasi qurilishini soliq, buxgalteriya va bojxona jihatidan tuzilmalashdan tortib bank va islom moliyasi qonunchiligi boʻyicha mahalliy maslahatchi sifatida ishtirok etishgacha boʻlgan loyihalarni qamrab oladi.",
       },
       {
         q: "Odatiy hamkorlik qancha vaqt davom etadi?",
@@ -215,7 +215,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "Oʻzbekistondagi maxsus iqtisodiy zonalarning afzalliklari qanday?",
-        a: "MIZ ishtirokchilari investitsiya hajmiga qarab Prezident qarori bilan belgilanadigan muddatga mol-mulk soligʻi va yer soligʻidan, shuningdek 3–5 mln, 5–15 mln va 15 mln AQSh dollari va undan ortiq investitsiyada mos ravishda 3, 5 yoki 10 yilga foyda soligʻidan ozod qilinadi (SK, 473-modda). 2026-yil 1-apreldan boshlab ishtirokchi maqomini olganlar uchun foyda soligʻi boʻyicha imtiyoz tezlashtirilgan amortizatsiya huquqi shaklida beriladi, barcha imtiyozlar esa faqat MIZ direksiyasi bilan tuzilgan investitsiya kelishuvida nazarda tutilgan faoliyat turlariga tatbiq etiladi (473-modda). Zonalarda maxsus bojxona va soliq rejimlari amal qiladi, ishtirokchilar butlovchi qismlar, xomashyo va materiallar importida QQS va bojxona boʻjini 120 kungacha kechiktirib toʻlash huquqiga ega («Maxsus iqtisodiy zonalar toʻgʻrisida»gi 2020-yil 17-fevraldagi OʻRQ-604-son Qonun; Prezidentning 2021-yil 14-sentabrdagi PQ-5243-son qarori). IT Park — oʻz rezidentlik shartlariga ega alohida rejim; har ikkala rejim mezonlariga muvofiqlik boʻyicha maslahat beramiz.",
+        a: "MIZ ishtirokchilari investitsiya hajmiga qarab Prezident qarori bilan belgilanadigan muddatga mol-mulk soligʻi va yer soligʻidan, shuningdek 3–5 mln, 5–15 mln va 15 mln AQSh dollari va undan ortiq investitsiyada mos ravishda 3, 5 yoki 10 yilga foyda soligʻidan ozod qilinadi (SK, 473-modda). 2026-yil 1-apreldan boshlab ishtirokchi maqomini olganlar uchun foyda soligʻi boʻyicha imtiyoz tezlashtirilgan amortizatsiya huquqi shaklida beriladi, barcha imtiyozlar esa faqat MIZ direksiyasi bilan tuzilgan investitsiya kelishuvida nazarda tutilgan faoliyat turlariga tatbiq etiladi (473-modda). Zonalarda maxsus bojxona va soliq rejimlari amal qiladi, ishtirokchilar butlovchi qismlar, xomashyo va materiallar importida QQS va bojxona bojini 120 kungacha kechiktirib toʻlash huquqiga ega («Maxsus iqtisodiy zonalar toʻgʻrisida»gi 2020-yil 17-fevraldagi OʻRQ-604-son Qonun; Prezidentning 2021-yil 14-sentabrdagi PQ-5243-son qarori). IT Park — oʻz rezidentlik shartlariga ega alohida rejim; har ikkala rejim mezonlariga muvofiqlik boʻyicha maslahat beramiz.",
       },
       {
         q: "Markaziy Osiyoda Employer of Record (EOR) qanday ishlaydi?",
@@ -231,7 +231,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "Oʻzbekistonda kripto va fintech litsenziyasini olishda yordam bera olasizmi?",
-        a: "Ha. Kripto-aktivlar aylanmasi sohasidagi xizmat provayderlari Istiqbolli loyihalar milliy agentligi (NAPP) tomonidan litsenziyalanadi; uning ochiq litsenziyalar reyestrida kripto-birjalar, kripto-depozitariylar va kripto-doʻkonlar alohida koʻrsatilgan (napp.uz). Toʻlov tashkilotlari va toʻlov tizimlari operatorlari esa Markaziy bank tomonidan alohida litsenziyalanadi («Toʻlovlar va toʻlov tizimlari toʻgʻrisida»gi 2019-yil 1-noyabrdagi OʻRQ-578-son Qonun, 15, 21-moddalar). Kripto va fintech kompaniyalariga litsenziya arizalari, korporativ tuzilma, AML/KYC tartiblari va joriy muvofiqlik boʻyicha maslahat beramiz.",
+        a: "Ha. Kriptoaktivlar aylanmasi sohasidagi xizmat provayderlari Istiqbolli loyihalar milliy agentligi (ILMA) tomonidan litsenziyalanadi; uning ochiq litsenziyalar reyestrida kripto-birjalar, kripto-depozitariylar va kripto-doʻkonlar alohida koʻrsatilgan (napp.uz). Toʻlov tashkilotlari va toʻlov tizimlari operatorlari esa Markaziy bank tomonidan alohida litsenziyalanadi («Toʻlovlar va toʻlov tizimlari toʻgʻrisida»gi 2019-yil 1-noyabrdagi OʻRQ-578-son Qonun, 15, 21-moddalar). Kripto va fintech kompaniyalariga litsenziya arizalari, korporativ tuzilma, AML/KYC tartiblari va joriy muvofiqlik boʻyicha maslahat beramiz.",
       },
     ],
   },

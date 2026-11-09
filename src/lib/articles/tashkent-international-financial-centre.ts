@@ -299,7 +299,7 @@ const article: Record<string, LocalizedArticle> = {
   ru: {
     subtitle:
       "Нейтральный анализ Конституционного закона № ЗРУ-1158 от 13 июля 2026 года об учреждении Ташкентского международного финансового центра — его правовая архитектура, налоговый режим, операционный режим и сравнение с DIFC, ADGM, AIFC и QFC.",
-    author: "Advizen Legal Practice",
+    author: "Юридическая практика Advizen",
     readTime: "16 мин чтения",
     inShort: {
       figures: [
@@ -408,7 +408,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "ТМФЦ против стандартного узбекского ООО (MChJ)" },
       {
         type: "p" as const,
-        text: "Сопоставление с обычным узбекским обществом с ограниченной ответственностью — ООО (MChJ), учреждённым по общему праву, — самый наглядный способ увидеть, что даёт режим и где проходят его границы. Стандартное узбекское ООО несёт обычную национальную налоговую нагрузку:",
+        text: "Сопоставление с обычным узбекским обществом с ограниченной ответственностью — ООО (MChJ), учреждённым в общем порядке, — самый наглядный способ увидеть, что даёт режим и где проходят его границы. Стандартное узбекское ООО несёт обычную национальную налоговую нагрузку:",
       },
       {
         type: "ul" as const,
@@ -476,7 +476,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "Закон также содержит норму против злоупотреблений: если основной целью или одной из основных целей участия в программе является ненадлежащая цель, в статусе может быть отказано. Конкретные пороги инвестиций оставлены на имплементирующее решение Совета ТМФЦ и пока не опубликованы.",
+        text: "Закон также содержит норму против злоупотреблений: если основной целью или одной из основных целей участия в программе является ненадлежащая цель, в статусе может быть отказано. Конкретные пороги инвестиций оставлены на решение Совета ТМФЦ о порядке реализации закона и пока не опубликованы.",
       },
       { type: "h2" as const, text: "Институциональная структура" },
       {
@@ -504,7 +504,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Как ТМФЦ соотносится с DIFC, ADGM, AIFC и QFC" },
       {
         type: "p" as const,
-        text: "ТМФЦ появляется не в вакууме. Это новейший представитель прочно устоявшейся категории финансовых центров общего права, и его дизайн явно заимствует у них — прежде всего у Международного финансового центра «Астана», который Казахстан создал по тому же образцу в 2018 году. Понимание того, где ТМФЦ находится относительно аналогов, — самый быстрый способ откалибровать ожидания.",
+        text: "ТМФЦ появляется не в вакууме. Это новейший представитель прочно устоявшейся категории финансовых центров общего права, и его дизайн явно заимствует у них — прежде всего у Международного финансового центра «Астана», который Казахстан создал по тому же образцу в 2018 году. Понимание того, где ТМФЦ находится относительно аналогов, — самый быстрый способ скорректировать ожидания.",
       },
       { type: "h3" as const, text: "Дубайский международный финансовый центр (DIFC) — учреждён в 2004 году" },
       {
@@ -528,12 +528,12 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "На фоне этого поля ТМФЦ не является ни исключением, ни копией. Он перенимает зрелый шаблон анклава общего права, проверенный DIFC и ADGM, следует за AIFC практически пункт за пунктом в части конституционной основы, языка, регулятора, суда и налогового горизонта, а затем модернизирует его — жёстко встраивая минимальный налог Pillar Two и прямой режим цифровых активов в учредительный закон, а не достраивая их позднее.",
+        text: "На фоне этого поля ТМФЦ не является ни исключением, ни копией. Он перенимает зрелый шаблон анклава общего права, проверенный DIFC и ADGM, следует за AIFC практически пункт за пунктом в части конституционной основы, языка, регулятора, суда и налогового горизонта, а затем модернизирует его — напрямую закрепляя минимальный налог Pillar Two и прямой режим цифровых активов в учредительный закон, а не достраивая их позднее.",
       },
       { type: "h2" as const, text: "Что дальше: сроки активации" },
       {
         type: "p" as const,
-        text: "Закон вступил в силу, но центр ещё не действует. Статья 31 отводит органам ТМФЦ двенадцать месяцев с момента вступления закона в силу — с возможностью продления Советом до шести месяцев — на подготовку и принятие решений, необходимых для функционирования центра: правил управления, регулирования, правосудия и повседневной деятельности. Только после того как эти основополагающие решения будут приняты, Совет оценивает готовность и представляет решение об активации на утверждение Президенту. Практическое следствие — определённое окно достройки, в течение которого будут опубликованы детальные правила, включая имплементирующие решения по налогам, валюте и резидентности.",
+        text: "Закон вступил в силу, но центр ещё не действует. Статья 31 отводит органам ТМФЦ двенадцать месяцев с момента вступления закона в силу — с возможностью продления Советом до шести месяцев — на подготовку и принятие решений, необходимых для функционирования центра: правил управления, регулирования, правосудия и повседневной деятельности. Только после того как эти основополагающие решения будут приняты, Совет оценивает готовность и представляет решение об активации на утверждение Президенту. Практическое следствие — определённый переходный период, в течение которого будут опубликованы детальные правила, включая решения о порядке реализации закона по налогам, валюте и резидентности.",
       },
       {
         type: "p" as const,
@@ -556,12 +556,12 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "До публикации этих решений разумная позиция — рассматривать Конституционный закон как устоявшуюся рамку, а имплементирующие решения — как детали, за которыми следует следить. Сама рамка — конституционный анклав общего права, независимый регулятор и англоязычный суд, пятидесятилетний налоговый горизонт, отменённый валютный контроль и свободное перемещение квалифицированной иностранной рабочей силы — теперь зафиксирована. Параметры, определяющие, выиграет ли от режима конкретный бизнес, — это то, что предстоит написать далее.",
+        text: "До публикации этих решений разумная позиция — рассматривать Конституционный закон как устоявшуюся рамку, а решения о порядке его реализации — как детали, за которыми следует следить. Сама рамка — конституционный анклав общего права, независимый регулятор и англоязычный суд, пятидесятилетний налоговый горизонт, отменённый валютный контроль и свободное перемещение квалифицированной иностранной рабочей силы — теперь зафиксирована. Параметры, определяющие, выиграет ли от режима конкретный бизнес, — это то, что предстоит написать далее.",
       },
       { type: "h2" as const, text: "Чем может помочь Advizen" },
       {
         type: "p" as const,
-        text: "Advizen консультирует международных инвесторов и компании в сфере финансовых услуг по вопросам выхода на рынок Узбекистана, и мы отслеживаем имплементирующие решения ТМФЦ по мере их принятия. Мы помогаем клиентам оценить, что лучше подходит их модели — режим ТМФЦ или стандартная узбекская структура, — смоделировать налоговый результат, включая позицию по Pillar Two для более крупных групп, оценить маршруты переходного лицензирования для действующих национальных и иностранных лицензиатов и подготовиться к окну активации. По мере публикации детальных решений мы можем перевести их в конкретное решение о входе для вашего бизнеса.",
+        text: "Advizen консультирует международных инвесторов и компании в сфере финансовых услуг по вопросам выхода на рынок Узбекистана, и мы отслеживаем решения ТМФЦ о порядке реализации закона по мере их принятия. Мы помогаем клиентам оценить, что лучше подходит их модели — режим ТМФЦ или стандартная узбекская структура, — смоделировать налоговый результат, включая позицию по Pillar Two для более крупных групп, оценить маршруты переходного лицензирования для действующих национальных и иностранных лицензиатов и подготовиться к окну активации. По мере публикации детальных решений мы можем перевести их в конкретное решение о входе для вашего бизнеса.",
       },
     ],
     faq: [
@@ -575,7 +575,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Как ТМФЦ соотносится с AIFC в Казахстане?",
-        answer: "AIFC (Астана, учреждён в 2018 году) — ближайший аналог и очевидный образец. Оба созданы актом конституционного уровня, основывают своё право на принципах английского общего права, используют английский как официальный язык, имеют независимого финансового регулятора и независимый англоязычный суд и предоставляют примерно пятидесятилетнее налоговое освобождение (AIFC — до 2066, ТМФЦ — до 2076). ТМФЦ модернизирует модель, жёстко встраивая минимальный налог ОЭСР Pillar Two в учредительный закон и включая прямой мандат на цифровые активы с самого начала — то, что AIFC и более старые центры, такие как DIFC и ADGM, учли лишь позднее.",
+        answer: "AIFC (Астана, учреждён в 2018 году) — ближайший аналог и очевидный образец. Оба созданы актом конституционного уровня, основывают своё право на принципах английского общего права, используют английский как официальный язык, имеют независимого финансового регулятора и независимый англоязычный суд и предоставляют примерно пятидесятилетнее налоговое освобождение (AIFC — до 2066, ТМФЦ — до 2076). ТМФЦ модернизирует модель, напрямую закрепляя минимальный налог ОЭСР Pillar Two в учредительный закон и включая прямой мандат на цифровые активы с самого начала — то, что AIFC и более старые центры, такие как DIFC и ADGM, учли лишь позднее.",
       },
       {
         question: "Чем английское общее право отличается от узбекского на практике?",
@@ -587,14 +587,14 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Когда ТМФЦ начнёт работать?",
-        answer: "Конституционный закон вступил в силу, но центр ещё не действует. У органов ТМФЦ есть двенадцать месяцев с момента вступления закона в силу — с возможностью продления Советом до шести месяцев — на принятие основополагающих решений об управлении, регулировании, правосудии и деятельности. Только после этого Совет оценивает готовность и представляет решение об активации на утверждение Президенту. Детальные правила по налогам, валюте и резидентности будут опубликованы как имплементирующие решения в течение этого окна.",
+        answer: "Конституционный закон вступил в силу, но центр ещё не действует. У органов ТМФЦ есть двенадцать месяцев с момента вступления закона в силу — с возможностью продления Советом до шести месяцев — на принятие основополагающих решений об управлении, регулировании, правосудии и деятельности. Только после этого Совет оценивает готовность и представляет решение об активации на утверждение Президенту. Детальные правила по налогам, валюте и резидентности будут опубликованы в виде решений о порядке реализации закона в течение этого периода.",
       },
     ],
   },
   uz: {
     subtitle:
-      "Toshkent xalqaro moliya markazini tashkil etuvchi 2026 yil 13 iyuldagi OʻRQ-1158-sonli Konstitutsiyaviy qonunning neytral tahlili — uning huquqiy arxitekturasi, soliq rejimi, operatsion rejimi hamda DIFC, ADGM, AIFC va QFC bilan taqqoslash.",
-    author: "Advizen Legal Practice",
+      "Toshkent xalqaro moliya markazini tashkil etuvchi 2026-yil 13-iyuldagi OʻRQ-1158-sonli Konstitutsiyaviy qonunning neytral tahlili — uning huquqiy arxitekturasi, soliq rejimi, operatsion rejimi hamda DIFC, ADGM, AIFC va QFC bilan taqqoslash.",
+    author: "Advizen yuridik amaliyoti",
     readTime: "16 daqiqa oʻqish",
     inShort: {
       figures: [
@@ -613,7 +613,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "2026 yil 13 iyulda Oʻzbekiston Prezidenti Toshkent xalqaro moliya markazini (TXMM) tashkil etuvchi OʻRQ-1158-sonli Konstitutsiyaviy qonunni imzoladi. Qonun 2026 yil 14 iyulda Qonunchilik maʼlumotlari milliy bazasida eʼlon qilingan va rasmiy eʼlon qilingan kundan oʻn kun oʻtgach kuchga kiradi. Bu soliq kodeksiga tuzatish yoki yangi imtiyozlar toʻplami emas — bu Oʻzbekiston ichida maʼlum bir hududni ajratib, uni alohida huquqiy tartibga boʻysundiradigan konstitutsiyaviy darajadagi hujjatdir. Ushbu sharhda qonun aslida nimani oʻrnatishi, rejim amalda qanday ishlashi hamda u qaysi tan olingan moliya markazlari namunasida yaratilgani va ular bilan qanday taqqoslanishi bayon etilgan.",
+        text: "2026-yil 13-iyulda Oʻzbekiston Prezidenti Toshkent xalqaro moliya markazini (TXMM) tashkil etuvchi OʻRQ-1158-sonli Konstitutsiyaviy qonunni imzoladi. Qonun 2026-yil 14-iyulda Qonunchilik maʼlumotlari milliy bazasida eʼlon qilingan va rasmiy eʼlon qilingan kundan oʻn kun oʻtgach kuchga kiradi. Bu soliq kodeksiga tuzatish yoki yangi imtiyozlar toʻplami emas — bu Oʻzbekiston ichida maʼlum bir hududni ajratib, uni alohida huquqiy tartibga boʻysundiradigan konstitutsiyaviy darajadagi hujjatdir. Ushbu sharhda qonun aslida nimani oʻrnatishi, rejim amalda qanday ishlashi hamda u qaysi tan olingan moliya markazlari namunasida yaratilgani va ular bilan qanday taqqoslanishi bayon etilgan.",
       },
       { type: "h2" as const, text: "TXMM nima — va nima emas" },
       {
@@ -689,11 +689,11 @@ const article: Record<string, LocalizedArticle> = {
           "Boshqa ruxsat etilgan tuzilmalar — holding kompaniyalar, maxsus maqsadli vositalar (SPV), gʻaznachilik kompaniyalari, vakolatxonalar va markaz ishini taʼminlovchi chakana savdo, mehmonxona va taʼlim faoliyatining maʼlum doirasi.",
         ],
       },
-      { type: "h2" as const, text: "Soliq rejimi: 2076 yilgacha ozod etish va uning chegaralari" },
+      { type: "h2" as const, text: "Soliq rejimi: 2076-yilgacha ozod etish va uning chegaralari" },
       { type: "h3" as const, text: "Asosiysi: ellik yil" },
       {
         type: "p" as const,
-        text: "18-modda milliy Soliq kodeksi TXMM ichida faqat Konstitutsiyaviy qonun yoki TXMM qarori bevosita nazarda tutgan hollardagina qoʻllanilishini belgilaydi. Shu asosda ikkita ozod etish 2076 yil 1 yanvarga qadar — ellik yillik ufq — amal qiladi. TXMM organlari hamda ular tashkil etadigan, toʻliq egalik qiladigan va nazorat qiladigan tashkilotlar foyda soligʻi va ijtimoiy soliqdan ozod qilinadi. TXMMning malakali ishtirokchilari moliyaviy xizmatlardan olingan daromad boʻyicha foyda soligʻi va ijtimoiy soliqdan ozod qilinadi — TXMM qarorlari ilova qiladigan shartlarga, jumladan iqtisodiy mohiyat, korporativ boshqaruv talablari va jinoiy daromadlarni legallashtirishga qarshi kurash qoidalariga rioya etilgan holda.",
+        text: "18-modda milliy Soliq kodeksi TXMM ichida faqat Konstitutsiyaviy qonun yoki TXMM qarori bevosita nazarda tutgan hollardagina qoʻllanilishini belgilaydi. Shu asosda ikkita ozod etish 2076-yil 1-yanvarga qadar — ellik yillik ufq — amal qiladi. TXMM organlari hamda ular tashkil etadigan, toʻliq egalik qiladigan va nazorat qiladigan tashkilotlar foyda soligʻi va ijtimoiy soliqdan ozod qilinadi. TXMMning malakali ishtirokchilari moliyaviy xizmatlardan olingan daromad boʻyicha foyda soligʻi va ijtimoiy soliqdan ozod qilinadi — TXMM qarorlari ilova qiladigan shartlarga, jumladan iqtisodiy mohiyat, korporativ boshqaruv talablari va jinoiy daromadlarni legallashtirishga qarshi kurash qoidalariga rioya etilgan holda.",
       },
       { type: "h3" as const, text: "Pillar Two boʻyicha istisno" },
       {
@@ -703,7 +703,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "TXMM va standart oʻzbek MChJ (LLC)" },
       {
         type: "p" as const,
-        text: "Umumiy huquq asosida tashkil etilgan oddiy oʻzbek masʼuliyati cheklangan jamiyati — MChJ (LLC) bilan taqqoslash rejim nimani berishini va uning chegaralari qayerda oʻtishini koʻrishning eng aniq usulidir. Standart oʻzbek MChJ odatdagi milliy soliq yukini koʻtaradi:",
+        text: "Umumiy asosda tashkil etilgan oddiy oʻzbek masʼuliyati cheklangan jamiyati — MChJ (LLC) bilan taqqoslash rejim nimani berishini va uning chegaralari qayerda oʻtishini koʻrishning eng aniq usulidir. Standart oʻzbek MChJ odatdagi milliy soliq yukini koʻtaradi:",
       },
       {
         type: "ul" as const,
@@ -712,7 +712,7 @@ const article: Record<string, LocalizedArticle> = {
           "ijtimoiy soliq: mehnat haqi fondidan 12%;",
           "dividendlardan manbadagi soliq: norezidentlar uchun 10%, rezidentlar uchun 5%;",
           "qoʻshilgan qiymat soligʻi (QQS): 12%;",
-          "ish haqidan jismoniy shaxslar daromad soligʻi (JShDS): 12%.",
+          "ish haqidan jismoniy shaxslardan olinadigan daromad soligʻi (JShDS): 12%.",
         ],
       },
       {
@@ -722,8 +722,8 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "moliyaviy xizmatlardan olingan malakali daromad boʻyicha foyda soligʻi: iqtisodiy mohiyat va boshqaruv shartlariga rioya etilgan holda 2076 yil 1 yanvarga qadar 0%;",
-          "ijtimoiy soliq: TXMM organlari va ularga toʻliq tegishli tashkilotlar uchun 2076 yilga qadar 0%; malakali ishtirokchilar malakali faoliyat boʻyicha ozod;",
+          "moliyaviy xizmatlardan olingan malakali daromad boʻyicha foyda soligʻi: iqtisodiy mohiyat va boshqaruv shartlariga rioya etilgan holda 2076-yil 1-yanvarga qadar 0%;",
+          "ijtimoiy soliq: TXMM organlari va ularga toʻliq tegishli tashkilotlar uchun 2076-yilga qadar 0%; malakali ishtirokchilar malakali faoliyat boʻyicha ozod;",
           "dividend, QQS va JShDS rejimi: TXMM qarorlari bilan belgilanadi — milliy Soliq kodeksi markaz ichida faqat Konstitutsiyaviy qonun yoki TXMM qarori bevosita nazarda tutgan hollardagina qoʻllaniladi, shu sababli bu stavkalar milliy huquqdan meros boʻlmasdan, markaz tomonidan belgilanadi;",
           "yirik koʻp millatli guruhlar (konsolidatsiyalashgan daromadi ≥ 750 mln yevro): ozod etish yoʻq — standart milliy foyda soligʻi stavkasi (15%) boʻyicha malakali ichki minimal soliq qoʻllaniladi.",
         ],
@@ -794,45 +794,45 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "Toshkent xalqaro tijorat sudi" },
       {
         type: "p" as const,
-        text: "29-modda Toshkent xalqaro tijorat sudini markazning sud organi sifatida tashkil etadi, u oʻz yurisdiksiyasiga kiruvchi nizolar ustidan mutlaq va mustaqil sud hokimiyatini amalga oshiradi. Uning sudyalari ishlarni mustaqil hal qiladi; ularga koʻrsatma berish yoki faoliyatiga aralashishga yoʻl qoʻyilmaydi. 30-moddaga koʻra, sud ish yuritishni ingliz tilida olib boradi, garchi tomonning iltimosiga koʻra qoʻllaniladigan protsessual qoidalar boshqacha holatni nazarda tutishi mumkin. Sud shuningdek Raqamli texnologiyalar xalqaro markazini (IT Park) xizmat qiladi, bu esa uni Oʻzbekistonning bayroqdor innovatsion zonalari uchun umumiy huquq forumiga aylantiradi.",
+        text: "29-modda Toshkent xalqaro tijorat sudini markazning sud organi sifatida tashkil etadi, u oʻz yurisdiksiyasiga kiruvchi nizolar ustidan mutlaq va mustaqil sud hokimiyatini amalga oshiradi. Uning sudyalari ishlarni mustaqil hal qiladi; ularga koʻrsatma berish yoki faoliyatiga aralashishga yoʻl qoʻyilmaydi. 30-moddaga koʻra, sud ish yuritishni ingliz tilida olib boradi, garchi tomonning iltimosiga koʻra qoʻllaniladigan protsessual qoidalar boshqacha holatni nazarda tutishi mumkin. Sud shuningdek Raqamli texnologiyalar xalqaro markaziga (IT Park) ham xizmat koʻrsatadi, bu esa uni Oʻzbekistonning bayroqdor innovatsion zonalari uchun umumiy huquq forumiga aylantiradi.",
       },
       { type: "h2" as const, text: "TXMM DIFC, ADGM, AIFC va QFC bilan qanday taqqoslanadi" },
       {
         type: "p" as const,
-        text: "TXMM boʻshliqda paydo boʻlmaydi. Bu umumiy huquq moliya markazlarining mustahkam oʻrnashgan toifasining eng yangi vakili boʻlib, uning dizayni ularga — eng avvalo, Qozogʻiston 2018 yilda aynan shu namunada yaratgan «Astana» xalqaro moliya markaziga — aniq taqlid qiladi. TXMMning analoglarga nisbatan qayerda turishini tushunish kutilmalarni kalibrlashning eng tez usulidir.",
+        text: "TXMM boʻshliqda paydo boʻlmaydi. Bu umumiy huquq moliya markazlarining mustahkam oʻrnashgan toifasining eng yangi vakili boʻlib, uning dizayni ularga — eng avvalo, Qozogʻiston 2018-yilda aynan shu namunada yaratgan «Astana» xalqaro moliya markaziga — aniq taqlid qiladi. TXMMning analoglarga nisbatan qayerda turishini tushunish kutilmalarni toʻgʻri belgilashning eng tez usulidir.",
       },
-      { type: "h3" as const, text: "Dubay xalqaro moliya markazi (DIFC) — 2004 yilda tashkil etilgan" },
+      { type: "h3" as const, text: "Dubay xalqaro moliya markazi (DIFC) — 2004-yilda tashkil etilgan" },
       {
         type: "p" as const,
         text: "Mintaqaviy kashshof. DIFC umumiy huquq tamoyillariga asoslangan oʻz fuqarolik va tijorat huquqini qoʻllaydi, mustaqil regulyatorga (DFSA) va DIFC sudlariga — qarorlari xalqaro miqyosda keng ijro etiladigan inglizzabon umumiy huquq tarkibiga ega. U uzoq muddatli soliq imtiyozlarini taklif etadi va har bir keyingi markaz taqqoslanadigan etalonga aylandi. Uning ramkasi global minimal soliq paydo boʻlishidan oldin qurilgan va oʻshandan beri unga moslashtirilgan.",
       },
-      { type: "h3" as const, text: "Abu-Dabi global bozori (ADGM) — 2015 yilda tashkil etilgan" },
+      { type: "h3" as const, text: "Abu-Dabi global bozori (ADGM) — 2015-yilda tashkil etilgan" },
       {
         type: "p" as const,
         text: "ADGM ingliz umumiy huquqini bevosita qoʻllashi bilan ajralib turadi — uning qonunchiligi Angliya va Uels huquqini shunchaki tamoyillariga tayangan holda emas, balki yurisdiksiyaning qoʻllaniladigan huquqi sifatida qabul qiladi. U FSRA tomonidan tartibga solinadi va ADGM sudlari xizmat qiladi. TXMMda ingliz umumiy huquqining subsidiar qoʻllanilishi konseptual jihatdan ADGM modeli va AIFC modeli oʻrtasida joylashadi.",
       },
-      { type: "h3" as const, text: "«Astana» xalqaro moliya markazi (AIFC) — 2018 yilda tashkil etilgan" },
+      { type: "h3" as const, text: "«Astana» xalqaro moliya markazi (AIFC) — 2018-yilda tashkil etilgan" },
       {
         type: "p" as const,
-        text: "Eng yaqin analog va eng ibratli taqqoslash. Qozogʻiston AIFCni konstitutsiyaviy akt bilan tashkil etdi, uning huquqini ingliz umumiy huquqi tamoyillariga asosladi, inglizchani markazning rasmiy tili qildi, mustaqil regulyator (AFSA), mustaqil AIFC sudi va arbitraj markazini yaratdi hamda 2066 yilga qadar uzoq muddatli soliq ozod etishini berdi. TXMM ushbu loyiha yechimlarining har birini — konstitutsiyaviy asos, inglizzabon umumiy huquq sudlovi, mustaqil moliyaviy regulyator va 2076 yilgacha ellik yillik soliq ufqini — takrorlaydi, shu bilan birga birinchi kundanoq oʻrnatilgan Pillar Two istisnosi va raqamli aktivlarga oid aniq mandatni qoʻshadi.",
+        text: "Eng yaqin analog va eng ibratli taqqoslash. Qozogʻiston AIFCni konstitutsiyaviy akt bilan tashkil etdi, uning huquqini ingliz umumiy huquqi tamoyillariga asosladi, inglizchani markazning rasmiy tili qildi, mustaqil regulyator (AFSA), mustaqil AIFC sudi va arbitraj markazini yaratdi hamda 2066-yilga qadar uzoq muddatli soliq ozod etishini berdi. TXMM ushbu loyiha yechimlarining har birini — konstitutsiyaviy asos, inglizzabon umumiy huquq sudlovi, mustaqil moliyaviy regulyator va 2076-yilgacha ellik yillik soliq ufqini — takrorlaydi, shu bilan birga birinchi kundanoq oʻrnatilgan Pillar Two istisnosi va raqamli aktivlarga oid aniq mandatni qoʻshadi.",
       },
-      { type: "h3" as const, text: "Qatar moliya markazi (QFC) — 2005 yilda tashkil etilgan" },
+      { type: "h3" as const, text: "Qatar moliya markazi (QFC) — 2005-yilda tashkil etilgan" },
       {
         type: "p" as const,
         text: "Foydali qiyoslash nuqtasi. QFC umumiy huquqqa asoslangan fuqarolik va tijorat rejimini qoʻllaydi hamda oʻz regulyatori va nizolarni hal qilish organlariga ega, biroq u ozod etishni taklif qilish oʻrniga mahalliy manbalardan olingan foydadan korporativ soliq (tarixan 10% stavkada) undiradi. Bu umumiy huquq moliya markazi oʻz huquqiy ramkasini toʻliq soliq taʼtili bilan birlashtirishi shart emasligini koʻrsatadi — bu esa TXMMning ellik yillik ozod etishini yaqqol namoyon qiladi.",
       },
       {
         type: "p" as const,
-        text: "Ushbu maydon fonida TXMM na istisno, na nusxadir. U DIFC va ADGM tomonidan tasdiqlangan yetuk umumiy huquq anklavi shablonini qabul qiladi, AIFC ortidan konstitutsiyaviy asos, til, regulyator, sud va soliq ufqi jihatidan deyarli band-band ergashadi, soʻngra uni modernizatsiya qiladi — Pillar Two minimal soligʻini va aniq raqamli aktivlar rejimini keyinroq qoʻshish oʻrniga taʼsis qonuniga qattiq oʻrnatadi.",
+        text: "Ushbu maydon fonida TXMM na istisno, na nusxadir. U DIFC va ADGM tomonidan tasdiqlangan yetuk umumiy huquq anklavi shablonini qabul qiladi, AIFC ortidan konstitutsiyaviy asos, til, regulyator, sud va soliq ufqi jihatidan deyarli band-band ergashadi, soʻngra uni modernizatsiya qiladi — Pillar Two minimal soligʻini va aniq raqamli aktivlar rejimini keyinroq qoʻshish oʻrniga taʼsis qonuniga bevosita kiritadi.",
       },
       { type: "h2" as const, text: "Bundan keyin nima boʻladi: faollashtirish muddatlari" },
       {
         type: "p" as const,
-        text: "Qonun kuchga kirgan, biroq markaz hali ishlamaydi. 31-modda TXMM organlariga qonun kuchga kirgan kundan oʻn ikki oy — Kengash tomonidan olti oygacha uzaytirilishi mumkin — markaz faoliyat yuritishi uchun zarur qarorlarni tayyorlash va qabul qilish uchun beradi: boshqaruv, tartibga solish, sudlov va kundalik faoliyat qoidalari. Faqat shu asosiy qarorlar joyida boʻlgach, Kengash tayyorlikni baholaydi va faollashtirish qarorini Prezidentga tasdiqlash uchun taqdim etadi. Amaliy oqibat — batafsil qoidalar, jumladan soliq, valyuta va rezidentlik boʻyicha ijro qarorlari eʼlon qilinadigan aniq quruv oynasidir.",
+        text: "Qonun kuchga kirgan, biroq markaz hali ishlamaydi. 31-modda TXMM organlariga qonun kuchga kirgan kundan oʻn ikki oy — Kengash tomonidan olti oygacha uzaytirilishi mumkin — markaz faoliyat yuritishi uchun zarur qarorlarni tayyorlash va qabul qilish uchun beradi: boshqaruv, tartibga solish, sudlov va kundalik faoliyat qoidalari. Faqat shu asosiy qarorlar joyida boʻlgach, Kengash tayyorlikni baholaydi va faollashtirish qarorini Prezidentga tasdiqlash uchun taqdim etadi. Amaliy oqibat — batafsil qoidalar, jumladan soliq, valyuta va rezidentlik boʻyicha ijro qarorlari eʼlon qilinadigan aniq belgilangan oʻtish davri.",
       },
       {
         type: "p" as const,
-        text: "Oʻtish qoidalari amaldagi litsenziyalarga ham taalluqli. 32-moddaga koʻra, moliyaviy xizmatlar koʻrsatish uchun amaldagi milliy litsenziyaga ega yuridik shaxs bu xizmatlarni markaz doirasida yangi arizasiz koʻrsatishni davom ettirishi mumkin, agar u faollashtirish sanasidan oltmish kun ichida ruxsat etilgan oʻtish davri ishtirokchisi sifatida sho''ba kompaniya yoki filialini roʻyxatdan oʻtkazsa va oʻz milliy litsenziyasi shartlariga rioya qilsa. 33-moddaga koʻra, tan olingan xorijiy yurisdiksiyalarda litsenziyalangan shaxslar, agar TXMM maʼmuriyati tegishli xorijiy regulyator bilan oʻzaro anglashuv memorandumini yoki boshqa nazorat hamkorligi kelishuvini tuzgan boʻlsa, oʻtish davri litsenziyasini olishi mumkin.",
+        text: "Oʻtish qoidalari amaldagi litsenziyalarga ham taalluqli. 32-moddaga koʻra, moliyaviy xizmatlar koʻrsatish uchun amaldagi milliy litsenziyaga ega yuridik shaxs bu xizmatlarni markaz doirasida yangi arizasiz koʻrsatishni davom ettirishi mumkin, agar u faollashtirish sanasidan oltmish kun ichida ruxsat etilgan oʻtish davri ishtirokchisi sifatida shoʻba kompaniya yoki filialini roʻyxatdan oʻtkazsa va oʻz milliy litsenziyasi shartlariga rioya qilsa. 33-moddaga koʻra, tan olingan xorijiy yurisdiksiyalarda litsenziyalangan shaxslar, agar TXMM maʼmuriyati tegishli xorijiy regulyator bilan oʻzaro anglashuv memorandumini yoki boshqa nazorat hamkorligi kelishuvini tuzgan boʻlsa, oʻtish davri litsenziyasini olishi mumkin.",
       },
       { type: "h2" as const, text: "Faollashtirishdan oldingi ochiq savollar" },
       {
@@ -856,7 +856,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Advizen qanday yordam berishi mumkin" },
       {
         type: "p" as const,
-        text: "Advizen xalqaro investorlar va moliyaviy xizmatlar bizneslariga Oʻzbekiston bozoriga kirish boʻyicha maslahat beradi va biz TXMM ijro qarorlarini qabul qilingan sari kuzatib boramiz. Biz mijozlarga oʻz modeliga nima koʻproq mos kelishini — TXMM rejimi yoki standart oʻzbek tuzilmasi — baholashda, soliq natijasini, jumladan yirikroq guruhlar uchun Pillar Two pozitsiyasini modellashtirish, amaldagi milliy va xorijiy litsenziatlar uchun oʻtish davri litsenziyalash yoʻllarini baholash va faollashtirish oynasiga tayyorgarlik koʻrishda yordam beramiz. Batafsil qarorlar eʼlon qilingan sari biz ularni biznesingiz uchun aniq kirish qaroriga aylantira olamiz.",
+        text: "Advizen xalqaro investorlar va moliyaviy xizmatlar bizneslariga Oʻzbekiston bozoriga kirish boʻyicha maslahat beradi va biz TXMM ijro qarorlarini qabul qilingan sari kuzatib boramiz. Biz mijozlarga oʻz modeliga nima koʻproq mos kelishini — TXMM rejimi yoki standart oʻzbek tuzilmasi — baholashda, soliq natijasini, jumladan yirikroq guruhlar uchun Pillar Two pozitsiyasini modellashtirish, amaldagi milliy va xorijiy litsenziatlar uchun oʻtish davri litsenziyalash yoʻllarini baholash va faollashtirish davriga tayyorgarlik koʻrishda yordam beramiz. Batafsil qarorlar eʼlon qilingan sari biz ularni biznesingiz uchun aniq kirish qaroriga aylantira olamiz.",
       },
     ],
     faq: [
@@ -866,11 +866,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "TXMM ichida qanday soliqlar qoʻllaniladi?",
-        answer: "Milliy Soliq kodeksi markaz ichida faqat Konstitutsiyaviy qonun yoki TXMM qarori bevosita nazarda tutgan hollardagina qoʻllaniladi. TXMM organlari va ularga toʻliq tegishli tashkilotlar 2076 yil 1 yanvarga qadar foyda soligʻi va ijtimoiy soliqdan ozod, malakali ishtirokchilar esa xuddi shu davrda moliyaviy xizmatlardan olingan daromad boʻyicha iqtisodiy mohiyat va boshqaruv shartlariga rioya etilgan holda ozod qilinadi. Istisno — yirik koʻp millatli guruhlar (konsolidatsiyalashgan yillik daromadi 750 mln yevro va undan ortiq): ular ozod etilmaydi va buning oʻrniga OECD Pillar Two global minimal soligʻiga muvofiq standart milliy stavkada (15%) malakali ichki minimal soliq toʻlaydi.",
+        answer: "Milliy Soliq kodeksi markaz ichida faqat Konstitutsiyaviy qonun yoki TXMM qarori bevosita nazarda tutgan hollardagina qoʻllaniladi. TXMM organlari va ularga toʻliq tegishli tashkilotlar 2076-yil 1-yanvarga qadar foyda soligʻi va ijtimoiy soliqdan ozod, malakali ishtirokchilar esa xuddi shu davrda moliyaviy xizmatlardan olingan daromad boʻyicha iqtisodiy mohiyat va boshqaruv shartlariga rioya etilgan holda ozod qilinadi. Istisno — yirik koʻp millatli guruhlar (konsolidatsiyalashgan yillik daromadi 750 mln yevro va undan ortiq): ular ozod etilmaydi va buning oʻrniga OECD Pillar Two global minimal soligʻiga muvofiq standart milliy stavkada (15%) malakali ichki minimal soliq toʻlaydi.",
       },
       {
         question: "TXMM Qozogʻistondagi AIFC bilan qanday taqqoslanadi?",
-        answer: "AIFC (Astana, 2018 yilda tashkil etilgan) — eng yaqin analog va aniq namuna. Ikkalasi ham konstitutsiyaviy darajadagi akt bilan yaratilgan, huquqini ingliz umumiy huquqi tamoyillariga asoslaydi, inglizchani rasmiy til sifatida ishlatadi, mustaqil moliyaviy regulyator va mustaqil inglizzabon sudga ega hamda taxminan ellik yillik soliq ozod etishini beradi (AIFC — 2066 gacha, TXMM — 2076 gacha). TXMM modelni OECD Pillar Two minimal soligʻini taʼsis qonuniga qattiq oʻrnatib va boshidanoq raqamli aktivlarga oid aniq mandatni kiritib modernizatsiya qiladi — bu AIFC va DIFC hamda ADGM kabi eski markazlar faqat keyinroq hisobga olgan xususiyatlardir.",
+        answer: "AIFC (Astana, 2018-yilda tashkil etilgan) — eng yaqin analog va aniq namuna. Ikkalasi ham konstitutsiyaviy darajadagi akt bilan yaratilgan, huquqini ingliz umumiy huquqi tamoyillariga asoslaydi, inglizchani rasmiy til sifatida ishlatadi, mustaqil moliyaviy regulyator va mustaqil inglizzabon sudga ega hamda taxminan ellik yillik soliq ozod etishini beradi (AIFC — 2066-yilgacha, TXMM — 2076-yilgacha). TXMM modelni OECD Pillar Two minimal soligʻini taʼsis qonuniga bevosita kiritib va boshidanoq raqamli aktivlarga oid aniq mandatni kiritib modernizatsiya qiladi — bu AIFC va DIFC hamda ADGM kabi eski markazlar faqat keyinroq hisobga olgan xususiyatlardir.",
       },
       {
         question: "Ingliz umumiy huquqi oʻzbek huquqidan amalda nimasi bilan farq qiladi?",
@@ -878,11 +878,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Xorijiy litsenziyaga ega moliyaviy kompaniya TXMMda ishlashi mumkinmi?",
-        answer: "Ha, 32 va 33-moddalardagi oʻtish yoʻllari orqali. Amaldagi milliy oʻzbek litsenziyasi egasi litsenziyalangan xizmatlarni markaz doirasida yangi arizasiz koʻrsatishni davom ettirishi mumkin, agar u faollashtirishdan oltmish kun ichida ruxsat etilgan oʻtish davri ishtirokchisi sifatida sho''ba kompaniya yoki filialni roʻyxatdan oʻtkazsa. Tan olingan xorijiy yurisdiksiyada litsenziyalangan shaxs, agar TXMM maʼmuriyati bu kompaniyaning uy regulyatori bilan oʻzaro anglashuv memorandumini yoki boshqa nazorat hamkorligi kelishuvini tuzgan boʻlsa, oʻtish davri litsenziyasini olishi mumkin. Tan olingan yurisdiksiyalar va regulyatorlar roʻyxati TXMM qarori bilan belgilanadi.",
+        answer: "Ha, 32 va 33-moddalardagi oʻtish yoʻllari orqali. Amaldagi milliy oʻzbek litsenziyasi egasi litsenziyalangan xizmatlarni markaz doirasida yangi arizasiz koʻrsatishni davom ettirishi mumkin, agar u faollashtirishdan oltmish kun ichida ruxsat etilgan oʻtish davri ishtirokchisi sifatida shoʻba kompaniya yoki filialni roʻyxatdan oʻtkazsa. Tan olingan xorijiy yurisdiksiyada litsenziyalangan shaxs, agar TXMM maʼmuriyati bu kompaniyaning uy regulyatori bilan oʻzaro anglashuv memorandumini yoki boshqa nazorat hamkorligi kelishuvini tuzgan boʻlsa, oʻtish davri litsenziyasini olishi mumkin. Tan olingan yurisdiksiyalar va regulyatorlar roʻyxati TXMM qarori bilan belgilanadi.",
       },
       {
         question: "TXMM qachon ishga tushadi?",
-        answer: "Konstitutsiyaviy qonun kuchga kirgan, biroq markaz hali ishlamaydi. TXMM organlarida qonun kuchga kirgan kundan oʻn ikki oy — Kengash tomonidan olti oygacha uzaytirilishi mumkin — boshqaruv, tartibga solish, sudlov va faoliyat boʻyicha asosiy qarorlarni qabul qilish uchun bor. Faqat shundan keyin Kengash tayyorlikni baholaydi va faollashtirish qarorini Prezidentga tasdiqlash uchun taqdim etadi. Soliq, valyuta va rezidentlik boʻyicha batafsil qoidalar shu oyna davomida ijro qarorlari sifatida eʼlon qilinadi.",
+        answer: "Konstitutsiyaviy qonun kuchga kirgan, biroq markaz hali ishlamaydi. TXMM organlarida qonun kuchga kirgan kundan oʻn ikki oy — Kengash tomonidan olti oygacha uzaytirilishi mumkin — boshqaruv, tartibga solish, sudlov va faoliyat boʻyicha asosiy qarorlarni qabul qilish uchun bor. Faqat shundan keyin Kengash tayyorlikni baholaydi va faollashtirish qarorini Prezidentga tasdiqlash uchun taqdim etadi. Soliq, valyuta va rezidentlik boʻyicha batafsil qoidalar shu davr mobaynida ijro qarorlari sifatida eʼlon qilinadi.",
       },
     ],
   },

@@ -176,9 +176,9 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "2025 yil 1 yanvardan amalda boʻlgan Oʻzbekistondagi onlayn qimor oʻyinlari, lotereya va bukmekerlik platformalarini boshqarish uchun zarur tartibga solish bazasi va litsenziya talablarini oʻrganing.",
+    subtitle: "2025-yil 1-yanvardan amalda boʻlgan Oʻzbekistondagi onlayn qimor oʻyinlari, lotereya va bukmekerlik platformalarini boshqarish uchun zarur tartibga solish bazasi va litsenziya talablarini oʻrganing.",
     author: "Advizen yuridik amaliyoti",
-    readTime: "5 daqiqalik oʻqish",
+    readTime: "5 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "2025-yil 1-yanvar", label: "Oʻzbekistonda onlayn qimor, lotereya va bukmekerlik qonuniy boʻlgan sana" },
@@ -195,17 +195,17 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p",
-        text: "Oʻzbekiston 2025 yil 1 yanvardan onlayn qimor oʻyinlari, lotereya va bukmekerlik faoliyatini qonuniylashtirib, oʻzining tartibga solish muhitida muhim oʻzgarish yasadi. Bu rivojlanayotgan sektorga qiziqayotgan bizneslar uchun yangi imkoniyatlar ochadi, agar ular qatʼiy talablarga rioya qilsa.",
+        text: "Oʻzbekiston 2025-yil 1-yanvardan onlayn qimor oʻyinlari, lotereya va bukmekerlik faoliyatini qonuniylashtirib, oʻzining tartibga solish muhitida muhim oʻzgarish yasadi. Bu oʻsib borayotgan sektorga qiziqayotgan bizneslar uchun, agar ular qatʼiy talablarga rioya qilsa, yangi imkoniyatlar ochadi.",
       },
       { type: "h2", text: "Yangi tartibga solish bazasi" },
       {
         type: "p",
-        text: "Yangi baza Vazirlar Mahkamasining 814-son qarori bilan oʻrnatilgan boʻlib, bunday faoliyatni tashkil etish va olib borish uchun aniq qoidalarni belgilaydi. Sektorni tartibga soluvchi va litsenziyalovchi asosiy organ — Istiqbolli loyihalar milliy agentligi (ILMA).",
+        text: "Yangi baza Vazirlar Mahkamasining 814-son qarori bilan belgilangan boʻlib, bunday faoliyatni tashkil etish va olib borish uchun aniq qoidalarni belgilaydi. Sektorni tartibga soluvchi va litsenziyalovchi asosiy organ — Istiqbolli loyihalar milliy agentligi (ILMA).",
       },
-      { type: "h2", text: "Oʻzbek tartibga solishi qachon qoʻllaniladi?" },
+      { type: "h2", text: "Oʻzbekiston qoidalari qachon qoʻllaniladi?" },
       {
         type: "p",
-        text: "Bu sohada faoliyat yurituvchi bizneslar uchun Oʻzbekiston tartibga solishi qachon qoʻllanilishini tushunish muhim. Oʻzbekiston quyidagi mezonlar asosida qimor joyi hisoblanadi va shu sababli oʻz qoidalari qoʻllaniladi:",
+        text: "Bu sohada faoliyat yurituvchi bizneslar uchun Oʻzbekiston qoidalari qachon qoʻllanilishini tushunish muhim. Oʻzbekiston quyidagi mezonlar asosida qimor joyi hisoblanadi va shu sababli oʻz qoidalari qoʻllaniladi:",
       },
       {
         type: "ul",
@@ -218,7 +218,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p",
-        text: "Bizneslar oʻzbek qonuni boʻyicha komplaens majburiyatlarini aniqlash uchun bu omillarni diqqat bilan baholashi kerak.",
+        text: "Bizneslar oʻzbek qonunchiligi boʻyicha majburiyatlarini aniqlash uchun bu omillarni diqqat bilan baholashi kerak.",
       },
       { type: "h2", text: "Operatorlar uchun asosiy litsenziya talablari" },
       {
@@ -236,25 +236,25 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Bizneslar uchun oqibatlar" },
       {
         type: "blockquote",
-        text: "Bu sektorni qonuniylashtirish va tartibga solish ham imkoniyatlar, ham chaqiriqlar keltirib chiqaradi. Bu bozorga kiruvchi bizneslar isteʼmolchilarni himoya qilish va moliyaviy halollikka ustuvor ahamiyat beruvchi qatʼiy tartibga solinadigan muhitga tayyor boʻlishi kerak.",
+        text: "Bu sektorni qonuniylashtirish va tartibga solish ham imkoniyatlar, ham qiyinchiliklar keltirib chiqaradi. Bu bozorga kiruvchi bizneslar isteʼmolchilarni himoya qilish va moliyaviy halollikka ustuvor ahamiyat beruvchi qatʼiy tartibga solinadigan muhitga tayyor boʻlishi kerak.",
       },
       {
         type: "p",
-        text: "Bu qatʼiy litsenziya talablariga rioya qilish va ILMA nazorati ostida doimiy komplaens muvaffaqiyat uchun hal qiluvchi ahamiyatga ega. Bu sektorga kirishni rejalashtirayotgan kompaniyalar mahalliy yuridik shaxs tashkil etish, Oʻzbekistondagi server infratuzilmasi va yetarli kapitalni hisobga olishi kerak.",
+        text: "Qatʼiy litsenziya talablariga va ILMA nazorati ostida qoidalarga doimiy rioya qilish muvaffaqiyatning hal qiluvchi sharti hisoblanadi. Bu sektorga kirishni rejalashtirayotgan kompaniyalar mahalliy yuridik shaxs tashkil etish, Oʻzbekistondagi server infratuzilmasi va yetarli kapitalni hisobga olishi kerak.",
       },
     ],
     faq: [
       {
         question: "Oʻzbekistonda onlayn qimor oʻyinlari qonuniymi?",
-        answer: "Ha. Onlayn qimor oʻyinlari, lotereya va bukmekerlik faoliyati Oʻzbekistonda 2025 yil 1 yanvardan Vazirlar Mahkamasining 814-son qarori asosida qonuniylashtirildi. Sektor Istiqbolli loyihalar milliy agentligi (ILMA) tomonidan tartibga solinadi va litsenziyalanadi. Ushbu sanagacha koʻrsatilgan faoliyat turlari taqiqlangan edi.",
+        answer: "Ha. Onlayn qimor oʻyinlari, lotereya va bukmekerlik faoliyati Oʻzbekistonda 2025-yil 1-yanvardan Vazirlar Mahkamasining 814-son qarori asosida qonuniylashtirildi. Sektor Istiqbolli loyihalar milliy agentligi (ILMA) tomonidan tartibga solinadi va litsenziyalanadi. Ushbu sanagacha koʻrsatilgan faoliyat turlari taqiqlangan edi.",
       },
       {
         question: "Oʻzbekistonda onlayn qimor uchun litsenziyalovchi organ kim?",
         answer: "Istiqbolli loyihalar milliy agentligi (ILMA) Oʻzbekistonda onlayn qimor oʻyinlari, lotereya va bukmekerlik sohasidagi asosiy tartibga soluvchi va litsenziyalovchi organdir. Litsenziyalar Oʻzbekistonda rezident yuridik shaxslarga besh yil muddatga beriladi.",
       },
       {
-        question: "Oʻzbek qimor tartibga solishi platformamga qachon qoʻllaniladi?",
-        answer: "Quyidagi mezonlardan biri bajarilganda Oʻzbekiston qimor joyi hisoblanadi va uning tartibga solish bazasi qoʻllaniladi: oʻyinchi Oʻzbekiston fuqarosi boʻlsa yoki jismonan Oʻzbekiston hududida boʻlsa, oʻyinchining IP-manzili oʻzbek boʻlsa, tranzaksiyalar uchun oʻzbek bank kartalaridan foydalanilsa yoki oʻyin yoki tikish xizmati oʻzbek auditoriyasiga moʻljallangan boʻlsa. Ushbu mezonlardan biriga javob beradigan platformalar oʻzbek qonunchiligiga rioya qilishi shart.",
+        question: "Oʻzbekistonning qimor oʻyinlari boʻyicha qoidalari platformamga qachon tatbiq etiladi?",
+        answer: "Quyidagi mezonlardan biri bajarilganda Oʻzbekiston qimor joyi hisoblanadi va uning tartibga solish bazasi qoʻllaniladi: oʻyinchi Oʻzbekiston fuqarosi boʻlsa yoki jismonan Oʻzbekiston hududida boʻlsa, oʻyinchining IP-manzili Oʻzbekistonga tegishli boʻlsa, tranzaksiyalar uchun oʻzbek bank kartalaridan foydalanilsa yoki oʻyin yoki tikish xizmati oʻzbek auditoriyasiga moʻljallangan boʻlsa. Ushbu mezonlardan biriga javob beradigan platformalar oʻzbek qonunchiligiga rioya qilishi shart.",
       },
       {
         question: "Oʻzbekistonda qimor litsenziyasi olish uchun asosiy talablar qanday?",

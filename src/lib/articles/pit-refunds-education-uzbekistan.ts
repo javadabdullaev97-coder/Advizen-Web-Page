@@ -175,7 +175,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Дают ли ипотечные платежи право на льготу по НДФЛ в Узбекистане?",
-        answer: "Да. Суммы, уплаченные по ипотечным кредитам и начисленные проценты, освобождаются от НДФЛ — до 80 минимальных размеров пенсии по возрасту (МРОТ) в год, при условии что жильё приобретено с бюджетной субсидией. Льгота заявляется через годовую декларацию о доходах на my3.soliq.uz с использованием электронной цифровой подписи.",
+        answer: "Да. Суммы, уплаченные по ипотечным кредитам и начисленные проценты, освобождаются от НДФЛ — до 80 минимальных размеров пенсии по возрасту (МРОТ) в год, при условии, что жильё приобретено с бюджетной субсидией. Льгота заявляется через годовую декларацию о доходах на my3.soliq.uz с использованием электронной цифровой подписи.",
       },
       {
         question: "Какие ещё категории доходов освобождены от НДФЛ в Узбекистане?",
@@ -198,9 +198,9 @@ const article: Record<string, LocalizedArticle> = {
     },
   },
   uz: {
-    subtitle: "Oʻzbekistonda taʼlim, ipoteka va boshqa toifalar boʻyicha JShDS imtiyozlari va qaytarimlari boʻyicha qoʻllanmangiz.",
+    subtitle: "Oʻzbekistonda taʼlim, ipoteka va boshqa toifalar boʻyicha JShDS imtiyozlari va uni qaytarish haqida qoʻllanma.",
     author: "Advizen soliq amaliyoti",
-    readTime: "7 daqiqalik oʻqish",
+    readTime: "7 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "12%", label: "Rasmiy maoshdan odatda har oy ushlab qolinadigan JShDS" },
@@ -218,7 +218,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p",
-        text: "Oʻzbekistonda rasmiy maoshga ega jismoniy shaxslarning Jismoniy shaxslar daromad soligʻi (JShDS) odatda har oy 12% stavkada ushlab qolinadi. Biroq muayyan daromad toifalari bu soliqdan toʻliq yoki qisman ozod qilinadi. Yana ham yaxshisi, agar bu summalardan soliq allaqachon toʻlangan boʻlsa, uning bir qismini qonuniy ravishda qaytarib olishingiz mumkin.",
+        text: "Oʻzbekistonda rasmiy maoshga ega jismoniy shaxslardan olinadigan daromad soligʻi (JShDS) odatda har oy 12% stavkada ushlab qolinadi. Biroq muayyan daromad toifalari bu soliqdan toʻliq yoki qisman ozod qilinadi. Yana ham yaxshisi, agar bu summalardan soliq allaqachon toʻlangan boʻlsa, uning bir qismini qonuniy ravishda qaytarib olishingiz mumkin.",
       },
       { type: "h2", text: "Asosiy JShDS imtiyozlari va ozod qilishlar" },
       {
@@ -227,7 +227,7 @@ const article: Record<string, LocalizedArticle> = {
           "Taʼlim xarajatlari: oʻzingiz, turmush oʻrtogʻingiz yoki bolalaringiz (26 yoshgacha) uchun Oʻzbekiston oliy taʼlim muassasalaridagi oʻquv haqi, jumladan taʼlim kreditlari va ularning foizlari",
           "Xususiy maktablar va bogʻchalar: ota-onalar yoki farzandlikka olganlar nodavlat maktabgacha taʼlim muassasalari va maktablar xizmatlari uchun bola boshiga oyiga 3 mln soʻmgacha imtiyoz olishlari mumkin",
           "Ipoteka foizlari: ipoteka kreditlari va hisoblangan foizlarga toʻlangan summalar — yiliga Pensiyaning eng kam miqdori (MROT)ning 80 baravarigacha, agar uy-joy byudjet subsidiyasi bilan olingan boʻlsa",
-          "Pensiya jamgʻarmalar: Xalq bankidagi Individual jamgʻarib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yoʻnaltirilgan maosh summalari",
+          "Pensiya jamgʻarmalari: Xalq bankidagi individual jamgʻarib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yoʻnaltirilgan maosh summalari",
           "Investitsiya hisobvaraqlari: aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yoʻnaltirilgan maosh, yiliga MROTning 100 baravarigacha (mablagʻlar 12 oyga blokirovka qilinadi)",
           "Ish beruvchi tomonidan beriladigan imtiyozlar: belgilangan limitlar doirasidagi muayyan moddiy yordam, tibbiy kompensatsiya, bolalar lagerlari yoʻllanmalari va naqd boʻlmagan sovgʻalar",
         ],
@@ -241,8 +241,8 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul",
         items: [
-          "Qachon: hisobot yilidan keyingi yilning 1 aprelgacha (masalan, 2024 yil daromadi uchun 2025 yil 1 aprelgacha)",
-          "Qayerda: my3.soliq.uz orqali elektron tarzda Elektron raqamli imzo (ERI) yordamida",
+          "Qachon: hisobot yilidan keyingi yilning 1-aprelgacha (masalan, 2024-yil daromadi uchun 2025-yil 1-aprelgacha)",
+          "Qayerda: my3.soliq.uz orqali elektron tarzda elektron raqamli imzo (ERI) yordamida",
           "Talab qilinadi: barcha ish joylaridan daromad maʼlumotnomalari, tegishli shartnomalarning skan nusxalari (universitet, xususiy maktab yoki ipoteka shartnomasi) va toʻlov hujjatlari",
           "«Soliq imtiyozlari» boʻlimida tegishli imtiyoz toifasini tanlang va tasdiqlovchi hujjatlarni biriktiring — tizim qaytariladigan summani avtomatik hisoblaydi",
         ],
@@ -259,7 +259,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "blockquote",
-        text: "Soliq imtiyozlarini ishlatish murakkab boʻlishi mumkin, ammo bu ozod qilishlarni tushunish sezilarli tejashga olib keladi. Deklaratsiyani tayyorlashda, imtiyozga huquq baholashda yoki muvofiqlikni taʼminlashda yordam kerak boʻlsa, Advizen ekspertlari yordam berishga tayyor.",
+        text: "Soliq imtiyozlaridan foydalanish murakkab boʻlishi mumkin, ammo bu ozod qilishlarni tushunish sezilarli tejashga olib keladi. Deklaratsiyani tayyorlashda, imtiyozga boʻlgan huquqni baholashda yoki muvofiqlikni taʼminlashda yordam kerak boʻlsa, Advizen ekspertlari yordam berishga tayyor.",
       },
     ],
       faq: [
@@ -269,7 +269,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda JShDS qaytarimini talab qilish muddati qanday?",
-        answer: "Yillik daromad deklaratsiyasi hisobot yilidan keyingi yilning 1 aprelgacha topshirilishi shart (masalan, 2024 yil daromadi uchun 2025 yil 1 aprelgacha). Deklaratsiya my3.soliq.uz orqali Elektron raqamli imzo (ERI) yordamida elektron tarzda topshiriladi. «Soliq imtiyozlari» boʻlimida tasdiqlovchi hujjatlar (shartnomalar va toʻlov hujjatlari) biriktiriladi — tizim qaytariladigan summani avtomatik hisoblaydi. Qaytarish odatda ariza topshirilganidan 15 kun ichida bank kartasiga oʻtkaziladi.",
+        answer: "Yillik daromad deklaratsiyasi hisobot yilidan keyingi yilning 1-aprelgacha topshirilishi shart (masalan, 2024-yil daromadi uchun 2025-yil 1-aprelgacha). Deklaratsiya my3.soliq.uz orqali elektron raqamli imzo (ERI) yordamida elektron tarzda topshiriladi. «Soliq imtiyozlari» boʻlimida tasdiqlovchi hujjatlar (shartnomalar va toʻlov hujjatlari) biriktiriladi — tizim qaytariladigan summani avtomatik hisoblaydi. Qaytarish odatda ariza topshirilganidan 15 kun ichida bank kartasiga oʻtkaziladi.",
       },
       {
         question: "Oʻzbekistonda ipoteka toʻlovlari JShDS imtiyoziga ega boʻla oladimi?",
@@ -277,7 +277,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda boshqa qanday daromad toifalari JShDSdan ozod etilgan?",
-        answer: "Qoʻshimcha JShDS imtiyozlari: Xalq bankidagi Individual jamgʻarib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yoʻnaltirilgan maosh summalari; aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yoʻnaltirilgan maosh (yiliga MROTning 100 baravarigacha, mablagʻlar 12 oyga blokirovka qilinadi); belgilangan limitlar doirasidagi ish beruvchi tomonidan beriladigan imtiyozlar — jumladan moddiy yordam, tibbiy kompensatsiya, bolalar lagerlari yoʻllanmalari va naqd boʻlmagan sovgʻalar.",
+        answer: "Qoʻshimcha JShDS imtiyozlari: Xalq bankidagi individual jamgʻarib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yoʻnaltirilgan maosh summalari; aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yoʻnaltirilgan maosh (yiliga MROTning 100 baravarigacha, mablagʻlar 12 oyga blokirovka qilinadi); belgilangan limitlar doirasidagi ish beruvchi tomonidan beriladigan imtiyozlar — jumladan moddiy yordam, tibbiy kompensatsiya, bolalar lagerlari yoʻllanmalari va naqd boʻlmagan sovgʻalar.",
       },
     ],
     howTo: {
@@ -286,7 +286,7 @@ const article: Record<string, LocalizedArticle> = {
       steps: [
         {
           name: "Yillik daromad deklaratsiyangizni topshiring",
-          text: "Hisobot yilidan keyingi yilning 1 aprelgacha my3.soliq.uz saytida Elektron raqamli imzo (ERI) yordamida deklaratsiya topshiring. Barcha ish joylaridan daromad maʼlumotnomalarini, universitet, xususiy maktab yoki ipoteka shartnomalarining skan nusxalarini va toʻlov hujjatlarini biriktiring. «Soliq imtiyozlari» boʻlimida tegishli imtiyoz toifasini tanlang — tizim qaytariladigan summani avtomatik hisoblaydi.",
+          text: "Hisobot yilidan keyingi yilning 1-aprelgacha my3.soliq.uz saytida elektron raqamli imzo (ERI) yordamida deklaratsiya topshiring. Barcha ish joylaridan daromad maʼlumotnomalarini, universitet, xususiy maktab yoki ipoteka shartnomalarining skan nusxalarini va toʻlov hujjatlarini biriktiring. «Soliq imtiyozlari» boʻlimida tegishli imtiyoz toifasini tanlang — tizim qaytariladigan summani avtomatik hisoblaydi.",
         },
         {
           name: "Qaytarish arizasini topshiring",

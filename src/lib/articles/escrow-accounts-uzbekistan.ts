@@ -110,7 +110,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle: "Что реформы законодательства 2025–2026 годов означают для покупателей, продавцов и застройщиков",
-    author: "Advizen Legal Practice",
+    author: "Юридическая практика Advizen",
     readTime: "9 мин чтения",
     inShort: {
       figures: [
@@ -216,8 +216,8 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "2025–2026 yilgi qonunchilik islohotlari xaridor, sotuvchi va qurilish kompaniyalari uchun nima anglatadi",
-    author: "Advizen Legal Practice",
+    subtitle: "2025–2026-yilgi qonunchilik islohotlari xaridor, sotuvchi va qurilish kompaniyalari uchun nima anglatadi",
+    author: "Advizen yuridik amaliyoti",
     readTime: "9 daqiqa oʻqish",
     inShort: {
       figures: [
@@ -230,25 +230,25 @@ const article: Record<string, LocalizedArticle> = {
         "2026-yil 1-yanvardan Oʻzbekistonda barcha yangi ulushli qurilish shartnomalari uchun escrow majburiy.",
         "2026-yil 1-apreldan koʻchmas mulk va M, N, O va G toifalaridagi 10 yildan eski boʻlmagan transport vositalarining barcha oldi-sotdi bitimlari uchun escrow majburiy.",
         "Xaridor imzolash paytida bitim summasini notarius hamkor bankidagi escrow hisobiga oʻtkazadi, mablagʻlar esa mulk huquqining oʻtishi roʻyxatga olingach sotuvchiga oʻtkaziladi.",
-        "Escrow mablagʻlari qurilish kompaniyasiga nisbatan daʼvolar boʻyicha qamoqqa olinishi, toʻxtatilishi yoki musodara qilinishi mumkin emas.",
+        "Escrow mablagʻlari qurilish kompaniyasiga nisbatan daʼvolar boʻyicha xatlanishi, toʻxtatilishi yoki musodara qilinishi mumkin emas.",
       ],
     },
     content: [
       {
         type: "p" as const,
-        text: "Oʻzbekiston koʻchmas mulk va transport vositalari bilan bogʻliq bitimlar uchun majburiy escrow hisobvaraqlarini ikki qonunchilik bosqichida joriy etdi. Birinchi bosqich — ulushli qurilish (sotilmagan uy-joy) boʻyicha — 2026 yil 1 yanvarda kuchga kirdi. Ikkinchi bosqich 2026 yil 1 apreldan barcha koʻchmas mulk va malakali transport vositalari bilan bogʻliq bitimlarga nisbatan escrow talablarini kengaytirdi.",
+        text: "Oʻzbekiston koʻchmas mulk va transport vositalari bilan bogʻliq bitimlar uchun majburiy escrow hisobvaraqlarini ikki qonunchilik bosqichida joriy etdi. Birinchi bosqich — ulushli qurilish (sotilmagan uy-joy) boʻyicha — 2026-yil 1-yanvarda kuchga kirdi. Ikkinchi bosqich 2026-yil 1-apreldan barcha koʻchmas mulk va malakali transport vositalari bilan bogʻliq bitimlarga nisbatan escrow talablarini kengaytirdi.",
       },
       { type: "h2" as const, text: "Sabab: nima uchun escrow kerak?" },
       {
         type: "p" as const,
-        text: "Bu islohotlargacha qurilayotgan kvartiralar va boshqa koʻchmas mulk xaridorlari mablagʻlarni bevosita qurilish kompaniyalari va sotuvchilarga cheklangan huquqiy himoya bilan oʻtkazgan. Prezidentning «Yagona uy-joy hayot tsikli» kontseptsiyasiga oid Farmonida ifodalangan davlatning rasmiy maqsadi — xaridorlar mablagʻlarini himoya qilish, bozor shaffofligini oshirish va Oʻzbekiston koʻchmas mulk bozori amaliyotini xalqaro standartlarga muvofiqlashtirish.",
+        text: "Bu islohotlargacha qurilayotgan kvartiralar va boshqa koʻchmas mulk xaridorlari mablagʻlarni bevosita qurilish kompaniyalari va sotuvchilarga cheklangan huquqiy himoya bilan oʻtkazgan. Prezidentning «Yagona uy-joy hayot sikli» konsepsiyasiga oid Farmonida ifodalangan davlatning rasmiy maqsadi — xaridorlar mablagʻlarini himoya qilish, bozor shaffofligini oshirish va Oʻzbekiston koʻchmas mulk bozori amaliyotini xalqaro standartlarga muvofiqlashtirish.",
       },
-      { type: "h2" as const, text: "1-qism: Ulushli qurilishda escrow (2026 yil 1 yanvardan)" },
+      { type: "h2" as const, text: "1-qism: Ulushli qurilishda escrow (2026-yil 1-yanvardan)" },
       {
         type: "ul" as const,
         items: [
-          "2025 yil 1 iyul – 31 dekabr: eski va yangi tizimlarning parallel ishlashi; qurilish kompaniyalari har qanday modeldan foydalanishi mumkin edi",
-          "2026 yil 1 yanvardan: barcha yangi ulushli ishtirok shartnomalarida faqat escrow modeli majburiy",
+          "2025-yil 1-iyul – 31-dekabr: eski va yangi tizimlarning parallel ishlashi; qurilish kompaniyalari har qanday modeldan foydalanishi mumkin edi",
+          "2026-yil 1-yanvardan: barcha yangi ulushli ishtirok shartnomalarida faqat escrow modeli majburiy",
         ],
       },
       { type: "h3" as const, text: "Qurilish kompaniyalariga asosiy talablar" },
@@ -257,16 +257,16 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Qurilish kompaniyalari loyiha moliyalashtirishi olinishidan oldin kamida 30% oʻz mablagʻlarini kiritishi shart",
           "Loyiha moliyalashtirishidagi foiz stavkasi escrow hisobidagi qoldiqqa bogʻliq — xaridorlarning toʻplangan depozitlari qancha yuqori boʻlsa, samarali stavka shuncha past boʻladi",
-          "Escrow mablagʻlari qurilish kompaniyasiga nisbatan daʼvolar bilan bogʻliq hollarda qamoqqa olinishi, toʻxtatilishi yoki musodara qilinishi mumkin emas; ular xaridorlarni himoya qilish uchun ajratilgan",
-          "Agar qurilish kompaniyasi obʼektni shartnomada belgilangan muddatdan 6 oydan ortiq kechiktirib topshirsa, xaridor shartnomani bekor qilish va barcha kiritilgan mablagʻlarni toʻliq qaytarib olish huquqiga ega boʻladi",
+          "Escrow mablagʻlari qurilish kompaniyasiga nisbatan daʼvolar bilan bogʻliq hollarda xatlanishi, toʻxtatilishi yoki musodara qilinishi mumkin emas; ular xaridorlarni himoya qilish uchun ajratilgan",
+          "Agar qurilish kompaniyasi obyektni shartnomada belgilangan muddatdan 6 oydan ortiq kechiktirib topshirsa, xaridor shartnomani bekor qilish va barcha kiritilgan mablagʻlarni toʻliq qaytarib olish huquqiga ega boʻladi",
         ],
       },
-      { type: "h2" as const, text: "2-qism: Umumiy koʻchmas mulk va transport vositalariga escrow (2026 yil 1 apreldan)" },
+      { type: "h2" as const, text: "2-qism: Umumiy koʻchmas mulk va transport vositalariga escrow (2026-yil 1-apreldan)" },
       {
         type: "p" as const,
-        text: "2026 yil 1 apreldan escrow hisobvaraqlari 10 yildan eski boʻlmagan koʻchmas mulk va transport vositalari (M, N, O va G toifalari) bilan bogʻliq barcha oldi-sotti bitimlarida majburiy boʻldi. Mexanizm oddiy: xaridor bitim summasi imzolash paytida notarius hamkor bankidagi escrow hisobiga oʻtkaziladi. Mablagʻlar mulk huquqining oʻtkazilishi roʻyxatga olinguncha saqlanadi, soʻng sotuvchiga oʻtkaziladi.",
+        text: "2026-yil 1-apreldan escrow hisobvaraqlari 10 yildan eski boʻlmagan koʻchmas mulk va transport vositalari (M, N, O va G toifalari) bilan bogʻliq barcha oldi-sotdi bitimlarida majburiy boʻldi. Mexanizm oddiy: xaridor bitim summasini imzolash paytida notarius hamkor bankidagi escrow hisobiga oʻtkazadi. Mablagʻlar mulk huquqining oʻtkazilishi roʻyxatga olinguncha saqlanadi, soʻng sotuvchiga oʻtkaziladi.",
       },
-      { type: "h3" as const, text: "Komissiya tuzilishi" },
+      { type: "h3" as const, text: "Komissiya tuzilmasi" },
       {
         type: "ul" as const,
         items: [
@@ -278,7 +278,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "blockquote" as const,
         text: "500 000 AQSh dollariga sotilgan mulk uchun eski 0,5% komissiya modeli taxminan 2 500 dollar toʻlashni talab qilardi. Yangi qatʼiy toʻlov rejimida xuddi shu bitim taxminan 15 dollar ekvivalentiga tushadi — bu 99% dan ortiq kamayishdir.",
       },
-      { type: "h2" as const, text: "Muvofiqlik masalalari va asosiy risklar" },
+      { type: "h2" as const, text: "Muvofiqlik masalalari va asosiy xatarlar" },
       { type: "h3" as const, text: "Shartnoma narxini past koʻrsatish" },
       {
         type: "p" as const,
@@ -287,15 +287,15 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "Xorijiy valyutadagi bitimlar" },
       {
         type: "p" as const,
-        text: "Oʻzbekistonda koʻchmas mulk bilan bitimlar oʻzbek soʻmida nominallashtiriladi. AQSh dollarida muzokaralar olib borayotgan tomonlar shartnoma imzolash va roʻyxatga olishni yakunlash oʻrtasidagi valyuta kursining oʻzgarishini hisobga olishlari kerak, chunki escrow summasi depozit paytida soʻmda qatʼiylashtiriladi.",
+        text: "Oʻzbekistonda koʻchmas mulk bilan bitimlar oʻzbek soʻmida ifodalanadi. AQSh dollarida muzokaralar olib borayotgan tomonlar shartnoma imzolash va roʻyxatga olishni yakunlash oʻrtasidagi valyuta kursining oʻzgarishini hisobga olishlari kerak, chunki escrow summasi depozit paytida soʻmda qatʼiylashtiriladi.",
       },
       { type: "divider" as const },
       { type: "h2" as const, text: "Asosiy sanalar va qoidalar xulosasi" },
       {
         type: "ul" as const,
         items: [
-          "2026 yil 1 yanvar: barcha yangi ulushli ishtirok shartnomalari uchun escrow majburiy",
-          "2026 yil 1 aprel: barcha koʻchmas mulk va malakali transport vositalari bilan bitimlar uchun escrow majburiy",
+          "2026-yil 1-yanvar: barcha yangi ulushli ishtirok shartnomalari uchun escrow majburiy",
+          "2026-yil 1-aprel: barcha koʻchmas mulk va malakali transport vositalari bilan bitimlar uchun escrow majburiy",
           "Qurilish kompaniyasining minimal oʻz kapitali: loyiha moliyalashtirishidan oldin 30% oʻz mablagʻlari talab etiladi",
           "Xaridorning chiqib ketish huquqi: 6 oylik kechikish toʻliq qaytarish huquqini beradi",
           "Escrow toʻlovi (koʻchmas mulk): 206 000 soʻm qatʼiy",
@@ -306,7 +306,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "Oʻzbekistonda koʻchmas mulk bilan bogʻliq bitimlarda escrow hisobvaraqlari qachondan majburiy boʻldi?",
-        answer: "Escrow hisobvaraqlari ikki bosqichda majburiy boʻldi. Ulushli qurilish (sotilmagan uy-joy) shartnomalariga talablar 2026 yil 1 yanvarda kuchga kirdi. Boshqa barcha koʻchmas mulk bilan bitimlar va malakali transport vositalarini sotish (10 yildan eski boʻlmagan, M, N, O va G toifalari) uchun escrow 2026 yil 1 apreldan majburiy boʻldi.",
+        answer: "Escrow hisobvaraqlari ikki bosqichda majburiy boʻldi. Ulushli qurilish (sotilmagan uy-joy) shartnomalariga talablar 2026-yil 1-yanvarda kuchga kirdi. Boshqa barcha koʻchmas mulk bilan bitimlar va malakali transport vositalarini sotish (10 yildan eski boʻlmagan, M, N, O va G toifalari) uchun escrow 2026-yil 1-apreldan majburiy boʻldi.",
       },
       {
         question: "Oʻzbekistonda koʻchmas mulk bitimi uchun escrow hisobvaragʻi qancha turadi?",
@@ -314,11 +314,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda qurilish kompaniyasi sotilmagan koʻchmas mulkni topshirishni kechiktirsa nima boʻladi?",
-        answer: "Agar qurilish kompaniyasi ulushli qurilish obʼektini shartnomada belgilangan muddatdan 6 oydan ortiq kechiktirib topshirsa, xaridor shartnomani bekor qilish va barcha kiritilgan mablagʻlarni toʻliq qaytarib olish huquqiga ega boʻladi. Bu chiqib ketish huquqi 2026 yil 1 yanvardan kuchga kirgan majburiy ulushli qurilish escrow tizimi doirasida escrow hisobida saqlanadigan mablagʻlarga nisbatan qoʻllaniladi.",
+        answer: "Agar qurilish kompaniyasi ulushli qurilish obyektini shartnomada belgilangan muddatdan 6 oydan ortiq kechiktirib topshirsa, xaridor shartnomani bekor qilish va barcha kiritilgan mablagʻlarni toʻliq qaytarib olish huquqiga ega boʻladi. Bu chiqib ketish huquqi 2026-yil 1-yanvardan kuchga kirgan majburiy ulushli qurilish escrow tizimi doirasida escrow hisobida saqlanadigan mablagʻlarga nisbatan qoʻllaniladi.",
       },
       {
         question: "Oʻzbekistonda qurilish kompaniyasi toʻlovga qodir boʻlmay qolsa escrow mablagʻlari himoyalanadimi?",
-        answer: "Ha. Escrow mablagʻlari Oʻzbekiston qonunchiligiga koʻra ajratilgan hisoblanadi. Ular qurilish kompaniyasiga nisbatan biron-bir daʼvo bilan bogʻliq hollarda qamoqqa olinishi, toʻxtatilishi yoki musodara qilinishi mumkin emas. Bu shuni anglatadiki, qurilish kompaniyasi moliyaviy qiyinchiliklarga duch kelgan yoki toʻlovga qodir emaslik tartiblari boshlangan taqdirda ham xaridorning kiritilgan mablagʻlari himoyalanib qoladi va qaytarilishi uchun mavjud boʻladi.",
+        answer: "Ha. Escrow mablagʻlari Oʻzbekiston qonunchiligiga koʻra ajratilgan hisoblanadi. Ular qurilish kompaniyasiga nisbatan biron-bir daʼvo bilan bogʻliq hollarda xatlanishi, toʻxtatilishi yoki musodara qilinishi mumkin emas. Bu shuni anglatadiki, qurilish kompaniyasi moliyaviy qiyinchiliklarga duch kelgan yoki toʻlovga qodir emaslik tartiblari boshlangan taqdirda ham xaridorning kiritilgan mablagʻlari himoyalanib qoladi va qaytarilishi uchun mavjud boʻladi.",
       },
     ],
   },

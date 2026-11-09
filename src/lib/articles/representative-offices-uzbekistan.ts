@@ -149,7 +149,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle: "Пошаговое руководство по аккредитации представительства иностранной коммерческой организации в Узбекистане — документы, сроки, расходы и текущие обязательства.",
-    author: "Advizen Legal Practice",
+    author: "Юридическая практика Advizen",
     readTime: "8 мин чтения",
     inShort: {
       figures: [
@@ -295,12 +295,12 @@ const article: Record<string, LocalizedArticle> = {
   },
   uz: {
     subtitle: "Oʻzbekistonda xorijiy tijorat tashkilotining vakolatxonasini akkreditatsiya qilish boʻyicha bosqichma-bosqich qoʻllanma — hujjatlar, muddatlar, xarajatlar va doimiy majburiyatlar.",
-    author: "Advizen Legal Practice",
+    author: "Advizen yuridik amaliyoti",
     readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
-        { value: "410-son", label: "Akkreditatsiyani tartibga soluvchi Vazirlar Mahkamasining 2000-yil 23-oktyabrdagi qarori" },
-        { value: "10 ish kuni", label: "ITSV ariza boʻyicha qaror chiqarishi uchun" },
+        { value: "410-son", label: "Akkreditatsiyani tartibga soluvchi Vazirlar Mahkamasining 2000-yil 23-oktabrdagi qarori" },
+        { value: "10 ish kuni", label: "ITSV arizani koʻrib chiqib qaror chiqaradigan muddat" },
         { value: "48 BHM", label: "Akkreditatsiya uchun davlat boji, joriy kursda taxminan 1 500 AQSh dollari" },
         { value: "1–3 yil", label: "Akkreditatsiya muddati; birlamchi guvohnoma bir yilga beriladi" },
       ],
@@ -314,7 +314,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "Mahalliy yuridik shaxs tashkil etmasdan Oʻzbekistonda mavjudlik oʻrnatishni istagan xorijiy kompaniyalar vakolatxona ochishlari mumkin. Jarayon Vazirlar Mahkamasining 2000 yil 23 oktyabrdagi 410-sonli Qarori bilan tartibga solinadi va Investitsiyalar va tashqi savdo vazirligi (ITSV) tomonidan amalga oshiriladi. Bu yerda akkreditatsiya — roʻyxatdan oʻtkazish emas — asosiy tushunchadir: vakolatxona ITSV akkreditatsiya guvohnomasini berganidan boshlab mavjud boʻladi.",
+        text: "Mahalliy yuridik shaxs tashkil etmasdan Oʻzbekistonda mavjudlik oʻrnatishni istagan xorijiy kompaniyalar vakolatxona ochishlari mumkin. Jarayon Vazirlar Mahkamasining 2000-yil 23-oktabrdagi 410-son qarori bilan tartibga solinadi va Investitsiyalar va tashqi savdo vazirligi (ITSV) tomonidan amalga oshiriladi. Bu yerda akkreditatsiya — roʻyxatdan oʻtkazish emas — asosiy tushunchadir: vakolatxona ITSV akkreditatsiya guvohnomasini berganidan boshlab mavjud boʻladi.",
       },
       { type: "h2" as const, text: "Vakolatxonani kim ocha oladi" },
       {
@@ -339,8 +339,8 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Firma blankasidagi yozma ariza — tashkil etuvchi tashkilotning manzili, kontaktlari, rahbariyati, xodimlar soni, faoliyat turlari, yillik aylanmasi, mahsulot assortimenti, aktsionerlar, shoʻba korxonalar, tarixi va taklif etilayotgan akkreditatsiya muddati (odatda uch yil) haqida maʼlumot.",
-          "Taʼsis hujjatlari (ustav va taʼsis shartnomasi) — tashkil etilgan mamlakatdagi Oʻzbekiston konsulligida (yoki 1961 yilgi Gaaga Konvensiyasi boʻyicha apostil orqali) qonuniylashtirilgan notarial tasdiqlangan nusxalar, hamda oʻzbek yoki rus tiliga notarial tasdiqlangan tarjima bilan birga. MDH mamlakatlari hujjatlari uchun faqat notarial tasdiqlangan nusxalar talab etiladi.",
+          "Firma blankasidagi yozma ariza — tashkil etuvchi tashkilotning manzili, kontaktlari, rahbariyati, xodimlar soni, faoliyat turlari, yillik aylanmasi, mahsulot assortimenti, aksiyadorlar, shoʻba korxonalar, tarixi va taklif etilayotgan akkreditatsiya muddati (odatda uch yil) haqida maʼlumot.",
+          "Taʼsis hujjatlari (ustav va taʼsis shartnomasi) — tashkil etilgan mamlakatdagi Oʻzbekiston konsulligida (yoki 1961-yilgi Gaaga Konvensiyasi boʻyicha apostil orqali) qonuniylashtirilgan notarial tasdiqlangan nusxalar, hamda oʻzbek yoki rus tiliga notarial tasdiqlangan tarjima bilan birga. MDH mamlakatlari hujjatlari uchun faqat notarial tasdiqlangan nusxalar talab etiladi.",
           "Tashkil etilgan mamlakatdagi roʻyxatdan oʻtganlik dalili — savdo reyestridan koʻchirma yoki davlat roʻyxatidan oʻtganlik toʻgʻrisidagi guvohnoma, qonuniylashtirilgan yoki apostillangan, notarial tasdiqlangan tarjima bilan.",
           "Vakolatxona Boshligʻi nomiga ishonchnoma — toʻliq pasport maʼlumotlari va vakolatlar bayoni bilan, qonuniylashtirilgan yoki apostillangan, notarial tasdiqlangan tarjima bilan.",
           "Vakolatxona toʻgʻrisidagi Nizom — tashkil etuvchi tashkilot tomonidan tasdiqlangan va muhrlangan, qonuniylashtirilgan yoki apostillangan, notarial tasdiqlangan tarjima bilan.",
@@ -349,7 +349,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "MDH aʼzo davlatlarida (Belarus, Qozogʻiston, Rossiya, Tojikiston, Armaniston, Ukraina, Qirgʻiziston, Moldova, Ozarbayjon, Gruziya, Turkmaniston) berilgan hujjatlar qonuniylashtirishni talab qilmaydi — notarial tasdiqlangan nusxalar yetarli. Topshirilayotgan barcha hujjatlar topshirilishidan oldingi olti oy ichida berilgan boʻlishi shart.",
+        text: "MDHga aʼzo davlatlarda (Belarus, Qozogʻiston, Rossiya, Tojikiston, Armaniston, Ukraina, Qirgʻiziston, Moldova, Ozarbayjon, Gruziya, Turkmaniston) berilgan hujjatlar qonuniylashtirishni talab qilmaydi — notarial tasdiqlangan nusxalar yetarli. Topshirilayotgan barcha hujjatlar topshirilishidan oldingi olti oy ichida berilgan boʻlishi shart.",
       },
       { type: "h2" as const, text: "Muddatlar va qaror" },
       {
@@ -358,7 +358,7 @@ const article: Record<string, LocalizedArticle> = {
           "ITSV arizani koʻrib chiqadi va topshirilgan kundan boshlab 10 ish kuni ichida qaror chiqaradi (berish yoki rad etish).",
           "ITSV qaror qabul qilinganidan 3 kun ichida ariza beruvchini yozma ravishda xabardor qiladi.",
           "Akkreditatsiya guvohnomasi davlat boji ITSV hisobiga tushganidan 5 kun ichida beriladi.",
-          "Birlamchi guvohnoma bir yilga beriladi; keyingi qayta uzaytirishlar toʻliq akkreditatsiya muddatini qamrab olishi mumkin.",
+          "Birlamchi guvohnoma bir yilga beriladi; keyingi uzaytirishlar toʻliq akkreditatsiya muddatini qamrab olishi mumkin.",
         ],
       },
       { type: "h2" as const, text: "Rad etish asoslari" },
@@ -369,7 +369,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Akkreditatsiya yigʻimi" },
       {
         type: "p" as const,
-        text: "Davlat boji asosiy hisob-kitob qiymatining 48 baravarini tashkil etadi (joriy kursda taxminan 1 500 AQSh dollari). Toʻlov guvohnoma berilishidan oldin ITSV hisobiga amalga oshiriladi.",
+        text: "Davlat boji bazaviy hisoblash miqdorining 48 baravarini tashkil etadi (joriy kursda taxminan 1 500 AQSh dollari). Toʻlov guvohnoma berilishidan oldin ITSV hisobiga amalga oshiriladi.",
       },
       { type: "h2" as const, text: "Akkreditatsiyadan keyingi majburiyatlar" },
       {
@@ -396,7 +396,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Moliya va operatsion faoliyat" },
       {
         type: "p" as const,
-        text: "Vakolatxona tashkil etuvchi tashkilot tomonidan moliyalashtiriladi. Vakolatxona tomonidan qoplanishi mumkin boʻlgan operatsion xarajatlarga quyidagilar kiradi: vakillik xarajatlari; ofis ehtiyojlari uchun materiallar sotib olish; xodimlar maoshi; xizmat safarlari; ijara va kommunal xizmatlar; boshqa operatsion xarajatlar. Oʻzbek soʻmlari xorijiy valyutani vakolatli kanallar orqali konvertatsiya qilish yoki ona kompaniya tomonidan oʻtkazilgan soʻm mablagʻlaridan olinishi kerak. Xorijiy valyutadagi tushumlar tashkil etuvchi tashkilot tomonidan vakolatxonaning bank hisobvaragʻiga oʻtkaziladi.",
+        text: "Vakolatxona tashkil etuvchi tashkilot tomonidan moliyalashtiriladi. Vakolatxona tomonidan qoplanishi mumkin boʻlgan operatsion xarajatlarga quyidagilar kiradi: vakillik xarajatlari; ofis ehtiyojlari uchun materiallar sotib olish; xodimlar maoshi; xizmat safarlari; ijara va kommunal xizmatlar; boshqa operatsion xarajatlar. Oʻzbek soʻmi xorijiy valyutani vakolatli kanallar orqali konvertatsiya qilish yoʻli bilan yoki ona kompaniya oʻtkazgan soʻm mablagʻlari hisobidan olinishi kerak. Xorijiy valyutadagi tushumlar tashkil etuvchi tashkilot tomonidan vakolatxonaning bank hisobvaragʻiga oʻtkaziladi.",
       },
       { type: "h2" as const, text: "Mehnat munosabatlari" },
       { type: "h3" as const, text: "Xorijiy fuqarolar" },
@@ -412,22 +412,22 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Hujjatlarni qonuniylashtirish" },
       {
         type: "p" as const,
-        text: "1961 yil 5 oktyabrdagi Gaaga Konvensiyasiga qoʻshilgan mamlakatlardan kelgan hujjatlar toʻliq konsullik qonuniylashtirishi oʻrniga apostilni talab qiladi. Konvensiyada ishtirok etmagan mamlakatlar uchun tashkil etuvchi tashkilotning hujjatlari tashkil etilgan mamlakatdagi Oʻzbekiston konsullik vakolatxonasida qonuniylashtirilishi (yoki, bunday vakolatxona boʻlmasa, ushbu mamlakatning tashqi ishlar vazirligi orqali va keyin Oʻzbekiston Tashqi ishlar vazirligining Konsullik boʻlimida) kerak. MDH mamlakatlari hujjatlari qonuniylashtirishdan butunlay ozod qilingan.",
+        text: "1961-yil 5-oktabrdagi Gaaga Konvensiyasiga qoʻshilgan mamlakatlardan kelgan hujjatlar toʻliq konsullik qonuniylashtirishi oʻrniga apostilni talab qiladi. Konvensiyada ishtirok etmagan mamlakatlar uchun tashkil etuvchi tashkilotning hujjatlari tashkil etilgan mamlakatdagi Oʻzbekiston konsullik vakolatxonasida qonuniylashtirilishi (yoki, bunday vakolatxona boʻlmasa, ushbu mamlakatning tashqi ishlar vazirligi orqali va keyin Oʻzbekiston Tashqi ishlar vazirligining Konsullik boʻlimida) kerak. MDH mamlakatlari hujjatlari qonuniylashtirishdan butunlay ozod qilingan.",
       },
       { type: "h2" as const, text: "Advizen qanday yordam bera oladi" },
       {
         type: "p" as const,
-        text: "Oʻzbekistonda vakolatxona ochish hujjatlarni qonuniylashtirish talablarini hal etish, mos Vakolatxona Nizomini ishlab chiqish, akkreditatsiya muddatlarini boshqarish va akkreditatsiyadan keyingi majburiyatlarni bajarishni oʻz ichiga oladi. Advizen jamoasi xorijiy kompaniyalarga har bir bosqichda yordam beradi — hujjatlarni tayyorlash va tarjima koordinatsiyasidan tortib, soliq roʻyxatidan oʻtish va doimiy ITSV muvofiqligigacha.",
+        text: "Oʻzbekistonda vakolatxona ochish hujjatlarni qonuniylashtirish talablarini hal etish, mos Vakolatxona Nizomini ishlab chiqish, akkreditatsiya muddatlarini boshqarish va akkreditatsiyadan keyingi majburiyatlarni bajarishni oʻz ichiga oladi. Advizen jamoasi xorijiy kompaniyalarga har bir bosqichda yordam beradi — hujjatlarni tayyorlash va tarjima koordinatsiyasidan tortib, soliq roʻyxatidan oʻtish va ITSV talablariga doimiy rioya qilishgacha.",
       },
     ],
       faq: [
       {
         question: "Oʻzbekistondagi vakolatxonaning huquqiy maqomi qanday?",
-        answer: "Vakolatxona yuridik shaxs emas va tijorat faoliyati yuritishi mumkin emas — yagona istisno aviakompaniyalar vakolatxonalaridir. U mustaqil soliq toʻlovchi emas; soliq majburiyatlari Soliq kodeksi va amaldagi xalqaro shartnomalar bilan tartibga solinadi. Vakolatxona tashkil etuvchi tashkilotning Oʻzbekiston hududidagi manfaatlarini ifodalash va himoya qilish uchun mavjud boʻlib, VM 410-sonli Qarori asosida ITSV akkreditatsiya guvohnomasini berganidan boshlab mavjud boʻladi.",
+        answer: "Vakolatxona yuridik shaxs emas va tijorat faoliyati yuritishi mumkin emas — yagona istisno aviakompaniyalar vakolatxonalaridir. U mustaqil soliq toʻlovchi emas; soliq majburiyatlari Soliq kodeksi va amaldagi xalqaro shartnomalar bilan tartibga solinadi. Vakolatxona tashkil etuvchi tashkilotning Oʻzbekiston hududidagi manfaatlarini ifodalash va himoya qilish uchun mavjud boʻlib, Vazirlar Mahkamasining 410-son qarori asosida ITSV akkreditatsiya guvohnomasini berganidan boshlab mavjud boʻladi.",
       },
       {
         question: "Oʻzbekistonda vakolatxonani akkreditatsiya qilish qancha turadi?",
-        answer: "Davlat boji asosiy hisob-kitob qiymatining 48 baravarini tashkil etadi (joriy kursda taxminan 1 500 AQSh dollari), guvohnoma berilishidan oldin ITSV hisobiga toʻlanadi. ITSV arizani koʻrib chiqib 10 ish kuni ichida qaror chiqaradi; guvohnoma toʻlovdan 5 kun ichida beriladi. Akkreditatsiya 1 yildan 3 yilgacha muddatga berilishi mumkin; birlamchi guvohnoma bir yilga beriladi.",
+        answer: "Davlat boji bazaviy hisoblash miqdorining 48 baravarini tashkil etadi (joriy kursda taxminan 1 500 AQSh dollari), guvohnoma berilishidan oldin ITSV hisobiga toʻlanadi. ITSV arizani koʻrib chiqib 10 ish kuni ichida qaror chiqaradi; guvohnoma toʻlovdan 5 kun ichida beriladi. Akkreditatsiya 1 yildan 3 yilgacha muddatga berilishi mumkin; birlamchi guvohnoma bir yilga beriladi.",
       },
       {
         question: "Oʻzbekistonda vakolatxonani akkreditatsiya qilish uchun qanday hujjatlar talab etiladi?",

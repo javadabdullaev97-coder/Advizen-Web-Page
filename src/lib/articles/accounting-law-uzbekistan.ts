@@ -216,7 +216,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle: "Практический обзор законодательства Узбекистана о бухгалтерском учёте — кто обязан соблюдать, как ведётся учёт, какая отчётность требуется и какие штрафы предусмотрены.",
-    author: "Advizen Legal Practice",
+    author: "Юридическая практика Advizen",
     readTime: "9 мин чтения",
     inShort: {
       figures: [
@@ -428,7 +428,7 @@ const article: Record<string, LocalizedArticle> = {
     ],},
   uz: {
     subtitle: "Oʻzbekistonning buxgalteriya hisobi toʻgʻrisidagi qonunchiligiga amaliy umumiy nazar — kim rioya qilishi shart, hisob qanday yuritiladi, qanday hisobotlar talab etiladi va qanday jarimalar qoʻllaniladi.",
-    author: "Advizen Legal Practice",
+    author: "Advizen yuridik amaliyoti",
     readTime: "9 daqiqa oʻqish",
     inShort: {
       figures: [
@@ -447,7 +447,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "Oʻzbekistonda faoliyat yurituvchi har bir yuridik shaxs buxgalteriya hisobini yuritishi shart. Qoidalar 2016 yil 13 apreldagi «Buxgalteriya hisobi toʻgʻrisida»gi OʻRQ-404-sonli Qonun va qoʻshimcha qonun hujjatlari toʻplamida belgilangan. Ushbu qoʻllanma asosiy tushunchalarni, tashkiliy talablarni, hisobot majburiyatlarini va talablarni buzganlik uchun jarimalarni qamrab oladi.",
+        text: "Oʻzbekistonda faoliyat yurituvchi har bir yuridik shaxs buxgalteriya hisobini yuritishi shart. Qoidalar 2016-yil 13-apreldagi «Buxgalteriya hisobi toʻgʻrisida»gi OʻRQ-404-sonli Qonun va qoʻshimcha qonun hujjatlari toʻplamida belgilangan. Ushbu qoʻllanma asosiy tushunchalarni, tashkiliy talablarni, hisobot majburiyatlarini va talablarni buzganlik uchun jarimalarni qamrab oladi.",
       },
       { type: "h2" as const, text: "Qonunchilik bazasi" },
       {
@@ -457,10 +457,10 @@ const article: Record<string, LocalizedArticle> = {
           "Oʻzbekiston Respublikasi Fuqarolik kodeksi",
           "Oʻzbekiston Respublikasi Jinoyat kodeksi",
           "Oʻzbekiston Respublikasi Soliq kodeksi",
-          "2016 yil 13 apreldagi «Buxgalteriya hisobi toʻgʻrisida»gi OʻRQ-404-sonli Qonun",
-          "2019 yil 5 noyabrdagi «Banklar va bank faoliyati toʻgʻrisida»gi OʻRQ-580-sonli Qonun",
-          "2019 yil 11 noyabrdagi «Oʻzbekiston Respublikasi Markaziy banki toʻgʻrisida»gi OʻRQ-582-sonli Qonun",
-          "2022 yil 10 noyabrdagi «Hisobot va arxiv hujjatlarini saqlash tartibini optimallashtirish chora-tadbirlari toʻgʻrisida»gi PQ-419-sonli Prezident Qarori",
+          "2016-yil 13-apreldagi «Buxgalteriya hisobi toʻgʻrisida»gi OʻRQ-404-sonli Qonun",
+          "2019-yil 5-noyabrdagi «Banklar va bank faoliyati toʻgʻrisida»gi OʻRQ-580-sonli Qonun",
+          "2019-yil 11-noyabrdagi «Oʻzbekiston Respublikasi Markaziy banki toʻgʻrisida»gi OʻRQ-582-sonli Qonun",
+          "2022-yil 10-noyabrdagi «Hisobot va arxiv hujjatlarini saqlash tartibini optimallashtirish chora-tadbirlari toʻgʻrisida»gi Prezidentning PQ-419-son qarori",
         ],
       },
       { type: "h2" as const, text: "Buxgalteriya hisobi nima?" },
@@ -479,7 +479,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "Tipik xoʻjalik operatsiyalariga quyidagilar kiradi: xaridlar (xom ashyo qabul qilish, yetkazib beruvchilarga toʻlov, materiallarni ishlab chiqarishga joʻnatish); sotuvlar (sotuv xarajatlari, tushum olish, tovarlarni sotish); ishlab chiqarish (ish haqi hisoblash, asosiy vositalar amortizatsiyasi, pudratchi ishlarini qabul qilish, pudratchilarga toʻlov).",
+        text: "Tipik xoʻjalik operatsiyalariga quyidagilar kiradi: xaridlar (xomashyo qabul qilish, yetkazib beruvchilarga toʻlov, materiallarni ishlab chiqarishga joʻnatish); sotuvlar (sotuv xarajatlari, tushum olish, tovarlarni sotish); ishlab chiqarish (ish haqi hisoblash, asosiy vositalar amortizatsiyasi, pudratchi ishlarini qabul qilish, pudratchilarga toʻlov).",
       },
       {
         type: "p" as const,
@@ -491,7 +491,7 @@ const article: Record<string, LocalizedArticle> = {
           "Hisob subyektining nomi",
           "Hujjat nomi, raqami, sanasi va tuzilgan joyi",
           "Xoʻjalik operatsiyasining tavsifi va miqdor oʻlchovi (natural birliklarda va pul ifodasida)",
-          "Operatsiyani amalga oshirgan shaxslarning lavozimlari va imzolari, familiyasi va ismi-sharifi koʻrsatilgan holda",
+          "Operatsiyani amalga oshirgan shaxslarning lavozimlari va imzolari, familiyasi va ismi koʻrsatilgan holda",
         ],
       },
       {
@@ -506,7 +506,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Hisob obyektlari" },
       {
         type: "p" as const,
-        text: "Hisob obyektlari quyidagilardir: aktivlar; majburiyatlar; xususiy kapital; rezervlar; daromadlar; xarajatlar; foyda; zararlar; xoʻjalik operatsiyalari. Barcha obyektlar ham sintetik hisobga (qonunchilik talab qilganidek, iqtisodiy toifalar boʻyicha umumlashtirilgan) ham analitik hisobga (tashkilotning oʻz ehtiyojlariga koʻra yuritiladigan batafsil hisob) tortiladi.",
+        text: "Hisob obyektlari quyidagilardir: aktivlar; majburiyatlar; xususiy kapital; rezervlar; daromadlar; xarajatlar; foyda; zararlar; xoʻjalik operatsiyalari. Barcha obyektlar ham sintetik hisobga (qonunchilik talab qilganidek, iqtisodiy toifalar boʻyicha umumlashtirilgan), ham analitik hisobga (tashkilotning oʻz ehtiyojlariga koʻra yuritiladigan batafsil hisob) tortiladi.",
       },
       { type: "h2" as const, text: "Kompaniyada buxgalteriya hisobini tashkil etish" },
       {
@@ -538,7 +538,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Kichik korxonalar uchun soddalashtirilgan hisob" },
       {
         type: "p" as const,
-        text: "Kichik korxonalar (tarmoqqa qarab oʻrtacha yillik xodimlar soni 6 dan 270 nafargacha boʻlgan tashkilotlar) BHMS № 20 boʻyicha soddalashtirilgan hisob qoidalarini koʻngilli ravishda qoʻllashlari mumkin. Direktor uchun yuqorida tavsiflangan hisobni tashkil etish variantlari saqlanib qoladi.",
+        text: "Kichik korxonalar (tarmoqqa qarab oʻrtacha yillik xodimlar soni 6 dan 270 nafargacha boʻlgan tashkilotlar) BHMS № 20 boʻyicha soddalashtirilgan hisob qoidalarini ixtiyoriy ravishda qoʻllashlari mumkin. Direktor uchun yuqorida tavsiflangan hisobni tashkil etish variantlari saqlanib qoladi.",
       },
       {
         type: "p" as const,
@@ -556,7 +556,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Moliyaviy hisobot" },
       {
         type: "p" as const,
-        text: "Moliyaviy hisobot — hisobot sanasidagi tashkilotning moliyaviy holatini, shuningdek hisobot davridagi moliyaviy natijalari va pul oqimlarini tizimlashtirilgan tarzda taqdim etishdir. Hisobot davri — 1 yanvardan 31 dekabrgacha boʻlgan kalendar yil; hisobot sanasi — 31 dekabr.",
+        text: "Moliyaviy hisobot — hisobot sanasidagi tashkilotning moliyaviy holatini, shuningdek hisobot davridagi moliyaviy natijalari va pul oqimlarini tizimlashtirilgan tarzda taqdim etishdir. Hisobot davri — 1-yanvardan 31-dekabrgacha boʻlgan kalendar yil; hisobot sanasi — 31-dekabr.",
       },
       {
         type: "p" as const,
@@ -579,26 +579,26 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Tartibga solish" },
       {
         type: "p" as const,
-        text: "Oʻzbekiston Respublikasi Iqtisodiyot va moliya vazirligi buxgalteriya hisobi va moliyaviy hisobotni tartibga soladi, jumladan buxgalteriya hisobi standartlarini ishlab chiqadi va tasdiqlaydi, moliyaviy hisobot shakllarini tasdiqlaydi, audit tashkilotlarining tashqi sifat nazoratini olib boradi va Audit tashkilotlari Reyestri va Auditorlar Reyestrini yuritadi.",
+        text: "Oʻzbekiston Respublikasi Iqtisodiyot va moliya vazirligi buxgalteriya hisobi va moliyaviy hisobotni tartibga soladi, jumladan buxgalteriya hisobi standartlarini ishlab chiqadi va tasdiqlaydi, moliyaviy hisobot shakllarini tasdiqlaydi, audit tashkilotlarining tashqi sifat nazoratini olib boradi va audit tashkilotlari reyestri va auditorlar reyestrini yuritadi.",
       },
       {
         type: "p" as const,
-        text: "Byudjet tashkilotlari va davlat maqsadli jamgʻarmalaridagi hisob byudjet qonunchiligi bilan tartibga solinadi va Iqtisodiyot va moliya vazirligi nazorati ostida amalga oshiriladi. Banklar va boshqa kredit tashkilotlaridagi hisob Oʻzbekiston Respublikasi Markaziy banki tomonidan tartibga solinadi, u amaldagi qoidalarni belgilaydi va banklarga MHHSdan foydalanishga ruxsat beradi.",
+        text: "Byudjet tashkilotlari va davlat maqsadli jamgʻarmalaridagi hisob byudjet qonunchiligi bilan tartibga solinadi va Iqtisodiyot va moliya vazirligi nazorati ostida amalga oshiriladi. Banklar va boshqa kredit tashkilotlaridagi hisob Oʻzbekiston Respublikasi Markaziy banki tomonidan tartibga solinadi, u amaldagi qoidalarni belgilaydi va banklarga MHXSdan foydalanishga ruxsat beradi.",
       },
       { type: "h2" as const, text: "Soʻnggi islohot: hisobot majburiyatlarining qisqarishi" },
       {
         type: "p" as const,
-        text: "PQ-419-sonli Prezident Qarori (2022 yil noyabr) sezilarli soddalashtirishlarni joriy etdi:",
+        text: "Prezidentning PQ-419-son qarori (2022-yil noyabr) sezilarli soddalashtirishlarni joriy etdi:",
       },
       {
         type: "ul" as const,
         items: [
-          "Ish haqi hujjatlari va u bilan bogʻliq soliq hujjatlarini (2022 yil 1 yanvardan keyin hisoblangan daromadlar boʻyicha) davlat yoki xususiy arxivlarga saqlash va topshirish majburiyati bekor qilindi.",
-          "2022 yil 1 yanvardan boshlab elektron shaklda taqdim etilgan moliyaviy, soliq va statistik hisobotlar va soliq organlari tizimlari orqali elektron qayta ishlangan hujjatlar endi arxivlanishi shart emas.",
-          "2023 yil 1 yanvardan tashkilotlar soliq va statistika organlariga choraklik moliyaviy hisobot taqdim etishi shart emas.",
+          "Ish haqi hujjatlari va u bilan bogʻliq soliq hujjatlarini (2022-yil 1-yanvardan keyin hisoblangan daromadlar boʻyicha) davlat yoki xususiy arxivlarga saqlash va topshirish majburiyati bekor qilindi.",
+          "2022-yil 1-yanvardan boshlab elektron shaklda taqdim etilgan moliyaviy, soliq va statistik hisobotlar va soliq organlari tizimlari orqali elektron qayta ishlangan hujjatlar endi arxivlanishi shart emas.",
+          "2023-yil 1-yanvardan tashkilotlar soliq va statistika organlariga choraklik moliyaviy hisobot taqdim etishi shart emas.",
           "Aylanma soliq toʻlovchilari soliq organlariga yillik moliyaviy hisobot taqdim etishi shart emas.",
-          "2023 yil 1 maydan taʼsischilari Oʻzbekiston rezidentlari boʻlgan korxonalar bank hisobvaraqlarini masofadan turib ochishlari mumkin; kommunal va aloqa shartnomalari elektron shaklda imzolanishi mumkin.",
-          "2023 yil 1 yanvardan toʻqqizta statistik hisobot shakli, jumladan birja faoliyati, mehnat sharoitlari, ish haqini taqsimlash, tijorat banklari va sugʻurta tashkilotlari faoliyati boʻyicha shakllar bekor qilindi.",
+          "2023-yil 1-maydan taʼsischilari Oʻzbekiston rezidentlari boʻlgan korxonalar bank hisobvaraqlarini masofadan turib ochishlari mumkin; kommunal va aloqa shartnomalari elektron shaklda imzolanishi mumkin.",
+          "2023-yil 1-yanvardan toʻqqizta statistik hisobot shakli, jumladan birja faoliyati, mehnat sharoitlari, ish haqini taqsimlash, tijorat banklari va sugʻurta tashkilotlari faoliyati boʻyicha shakllar bekor qilindi.",
           "Elektron arxivlash xizmatlarini koʻrsatuvchi xususiy arxivlar endi litsenziyaga muhtoj emas — vakolatli organga xabarnoma yuborish yetarli.",
         ],
       },
@@ -617,7 +617,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Advizen qanday yordam bera oladi" },
       {
         type: "p" as const,
-        text: "Buxgalteriya xizmatini tashkil etish, ichki va autsorsing modellari oʻrtasida tanlash, hisob siyosatini ishlab chiqish va hisobot majburiyatlarini bajarishga rioya qilish Oʻzbekistonning tartibga soluvchi tizimi xususiyatlariga jiddiy eʼtibor talab etadi. Advizen mijozlarga buxgalteriya hisobini tashkil etish, mos hisob modelini tanlash, hisobot muddatlariga rioya etish va tartibga soluvchilar soʻrovlariga javob tayyorlash boʻyicha maslahat beradi.",
+        text: "Buxgalteriya xizmatini tashkil etish, ichki va autsorsing modellari oʻrtasida tanlash, hisob siyosatini ishlab chiqish va hisobot majburiyatlarini bajarish Oʻzbekistonning tartibga soluvchi tizimi xususiyatlariga jiddiy eʼtibor talab etadi. Advizen mijozlarga buxgalteriya hisobini tashkil etish, mos hisob modelini tanlash, hisobot muddatlariga rioya etish va tartibga soluvchilar soʻrovlariga javob tayyorlash boʻyicha maslahat beradi.",
       },
     ],
       faq: [
@@ -631,7 +631,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistondagi kompaniyalar uchun yillik moliyaviy hisobot majburiyatlari qanday?",
-        answer: "Hisobot davri — 1 yanvardan 31 dekabrgacha boʻlgan kalendar yil. Yillik moliyaviy hisobot quyidagilarni oʻz ichiga oladi: buxgalteriya balansi; moliyaviy natijalar toʻgʻrisida hisobot; pul mablagʻlari harakati toʻgʻrisida hisobot; xususiy kapitaldagi oʻzgarishlar toʻgʻrisida hisobot; izohlar va tushuntiruvchi oshkor etishlar. 2023 yil 1 yanvardan tashkilotlar soliq va statistika organlariga choraklik moliyaviy hisobot taqdim etishi shart emas. Aylanma soliq toʻlovchilari ham soliq organlariga yillik moliyaviy hisobot taqdim etishdan ozod qilindi.",
+        answer: "Hisobot davri — 1-yanvardan 31-dekabrgacha boʻlgan kalendar yil. Yillik moliyaviy hisobot quyidagilarni oʻz ichiga oladi: buxgalteriya balansi; moliyaviy natijalar toʻgʻrisida hisobot; pul mablagʻlari harakati toʻgʻrisida hisobot; xususiy kapitaldagi oʻzgarishlar toʻgʻrisida hisobot; izohlar va tushuntiruvchi oshkor etishlar. 2023-yil 1-yanvardan tashkilotlar soliq va statistika organlariga choraklik moliyaviy hisobot taqdim etishi shart emas. Aylanma soliq toʻlovchilari ham soliq organlariga yillik moliyaviy hisobot taqdim etishdan ozod qilindi.",
       },
       {
         question: "Oʻzbekistonda buxgalteriya hisobi buzilishlari uchun qanday jarimalar qoʻllaniladi?",

@@ -123,7 +123,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Выбор стратегического партнёра по аутсорсингу" },
       {
         type: "p",
-        text: "В Advizen мы предлагаем профессиональные услуги высокого уровня по налоговому и юридическому консультированию, бухгалтерии, таможенным, финансовым и кадровым вопросам. Наши опытные эксперты помогают оптимизировать операционную деятельность, выявлять скрытые резервы и повышать успех вашей компании через интегрированный подход «единого окна».",
+        text: "В Advizen мы предлагаем профессиональные услуги высокого уровня по налоговому и юридическому консультированию, бухгалтерии, таможенным, финансовым и кадровым вопросам. Наши опытные эксперты помогают оптимизировать операционную деятельность, выявлять скрытые резервы и способствовать успеху вашей компании через интегрированный подход «единого окна».",
       },
       {
         type: "blockquote",
@@ -145,34 +145,34 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Какие компании в Узбекистане выигрывают больше всего от аутсорсинга?",
-        answer: "Наибольшую выгоду получают иностранные компании, выходящие на рынок Узбекистана, МСП без объёма для оправдания полноценных внутренних отделов, а также быстрорастущий бизнес, которому нужно оперативно масштабировать операции. Аутсорсинг даёт этим организациям немедленный доступ к экспертизе без накладных расходов на создание внутренних команд.",
+        answer: "Наибольшую выгоду получают иностранные компании, выходящие на рынок Узбекистана, МСП, которым невыгодно содержать полноценные внутренние отделы, а также быстрорастущий бизнес, которому нужно оперативно масштабировать операции. Аутсорсинг даёт этим организациям немедленный доступ к экспертизе без накладных расходов на создание внутренних команд.",
       },
     ],
   },
   uz: {
     subtitle: "Oʻzbekistonda strategik autsorsing yordamida operatsion faoliyatni soddalashtiring va oʻsishni tezlashtiring.",
     author: "Advizen konsalting jamoasi",
-    readTime: "6 daqiqalik oʻqish",
+    readTime: "6 daqiqa oʻqish",
     inShort: {
       figures: [
-        { value: "3", label: "Eng koʻp autsorsingga topshiriladigan funksiyalar: buxgalteriya, yuridik komplaens va HR boshqaruvi" },
+        { value: "3", label: "Eng koʻp autsorsingga topshiriladigan funksiyalar: buxgalteriya, yuridik xizmatlar va HR boshqaruvi" },
       ],
       points: [
         "Autsorsing — muayyan biznes funksiyalari yoki jarayonlarini tashqi xizmat koʻrsatuvchilarga topshirish.",
-        "Buxgalteriya, yuridik komplaens va HR boshqaruvi ixtisoslashgan bilim talab qilgani uchun eng talabgir autsorsing xizmatlari hisoblanadi.",
-        "Komplaens funksiyalari autsorsingga topshirilganda, xizmat koʻrsatuvchi Oʻzbekistonning oʻzgarib turuvchi tartibga solish talablariga rioya etilishi uchun javobgarlikni oʻz zimmasiga oladi.",
+        "Buxgalteriya, yuridik xizmatlar va HR boshqaruvi ixtisoslashgan bilim talab qilgani uchun eng talabgir autsorsing xizmatlari hisoblanadi.",
+        "Muvofiqlik funksiyalari autsorsingga topshirilganda, xizmat koʻrsatuvchi Oʻzbekistonning oʻzgarib turuvchi tartibga solish talablariga rioya etilishi uchun javobgarlikni oʻz zimmasiga oladi.",
         "Autsorsing ichki boʻlim bilan bogʻliq xarajatlarni — oylik, ijtimoiy badallar, ofis joyi, dasturiy taʼminot litsenziyalari va oʻqitishni — bartaraf etadi, xizmatlar hajmini esa ishga olish yoki qisqartirishsiz oshirish yoki kamaytirish mumkin.",
       ],
     },
     content: [
       {
         type: "p",
-        text: "Oʻzbekistonning raqobatbardosh muhitida biznes samaradorlikni oshirish, xarajatlarni kamaytirish va asosiy kompetensiyalarga eʼtibor qaratish uchun aqlli strategiyalarni izlamoqda. Gʻarb bozorlarida tanish boʻlgan operatsion faoliyat autsorsingi bu dinamik mintaqaning oʻziga xos murakkabliklarida ishlovchi kompaniyalar uchun muhim yechimga aylanmoqda. Advizenda biz nomaʼlum funksiyalarni topshirishni nafaqat xarajatlarni tejash, balki barqaror oʻsish uchun strategik qadam deb bilamiz.",
+        text: "Oʻzbekistonning raqobatbardosh muhitida biznes samaradorlikni oshirish, xarajatlarni kamaytirish va asosiy kompetensiyalarga eʼtibor qaratish uchun aqlli strategiyalarni izlamoqda. Gʻarb bozorlarida tanish boʻlgan operatsion faoliyat autsorsingi bu dinamik mintaqaning oʻziga xos murakkabliklarida ishlovchi kompaniyalar uchun muhim yechimga aylanmoqda. Advizenda biz asosiy boʻlmagan funksiyalarni topshirishni nafaqat xarajatlarni tejash, balki barqaror oʻsish uchun strategik qadam deb bilamiz.",
       },
       { type: "h2", text: "Autsorsing nima va bugun nega muhim?" },
       {
         type: "p",
-        text: "Autsorsing — muayyan biznes funksiyalari yoki jarayonlarini tashqi xizmat koʻrsatuvchilarga topshirish. Bu model rivojlangan iqtisodiyotlarda operatsiyalarni soddalashtirish usuli sifatida vujudga kelgan boʻlib, uning ommabopligi oʻzaro foydadan kelib chiqadi. Kompaniyalar muayyan vazifalarni ichki xodimlardan ekspert tashqi jamoalarga oʻtkazib, kadr xarajatlarini sezilarli darajada kamaytiradilar. Rahbariyat uchun autsorsing — vazifalarni emas, balki bogʻliq masʼuliyatlarni ham oʻtkazish demakdir, bu esa strategik rivojlanishga koʻproq energiya va resurs ajratishga imkon beradi.",
+        text: "Autsorsing — muayyan biznes funksiyalari yoki jarayonlarini tashqi xizmat koʻrsatuvchilarga topshirish. Bu model rivojlangan iqtisodiyotlarda operatsiyalarni soddalashtirish usuli sifatida vujudga kelgan boʻlib, uning ommabopligi oʻzaro foydadan kelib chiqadi. Kompaniyalar muayyan vazifalarni ichki xodimlardan ekspert tashqi jamoalarga oʻtkazib, kadr xarajatlarini sezilarli darajada kamaytiradilar. Rahbariyat uchun autsorsing — vazifalarnigina emas, balki ular bilan bogʻliq xatarlarni ham oʻtkazish demakdir, bu esa strategik rivojlanishga koʻproq energiya va resurs ajratishga imkon beradi.",
       },
       {
         type: "p",
@@ -181,16 +181,16 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Autsorsing xizmatlarining kuchi: yaqindan qarash" },
       {
         type: "p",
-        text: "Autsorsingga turli funksiyalarni topshirish mumkin boʻlsa-da, buxgalteriya, yuridik komplaens va HR boshqaruvi xizmatlari oʻzining ixtisoslashgan tabiati va muhimligi tufayli eng talabgir hisoblanadi. Ekspert hamkor orqali bu xizmatlardan foydalanish koʻplab afzalliklarni beradi:",
+        text: "Autsorsingga turli funksiyalarni topshirish mumkin boʻlsa-da, buxgalteriya, yuridik xizmatlar va HR boshqaruvi xizmatlari oʻzining ixtisoslashgan tabiati va muhimligi tufayli eng talabgir hisoblanadi. Ekspert hamkor orqali bu xizmatlardan foydalanish koʻplab afzalliklarni beradi:",
       },
       {
         type: "ul",
         items: [
-          "Yuqori darajadagi ekspertiza va sifat kafolati: malakasini doimo oshirib turadigan va eng yaxshi amaliyotlarga rioya qiladigan yuqori malakali mutaxassislarga — buxgalteriya, soliq qonunchiligi, mehnat qonunchiligi — bevosita kirish.",
+          "Yuqori darajadagi ekspertiza va sifat kafolati: malakasini doimo oshirib turadigan va eng yaxshi amaliyotlarga rioya qiladigan yuqori malakali mutaxassislar — buxgalteriya, soliq qonunchiligi, mehnat qonunchiligi boʻyicha — xizmatidan bevosita foydalanish.",
           "Asosiy biznesga eʼtibor: ichki jamoangizni murakkab maʼmuriy vazifalardan ozod qilib, xodimlar asosiy majburiyatlariga eʼtibor qaratishi, mahsuldorlik va innovatsiyani oshirishi mumkin.",
           "Resurslarni optimallashtirish va xarajatlarni tejash: ichki boʻlimlar bilan bogʻliq qoʻshimcha xarajatlarni — oylik, ijtimoiy badallar, ofis joyi, dasturiy taʼminot litsenziyalari va oʻqitishni — bartaraf etadi.",
           "Uzluksizlik va ishonchlilik: ichki xodimlardan farqli oʻlaroq, autsorsing mutaxassislari kasallik yoki taʼtilga chiqib, muhim operatsiyalarni toʻxtatib qoʻyishmaydi.",
-          "Risklarni kamaytirish va mustahkam komplaens: autsorsing hamkori Oʻzbekistonning doimiy oʻzgarib turuvchi tartibga solish muhitiga muvofiqligi uchun javobgardir.",
+          "Xatarlarni kamaytirish va ishonchli muvofiqlik: autsorsing hamkori Oʻzbekistonning doimiy oʻzgarib turuvchi tartibga solish muhitiga muvofiqligi uchun javobgardir.",
           "Masshtablilik va moslashuvchanlik: autsorsing xizmatlarini biznesning oʻzgaruvchan ehtiyojlariga moslashtirib, ichki ishga olish yoki qisqartirish murakkabliklarisiz oson kengaytirish yoki kamaytirish mumkin.",
         ],
       },
@@ -206,20 +206,20 @@ const article: Record<string, LocalizedArticle> = {
     ],
     faq: [
       {
-        question: "Oʻzbekistonda qaysi biznes funksiyalarini autsorsinga topshirish mumkin?",
-        answer: "Oʻzbekistondagi kompaniyalar odatda buxgalteriya, soliq muvofiqlik, yuridik maslahat, HR boshqaruv, ish haqi hisoblash va bojxona rasmiylashtirishni autsorsinga topshiradilar. Mutaxassislik va doimiy tartibga solish muvofiqligini talab qiladigan har qanday asosiy boʻlmagan funksiya autsorsing uchun yaxshi nomzoddir.",
+        question: "Oʻzbekistonda qaysi biznes funksiyalarini autsorsingga topshirish mumkin?",
+        answer: "Oʻzbekistondagi kompaniyalar odatda buxgalteriya, soliq muvofiqligi, yuridik maslahat, HR boshqaruvi, ish haqini hisoblash va bojxona rasmiylashtiruvini autsorsingga topshiradilar. Mutaxassislik va doimiy tartibga solish muvofiqligini talab qiladigan har qanday asosiy boʻlmagan funksiya autsorsing uchun yaxshi nomzoddir.",
       },
       {
         question: "Oʻzbekistonda autsorsing muvofiqlik funksiyalari uchun yuridik masʼuliyatni provayderga oʻtkazadimi?",
-        answer: "Ha. Buxgalteriya yoki HR boshqaruv kabi muvofiqlik funksiyalari autsorsinga topshirilganda, xizmat koʻrsatuvchi tartibga solish talablariga rioya qilish uchun masʼuliyatni oʻz zimmasiga oladi. Bu Oʻzbekistonning doimo oʻzgarib turadigan soliq va mehnat qonunchiligi sharoitida kompaniyaning jarimalarga duchor boʻlish xavfini sezilarli darajada kamaytiradi.",
+        answer: "Ha. Buxgalteriya yoki HR boshqaruvi kabi muvofiqlik funksiyalari autsorsingga topshirilganda, xizmat koʻrsatuvchi tartibga solish talablariga rioya qilish uchun masʼuliyatni oʻz zimmasiga oladi. Bu Oʻzbekistonning doimo oʻzgarib turadigan soliq va mehnat qonunchiligi sharoitida kompaniyaning jarimalarga duchor boʻlish xavfini sezilarli darajada kamaytiradi.",
       },
       {
-        question: "Oʻzbekistonda autsorsing va toʻliq shtatlı xodim yollash oʻrtasidagi farq nima?",
-        answer: "Autsorsing mehnat shartnomalari, ijtimoiy toʻlovlar, ofis joyi, dasturiy taʼminot va oʻqitish xarajatlarini bartaraf etadi. Shtatlı xodimlardan farqli oʻlaroq, autsorsing mutaxassislari operatsiyalarni buzadigan kasallik yoki taʼtilga chiqishmaydi. Bundan tashqari, autsorsing masshtablanadigan — xizmatlar ishga olish yoki qisqartirish murakkabliklarisiz biznes ehtiyojlariga muvofiq sozlanishi mumkin.",
+        question: "Oʻzbekistonda autsorsing va shtatdagi xodim yollash oʻrtasidagi farq nima?",
+        answer: "Autsorsing mehnat shartnomalari, ijtimoiy toʻlovlar, ofis joyi, dasturiy taʼminot va oʻqitish xarajatlarini bartaraf etadi. Shtatdagi xodimlardan farqli oʻlaroq, autsorsing mutaxassislari kasallik yoki taʼtil sababli operatsiyalarni toʻxtatib qoʻymaydi. Bundan tashqari, autsorsing masshtablanadigan — xizmatlar ishga olish yoki qisqartirish murakkabliklarisiz biznes ehtiyojlariga muvofiq sozlanishi mumkin.",
       },
       {
         question: "Oʻzbekistonda qaysi kompaniyalar autsorsingdan koʻproq foyda oladi?",
-        answer: "Oʻzbekiston bozoriga kirayotgan xorijiy investitsiyali kompaniyalar, toʻliq ichki boʻlimlarni oqlash uchun hajmi etarli boʻlmagan kichik va oʻrta korxonalar, hamda tezda operatsiyalarni kengaytirishga muhtoj tez oʻsib borayotgan biznes eng koʻp foyda oladi. Autsorsing bu tashkilotlarga ichki jamoalar tuzishning qoʻshimcha xarajatlarisiz darhol mutaxassis ekspertizasiga ega boʻlish imkonini beradi.",
+        answer: "Oʻzbekiston bozoriga kirayotgan xorijiy investitsiyali kompaniyalar, toʻlaqonli ichki boʻlimlarni saqlash oʻzini oqlamaydigan kichik va oʻrta korxonalar hamda tezda operatsiyalarni kengaytirishga muhtoj tez oʻsib borayotgan biznes eng koʻp foyda oladi. Autsorsing bu tashkilotlarga ichki jamoalar tuzishning qoʻshimcha xarajatlarisiz darhol mutaxassis ekspertizasiga ega boʻlish imkonini beradi.",
       },
     ],
   },

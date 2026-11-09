@@ -184,27 +184,27 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   ru: {
-    subtitle: "Практическое руководство по получению и поддержанию лицензии поставщика услуг крипто-активов в Узбекистане в рамках регуляторной системы НАПП.",
-    author: "Advizen Legal Practice",
+    subtitle: "Практическое руководство по получению и поддержанию лицензии поставщика услуг криптоактивов в Узбекистане в рамках регуляторной системы НАПП.",
+    author: "Юридическая практика Advizen",
     readTime: "7 мин чтения",
     inShort: {
       figures: [
-        { value: "4", label: "Вида лицензий: крипто-биржа, майнинг-пул, крипто-депозитарий и крипто-магазин" },
+        { value: "4", label: "Вида лицензий: криптобиржа, майнинг-пул, криптодепозитарий и криптомагазин" },
         { value: "20 рабочих дней", label: "Максимальный срок от подачи заявки до решения НАПП" },
-        { value: "73 400 БРВ", label: "Единовременная госпошлина за лицензию крипто-биржи, около 2 496 000 долл. США" },
-        { value: "5 000 БРВ", label: "Минимальный уставный капитал крипто-биржи, около 170 000 долл. США, из них 3 000 БРВ — на резервном счёте" },
+        { value: "73 400 БРВ", label: "Единовременная госпошлина за лицензию криптобиржи, около 2 496 000 долл. США" },
+        { value: "5 000 БРВ", label: "Минимальный уставный капитал криптобиржи, около 170 000 долл. США, из них 3 000 БРВ — на резервном счёте" },
       ],
       points: [
-        "Лицензию поставщика услуг в сфере крипто-активов в НАПП могут получить только юридические лица — резиденты Узбекистана; физические лица и иностранные компании исключены.",
+        "Лицензию поставщика услуг в сфере криптоактивов в НАПП могут получить только юридические лица — резиденты Узбекистана; физические лица и иностранные компании исключены.",
         "На каждый вид деятельности нужна отдельная лицензия; лицензии выдаются бессрочно и не могут передаваться другому юридическому лицу.",
         "Платформа и все серверы должны физически находиться в Узбекистане, а данные о сделках, идентификационные сведения пользователей и деловая переписка — храниться пять лет.",
-        "Скрытый майнинг, операции с анонимными крипто-активами и офшорные компании в структуре собственности запрещены, а лицензиаты ежемесячно до 10-го числа уплачивают сбор за деятельность.",
+        "Скрытый майнинг, операции с анонимными криптоактивами и офшорные компании в структуре собственности запрещены, а лицензиаты ежемесячно до 10-го числа уплачивают сбор за деятельность.",
       ],
     },
     content: [
       {
         type: "p" as const,
-        text: "В Узбекистане установлен специальный лицензионный режим для предприятий, работающих с крипто-активами. Регулирование осуществляется Национальным агентством перспективных проектов (НАПП) и закреплено в Положении о лицензировании поставщиков услуг крипто-активов (рег. № 3380 от 15 августа 2022 года). Лицензию могут получить только узбекские резидентные юридические лица — физические лица и иностранные компании к участию не допускаются.",
+        text: "В Узбекистане установлен специальный лицензионный режим для предприятий, работающих с криптоактивами. Регулирование осуществляется Национальным агентством перспективных проектов (НАПП) и закреплено в Положении о лицензировании поставщиков услуг криптоактивов (рег. № 3380 от 15 августа 2022 года). Лицензию могут получить только узбекские резидентные юридические лица — физические лица и иностранные компании к участию не допускаются.",
       },
       { type: "h2" as const, text: "Четыре типа лицензий" },
       {
@@ -214,10 +214,10 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Крипто-биржа — электронная платформа для купли, продажи и/или обмена крипто-активов.",
+          "Криптобиржа — электронная платформа для купли, продажи и/или обмена криптоактивов.",
           "Майнинг-пул — платформа, консолидирующая вычислительные мощности для процесса майнинга.",
-          "Крипто-депозитарий — платформа, обеспечивающая выпуск, первичное размещение и хранение крипто-активов.",
-          "Крипто-магазин — платформа для покупки и/или продажи крипто-активов.",
+          "Криптодепозитарий — платформа, обеспечивающая выпуск, первичное размещение и хранение криптоактивов.",
+          "Криптомагазин — платформа для покупки и/или продажи криптоактивов.",
         ],
       },
       {
@@ -239,7 +239,7 @@ const article: Record<string, LocalizedArticle> = {
           "Заявление с указанием наименования, организационно-правовой формы, ИНН, юридического адреса, места ведения деятельности, банковских реквизитов и запрашиваемого вида лицензии.",
           "Сведения о руководстве (генеральный директор и заместители) и всех учредителях, раскрытые вплоть до конечного бенефициара.",
           "Для иностранных граждан в составе руководства или собственников: справка об отсутствии судимости от соответствующего иностранного органа, апостилированная или легализованная, с нотариально заверенным переводом на узбекский язык.",
-          "Только для крипто-бирж: банковское подтверждение взноса в уставный капитал и резервирования необходимой суммы.",
+          "Только для криптобирж: банковское подтверждение взноса в уставный капитал и резервирования необходимой суммы.",
         ],
       },
       {
@@ -273,14 +273,14 @@ const article: Record<string, LocalizedArticle> = {
           "Все данные о сделках, идентификационные сведения пользователей и деловая переписка должны храниться в течение пяти лет.",
           "Полное соблюдение законодательства Узбекистана о ПОД/ФТ и о защите персональных данных.",
           "Реклама должна содержать обязательные предупреждения о рисках (в том числе о риске полной потери средств) и не должна обещать доходность, упоминать бонусы или изображать несовершеннолетних.",
-          "Запрет на скрытый майнинг и операции с анонимными крипто-активами.",
+          "Запрет на скрытый майнинг и операции с анонимными криптоактивами.",
           "Предоставление информации в НАПП по запросу — безвозмездно.",
           "Уплата сборов за деятельность в полном объёме и в установленные сроки.",
           "Руководство и учредители должны не иметь соответствующих судимостей и не быть связаны с терроризмом, отмыванием денег, организованной преступностью или наркоторговлей.",
           "В структуре собственности не должно быть компаний, зарегистрированных в офшорных юрисдикциях.",
         ],
       },
-      { type: "h3" as const, text: "Дополнительные требования к крипто-биржам" },
+      { type: "h3" as const, text: "Дополнительные требования к криптобиржам" },
       {
         type: "ul" as const,
         items: [
@@ -303,10 +303,10 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Крипто-биржа: 73 400 × БРВ ≈ 2 496 000 долл. США",
+          "Криптобиржа: 73 400 × БРВ ≈ 2 496 000 долл. США",
           "Майнинг-пул: 3 000 × БРВ ≈ 102 000 долл. США",
-          "Крипто-депозитарий: 7 000 × БРВ ≈ 238 000 долл. США",
-          "Крипто-магазин: 3 700 × БРВ ≈ 126 000 долл. США",
+          "Криптодепозитарий: 7 000 × БРВ ≈ 238 000 долл. США",
+          "Криптомагазин: 3 700 × БРВ ≈ 126 000 долл. США",
         ],
       },
       { type: "h3" as const, text: "Ежемесячный сбор за деятельность (постоянный)" },
@@ -317,10 +317,10 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Крипто-биржа: 740 × БРВ ≈ 25 200 долл. США/мес.",
+          "Криптобиржа: 740 × БРВ ≈ 25 200 долл. США/мес.",
           "Майнинг-пул: 100 × БРВ ≈ 3 400 долл. США/мес.",
-          "Крипто-депозитарий: 5 × БРВ ≈ 170 долл. США/мес.",
-          "Крипто-магазин: 185 × БРВ ≈ 6 300 долл. США/мес.",
+          "Криптодепозитарий: 5 × БРВ ≈ 170 долл. США/мес.",
+          "Криптомагазин: 185 × БРВ ≈ 6 300 долл. США/мес.",
         ],
       },
       {
@@ -334,7 +334,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "К единичным грубым нарушениям, влекущим возбуждение процедуры аннулирования, относятся: скрытый майнинг или операции с анонимными крипто-активами; наличие в составе руководства или собственности лиц, имеющих соответствующие судимости; наличие офшорных компаний в структуре собственности; использование заёмных средств для формирования уставного капитала; снижение уставного капитала биржи ниже установленного минимума; расположение серверов за пределами Узбекистана.",
+        text: "К единичным грубым нарушениям, влекущим возбуждение процедуры аннулирования, относятся: скрытый майнинг или операции с анонимными криптоактивами; наличие в составе руководства или собственности лиц, имеющих соответствующие судимости; наличие офшорных компаний в структуре собственности; использование заёмных средств для формирования уставного капитала; снижение уставного капитала биржи ниже установленного минимума; расположение серверов за пределами Узбекистана.",
       },
       {
         type: "p" as const,
@@ -343,55 +343,55 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Чем может помочь Advizen" },
       {
         type: "p" as const,
-        text: "Процесс лицензирования крипто-деятельности в Узбекистане сопровождается значительными первоначальными сборами, строгими техническими и комплаенс-требованиями и постоянными регуляторными обязательствами. Юридическая команда Advizen помогает клиентам в определении подходящей категории лицензии для их бизнес-модели, подготовке полного пакета документов, структурировании собственности с учётом требований НАПП и сопровождении взаимодействия с регулятором после лицензирования.",
+        text: "Процесс лицензирования криптодеятельности в Узбекистане сопровождается значительными первоначальными сборами, строгими техническими и комплаенс-требованиями и постоянными регуляторными обязательствами. Юридическая команда Advizen помогает клиентам в определении подходящей категории лицензии для их бизнес-модели, подготовке полного пакета документов, структурировании собственности с учётом требований НАПП и сопровождении взаимодействия с регулятором после лицензирования.",
       },
     ],
     faq: [
       {
-        question: "Какие виды лицензий поставщиков услуг крипто-активов доступны в Узбекистане?",
-        answer: "Регуляторная система НАПП предусматривает четыре отдельные категории лицензий: (1) Крипто-биржа — электронная платформа для купли, продажи и/или обмена крипто-активов; (2) Майнинг-пул — платформа, консолидирующая вычислительные мощности для майнинга; (3) Крипто-депозитарий — платформа, обеспечивающая выпуск, первичное размещение и хранение крипто-активов; (4) Крипто-магазин — платформа для покупки и/или продажи крипто-активов. Каждый вид требует отдельной лицензии. Все лицензии выдаются бессрочно и могут быть получены только узбекскими резидентными юридическими лицами.",
+        question: "Какие виды лицензий поставщиков услуг криптоактивов доступны в Узбекистане?",
+        answer: "Регуляторная система НАПП предусматривает четыре отдельные категории лицензий: (1) Криптобиржа — электронная платформа для купли, продажи и/или обмена криптоактивов; (2) Майнинг-пул — платформа, консолидирующая вычислительные мощности для майнинга; (3) Криптодепозитарий — платформа, обеспечивающая выпуск, первичное размещение и хранение криптоактивов; (4) Криптомагазин — платформа для покупки и/или продажи криптоактивов. Каждый вид требует отдельной лицензии. Все лицензии выдаются бессрочно и могут быть получены только узбекскими резидентными юридическими лицами.",
       },
       {
-        question: "Сколько стоит лицензия крипто-биржи в Узбекистане?",
-        answer: "Лицензия крипто-биржи предусматривает наиболее высокие сборы в рамках системы НАПП. Единовременная государственная пошлина при выдаче лицензии составляет 73 400 × БРВ (базовая расчётная величина) — приблизительно 2 496 000 долл. США. Кроме того, лицензиаты уплачивают ежемесячный сбор за деятельность в размере 740 × БРВ — около 25 200 долл. США в месяц, подлежащий уплате до 10-го числа каждого месяца. Другие виды лицензий значительно дешевле: майнинг-пул (3 000 × БРВ единовременно; 100 × БРВ/мес.), крипто-депозитарий (7 000 × БРВ единовременно; 5 × БРВ/мес.) и крипто-магазин (3 700 × БРВ единовременно; 185 × БРВ/мес.).",
+        question: "Сколько стоит лицензия криптобиржи в Узбекистане?",
+        answer: "Лицензия криптобиржи предусматривает наиболее высокие сборы в рамках системы НАПП. Единовременная государственная пошлина при выдаче лицензии составляет 73 400 × БРВ (базовая расчётная величина) — приблизительно 2 496 000 долл. США. Кроме того, лицензиаты уплачивают ежемесячный сбор за деятельность в размере 740 × БРВ — около 25 200 долл. США в месяц, подлежащий уплате до 10-го числа каждого месяца. Другие виды лицензий значительно дешевле: майнинг-пул (3 000 × БРВ единовременно; 100 × БРВ/мес.), криптодепозитарий (7 000 × БРВ единовременно; 5 × БРВ/мес.) и криптомагазин (3 700 × БРВ единовременно; 185 × БРВ/мес.).",
       },
       {
-        question: "Может ли иностранная компания получить крипто-лицензию в Узбекистане?",
-        answer: "Нет. На получение лицензии поставщика услуг крипто-активов от НАПП вправе претендовать только юридические лица — резиденты Узбекистана. Физические лица и иностранные компании прямо исключены. Иностранные инвесторы, желающие выйти на узбекский крипторынок, обязаны предварительно создать местное юридическое лицо, зарегистрированное в Узбекистане. Помимо этого, в структуре собственности не может быть компаний, зарегистрированных в офшорных юрисдикциях, а уставный капитал крипто-биржи должен формироваться исключительно за счёт собственных средств учредителей.",
+        question: "Может ли иностранная компания получить криптолицензию в Узбекистане?",
+        answer: "Нет. На получение лицензии поставщика услуг криптоактивов от НАПП вправе претендовать только юридические лица — резиденты Узбекистана. Физические лица и иностранные компании прямо исключены. Иностранные инвесторы, желающие выйти на узбекский крипторынок, обязаны предварительно создать местное юридическое лицо, зарегистрированное в Узбекистане. Помимо этого, в структуре собственности не может быть компаний, зарегистрированных в офшорных юрисдикциях, а уставный капитал криптобиржи должен формироваться исключительно за счёт собственных средств учредителей.",
       },
       {
-        question: "Каковы текущие требования комплаенса для поставщиков крипто-услуг в Узбекистане?",
-        answer: "Все четыре категории лицензий предполагают следующие постоянные обязательства: платформа и все серверы должны физически располагаться на территории Узбекистана; все данные о сделках, идентификационные сведения пользователей и деловая переписка должны храниться пять лет; требуется полное соблюдение законодательства Узбекистана о ПОД/ФТ и о защите персональных данных; реклама должна содержать обязательные предупреждения о рисках и не обещать доходность, упоминать бонусы или изображать несовершеннолетних; запрещены скрытый майнинг и операции с анонимными крипто-активами; в структуре собственности не должно быть офшорных компаний; все сборы за деятельность должны уплачиваться в полном объёме до 10-го числа каждого месяца.",
+        question: "Каковы текущие требования комплаенса для поставщиков криптоуслуг в Узбекистане?",
+        answer: "Все четыре категории лицензий предполагают следующие постоянные обязательства: платформа и все серверы должны физически располагаться на территории Узбекистана; все данные о сделках, идентификационные сведения пользователей и деловая переписка должны храниться пять лет; требуется полное соблюдение законодательства Узбекистана о ПОД/ФТ и о защите персональных данных; реклама должна содержать обязательные предупреждения о рисках и не обещать доходность, упоминать бонусы или изображать несовершеннолетних; запрещены скрытый майнинг и операции с анонимными криптоактивами; в структуре собственности не должно быть офшорных компаний; все сборы за деятельность должны уплачиваться в полном объёме до 10-го числа каждого месяца.",
       },
     ],
   },
   uz: {
-    subtitle: "NAPP tartibga soluvchi tizimi doirasida Oʻzbekistonda kriptoaktivlar xizmati provayderi sifatida litsenziya olish va saqlash boʻyicha amaliy qoʻllanma.",
-    author: "Advizen Legal Practice",
+    subtitle: "ILMA tartibga soluvchi tizimi doirasida Oʻzbekistonda kriptoaktivlar xizmati provayderi sifatida litsenziya olish va saqlash boʻyicha amaliy qoʻllanma.",
+    author: "Advizen yuridik amaliyoti",
     readTime: "7 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "4", label: "Litsenziya turi: kripto-birja, mayning-pul, kripto-depozitariy va kripto-doʻkon" },
-        { value: "20 ish kuni", label: "Ariza topshirilgandan NAPP qaroriga qadar eng uzoq muddat" },
+        { value: "20 ish kuni", label: "Ariza topshirilgandan ILMA qaroriga qadar eng uzoq muddat" },
         { value: "73 400 BHM", label: "Kripto-birja litsenziyasi uchun bir martalik davlat boji, taxminan 2 496 000 AQSh dollari" },
         { value: "5 000 BHM", label: "Kripto-birjaning eng kam ustav kapitali, taxminan 170 000 AQSh dollari, shundan 3 000 BHM rezerv hisobvaragʻida saqlanadi" },
       ],
       points: [
-        "NAPPdan kriptoaktivlar xizmati provayderi litsenziyasini faqat Oʻzbekiston rezidenti boʻlgan yuridik shaxslar olishi mumkin; jismoniy shaxslar va xorijiy kompaniyalar istisno qilingan.",
+        "ILMAdan kriptoaktivlar xizmati provayderi litsenziyasini faqat Oʻzbekiston rezidenti boʻlgan yuridik shaxslar olishi mumkin; jismoniy shaxslar va xorijiy kompaniyalar istisno qilingan.",
         "Har bir faoliyat turi uchun alohida litsenziya talab etiladi; litsenziyalar muddatsiz beriladi va boshqa yuridik shaxsga oʻtkazilmaydi.",
         "Platforma va barcha serverlar jismonan Oʻzbekistonda joylashgan boʻlishi, bitim maʼlumotlari, foydalanuvchi identifikatsiyasi yozuvlari va biznes yozishmalari esa besh yil saqlanishi kerak.",
-        "Yashirin mayning, anonim kriptoaktivlar bilan operatsiyalar va mulkdorlar tarkibida offshor kompaniyalar taqiqlangan, litsenziya egalari esa har oyning 10-sanasigacha faoliyat yigʻimini toʻlaydi.",
+        "Yashirin mayning, anonim kriptoaktivlar bilan operatsiyalar va mulkdorlar tarkibida ofshor kompaniyalar taqiqlangan, litsenziya egalari esa har oyning 10-sanasigacha faoliyat yigʻimini toʻlaydi.",
       ],
     },
     content: [
       {
         type: "p" as const,
-        text: "Oʻzbekistonda kriptoaktivlar bilan ishlovchi tadbirkorlar uchun maxsus litsenziyalash rejimi joriy etilgan. Tartibga solish Istiqbolli loyihalar milliy agentligi (NAPP) tomonidan amalga oshiriladi va Kriptoaktivlar xizmati provayderlarini litsenziyalash toʻgʻrisidagi Nizomda (2022 yil 15 avgustdagi 3380-sonli reg.) belgilangan. Litsenziyani faqat Oʻzbekiston rezidenti yuridik shaxslar olishi mumkin — jismoniy shaxslar va xorijiy kompaniyalar istisno qilingan.",
+        text: "Oʻzbekistonda kriptoaktivlar bilan ishlovchi tadbirkorlar uchun maxsus litsenziyalash rejimi joriy etilgan. Tartibga solish Istiqbolli loyihalar milliy agentligi (ILMA) tomonidan amalga oshiriladi va Kriptoaktivlar sohasidagi xizmat provayderlarini litsenziyalash toʻgʻrisidagi Nizomda (2022-yil 15-avgustda 3380-son bilan roʻyxatga olingan) belgilangan. Litsenziyani faqat Oʻzbekiston rezidenti yuridik shaxslar olishi mumkin — jismoniy shaxslar va xorijiy kompaniyalar istisno qilingan.",
       },
       { type: "h2" as const, text: "Litsenziyalarning toʻrt turi" },
       {
         type: "p" as const,
-        text: "Har bir faoliyat turi uchun alohida litsenziya talab etiladi. Toʻrtta litsenziyalanadigan toifalar:",
+        text: "Har bir faoliyat turi uchun alohida litsenziya talab etiladi. Litsenziyalanadigan toʻrtta toifa:",
       },
       {
         type: "ul" as const,
@@ -409,7 +409,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Ariza berish tartibi" },
       {
         type: "p" as const,
-        text: "Arizalar NAPPning Litsenziyalash va ruxsat berish boʻlimiga elektron pochta (info@napp.uz), pochta orqali yoki shaxsan: Toshkent shahri, Mirobod tumani, Nukus koʻchasi, 22-uy boʻyicha topshiriladi. Arizani koʻrib chiqish uchun haq olinmaydi.",
+        text: "Arizalar ILMAning Litsenziyalash va ruxsat berish boʻlimiga elektron pochta (info@napp.uz), pochta orqali yoki shaxsan: Toshkent shahri, Mirobod tumani, Nukus koʻchasi, 22-uy boʻyicha topshiriladi. Arizani koʻrib chiqish uchun haq olinmaydi.",
       },
       {
         type: "p" as const,
@@ -418,7 +418,7 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Kompaniyaning nomi, tashkiliy-huquqiy shakli, INN, yuridik manzili, faoliyat yuritish joyi, bank rekvizitlari va soʻralayotgan litsenziya turi koʻrsatilgan ariza shakli.",
+          "Kompaniyaning nomi, tashkiliy-huquqiy shakli, STIR, yuridik manzili, faoliyat yuritish joyi, bank rekvizitlari va soʻralayotgan litsenziya turi koʻrsatilgan ariza shakli.",
           "Rahbariyat (bosh direktor va oʻrinbosarlar) va barcha taʼsischilar haqida maʼlumotlar, oxirgi benefitsiar mulkdorgacha oshkor etilgan.",
           "Rahbariyat yoki egalik tarkibidagi xorijiy fuqarolar uchun: tegishli xorijiy organdan sudlanmaganlik haqida maʼlumotnoma, apostillangan yoki qonuniylashtirilgan, oʻzbek tiliga notarial tasdiqlangan tarjima bilan.",
           "Faqat kripto-birjalar uchun: ustav kapitaliga badal qoʻshilganligi va talab qilingan summaning rezervlanganligi haqida bank tasdigʻi.",
@@ -426,22 +426,22 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "NAPP Oʻzbekiston fuqarosi boʻlgan rahbarlar va taʼsischilarning sudlanganligini mustaqil ravishda tekshiradi. Yuqorida sanab oʻtilganlardan tashqari hujjatlar ariza beruvchidan talab qilinishi mumkin emas.",
+        text: "ILMA Oʻzbekiston fuqarosi boʻlgan rahbarlar va taʼsischilarning sudlanganligini mustaqil ravishda tekshiradi. Yuqorida sanab oʻtilganlardan tashqari hujjatlar ariza beruvchidan talab qilinishi mumkin emas.",
       },
       { type: "h2" as const, text: "Muddatlar" },
       {
         type: "ul" as const,
         items: [
           "Ekspert komissiyasi tomonidan koʻrib chiqilishi: 15 ish kunigacha.",
-          "NAPP qarori (berish yoki rad etish): komissiya xulosasidan boshlab 4 ish kuni ichida — jami arizadan boshlab maksimal 20 ish kuni.",
+          "ILMA qarori (berish yoki rad etish): komissiya xulosasidan boshlab 4 ish kuni ichida — jami arizadan boshlab maksimal 20 ish kuni.",
           "Ariza beruvchi xabardor qilinadi: qaror qabul qilinganidan boshlab 1 ish kuni ichida.",
           "Litsenziya beriladi: davlat boji toʻlanganidan boshlab 3 kun ichida.",
-          "Davlat boji xabardor qilinganidan boshlab 30 kun ichida toʻlanmasa, NAPP litsenziya berish qarorini bekor qilishi mumkin.",
+          "Davlat boji xabardor qilinganidan boshlab 30 kun ichida toʻlanmasa, ILMA litsenziya berish qarorini bekor qilishi mumkin.",
         ],
       },
       {
         type: "p" as const,
-        text: "Kamchiliklar aniqlangan taqdirda NAPP ariza beruvchiga ularni bartaraf etish uchun 30 ish kunigacha muddat beruvchi xabarnoma chiqaradi. Bu davrda koʻrib chiqish muddati toʻxtatib turiladi. Bartaraf etilgandan soʻng qayta koʻrib chiqish 5 ish kunidan koʻp boʻlmagan vaqtda qoʻshimcha haq olinmasdan amalga oshiriladi.",
+        text: "Kamchiliklar aniqlangan taqdirda ILMA ariza beruvchiga ularni bartaraf etish uchun 30 ish kunigacha muddat beruvchi xabarnoma chiqaradi. Bu davrda koʻrib chiqish muddati toʻxtatib turiladi. Bartaraf etilgandan soʻng qayta koʻrib chiqish 5 ish kunidan koʻp boʻlmagan vaqtda qoʻshimcha haq olinmasdan amalga oshiriladi.",
       },
       { type: "h2" as const, text: "Asosiy litsenziya talablari" },
       {
@@ -453,13 +453,13 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Platforma va barcha serverlar Oʻzbekiston hududida fizik joylashgan boʻlishi shart.",
           "Barcha bitim maʼlumotlari, foydalanuvchi identifikatsiyasi yozuvlari va biznes yozishmalari besh yil davomida saqlanishi kerak.",
-          "Oʻzbekistonning JPM/TMM va shaxsiy maʼlumotlarni himoya qilish toʻgʻrisidagi qonunchiligiga toʻliq rioya etish.",
+          "Oʻzbekistonning AML/CFT va shaxsiy maʼlumotlarni himoya qilish toʻgʻrisidagi qonunchiligiga toʻliq rioya etish.",
           "Reklamada majburiy xavf ogohlantirishlari (jumladan mablagʻlarni toʻliq yoʻqotish xavfi) boʻlishi shart va daromadlilik vaʼda qilmasligi, bonuslarni eslatmasligi yoki voyaga yetmaganlarni tasvirlamasligi kerak.",
           "Yashirin mayning va anonim kriptoaktivlar bilan operatsiyalarga yoʻl qoʻyilmaydi.",
-          "NAPPga soʻrov boʻyicha, bepul maʼlumot taqdim etish.",
+          "Soʻrov boʻyicha ILMAga bepul maʼlumot taqdim etish.",
           "Faoliyat yigʻimlarini toʻliq va oʻz vaqtida toʻlash.",
-          "Rahbariyat va taʼsischilar tegishli sudlanmaganlikka ega boʻlmasligi va terrorizm, pul yuvish, uyushgan jinoyatchilik yoki giyohvand moddalar savdosi bilan bogʻlanmasligi shart.",
-          "Egalik tuzilmasida ofshor yurisdiktsiyalarda roʻyxatdan oʻtgan kompaniyalar boʻlmasligi kerak.",
+          "Rahbariyat va taʼsischilar tegishli sudlanganlikka ega boʻlmasligi va terrorizm, pul yuvish, uyushgan jinoyatchilik yoki giyohvand moddalar savdosi bilan bogʻlanmasligi shart.",
+          "Egalik tuzilmasida ofshor yurisdiksiyalarda roʻyxatdan oʻtgan kompaniyalar boʻlmasligi kerak.",
         ],
       },
       { type: "h3" as const, text: "Kripto-birjalar uchun qoʻshimcha talablar" },
@@ -468,7 +468,7 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Narxlar talab va taklif asosida shakllantirilishi shart.",
           "Ariza topshirish sanasida minimal ustav kapitali — 5 000 BHM (~170 000 AQSh dollari), shundan 3 000 BHM (~102 000 AQSh dollari) Oʻzbekistondagi tijorat bankidagi rezerv hisobvaragʻida saqlanishi kerak.",
-          "Ustav kapitali faqat taʼsischilarning shaxsiy pul mablagʻlari va mol-mulki hisobidan shakllantirilishi shart — kreditlar, garovlar yoki qarzga olingan mablagʻlar yoʻq.",
+          "Ustav kapitali faqat taʼsischilarning shaxsiy pul mablagʻlari va mol-mulki hisobidan shakllantirilishi shart — kreditlar, garov yoki qarz mablagʻlari hisobidan emas.",
         ],
       },
       { type: "h2" as const, text: "Nom boʻyicha cheklovlar" },
@@ -512,11 +512,11 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Toʻxtatib qoʻyish, bekor qilish va qatʼiy cheklovlar" },
       {
         type: "p" as const,
-        text: "NAPP buzilishlar aniqlangan taqdirda litsenziyani 10 kungacha toʻxtatib qoʻyishi mumkin; uzoqroq toʻxtatishlar sud qarorini talab qiladi (6 oygacha). NAPP tomonidan bekor qilish asoslari: ixtiyoriy voz kechish, yuridik shaxsning tugatilishi yoki davlat bojining toʻlanmasligi. Sud tomonidan bekor qilish jiddiyroq asoslar uchun talab etiladi, jumladan: litsenziya shartlarining tizimli yoki bir martalik qoʻpol buzilishi va soxta hujjatlardan foydalanish.",
+        text: "ILMA buzilishlar aniqlangan taqdirda litsenziyani 10 kungacha toʻxtatib qoʻyishi mumkin; uzoqroq toʻxtatishlar sud qarorini talab qiladi (6 oygacha). ILMA tomonidan bekor qilish asoslari: ixtiyoriy voz kechish, yuridik shaxsning tugatilishi yoki davlat bojining toʻlanmasligi. Sud tomonidan bekor qilish jiddiyroq asoslar uchun talab etiladi, jumladan: litsenziya shartlarining tizimli yoki bir martalik qoʻpol buzilishi va soxta hujjatlardan foydalanish.",
       },
       {
         type: "p" as const,
-        text: "Bekor qilish jarayonini ishga tushiruvchi bir martalik qoʻpol buzilishlar quyidagilarni oʻz ichiga oladi: yashirin mayning yoki anonim kriptoaktivlar bilan operatsiyalar; rahbariyat yoki egalik tarkibida tegishli sudlanmaganlikka ega shaxslar; egalik tuzilmasida ofshor kompaniyalar; ustav kapitalini shakllantirish uchun qarzga olingan mablagʻlardan foydalanish; birja ustav kapitalini talab qilingan minimumdan past tushirish; serverlarning Oʻzbekistondan tashqarida joylashishi.",
+        text: "Bekor qilish jarayonini ishga tushiruvchi bir martalik qoʻpol buzilishlar quyidagilarni oʻz ichiga oladi: yashirin mayning yoki anonim kriptoaktivlar bilan operatsiyalar; rahbariyat yoki egalik tarkibida tegishli sudlanganligi bor shaxslar; egalik tuzilmasida ofshor kompaniyalar; ustav kapitalini shakllantirish uchun qarzga olingan mablagʻlardan foydalanish; birja ustav kapitalini talab qilingan minimumdan past tushirish; serverlarning Oʻzbekistondan tashqarida joylashishi.",
       },
       {
         type: "p" as const,
@@ -525,25 +525,25 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Advizen qanday yordam bera oladi" },
       {
         type: "p" as const,
-        text: "Oʻzbekistonda kriptoaktivlarni litsenziyalash jarayoni sezilarli boshlangʻich yigʻimlar, qatʼiy texnik va muvofiqlik talablari hamda doimiy tartibga soluvchi majburiyatlarni oʻz ichiga oladi. Advizen yuridik jamoasi mijozlarga ularning biznes-modeliga qaysi litsenziya toifasi mos kelishini baholashda, hujjatlarning toʻliq toʻplamini tayyorlashda, NAPP talablariga muvofiq egalikni tuzishda va litsenziyalashdan keyin tartibga soluvchi bilan munosabatlarni boshqarishda yordam beradi.",
+        text: "Oʻzbekistonda kriptoaktivlarni litsenziyalash jarayoni sezilarli boshlangʻich yigʻimlar, qatʼiy texnik va muvofiqlik talablari hamda doimiy tartibga soluvchi majburiyatlarni oʻz ichiga oladi. Advizen yuridik jamoasi mijozlarga ularning biznes-modeliga qaysi litsenziya toifasi mos kelishini baholashda, hujjatlarning toʻliq toʻplamini tayyorlashda, ILMA talablariga muvofiq egalikni tuzishda va litsenziyalashdan keyin tartibga soluvchi bilan munosabatlarni boshqarishda yordam beradi.",
       },
     ],
     faq: [
       {
         question: "Oʻzbekistonda kriptoaktivlar xizmati provayderlari uchun qanday litsenziya turlari mavjud?",
-        answer: "NAPP tartibga solish tizimi toʻrtta alohida litsenziya toifasini nazarda tutadi: (1) Kripto-birja — kriptoaktivlarni sotib olish, sotish va/yoki ayirboshlash uchun elektron platforma; (2) Mayning-pul — mayning uchun hisoblash quvvatlarini birlashtiruvchi platforma; (3) Kripto-depozitariy — kriptoaktivlarni chiqarish, birlamchi joylashtirish va saqlashni taʼminlovchi platforma; (4) Kripto-doʻkon — kriptoaktivlarni sotib olish va/yoki sotish uchun platforma. Har bir tur uchun alohida litsenziya talab etiladi. Barcha litsenziyalar muddatsiz beriladi va faqat Oʻzbekiston rezidenti yuridik shaxslar tomonidan olinishi mumkin.",
+        answer: "ILMA tartibga solish tizimi toʻrtta alohida litsenziya toifasini nazarda tutadi: (1) Kripto-birja — kriptoaktivlarni sotib olish, sotish va/yoki ayirboshlash uchun elektron platforma; (2) Mayning-pul — mayning uchun hisoblash quvvatlarini birlashtiruvchi platforma; (3) Kripto-depozitariy — kriptoaktivlarni chiqarish, birlamchi joylashtirish va saqlashni taʼminlovchi platforma; (4) Kripto-doʻkon — kriptoaktivlarni sotib olish va/yoki sotish uchun platforma. Har bir tur uchun alohida litsenziya talab etiladi. Barcha litsenziyalar muddatsiz beriladi va faqat Oʻzbekiston rezidenti yuridik shaxslar tomonidan olinishi mumkin.",
       },
       {
         question: "Oʻzbekistonda kripto-birja litsenziyasi qancha turadi?",
-        answer: "Kripto-birja litsenziyasi NAPP tizimida eng yuqori yigʻimlarni nazarda tutadi. Litsenziya berilganda bir martalik davlat boji 73 400 × BHM (Bazaviy hisoblash miqdori) ni tashkil etadi — taxminan 2 496 000 AQSh dollari. Bundan tashqari, litsenziya egalari har oyning 10-sanasigacha toʻlanadigan 740 × BHM miqdorida oylik faoliyat yigʻimini — taxminan 25 200 AQSh dollari oyiga — toʻlaydilar. Boshqa litsenziya turlari ancha arzonroq: mayning-pul (3 000 × BHM bir martalik; 100 × BHM/oy), kripto-depozitariy (7 000 × BHM bir martalik; 5 × BHM/oy) va kripto-doʻkon (3 700 × BHM bir martalik; 185 × BHM/oy).",
+        answer: "Kripto-birja litsenziyasi ILMA tizimida eng yuqori yigʻimlarni nazarda tutadi. Litsenziya berilganda bir martalik davlat boji 73 400 × BHM (bazaviy hisoblash miqdori)ni tashkil etadi — taxminan 2 496 000 AQSh dollari. Bundan tashqari, litsenziya egalari har oyning 10-sanasigacha toʻlanadigan 740 × BHM miqdorida oylik faoliyat yigʻimini — taxminan 25 200 AQSh dollari oyiga — toʻlaydilar. Boshqa litsenziya turlari ancha arzonroq: mayning-pul (3 000 × BHM bir martalik; 100 × BHM/oy), kripto-depozitariy (7 000 × BHM bir martalik; 5 × BHM/oy) va kripto-doʻkon (3 700 × BHM bir martalik; 185 × BHM/oy).",
       },
       {
         question: "Xorijiy kompaniya Oʻzbekistonda kripto-litsenziya ola oladimi?",
-        answer: "Yoʻq. NAPPdan kriptoaktivlar xizmati provayderi litsenziyasi olish uchun faqat Oʻzbekiston rezidenti yuridik shaxslar ariza berish huquqiga ega. Jismoniy shaxslar va xorijiy kompaniyalar aniq istisno qilingan. Oʻzbek kriptoaktivlar bozoriga kirmoqchi boʻlgan xorijiy investorlar avval Oʻzbekistonda roʻyxatdan oʻtgan mahalliy yuridik shaxs tashkil etishi shart. Bundan tashqari, egalik tuzilmasida ofshor yurisdiktsiyalarda roʻyxatdan oʻtgan kompaniyalar boʻlishi mumkin emas, kripto-birjaning ustav kapitali esa faqat taʼsischilarning oʻz mablagʻlari hisobidan shakllantirilishi shart.",
+        answer: "Yoʻq. ILMAdan kriptoaktivlar xizmati provayderi litsenziyasi olish uchun faqat Oʻzbekiston rezidenti yuridik shaxslar ariza berish huquqiga ega. Jismoniy shaxslar va xorijiy kompaniyalar aniq istisno qilingan. Oʻzbek kriptoaktivlar bozoriga kirmoqchi boʻlgan xorijiy investorlar avval Oʻzbekistonda roʻyxatdan oʻtgan mahalliy yuridik shaxs tashkil etishi shart. Bundan tashqari, egalik tuzilmasida ofshor yurisdiksiyalarda roʻyxatdan oʻtgan kompaniyalar boʻlishi mumkin emas, kripto-birjaning ustav kapitali esa faqat taʼsischilarning oʻz mablagʻlari hisobidan shakllantirilishi shart.",
       },
       {
         question: "Oʻzbekistondagi kriptoaktivlar xizmati provayderlari uchun doimiy muvofiqlik talablari qanday?",
-        answer: "Litsenziyaning toʻrtta toifasi uchun quyidagi doimiy majburiyatlar qoʻllaniladi: platforma va barcha serverlar Oʻzbekiston hududida fizik joylashgan boʻlishi shart; barcha bitim maʼlumotlari, foydalanuvchi identifikatsiyasi yozuvlari va biznes yozishmalari besh yil davomida saqlanishi kerak; Oʻzbekistonning JPM/TMM va shaxsiy maʼlumotlarni himoya qilish toʻgʻrisidagi qonunchiligiga toʻliq rioya etilishi shart; reklamada majburiy xavf ogohlantirishlari boʻlishi shart, daromadlilik vaʼda qilmasligi, bonuslarni eslatmasligi yoki voyaga yetmaganlarni tasvirlamasligi kerak; yashirin mayning va anonim kriptoaktivlar bilan operatsiyalarga yoʻl qoʻyilmaydi; egalik tuzilmasida ofshor kompaniyalar boʻlishi mumkin emas; barcha faoliyat yigʻimlari har oyning 10-sanasigacha toʻliq toʻlanishi shart.",
+        answer: "Litsenziyaning toʻrtta toifasi uchun quyidagi doimiy majburiyatlar qoʻllaniladi: platforma va barcha serverlar Oʻzbekiston hududida fizik joylashgan boʻlishi shart; barcha bitim maʼlumotlari, foydalanuvchi identifikatsiyasi yozuvlari va biznes yozishmalari besh yil davomida saqlanishi kerak; Oʻzbekistonning AML/CFT va shaxsiy maʼlumotlarni himoya qilish toʻgʻrisidagi qonunchiligiga toʻliq rioya etilishi shart; reklamada majburiy xavf ogohlantirishlari boʻlishi shart, daromadlilik vaʼda qilmasligi, bonuslarni eslatmasligi yoki voyaga yetmaganlarni tasvirlamasligi kerak; yashirin mayning va anonim kriptoaktivlar bilan operatsiyalarga yoʻl qoʻyilmaydi; egalik tuzilmasida ofshor kompaniyalar boʻlishi mumkin emas; barcha faoliyat yigʻimlari har oyning 10-sanasigacha toʻliq toʻlanishi shart.",
       },
     ],
   },

@@ -180,12 +180,12 @@ const article: Record<string, LocalizedArticle> = {
   uz: {
     subtitle: "Oʻzbekistonda muvaffaqiyatli franchayzing shartnomalari uchun huquqiy bazani va majburiy roʻyxatga olish jarayonlarini bilib oling.",
     author: "Advizen yuridik amaliyoti",
-    readTime: "7 daqiqalik oʻqish",
+    readTime: "7 daqiqa oʻqish",
     inShort: {
       figures: [
-        { value: "20%", label: "Doimiy vakolatxonasi boʻlmagan norezident Litsenziarga toʻlanadigan har bir royaltidan ushlab qolinadigan daromad soligʻi" },
+        { value: "20%", label: "Doimiy muassasasi boʻlmagan norezident Litsenziarga toʻlanadigan har bir royaltidan ushlab qolinadigan daromad soligʻi" },
         { value: "1 ish kuni", label: "Hujjatlar toʻliq boʻlsa, DXMda shartnomani roʻyxatga olishning odatiy muddati" },
-        { value: "1/3 BHM", label: "Roʻyxatga olish uchun davlat boji — asosiy hisoblangan miqdorning uchdan biri" },
+        { value: "1/3 BHM", label: "Roʻyxatga olish uchun davlat boji — bazaviy hisoblash miqdorining uchdan biri" },
         { value: "10%", label: "Onlayn arizalar uchun davlat bojiga beriladigan chegirma" },
       ],
       points: [
@@ -210,19 +210,19 @@ const article: Record<string, LocalizedArticle> = {
         type: "ul",
         items: [
           "Yozma shakl va majburiy roʻyxatga olish: barcha franchayzing shartnomalari va ularga muhim oʻzgartirishlar yozma shaklda boʻlishi va yuridik roʻyxatga olinishi shart. Aks holda shartnoma haqiqiy emas hisoblanadi.",
-          "Talab qilingan tomonlar: franchayzing shartnomasining tomonlari sifatida faqat tijorat tashkilotlari va roʻyxatga olingan yakka tartibdagi tadbirkorlar boʻlishi mumkin.",
+          "Tomon boʻla oladigan shaxslar: franchayzing shartnomasining tomonlari sifatida faqat tijorat tashkilotlari va roʻyxatga olingan yakka tartibdagi tadbirkorlar boʻlishi mumkin.",
           "Aniq predmet: shartnomada beriladigan eksklyuziv huquqlar, foydalanish koʻlami va belgilangan hudud yoki faoliyat sohasi aniq belgilanishi shart.",
           "Muddat: shartnomalar muayyan muddatga yoki muddatsiz tuzilishi mumkin.",
-          "Toʻlov: toʻlov turli koʻrinishlarda — qatʼiy toʻlov, davriy royalti, daromaddan ushlovlar yoki tovarlarga ustama sifatida belgilanishi mumkin.",
+          "Toʻlov: toʻlov turli koʻrinishlarda — qatʼiy toʻlov, davriy royalti, tushumdan ajratmalar yoki tovarlarga ustama sifatida belgilanishi mumkin.",
           "Maʼlumot va oʻqitish: Litsenziar Litsenziatga toʻgʻri faoliyat uchun zarur boʻlgan barcha texnik va tijorat hujjatlari, maʼlumot va treningni taqdim etishi shart.",
         ],
       },
-      { type: "h2", text: "Roʻxatga olish tartiblari" },
+      { type: "h2", text: "Roʻyxatga olish tartiblari" },
       {
         type: "ul",
         items: [
-          "Davlat xizmatlari markazlari (DXM): shartnomaning va unga oʻzgartirishlarning birlamchi roʻyxatga olinishi shu yerda amalga oshiriladi — odatda hujjatlar toʻliq boʻlsa, bir ish kuni ichida. Davlat boji (asosiy hisoblangan miqdorning 1/3) toʻlanadi, onlayn arizalar uchun 10% chegirma berilgan.",
-          "Intellektual mulk boshqarmasi: shartnomaning intellektual mulk huquqlarini (masalan, tovar belgilari) oʻtkazadigan qismi Adliya vazirligi huzuridagi Intellektual mulk boshqarmasida roʻyxatga olinishi kerak. Bu yerda talablarga rioya qilmaslik IM huquqini oʻtkazishni yoki butun shartnomani haqiqiy emas qilishi mumkin.",
+          "Davlat xizmatlari markazlari (DXM): shartnomaning va unga oʻzgartirishlarning birlamchi roʻyxatga olinishi shu yerda amalga oshiriladi — odatda hujjatlar toʻliq boʻlsa, bir ish kuni ichida. Davlat boji (bazaviy hisoblash miqdorining 1/3 qismi) toʻlanadi, onlayn arizalar uchun 10% chegirma berilgan.",
+          "Intellektual mulk boshqarmasi: shartnomaning intellektual mulk huquqlarini (masalan, tovar belgilari) oʻtkazadigan qismi Adliya vazirligi huzuridagi Intellektual mulk boshqarmasida roʻyxatga olinishi kerak. Bu talabga rioya qilinmasa, IM huquqlarini oʻtkazish yoki butun shartnoma haqiqiy emas deb topilishi mumkin.",
           "Tashqi savdo operatsiyalarining yagona tizimi: agar franchayzing shartnomasi xalqaro savdo (import/eksport) bilan bogʻliq boʻlsa, u ham bu tizimda roʻyxatga olinishi kerak.",
         ],
       },
@@ -231,9 +231,9 @@ const article: Record<string, LocalizedArticle> = {
         type: "ul",
         items: [
           "Qoʻllaniladigan huquq: xalqaro franchayzing shartnomasining tomonlari qoʻllaniladigan huquqni tanlashi mumkin, biroq tanlov amalga oshirilmasa, oʻzbek qonuni standart qoidalarni belgilaydi.",
-          "Intellektual mulk: roʻyxatdan tashqari, «Tijorat siri toʻgʻrisida»gi qonunga rioya qilish orqali tijorat sirlarini himoya qilish muhim, ochib qoʻyganlik uchun jazolar koʻzda tutilgan.",
+          "Intellektual mulk: roʻyxatga olishdan tashqari, «Tijorat siri toʻgʻrisida»gi qonunga rioya qilish orqali tijorat sirlarini himoya qilish muhim, sirni oshkor qilganlik uchun javobgarlik nazarda tutilgan.",
           "Raqobat: qonun muayyan eksklyuziv shartlarni (masalan, Litsenziatning raqobat qilmaslik majburiyati) qabul qiladi, lekin boshqalarni (masalan, Litsenziarning Litsenziat narxlarini belgilashi) haqiqiy emas deb tan oladi.",
-          "Javobgarlik: Litsenziar Litsenziat tomonidan taqdim etilgan tovar/xizmatlar sifati uchun subsidiar javobgarlik tashiydi. Litsenziar tomonidan ishlab chiqarilgan mahsulotlar boʻyicha esa muayyan talablar uchun birgalikdagi javobgarlik mavjud.",
+          "Javobgarlik: Litsenziar Litsenziat tomonidan taqdim etilgan tovar/xizmatlar sifati uchun subsidiar javobgar boʻladi. Litsenziar tomonidan ishlab chiqarilgan mahsulotlar boʻyicha esa muayyan talablar uchun birgalikdagi javobgarlik mavjud.",
         ],
       },
       { type: "h2", text: "Valyuta va soliq jihatlari" },
@@ -243,17 +243,17 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p",
-        text: "Soliq nuqtai nazaridan, agar royalti Oʻzbekistonda doimiy vakolatxonasi boʻlmagan norezident Litsenziarga toʻlansa, Litsenziat har bir toʻlovdan 20% stavkada daromad soligʻini ushlab qolishi shart. Bu stavka qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi xalqaro shartnomalar bilan kamaytirilishi yoki bekor qilinishi mumkin.",
+        text: "Soliq nuqtai nazaridan, agar royalti Oʻzbekistonda doimiy muassasasi boʻlmagan norezident Litsenziarga toʻlansa, Litsenziat har bir toʻlovdan 20% stavkada daromad soligʻini ushlab qolishi shart. Bu stavka qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi xalqaro shartnomalar bilan kamaytirilishi yoki bekor qilinishi mumkin.",
       },
     ],
     faq: [
       {
         question: "Oʻzbekistonda franchayzing shartnomalari roʻyxatga olinishi shart boʻladimi?",
-        answer: "Ha. Barcha franchayzing shartnomalari va ularga muhim oʻzgartirishlar ikkita organda roʻyxatga olinishi kerak: birlamchi roʻyxatga olishni odatda bir ish kuni ichida amalga oshiradigan Davlat xizmatlari markazida (DXM) va intellektual mulk huquqlari oʻtkazilishini (masalan, tovar belgilari) roʻyxatga oladigan Adliya vazirligi huzuridagi Intellektual mulk boshqarmasida. Roʻxatga olinmagan shartnoma yuridik jihatdan haqiqiy emas hisoblanadi.",
+        answer: "Ha. Barcha franchayzing shartnomalari va ularga muhim oʻzgartirishlar ikkita organda roʻyxatga olinishi kerak: birlamchi roʻyxatga olishni odatda bir ish kuni ichida amalga oshiradigan Davlat xizmatlari markazida (DXM) va intellektual mulk huquqlari oʻtkazilishini (masalan, tovar belgilari) roʻyxatga oladigan Adliya vazirligi huzuridagi Intellektual mulk boshqarmasida. Roʻyxatga olinmagan shartnoma yuridik jihatdan haqiqiy emas hisoblanadi.",
       },
       {
         question: "Oʻzbekistonda chet ellik franchayzer foydasiga toʻlanadigan royaltilardan ushlab qolinadigan soliq stavkasi qancha?",
-        answer: "Oʻzbekistonlik Litsenziat Oʻzbekistonda doimiy vakolatxonasi boʻlmagan norezident Litsenziarga har bir royalti toʻlovidan 20% stavkada daromad soligʻini ushlab qolishi shart. Bu stavka Oʻzbekiston va Litsenziar rezidentligi mamlakatining qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi xalqaro shartnomasi asosida kamaytirilishi yoki toʻliq bekor qilinishi mumkin.",
+        answer: "Oʻzbekistonlik Litsenziat Oʻzbekistonda doimiy muassasasi boʻlmagan norezident Litsenziarga har bir royalti toʻlovidan 20% stavkada daromad soligʻini ushlab qolishi shart. Bu stavka Oʻzbekiston va Litsenziar rezidentligi mamlakatining qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi xalqaro shartnomasi asosida kamaytirilishi yoki toʻliq bekor qilinishi mumkin.",
       },
       {
         question: "Chet ellik franchayzer Oʻzbekistondan royalti toʻlovlarini repatriatsiya qila oladimi?",

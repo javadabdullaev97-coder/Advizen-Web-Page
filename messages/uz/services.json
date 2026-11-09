@@ -2,43 +2,43 @@
   "Services": {
     "tax": {
       "title": "Soliq konsaltingi",
-      "whoFor": "Oʻzbekistonning murakkab soliq tizimida faoliyat yuritayotgan xorijiy investitsiyali korxonalar, xolding tuzilmalari va transchegaraviy operatorlar.",
-      "whoForItems": ["Xorijiy investitsiyali korxonalar", "Xolding tuzilmalari", "Transchegaraviy operatorlar"],
-      "description": "Bizning soliq amaliyotimiz Oʻzbekistonning rivojlanayotgan fiskal muhitida aniq harakat qiladi — chegaralararo bitimlar, mahalliy QQS majburiyatlari va boshqa barcha jihatlar boʻyicha toʻliq meʼyoriy muvofiqlikni saqlagan holda pozitsiyangizni optimallashtiradigan tuzilmalarni ishlab chiqadi.",
+      "whoFor": "Oʻzbekistonning murakkab soliq tizimida faoliyat yuritayotgan xorijiy investitsiyali korxonalar, xolding tuzilmalari va transchegaraviy operatsiyalar olib boruvchi kompaniyalar.",
+      "whoForItems": ["Xorijiy investitsiyali korxonalar", "Xolding tuzilmalari", "Transchegaraviy operatsiyalar olib boruvchi kompaniyalar"],
+      "description": "Bizning soliq amaliyotimiz Oʻzbekistonning oʻzgarib borayotgan soliq tizimida ishonchli yoʻl topadi: transchegaraviy operatsiyalar, mahalliy QQS va boshqa barcha jihatlar boʻyicha talablarga toʻliq rioya qilgan holda pozitsiyangizni optimallashtiradigan tuzilmalarni ishlab chiqamiz.",
       "capabilities": [
         "Soliq rejalashtirish va optimallashtirish",
         "Muvofiqlik va hisobot topshirish",
-        "Transfer narxlash boʻyicha konsalting",
+        "Transfer narxlari",
         "Soliq tekshiruvlarini qoʻllab-quvvatlash",
-        "Xalqaro soliq tuzilishi",
+        "Xalqaro soliq tuzilmalash",
         "QQS boʻyicha konsalting",
         "Soliq imtiyozlariga arizalar",
-        "Bojxona va aktsiz konsaltingi"
+        "Bojxona va aksiz konsaltingi"
       ]
     },
     "legal": {
       "title": "Yuridik konsalting",
       "whoFor": "Oʻzbekiston bozoriga kirayotgan xalqaro kompaniyalar, M&A bitimlari tomonlari va regulyator ruxsatnomalari kerak boʻlgan kompaniyalar.",
-      "description": "Yuridik jamoamiz Oʻzbekistonda faoliyat yurituvchi biznesga toʻliq qamrovli maslahat beradi — kompaniya roʻyxatga olishdan tortib shartnomalar arxitekturasi, meʼyoriy muvofiqlik va korporativ tuzilishgacha — manfaatlaringizni murakkab koʻp yurisdiksiyali operatsiyalar talab qiladigan qattiqlik bilan himoya qiladi.",
+      "description": "Yuridik jamoamiz Oʻzbekistonda faoliyat yurituvchi biznesga barcha masalalar boʻyicha maslahat beradi — kompaniyani roʻyxatdan oʻtkazish va shartnomaviy ishlardan tortib meʼyoriy talablarga muvofiqlik va korporativ tuzilmalashgacha — hamda manfaatlaringizni bir nechta yurisdiksiyadagi murakkab operatsiyalar talab qiladigan sinchkovlik bilan himoya qiladi.",
       "capabilities": [
-        "Kompaniya roʻyxatga olish va litsenziyalash",
+        "Kompaniyani roʻyxatdan oʻtkazish va litsenziyalash",
         "Shartnomalarni tayyorlash va tekshirish",
         "Korporativ boshqaruv",
         "Meʼyoriy muvofiqlik",
         "Intellektual mulk",
         "Mehnat huquqi konsaltingi",
-        "M&A bitimlarni qoʻllab-quvvatlash"
+        "M&A bitimlarini qoʻllab-quvvatlash"
       ]
     },
     "finance": {
       "title": "Buxgalteriya hisobi",
       "whoFor": "MHXS boʻyicha hisobot, investorlar uchun moliyaviy hisobot yoki auditga tayyor buxgalteriya hisobi kerak boʻlgan xorijiy shoʻba kompaniyalar.",
-      "description": "Biz toʻliq tsiklli moliyaviy boshqaruvni taqdim etamiz — aniq buxgalteriya, shaffof hisobot va strategik konsalting raqamlaringizni amaliy maʼlumotlarga aylantiradi, MHHM va MHHS boʻyicha toʻliq muvofiqlikda.",
+      "description": "Biz moliyaviy boshqaruvning toʻliq siklini taʼminlaymiz — aniq buxgalteriya hisobi, shaffof hisobot va raqamlaringizni boshqaruv qarorlari uchun asosga aylantiradigan strategik konsalting — BHMS va MHXSga toʻliq muvofiq holda.",
       "capabilities": [
-        "Buxgalteriya va hisob",
-        "MHHS / MHHM hisoboti",
+        "Buxgalteriya hisobini yuritish",
+        "MHXS / BHMS boʻyicha hisobot",
         "Auditga tayyorgarlik va qoʻllab-quvvatlash",
-        "Byudjet va prognozlash",
+        "Byudjetlashtirish va prognozlash",
         "Pul oqimini boshqarish",
         "Moliyaviy modellashtirish",
         "Boshqaruv hisoboti",
@@ -48,13 +48,13 @@
     "hr": {
       "title": "HR xizmatlari",
       "whoFor": "Qonunga muvofiq HR tizimi, rahbar xodimlarni yollash yoki mehnat qonunchiligiga rioya etilishini tekshirish kerak boʻlgan oʻsib borayotgan kompaniyalar.",
-      "description": "Bizning HR amaliyotimiz inson kapitalining strategik va muvofiqlik tomonlarini qamrab oladi — tashkiliy dizayn va rahbar izlashdan tortib HR auditlari va mehnat huquqi boʻyicha maslahatgacha — Oʻzbekistonda muvofiq va yuqori samarali jamoa uchun asoslar boʻyicha maslahat beradi.",
+      "description": "Bizning HR amaliyotimiz xodimlarni boshqarishning strategik va muvofiqlik jihatlarini qamrab oladi — tashkiliy dizayn va rahbar xodimlarni izlashdan tortib HR auditlari va mehnat huquqi boʻyicha maslahatgacha — va Oʻzbekistonda qonun talablariga mos, samarali jamoa shakllantirishga yordam beradi.",
       "capabilities": [
-        "Ishga olish va executive search",
+        "Xodim tanlash va rahbarlarni izlash (executive search)",
         "HR autsorsing",
         "HR auditlari va muvofiqlik",
         "Oʻqitish va rivojlantirish",
-        "Kompensatsiya benchmarkingi",
+        "Ish haqi darajasini qiyosiy tahlil qilish",
         "Tashkiliy dizayn",
         "Mehnat huquqi konsaltingi"
       ]
@@ -62,37 +62,37 @@
     "funding": {
       "title": "Moliyalashtirish va grantlar",
       "whoFor": "Grant izlayotgan startaplar, investitsiya raundlariga tayyorlanayotgan kompaniyalar va davlat imtiyozlariga ariza berayotgan korxonalar.",
-      "description": "Biz kompaniyalarga mavjud moliyalashtirish manbalari boʻyicha yoʻl koʻrsatamiz — grantlar, investitsiyalarga tayyorlik, donorlar bilan ishlash va oʻsish uchun moliyaviy tuzilish — Markaziy Osiyodagi institutsional moliyalashtirish ekotizimida chuqur aloqalarga tayanib.",
+      "description": "Biz kompaniyalarga mavjud moliyalashtirish manbalarini tanlashda yordam beramiz: grantlar, investitsiyaga tayyorgarlik, donorlar bilan ishlash va oʻsish uchun moliyaviy tuzilmalash. Bunda Markaziy Osiyodagi moliyalashtirish institutlari bilan mustahkam aloqalarimizga tayanamiz.",
       "capabilities": [
-        "Grantlarni topish va arizalar",
-        "Investitsiyalarga tayyorlikni baholash",
+        "Grantlarni topish va ariza topshirish",
+        "Investitsiyaga tayyorlikni baholash",
         "Biznes-rejani ishlab chiqish",
         "Donorlar va investorlarni tanlash",
         "Moliyaviy modellashtirish va prognozlar",
-        "Due diligence ga tayyorgarlik",
-        "Pitch deck ishlab chiqish",
+        "Due diligence jarayoniga tayyorgarlik",
+        "Investorlar uchun taqdimot (pitch deck) tayyorlash",
         "Moliyalashtirishdan keyin muvofiqlik"
       ]
     },
     "ma-advisory": {
       "title": "M&A konsaltingi",
       "whoFor": "Oʻzbekiston va Markaziy Osiyoda M&A bitimlarini rejalashtirayotgan strategik xaridorlar, toʻgʻridan-toʻgʻri investitsiya fondlari va asoschilar.",
-      "description": "Bizning M&A amaliyotimiz xaridorlar va sotuvchilarni Oʻzbekistondagi bitimning barcha bosqichlarida kuzatib boradi — tuzilish va due diligence dan tortib muzokaralar va bitimdan keyingi integratsiyagacha — FMCG, fintex, energetika va sanoat sohalarida $250M+ bitimlar tajribasi bilan.",
+      "description": "Bizning M&A amaliyotimiz Oʻzbekistonda xaridor va sotuvchilarni bitimning barcha bosqichlarida kuzatib boradi — tuzilmalash va due diligence jarayonidan tortib muzokaralar va bitimdan keyingi integratsiyagacha. FMCG, fintex, energetika va sanoat sohalarida biz kuzatib borgan bitimlar hajmi $250 mln dan oshadi.",
       "capabilities": [
-        "Buy-side va sell-side konsalting",
-        "Bitim tuzilishini ishlab chiqish",
+        "Xaridor va sotuvchi tomonida maslahat",
+        "Bitim tuzilmasini ishlab chiqish",
         "Baholashni qoʻllab-quvvatlash",
         "Muzokaralar va bitim boshqaruvi",
         "Bitimdan keyin integratsiya",
-        "Qoʻshma korxonalar tuzilishi",
-        "Management buyout konsaltingi",
-        "Chegaralararo bitimlar koordinatsiyasi"
+        "Qoʻshma korxonalarni tuzilmalash",
+        "Kompaniyani menejment tomonidan sotib olish (MBO) boʻyicha maslahat",
+        "Transchegaraviy bitimlarni muvofiqlashtirish"
       ]
     },
     "due-diligence": {
-      "title": "Due Diligence",
-      "whoFor": "Bitim yopilishidan oldin risklarni mustaqil baholash kerak boʻlgan xaridorlar, kreditorlar va investorlar.",
-      "description": "Bizning due diligence amaliyotimiz Oʻzbek obyektlarini har tomonlama soliq, yuridik va moliyaviy baholash bilan taʼminlaydi — xaridorlar, investorlar va kreditorlarga sotib olayotgan narsalarining aniq manzarasini beradi, energetika, qazib olish, FMCG va sanoatda 30+ tugatilgan loyihalar bilan.",
+      "title": "Due diligence",
+      "whoFor": "Bitim yopilishidan oldin xatarlarni mustaqil baholashga muhtoj xaridorlar, kreditorlar va investorlar.",
+      "description": "Bizning due diligence amaliyotimiz oʻzbek kompaniyalari va aktivlarini soliq, yuridik va moliyaviy jihatdan har tomonlama baholaydi, shunda xaridorlar, investorlar va kreditorlar nimani sotib olayotganini aniq koʻradi. Hisobimizda energetika, qazib olish, FMCG va sanoat sohalarida 30 dan ortiq loyiha bor.",
       "capabilities": [
         "Soliq due diligence",
         "Yuridik due diligence",
@@ -100,37 +100,37 @@
         "Meʼyoriy muvofiqlikni tekshirish",
         "Mehnat va HR tekshiruvi",
         "Vendor due diligence",
-        "Red flag hisobotlari",
-        "Toʻliq DD hisobotlari"
+        "Muhim xatarlar (red flag) hisobotlari",
+        "Toʻliq due diligence hisobotlari"
       ]
     },
     "entity-management": {
       "title": "Kompaniyalarni boshqarish",
       "whoFor": "Oʻz boshqaruv jamoasini tuzmasdan Oʻzbekistonda toʻliq faoliyat yuritmoqchi boʻlgan xorijiy kompaniyalar.",
-      "description1": "Oʻzbekistonda ichki jamoa qurmasdan toʻliq mavjudlikni xohlovchi xorijiy kompaniyalar uchun biz toʻliq operatsion nazoratni oʻz zimmamizga olamiz — buxgalteriya, soliq, huquq va HR sohalarida sizning joydagi boshqaruv qatlamingiz sifatida harakat qilamiz.",
-      "description2": "Bitta shartnoma, bitta aloqa nuqtasi, toʻliq muvofiqlik. Kompaniyangizga toʻgʻri va samarali ishlash uchun zarur boʻlgan barcha narsa.",
+      "description1": "Oʻzbekistonda oʻz jamoasini tuzmasdan toʻlaqonli faoliyat yuritmoqchi boʻlgan xorijiy kompaniyalarga toʻliq operatsion xizmat koʻrsatamiz: buxgalteriya, soliq, huquq va HR masalalarida joylardagi boshqaruv boʻgʻiningiz sifatida ishlaymiz.",
+      "description2": "Bitta shartnoma, bitta aloqa nuqtasi, talablarga toʻliq muvofiqlik. Kompaniyangiz toʻgʻri va samarali ishlashi uchun zarur boʻlgan hamma narsa.",
       "capabilities": [
         "Buxgalteriya autsorsingi",
         "Soliq muvofiqligi va hisobot topshirish",
         "Yuridik muvofiqlik monitoringi",
-        "HR va payroll boshqaruvi",
-        "Meʼyoriy hujjatlar va muddatlar",
+        "HR va ish haqi hisob-kitobini boshqarish",
+        "Hisobot topshirish va muddatlar",
         "Yillik hisobot va auditga tayyorgarlik",
         "Korporativ boshqaruv nazorati",
-        "Ajratilgan mijoz menejeri"
+        "Shaxsiy mijoz menejeri"
       ]
     },
     "corporate": {
       "title": "Korporativ xizmatlar",
       "whoFor": "Oʻzbekistonda yuridik shaxs ochayotgan yoki uni yuritayotgan xalqaro kompaniyalar: roʻyxatdan oʻtkazishdan tortib doimiy korporativ kotiblik xizmatigacha.",
-      "description1": "Biz Oʻzbekistondagi korporativ mavjudligingizning toʻliq tsiklini boshqaramiz — tashkil etishdan davom etayotgan maʼmuriyatgacha va xorijiy kompaniyalarga jismoniy mavjudliksiz ishlashga imkon beradigan nominal xizmatlargacha.",
+      "description1": "Biz Oʻzbekistondagi korporativ mavjudligingizning butun hayotiy siklini boshqaramiz — roʻyxatdan oʻtkazish va joriy maʼmuriy ishlardan tortib xorijiy kompaniyalarga jismoniy ishtiroksiz ishlash imkonini beradigan nominal xizmatlargacha.",
       "description2": "Bizning korporativ xizmatlar jamoasi hujjatlarni, muddatlarni va muvofiqlikni boshqaradi, shunda siz biznesingizga eʼtibor qaratishingiz mumkin.",
       "capabilities": [
         "Kompaniya tashkil etish va roʻyxatga olish",
         "Nominal direktor xizmatlari",
-        "Nominal / roʻyxatga olingan manzil",
+        "Nominal / yuridik manzil",
         "Korporativ kotiblik xizmatlari",
-        "Ishonchnoma",
+        "Ishonchnomalar",
         "Kompaniyani tugatish va yopish",
         "Filial va vakolatxona ochish"
       ]
@@ -138,78 +138,78 @@
     "eor": {
       "title": "Employer of Record",
       "whoFor": "Avval mahalliy yuridik shaxs ochmasdan, Oʻzbekistonda darhol xodim yollamoqchi boʻlgan xalqaro kompaniyalar.",
-      "description1": "Biz Oʻzbekistondagi xodimlaringiz uchun yuridik ish beruvchiga aylanamiz — barcha mehnat shartnomalari, payroll, soliqlarni ushlab qolish va qonuniy muvofiqlikni boshqaramiz, jamoangiz esa toʻliq sizning uchun ishlaydi.",
-      "description2": "EOR — kompaniya roʻyxatdan oʻtkazishning xarajatlari va murakkabligisiz mahalliy mavjudlik yaratishning eng tezkor usuli.",
+      "description1": "Biz Oʻzbekistondagi xodimlaringizning yuridik ish beruvchisiga aylanamiz: mehnat shartnomalarini rasmiylashtiramiz, ish haqini hisoblaymiz, soliqlarni ushlab qolamiz va qonun talablariga rioya etilishini taʼminlaymiz, jamoa esa toʻliq siz uchun ishlaydi.",
+      "description2": "EOR — kompaniyani roʻyxatdan oʻtkazish bilan bogʻliq xarajat va qiyinchiliklarsiz mahalliy ishtirok yaratishning eng tezkor usuli.",
       "capabilities": [
         "Mehnat shartnomalarini boshqarish",
         "Ish haqi hisobi va soliq ushlab qolish",
         "Ijtimoiy badallar va imtiyozlar",
         "HR muvofiqlik va hujjatlar",
-        "Onboarding va offboarding",
-        "Koʻp xodimli EOR keng miqyosda",
-        "Tayyor boʻlganda oʻz kompaniyasiga oʻtish"
+        "Xodimlarni ishga qabul qilish va ishdan boʻshatish",
+        "Bir nechta xodim uchun EOR",
+        "Tayyor boʻlganingizda oʻz kompaniyangizga oʻtish"
       ]
     },
     "payroll": {
-      "title": "Payroll byurosi",
+      "title": "Ish haqi hisob-kitobi",
       "whoFor": "Oʻzbekistonda xodimlari bor va har oy ish haqini aniq hamda qonunga toʻliq muvofiq hisoblashi kerak boʻlgan kompaniyalar.",
-      "description1": "Biz Oʻzbekistondagi xodimlaringiz uchun toʻliq ish haqi tsiklini boshqaramiz — hisoblash, ushlab qolishlar, hisobot va toʻlovlar — mahalliy soliq va mehnat qonunchiligiga toʻliq muvofiq.",
-      "description2": "Sizda 5 yoki 500 xodim boʻlsa ham, bizning payroll byuromiz har oy aniq va oʻz vaqtida ishlaydi.",
+      "description1": "Biz Oʻzbekistondagi xodimlaringiz uchun ish haqi hisob-kitobining toʻliq siklini — hisoblash, ushlab qolishlar, hisobot va toʻlovlarni — mahalliy soliq va mehnat qonunchiligiga toʻliq muvofiq holda olib boramiz.",
+      "description2": "Sizda 5 yoki 500 xodim boʻlsa ham, ish haqini har oy aniq va oʻz vaqtida hisoblaymiz.",
       "capabilities": [
         "Oylik ish haqini hisoblash",
         "Soliq va ijtimoiy badallarni ushlab qolish",
-        "Ish haqi toʻlovlarini qayta ishlash",
+        "Ish haqi toʻlovlarini amalga oshirish",
         "Hisob varaqlarini tayyorlash",
-        "Payroll soliq hisoboti",
-        "Yil oxiri solishtirish",
-        "Koʻp valyutali payroll",
-        "Payroll auditini qoʻllab-quvvatlash"
+        "Ish haqi boʻyicha soliq hisoboti",
+        "Yil yakunidagi solishtirma",
+        "Bir nechta valyutada ish haqi hisob-kitobi",
+        "Ish haqi hisob-kitobi auditini qoʻllab-quvvatlash"
       ]
     },
     "immigration": {
       "title": "Mehnat ruxsatnomalari va immigratsiya",
       "whoFor": "Ishlash uchun Oʻzbekistonga koʻchib kelayotgan xorijiy fuqarolar va ularni ishga olayotgan xalqaro kompaniyalar.",
-      "description1": "Biz Oʻzbekistonda ishlayotgan xorijiy fuqarolar uchun mehnat ruxsatnomalari, viza qoʻllab-quvvatlash va immigratsion muvofiqlikning toʻliq tsiklini boshqaramiz — murakkablikni bartaraf etib va qayta ishlash vaqtini qisqartiramiz.",
-      "description2": "Birinchi arizadan yangilash va chiqishgacha bizning jamoamiz tegishli organlar bilan barcha oʻzaro aloqalarni siz nomingizdan boshqaradi.",
+      "description1": "Biz Oʻzbekistonda ishlayotgan xorijiy fuqarolar uchun mehnat ruxsatnomalari, viza boʻyicha koʻmak va immigratsiya talablariga rioya qilishning toʻliq siklini boshqaramiz: murakkab jarayonlarni oʻz zimmamizga olamiz va rasmiylashtirish muddatlarini qisqartiramiz.",
+      "description2": "Birinchi arizadan tortib uzaytirish va mamlakatdan chiqishgacha jamoamiz tegishli organlar bilan barcha muloqotni siz nomingizdan olib boradi.",
       "capabilities": [
-        "Mehnat ruxsatnomalari va yangilash",
-        "Biznes vizalarni qoʻllab-quvvatlash",
-        "Yashash uchun ruxsat konsaltingi",
-        "Hujjatlarni tayyorlash va apostil",
+        "Mehnat ruxsatnomalarini rasmiylashtirish va uzaytirish",
+        "Biznes vizalar boʻyicha koʻmak",
+        "Yashash uchun ruxsatnoma boʻyicha maslahat",
+        "Hujjatlarni tayyorlash va apostillash",
         "Davlat organlari bilan aloqa",
         "Ruxsatnoma muddatlarini kuzatish",
-        "Oila aʼzolari uchun viza qoʻllab-quvvatlash",
-        "Chiqish jarayonlari"
+        "Oila aʼzolari uchun viza boʻyicha koʻmak",
+        "Mamlakatdan chiqish tartib-taomillari"
       ]
     },
     "virtual-office": {
       "title": "Virtual ofis",
       "whoFor": "Oʻzbekiston bozorini oʻrganayotgan xorijiy kompaniyalar yoki ofis ijaraga olmasdan yuridik manzilga ega boʻlmoqchi boʻlgan korxonalar.",
-      "description1": "Jismoniy joyni ijaraga olmasdan biznesingiz uchun Oʻzbekistonda ishonchli manzil yarating. Bizning virtual ofis xizmatimiz roʻyxatga olingan manzil, pochta qabul qilish va kerak boʻlganda yigʻilish xonalariga kirishni taʼminlaydi.",
-      "description2": "Bozorni oʻrganayotgan, muvofiqlik majburiyatlarini boshqarayotgan yoki kichik mahalliy mavjudlikni saqlayotgan kompaniyalar uchun ideal.",
+      "description1": "Jismoniy joy ijaraga olmasdan biznesingiz uchun Oʻzbekistonda ishonchli manzilga ega boʻling. Virtual ofis xizmatimiz roʻyxatga olingan manzil, pochtani qabul qilish va kerak boʻlganda majlislar xonasidan foydalanishni oʻz ichiga oladi.",
+      "description2": "Bozorni oʻrganayotgan, majburiy talablarni bajarayotgan yoki mamlakatda kichik ishtirokni saqlab turgan kompaniyalar uchun qulay.",
       "capabilities": [
         "Roʻyxatga olingan biznes manzili",
         "Pochta qabul qilish va yoʻnaltirish",
         "Hujjatlarni skanerlash va yetkazib berish",
-        "Yigʻilish xonalariga kirish",
-        "Mahalliy telefon va qoʻngʻiroqlarni qayta ishlash",
-        "Kuryer va logistika qoʻllab-quvvatlash"
+        "Majlislar xonasidan foydalanish",
+        "Mahalliy telefon raqami va qoʻngʻiroqlarga javob berish",
+        "Kuryerlik va logistika xizmatlari"
       ]
     },
     "compliance": {
       "title": "Muvofiqlik monitoringi",
       "whoFor": "Oʻzbekistondagi faoliyati barcha regulyator, soliq va hisobot talablariga doimo javob berishiga ishonch hosil qilmoqchi boʻlgan kompaniyalar.",
-      "description1": "Oʻzbekistonning meʼyoriy muhiti tez rivojlanmoqda. Bizning muvofiqlik monitoringi xizmatimiz hisobot topshirish muddatlarini, qonunchilik oʻzgarishlarini va soliq, huquqiy va korporativ sohalardagi hisobot majburiyatlarini kuzatib boradi — kompaniyangizni doimiy ravishda yaxshi holatda saqlaydi.",
-      "description2": "Biz sizning meʼyoriy erta ogohlantirish tizimingiz sifatida ishlaymiz, muammoga aylanishidan oldin muhim narsalarni belgilaymiz.",
+      "description1": "Oʻzbekistonning meʼyoriy muhiti tez oʻzgarmoqda. Muvofiqlik monitoringi xizmatimiz hisobot topshirish muddatlarini, qonunchilikdagi oʻzgarishlarni hamda soliq, huquq va korporativ boshqaruv sohalaridagi hisobot majburiyatlarini kuzatib boradi, shunda kompaniyangiz doimo talablarga javob beradi.",
+      "description2": "Biz meʼyoriy oʻzgarishlar haqida erta ogohlantirish tizimingiz sifatida ishlaymiz va muhim masalalarni ular muammoga aylanishidan oldin koʻrsatib beramiz.",
       "capabilities": [
         "Hisobot topshirish kalendari va ogohlantirishlar",
         "Meʼyoriy oʻzgarishlar monitoringi",
         "Soliq va majburiy hisobot nazorati",
-        "Korporativ muvofiqlik chek-list",
+        "Korporativ talablar nazorat roʻyxati",
         "Yillik majburiyatlarni boshqarish",
-        "Davlat yozishmalarini boshqarish",
+        "Davlat organlari bilan yozishmalarni yuritish",
         "Muvofiqlik holati hisoboti",
-        "Faol risklarni belgilash"
+        "Xatarlarni oldindan aniqlash"
       ]
     }
   },
@@ -232,7 +232,7 @@
           "source": "Soliq kodeksi, 258-modda"
         },
         {
-          "label": "Jismoniy shaxslarning daromad soligʻi",
+          "label": "Jismoniy shaxslardan olinadigan daromad soligʻi",
           "value": "12%",
           "source": "Soliq kodeksi, 381-modda"
         },
@@ -247,7 +247,7 @@
     "capabilities": "Biz nima qilamiz",
     "selectedWork": "Tanlangan loyihalar",
     "viewAll": "Barcha loyihalar",
-    "faqTitle": "Koʻp soʻraladigan savollar",
+    "faqTitle": "Koʻp beriladigan savollar",
     "relatedServices": "Bogʻliq xizmatlar",
     "allServices": "Barcha xizmatlar",
     "relatedReading": "Mavzuga oid maqolalar",

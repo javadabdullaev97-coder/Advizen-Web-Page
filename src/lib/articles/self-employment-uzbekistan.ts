@@ -128,7 +128,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Расширение возможностей: более 100 разрешённых видов деятельности" },
       {
         type: "p",
-        text: "Список разрешённых для самозанятых видов деятельности значительно расширен и сейчас включает более 100 разнообразных работ и услуг — от репетиторства и присмотра за детьми до IT-услуг, творческих профессий и ремёсленной и сельскохозяйственной деятельности. Такая широкая сфера позволяет многим специалистам работать легально и эффективно. Можно заниматься многим, но одновременно выбирать не более трёх видов деятельности.",
+        text: "Список разрешённых для самозанятых видов деятельности значительно расширен и сейчас включает более 100 разнообразных работ и услуг — от репетиторства и присмотра за детьми до IT-услуг, творческих профессий и ремесленной и сельскохозяйственной деятельности. Такая широкая сфера позволяет многим специалистам работать легально и эффективно. Можно заниматься многим, но одновременно выбирать не более трёх видов деятельности.",
       },
       { type: "h2", text: "Приложение Soliq: ваш центральный инструмент" },
       {
@@ -166,12 +166,12 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "Oʻzbekistonda oʻzi-oʻzi band qilishning roʻyxatdan oʻtish, soliq imtiyozlari va huquqiy jihatlarini bilib oling.",
+    subtitle: "Oʻzbekistonda oʻzini-oʻzi band qilishning roʻyxatdan oʻtish, soliq imtiyozlari va huquqiy jihatlarini bilib oling.",
     author: "Advizen soliq amaliyoti",
-    readTime: "6 daqiqalik oʻqish",
+    readTime: "6 daqiqa oʻqish",
     inShort: {
       figures: [
-        { value: "100 mln soʻm", label: "Oʻzini-oʻzi band qiluvchining soliq davridagi jismoniy shaxslar daromad soligʻidan ozod daromadi" },
+        { value: "100 mln soʻm", label: "Oʻzini-oʻzi band qiluvchining soliq davridagi jismoniy shaxslardan olinadigan daromad soligʻidan ozod daromadi" },
         { value: "4%", label: "Ushbu chegaradan oshgan yillik daromadga yakka tartibdagi tadbirkor singari qoʻllaniladigan aylanma soliq stavkasi" },
         { value: "1 BHM", label: "Pensiya jamgʻarmasiga 31-dekabrgacha toʻlanadigan ixtiyoriy yillik ijtimoiy soliqning eng kam miqdori" },
         { value: "3", label: "Oʻzini-oʻzi band qiluvchi bir vaqtda tanlashi mumkin boʻlgan faoliyat turlarining eng koʻp soni" },
@@ -191,12 +191,12 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Asosiy afzalliklar va soddalashtirilgan roʻyxatga olish" },
       {
         type: "p",
-        text: "Oʻzbekiston oʻzini-oʻzi band qiluvchilar uchun jarayonni sezilarli soddalashtirdi. 2020 yil 1 iyuldan boshlab roʻyxatga olish — maxsus mobil ilova yoki soliq toʻlovchining shaxsiy kabineti orqali oddiy xabardor qilish tartibidir. Bu vaqtinchalik mehnat sertifikatlariga ehtiyojni bartaraf qiladi va roʻyxatga olish dalili sifatida QR-kodni taqdim etadi.",
+        text: "Oʻzbekiston oʻzini-oʻzi band qiluvchilar uchun jarayonni sezilarli soddalashtirdi. 2020-yil 1-iyuldan boshlab roʻyxatga olish — maxsus mobil ilova yoki soliq toʻlovchining shaxsiy kabineti orqali oddiy xabardor qilish tartibidir. Bu vaqtinchalik mehnat sertifikatlariga ehtiyojni bartaraf qiladi va roʻyxatga olish dalili sifatida QR-kodni taqdim etadi.",
       },
       {
         type: "ul",
         items: [
-          "Soliq davrida 100 mln soʻmgacha boʻlgan daromad jismoniy shaxslar daromad soligʻidan ozod (chegara 2024 yil yanvarida yangilangan)",
+          "Soliq davrida 100 mln soʻmgacha boʻlgan daromad jismoniy shaxslardan olinadigan daromad soligʻidan ozod (chegara 2024-yil yanvarida yangilangan)",
           "Yillik daromad bu miqdordan oshsa, yakka tartibdagi tadbirkor singari 4% aylanma soliq stavkasida soliqqa tortiladi",
           "Toʻliq buxgalteriya yuritish talab qilinmaydi",
           "Roʻyxatga olish Soliq mobil ilovasi orqali bir necha daqiqada va davlat bojisiz amalga oshiriladi",
@@ -205,19 +205,19 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Ijtimoiy taʼminot va pensiya badallari" },
       {
         type: "p",
-        text: "Oʻzini-oʻzi band qiluvchilar uchun muhim afzallik — pensiya jamgʻarmasiga badal toʻlash imkoniyati. Ular yiliga ijtimoiy soliq toʻlaydilar va u toʻliq byudjetdan tashqari Pensiya jamgʻarmasiga yoʻnaltiriladi. Bu ularning oʻzini-oʻzi band qiluvchi sifatidagi mehnati kelajakdagi pensiya nafaqalariga taʼsir qilishini taʼminlaydi, yakka tartibdagi tadbirkorlar uchun hisoblanganidek. Yillik badal kamida 1 Bazaviy hisoblash miqdori (BHM)ni tashkil qiladi va ixtiyoriy boʻlib, 31 dekabrgacha toʻlanadi.",
+        text: "Oʻzini-oʻzi band qiluvchilar uchun muhim afzallik — pensiya jamgʻarmasiga badal toʻlash imkoniyati. Ular yiliga ijtimoiy soliq toʻlaydilar va u toʻliq byudjetdan tashqari Pensiya jamgʻarmasiga yoʻnaltiriladi. Shu tariqa, yakka tartibdagi tadbirkorlar singari, ularning oʻzini-oʻzi band qiluvchi sifatidagi mehnati kelajakdagi pensiyani hisoblashda inobatga olinadi. Yillik badal kamida 1 bazaviy hisoblash miqdori (BHM)ni tashkil qiladi va ixtiyoriy boʻlib, 31-dekabrgacha toʻlanadi.",
       },
       { type: "h2", text: "Imkoniyatlarning kengayishi: 100 dan ortiq ruxsat etilgan faoliyat" },
       {
         type: "p",
-        text: "Oʻzini-oʻzi band qiluvchilar uchun ruxsat etilgan faoliyatlar roʻyxati sezilarli kengaytirilib, hozir 100 dan ortiq turli ish va xizmatlarni qamrab oladi. Bu repetitorlik va bolalarni parvarish qilishdan tortib IT xizmatlari, kreativ kasblar va turli hunarmandchilik hamda qishloq xoʻjalik faoliyatlarigacha boʻlgan sohalarni oʻz ichiga oladi. Bu keng qamrov koʻplab mutaxassislarga qonuniy va samarali ishlash imkonini beradi. Koʻplab faoliyat turlarini bajarsangiz ham, bir vaqtning oʻzida uchtadan ortiqni tanlay olmaysiz.",
+        text: "Oʻzini-oʻzi band qiluvchilar uchun ruxsat etilgan faoliyatlar roʻyxati sezilarli kengaytirilib, hozir 100 dan ortiq turli ish va xizmatlarni qamrab oladi. Bu repetitorlik va bolalarni parvarish qilishdan tortib IT xizmatlari, kreativ kasblar va turli hunarmandchilik hamda qishloq xoʻjaligi faoliyatlarigacha boʻlgan sohalarni oʻz ichiga oladi. Bu keng qamrov koʻplab mutaxassislarga qonuniy va samarali ishlash imkonini beradi. Bir nechta faoliyat bilan shugʻullansangiz ham, bir vaqtning oʻzida uchtadan ortiq faoliyat turini tanlay olmaysiz.",
       },
-      { type: "h2", text: "Soliq ilovasi: markaziy markazingiz" },
+      { type: "h2", text: "Soliq ilovasi: barcha amallar bir joyda" },
       {
         type: "ul",
         items: [
           "Roʻyxatdan oʻtish va oʻzini-oʻzi band qilish maqomi dalili sifatida QR-kod olish",
-          "Buyurtmalarni qabul qilish va toʻlovlarni qayta ishlash",
+          "Buyurtma va toʻlovlarni qabul qilish",
           "Yuridik shaxslarga elektron hisob-fakturalar berish",
           "Istalgan vaqtda oʻzini-oʻzi band qilish maqomini ixtiyoriy ravishda tugatish",
           "Daromad va soliq majburiyatlarini real vaqtda kuzatish",
@@ -225,7 +225,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "blockquote",
-        text: "Oʻzbekistonda oʻzini-oʻzi band qilish mintaqadagi eng qulay soliq rejimlaridan biridir — 100 mln soʻmgacha JShDS dan ozod qilish va minimal maʼmuriy yuk bilan birgalikda u frilanserlar, maslahatchilar va kichik xizmat koʻrsatuvchilar uchun jozibali boshlanish nuqtasiga aylanadi.",
+        text: "Oʻzbekistonda oʻzini-oʻzi band qilish mintaqadagi eng qulay soliq rejimlaridan biridir — 100 mln soʻmgacha JShDSdan ozod qilish va minimal maʼmuriy yuk bilan birgalikda u frilanserlar, maslahatchilar va kichik xizmat koʻrsatuvchilar uchun jozibali boshlanish nuqtasiga aylanadi.",
       },
     ],
     faq: [
@@ -235,7 +235,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda oʻzini-oʻzi band qiluvchilar qanday soliqlar toʻlaydi?",
-        answer: "Oʻzbekistonda oʻzini-oʻzi band qiluvchilar yillik 100 mln soʻmgacha boʻlgan daromadga jismoniy shaxslar daromad soligʻidan ozod. Bu chegara oshirilsa, yakka tartibdagi tadbirkorlar kabi 4% aylanma soliq stavkasi qoʻllaniladi. Toʻliq buxgalteriya hisobi yuritish shart emas.",
+        answer: "Oʻzbekistonda oʻzini-oʻzi band qiluvchilar yillik 100 mln soʻmgacha boʻlgan daromadga jismoniy shaxslardan olinadigan daromad soligʻidan ozod. Bu chegaradan oshilsa, yakka tartibdagi tadbirkorlar kabi 4% aylanma soliq stavkasi qoʻllaniladi. Toʻliq buxgalteriya hisobi yuritish shart emas.",
       },
       {
         question: "Oʻzbekistonda oʻzini-oʻzi band qilish maqomi uchun qanday faoliyat turlari ruxsat etilgan?",
@@ -243,7 +243,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistondagi oʻzini-oʻzi band qiluvchilar pensiyaga badallar toʻlashi mumkinmi?",
-        answer: "Ha. Oʻzini-oʻzi band qiluvchilar kamida 1 Bazaviy hisoblash miqdori (BHM) miqdorida yillik ijtimoiy soliqni har yil 31 dekabrgacha toʻlab, davlat Pensiya jamgʻarmasiga ixtiyoriy ravishda badal qoʻshishlari mumkin.",
+        answer: "Ha. Oʻzini-oʻzi band qiluvchilar kamida 1 bazaviy hisoblash miqdori (BHM) miqdorida yillik ijtimoiy soliqni har yil 31-dekabrgacha toʻlab, davlat Pensiya jamgʻarmasiga ixtiyoriy ravishda badal qoʻshishlari mumkin.",
       },
     ],
   },

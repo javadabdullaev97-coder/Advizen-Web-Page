@@ -99,7 +99,7 @@ const article: Record<string, LocalizedArticle> = {
     inShort: {
       figures: [
         { value: "Глава 7", label: "Налогового кодекса, обязывающая каждого налогоплательщика утвердить учётную политику для целей налогообложения" },
-        { value: "1 января", label: "Следующего года — обычная дата вступления в силу изменений политики" },
+        { value: "1 января", label: "Следующего года — обычная дата вступления в силу изменений учётной политики" },
       ],
       points: [
         "Все налогоплательщики Узбекистана — юридические лица и индивидуальные предприниматели — обязаны утвердить учётную политику для целей налогообложения.",
@@ -186,11 +186,11 @@ const article: Record<string, LocalizedArticle> = {
   uz: {
     subtitle: "Nega Oʻzbekistondagi har bir yuridik shaxs va yakka tartibdagi tadbirkorga yaxshi tuzilgan soliq maqsadlaridagi hisob siyosati zarur.",
     author: "Advizen soliq amaliyoti",
-    readTime: "8 daqiqalik oʻqish",
+    readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "7-bob", label: "Soliq kodeksining har bir soliq toʻlovchini soliq maqsadlaridagi hisob siyosatini tasdiqlashga majbur qiluvchi bobi" },
-        { value: "1-yanvar", label: "Keyingi yilning — siyosatga kiritilgan oʻzgarishlar odatda kuchga kiradigan sana" },
+        { value: "1-yanvar", label: "Keyingi yilning shu sanasidan siyosatga kiritilgan oʻzgarishlar odatda kuchga kiradi" },
       ],
       points: [
         "Oʻzbekistondagi barcha soliq toʻlovchilar — yuridik shaxslar ham, yakka tartibdagi tadbirkorlar ham — soliq maqsadlaridagi hisob siyosatini tasdiqlashi shart.",
@@ -202,13 +202,13 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p",
-        text: "Oʻzbekistonning rivojlanayotgan biznes va soliq muhitida talablarga muvofiqlikka erishish va soliq majburiyatlarini optimallashtirish uchun yolgʻiz vijdonan yuritiladigan buxgalteriya yetarli emas. Oʻzbekiston Soliq kodeksining 7-bobiga koʻra, barcha soliq toʻlovchilar soliq maqsadlaridagi hisob siyosatini tasdiqlashga majbur — bu soliq bazasini hisoblash, soliq majburiyatlarini baholash va aniq soliq hisobotlarini tayyorlashning konseptual asosini belgilaydigan asosiy hujjat.",
+        text: "Oʻzbekistonning rivojlanayotgan biznes va soliq muhitida talablarga muvofiqlikka erishish va soliq majburiyatlarini optimallashtirish uchun faqat vijdonan yuritiladigan buxgalteriya hisobining oʻzi yetarli emas. Oʻzbekiston Soliq kodeksining 7-bobiga koʻra, barcha soliq toʻlovchilar soliq maqsadlaridagi hisob siyosatini tasdiqlashga majbur — bu soliq bazasini hisoblash, soliq majburiyatlarini baholash va aniq soliq hisobotlarini tayyorlashning konseptual asosini belgilaydigan asosiy hujjat.",
       },
       { type: "h2", text: "Nega siyosat juda muhim?" },
       {
         type: "ul",
         items: [
-          "Hisob-kitob metodologiyasini koʻrsatadi: turli soliqlarni hisoblashda qoʻlaniladigan aniq usul va tartiblarni aniq belgilab beradi, soliq majburiyatlari qanday shakllantirilganini shaffof qiladi.",
+          "Hisob-kitob metodologiyasini koʻrsatadi: turli soliqlarni hisoblashda qoʻllaniladigan aniq usul va tartiblarni aniq belgilab beradi, soliq majburiyatlari qanday shakllantirilganini shaffof qiladi.",
           "Asoslash va mantiqni taʼminlaydi: siyosat tanlangan soliq hisobi usullarining hujjatli asosini taqdim etadi — bu ayniqsa Soliq kodeksi soliq toʻlovchiga variantlar yoki mustaqil qaror qabul qilish imkonini bergan hollarda muhim.",
           "Izchillikni taʼminlaydi va xatolarni kamaytiradi: vaqt davomida bir xil hisob-kitob yondashuvlarini oʻrnatib, siyosat soliq hisobotidagi xato va nomuvofiqliklarni minimallashtiradi — bu soliq tekshiruvlarida nizolardan qochishning kalitidir.",
           "Soliq nizolarini kamaytiradi: batafsil va aniq tuzilgan siyosat soliq tekshiruvlari paytida mustahkam himoya vositasi sifatida xizmat qiladi. Soliq inspektorlari bilan muloqotda murojaat qiladigan hujjat aynan shu hisoblanadi.",
@@ -228,12 +228,12 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3", text: "Amortizatsiya va eskirish" },
       {
         type: "p",
-        text: "Soliq kodeksi soliq maqsadlari uchun aniq amortizatsiya stavkalarini belgilaydi va ular moliyaviy hisobda qoʻlaniladiganlardan farq qilishi mumkin. Siyosat bu farqlarni muvofiqlashtirishi va soliq maqsadlari uchun qoʻlaniladigan usullarni belgilashi kerak.",
+        text: "Soliq kodeksi soliq maqsadlari uchun aniq amortizatsiya stavkalarini belgilaydi va ular moliyaviy hisobda qoʻllaniladiganlardan farq qilishi mumkin. Siyosat bu farqlarni muvofiqlashtirishi va soliq maqsadlari uchun qoʻllaniladigan usullarni belgilashi kerak.",
       },
       { type: "h3", text: "Qoʻshilgan qiymat soligʻi (QQS) hisobi" },
       {
         type: "p",
-        text: "Eng murakkab soliqlardan biri sifatida siyosatda batafsil tasvirlanishi kerak: tovar va xizmatlar boʻzicha avval toʻlangan QQSni hisobga olish shartlari; chet el yuridik shaxslari bilan ish olib borishda QQSni hisobga olishning maxsus qoidalari; va biznesingiz turli QQS stavkalari yoki QQSdan ozod qilingan operatsiyalarga ega boʻlsa, alohida hisob yuritish metodologiyasi.",
+        text: "Eng murakkab soliqlardan biri sifatida siyosatda batafsil tasvirlanishi kerak: tovar va xizmatlar boʻyicha avval toʻlangan QQSni hisobga olish shartlari; chet el yuridik shaxslari bilan ish olib borishda QQSni hisobga olishning maxsus qoidalari; va biznesingiz turli QQS stavkalari yoki QQSdan ozod qilingan operatsiyalarga ega boʻlsa, alohida hisob yuritish metodologiyasi.",
       },
       { type: "h3", text: "Soliq registrlari va hujjatlar boshqaruvi" },
       {
@@ -244,9 +244,9 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul",
         items: [
-          "Tasdiqlash va oʻzgartirishlar: siyosat kompaniya rahbarining buyrugʻi yoki koʻrsatmasi bilan tasdiqlanadi. Odatda, kalendar yili davomida oʻzgartirilmaydi — istisno faqat soliq yoki buxgalteriya qonunchiligida oʻzgarishlar boʻlganda qilinadi va bunday oʻzgarishlar odatda keyingi yilning 1 yanvaridan kuchga kiradi.",
+          "Tasdiqlash va oʻzgartirishlar: siyosat kompaniya rahbarining buyrugʻi yoki koʻrsatmasi bilan tasdiqlanadi. Odatda, kalendar yili davomida oʻzgartirilmaydi — istisno faqat soliq yoki buxgalteriya qonunchiligida oʻzgarishlar boʻlganda qilinadi va bunday oʻzgarishlar odatda keyingi yilning 1-yanvaridan kuchga kiradi.",
           "Moliyaviy hisob siyosati bilan integratsiya: siyosat alohida hujjat yoki umumiy moliyaviy hisob siyosatining alohida boʻlimi sifatida boʻlishi mumkin. Yagona tasdiqlangan shakl mavjud emas.",
-          "Oʻzbekistonda fiskal yoʻnaltirilganlik: Oʻzbekistonning buxgalteriya standartlari koʻpincha kuchli fiskal yoʻnalishga ega. Koʻplab tashkilotlar buxgalteriya va soliq maʼlumotlarini yaqinlashtiradigan usullarni qoʻlaydi — bu amaliyot odatda soliq organlari tomonidan qoʻlab-quvvatlanadi.",
+          "Oʻzbekistonda fiskal yoʻnaltirilganlik: Oʻzbekistonning buxgalteriya standartlari koʻpincha kuchli fiskal yoʻnalishga ega. Koʻplab tashkilotlar buxgalteriya va soliq maʼlumotlarini yaqinlashtiradigan usullarni qoʻllaydi — bu amaliyot odatda soliq organlari tomonidan qoʻllab-quvvatlanadi.",
         ],
       },
       { type: "h2", text: "Advizen: soliq siyosatini ishlab chiqishda ekspert hamkoringiz" },
@@ -262,7 +262,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda soliq maqsadlaridagi hisob siyosatini yil davomida oʻzgartirish mumkinmi?",
-        answer: "Odatda, yoʻq. Siyosat butun kalendar yili davomida oʻzgarishsiz qolishi kerak. Istisnolar faqat soliq yoki buxgalteriya qonunchiligida oʻzgarishlar boʻlganda ruxsat etiladi va bunday oʻzgartirishlar odatda keyingi yilning 1 yanvaridan kuchga kiradi.",
+        answer: "Odatda, yoʻq. Siyosat butun kalendar yili davomida oʻzgarishsiz qolishi kerak. Istisnolar faqat soliq yoki buxgalteriya qonunchiligida oʻzgarishlar boʻlganda ruxsat etiladi va bunday oʻzgartirishlar odatda keyingi yilning 1-yanvaridan kuchga kiradi.",
       },
       {
         question: "Oʻzbekistonda soliq maqsadlaridagi hisob siyosati nimalarni qamrab olishi kerak?",

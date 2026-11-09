@@ -108,7 +108,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle: "Узнайте о специализированной правовой базе, существенных налоговых льготах и уникальных механизмах поддержки, доступных для бизнеса и профессионалов в стремительно развивающемся Парке творческих индустрий Узбекистана.",
-    author: "Advizen Legal Practice",
+    author: "Юридическая практика Advizen",
     readTime: "7 мин чтения",
     inShort: {
       figures: [
@@ -213,20 +213,20 @@ const article: Record<string, LocalizedArticle> = {
   },
   uz: {
     subtitle: "Oʻzbekistonning tez rivojlanayotgan Kreativ industriyalar parki doirasida biznes va mutaxassislar uchun mavjud ixtisoslashtirilgan huquqiy tizim, muhim soliq imtiyozlari va noyob qoʻllab-quvvatlash mexanizmlarini oʻrganing.",
-    author: "Advizen Legal Practice",
+    author: "Advizen yuridik amaliyoti",
     readTime: "7 daqiqa oʻqish",
     inShort: {
       figures: [
         { value: "PF-61", label: "Kreativ industriyalar parkini tashkil etgan 2025-yil 26-martdagi Prezident Farmoni" },
-        { value: "OʻRQ-970", label: "Mos faoliyat turlarini belgilovchi 2024-yil 3-oktyabrdagi «Kreativ industriya toʻgʻrisida»gi Qonun" },
-        { value: "50%", label: "Rezidentlar xodimlari uchun jismoniy shaxslardan daromad soligʻi stavkalari va ijtimoiy soliq stavkasining kamayishi" },
+        { value: "OʻRQ-970", label: "Mos faoliyat turlarini belgilovchi 2024-yil 3-oktabrdagi «Kreativ industriya toʻgʻrisida»gi Qonun" },
+        { value: "50%", label: "Rezidentlar xodimlari uchun jismoniy shaxslardan olinadigan daromad soligʻi stavkalari va ijtimoiy soliq stavkasining kamayishi" },
         { value: "2025-yil 1-may – 2031-yil 1-yanvar", label: "Rezidentlar uchun imtiyozlar amal qiladigan davr" },
       ],
       points: [
         "Kreativ mahsulotlarni yaratuvchi va tijoratlashtiruvchi yuridik va jismoniy shaxslar — adabiy ijod, amaliy sanʼat va hunarmandchilik, arxitektura va dizayn, tasviriy sanʼat sohalarida — Park rezidentligiga asosiy nomzodlardir.",
         "Rezidentlar jami daromadidan qatʼi nazar aylanma soliq toʻlovchilari toifasiga kiritiladi va zarur boʻlsa, umumbelgilangan soliq tartibiga oʻtishi mumkin.",
         "Park rezidentlariga muayyan shartlar asosida foizsiz kreditlar va grantlar beriladi.",
-        "Soliq imtiyozlarini amalda qoʻllash uchun Soliq kodeksiga tegishli oʻzgartishlar kiritilishi hali talab etiladi.",
+        "Soliq imtiyozlarini amalda qoʻllash uchun Soliq kodeksiga tegishli oʻzgartirishlar kiritilishi hali talab etiladi.",
       ],
     },
     content: [
@@ -237,7 +237,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Kreativ industriyalar parki nima?" },
       {
         type: "p" as const,
-        text: "2025 yil 26 martdagi PF-61-sonli Prezident Farmoni bilan tashkil etilgan Kreativ industriyalar parki kreativ iqtisodiyotni ragʻbatlantirish va qoʻllab-quvvatlash uchun milliy markaz sifatida yaratilgan. Jismoniy makon taqdim etishdan tashqari, uning asosiy maqsadlari qatoriga xilma-xil kreativ industriyalarni rivojlantirish uchun qulay sharoit yaratish, sektorga mahalliy va xorijiy investitsiyalarni jalb qilish, hamda rezidentlarni zaruriy resurslar va infratuzilma bilan taʼminlash kiradi.",
+        text: "2025-yil 26-martdagi PF-61-sonli Prezident Farmoni bilan tashkil etilgan Kreativ industriyalar parki kreativ iqtisodiyotni ragʻbatlantirish va qoʻllab-quvvatlash uchun milliy markaz sifatida yaratilgan. Jismoniy makon taqdim etishdan tashqari, uning asosiy maqsadlari qatoriga xilma-xil kreativ industriyalarni rivojlantirish uchun qulay sharoit yaratish, sektorga mahalliy va xorijiy investitsiyalarni jalb qilish, hamda rezidentlarni zaruriy resurslar va infratuzilma bilan taʼminlash kiradi.",
       },
       {
         type: "ul" as const,
@@ -251,7 +251,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Kreativ industriyalarni aniqlash: kim rezident boʻlishi mumkin?" },
       {
         type: "p" as const,
-        text: "2024 yil 3 oktyabrdagi \"Kreativ industriya toʻgʻrisida\"gi OʻRQ-970-sonli Qonunga muvofiq kreativ industriyalar doirasi keng maʼnoda belgilangan. Quyidagi sohalarda faoliyat yurituvchi va kreativ mahsulotlarni rivojlantirish hamda tijoratlashtirish maqsadidagi yuridik shaxslar va jismoniy shaxslar rezidentlikka asosiy nomzodlar hisoblanadi:",
+        text: "2024-yil 3-oktabrdagi «Kreativ industriya toʻgʻrisida»gi OʻRQ-970-sonli Qonunga muvofiq kreativ industriyalar doirasi keng maʼnoda belgilangan. Quyidagi sohalarda faoliyat yurituvchi va kreativ mahsulotlarni rivojlantirish hamda tijoratlashtirish maqsadidagi yuridik shaxslar va jismoniy shaxslar rezidentlikka asosiy nomzodlar hisoblanadi:",
       },
       {
         type: "ul" as const,
@@ -260,26 +260,26 @@ const article: Record<string, LocalizedArticle> = {
           "Amaliy sanʼat va hunarmandchilik: anʼanaviy va zamonaviy hunarmandchilik, dizayn",
           "Arxitektura, dizayn va shaharni rejalashtirish: arxitektura xizmatlari, shahar taraqqiyoti, landshaft dizayni",
           "Tasviriy sanʼat: rassomlik, haykaltaroshlik, grafika sanʼati",
-          "Boshqa ijodiy faoliyat turlari: kreativ mahsulotlarni yaratish, ishlab chiqarish, saqlash, tarqatish va targʻib qilishni oʻz ichiga oluvchi",
+          "Boshqa ijodiy faoliyat turlari: kreativ mahsulotlarni yaratish, ishlab chiqarish, saqlash, tarqatish va targʻib qilishni oʻz ichiga oluvchi faoliyat",
         ],
       },
       { type: "h2" as const, text: "Soliq, bojxona va moliyaviy imtiyozlar" },
       {
         type: "p" as const,
-        text: "Biznes uchun rezidentlikni koʻrib chiqishning asosiy omili — 2025 yil 1 maydan 2031 yil 1 yanvargacha amal qiladigan imtiyozlarning keng toʻplamidir. Ushbu afzalliklar moliyaviy samaradorlik va operatsion unumdorlikni sezilarli darajada oshirishga moʻljallangan:",
+        text: "Biznes uchun rezidentlikni koʻrib chiqishning asosiy omili — 2025-yil 1-maydan 2031-yil 1-yanvargacha amal qiladigan imtiyozlarning keng toʻplamidir. Ushbu afzalliklar moliyaviy samaradorlik va operatsion unumdorlikni sezilarli darajada oshirishga moʻljallangan:",
       },
       {
         type: "ul" as const,
         items: [
-          "Jismoniy shaxslardan daromad soligʻini kamaytirish: rezident kompaniyalar xodimlari uchun JShDS stavkalarini 50% ga kamaytirish, ish beruvchilar uchun ish haqi xarajatlarini bevosita pasaytiradi",
-          "Ijtimoiy soliqni kamaytirish: ijtimoiy soliq stavkasini 50% ga kamaytirish bandlilik xarajatlarini yanada qisqartiradi",
+          "Jismoniy shaxslardan olinadigan daromad soligʻini kamaytirish: rezident kompaniyalar xodimlari uchun JShDS stavkalarining 50% ga kamaytirilishi ish beruvchilarning ish haqi xarajatlarini bevosita pasaytiradi",
+          "Ijtimoiy soliqni kamaytirish: ijtimoiy soliq stavkasining 50% ga kamaytirilishi xodimlar bilan bogʻliq xarajatlarni yanada qisqartiradi",
           "Moslashuvchan aylanma soliq rejimi: rezidentlar jami daromadidan qatʼi nazar aylanma soliq toʻlovchilari toifasiga kiritiladi, zarur boʻlganda umumiy belgilangan soliq tartibiga oʻtish imkoniyati mavjud",
-          "Foizsiz kreditlar va grantlar: maʼlum shartlarga rioya etgan holda Park rezidentlariga foizsiz kreditlar va grantlar taqdim etish, rivojlanish va innovatsiyalarni moliyaviy jihatdan toʻgʻridan-toʻgʻri qoʻllab-quvvatlaydi",
+          "Foizsiz kreditlar va grantlar: maʼlum shartlarga rioya etgan holda Park rezidentlariga beriladigan foizsiz kreditlar va grantlar rivojlanish va innovatsiyalarni bevosita moliyaviy qoʻllab-quvvatlaydi",
         ],
       },
       {
         type: "blockquote" as const,
-        text: "Muhim: ushbu muhim imtiyozlar qabul qilingan boʻlsa-da, ularni amalda qoʻllash uchun Oʻzbekiston Respublikasi Soliq kodeksiga tegishli oʻzgartishlar kiritilishi hali talab etiladi. Biznes ushbu qonunchilik yangilanishlaridan xabardor boʻlib turishi kerak.",
+        text: "Muhim: ushbu muhim imtiyozlar qabul qilingan boʻlsa-da, ularni amalda qoʻllash uchun Oʻzbekiston Respublikasi Soliq kodeksiga tegishli oʻzgartirishlar kiritilishi hali talab etiladi. Biznes ushbu qonunchilik yangilanishlaridan xabardor boʻlib turishi kerak.",
       },
       { type: "h2" as const, text: "Moliyaviy imtiyozlardan tashqari qoʻllab-quvvatlash ekotizimi" },
       {
@@ -293,26 +293,26 @@ const article: Record<string, LocalizedArticle> = {
           "Konsalting xizmatlari: biznesni rivojlantirishga koʻmaklashadigan ixtisoslashtirilgan konsalting xizmatlaridan foydalanish",
           "Dasturlarda ishtirok etish: yangi gʻoyalarni takomillashtirish va ijodiy natijalarni yaxshilashga qaratilgan dasturlarda ishtirok etish imkoniyatlari",
           "Tarmoq aloqalari: kreativ hamjamiyat doirasida hamkorlik, bilim almashish va sheriklik oʻrnatish uchun maxsus muhit",
-          "Isteʼdodlarni rivojlantirish: ilgʻor ijodiy kasblar boʻyicha xodimlarni oʻqitish va malakasini oshirishga qaratilgan tashabbuslarden foydalanish",
+          "Isteʼdodlarni rivojlantirish: ilgʻor ijodiy kasblar boʻyicha xodimlarni oʻqitish va malakasini oshirishga qaratilgan tashabbuslardan foydalanish",
         ],
       },
     ],
     faq: [
       {
         question: "Oʻzbekistonning Kreativ industriyalar parki qanday soliq imtiyozlari taklif etadi?",
-        answer: "Kreativ industriyalar parki rezidentlari xodimlar uchun jismoniy shaxslardan daromad soligʻi (JShDS) stavkalarini 50% ga kamaytirish, ijtimoiy soliqni 50% ga kamaytirish, jami daromadidan qatʼi nazar moslashuvchan aylanma soliq rejimidan foydalanish, shuningdek foizsiz kreditlar va grantlar olish imkoniyatidan bahramand boʻladilar. Ushbu imtiyozlar 2025 yil 1 maydan 2031 yil 1 yanvargacha Oʻzbekiston Soliq kodeksiga tegishli oʻzgartishlar kiritilishi sharti bilan amal qiladi.",
+        answer: "Kreativ industriyalar parki rezidentlari xodimlar uchun jismoniy shaxslardan olinadigan daromad soligʻi (JShDS) stavkalarini 50% ga kamaytirish, ijtimoiy soliqni 50% ga kamaytirish, jami daromadidan qatʼi nazar moslashuvchan aylanma soliq rejimidan foydalanish, shuningdek foizsiz kreditlar va grantlar olish imkoniyatidan bahramand boʻladilar. Ushbu imtiyozlar 2025-yil 1-maydan 2031-yil 1-yanvargacha Oʻzbekiston Soliq kodeksiga tegishli oʻzgartirishlar kiritilishi sharti bilan amal qiladi.",
       },
       {
         question: "Oʻzbekistonning Kreativ industriyalar parki rezidenti boʻlish uchun kim munosib?",
-        answer: "Rezidentlik 2024 yil 3 oktyabrdagi OʻRQ-970-sonli Qonun taʼrifiga muvofiq kreativ industriyalarda faoliyat yurituvchi tijorat tashkilotlari va jismoniy shaxslar uchun mavjud. Mos faoliyat turlariga quyidagilar kiradi: adabiy ijod (mualliflik, kontent yaratish), amaliy sanʼat va hunarmandchilik, arxitektura va dizayn, shaharni rejalashtirish, tasviriy sanʼat (rassomlik, haykaltaroshlik, grafika sanʼati), shuningdek kreativ mahsulotlarni yaratish, ishlab chiqarish, tarqatish va targʻib qilish bilan bogʻliq boshqa faoliyat turlari.",
+        answer: "Rezidentlik 2024-yil 3-oktabrdagi OʻRQ-970-sonli Qonun taʼrifiga muvofiq kreativ industriyalarda faoliyat yurituvchi tijorat tashkilotlari va jismoniy shaxslar uchun mavjud. Mos faoliyat turlariga quyidagilar kiradi: adabiy ijod (mualliflik, kontent yaratish), amaliy sanʼat va hunarmandchilik, arxitektura va dizayn, shaharni rejalashtirish, tasviriy sanʼat (rassomlik, haykaltaroshlik, grafika sanʼati), shuningdek kreativ mahsulotlarni yaratish, ishlab chiqarish, tarqatish va targʻib qilish bilan bogʻliq boshqa faoliyat turlari.",
       },
       {
         question: "Oʻzbekistonning Kreativ industriyalar parki qachon tashkil etilgan va imtiyozlar qachondan amal qiladi?",
-        answer: "Kreativ industriyalar parki 2025 yil 26 martdagi PF-61-sonli Prezident Farmoni bilan tashkil etilgan. Rezidentlar uchun soliq va moliyaviy imtiyozlar 2025 yil 1 maydan kuchga kirgan va 2031 yil 1 yanvargacha amal qilishi qonuniy jihatdan belgilangan. Biroq soliq imtiyozlarining amaliy tatbiq etilishi uchun Oʻzbekiston Respublikasi Soliq kodeksiga tegishli oʻzgartishlar kiritilishi talab etiladi, ular farmon sanasida hali kutilmoqda edi.",
+        answer: "Kreativ industriyalar parki 2025-yil 26-martdagi PF-61-sonli Prezident Farmoni bilan tashkil etilgan. Rezidentlar uchun soliq va moliyaviy imtiyozlar 2025-yil 1-maydan kuchga kirgan va 2031-yil 1-yanvargacha amal qilishi qonuniy jihatdan belgilangan. Biroq soliq imtiyozlarining amaliy tatbiq etilishi uchun Oʻzbekiston Respublikasi Soliq kodeksiga tegishli oʻzgartirishlar kiritilishi talab etiladi, ular farmon sanasida hali kutilmoqda edi.",
       },
       {
-        question: "Oʻzbekistonning Kreativ industriyalar parki soliq imtiyozlari hozirda kuchda boʻlgan?",
-        answer: "Imtiyozlar qonuniy jihatdan mustahkamlangan va Prezident Farmoni bilan qabul qilingan. Biroq, farmonnig oʻzida taʼkidlanganidek, ularni toʻliq amalda qoʻllash uchun Oʻzbekiston Respublikasi Soliq kodeksiga tegishli oʻzgartishlar kiritilishi hali talab etiladi. Rezidentlikni koʻrib chiqayotgan biznes imtiyozlarning amaliy jihatdan qachon kuchga kirishini tasdiqlash uchun Soliq kodeksidagi oʻzgarishlarni kuzatib borishi kerak.",
+        question: "Oʻzbekistonning Kreativ industriyalar parki soliq imtiyozlari hozir amal qiladimi?",
+        answer: "Imtiyozlar qonuniy jihatdan mustahkamlangan va Prezident Farmoni bilan qabul qilingan. Biroq, farmonning oʻzida taʼkidlanganidek, ularni toʻliq amalda qoʻllash uchun Oʻzbekiston Respublikasi Soliq kodeksiga tegishli oʻzgartirishlar kiritilishi hali talab etiladi. Rezidentlikni koʻrib chiqayotgan biznes imtiyozlarning amaliy jihatdan qachon kuchga kirishini tasdiqlash uchun Soliq kodeksidagi oʻzgarishlarni kuzatib borishi kerak.",
       },
     ],
   },

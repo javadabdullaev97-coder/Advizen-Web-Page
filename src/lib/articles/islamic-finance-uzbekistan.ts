@@ -161,7 +161,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   ru: {
     subtitle: "Практическое руководство по развивающейся системе исламских финансов в Узбекистане — законодательство, разрешённые инструменты и регуляторные обязательства МФО.",
-    author: "Advizen Legal Practice",
+    author: "Юридическая практика Advizen",
     readTime: "9 мин чтения",
     inShort: {
       figures: [
@@ -319,7 +319,7 @@ const article: Record<string, LocalizedArticle> = {
   },
   uz: {
     subtitle: "Oʻzbekistonning rivojlanayotgan islom moliyasi tizimi boʻyicha amaliy qoʻllanma — qonunchilik, ruxsat etilgan vositalar va MMTlar uchun tartibga soluvchi majburiyatlar.",
-    author: "Advizen Legal Practice",
+    author: "Advizen yuridik amaliyoti",
     readTime: "9 daqiqa oʻqish",
     inShort: {
       figures: [
@@ -338,7 +338,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p" as const,
-        text: "Islom moliyasi — shariat tamoyillariga muvofiq amalga oshiriladigan moliyaviy bitimlar tizimi. U foiz (riba) olishni taqiqlaydi va oʻrniga provayder va mijoz oʻrtasida xavf va foydani adolatli taqsimlashga asoslangan. Oʻzbekistonda islom moliyasi xizmatlarini joriy etish boʻyicha faol muhokama 2018 yilda boshlangan va oʻshandan beri kengayib borayotgan shariatga muvofiq kredit bozori uchun zamin yaratuvchi bir qator qonunchilik hujjatlari qabul qilindi.",
+        text: "Islom moliyasi — shariat tamoyillariga muvofiq amalga oshiriladigan moliyaviy bitimlar tizimi. U foiz (riba) olishni taqiqlaydi va oʻrniga provayder va mijoz oʻrtasida xavf va foydani adolatli taqsimlashga asoslangan. Oʻzbekistonda islom moliyasi xizmatlarini joriy etish boʻyicha faol muhokama 2018-yilda boshlangan va oʻshandan beri kengayib borayotgan shariatga muvofiq kredit bozori uchun zamin yaratuvchi bir qator qonunchilik hujjatlari qabul qilindi.",
       },
       { type: "h2" as const, text: "Qonunchilik bazasi" },
       {
@@ -348,10 +348,10 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Oʻzbekiston Respublikasining 2022 yil 20 apreldagi «Nobank kredit tashkilotlari va mikromoliya faoliyati toʻgʻrisida»gi OʻRQ-765-sonli Qonuni.",
+          "Oʻzbekiston Respublikasining 2022-yil 20-apreldagi «Nobank kredit tashkilotlari va mikromoliya faoliyati toʻgʻrisida»gi OʻRQ-765-sonli Qonuni.",
           "«Tadbirkorlikni rivojlantirishda mikromoliya xizmatlarining roli va ulushini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida»gi Prezident Farmoni.",
-          "2021 yil 13 apreldagi «Kapital bozorini yanada rivojlantirish chora-tadbirlari toʻgʻrisida»gi PF-6207-sonli Prezident Farmoni.",
-          "Markaziy bankning 2024 yil 19 iyuldagi «Mikromoliya tashkilotlari tomonidan islom moliyasi xizmatlarini koʻrsatish tartibi toʻgʻrisidagi Nizomni tasdiqlash haqida»gi 23/4-sonli Qarori.",
+          "2021-yil 13-apreldagi «Kapital bozorini yanada rivojlantirish chora-tadbirlari toʻgʻrisida»gi PF-6207-sonli Prezident Farmoni.",
+          "Markaziy bankning 2024-yil 19-iyuldagi «Mikromoliya tashkilotlari tomonidan islom moliyasi xizmatlarini koʻrsatish tartibi toʻgʻrisidagi Nizomni tasdiqlash haqida»gi 23/4-son qarori.",
         ],
       },
       { type: "h2" as const, text: "Islom moliyasi xizmatlarini kim koʻrsatishi mumkin" },
@@ -361,7 +361,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "Islom moliyasi xizmatlarini koʻrsatishning batafsil tartibi Oʻzbekiston Respublikasi Markaziy banki tomonidan ishlab chiqiladi. 2024 yil 19 iyuldagi Qaror MMTlar qaysi vositalarni taklif qilishi mumkinligini va ular rioya qilishi shart boʻlgan operatsion shartlarni belgilaydi.",
+        text: "Islom moliyasi xizmatlarini koʻrsatishning batafsil tartibi Oʻzbekiston Respublikasi Markaziy banki tomonidan ishlab chiqiladi. 2024-yil 19-iyuldagi qaror MMTlar qaysi vositalarni taklif qilishi mumkinligini va ular rioya qilishi shart boʻlgan operatsion shartlarni belgilaydi.",
       },
       {
         type: "p" as const,
@@ -384,7 +384,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "Maxsus kengash ishtirokchilar (aktsionerlar) tomonidan umumiy yigʻilishda tashkil etiladi va kamida besh kishidan iborat boʻlishi shart. Muqobil ravishda, MMT umumiy yigʻilish qarori bilan ixtisoslashgan uyushma yoki ittifoq huzurida tashkil etilgan, Nizomda belgilangan tarkib talablariga javob beradigan Maxsus kengashni shartnoma (autsorsing) asosida jalb qilishi mumkin. Kamida bir aʼzo islom huquqi boʻyicha oliy maʼlumotga, bir aʼzo oliy yuridik maʼlumotga, qolgan aʼzolar esa islom moliyasi boʻyicha xalqaro sertifikatga ega boʻlishi shart.",
+        text: "Maxsus kengash ishtirokchilar (aksiyadorlar) tomonidan umumiy yigʻilishda tashkil etiladi va kamida besh kishidan iborat boʻlishi shart. Muqobil ravishda, MMT umumiy yigʻilish qarori bilan ixtisoslashgan uyushma yoki ittifoq huzurida tashkil etilgan, Nizomda belgilangan tarkib talablariga javob beradigan Maxsus kengashni shartnoma (autsorsing) asosida jalb qilishi mumkin. Kamida bir aʼzo islom huquqi boʻyicha oliy maʼlumotga, bir aʼzo oliy yuridik maʼlumotga, qolgan aʼzolar esa islom moliyasi boʻyicha xalqaro sertifikatga ega boʻlishi shart.",
       },
       { type: "h2" as const, text: "Islom moliyasi tamoyillari" },
       {
@@ -419,7 +419,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
-        text: "MMT ijaraga olingan mulkdagi har qanday nuqsonlar uchun javobgardir. Ijaraga olingan aktivning kapital taʼmirlash MMT hisobidan, joriy texnik xizmat koʻrsatish va kichik taʼmirlash mijoz hisobidan amalga oshiriladi. Mijoz tomonida halol boʻlmagan xatti-harakatlar xavfini kamaytirish uchun MMT taʼminot (garov, kafolat yoki bayʼana) talab qilishi mumkin. Masalan, mijoz islom ijarasini qabul qilishdan bosh tortgan taqdirda, bayʼana MMTning haqiqiy zararlarini qoplashga sarflanishi mumkin.",
+        text: "MMT ijaraga olingan mulkdagi har qanday nuqsonlar uchun javobgardir. Ijaraga olingan aktivni kapital taʼmirlash MMT hisobidan, joriy texnik xizmat koʻrsatish va kichik taʼmirlash mijoz hisobidan amalga oshiriladi. Mijoz tomonida halol boʻlmagan xatti-harakatlar xavfini kamaytirish uchun MMT taʼminot (garov, kafolat yoki bayʼana) talab qilishi mumkin. Masalan, mijoz islom ijarasini qabul qilishdan bosh tortgan taqdirda, bayʼana MMTning haqiqiy zararlarini qoplashga sarflanishi mumkin.",
       },
       { type: "h3" as const, text: "Ijara Muntahiya Bittamlik (sotib olish huquqi bilan ijara)" },
       {
@@ -439,7 +439,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h3" as const, text: "Musharaka (foyda va zararni taqsimlovchi sherikchilik)" },
       {
         type: "p" as const,
-        text: "Musharaka — bu sherikchilikka asoslangan islom moliyasi shaklidir. MMT va mijoz birgalikda loyihaga mablag' yoki aktivlar kiritadi va ham foydani, ham xavflarni baham koʻradi. Foyda oldindan kelishilgan nisbatlarda taqsimlanadi; zararlar har bir tomonning kapitaldagi ulushiga mutanosib ravishda taqsimlanadi.",
+        text: "Musharaka — bu sherikchilikka asoslangan islom moliyasi shaklidir. MMT va mijoz birgalikda loyihaga mablagʻ yoki aktivlar kiritadi va ham foydani, ham xavflarni baham koʻradi. Foyda oldindan kelishilgan nisbatlarda taqsimlanadi; zararlar har bir tomonning kapitaldagi ulushiga mutanosib ravishda taqsimlanadi.",
       },
       {
         type: "p" as const,
@@ -453,13 +453,13 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2" as const, text: "Advizen qanday yordam bera oladi" },
       {
         type: "p" as const,
-        text: "Advizen jamoasi aʼzolari oʻzlarining oldingi karyeralarida — jumladan Oʻzbekistondagi islom fintex-startapining urug' investitsiya bosqichidagi ish va islom moliyasi vositalarini milliy qonunchilikka integratsiyalash boʻyicha hukumat darajasidagi maslahat loyihalarida ishtirok etish — Oʻzbekistonda islom moliyasini tuzilmalashtirish boʻyicha amaliy tajribaga ega. Biz mikromoliya tashkilotlari va investorlarga ularning biznes-modeli uchun mos vositalarni baholashda, shariatga mos shartnoma hujjatlarini ishlab chiqishda, Maxsus kengashlarni tashkil etish va ularga maslahat berishda hamda Markaziy bank talablariga doimiy muvofiqligini taʼminlashda yordam beramiz.",
+        text: "Advizen jamoasi aʼzolari oʻzlarining oldingi karyeralarida — jumladan Oʻzbekistondagi islom fintex startapining seed investitsiya bosqichidagi ish va islom moliyasi vositalarini milliy qonunchilikka integratsiyalash boʻyicha hukumat darajasidagi maslahat loyihalarida ishtirok etish — Oʻzbekistonda islom moliyasini tuzilmalashtirish boʻyicha amaliy tajribaga ega. Biz mikromoliya tashkilotlari va investorlarga ularning biznes-modeli uchun mos vositalarni baholashda, shariatga mos shartnoma hujjatlarini ishlab chiqishda, Maxsus kengashlarni tashkil etish va ularga maslahat berishda hamda Markaziy bank talablariga doimiy rioya etilishini taʼminlashda yordam beramiz.",
       },
     ],
       faq: [
       {
         question: "Oʻzbekistonda qanday islom moliyasi vositalari mavjud?",
-        answer: "Markaziy bankning 23/4-sonli Qarori (2024 yil 19 iyul) 6 ta vositaga ruxsat beradi: Murabaha (kechiktirilgan toʻlovli moliyalashtirish — MMT tovarlarni sotib olib, mijozga belgilangan ustama bilan qayta sotadi); Islomiy Ijara (islom ijarasi); Ijara Muntahiya Bittamlik (sotib olish huquqi bilan ijara); Salam (aylanma kapitalga muhtoj ishlab chiqaruvchilar uchun oldindan toʻlov asosidagi moliyalashtirish); Mudaraba (MMT kapital taqdim etadigan foydani taqsimlovchi sherikchilik); Musharaka (foyda va zararni taqsimlovchi sherikchilik). Faqat MMTlar bu xizmatlarni koʻrsatishi mumkin — biznes uchun 300 000 000 soʻmgacha va jismoniy shaxslar uchun 100 000 000 soʻmgacha.",
+        answer: "Markaziy bankning 23/4-son qarori (2024-yil 19-iyul) 6 ta vositaga ruxsat beradi: Murabaha (kechiktirilgan toʻlovli moliyalashtirish — MMT tovarlarni sotib olib, mijozga belgilangan ustama bilan qayta sotadi); Islomiy Ijara (islom ijarasi); Ijara Muntahiya Bittamlik (sotib olish huquqi bilan ijara); Salam (aylanma kapitalga muhtoj ishlab chiqaruvchilar uchun oldindan toʻlov asosidagi moliyalashtirish); Mudaraba (MMT kapital taqdim etadigan foydani taqsimlovchi sherikchilik); Musharaka (foyda va zararni taqsimlovchi sherikchilik). Faqat MMTlar bu xizmatlarni koʻrsatishi mumkin — biznes uchun 300 000 000 soʻmgacha va jismoniy shaxslar uchun 100 000 000 soʻmgacha.",
       },
       {
         question: "Oʻzbekistonda islom moliyasi xizmatlarini kim koʻrsatishi mumkin?",
@@ -471,7 +471,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda islom moliyasi uchun Maxsus kengash talabi qanday?",
-        answer: "Islom moliyasi xizmatlarini koʻrsatuvchi har qanday MMT shariat muvofiqligini taʼminlash uchun masʼul Maxsus kengash tashkil etishi shart. Kamida 5 aʼzo — kamida 1 kishi islom huquqi boʻyicha oliy maʼlumotga, 1 kishi oliy yuridik maʼlumotga ega boʻlishi va qolgan aʼzolarning har biri islom moliyasi boʻyicha xalqaro sertifikatga ega boʻlishi shart. Kengash aktsionerlarning umumiy yigʻilishi qaroriga koʻra ichki ravishda tashkil etilishi yoki tarkib talablariga javob bergan taqdirda ixtisoslashgan uyushma yoki ittifoq huzuridagi kengash shartnoma asosida autsorsing yoʻli bilan jalb qilinishi mumkin.",
+        answer: "Islom moliyasi xizmatlarini koʻrsatuvchi har qanday MMT shariat muvofiqligini taʼminlash uchun masʼul Maxsus kengash tashkil etishi shart. Kamida 5 aʼzo — kamida 1 kishi islom huquqi boʻyicha oliy maʼlumotga, 1 kishi oliy yuridik maʼlumotga ega boʻlishi va qolgan aʼzolarning har biri islom moliyasi boʻyicha xalqaro sertifikatga ega boʻlishi shart. Kengash aksiyadorlarning umumiy yigʻilishi qaroriga koʻra ichki ravishda tashkil etilishi yoki tarkib talablariga javob bergan taqdirda ixtisoslashgan uyushma yoki ittifoq huzuridagi kengash shartnoma asosida autsorsing yoʻli bilan jalb qilinishi mumkin.",
       },
     ],
   },
