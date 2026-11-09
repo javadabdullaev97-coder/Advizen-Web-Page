@@ -61,7 +61,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title} className="min-w-0">
-                <h3 className="text-[15px] font-semibold text-foreground-hi mb-4">{title}</h3>
+                <p className="text-[15px] font-semibold text-foreground-hi mb-4">{title}</p>
                 <ul className="flex flex-col gap-2.5">
                   {links.map((link) => (
                     <li key={link.label}>

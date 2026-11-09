@@ -1,13 +1,44 @@
 # Advizen Consulting — Full Knowledge Base
 > https://www.advizenco.com
-> Last updated: 2026-05-12
+> Last updated: 2026-11-09
 > Format: llms-full.txt (extended AI knowledge base)
 
-Advizen Consulting is a full-service business advisory firm headquartered in Tashkent, Uzbekistan, providing integrated tax, legal, finance, accounting, audit, HR, and compliance services to foreign investors and companies operating in Uzbekistan and Central Asia. The firm combines advisory and managed operations under one roof, acting as a single point of contact for the entire business lifecycle in the region.
+Advizen Consulting LLC is an advisory firm in Tashkent, Uzbekistan. It advises foreign and local companies entering and operating in Uzbekistan on tax, law, accounting, HR and payroll, funding, M&A and due diligence, and runs managed services such as entity management, Employer of Record, payroll, work permits and a virtual office. Work is coordinated by one partner, in English, Russian or Uzbek.
+
+Contact: +998 33 488 48 88 (phone and WhatsApp), info@advizenco.com, Telegram @advizen. Service pages: https://www.advizenco.com/expertise
+
+---
+
+## Tashkent International Financial Centre: The 2026 Constitutional Law
+URL: https://www.advizenco.com/insights/tashkent-international-financial-centre
+
+A neutral analysis of Constitutional Law No. ЎРҚ-1158 of 13 July 2026 establishing the Tashkent International Financial Centre — its legal architecture, tax regime, operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.
+
+### Frequently Asked Questions
+
+**Is TIFC a special economic zone?**
+No. A special economic zone grants tax and customs incentives but leaves companies subject to ordinary Uzbek civil, corporate, and commercial law and to the ordinary courts. TIFC is established by Constitutional Law No. ЎРҚ-1158 as a territory with its own legal regime, its own regulator (the Financial Services Authority), and its own court (the Tashkent International Commercial Court). Within the centre, TIFC decisions prevail over conflicting national legislation, and matters not covered by TIFC rules are governed subsidiarily by the common law and equity of England and Wales.
+
+**What tax applies inside TIFC?**
+The national Tax Code applies inside the centre only where the Constitutional Law or a TIFC resolution expressly provides. TIFC bodies and their wholly-owned entities are exempt from corporate profit tax and social tax until 1 January 2076, and qualified participants are exempt on income from financial services over the same period, subject to economic-substance and governance conditions. The exception is large multinational groups — those with consolidated annual revenue of EUR 750 million or more — which receive no exemption and instead pay a qualified domestic minimum top-up tax at the standard national rate (15%), in line with the OECD Pillar Two global minimum tax.
+
+**How does TIFC compare to AIFC in Kazakhstan?**
+The AIFC (Astana, established 2018) is the closest analogue and the evident template. Both are created by constitutional-level statute, base their law on English common-law principles, use English as the official language, operate an independent financial regulator and an independent English-language court, and grant a roughly fifty-year tax exemption (AIFC to 2066, TIFC to 2076). TIFC modernises the model by hard-wiring the OECD Pillar Two minimum tax into the founding law and by including an explicit digital-assets mandate from the outset — features the AIFC and older centres such as DIFC and ADGM addressed only later.
+
+**How does English common law differ from Uzbek law in practice?**
+Uzbekistan is a civil-law jurisdiction: its private law is codified and judges apply written provisions, with prior judgments carrying only persuasive weight. England and Wales operate on common law, where much of the substantive law lives in decided cases and courts are bound by precedent. For commercial parties the practical consequences are greater predictability from an established body of case law, broad freedom of contract, the availability of trusts and equitable remedies (specific performance, injunctions) that have no direct Uzbek equivalent, and interpretation focused on the commercial purpose of the bargain. Inside TIFC, participants can contract and litigate on this basis without selecting a foreign governing law or forum.
+
+**Can a foreign-licensed financial firm operate in TIFC?**
+Yes, through the transitional routes in Articles 32 and 33. A holder of a valid national Uzbek licence may continue to provide the licensed services within the centre without a fresh application, provided it registers a subsidiary or branch as a permitted transitional participant within sixty days of activation. An entity licensed in a recognised foreign jurisdiction may obtain a transitional licence where the TIFC Administration has concluded a memorandum of understanding or other supervisory-cooperation arrangement with that firm's home regulator. The catalogue of recognised jurisdictions and regulators is to be set by TIFC resolution.
+
+**When will TIFC be operational?**
+The Constitutional Law is in force, but the centre is not yet operational. The TIFC bodies have twelve months from entry into force — extendable by the Council by up to six months — to adopt the foundational resolutions on governance, regulation, adjudication, and operations. Only then does the Council assess readiness and submit an activation decision to the President for approval. The detailed tax, currency, and residency rules will be published as implementing resolutions during that window.
 
 ---
 
 ## Accounting Law in Uzbekistan: Key Requirements for Businesses
+URL: https://www.advizenco.com/insights/accounting-law-uzbekistan
+
 
 Uzbekistan's primary accounting legislation is Law No. ЗРУ-404, enacted on April 13, 2016. The law applies to all legal entities incorporated or operating in Uzbekistan, including foreign-invested enterprises, branches, and representative offices. The core obligation is to maintain proper accounting records using the double-entry method, supported by mandatory primary documents for every business transaction.
 
@@ -44,6 +75,8 @@ A: Turnover tax payers (entities on the simplified tax regime) are exempt from t
 ---
 
 ## Accounting Policy for Tax Purposes in Uzbekistan
+URL: https://www.advizenco.com/insights/accounting-policy-tax-purposes
+
 
 Chapter 7 of the Uzbekistan Tax Code requires every taxpayer — without exception — to adopt and maintain a formal Accounting Policy for Tax Purposes. This document governs how tax calculations are performed when the Tax Code permits alternative approaches, and it serves as the taxpayer's binding commitment to a consistent methodology throughout the calendar year.
 
@@ -80,6 +113,8 @@ A: Yes. It may be incorporated into the overall financial accounting policy docu
 ---
 
 ## Creative Industry Park: Uzbekistan's Framework for Creative Economy
+URL: https://www.advizenco.com/insights/creative-industry-park-uzbekistan
+
 
 Presidential Decree No. UP-61, signed on March 26, 2025, established the Creative Industry Park framework in Uzbekistan. The legal foundation rests on Law No. ZRU-970 (October 3, 2024), which formally defines creative industries to include literary arts, applied arts, architecture, fine arts, design, film and media production, music, performing arts, and cultural heritage activities.
 
@@ -112,6 +147,8 @@ A: A foreign company must establish a local legal entity in Uzbekistan to access
 ---
 
 ## Crypto-Asset Service Providers: Licensing in Uzbekistan
+URL: https://www.advizenco.com/insights/crypto-asset-service-providers-uzbekistan
+
 
 Uzbekistan regulates crypto-asset service providers through the National Agency for Perspective Projects (NAPP) under Regulation No. 3380, issued on August 15, 2022. NAPP is the sole licensing authority and supervisory body for all crypto-related activities in the country.
 
@@ -148,6 +185,8 @@ A: All servers must be physically located within Uzbekistan. Remote or cloud hos
 ---
 
 ## Employer of Record in Central Asia: A Practical Overview
+URL: https://www.advizenco.com/insights/employer-of-record-central-asia
+
 
 The Employer of Record (EoR) model allows a foreign company to engage workers in Uzbekistan, Kazakhstan, or Kyrgyzstan without establishing its own local legal entity. The EoR is a licensed local company that becomes the formal employer on paper, handling all employment law obligations, while the foreign client company retains day-to-day management control over the worker's activities.
 
@@ -184,6 +223,8 @@ A: The client pays the worker's gross salary plus employer-side social contribut
 ---
 
 ## Escrow Accounts in Uzbekistan: Legal Mechanics & Use Cases
+URL: https://www.advizenco.com/insights/escrow-accounts-uzbekistan
+
 
 Uzbekistan introduced mandatory escrow arrangements for real estate and vehicle transactions through a two-wave legislative reform. The reform is designed to eliminate advance payment fraud, protect buyers, and bring transaction values into the formal financial system.
 
@@ -220,6 +261,8 @@ A: No. The fees are flat: 206,000 UZS for real estate and 103,000 UZS for vehicl
 ---
 
 ## Franchising in Uzbekistan: Legal Framework & Entry Structures
+URL: https://www.advizenco.com/insights/franchising-uzbekistan
+
 
 Uzbekistan does not have a standalone franchise law. Franchise arrangements are governed by the Civil Code, which treats a franchise agreement as a "comprehensive business licence agreement" granting a complex licence. Understanding this classification is essential because it determines registration requirements, tax treatment, and the legal remedies available to both parties.
 
@@ -256,6 +299,8 @@ A: No. Uzbekistan competition law prohibits price-fixing between licensor and fr
 ---
 
 ## Islamic Finance in Uzbekistan: A Practical Guide
+URL: https://www.advizenco.com/insights/islamic-finance-uzbekistan
+
 
 Uzbekistan enacted Law No. ЗРУ-765 on April 20, 2022, formally authorizing Islamic (Sharia-compliant) financial instruments. The operational framework was completed by Central Bank Resolution No. 23/4 on July 19, 2024. Under current rules, only microfinance organizations (MFOs) are licensed to provide Islamic finance products; commercial banks remain outside the Islamic finance framework.
 
@@ -292,6 +337,8 @@ A: All penalty payments must be directed to charitable purposes and cannot be re
 ---
 
 ## Licensing Procedures for Regulated Activities in Uzbekistan
+URL: https://www.advizenco.com/insights/licensing-procedures-uzbekistan
+
 
 Law No. ЗРУ-701, enacted on July 14, 2021, consolidated Uzbekistan's regulatory access framework into three tracks: licensing (high-risk activities listed in Appendix 1), permitting documents (activities in Appendix 2), and notifications (low-risk activities in Appendix 3 requiring no prior approval).
 
@@ -332,6 +379,8 @@ A: Yes. Paying 70% of the fine voluntarily while simultaneously submitting a lic
 ---
 
 ## Online Gambling Regulation in Uzbekistan
+URL: https://www.advizenco.com/insights/online-gambling-uzbekistan
+
 
 Online gambling became legal in Uzbekistan from January 1, 2025, following Cabinet of Ministers Resolution No. 814. The National Agency for Perspective Projects (NAPP) is the designated regulatory authority for all online gambling activities.
 
@@ -364,6 +413,8 @@ A: Yes. If the platform is intended for Uzbek users, uses Uzbek bank card accept
 ---
 
 ## Outsourcing Operational Activities in Uzbekistan
+URL: https://www.advizenco.com/insights/outsourcing-operational-activities
+
 
 Strategic outsourcing of back-office and operational functions — including accounting, legal, HR, payroll, customs, and compliance — is a well-established practice in Uzbekistan and is growing rapidly as the market becomes more sophisticated and regulatory complexity increases.
 
@@ -396,6 +447,8 @@ A: Yes, particularly for small foreign-invested companies. Fixed monthly outsour
 ---
 
 ## Payroll & Social Contributions: Employer Obligations in Uzbekistan
+URL: https://www.advizenco.com/insights/payroll-social-contributions
+
 
 Uzbekistan operates a flat personal income tax (PIT) rate of 12% on employment income, effective since January 2023. The rate applies to both resident and non-resident employees. Dividend income is taxed at the reduced rate of 5%.
 
@@ -428,6 +481,8 @@ A: Monthly PIT report and USP declaration by the 10th of the following month; an
 ---
 
 ## Permanent Establishment Risk in Uzbekistan
+URL: https://www.advizenco.com/insights/permanent-establishment-uzbekistan
+
 
 A Permanent Establishment (PE) is a fixed place of business through which a foreign company conducts all or part of its business activities in Uzbekistan. PE triggers corporate income tax liability in Uzbekistan on the profits attributable to that establishment.
 
@@ -464,6 +519,8 @@ A: The tax authority may assess back taxes for all open periods, apply interest 
 ---
 
 ## PIT Refunds for Education Expenses in Uzbekistan
+URL: https://www.advizenco.com/insights/pit-refunds-education-uzbekistan
+
 
 Uzbekistan allows individual taxpayers to recover personal income tax (PIT) paid on income used for qualifying expenditure categories. The standard PIT rate is 12%; a refund effectively reduces the net cost of qualifying expenses by returning tax already withheld by the employer.
 
@@ -494,6 +551,8 @@ A: The refund must be processed within 15 days of the refund application being s
 ---
 
 ## Representative Offices in Uzbekistan: Registration & Compliance
+URL: https://www.advizenco.com/insights/representative-offices-uzbekistan
+
 
 Foreign commercial organizations may establish representative offices in Uzbekistan under Cabinet of Ministers Resolution No. 410 (October 23, 2000). The Ministry of Investments, Industry and Trade (MIVT) administers the accreditation process.
 
@@ -534,6 +593,8 @@ A: Yes, provided the Head's authority to sign employment contracts is explicitly
 ---
 
 ## Self-Employment Regime in Uzbekistan
+URL: https://www.advizenco.com/insights/self-employment-uzbekistan
+
 
 Uzbekistan introduced a dedicated self-employment registration and tax regime effective July 1, 2020. The regime provides a low-barrier entry point for individuals to operate legally without establishing a formal legal entity or going through the full individual entrepreneur registration process.
 
@@ -574,6 +635,8 @@ A: A maximum of 3 activity types at once, selected from the approved list of ove
 ---
 
 ## Special Economic Zones in Uzbekistan: A Comparative Guide
+URL: https://www.advizenco.com/insights/special-economic-zones-uzbekistan
+
 
 Law No. 604 (February 17, 2020) governs the establishment and operation of Special Economic Zones (SEZs) in Uzbekistan. Five types of zones are authorized: free economic zones, special scientific and technological zones, tourist and recreational zones, free trade zones, and special industrial zones.
 
@@ -614,6 +677,8 @@ A: IT Park employees pay 7.5% PIT (versus the standard 12%) until January 1, 202
 ---
 
 ## Voluntary Liquidation of Companies in Uzbekistan
+URL: https://www.advizenco.com/insights/voluntary-liquidation-uzbekistan
+
 
 Presidential Decree No. UP-5739 (June 7, 2019) introduced a streamlined voluntary liquidation procedure for Uzbekistan-registered companies. The entire process from initial notification to final deregistration must be completed within a maximum of six months.
 

@@ -1,32 +1,22 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { getArticleBySlug } from "./articles";
 import { servicesData, getServiceBySlug } from "./services";
 import { routing, type Locale } from "@/i18n/routing";
 
 const SITE_URL = "https://www.advizenco.com";
 const ORG_NAME = "Advizen Consulting";
-const ORG_LOGO = `${SITE_URL}/Advizen Logo/android-chrome-512x512.png`;
-const OG_IMAGE = `${SITE_URL}/Advizen Logo/og.jpg`;
+const ORG_LOGO = `${SITE_URL}/Advizen%20Logo/android-chrome-512x512.png`;
+const OG_IMAGE = `${SITE_URL}/Advizen%20Logo/og.jpg`;
+const ORG_DESCRIPTION =
+  "Tax, legal, accounting and HR advisory for companies entering and operating in Uzbekistan, coordinated by one partner, in English, Russian or Uzbek.";
 
 const OG_LOCALE: Record<Locale, string> = {
   en: "en_US",
   ru: "ru_RU",
   uz: "uz_UZ",
 };
-
-const SERVICE_CATALOG = [
-  { name: "Tax Consulting", description: "Tax planning, transfer pricing, tax due diligence and dispute resolution under Uzbekistan tax legislation." },
-  { name: "Legal Advisory", description: "Corporate, commercial, M&A, regulatory and compliance counsel for businesses operating in Uzbekistan and Central Asia." },
-  { name: "Accounting Services", description: "Full-cycle bookkeeping, financial reporting, IFRS conversion and statutory accounting in line with Uzbekistan standards." },
-  { name: "HR Services", description: "Payroll, social contributions, employment contracts, expat work permits and HR policy design for Uzbekistan." },
-  { name: "Funding Advisory", description: "Capital raising, investor matchmaking, financial modelling and funding strategy across Central Asia." },
-  { name: "M&A Advisory", description: "Buy-side, sell-side and merger advisory including valuation, structuring and post-deal integration in Uzbekistan." },
-  { name: "Due Diligence", description: "Legal, tax, financial and operational due diligence for inbound investors and acquirers." },
-  { name: "Entity Management", description: "Company formation, corporate secretarial, statutory filings and ongoing entity governance services." },
-  { name: "Employer of Record", description: "EOR services across Uzbekistan, Kazakhstan and Kyrgyzstan — hire, payroll and compliance without setting up a local entity." },
-  { name: "Corporate Services", description: "Registered office, virtual office, nominee directors and ongoing corporate housekeeping for foreign-owned entities." },
-];
 
 export const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -35,91 +25,43 @@ export const websiteJsonLd = {
   url: SITE_URL,
   name: ORG_NAME,
   alternateName: "Advizen",
-  description:
-    "Premier business consulting firm in Uzbekistan offering integrated tax, legal, finance, accounting, and HR services across Central Asia.",
+  description: ORG_DESCRIPTION,
   inLanguage: ["en", "ru", "uz"],
   publisher: { "@id": `${SITE_URL}#organization` },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE_URL}/insights?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
+// Only facts the site itself shows: no street address, the firm works from Tashkent.
 export const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["LegalService", "ProfessionalService", "LocalBusiness"],
+  "@type": "ProfessionalService",
   "@id": `${SITE_URL}#organization`,
   name: ORG_NAME,
   alternateName: "Advizen",
   legalName: "Advizen Consulting LLC",
-  description:
-    "Premier business consulting firm in Uzbekistan offering integrated tax, legal, finance, accounting, and HR services across Central Asia.",
-  slogan: "A single point of contact for your entire operation.",
+  description: ORG_DESCRIPTION,
   url: SITE_URL,
   logo: ORG_LOGO,
-  image: ORG_LOGO,
+  image: OG_IMAGE,
   telephone: "+998334884888",
   email: "info@advizenco.com",
-  foundingDate: "2016",
-  foundingLocation: {
-    "@type": "Place",
-    name: "Tashkent, Uzbekistan",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Mirzo Ulugbek district",
-    addressLocality: "Tashkent",
-    addressRegion: "Tashkent",
-    postalCode: "100060",
-    addressCountry: "UZ",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 41.2995,
-    longitude: 69.2401,
-  },
-  openingHoursSpecification: [
-    {
+  address: { "@type": "PostalAddress", addressLocality: "Tashkent", addressCountry: "UZ" },
+  areaServed: [{ "@type": "Country", name: "Uzbekistan" }],
+  knowsLanguage: ["en", "ru", "uz"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    telephone: "+998334884888",
+    email: "info@advizenco.com",
+    availableLanguage: ["English", "Russian", "Uzbek"],
+    hoursAvailable: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
       closes: "18:00",
     },
-  ],
-  priceRange: "$$",
-  currenciesAccepted: "UZS, USD",
-  paymentAccepted: "Cash, Bank Transfer",
-  areaServed: [
-    { "@type": "Country", name: "Uzbekistan" },
-    { "@type": "Country", name: "Kazakhstan" },
-    { "@type": "Country", name: "Kyrgyzstan" },
-    { "@type": "Place", name: "Central Asia" },
-  ],
-  knowsLanguage: ["en", "ru", "uz"],
-  numberOfEmployees: {
-    "@type": "QuantitativeValue",
-    minValue: 10,
-    maxValue: 50,
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Advisory Services",
-    itemListElement: SERVICE_CATALOG.map((s) => ({
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: s.name,
-        description: s.description,
-        provider: { "@id": `${SITE_URL}#organization` },
-        areaServed: { "@type": "Place", name: "Central Asia" },
-      },
-    })),
   },
   sameAs: [
+    "https://t.me/advizen",
     "https://uz.linkedin.com/company/advizen-consulting",
     "https://www.instagram.com/advizen_consulting/",
     "https://x.com/advizen_consult",
@@ -128,23 +70,39 @@ export const organizationJsonLd = {
   ],
 };
 
+function safeLocale(locale: string): Locale {
+  return hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
+}
+
+function homeUrl(locale: Locale) {
+  return locale === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${locale}`;
+}
+
 function articleUrl(slug: string, locale: string) {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
   return `${SITE_URL}${prefix}/insights/${slug}`;
 }
 
 function articleImage(image: string | undefined) {
-  if (!image) return `${SITE_URL}/Advizen Logo/android-chrome-512x512.png`;
-  return image.startsWith("http") ? image : `${SITE_URL}${image}`;
+  if (!image) return ORG_LOGO;
+  return image.startsWith("http") ? image : `${SITE_URL}${encodeURI(image)}`;
 }
 
-export function articleMetadata(slug: string, locale: string): Metadata {
-  const article = getArticleBySlug(slug, locale);
+async function articleTitle(slug: string, locale: Locale) {
+  const t = await getTranslations({ locale, namespace: "Publications" });
+  return t(`items.${slug}.title`);
+}
+
+export async function articleMetadata(slug: string, locale: string): Promise<Metadata> {
+  const safe = safeLocale(locale);
+  const article = getArticleBySlug(slug, safe);
   if (!article) return {};
 
-  const url = articleUrl(slug, locale);
+  const url = articleUrl(slug, safe);
   const image = articleImage(article.image);
-  const title = `${article.title} | ${ORG_NAME}`;
+  const heading = await articleTitle(slug, safe);
+  // Long headlines are cut off in results, so the firm name is added only when it fits.
+  const title = heading.length + ORG_NAME.length + 3 <= 60 ? `${heading} | ${ORG_NAME}` : heading;
   const description = article.subtitle || article.description;
 
   const languages = Object.fromEntries(
@@ -164,7 +122,8 @@ export function articleMetadata(slug: string, locale: string): Metadata {
       type: "article",
       url,
       siteName: ORG_NAME,
-      images: [{ url: image, width: 1200, height: 630, alt: article.title }],
+      locale: OG_LOCALE[safe],
+      images: [{ url: image, alt: heading }],
       publishedTime: article.date,
       authors: article.author ? [article.author] : undefined,
     },
@@ -177,45 +136,31 @@ export function articleMetadata(slug: string, locale: string): Metadata {
   };
 }
 
-export function articleJsonLd(slug: string, locale: string) {
-  const article = getArticleBySlug(slug, locale);
+export async function articleJsonLd(slug: string, locale: string) {
+  const safe = safeLocale(locale);
+  const article = getArticleBySlug(slug, safe);
   if (!article) return null;
 
-  const url = articleUrl(slug, locale);
+  const url = articleUrl(slug, safe);
   const image = articleImage(article.image);
 
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.title,
+    headline: await articleTitle(slug, safe),
     description: article.subtitle || article.description,
     image: [image],
     datePublished: article.date,
     dateModified: article.date,
-    author: {
-      "@type": "Organization",
-      name: article.author || ORG_NAME,
-      url: SITE_URL,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: ORG_NAME,
-      logo: {
-        "@type": "ImageObject",
-        url: ORG_LOGO,
-      },
-    },
+    author: { "@id": `${SITE_URL}#organization` },
+    publisher: { "@id": `${SITE_URL}#organization` },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": url,
     },
-    inLanguage: locale,
+    inLanguage: safe,
     articleSection: article.category,
     keywords: [article.category, article.tag, "Uzbekistan", "Tashkent"].filter(Boolean),
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "p:first-of-type"],
-    },
   };
 }
 
@@ -268,65 +213,54 @@ const PAGE_PATHS = {
 export type PageKey = keyof typeof PAGE_PATHS;
 export { OG_IMAGE };
 
-export function breadcrumbJsonLd(slug: string, locale: string) {
-  const article = getArticleBySlug(slug, locale);
-  if (!article) return null;
-  const homeUrl = locale === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${locale}`;
-  const insightsUrl = `${homeUrl}/insights`;
+export async function breadcrumbJsonLd(slug: string, locale: string) {
+  const safe = safeLocale(locale);
+  if (!getArticleBySlug(slug, safe)) return null;
+  const labels = BREADCRUMB_LABELS[safe];
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home",     item: homeUrl },
-      { "@type": "ListItem", position: 2, name: "Insights", item: insightsUrl },
-      { "@type": "ListItem", position: 3, name: article.title, item: articleUrl(slug, locale) },
+      { "@type": "ListItem", position: 1, name: labels.home,     item: homeUrl(safe) },
+      { "@type": "ListItem", position: 2, name: labels.insights, item: `${homeUrl(safe)}/insights` },
+      { "@type": "ListItem", position: 3, name: await articleTitle(slug, safe), item: articleUrl(slug, safe) },
     ],
   };
 }
 
-const BREADCRUMB_LABELS: Record<Locale, { home: string } & Partial<Record<PageKey, string>>> = {
+const BREADCRUMB_LABELS: Record<Locale, { home: string; expertise: string; insights: string } & Partial<Record<PageKey, string>>> = {
   en: {
     home: "Home",
     expertise: "Expertise",
     contact: "Contact",
+    insights: "Insights",
   },
   ru: {
     home: "Главная",
     expertise: "Услуги",
     contact: "Контакты",
+    insights: "Аналитика",
   },
   uz: {
     home: "Bosh sahifa",
     expertise: "Xizmatlar",
     contact: "Bog'lanish",
+    insights: "Tahlillar",
   },
 };
 
-export function expertiseServicesJsonLd(locale: string) {
-  const safe: Locale = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
-  const expertiseUrl = pagePath("expertise", safe);
+// The listing names each service and links to its page; the full Service entity lives there.
+export async function expertiseServicesJsonLd(locale: string) {
+  const safe = safeLocale(locale);
+  const t = await getTranslations({ locale: safe, namespace: "Services" });
   return {
     "@context": "https://schema.org",
-    "@graph": servicesData.map((s) => ({
-      "@type": "Service",
-      "@id": `${expertiseUrl}#service-${s.slug}`,
-      name: s.title,
-      description: s.description.join(" "),
-      serviceType: s.category,
-      url: expertiseUrl,
-      provider: { "@id": `${SITE_URL}#organization` },
-      areaServed: [
-        { "@type": "Country", name: "Uzbekistan" },
-        { "@type": "Place",   name: "Central Asia" },
-      ],
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: `${s.title} — Capabilities`,
-        itemListElement: s.capabilities.map((cap) => ({
-          "@type": "Offer",
-          itemOffered: { "@type": "Service", name: cap },
-        })),
-      },
+    "@type": "ItemList",
+    itemListElement: servicesData.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: t(`${s.slug}.title`),
+      url: `${homeUrl(safe)}/expertise/${s.slug}`,
     })),
   };
 }
@@ -347,29 +281,69 @@ export function pageBreadcrumbJsonLd(key: PageKey, locale: string) {
   };
 }
 
-export function serviceJsonLd(slug: string, locale: string) {
+async function serviceCopy(slug: string, locale: Locale) {
+  const t = await getTranslations({ locale, namespace: "Services" });
+  return {
+    title: t(`${slug}.title`),
+    // Operations services split their description in two parts.
+    description: t.has(`${slug}.description`)
+      ? t(`${slug}.description`)
+      : `${t(`${slug}.description1`)} ${t(`${slug}.description2`)}`,
+    capabilities: t.raw(`${slug}.capabilities`) as string[],
+  };
+}
+
+// Mid-sentence in Uzbek an ordinary name starts lowercase ("soliq konsaltingi"),
+// but names with other capitals keep them ("M&A konsaltingi", "Employer of Record").
+function midSentence(title: string) {
+  return /^\p{Lu}[^\p{Lu}]*$/u.test(title) ? title[0].toLowerCase() + title.slice(1) : title;
+}
+
+const SERVICE_TITLE: Record<Locale, (title: string) => string> = {
+  en: (title) => `${title} in Uzbekistan | ${ORG_NAME}`,
+  ru: (title) => `${title} в Узбекистане | ${ORG_NAME}`,
+  uz: (title) => `O'zbekistonda ${midSentence(title)} | ${ORG_NAME}`,
+};
+
+const SERVICE_LEAD: Record<Locale, (title: string) => string> = {
+  en: (title) => `${title} in Uzbekistan for foreign and local companies: `,
+  ru: (title) => `${title} в Узбекистане для иностранных и местных компаний: `,
+  uz: (title) => `O'zbekistondagi xorijiy va mahalliy kompaniyalar uchun ${midSentence(title)}: `,
+};
+
+// A factual description from the localized capability list, kept within what results show.
+function serviceDescription(locale: Locale, title: string, capabilities: string[]) {
+  const text = SERVICE_LEAD[locale](title);
+  const parts: string[] = [];
+  for (const cap of capabilities) {
+    const next = [...parts, cap.charAt(0).toLowerCase() + cap.slice(1)].join(", ");
+    if ((text + next).length > 155) break;
+    parts.push(cap.charAt(0).toLowerCase() + cap.slice(1));
+  }
+  return `${text}${parts.join(", ")}.`;
+}
+
+export async function serviceJsonLd(slug: string, locale: string) {
   const service = getServiceBySlug(slug);
   if (!service) return null;
-  const safe: Locale = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
-  const prefix = safe === routing.defaultLocale ? "" : `/${safe}`;
-  const serviceUrl = `${SITE_URL}${prefix}/expertise/${slug}`;
+  const safe = safeLocale(locale);
+  const copy = await serviceCopy(slug, safe);
+  const serviceUrl = `${homeUrl(safe)}/expertise/${slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${serviceUrl}#service`,
-    name: service.title,
-    description: service.description.join(" "),
-    serviceType: service.category,
+    name: copy.title,
+    description: copy.description,
+    serviceType: copy.title,
     url: serviceUrl,
+    inLanguage: safe,
     provider: { "@id": `${SITE_URL}#organization` },
-    areaServed: [
-      { "@type": "Country", name: "Uzbekistan" },
-      { "@type": "Place",   name: "Central Asia" },
-    ],
+    areaServed: { "@type": "Country", name: "Uzbekistan" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: `${service.title} — Capabilities`,
-      itemListElement: service.capabilities.map((cap) => ({
+      name: copy.title,
+      itemListElement: copy.capabilities.map((cap) => ({
         "@type": "Offer",
         itemOffered: { "@type": "Service", name: cap },
       })),
@@ -377,38 +351,32 @@ export function serviceJsonLd(slug: string, locale: string) {
   };
 }
 
-export function servicePageBreadcrumbJsonLd(slug: string, locale: string) {
-  const service = getServiceBySlug(slug);
-  if (!service) return null;
-  const safe: Locale = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
-  const homeUrl = safe === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${safe}`;
-  const expertiseUrl = `${homeUrl}/expertise`;
-  const serviceUrl = `${expertiseUrl}/${slug}`;
-  const expertiseLabel = BREADCRUMB_LABELS[safe].expertise ?? "Expertise";
+export async function servicePageBreadcrumbJsonLd(slug: string, locale: string) {
+  if (!getServiceBySlug(slug)) return null;
+  const safe = safeLocale(locale);
+  const { title } = await serviceCopy(slug, safe);
+  const labels = BREADCRUMB_LABELS[safe];
+  const expertiseUrl = `${homeUrl(safe)}/expertise`;
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: BREADCRUMB_LABELS[safe].home, item: homeUrl },
-      { "@type": "ListItem", position: 2, name: expertiseLabel,               item: expertiseUrl },
-      { "@type": "ListItem", position: 3, name: service.title,                item: serviceUrl },
+      { "@type": "ListItem", position: 1, name: labels.home,      item: homeUrl(safe) },
+      { "@type": "ListItem", position: 2, name: labels.expertise, item: expertiseUrl },
+      { "@type": "ListItem", position: 3, name: title,            item: `${expertiseUrl}/${slug}` },
     ],
   };
 }
 
-export function servicePageMetadata(slug: string, locale: string): Metadata {
-  const service = getServiceBySlug(slug);
-  if (!service) return {};
-  const safe: Locale = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
-  const prefix = safe === routing.defaultLocale ? "" : `/${safe}`;
-  const canonical = `${SITE_URL}${prefix}/expertise/${slug}`;
-  const title = `${service.title} Services in Uzbekistan | Advizen Consulting`;
-  const description = service.description[0];
+export async function servicePageMetadata(slug: string, locale: string): Promise<Metadata> {
+  if (!getServiceBySlug(slug)) return {};
+  const safe = safeLocale(locale);
+  const copy = await serviceCopy(slug, safe);
+  const canonical = `${homeUrl(safe)}/expertise/${slug}`;
+  const title = SERVICE_TITLE[safe](copy.title);
+  const description = serviceDescription(safe, copy.title, copy.capabilities);
   const languages = Object.fromEntries(
-    routing.locales.map((l: Locale) => {
-      const lPrefix = l === routing.defaultLocale ? "" : `/${l}`;
-      return [l, `${SITE_URL}${lPrefix}/expertise/${slug}`];
-    }),
+    routing.locales.map((l: Locale) => [l, `${homeUrl(l)}/expertise/${slug}`]),
   );
   return {
     title,
@@ -424,7 +392,7 @@ export function servicePageMetadata(slug: string, locale: string): Metadata {
       url: canonical,
       siteName: ORG_NAME,
       locale: OG_LOCALE[safe],
-      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `${service.title} | Advizen Consulting` }],
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: copy.title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -438,19 +406,19 @@ export function servicePageMetadata(slug: string, locale: string): Metadata {
 const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description: string }>> = {
   expertise: {
     en: {
-      title: "Tax, Legal, HR & Accounting Services in Uzbekistan | Advizen Consulting",
+      title: "Tax, Legal, Accounting and HR Services in Uzbekistan | Advizen",
       description:
-        "Integrated advisory across tax, legal, finance, accounting, HR and corporate services in Uzbekistan. Trusted by 80+ clients across 15+ industries in Central Asia.",
+        "14 services for companies in Uzbekistan: tax, legal, accounting, HR, funding, M&A and due diligence, plus entity management, EOR, payroll and work permits.",
     },
     ru: {
-      title: "Налоги, право, HR и бухгалтерия в Узбекистане | Advizen Consulting",
+      title: "Налоговые, юридические, бухгалтерские и HR-услуги в Узбекистане | Advizen",
       description:
-        "Интегрированное консультирование по налогам, праву, финансам, бухгалтерии, HR и корпоративным услугам в Узбекистане. Доверяют 80+ клиентов в 15+ отраслях.",
+        "14 услуг для компаний в Узбекистане: налоги, право, бухгалтерия, HR, финансирование, M&A, due diligence, управление компанией, EOR, зарплата и разрешения.",
     },
     uz: {
-      title: "O'zbekistonda soliq, huquq, HR va buxgalteriya | Advizen Consulting",
+      title: "O'zbekistonda soliq, yuridik, buxgalteriya va HR xizmatlari | Advizen",
       description:
-        "O'zbekistonda soliq, huquq, moliya, buxgalteriya, HR va korporativ xizmatlar bo'yicha integratsiyalashgan konsalting. 15+ sohada 80+ mijoz ishonchini qozongan.",
+        "O'zbekistondagi kompaniyalar uchun 14 xizmat: soliq, huquq, buxgalteriya, HR, moliyalashtirish, M&A, due diligence, EOR, ish haqi va ish ruxsatnomalari.",
     },
   },
   contact: {

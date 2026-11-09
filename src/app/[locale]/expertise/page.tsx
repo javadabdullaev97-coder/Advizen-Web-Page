@@ -8,7 +8,7 @@ export default async function ExpertisePage({
 }) {
   const { locale } = await params;
   const breadcrumb = pageBreadcrumbJsonLd("expertise", locale);
-  const services = expertiseServicesJsonLd(locale);
+  const services = await expertiseServicesJsonLd(locale);
   return (
     <>
       {breadcrumb && (

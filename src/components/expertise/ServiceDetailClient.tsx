@@ -106,7 +106,7 @@ const CHROME: Record<string, Record<string, string>> = {
     about: "About this service", whoFor: "Who this is for", capabilities: "Capabilities", deliver: "What we deliver",
     discuss: "Discuss this service", ctaPrefix: "Ready to discuss", ctaBody: "Our team is available to scope your engagement and answer initial questions.", start: "Start a conversation",
     selectedWork: "Selected work", viewAll: "View all projects", relatedServices: "Related services",
-    faqTitle: "Frequently asked", faqSubtitle: "Quick answers on the practical details that matter most.",
+    faqTitle: "Frequently asked questions", faqSubtitle: "Quick answers on the practical details that matter most.",
   },
   ru: {
     about: "Об этой услуге", whoFor: "Кому подходит", capabilities: "Возможности", deliver: "Что мы делаем",
@@ -118,7 +118,7 @@ const CHROME: Record<string, Record<string, string>> = {
     about: "Bu xizmat haqida", whoFor: "Bu kim uchun", capabilities: "Imkoniyatlar", deliver: "Biz nima qilamiz",
     discuss: "Bu xizmatni muhokama qilish", ctaPrefix: "Muhokama qilishga tayyormisiz", ctaBody: "Jamoamiz hamkorlik doʼirasini muhokama qilish va savollarga javob berish uchun tayyor.", start: "Suhbatni boshlash",
     selectedWork: "Tanlangan loyihalar", viewAll: "Barcha loyihalar", relatedServices: "Bogʼliq xizmatlar",
-    faqTitle: "Koʼp soʻraladigan", faqSubtitle: "Eng muhim amaliy savollarga qisqa javoblar.",
+    faqTitle: "Koʻp soʻraladigan savollar", faqSubtitle: "Eng muhim amaliy savollarga qisqa javoblar.",
   },
 };
 
@@ -128,7 +128,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
   const tServices = useTranslations("Services");
   const tEng = useTranslations("Engagements");
   const service = getServiceBySlug(slug);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const isMobile = useIsMobile();
 
   if (!service) return null;
@@ -242,10 +242,10 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-[5fr_7fr] gap-12 md:gap-20">
             <AnimatedSection>
-              <p className="tracking-luxury text-white/40 mb-4">{c.about}</p>
-              <h2 className="heading-luxury text-2xl md:text-3xl text-foreground leading-snug">
+              <h2 className="tracking-luxury text-white/40 mb-4">{c.about}</h2>
+              <p className="heading-luxury text-2xl md:text-3xl text-foreground leading-snug">
                 {serviceTitle}
-              </h2>
+              </p>
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
@@ -329,8 +329,8 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex items-end justify-between mb-10 md:mb-12 gap-6">
               <AnimatedSection>
-                <p className="tracking-luxury text-white/40 mb-3">{c.selectedWork}</p>
-                <h2 className="heading-luxury text-2xl md:text-3xl text-foreground">{serviceTitle}</h2>
+                <h2 className="tracking-luxury text-white/40 mb-3">{c.selectedWork}</h2>
+                <p className="heading-luxury text-2xl md:text-3xl text-foreground">{serviceTitle}</p>
               </AnimatedSection>
               <AnimatedSection delay={0.1} className="shrink-0">
                 <Link
@@ -445,9 +445,8 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid md:grid-cols-[5fr_7fr] gap-12 md:gap-20">
               <AnimatedSection>
-                <p className="tracking-luxury text-white/40 mb-4">{c.faqTitle}</p>
                 <h2 className="heading-luxury text-2xl md:text-3xl text-foreground leading-snug mb-4">
-                  {serviceTitle}
+                  {c.faqTitle}
                 </h2>
                 <p className="text-[13px] text-white/35 leading-relaxed">{c.faqSubtitle}</p>
               </AnimatedSection>
@@ -458,6 +457,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                     <div key={i}>
                       <button
                         onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                        aria-expanded={openFaq === i}
                         className="w-full flex items-start justify-between gap-4 text-left group py-4 min-h-[44px]"
                       >
                         <span className="text-[14px] text-white/65 group-hover:text-white/85 transition-colors leading-snug">
@@ -470,16 +470,15 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                           )}
                         />
                       </button>
-                      {openFaq === i && (
-                        <motion.p
-                          initial={{ opacity: 0, y: -6 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="mt-3 text-[13px] text-white/42 leading-relaxed pb-4"
-                        >
-                          {item.a}
-                        </motion.p>
-                      )}
+                      {/* Answers stay in the HTML for search and AI engines; closed ones collapse to zero height. */}
+                      <div
+                        className="grid transition-[grid-template-rows] duration-300 ease-[var(--ease-out)]"
+                        style={{ gridTemplateRows: openFaq === i ? "1fr" : "0fr" }}
+                      >
+                        <div className="overflow-hidden">
+                          <p className="text-[14px] text-white/55 leading-relaxed pb-4">{item.a}</p>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>

@@ -27,8 +27,8 @@ export default async function ServicePage({
   const { slug } = await params;
   if (!getServiceBySlug(slug)) notFound();
 
-  const jsonLd = serviceJsonLd(slug, "en");
-  const breadcrumb = servicePageBreadcrumbJsonLd(slug, "en");
+  const jsonLd = await serviceJsonLd(slug, "en");
+  const breadcrumb = await servicePageBreadcrumbJsonLd(slug, "en");
 
   return (
     <>

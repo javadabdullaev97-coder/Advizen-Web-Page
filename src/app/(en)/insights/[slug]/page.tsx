@@ -24,8 +24,8 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const jsonLd = articleJsonLd(slug, "en");
-  const breadcrumb = breadcrumbJsonLd(slug, "en");
+  const jsonLd = await articleJsonLd(slug, "en");
+  const breadcrumb = await breadcrumbJsonLd(slug, "en");
   const faq = faqJsonLd(slug, "en");
   const howTo = howToJsonLd(slug, "en");
 

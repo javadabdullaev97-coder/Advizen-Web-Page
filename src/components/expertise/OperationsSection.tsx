@@ -12,7 +12,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 
 type LucideIcon = ComponentType<SVGProps<SVGSVGElement>>;
 
-const SHOWN_SLUGS = ["entity-management", "eor", "corporate", "virtual-office"];
+const SHOWN_SLUGS = ["entity-management", "corporate", "eor", "payroll", "immigration", "virtual-office", "compliance"];
 const shownServices = SHOWN_SLUGS
   .map(slug => operationsServices.find(s => s.slug === slug))
   .filter(Boolean) as typeof operationsServices;

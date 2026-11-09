@@ -1,36 +1,37 @@
 # Advizen Consulting
 
-> Premier business advisory firm based in Tashkent, Uzbekistan, providing integrated consulting across tax, legal, finance, accounting, and HR for foreign investors and businesses operating in Central Asia.
+> Advizen Consulting LLC is an advisory firm in Tashkent, Uzbekistan. It advises foreign and local companies entering and operating in Uzbekistan on tax, law, accounting, HR and payroll, funding, M&A and due diligence, and runs managed services such as entity management, Employer of Record, payroll, work permits and a virtual office. Work is coordinated by one partner, in English, Russian or Uzbek.
 
-Advizen Consulting is a full-service business consultancy serving foreign investors, multinationals, and local companies entering or operating in Uzbekistan and the broader Central Asian market. We combine seven advisory disciplines (tax, legal, finance, accounting, audit, HR, and compliance) with managed operations services under one roof, acting as a single point of contact for the entire lifecycle of a business in the region.
+## Contact
 
-## Company
+- Phone and WhatsApp: +998 33 488 48 88 (Mon–Fri, 9:00–18:00 Tashkent time)
+- Email: info@advizenco.com
+- Telegram: @advizen (https://t.me/advizen)
+- Website: https://www.advizenco.com (English), https://www.advizenco.com/ru (Russian), https://www.advizenco.com/uz (Uzbek)
 
-- Name: Advizen Consulting
-- Location: Tashkent, Uzbekistan
-- Geographic focus: Uzbekistan, Kazakhstan, Central Asia
-- Languages: English, Russian (Русский), Uzbek (O'zbek)
-- Website: https://www.advizenco.com
+## Advisory services
 
-## Services
+- [Tax consulting](https://www.advizenco.com/expertise/tax): planning, VAT, transfer pricing, tax audits, incentives, customs and excise
+- [Legal advisory](https://www.advizenco.com/expertise/legal): company formation, licensing, contracts, governance
+- [Accounting](https://www.advizenco.com/expertise/finance): bookkeeping, IFRS and national standards, audit preparation
+- [Human resources](https://www.advizenco.com/expertise/hr): recruitment, HR outsourcing, HR audits
+- [Funding and grants](https://www.advizenco.com/expertise/funding): grant applications, investment readiness, business plans
+- [M&A advisory](https://www.advizenco.com/expertise/ma-advisory): buy-side and sell-side advice, structuring, valuation
+- [Due diligence](https://www.advizenco.com/expertise/due-diligence): tax, legal and financial review before an investment or acquisition
 
-### Advisory Services
-- Tax advisory and structuring (corporate profit tax, VAT, personal income tax, transfer pricing)
-- Legal advisory (company registration, corporate governance, contracts, licensing)
-- Financial advisory (investment structuring, M&A, financial modelling)
-- Accounting and bookkeeping (IFRS, local GAAP, management accounts)
-- Audit and assurance (statutory audit, internal audit, due diligence)
-- HR consulting (payroll, employment contracts, Employer of Record / EOR)
-- Compliance and regulatory affairs (AML, regulatory filings, NAPP licensing for crypto/fintech)
+## Managed services
 
-### Managed Operations
-- Company registration and liquidation
-- Accounting outsourcing
-- Payroll and HR administration
-- Employer of Record (EOR) services
-- Special Economic Zone (SEZ / FEZ) structuring
-- Permit and licence applications
-- Corporate secretarial services
+- [Entity management](https://www.advizenco.com/expertise/entity-management)
+- [Corporate services](https://www.advizenco.com/expertise/corporate)
+- [Employer of Record](https://www.advizenco.com/expertise/eor)
+- [Payroll bureau](https://www.advizenco.com/expertise/payroll)
+- [Work permits and immigration](https://www.advizenco.com/expertise/immigration)
+- [Virtual office](https://www.advizenco.com/expertise/virtual-office)
+- [Compliance monitoring](https://www.advizenco.com/expertise/compliance)
+
+## Track record
+
+Fifteen engagements led by Advizen advisers are on record (client names withheld), including tax, accounting and customs structuring of a nuclear power plant construction with a budget above $10 billion, due diligence and holding structuring for a Chinese energy group's $2B+ Uzbek operations, 80+ company registrations, 30+ tax and legal due diligences, and local consulting on banking, capital markets and Islamic finance legislation.
 
 ## Key Facts — Uzbekistan Business Environment
 
@@ -42,7 +43,8 @@ Advizen Consulting is a full-service business consultancy serving foreign invest
 - Full operational readiness (bank account, tax registration): 1–3 weeks
 - 100% foreign ownership permitted in the vast majority of sectors
 - Law on Foreign Investment guarantees profit repatriation and protection against nationalisation
-- Special Economic Zones (SEZs): Navoiy FEZ, Urgut FEZ, Jizzakh SEZ, and others — offer tax holidays up to 10 years
+- Withholding tax on payments to non-residents without a permanent establishment: 10% on dividends and interest, 20% on royalties and most other income (Tax Code, Art. 353)
+- Special Economic Zones (SEZs): Navoiy FEZ, Urgut FEZ, Jizzakh SEZ and others, with their own tax and customs incentives
 - Crypto/fintech licensing body: NAPP (National Agency for Perspective Projects)
 
 ## Pages
@@ -60,6 +62,7 @@ Advizen Consulting is a full-service business consultancy serving foreign invest
 
 ## Insights — Articles & Guides
 
+- [Tashkent International Financial Centre: The 2026 Constitutional Law](https://www.advizenco.com/insights/tashkent-international-financial-centre) — Constitutional Law No. ЎРҚ-1158 of 13 July 2026: legal architecture, tax regime and comparison with DIFC, ADGM, AIFC and QFC (2026-07-20)
 - [Islamic Finance in Uzbekistan: A Practical Guide](https://www.advizenco.com/insights/islamic-finance-uzbekistan) — Overview of Sharia-compliant instruments, CB Resolution No. 23/4, and MFO obligations (2026-04-28)
 - [Special Economic Zones in Uzbekistan: A Comparative Guide](https://www.advizenco.com/insights/special-economic-zones-uzbekistan) — Tax holidays, FEZ/SEZ structures, eligibility and application (2026-04-15)
 - [Employer of Record in Central Asia: A Practical Overview](https://www.advizenco.com/insights/employer-of-record-central-asia) — EOR across Uzbekistan, Kazakhstan, Kyrgyzstan — hire without a local entity (2026-03-15)

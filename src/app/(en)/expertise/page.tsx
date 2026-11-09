@@ -1,9 +1,9 @@
 import { pageBreadcrumbJsonLd, expertiseServicesJsonLd } from "@/lib/seo";
 import ExpertiseListingClient from "@/components/expertise/ExpertiseListingClient";
 
-export default function ExpertisePage() {
+export default async function ExpertisePage() {
   const breadcrumb = pageBreadcrumbJsonLd("expertise", "en");
-  const services = expertiseServicesJsonLd("en");
+  const services = await expertiseServicesJsonLd("en");
   return (
     <>
       {breadcrumb && (

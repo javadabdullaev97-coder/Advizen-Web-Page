@@ -7,7 +7,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     en: [
       {
         q: "What is Advizen Consulting?",
-        a: "Advizen Consulting is a premier business advisory firm based in Tashkent, Uzbekistan, offering integrated consulting across tax, legal, finance, accounting, and HR — a single point of contact for your entire operation in Central Asia.",
+        a: "Advizen Consulting LLC is an advisory firm in Tashkent, Uzbekistan. It advises foreign and local companies on tax, law, accounting, HR and payroll, funding, M&A and due diligence, and runs managed services such as entity management, Employer of Record, payroll, work permits and a virtual office. Work is coordinated by one partner, in English, Russian or Uzbek.",
       },
       {
         q: "Which markets do you serve?",
@@ -45,7 +45,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     ru: [
       {
         q: "Что такое Advizen Consulting?",
-        a: "Advizen Consulting — ведущая консалтинговая компания, базирующаяся в Ташкенте, Узбекистан. Мы предоставляем интегрированные услуги в области налогов, юридического сопровождения, финансов, бухгалтерии и HR — единая точка контакта для всей вашей деятельности в Центральной Азии.",
+        a: "Advizen Consulting LLC — консалтинговая компания из Ташкента. Консультирует иностранные и местные компании по налогам, праву, бухгалтерии, HR и зарплате, финансированию, M&A и due diligence, а также ведёт операционные сервисы: управление компанией, Employer of Record, расчёт зарплаты, разрешения на работу и виртуальный офис. Работу координирует один партнёр, на русском, английском или узбекском.",
       },
       {
         q: "На каких рынках вы работаете?",
@@ -83,7 +83,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     uz: [
       {
         q: "Advizen Consulting nima?",
-        a: "Advizen Consulting — Toshkent, O'zbekistonda joylashgan yetakchi biznes maslahat kompaniyasi bo'lib, soliq, yuridik, moliya, buxgalteriya va HR sohalari bo'yicha integratsiyalashgan xizmatlar ko'rsatadi. Markaziy Osiyodagi biznesingiz uchun yagona muloqot nuqtasi.",
+        a: "Advizen Consulting LLC — Toshkentdagi maslahat kompaniyasi. Xorijiy va mahalliy kompaniyalarga soliq, huquq, buxgalteriya, HR va ish haqi, moliyalashtirish, M&A va due diligence bo'yicha maslahat beradi, shuningdek kompaniyani boshqarish, Employer of Record, ish haqi hisob-kitobi, ish ruxsatnomalari va virtual ofis xizmatlarini ko'rsatadi. Ishni bitta hamkor muvofiqlashtiradi, o'zbek, rus yoki ingliz tilida.",
       },
       {
         q: "Qaysi bozorlarda xizmat ko'rsatasiz?",
@@ -131,7 +131,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "Which sectors do you specialise in?",
-        a: "We have deep sector experience in energy & infrastructure, real estate & construction, manufacturing, retail & FMCG, financial services, and technology. Our team's engagement track record spans over 200 advised deals.",
+        a: "Six sectors: financial services, energy and industrials, technology and digital, real estate and infrastructure, consumer and lifestyle, and healthcare and social. Our advisers' work on record ranges from tax structuring for a $10B+ nuclear power plant project to local consulting on banking and Islamic finance legislation.",
       },
       {
         q: "How long does a typical engagement take?",
@@ -169,7 +169,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "В каких отраслях вы специализируетесь?",
-        a: "У нас глубокий опыт в энергетике и инфраструктуре, недвижимости и строительстве, производстве, розничной торговле и FMCG, финансовых услугах и технологиях. Портфель нашей команды насчитывает более 200 сделок.",
+        a: "Шесть отраслей: финансовые услуги, энергетика и промышленность, технологии, недвижимость и инфраструктура, потребительский сектор, здравоохранение и социальная сфера. В работе наших консультантов — от налогового структурирования проекта атомной электростанции стоимостью более $10 млрд до участия в подготовке законодательства о банках и исламских финансах.",
       },
       {
         q: "Сколько времени занимает типичное взаимодействие?",
@@ -207,7 +207,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "Qaysi sohalarda ixtisoslashasiz?",
-        a: "Energetika va infratuzilma, ko'chmas mulk va qurilish, ishlab chiqarish, chakana savdo va FMCG, moliyaviy xizmatlar va texnologiya sohalarida chuqur tajribamiz bor. Jamoa portfelimizdagi bitimlar soni 200 dan oshadi.",
+        a: "Oltita soha: moliyaviy xizmatlar, energetika va sanoat, texnologiyalar, ko'chmas mulk va infratuzilma, iste'mol sektori, sog'liqni saqlash va ijtimoiy soha. Maslahatchilarimiz ishlari — 10 mlrd dollardan ortiq atom elektr stansiyasi loyihasini soliq bo'yicha tuzishdan bank va islom moliyasi qonunchiligini tayyorlashda ishtirok etishgacha.",
       },
       {
         q: "Odatiy hamkorlik qancha vaqt davom etadi?",

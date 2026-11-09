@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -13,28 +13,6 @@ import OperationsSection from "@/components/expertise/OperationsSection";
 import { industryGroups, allEngagements } from "@/lib/industries";
 import { cn } from "@/lib/utils";
 import FaqSection from "@/components/FaqSection";
-
-function StatCounter({ to, prefix = "", suffix = "" }: { to: number; prefix?: string; suffix?: string }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
-  useEffect(() => {
-    if (!inView) return;
-    const duration = 1400;
-    const steps = 50;
-    let step = 0;
-    const timer = setInterval(() => {
-      step++;
-      const eased = 1 - Math.pow(1 - step / steps, 3);
-      setCount(Math.round(eased * to));
-      if (step >= steps) { setCount(to); clearInterval(timer); }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [inView, to]);
-
-  return <span ref={ref}>{prefix}{count}{suffix}</span>;
-}
 
 function StatsSection() {
   const t = useTranslations("ExpertisePage.stats");
@@ -62,7 +40,7 @@ function StatsSection() {
               className={cn("flex flex-col gap-2", i === 0 ? "md:pr-10" : i === trackStats.length - 1 ? "md:pl-10" : "md:px-10")}
             >
               <span className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-foreground leading-none tracking-tight">
-                <StatCounter to={stat.numeric} prefix={stat.prefix} suffix={stat.suffix} />
+                {stat.prefix}{stat.numeric}{stat.suffix}
               </span>
               <span className="text-[11px] tracking-[0.18em] uppercase text-white/35 mt-1">
                 {stat.label}

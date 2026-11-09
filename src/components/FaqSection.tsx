@@ -110,10 +110,6 @@ export default function FaqSection({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["#faq-section h2", ".faq-question"],
-    },
     mainEntity: items.map(({ q, a }) => ({
       "@type": "Question",
       name: q,
