@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "A practical guide for employers operating in Uzbekistan",
     author: "Advizen HR Practice",
     readTime: "8 min read",
+    inShort: {
+      figures: [
+        { value: "12%", label: "Flat personal income tax on all employment income, withheld by the employer" },
+        { value: "12%", label: "Standard unified social payment on gross payroll, paid by the employer on top of salary" },
+        { value: "0.1%", label: "Employee contribution to the individual accumulative pension account, included in the PIT calculation" },
+        { value: "10th", label: "Day of the following month by which the monthly PIT withholding report is due" },
+      ],
+      points: [
+        "Since January 2023, Uzbekistan applies a flat 12% personal income tax to all employment income, and the same rate applies to non-resident employees.",
+        "The unified social payment is an employer cost, not a deduction from the employee's salary, and is paid monthly alongside the PIT remittance.",
+        "Late payment of the unified social payment attracts penalties at the Central Bank refinancing rate, and failure to file monthly reports attracts administrative fines.",
+        "In-kind benefits such as housing, transport and meals are taxable at market value, and bonuses and one-time payments are taxed at the standard 12% rate.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "Uzbekistan's payroll framework has undergone significant reform in recent years, with the government simplifying rates, consolidating social contributions, and introducing digital reporting obligations. For foreign companies employing staff locally — whether through a subsidiary, representative office, or Employer of Record arrangement — understanding these obligations is essential to compliant operations.",
       },
-      { type: "h2" as const, text: "Personal Income Tax" },
+      { type: "h2" as const, text: "Personal income tax" },
       {
         type: "p" as const,
         text: "Since January 2023, Uzbekistan applies a flat personal income tax (PIT) rate of 12% on all employment income. The tax is withheld at source by the employer and remitted monthly to the State Tax Committee.",
@@ -24,7 +38,7 @@ const article: Record<string, LocalizedArticle> = {
           "Dividend income: taxed separately at 5%",
         ],
       },
-      { type: "h2" as const, text: "Unified Social Payment (USP)" },
+      { type: "h2" as const, text: "Unified social payment (USP)" },
       {
         type: "blockquote" as const,
         text: "The USP is an employer-borne cost, not deducted from the employee's salary. It is calculated on top of gross compensation.",
@@ -38,12 +52,12 @@ const article: Record<string, LocalizedArticle> = {
           "Late payment attracts penalties at the Central Bank refinancing rate",
         ],
       },
-      { type: "h2" as const, text: "Individual Accumulative Pension Contribution" },
+      { type: "h2" as const, text: "Individual accumulative pension contribution" },
       {
         type: "p" as const,
         text: "Employees contribute 0.1% of their gross salary to an individual accumulative pension account. This deduction is included within the PIT calculation and withheld by the employer as part of the overall income tax remittance.",
       },
-      { type: "h2" as const, text: "Reporting Obligations" },
+      { type: "h2" as const, text: "Reporting obligations" },
       {
         type: "ul" as const,
         items: [
@@ -53,7 +67,7 @@ const article: Record<string, LocalizedArticle> = {
           "Employee income certificates — issued upon request or termination",
         ],
       },
-      { type: "h2" as const, text: "Common Compliance Risks" },
+      { type: "h2" as const, text: "Common compliance risks" },
       {
         type: "ul" as const,
         items: [
@@ -64,14 +78,14 @@ const article: Record<string, LocalizedArticle> = {
         ],
       },
       { type: "divider" as const },
-      { type: "h2" as const, text: "Summary of Key Rates (2024)" },
+      { type: "h2" as const, text: "Summary of key rates (2024)" },
       {
         type: "ul" as const,
         items: [
           "Personal Income Tax: 12% (flat, withheld by employer)",
           "Unified Social Payment: 12% (employer cost, on gross payroll)",
           "Accumulative Pension: 0.1% (included in PIT)",
-          "Total employer burden: ~24% of gross salary",
+          "Employer's own cost: 12% USP on top of gross salary; the 12% PIT is withheld from the employee's salary",
         ],
       },
     ],
@@ -85,8 +99,8 @@ const article: Record<string, LocalizedArticle> = {
         answer: "The USP is charged at 12% of gross payroll and is an employer cost — it is not deducted from the employee's salary. It is paid monthly alongside the PIT remittance. Late payment attracts penalties at the Central Bank refinancing rate.",
       },
       {
-        question: "What is the total employer payroll burden in Uzbekistan?",
-        answer: "The combined employer cost is approximately 24% of gross salary: 12% PIT (withheld from employee) plus 12% USP (employer's own contribution on top of gross payroll). Employees additionally contribute 0.1% to an individual accumulative pension account, which is included within the PIT calculation.",
+        question: "What does payroll cost the employer in Uzbekistan?",
+        answer: "The employer's own cost is the 12% Unified Social Payment (USP), calculated on top of gross payroll and not deducted from the employee's salary. Personal income tax at 12% is withheld from the employee's salary and remitted by the employer, so it is not an employer cost. The employee's 0.1% contribution to an individual accumulative pension account is taken from within that PIT.",
       },
       {
         question: "What are the payroll reporting deadlines for employers in Uzbekistan?",
@@ -98,6 +112,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Практическое руководство для работодателей, осуществляющих деятельность в Узбекистане",
     author: "Advizen HR Practice",
     readTime: "8 мин чтения",
+    inShort: {
+      figures: [
+        { value: "12%", label: "Единая ставка НДФЛ на все трудовые доходы, удерживается работодателем" },
+        { value: "12%", label: "Стандартная ставка единого социального платежа от фонда оплаты труда, расход работодателя сверх зарплаты" },
+        { value: "0,1%", label: "Взнос работника на индивидуальный накопительный пенсионный счёт, включается в расчёт НДФЛ" },
+        { value: "10-е число", label: "Следующего месяца — срок ежемесячного отчёта об удержании НДФЛ" },
+      ],
+      points: [
+        "С января 2023 года в Узбекистане действует единая ставка НДФЛ 12% на все трудовые доходы; та же ставка применяется к сотрудникам-нерезидентам.",
+        "Единый социальный платёж — расход работодателя, он не удерживается из зарплаты сотрудника и уплачивается ежемесячно вместе с НДФЛ.",
+        "Просрочка ЕСП влечёт пени по ставке рефинансирования Центрального банка, а непредставление ежемесячных отчётов — административные штрафы.",
+        "Неденежные льготы (жильё, транспорт, питание) облагаются по рыночной стоимости, а премии и единовременные выплаты — НДФЛ по стандартной ставке 12%.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -164,7 +192,7 @@ const article: Record<string, LocalizedArticle> = {
           "НДФЛ: 12% (единая ставка, удерживается работодателем)",
           "Единый социальный платёж: 12% (расход работодателя, от фонда оплаты труда)",
           "Накопительный пенсионный взнос: 0,1% (включён в НДФЛ)",
-          "Общая нагрузка на работодателя: ~24% от валовой заработной платы",
+          "Собственный расход работодателя: 12% ЕСП сверх валовой заработной платы; НДФЛ 12% удерживается из заработной платы сотрудника",
         ],
       },
     ],
@@ -178,8 +206,8 @@ const article: Record<string, LocalizedArticle> = {
         answer: "ЕСП взимается по ставке 12% от фонда оплаты труда и является расходом работодателя — он не вычитается из заработной платы сотрудника. Платёж осуществляется ежемесячно одновременно с перечислением НДФЛ. Просрочка влечёт начисление пеней по ставке рефинансирования Центрального банка.",
       },
       {
-        question: "Какова общая нагрузка работодателя по заработной плате в Узбекистане?",
-        answer: "Совокупные расходы работодателя составляют около 24% от валовой заработной платы: 12% НДФЛ (удерживается из зарплаты сотрудника) плюс 12% ЕСП (собственный взнос работодателя сверх валовой зарплаты). Сотрудники дополнительно вносят 0,1% на индивидуальный накопительный пенсионный счёт в составе расчёта НДФЛ.",
+        question: "Во что обходится заработная плата работодателю в Узбекистане?",
+        answer: "Собственный расход работодателя — единый социальный платёж (ЕСП) в размере 12%, который начисляется сверх фонда оплаты труда и не вычитается из заработной платы сотрудника. НДФЛ по ставке 12% удерживается из заработной платы сотрудника и перечисляется работодателем, поэтому не является расходом работодателя. Взнос сотрудника 0,1% на индивидуальный накопительный пенсионный счёт берётся в составе этого НДФЛ.",
       },
       {
         question: "Каковы сроки отчётности по заработной плате для работодателей в Узбекистане?",
@@ -191,6 +219,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "O'zbekistonda faoliyat yurituvchi ish beruvchilar uchun amaliy qo'llanma",
     author: "Advizen HR Practice",
     readTime: "8 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "12%", label: "Barcha mehnat daromadlariga yagona jismoniy shaxslardan daromad soligʻi stavkasi, ish beruvchi ushlab qoladi" },
+        { value: "12%", label: "Yalpi ish haqi fondidan yagona ijtimoiy toʻlovning standart stavkasi, ish haqiga qoʻshimcha ish beruvchi xarajati" },
+        { value: "0,1%", label: "Xodimning individual jamgʻarma pensiya hisobiga badali, JSDS hisobiga kiritiladi" },
+        { value: "10-sana", label: "Keyingi oyning — JSDS ushlab qolish boʻyicha oylik hisobot muddati" },
+      ],
+      points: [
+        "2023-yil yanvardan Oʻzbekiston barcha mehnat daromadlariga 12% yagona JSDS stavkasini qoʻllaydi; norezident xodimlarga ham shu stavka qoʻllaniladi.",
+        "Yagona ijtimoiy toʻlov ish beruvchining xarajati boʻlib, xodimning ish haqidan ushlab qolinmaydi va har oy JSDS bilan birga toʻlanadi.",
+        "YITni kech toʻlash Markaziy bank qayta moliyalash stavkasida penya hisoblanishiga, oylik hisobotlarni topshirmaslik esa maʼmuriy jarimaga olib keladi.",
+        "Natura shaklidagi imtiyozlar (uy-joy, transport, ovqat) bozor qiymati boʻyicha, mukofotlar va bir martalik toʻlovlar esa standart 12% stavkada JSDSga tortiladi.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -257,7 +299,7 @@ const article: Record<string, LocalizedArticle> = {
           "Jismoniy shaxslardan daromad solig'i: 12% (yagona stavka, ish beruvchi ushlab qoladi)",
           "Yagona ijtimoiy to'lov: 12% (ish beruvchi xarajati, yalpi ish haqi fondidan)",
           "Jamg'arma pensiya badali: 0,1% (JSDS ga kiritilgan)",
-          "Ish beruvchining umumiy yuki: yalpi ish haqining ~24%",
+          "Ish beruvchining o'z xarajati: yalpi ish haqiga qo'shimcha 12% YIT; 12% JSDS xodimning ish haqidan ushlab qolinadi",
         ],
       },
     ],
@@ -271,8 +313,8 @@ const article: Record<string, LocalizedArticle> = {
         answer: "YIT yalpi ish haqi fondining 12% miqdorida undiriladi va ish beruvchi xarajati hisoblanadi — u xodimning ish haqidan ushlab qolinmaydi. To'lov har oy JSDS o'tkazmasi bilan bir vaqtda amalga oshiriladi. Kech to'lash Markaziy bank qayta moliyalash stavkasida penya hisoblashga olib keladi.",
       },
       {
-        question: "O'zbekistonda ish beruvchining umumiy ish haqi yuki qancha?",
-        answer: "Ish beruvchining umumiy xarajati yalpi ish haqining taxminan 24% ini tashkil etadi: 12% JSDS (xodim ish haqidan ushlab qolinadi) va 12% YIT (yalpi ish haqiga qo'shimcha ish beruvchining o'z badali). Xodimlar qo'shimcha ravishda JSDS hisobi doirasida individual jamg'arma pensiya hisobiga 0,1% o'tkazadilar.",
+        question: "O'zbekistonda ish haqi ish beruvchiga qanchaga tushadi?",
+        answer: "Ish beruvchining o'z xarajati — 12% miqdoridagi yagona ijtimoiy to'lov (YIT) bo'lib, u yalpi ish haqi fondiga qo'shimcha hisoblanadi va xodimning ish haqidan ushlab qolinmaydi. 12% stavkadagi JSDS xodimning ish haqidan ushlab qolinadi va ish beruvchi tomonidan o'tkaziladi, shuning uchun u ish beruvchining xarajati hisoblanmaydi. Xodimning individual jamg'arma pensiya hisobiga 0,1% badali shu JSDS tarkibidan olinadi.",
       },
       {
         question: "O'zbekistonda ish beruvchilar uchun ish haqi hisobot muddatlari qanday?",

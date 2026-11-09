@@ -5,17 +5,30 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Explore the essential regulatory framework and licensing requirements for operating online gambling, lottery, and betting platforms in Uzbekistan, effective January 1, 2025.",
     author: "Advizen Legal Practice",
     readTime: "5 min read",
+    inShort: {
+      figures: [
+        { value: "1 Jan 2025", label: "Date from which online gambling, lotteries and bookmaking are legal in Uzbekistan" },
+        { value: "No. 814", label: "Resolution of the Cabinet of Ministers that sets the framework" },
+        { value: "5 years", label: "Term of a licence issued by NAPP" },
+      ],
+      points: [
+        "Online gambling, lotteries and bookmaking in Uzbekistan are regulated and licensed by the National Agency for Perspective Projects (NAPP).",
+        "Uzbek rules apply based on the gambler's citizenship or location, the gambler's IP address, the use of Uzbek bank cards, or the intended audience of the service.",
+        "Only a legal entity resident in Uzbekistan can obtain a licence, and the electronic platform must run on servers physically located in Uzbekistan.",
+        "Operators must keep specified amounts in their authorised fund and reserve fund.",
+      ],
+    },
     content: [
       {
         type: "p",
         text: "Uzbekistan has marked a significant shift in its regulatory landscape with the legalisation of online gambling, lotteries, and bookmaking activities, effective January 1, 2025. This development opens new avenues for businesses interested in this evolving sector, provided they adhere to stringent regulatory requirements.",
       },
-      { type: "h2", text: "The New Regulatory Framework" },
+      { type: "h2", text: "The new regulatory framework" },
       {
         type: "p",
         text: "The new framework is established by Resolution of the Cabinet of Ministers No. 814, setting clear guidelines for the organisation and conduct of these activities. The primary regulatory and licensing authority overseeing this sector is the National Agency for Perspective Projects (NAPP).",
       },
-      { type: "h2", text: "When Does Uzbek Regulation Apply?" },
+      { type: "h2", text: "When does Uzbek regulation apply?" },
       {
         type: "p",
         text: "For businesses operating in this space, it is crucial to understand when Uzbek regulations apply. Uzbekistan is considered the place of gambling, thus triggering its regulations, based on several criteria:",
@@ -33,7 +46,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p",
         text: "Businesses must carefully assess these factors to determine their compliance obligations under Uzbek law.",
       },
-      { type: "h2", text: "Key Licensing Requirements for Operators" },
+      { type: "h2", text: "Key licensing requirements for operators" },
       {
         type: "p",
         text: "To legally engage in organising online gambling, lotteries, and bookmaking, a legal entity must be established within Uzbekistan and obtain a licence from NAPP. Licences are issued for a term of five years. The core requirements include:",
@@ -46,7 +59,7 @@ const article: Record<string, LocalizedArticle> = {
           "Financial Stability: operators are required to maintain specific amounts in their authorised fund and reserve fund, demonstrating sufficient financial backing",
         ],
       },
-      { type: "h2", text: "Implications for Businesses" },
+      { type: "h2", text: "Implications for businesses" },
       {
         type: "blockquote",
         text: "The legalisation and regulation of this sector present both opportunities and challenges. Businesses entering this market must be prepared for a highly regulated environment that prioritises consumer protection and financial integrity.",
@@ -79,6 +92,19 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Изучите ключевую нормативную базу и лицензионные требования для работы онлайн-гемблинга, лотерей и букмекерских платформ в Узбекистане с 1 января 2025 года.",
     author: "Юридическая практика Advizen",
     readTime: "5 мин чтения",
+    inShort: {
+      figures: [
+        { value: "1 января 2025", label: "Дата, с которой онлайн-гемблинг, лотереи и букмекерство в Узбекистане легальны" },
+        { value: "№ 814", label: "Постановление Кабинета Министров, устанавливающее нормативную базу" },
+        { value: "5 лет", label: "Срок лицензии, выдаваемой НАПП" },
+      ],
+      points: [
+        "Онлайн-гемблинг, лотереи и букмекерство в Узбекистане регулирует и лицензирует Национальное агентство перспективных проектов (НАПП).",
+        "Узбекские нормы применяются с учётом гражданства или местонахождения игрока, его IP-адреса, использования узбекских банковских карт или целевой аудитории сервиса.",
+        "Лицензию может получить только юридическое лицо — резидент Узбекистана, а электронная платформа должна размещаться на серверах, физически находящихся в Узбекистане.",
+        "Операторы обязаны поддерживать определённые суммы в уставном и резервном фондах.",
+      ],
+    },
     content: [
       {
         type: "p",
@@ -153,6 +179,19 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "2025 yil 1 yanvardan amalda boʻlgan Oʻzbekistondagi onlayn qimor oʻyinlari, lotereya va bukmekerlik platformalarini boshqarish uchun zarur tartibga solish bazasi va litsenziya talablarini oʻrganing.",
     author: "Advizen yuridik amaliyoti",
     readTime: "5 daqiqalik oʻqish",
+    inShort: {
+      figures: [
+        { value: "2025-yil 1-yanvar", label: "Oʻzbekistonda onlayn qimor, lotereya va bukmekerlik qonuniy boʻlgan sana" },
+        { value: "814-son", label: "Tartibga solish bazasini belgilagan Vazirlar Mahkamasi qarori" },
+        { value: "5 yil", label: "ILMA beradigan litsenziyaning muddati" },
+      ],
+      points: [
+        "Oʻzbekistonda onlayn qimor, lotereya va bukmekerlik faoliyatini Istiqbolli loyihalar milliy agentligi (ILMA) tartibga soladi va litsenziyalaydi.",
+        "Oʻzbek qoidalari oʻyinchining fuqaroligi yoki joylashuvi, IP-manzili, oʻzbek bank kartalaridan foydalanilishi yoki xizmatning moʻljallangan auditoriyasiga qarab qoʻllaniladi.",
+        "Litsenziyani faqat Oʻzbekistonda rezident yuridik shaxs olishi mumkin, elektron platforma esa jismonan Oʻzbekistondagi serverlarda joylashtirilishi shart.",
+        "Operatorlar ustav fondi va zaxira fondida muayyan miqdorlarni saqlashi shart.",
+      ],
+    },
     content: [
       {
         type: "p",

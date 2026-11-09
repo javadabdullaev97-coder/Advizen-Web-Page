@@ -42,8 +42,7 @@ export default function ContactContent() {
             src="/Hero and CTA images/Contact Hero.webp"
             alt=""
             fill
-            priority
-            unoptimized
+            preload
             sizes="100vw"
             className="object-cover object-[85%_50%] max-sm:object-[78%_50%] home-settle"
           />

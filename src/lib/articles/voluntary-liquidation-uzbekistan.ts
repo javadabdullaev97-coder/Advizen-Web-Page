@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "A practical walkthrough of Uzbekistan's simplified voluntary liquidation procedure for commercial entities, following the 2019 presidential reform.",
     author: "Advizen Legal Practice",
     readTime: "8 min read",
+    inShort: {
+      figures: [
+        { value: "UP-5739", label: "Presidential Decree of 7 June 2019 that simplified voluntary liquidation" },
+        { value: "6 months", label: "Maximum voluntary liquidation period from the State Services Centre's receipt of the notification" },
+        { value: "3 years", label: "Maximum period covered by the tax audit of a liquidating entity" },
+        { value: "2 months", label: "Minimum deadline for creditors to file claims" },
+      ],
+      points: [
+        "Voluntary liquidation in Uzbekistan no longer requires a newspaper notice; the State Services Centre posts the notice on its website and notifies the tax, statistics and enforcement authorities automatically.",
+        "A company that has never conducted business since registration and has no tax debts does not need a financial audit to liquidate.",
+        "The simplified procedure does not apply to banks and credit bureaus, city-forming organisations, state bodies, non-commercial NGOs, or commercial organisations showing signs of insolvency.",
+        "Creditor claims are paid in order of priority: first employees and personal injury claims, then the state budget and state-targeted funds, then all other claims.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "Winding up a business in Uzbekistan follows a defined sequence of mandatory steps. Since Presidential Decree No. UP-5739 of 7 June 2019 came into force, the voluntary liquidation procedure has been substantially simplified: publication of a liquidation notice in print media is no longer required; the entire process is managed through the automated State Services Centre system; and the total period for voluntary liquidation may not exceed six months from the date the Centre receives the liquidation notification.",
       },
-      { type: "h2" as const, text: "Legislative Framework" },
+      { type: "h2" as const, text: "Legislative framework" },
       {
         type: "ul" as const,
         items: [
@@ -18,7 +32,7 @@ const article: Record<string, LocalizedArticle> = {
           "Cabinet of Ministers Resolution No. 704 of 21 August 2019, Annex No. 1 \"Regulation on the procedure for voluntary liquidation of business entities and cessation of their activities\"",
         ],
       },
-      { type: "h2" as const, text: "Key Simplifications Introduced in 2019" },
+      { type: "h2" as const, text: "Key simplifications introduced in 2019" },
       {
         type: "ul" as const,
         items: [
@@ -29,7 +43,7 @@ const article: Record<string, LocalizedArticle> = {
           "Maximum liquidation period: six months from notification.",
         ],
       },
-      { type: "h2" as const, text: "Scope — Who This Procedure Does Not Cover" },
+      { type: "h2" as const, text: "Scope — who this procedure does not cover" },
       {
         type: "p" as const,
         text: "The simplified voluntary liquidation procedure does not apply to:",
@@ -43,7 +57,7 @@ const article: Record<string, LocalizedArticle> = {
           "Commercial organisations exhibiting signs of insolvency under applicable legislation",
         ],
       },
-      { type: "h2" as const, text: "Step-by-Step Procedure" },
+      { type: "h2" as const, text: "Step-by-step procedure" },
       { type: "h3" as const, text: "Step 1 — Adopt a resolution to liquidate" },
       {
         type: "p" as const,
@@ -129,7 +143,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "To complete the deregistration, the liquidator submits to the State Services Centre: bank certificates confirming closure of all accounts; company seals and stamps; a certificate of cancellation of any issued securities (if applicable); and a certificate confirming delivery of documents to the state archive. Within two working days, the Centre verifies that all requirements are met and enters the liquidation record in the state register. The decision is issued to the liquidator within one working day of being made.",
       },
-      { type: "h2" as const, text: "How Advizen Can Help" },
+      { type: "h2" as const, text: "How Advizen can help" },
       {
         type: "p" as const,
         text: "Voluntary liquidation involves coordinating with multiple state authorities — the State Services Centre, tax service, Enforcement Bureau, banks, and the state archive — within tight statutory deadlines. Advizen assists companies in preparing the liquidation resolution, appointing the liquidator, managing creditor notifications, clearing tax obligations, and guiding the process through to final deregistration.",
@@ -154,7 +168,7 @@ const article: Record<string, LocalizedArticle> = {
       },
     ],
     howTo: {
-      name: "How to Voluntarily Liquidate a Company in Uzbekistan",
+      name: "How to voluntarily liquidate a company in Uzbekistan",
       description: "The 13-step procedure for voluntary liquidation of a business entity in Uzbekistan under Presidential Decree No. UP-5739 of 7 June 2019.",
       steps: [
         {
@@ -216,6 +230,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Практическое руководство по упрощённой процедуре добровольной ликвидации коммерческих организаций в Узбекистане после президентской реформы 2019 года.",
     author: "Advizen Legal Practice",
     readTime: "8 мин чтения",
+    inShort: {
+      figures: [
+        { value: "УП-5739", label: "Указ Президента от 7 июня 2019 года, упростивший добровольную ликвидацию" },
+        { value: "6 месяцев", label: "Максимальный срок добровольной ликвидации с момента получения уведомления Центром государственных услуг" },
+        { value: "3 года", label: "Максимальный период, охватываемый налоговой проверкой ликвидируемой организации" },
+        { value: "2 месяца", label: "Минимальный срок для предъявления требований кредиторами" },
+      ],
+      points: [
+        "Для добровольной ликвидации в Узбекистане больше не требуется публикация в газете: Центр государственных услуг размещает сообщение на своём сайте и автоматически уведомляет налоговые органы, органы статистики и Бюро принудительного исполнения.",
+        "Если компания с момента регистрации не вела деятельность и не имеет налоговых долгов, финансовая проверка для ликвидации не требуется.",
+        "Упрощённая процедура не применяется к банкам и кредитным бюро, градообразующим организациям, государственным органам, некоммерческим негосударственным организациям и коммерческим организациям с признаками несостоятельности.",
+        "Требования кредиторов удовлетворяются по очерёдности: сначала работники и требования о вреде жизни и здоровью, затем бюджет и государственные целевые фонды, затем все остальные.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -427,6 +455,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "2019 yilgi prezident islohotidan keyin O'zbekistondagi tijorat tashkilotlari uchun ixtiyoriy tugatishning soddalashtirilgan tartibi bo'yicha amaliy qo'llanma.",
     author: "Advizen Legal Practice",
     readTime: "8 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "PF-5739", label: "Ixtiyoriy tugatishni soddalashtirgan 2019-yil 7-iyundagi Prezident Farmoni" },
+        { value: "6 oy", label: "Davlat xizmatlari markazi xabarnomani olgan kundan boshlab ixtiyoriy tugatishning eng uzoq muddati" },
+        { value: "3 yil", label: "Tugatilayotgan tashkilotning soliq tekshiruvi qamrab oladigan eng uzoq davr" },
+        { value: "2 oy", label: "Kreditorlar talablarini taqdim etishi uchun eng qisqa muddat" },
+      ],
+      points: [
+        "Oʻzbekistonda ixtiyoriy tugatish uchun gazetada eʼlon berish endi talab qilinmaydi: Davlat xizmatlari markazi eʼlonni oʻz saytida joylashtiradi va soliq, statistika organlari hamda Ijro byurosini avtomatik xabardor qiladi.",
+        "Roʻyxatdan oʻtgandan beri faoliyat yuritmagan va soliq qarzi boʻlmagan kompaniya tugatish uchun moliyaviy tekshiruvdan oʻtishi shart emas.",
+        "Soddalashtirilgan tartib banklar va kredit byurolari, shahar shakllantiruvchi tijorat tashkilotlari, davlat organlari, notijorat nodavlat tashkilotlari va toʻlovga qobiliyatsizlik belgilari bor tijorat tashkilotlariga qoʻllanilmaydi.",
+        "Kreditorlar talablari navbat tartibida qondiriladi: avval xodimlar va hayot yoki sogʻliqqa yetkazilgan zarar boʻyicha talablar, soʻng byudjet va davlat maqsadli jamgʻarmalari, keyin qolgan barcha talablar.",
+      ],
+    },
     content: [
       {
         type: "p" as const,

@@ -71,45 +71,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ambient section glows */
-.ambient-glow {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.ambient-glow-oxblood {
-  background: rgba(148, 14, 39, 0.15);
-  filter: blur(150px);
-}
-
-.ambient-glow-warm {
-  background: rgba(255, 255, 255, 0.04);
-  filter: blur(120px);
-}
-
 ::selection {
   background: var(--primary);
   color: var(--foreground);
-}
-
-/* Hairline border utility */
-.hairline {
-  border-width: 1px;
-  border-color: var(--border);
-}
-
-/* Heading system */
-.heading-luxury {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-}
-
-/* Onest font scope — applies to wrapper and overrides .heading-luxury inside */
-.font-onest,
-.font-onest .heading-luxury {
-  font-family: var(--font-onest), system-ui, sans-serif;
 }
 
 /* Override browser autofill so it matches the dark form fields */
@@ -128,26 +92,6 @@ select:-webkit-autofill:focus {
   caret-color: var(--foreground) !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
   transition: background-color 9999s ease-in-out 0s;
-}
-
-@keyframes hero-entrance {
-  from { transform: scale(1.06); opacity: 0; }
-  to   { transform: scale(1);    opacity: 1; }
-}
-.hero-image-enter {
-  animation: hero-entrance 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* ── Mobile scroll performance ──────────────────────────────────────────────
-   Two elements cause page-wide jank during scroll on mobile:
-   1. body::after  — position:fixed repainted every scroll frame
-   2. .ambient-glow — filter:blur(120-150px) on 500-800px elements forces
-      a full-region repaint; multiple per section compounds the cost.
-   Both are decorative-only and invisible at mobile scale anyway.          */
-@media (max-width: 767px) {
-  .ambient-glow {
-    display: none;
-  }
 }
 
 /* ── Modern building blocks (homepage and store) ──────────────────────────── */
@@ -206,11 +150,15 @@ select:-webkit-autofill:focus {
 @keyframes home-rise { from { opacity: 0; transform: translateY(16px); } }
 @keyframes home-settle { from { transform: scale(1.05); } }
 @keyframes home-fade { from { opacity: 0; } }
+@keyframes cookie-in { from { opacity: 0; transform: translateY(12px); } }
+@keyframes menu-in { from { opacity: 0; transform: scale(.96); } }
+.cookie-in { animation: cookie-in .4s var(--ease-out) both; }
+.menu-in { animation: menu-in .15s var(--ease-out) both; }
 .home-rise { animation: home-rise .8s var(--ease-out) both; animation-delay: var(--d, 0s); }
 .home-settle { animation: home-settle 2.2s var(--ease-out) both; }
 .home-fade { animation: home-fade .25s ease-out both; }
 @media (prefers-reduced-motion: reduce) {
-  .home-rise, .home-settle, .home-fade { animation: none; }
+  .home-rise, .home-settle, .home-fade, .cookie-in, .menu-in { animation: none; }
 }
 
 /* Hero photo: darkened toward the text on the left and the page below */

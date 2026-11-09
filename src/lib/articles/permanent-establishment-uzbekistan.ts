@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Essential insights for foreign investors to understand and fulfil Permanent Establishment requirements in Uzbekistan.",
     author: "Advizen Tax Practice",
     readTime: "7 min read",
+    inShort: {
+      figures: [
+        { value: "1 month", label: "A workplace that exists for longer than this generally counts as permanent" },
+        { value: "183 days", label: "Duration of a construction, assembly or installation project, or of services through employees, that creates a PE" },
+        { value: "10%", label: "Tax that may apply to a PE's after-tax net profit, which is treated as dividends; treaties may lower it" },
+        { value: "10% of costs", label: "Income cap under which providing foreign personnel usually does not create a PE" },
+      ],
+      points: [
+        "A foreign company creates a permanent establishment in Uzbekistan when it has a fixed place through which it conducts business there, such as an office, branch, factory, workshop or laboratory.",
+        "A dependent agent who consistently concludes contracts for the foreign company, or a foreign insurer collecting premiums through a dependent agent, also creates a PE.",
+        "Using facilities only to store or display goods, or keeping a place only to purchase goods or collect information for preparatory purposes, does not by itself create a PE.",
+        "Once a PE exists, the foreign company must register with the local tax authorities, and the PE's income is subject to Uzbek corporate income tax.",
+      ],
+    },
     content: [
       {
         type: "p",
         text: "For foreign companies looking to operate in Uzbekistan, understanding the concept of a Permanent Establishment (PE) is fundamental. Essentially, a PE is established when a foreign company has a fixed place through which it conducts business activities within Uzbekistan. This can be a physical location or certain types of ongoing activities within the country. If a workplace is established for more than one month, it generally counts as a permanent workplace.",
       },
-      { type: "h2", text: "What Might Be Considered a PE?" },
+      { type: "h2", text: "What might be considered a PE?" },
       {
         type: "p",
         text: "Various activities and presences can lead to PE status:",
@@ -25,7 +39,7 @@ const article: Record<string, LocalizedArticle> = {
           "Insurance & Agency: foreign insurance companies collecting premiums through a dependent agent, or anyone consistently concluding contracts on behalf of the foreign company",
         ],
       },
-      { type: "h2", text: "When is a PE Not Created?" },
+      { type: "h2", text: "When is a PE not created?" },
       {
         type: "p",
         text: "Certain activities are generally considered preparatory or auxiliary and do not automatically lead to a PE:",
@@ -38,12 +52,12 @@ const article: Record<string, LocalizedArticle> = {
           "Personnel Provision (with conditions): providing foreign personnel to another company in Uzbekistan usually will not create a PE if your company is not responsible for their work results and your income from this does not exceed 10% of total costs for providing that personnel",
         ],
       },
-      { type: "h2", text: "Starting Operations and Registration" },
+      { type: "h2", text: "Starting operations and registration" },
       {
         type: "p",
         text: "If your activities indicate a PE, you are generally considered to have started operating in Uzbekistan on the earliest of several key dates — such as the signing of relevant contracts or the arrival of personnel for contract fulfilment. Once a PE is established, your foreign company is required to register with the local tax authorities.",
       },
-      { type: "h2", text: "Taxation and Deductible Expenses" },
+      { type: "h2", text: "Taxation and deductible expenses" },
       {
         type: "ul",
         items: [
@@ -57,7 +71,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "blockquote",
         text: "The PE rules in Uzbekistan closely follow OECD principles but with local specificities. Foreign companies should obtain a professional assessment before commencing operations to avoid unexpected tax exposure.",
       },
-      { type: "h2", text: "Practical Implications" },
+      { type: "h2", text: "Practical implications" },
       {
         type: "p",
         text: "Understanding whether your activities create a PE in Uzbekistan is a critical step in any market entry analysis. The consequences of unregistered PE activity include back-taxes, penalties, and reputational risk. A proactive assessment of your operational footprint against the PE thresholds set out in Uzbekistan's Tax Code and relevant double tax treaties is strongly recommended before committing to a business structure.",
@@ -86,6 +100,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Ключевые ориентиры для иностранных инвесторов в понимании и выполнении требований к Постоянному учреждению в Узбекистане.",
     author: "Налоговая практика Advizen",
     readTime: "7 мин чтения",
+    inShort: {
+      figures: [
+        { value: "1 месяц", label: "Рабочее место, существующее дольше этого срока, как правило, считается постоянным" },
+        { value: "183 дня", label: "Длительность строительного, монтажного или установочного проекта либо услуг через работников, создающая ПУ" },
+        { value: "10%", label: "Ставка, которая может применяться к чистой прибыли ПУ после налогообложения как к дивидендам; соглашения могут её снижать" },
+        { value: "10% расходов", label: "Предел дохода, при котором предоставление иностранного персонала обычно не создаёт ПУ" },
+      ],
+      points: [
+        "Иностранная компания образует постоянное учреждение в Узбекистане, когда у неё есть постоянное место, через которое она ведёт деятельность, — например, офис, филиал, завод, мастерская или лаборатория.",
+        "ПУ также создаёт зависимый агент, систематически заключающий договоры от имени иностранной компании, или иностранная страховая компания, собирающая премии через зависимого агента.",
+        "Использование помещений только для хранения или демонстрации товаров, а также место деятельности только для закупки товаров или сбора информации в подготовительных целях само по себе не создаёт ПУ.",
+        "После возникновения ПУ иностранная компания обязана встать на учёт в местных налоговых органах, а доход ПУ облагается узбекским налогом на прибыль.",
+      ],
+    },
     content: [
       {
         type: "p",
@@ -167,6 +195,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Chet ellik investorlar uchun Oʻzbekistondagi Doimiy muassasa talablarini tushunish va bajarish uchun muhim maslahatlar.",
     author: "Advizen soliq amaliyoti",
     readTime: "7 daqiqalik oʻqish",
+    inShort: {
+      figures: [
+        { value: "1 oy", label: "Bundan uzoq mavjud boʻlgan ish joyi odatda doimiy hisoblanadi" },
+        { value: "183 kun", label: "DM yaratadigan qurilish, montaj yoki oʻrnatish loyihasi yoxud xodimlar orqali xizmat koʻrsatish muddati" },
+        { value: "10%", label: "Dividend sifatida koʻriladigan DMning soliqdan keyingi sof foydasiga qoʻllanishi mumkin boʻlgan soliq; shartnomalar uni pasaytirishi mumkin" },
+        { value: "Xarajatlarning 10%", label: "Chet el xodimlarini taqdim etish odatda DM yaratmaydigan daromad chegarasi" },
+      ],
+      points: [
+        "Chet el kompaniyasi Oʻzbekistonda biznes faoliyatini yuritadigan doimiy joyga — masalan, ofis, filial, zavod, ustaxona yoki laboratoriyaga — ega boʻlganda doimiy muassasa yuzaga keladi.",
+        "Chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzadigan bogʻliq agent yoki bogʻliq agent orqali sugʻurta mukofotlarini yigʻadigan chet el sugʻurta kompaniyasi ham DM yaratadi.",
+        "Obyektlardan faqat tovarlarni saqlash yoki namoyish qilish uchun foydalanish, shuningdek faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼlumot toʻplash uchun joy saqlash oʻz-oʻzidan DM yaratmaydi.",
+        "DM yuzaga kelgach, chet el kompaniyasi mahalliy soliq organlarida roʻyxatdan oʻtishi shart, DM daromadi esa Oʻzbekiston foyda soligʻiga tortiladi.",
+      ],
+    },
     content: [
       {
         type: "p",
@@ -182,9 +224,9 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Jismoniy joylashuv: har qanday turdagi ofis (boshqaruv, filial, byuro), zavod, ustaxona yoki laboratoriya",
           "Ishlab chiqarish va sotish: tovarlarni ishlab chiqarish, qayta ishlash yoki qadoqlash, yoki omborni sotuv nuqtasi sifatida ishlatish",
-          "Resurs qazib olish: tog’-kon, neft yoki gaz quduqlari, karyerlar yoki har qanday tabiiy resurslarni qazib olish bilan bogʿliq faoliyat",
+          "Resurs qazib olish: togʻ-kon, neft yoki gaz quduqlari, karyerlar yoki har qanday tabiiy resurslarni qazib olish bilan bogʻliq faoliyat",
           "Uzoq muddatli loyihalar va xizmatlar: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; yoki kamida 183 kun davomida xodimlar orqali xizmatlar koʻrsatish",
-          "Sugʻuurta va agentlik: bogʿliq agent orqali sugʻuurta mukofotlarini yigʻuvchi chet el sugʻuurta kompaniyalari yoki chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzuvchi shaxslar",
+          "Sugʻurta va agentlik: bogʻliq agent orqali sugʻurta mukofotlarini yigʻuvchi chet el sugʻurta kompaniyalari yoki chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzuvchi shaxslar",
         ],
       },
       { type: "h2", text: "DM qachon paydo boʻlmaydi?" },
@@ -196,51 +238,51 @@ const article: Record<string, LocalizedArticle> = {
         type: "ul",
         items: [
           "Saqlash va namoyish: obyektlarni faqat tovarlarni saqlash yoki namoyish qilish uchun ishlatish",
-          "Cheklangan faoliyat: faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼumot toʻplash uchun doimiy biznes joyini saqlash",
-          "Xodimlar taqdim etish (shartlar bilan): Oʻzbekistondagi boshqa kompaniyaga chet el xodimlarini taqdim etish odatda DM yaratmaydi, agar kompaniyangiz ularning ish natijalari uchun javobgar boʻmasa va bundan oladigan daromad bunday xodimlarni taqdim etish jami xarajatlarining 10% dan oshmasa",
+          "Cheklangan faoliyat: faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼlumot toʻplash uchun doimiy biznes joyini saqlash",
+          "Xodimlar taqdim etish (shartlar bilan): Oʻzbekistondagi boshqa kompaniyaga chet el xodimlarini taqdim etish odatda DM yaratmaydi, agar kompaniyangiz ularning ish natijalari uchun javobgar boʻlmasa va bundan oladigan daromad bunday xodimlarni taqdim etish jami xarajatlarining 10% dan oshmasa",
         ],
       },
-      { type: "h2", text: "Faoliyatni boshlash va roʻxatga olish" },
+      { type: "h2", text: "Faoliyatni boshlash va roʻyxatga olish" },
       {
         type: "p",
-        text: "Agar faoliyatingiz DM ga ishora qilsa, odatda Oʻzbekistonda bir nechta asosiy sanalardan eng erta sanasida — masalan, tegishli shartnomalarni imzolash yoki shartnomani bajarish uchun xodimlar kelishi sanasida — faoliyat boshlangan deb hisoblanadi. DM paydo boʻlganda, chet el kompaniyangiz mahalliy soliq organlarida roʻxatdan oʻtishi shart.",
+        text: "Agar faoliyatingiz DM ga ishora qilsa, odatda Oʻzbekistonda bir nechta asosiy sanalardan eng erta sanasida — masalan, tegishli shartnomalarni imzolash yoki shartnomani bajarish uchun xodimlar kelishi sanasida — faoliyat boshlangan deb hisoblanadi. DM paydo boʻlganda, chet el kompaniyangiz mahalliy soliq organlarida roʻyxatdan oʻtishi shart.",
       },
       { type: "h2", text: "Soliq solish va chegirib tashlanadigan xarajatlar" },
       {
         type: "ul",
         items: [
-          "Sizning DM ingiz tomonidan Oʻzbekistonda yaratilgan daromad mahalliy foyda soligʿiga tortiladi",
-          "Soliq bazasi odatda DM ning umumiy daromadi boʻlib, biznes bilan bogʿliq xarajatlar uchun muayyan chegirmalar hisobga olinadi",
-          "DM dan chet el bosh ofisi yoki boshqa bogʿliq shaxslarga ayrim toʻlovlar chegirib tashlanmasligi mumkin",
+          "Sizning DM ingiz tomonidan Oʻzbekistonda yaratilgan daromad mahalliy foyda soligʻiga tortiladi",
+          "Soliq bazasi odatda DM ning umumiy daromadi boʻlib, biznes bilan bogʻliq xarajatlar uchun muayyan chegirmalar hisobga olinadi",
+          "DM dan chet el bosh ofisi yoki boshqa bogʻliq shaxslarga ayrim toʻlovlar chegirib tashlanmasligi mumkin",
           "Soliqdan keyingi DM ning sof foydasi dividend sifatida koʻrib chiqiladi va 10% soliqqa tortilishi mumkin — xalqaro soliq shartnomalari pastroq stavkalarni taklif qilishi mumkin",
         ],
       },
       {
         type: "blockquote",
-        text: "Oʻzbekistonda DM qoidalari OECD tamoyillariga juda yaqin, biroq mahalliy oʻziga xosliklarga ega. Chet el kompaniyalari kutilmagan soliq taʼiridan qochish uchun faoliyatni boshlashdan oldin professional baholash olishi kerak.",
+        text: "Oʻzbekistonda DM qoidalari OECD tamoyillariga juda yaqin, biroq mahalliy oʻziga xosliklarga ega. Chet el kompaniyalari kutilmagan soliq taʼsiridan qochish uchun faoliyatni boshlashdan oldin professional baholash olishi kerak.",
       },
       { type: "h2", text: "Amaliy oqibatlar" },
       {
         type: "p",
-        text: "Faoliyatingiz Oʻzbekistonda DM yaratadimi degan savolni tushunish har qanday bozorga kirish tahlilida muhim qadamdir. Roʻxatga olinmagan DM faoliyatining oqibatlari orasida soliq qoʻshib hisoblash, jarimalar va obroʻga zarar bor. Biznes tuzilmasini tanlashdan oldin faoliyatingizni Oʻzbekiston Soliq kodeksi va tegishli qoʻsh soliqqa tortishni bartaraf etish toʻgʿrisidagi shartnomalar belgilagan DM chegaralariga proaktiv baholash tavsiya etiladi.",
+        text: "Faoliyatingiz Oʻzbekistonda DM yaratadimi degan savolni tushunish har qanday bozorga kirish tahlilida muhim qadamdir. Roʻyxatga olinmagan DM faoliyatining oqibatlari orasida soliq qoʻshib hisoblash, jarimalar va obroʻga zarar bor. Biznes tuzilmasini tanlashdan oldin faoliyatingizni Oʻzbekiston Soliq kodeksi va tegishli qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi shartnomalar belgilagan DM chegaralariga proaktiv baholash tavsiya etiladi.",
       },
     ],
     faq: [
       {
         question: "Qaysi faoliyat Oʻzbekistonda Doimiy muassasa yaratadi?",
-        answer: "Chet el kompaniyasi Oʻzbekistonda bir oydan ortiq doimiy faoliyat joyiga ega boʻlganda Doimiy muassasa (DM) paydo boʻladi, shu jumladan har qanday turdagi ofis, zavod, ustaxona yoki laboratoriya. DM maqomi quyidagi hollarda ham yuzaga keladi: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; kamida 183 kun davomida xodimlar orqali xizmatlar koʻrsatish; chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzadigan bogʿliq agentlar; bogʿliq agent orqali sugʻuurta mukofotlarini yigʻuvchi chet el sugʻuurta kompaniyalari.",
+        answer: "Chet el kompaniyasi Oʻzbekistonda bir oydan ortiq doimiy faoliyat joyiga ega boʻlganda Doimiy muassasa (DM) paydo boʻladi, shu jumladan har qanday turdagi ofis, zavod, ustaxona yoki laboratoriya. DM maqomi quyidagi hollarda ham yuzaga keladi: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; kamida 183 kun davomida xodimlar orqali xizmatlar koʻrsatish; chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzadigan bogʻliq agentlar; bogʻliq agent orqali sugʻurta mukofotlarini yigʻuvchi chet el sugʻurta kompaniyalari.",
       },
       {
         question: "Qaysi faoliyat Oʻzbekistonda Doimiy muassasa yaratmaydi?",
-        answer: "Bir qator tayyorgarlik va yordamchi faoliyat turlari Oʻzbekistonda avtomatik ravishda DM yaratmaydi: obyektlarni faqat tovarlarni saqlash yoki namoyish qilish uchun ishlatish; faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼumot toʻplash uchun doimiy biznes joyini saqlash; Oʻzbekistondagi boshqa kompaniyaga chet el xodimlarini taqdim etish — agar chet el kompaniyasi ularning ish natijalari uchun javobgar boʻmasa va bundan oladigan daromad bunday xodimlarni taqdim etish jami xarajatlarining 10% dan oshmasa.",
+        answer: "Bir qator tayyorgarlik va yordamchi faoliyat turlari Oʻzbekistonda avtomatik ravishda DM yaratmaydi: obyektlarni faqat tovarlarni saqlash yoki namoyish qilish uchun ishlatish; faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼlumot toʻplash uchun doimiy biznes joyini saqlash; Oʻzbekistondagi boshqa kompaniyaga chet el xodimlarini taqdim etish — agar chet el kompaniyasi ularning ish natijalari uchun javobgar boʻlmasa va bundan oladigan daromad bunday xodimlarni taqdim etish jami xarajatlarining 10% dan oshmasa.",
       },
       {
         question: "Oʻzbekistondagi Doimiy muassasaga qanday soliqlar qoʻllaniladi?",
-        answer: "Oʻzbekistondagi DM tomonidan yaratilgan daromad mahalliy foyda soligʿiga tortiladi. Soliq bazasi odatda DM ning faoliyat bilan bogʿliq xarajatlar chegirib tashlanganidan keyingi umumiy daromadi hisoblanadi. Eʼibor bering: DMdan chet el bosh ofisi yoki bogʿliq shaxslarga ayrim toʻlovlar chegirib tashlanmasligi mumkin. DMning soliqdan keyingi sof foydasi dividend sifatida koʻriladi va qoʻshimcha 10% soliqqa tortilishi mumkin, garchi qoʻllanadigan qoʻsh soliqqa tortishni bartaraf etish toʻgʿrisidagi shartnomalar ushbu stavkani kamaytirishi mumkin.",
+        answer: "Oʻzbekistondagi DM tomonidan yaratilgan daromad mahalliy foyda soligʻiga tortiladi. Soliq bazasi odatda DM ning faoliyat bilan bogʻliq xarajatlar chegirib tashlanganidan keyingi umumiy daromadi hisoblanadi. Eʼtibor bering: DMdan chet el bosh ofisi yoki bogʻliq shaxslarga ayrim toʻlovlar chegirib tashlanmasligi mumkin. DMning soliqdan keyingi sof foydasi dividend sifatida koʻriladi va qoʻshimcha 10% soliqqa tortilishi mumkin, garchi qoʻllanadigan qoʻsh soliqqa tortishni bartaraf etish toʻgʻrisidagi shartnomalar ushbu stavkani kamaytirishi mumkin.",
       },
       {
-        question: "Roʻxatga olinmagan Doimiy muassasaning oqibatlari qanday?",
-        answer: "Oʻzbekistonda roʻxatga olinmagan DM orqali faoliyat olib borish roʻxatga olinmagan barcha davr uchun soliq qoʻshib hisoblash, moliyaviy jarimalar va obroʻga zarar ko'rishga olib kelishi mumkin. DM maqomi yuzaga kelgandan soʻng chet el kompaniyasi mahalliy soliq organlarida roʻxatdan oʻtishi shart. DM faoliyatining boshlanish sanasi odatda eng erta sanadan hisoblanadi: tegishli shartnomani imzolash, ishlarning boshlanishi yoki xodimlarning kelishi — shuning uchun roʻxatdan oʻtish majburiyati toʿliq faoliyat boshlanishidan oldin ham yuzaga kelishi mumkin.",
+        question: "Roʻyxatga olinmagan Doimiy muassasaning oqibatlari qanday?",
+        answer: "Oʻzbekistonda roʻyxatga olinmagan DM orqali faoliyat olib borish roʻyxatga olinmagan barcha davr uchun soliq qoʻshib hisoblash, moliyaviy jarimalar va obroʻga zarar ko'rishga olib kelishi mumkin. DM maqomi yuzaga kelgandan soʻng chet el kompaniyasi mahalliy soliq organlarida roʻyxatdan oʻtishi shart. DM faoliyatining boshlanish sanasi odatda eng erta sanadan hisoblanadi: tegishli shartnomani imzolash, ishlarning boshlanishi yoki xodimlarning kelishi — shuning uchun roʻyxatdan oʻtish majburiyati toʻliq faoliyat boshlanishidan oldin ham yuzaga kelishi mumkin.",
       },
     ],
   },

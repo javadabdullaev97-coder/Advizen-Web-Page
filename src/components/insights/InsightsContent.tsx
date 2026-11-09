@@ -52,8 +52,7 @@ export default function InsightsContent() {
             src="/Hero and CTA images/Insights Hero.webp"
             alt=""
             fill
-            priority
-            unoptimized
+            preload
             sizes="100vw"
             className="object-cover object-[85%_50%] max-sm:object-[78%_50%] home-settle"
           />
@@ -93,7 +92,6 @@ export default function InsightsContent() {
             alt={t("guide.coverAlt")}
             width={997}
             height={1200}
-            unoptimized
             sizes="250px"
             className="home-cover w-[170px] lg:w-[250px] h-auto rounded-xl shadow-[0_24px_48px_rgba(0,0,0,.45)] lg:justify-self-center max-lg:order-first"
           />
@@ -114,7 +112,6 @@ export default function InsightsContent() {
                   src={latest.image}
                   alt=""
                   fill
-                  unoptimized
                   sizes="(max-width: 1023px) 100vw, 56vw"
                   className="object-cover transition-transform duration-[600ms] ease-[var(--ease-out)] group-hover:scale-[1.03]"
                 />

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Raleway, Manrope, Onest } from "next/font/google";
+import { Raleway, Manrope } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import { getClientMessages } from "@/i18n/client-messages";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -42,24 +43,21 @@ function localePath(path: string, locale: string) {
 
 const raleway = Raleway({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600"],
+  // Only the ADVIZEN wordmark uses it.
+  weight: "500",
   variable: "--font-hero",
   display: "swap",
 });
 
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
+  // Variable font: one file covers every weight.
   variable: "--font-manrope",
   display: "swap",
 });
 
-const onest = Onest({
-  subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-onest",
-  display: "swap",
-});
+// Only ru and uz live under [locale]; anything else (e.g. /some-typo) falls through to global-not-found.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return [{ locale: "ru" }, { locale: "uz" }];
@@ -140,7 +138,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`h-full antialiased ${raleway.variable} ${manrope.variable} ${onest.variable}`}
+      className={`h-full antialiased ${raleway.variable} ${manrope.variable}`}
     >
       <head>
         <meta name="theme-color" content="#0b0b0c" />
@@ -158,7 +156,7 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-full flex flex-col relative">
         <GtmNoScript />
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={await getClientMessages()}>
           <Navbar />
           <main className="flex-1 relative z-10">{children}</main>
           <div className="relative z-10">

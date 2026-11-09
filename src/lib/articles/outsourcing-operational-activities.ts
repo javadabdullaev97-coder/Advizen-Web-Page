@@ -5,12 +5,23 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Streamline your operations and amplify growth with strategic outsourcing in Uzbekistan.",
     author: "Advizen Advisory Team",
     readTime: "6 min read",
+    inShort: {
+      figures: [
+        { value: "3", label: "Functions most often outsourced: accounting, legal compliance and HR administration" },
+      ],
+      points: [
+        "Outsourcing means delegating specific business functions or processes to external service providers.",
+        "Accounting, legal compliance and HR administration are among the most commonly outsourced functions because they require specialist knowledge.",
+        "When a compliance function is outsourced, the provider takes on responsibility for keeping it in line with Uzbekistan's changing regulation.",
+        "Outsourcing removes the overheads of an internal department, such as salaries, social contributions, office space, software licences and training, and the service can be scaled up or down without hiring or redundancies.",
+      ],
+    },
     content: [
       {
         type: "p",
         text: "In the competitive landscape of Uzbekistan, businesses are constantly seeking intelligent strategies to enhance efficiency, reduce costs, and sharpen their focus on core competencies. While familiar in Western markets, outsourcing operational activities is rapidly gaining traction as a vital solution for companies navigating the unique complexities of this dynamic region. At Advizen, we recognise that offloading non-core functions is not just about cost savings — it is a strategic move that empowers your business for sustainable growth.",
       },
-      { type: "h2", text: "What is Outsourcing and Why is it Essential Today?" },
+      { type: "h2", text: "What is outsourcing and why is it essential today?" },
       {
         type: "p",
         text: "Outsourcing involves delegating specific business functions or processes to external service providers. This model originated in developed economies as an effective way to streamline operations, and its popularity stems from the mutual benefits it offers. Companies gain the ability to transfer certain responsibilities from their internal staff to expert external teams, leading to significant savings on personnel costs. For management, outsourcing means not only shifting duties but also transferring associated liabilities, allowing them to dedicate more energy and resources to strategic development.",
@@ -19,7 +30,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p",
         text: "The effectiveness of outsourcing has been proven in practice, embraced by businesses of all sizes — from agile startups to major multinational corporations. By entrusting specific functions to external specialists, a company can reduce its internal headcount, thereby lowering expenses related to salaries, taxes, and the establishment and maintenance of physical workstations.",
       },
-      { type: "h2", text: "The Power of Outsourced Services: A Closer Look" },
+      { type: "h2", text: "The power of outsourced services: a closer look" },
       {
         type: "p",
         text: "While various functions can be outsourced, services like accounting, legal compliance, and HR administration are among the most sought-after due to their specialised nature and critical importance. Leveraging these services through an expert partner offers a multitude of advantages:",
@@ -35,7 +46,7 @@ const article: Record<string, LocalizedArticle> = {
           "Scalability and Flexibility: Outsourced services can be easily scaled up or down to match your business's fluctuating needs without the complexities of internal hiring or downsizing.",
         ],
       },
-      { type: "h2", text: "Choosing Your Strategic Outsourcing Partner" },
+      { type: "h2", text: "Choosing your strategic outsourcing partner" },
       {
         type: "p",
         text: "At Advizen, we offer professional, high-level services in tax and legal consulting, accounting, customs, financial, and HR services. Our seasoned experts are dedicated to helping you optimise your operations, uncover hidden reserves, and elevate your company's success through our integrated 'one-stop shop' approach.",
@@ -68,6 +79,17 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Оптимизируйте операционную деятельность и ускоряйте рост с помощью стратегического аутсорсинга в Узбекистане.",
     author: "Консалтинговая команда Advizen",
     readTime: "6 мин чтения",
+    inShort: {
+      figures: [
+        { value: "3", label: "Функции, которые чаще всего передают на аутсорсинг: бухгалтерия, юридическое сопровождение и кадровое администрирование" },
+      ],
+      points: [
+        "Аутсорсинг — это передача определённых бизнес-функций или процессов внешним поставщикам услуг.",
+        "Бухгалтерия, юридическое сопровождение и кадровое администрирование — наиболее востребованные услуги аутсорсинга, поскольку требуют специальных знаний.",
+        "При передаче комплаенс-функций на аутсорсинг поставщик услуг берёт на себя ответственность за соблюдение меняющихся нормативных требований Узбекистана.",
+        "Аутсорсинг исключает накладные расходы на внутренний отдел — зарплаты, социальные взносы, офисные площади, лицензии на ПО и обучение, а объём услуг можно увеличить или сократить без найма и сокращения штата.",
+      ],
+    },
     content: [
       {
         type: "p",
@@ -131,6 +153,17 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Oʻzbekistonda strategik autsorsing yordamida operatsion faoliyatni soddalashtiring va oʻsishni tezlashtiring.",
     author: "Advizen konsalting jamoasi",
     readTime: "6 daqiqalik oʻqish",
+    inShort: {
+      figures: [
+        { value: "3", label: "Eng koʻp autsorsingga topshiriladigan funksiyalar: buxgalteriya, yuridik komplaens va HR boshqaruvi" },
+      ],
+      points: [
+        "Autsorsing — muayyan biznes funksiyalari yoki jarayonlarini tashqi xizmat koʻrsatuvchilarga topshirish.",
+        "Buxgalteriya, yuridik komplaens va HR boshqaruvi ixtisoslashgan bilim talab qilgani uchun eng talabgir autsorsing xizmatlari hisoblanadi.",
+        "Komplaens funksiyalari autsorsingga topshirilganda, xizmat koʻrsatuvchi Oʻzbekistonning oʻzgarib turuvchi tartibga solish talablariga rioya etilishi uchun javobgarlikni oʻz zimmasiga oladi.",
+        "Autsorsing ichki boʻlim bilan bogʻliq xarajatlarni — oylik, ijtimoiy badallar, ofis joyi, dasturiy taʼminot litsenziyalari va oʻqitishni — bartaraf etadi, xizmatlar hajmini esa ishga olish yoki qisqartirishsiz oshirish yoki kamaytirish mumkin.",
+      ],
+    },
     content: [
       {
         type: "p",

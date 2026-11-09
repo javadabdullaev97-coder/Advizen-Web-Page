@@ -65,7 +65,7 @@ export const publications: Publication[] = [
     slug: "tashkent-international-financial-centre",
     tag: "Legal Briefing",
     category: "Legal",
-    title: "Tashkent International Financial Centre: The 2026 Constitutional Law",
+    title: "Tashkent International Financial Centre: the 2026 Constitutional Law",
     description:
       "A neutral analysis of the Constitutional Law establishing the Tashkent International Financial Centre — its common-law legal architecture, the 2076 tax exemption and its Pillar Two limits, the operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.",
     year: "2026",
@@ -78,7 +78,7 @@ export const publications: Publication[] = [
     slug: "outsourcing-operational-activities",
     tag: "Advisory",
     category: "Advisory",
-    title: "Outsourcing Operational Activities in Uzbekistan",
+    title: "Outsourcing operational activities in Uzbekistan",
     description:
       "A practical overview of the regulatory framework governing outsourcing arrangements in Uzbekistan, including permitted structures, labour implications, and contract requirements.",
     year: "2025",
@@ -91,7 +91,7 @@ export const publications: Publication[] = [
     slug: "accounting-policy-tax-purposes",
     tag: "Tax Briefing",
     category: "Tax",
-    title: "Accounting Policy for Tax Purposes in Uzbekistan",
+    title: "Accounting policy for tax purposes in Uzbekistan",
     description:
       "How Uzbekistan's tax code governs accounting method elections, asset classification, and timing differences — with practical guidance for foreign-invested entities.",
     year: "2025",
@@ -104,7 +104,7 @@ export const publications: Publication[] = [
     slug: "franchising-uzbekistan",
     tag: "Legal Briefing",
     category: "Legal",
-    title: "Franchising in Uzbekistan: Legal Framework & Entry Structures",
+    title: "Franchising in Uzbekistan: legal framework & entry structures",
     description:
       "An analysis of Uzbekistan's franchising legislation, registration obligations, royalty repatriation rules, and key contractual considerations for international franchisors.",
     year: "2025",
@@ -117,7 +117,7 @@ export const publications: Publication[] = [
     slug: "payroll-social-contributions",
     tag: "HR Briefing",
     category: "HR",
-    title: "Payroll & Social Contributions: Employer Obligations in Uzbekistan",
+    title: "Payroll & social contributions: employer obligations in Uzbekistan",
     description:
       "A structured breakdown of employer payroll obligations — personal income tax withholding, social insurance contributions, reporting deadlines, and penalties for non-compliance.",
     year: "2025",
@@ -130,7 +130,7 @@ export const publications: Publication[] = [
     slug: "escrow-accounts-uzbekistan",
     tag: "Legal Briefing",
     category: "Legal",
-    title: "Escrow Accounts in Uzbekistan: Legal Mechanics & Use Cases",
+    title: "Escrow accounts in Uzbekistan: legal mechanics & use cases",
     description:
       "An overview of escrow account regulation in Uzbekistan, covering permitted use cases in M&A and real estate transactions, bank requirements, and release mechanics.",
     year: "2025",
@@ -143,7 +143,7 @@ export const publications: Publication[] = [
     slug: "creative-industry-park-uzbekistan",
     tag: "Advisory",
     category: "Advisory",
-    title: "Creative Industry Park: Uzbekistan's Framework for Creative Economy",
+    title: "Creative Industry Park: Uzbekistan's framework for creative economy",
     description:
       "A detailed guide to the Creative Industry Park regime — eligibility criteria, tax incentives, registration process, and operational requirements for qualifying entities.",
     year: "2025",
@@ -156,7 +156,7 @@ export const publications: Publication[] = [
     slug: "online-gambling-uzbekistan",
     tag: "Legal Briefing",
     category: "Legal",
-    title: "Online Gambling Regulation in Uzbekistan",
+    title: "Online gambling regulation in Uzbekistan",
     description:
       "The regulatory landscape for online gambling operators in Uzbekistan — licensing requirements, permitted game types, technical standards, and AML compliance obligations.",
     year: "2025",
@@ -169,7 +169,7 @@ export const publications: Publication[] = [
     slug: "permanent-establishment-uzbekistan",
     tag: "Tax Briefing",
     category: "Tax",
-    title: "Permanent Establishment Risk in Uzbekistan",
+    title: "Permanent establishment risk in Uzbekistan",
     description:
       "An in-depth analysis of permanent establishment triggers under Uzbek tax law and applicable tax treaties, with structuring strategies to mitigate PE exposure.",
     year: "2025",
@@ -182,7 +182,7 @@ export const publications: Publication[] = [
     slug: "self-employment-uzbekistan",
     tag: "HR Briefing",
     category: "HR",
-    title: "Self-Employment Regime in Uzbekistan",
+    title: "Self-employment regime in Uzbekistan",
     description:
       "A practical guide to Uzbekistan's self-employment tax regime — eligibility, registration, contribution rates, and implications for businesses engaging independent contractors.",
     year: "2025",
@@ -195,7 +195,7 @@ export const publications: Publication[] = [
     slug: "crypto-asset-service-providers-uzbekistan",
     tag: "Legal Briefing",
     category: "Legal",
-    title: "Crypto-Asset Service Providers: Licensing in Uzbekistan",
+    title: "Crypto-asset service providers: licensing in Uzbekistan",
     description:
       "Uzbekistan's framework for crypto-asset service providers — NAFS licensing requirements, permitted activities, capital requirements, and AML/KYC obligations.",
     year: "2025",
@@ -208,7 +208,7 @@ export const publications: Publication[] = [
     slug: "licensing-procedures-uzbekistan",
     tag: "Advisory",
     category: "Advisory",
-    title: "Licensing Procedures for Regulated Activities in Uzbekistan",
+    title: "Licensing procedures for regulated activities in Uzbekistan",
     description:
       "A sector-by-sector overview of licensing requirements in Uzbekistan, covering financial services, healthcare, construction, education, and media — with application timelines.",
     year: "2024",
@@ -221,7 +221,7 @@ export const publications: Publication[] = [
     slug: "special-economic-zones-uzbekistan",
     tag: "Advisory",
     category: "Advisory",
-    title: "Special Economic Zones in Uzbekistan: A Comparative Guide",
+    title: "Special economic zones in Uzbekistan: a comparative guide",
     description:
       "A comparative analysis of Uzbekistan's SEZ landscape — free economic zones, small industrial zones, and IT parks — covering incentive packages, entry criteria, and operational constraints.",
     year: "2026",
@@ -234,7 +234,7 @@ export const publications: Publication[] = [
     slug: "accounting-law-uzbekistan",
     tag: "Advisory",
     category: "Advisory",
-    title: "Accounting Law in Uzbekistan: Key Requirements for Businesses",
+    title: "Accounting law in Uzbekistan: key requirements for businesses",
     description:
       "An overview of Uzbekistan's accounting legislation — mandatory chart of accounts, financial statement requirements, audit thresholds, and transition considerations for IFRS adoption.",
     year: "2024",
@@ -247,7 +247,7 @@ export const publications: Publication[] = [
     slug: "representative-offices-uzbekistan",
     tag: "Legal Briefing",
     category: "Legal",
-    title: "Representative Offices in Uzbekistan: Registration & Compliance",
+    title: "Representative offices in Uzbekistan: registration & compliance",
     description:
       "A practical guide to establishing and operating a foreign representative office in Uzbekistan — accreditation procedures, permitted activities, tax treatment, and staffing rules.",
     year: "2024",
@@ -260,7 +260,7 @@ export const publications: Publication[] = [
     slug: "voluntary-liquidation-uzbekistan",
     tag: "Legal Briefing",
     category: "Legal",
-    title: "Voluntary Liquidation of Companies in Uzbekistan",
+    title: "Voluntary liquidation of companies in Uzbekistan",
     description:
       "Step-by-step guidance on voluntary liquidation procedures for LLCs and JSCs in Uzbekistan — from board resolution through creditor notification to final deregistration.",
     year: "2024",
@@ -273,7 +273,7 @@ export const publications: Publication[] = [
     slug: "pit-refunds-education-uzbekistan",
     tag: "Tax Briefing",
     category: "Tax",
-    title: "PIT Refunds for Education Expenses in Uzbekistan",
+    title: "PIT refunds for education expenses in Uzbekistan",
     description:
       "A guide to the personal income tax deduction and refund mechanism for education expenses in Uzbekistan — eligible institutions, claim procedures, and documentation requirements.",
     year: "2024",
@@ -286,7 +286,7 @@ export const publications: Publication[] = [
     slug: "employer-of-record-central-asia",
     tag: "HR Briefing",
     category: "HR",
-    title: "Employer of Record in Central Asia: A Practical Overview",
+    title: "Employer of record in Central Asia: a practical overview",
     description:
       "How EOR structures operate across Kazakhstan, Uzbekistan, and Kyrgyzstan — legal foundations, risk allocation, onboarding timelines, and cost benchmarks for international employers.",
     year: "2026",
@@ -299,7 +299,7 @@ export const publications: Publication[] = [
     slug: "islamic-finance-uzbekistan",
     tag: "Legal Briefing",
     category: "Legal",
-    title: "Islamic Finance in Uzbekistan: A Practical Guide",
+    title: "Islamic finance in Uzbekistan: a practical guide",
     description:
       "Uzbekistan's Islamic finance framework explained — from the legislative foundation and permitted MFO instruments to Special Council requirements and Sharia-compliant penalty mechanics.",
     year: "2026",

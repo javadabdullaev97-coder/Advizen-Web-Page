@@ -1,7 +1,6 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -84,16 +83,11 @@ export default function CookieBanner() {
   const copy = COPY[locale] ?? COPY.en;
 
   return (
-    <AnimatePresence>
-      {visible && (
-        <motion.div
+    visible && (
+        <div
           role="dialog"
           aria-label={copy.more}
-          initial={{ y: 12, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 12, opacity: 0 }}
-          transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-          className="fixed z-50 right-5 bottom-5 max-sm:left-4 max-sm:right-4 max-sm:bottom-4 sm:w-[360px] rounded-[18px] border border-line bg-[#1d1d1f]/85 backdrop-blur-2xl backdrop-saturate-[1.8] p-4 shadow-[0_16px_40px_rgba(0,0,0,.45)]"
+          className="cookie-in fixed z-50 right-5 bottom-5 max-sm:left-4 max-sm:right-4 max-sm:bottom-4 sm:w-[360px] rounded-[18px] border border-line bg-[#1d1d1f]/85 backdrop-blur-2xl backdrop-saturate-[1.8] p-4 shadow-[0_16px_40px_rgba(0,0,0,.45)]"
         >
           <p className="text-[14px] leading-[1.5] text-foreground-2">
             {copy.text}{" "}
@@ -109,8 +103,7 @@ export default function CookieBanner() {
               {copy.accept}
             </button>
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        </div>
+    )
   );
 }

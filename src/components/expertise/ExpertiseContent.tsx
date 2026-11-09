@@ -55,8 +55,7 @@ export default function ExpertiseContent() {
             src="/Hero and CTA images/Expertise Hero.webp"
             alt=""
             fill
-            priority
-            unoptimized
+            preload
             sizes="100vw"
             className="object-cover object-[80%_45%] max-sm:object-[70%_30%] home-settle"
           />
@@ -94,7 +93,6 @@ export default function ExpertiseContent() {
                     src={photo}
                     alt=""
                     fill
-                    unoptimized
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]"
                   />
@@ -142,7 +140,6 @@ export default function ExpertiseContent() {
                 src={`/Sectors/${SECTOR_PHOTOS[i]}.webp`}
                 alt=""
                 fill
-                unoptimized
                 sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]"
               />

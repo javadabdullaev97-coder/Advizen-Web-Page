@@ -5,12 +5,24 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Why every legal entity and individual entrepreneur in Uzbekistan needs a well-structured Accounting Policy for Tax Purposes.",
     author: "Advizen Tax Practice",
     readTime: "8 min read",
+    inShort: {
+      figures: [
+        { value: "Chapter 7", label: "Of the Tax Code, which requires every taxpayer to approve an accounting policy for tax purposes" },
+        { value: "1 January", label: "Of the following year, the usual effective date of any change to the policy" },
+      ],
+      points: [
+        "All taxpayers in Uzbekistan, both legal entities and individual entrepreneurs, must approve an accounting policy for tax purposes.",
+        "The policy is approved by an order or directive of the company's head and generally stays unchanged for the calendar year, except when tax or accounting legislation changes.",
+        "The policy should cover deductible and non-deductible expenses, loss carryforward and expense reserves, tax depreciation, VAT accounting, and tax registers and document storage.",
+        "There is no single approved form: the policy can be a standalone document or a separate section of the financial accounting policy.",
+      ],
+    },
     content: [
       {
         type: "p",
         text: "In Uzbekistan's evolving business and tax environment, achieving compliance and optimising tax liabilities requires more than just diligent bookkeeping. As stipulated by Chapter 7 of Uzbekistan's Tax Code, all taxpayers are mandated to approve an Accounting Policy for Tax Purposes — a foundational document that dictates the conceptual framework for calculating your tax base, assessing tax liabilities, and preparing accurate tax reports.",
       },
-      { type: "h2", text: "Why is a Policy Crucial?" },
+      { type: "h2", text: "Why is a policy crucial?" },
       {
         type: "ul",
         items: [
@@ -20,33 +32,33 @@ const article: Record<string, LocalizedArticle> = {
           "Minimises Tax Disputes: A highly detailed and well-articulated Policy acts as a robust defence mechanism during tax inspections. It is the document you will appeal to when communicating with tax inspectors.",
         ],
       },
-      { type: "h2", text: "Key Aspects to Address When Developing Your Policy" },
-      { type: "h3", text: "Deductible and Non-Deductible Expenses" },
+      { type: "h2", text: "Key aspects to address when developing your policy" },
+      { type: "h3", text: "Deductible and non-deductible expenses" },
       {
         type: "p",
         text: "Clearly define which expenses can reduce your corporate income tax base. This is a frequent area of contention between taxpayers and tax authorities.",
       },
-      { type: "h3", text: "Loss Carryforward and Expense Reserves" },
+      { type: "h3", text: "Loss carryforward and expense reserves" },
       {
         type: "p",
         text: "Outline the methodology for carrying forward past losses to reduce future taxable income, and detail how your company forms and utilises reserves for anticipated expenses.",
       },
-      { type: "h3", text: "Depreciation and Amortisation" },
+      { type: "h3", text: "Depreciation and amortisation" },
       {
         type: "p",
         text: "The Tax Code sets specific depreciation rates for tax purposes, which may differ from those used for financial accounting. Your Policy must reconcile these differences and specify the methods applied for tax purposes.",
       },
-      { type: "h3", text: "Value Added Tax (VAT) Accounting" },
+      { type: "h3", text: "Value added tax (VAT) accounting" },
       {
         type: "p",
         text: "As one of the most complex taxes, your Policy should meticulously describe: conditions for offsetting previously paid VAT on goods and services; specific rules for VAT offsets when dealing with foreign legal entities; and the methodology for separate accounting if your business has activities subject to different VAT rates or VAT-exempt operations.",
       },
-      { type: "h3", text: "Tax Registers and Document Management" },
+      { type: "h3", text: "Tax registers and document management" },
       {
         type: "p",
         text: "Describe the forms and procedures for independently developed tax registers used to accumulate and systematise information for tax assessment and reporting. Clarify whether documents are maintained in paper and/or electronic form, and specify the terms of storage.",
       },
-      { type: "h2", text: "Important Considerations for Your Policy" },
+      { type: "h2", text: "Important considerations for your policy" },
       {
         type: "ul",
         items: [
@@ -55,7 +67,7 @@ const article: Record<string, LocalizedArticle> = {
           "Fiscal Focus in Uzbekistan: Uzbekistan's accounting standards often have a strong fiscal orientation. Many organisations incorporate methods that bring accounting and tax data closer — a practice generally supported by tax authorities.",
         ],
       },
-      { type: "h2", text: "Advizen: Your Expert Partner in Tax Policy Development" },
+      { type: "h2", text: "Advizen: your expert partner in tax policy development" },
       {
         type: "p",
         text: "Developing a robust and compliant Accounting Policy for Tax Purposes requires a deep understanding of Uzbekistan's intricate tax legislation and accounting standards. Our experienced tax advisors specialise in assisting businesses with this critical task — ensuring your Policy is accurately drafted, fully compliant with current Uzbek tax law, and provides clear, defensible methodologies that minimise potential disputes with tax authorities.",
@@ -84,6 +96,18 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Почему каждому юридическому лицу и индивидуальному предпринимателю в Узбекистане нужна продуманная учётная политика для целей налогообложения.",
     author: "Налоговая практика Advizen",
     readTime: "8 мин чтения",
+    inShort: {
+      figures: [
+        { value: "Глава 7", label: "Налогового кодекса, обязывающая каждого налогоплательщика утвердить учётную политику для целей налогообложения" },
+        { value: "1 января", label: "Следующего года — обычная дата вступления в силу изменений политики" },
+      ],
+      points: [
+        "Все налогоплательщики Узбекистана — юридические лица и индивидуальные предприниматели — обязаны утвердить учётную политику для целей налогообложения.",
+        "Политика утверждается приказом или распоряжением руководителя и, как правило, не меняется в течение календарного года, кроме случаев изменения налогового или бухгалтерского законодательства.",
+        "Политика должна охватывать вычитаемые и невычитаемые расходы, перенос убытков и резервы расходов, налоговую амортизацию, учёт НДС, а также налоговые регистры и сроки хранения документов.",
+        "Единой утверждённой формы нет: политика может быть отдельным документом или разделом общей учётной политики.",
+      ],
+    },
     content: [
       {
         type: "p",
@@ -163,6 +187,18 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Nega Oʻzbekistondagi har bir yuridik shaxs va yakka tartibdagi tadbirkorga yaxshi tuzilgan soliq maqsadlaridagi hisob siyosati zarur.",
     author: "Advizen soliq amaliyoti",
     readTime: "8 daqiqalik oʻqish",
+    inShort: {
+      figures: [
+        { value: "7-bob", label: "Soliq kodeksining har bir soliq toʻlovchini soliq maqsadlaridagi hisob siyosatini tasdiqlashga majbur qiluvchi bobi" },
+        { value: "1-yanvar", label: "Keyingi yilning — siyosatga kiritilgan oʻzgarishlar odatda kuchga kiradigan sana" },
+      ],
+      points: [
+        "Oʻzbekistondagi barcha soliq toʻlovchilar — yuridik shaxslar ham, yakka tartibdagi tadbirkorlar ham — soliq maqsadlaridagi hisob siyosatini tasdiqlashi shart.",
+        "Siyosat kompaniya rahbarining buyrugʻi yoki koʻrsatmasi bilan tasdiqlanadi va odatda kalendar yili davomida oʻzgartirilmaydi, soliq yoki buxgalteriya qonunchiligi oʻzgargan hollar bundan mustasno.",
+        "Siyosat chegirib tashlanadigan va chegirib tashlanmaydigan xarajatlar, zararlarni keyingi davrlarga oʻtkazish va xarajat zaxiralari, soliq amortizatsiyasi, QQS hisobi hamda soliq registrlari va hujjatlarni saqlash muddatlarini qamrab olishi kerak.",
+        "Yagona tasdiqlangan shakl yoʻq: siyosat alohida hujjat yoki umumiy moliyaviy hisob siyosatining alohida boʻlimi boʻlishi mumkin.",
+      ],
+    },
     content: [
       {
         type: "p",

@@ -5,6 +5,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Explore the specialized legal framework, significant tax incentives, and unique support mechanisms available for businesses and professionals within Uzbekistan's rapidly developing Creative Industry Park.",
     author: "Advizen Legal Practice",
     readTime: "7 min read",
+    inShort: {
+      figures: [
+        { value: "UP-61", label: "Presidential Decree of 26 March 2025 that established the Creative Industry Park" },
+        { value: "ZRU-970", label: "Law of 3 October 2024 \"On Creative Industry\" that defines which activities qualify" },
+        { value: "50%", label: "Reduction in PIT rates for employees of residents and in the social tax rate" },
+        { value: "1 May 2025 – 1 Jan 2031", label: "Period during which the resident incentives apply" },
+      ],
+      points: [
+        "Organisations and individuals that create and commercialise creative products, such as literature, applied arts and crafts, architecture and design, and fine arts, are the main candidates for Park residency.",
+        "Residents are treated as turnover tax payers regardless of total income and can switch to the generally established tax procedure if that is more advantageous.",
+        "Park residents can receive interest-free loans and grants, subject to certain conditions.",
+        "The tax benefits still require corresponding amendments to the Tax Code before they can be applied in practice.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -24,7 +38,7 @@ const article: Record<string, LocalizedArticle> = {
           "Establishing regional branches to expand reach and impact across Uzbekistan",
         ],
       },
-      { type: "h2" as const, text: "Defining the Creative Industry: Who Can Become a Resident?" },
+      { type: "h2" as const, text: "Defining the creative industry: who can become a resident?" },
       {
         type: "p" as const,
         text: "According to Law No. ZRU-970 of October 3, 2024, \"On Creative Industry,\" the scope of creative industries is broadly defined. Entities and individuals engaged in the following fields and aiming to develop and commercialise creative products are the primary candidates for residency:",
@@ -39,7 +53,7 @@ const article: Record<string, LocalizedArticle> = {
           "Other Creative Activities: encompassing the creation, production, storage, distribution, and promotion of creative products",
         ],
       },
-      { type: "h2" as const, text: "Tax, Customs, and Financial Incentives" },
+      { type: "h2" as const, text: "Tax, customs, and financial incentives" },
       {
         type: "p" as const,
         text: "A key driver for businesses to consider residency is the comprehensive package of incentives, active from May 1, 2025 to January 1, 2031. These benefits are designed to significantly enhance financial viability and operational efficiency:",
@@ -57,7 +71,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "blockquote" as const,
         text: "Important: while these significant benefits are enacted, corresponding amendments are still required to be integrated into the Tax Code of the Republic of Uzbekistan for their practical application. Businesses should stay informed about these legislative updates.",
       },
-      { type: "h2" as const, text: "An Ecosystem of Support Beyond Financials" },
+      { type: "h2" as const, text: "An ecosystem of support beyond financials" },
       {
         type: "p" as const,
         text: "Residents of the Creative Industry Park also gain access to a supportive ecosystem designed to foster growth and innovation:",
@@ -96,6 +110,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Узнайте о специализированной правовой базе, существенных налоговых льготах и уникальных механизмах поддержки, доступных для бизнеса и профессионалов в стремительно развивающемся Парке творческих индустрий Узбекистана.",
     author: "Advizen Legal Practice",
     readTime: "7 мин чтения",
+    inShort: {
+      figures: [
+        { value: "УП-61", label: "Указ Президента от 26 марта 2025 года о создании Парка творческих индустрий" },
+        { value: "ЗРУ-970", label: "Закон от 3 октября 2024 года «О творческих индустриях», определяющий подходящие виды деятельности" },
+        { value: "50%", label: "Снижение ставок НДФЛ для сотрудников резидентов и ставки социального налога" },
+        { value: "1 мая 2025 – 1 января 2031", label: "Период действия льгот для резидентов" },
+      ],
+      points: [
+        "Основные кандидаты на резидентство Парка — юридические и физические лица, создающие и коммерциализирующие творческие продукты: литература, декоративно-прикладное искусство и ремёсла, архитектура и дизайн, изобразительное искусство.",
+        "Резиденты включаются в число плательщиков налога с оборота независимо от совокупного дохода и могут перейти на общеустановленный порядок налогообложения, если это выгоднее.",
+        "Резидентам Парка при соблюдении определённых условий предоставляются беспроцентные займы и гранты.",
+        "Для практического применения налоговых льгот ещё необходимо внести соответствующие поправки в Налоговый кодекс.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -139,7 +167,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "ul" as const,
         items: [
           "Снижение ставки НДФЛ: снижение ставок НДФЛ на 50% для сотрудников компаний-резидентов, непосредственно уменьшающее расходы работодателей, связанные с оплатой труда",
-          "Снижение ставки социального налога: снижение ставки социального налога на 50%, дополнительно сокращающее стоимость занят",
+          "Снижение ставки социального налога: снижение ставки социального налога на 50%, дополнительно сокращающее стоимость занятости",
           "Гибкий режим налога с оборота: резиденты включаются в категорию плательщиков налога с оборота независимо от совокупного дохода, с возможностью перехода на общеустановленный порядок налогообложения, если это более выгодно",
           "Беспроцентные займы и гранты: предоставление резидентам Парка беспроцентных займов и грантов при соблюдении определённых условий, обеспечивающих прямую финансовую поддержку развития и инноваций",
         ],
@@ -187,6 +215,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "O'zbekistonning tez rivojlanayotgan Kreativ industriyalar parki doirasida biznes va mutaxassislar uchun mavjud ixtisoslashtirilgan huquqiy tizim, muhim soliq imtiyozlari va noyob qo'llab-quvvatlash mexanizmlarini o'rganing.",
     author: "Advizen Legal Practice",
     readTime: "7 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "PF-61", label: "Kreativ industriyalar parkini tashkil etgan 2025-yil 26-martdagi Prezident Farmoni" },
+        { value: "OʻRQ-970", label: "Mos faoliyat turlarini belgilovchi 2024-yil 3-oktyabrdagi «Kreativ industriya toʻgʻrisida»gi Qonun" },
+        { value: "50%", label: "Rezidentlar xodimlari uchun jismoniy shaxslardan daromad soligʻi stavkalari va ijtimoiy soliq stavkasining kamayishi" },
+        { value: "2025-yil 1-may – 2031-yil 1-yanvar", label: "Rezidentlar uchun imtiyozlar amal qiladigan davr" },
+      ],
+      points: [
+        "Kreativ mahsulotlarni yaratuvchi va tijoratlashtiruvchi yuridik va jismoniy shaxslar — adabiy ijod, amaliy sanʼat va hunarmandchilik, arxitektura va dizayn, tasviriy sanʼat sohalarida — Park rezidentligiga asosiy nomzodlardir.",
+        "Rezidentlar jami daromadidan qatʼi nazar aylanma soliq toʻlovchilari toifasiga kiritiladi va zarur boʻlsa, umumbelgilangan soliq tartibiga oʻtishi mumkin.",
+        "Park rezidentlariga muayyan shartlar asosida foizsiz kreditlar va grantlar beriladi.",
+        "Soliq imtiyozlarini amalda qoʻllash uchun Soliq kodeksiga tegishli oʻzgartishlar kiritilishi hali talab etiladi.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -229,7 +271,7 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul" as const,
         items: [
-          "Jismoniy shaxslardan daromad solig'ini kamaytirish: rezident kompaniyalar xodimlari uchun JSDS stavkalarini 50% ga kamaytirish, ish beruvchilar uchun ish haqi xarajatlarini bevosita pasaytiradi",
+          "Jismoniy shaxslardan daromad solig'ini kamaytirish: rezident kompaniyalar xodimlari uchun JShDS stavkalarini 50% ga kamaytirish, ish beruvchilar uchun ish haqi xarajatlarini bevosita pasaytiradi",
           "Ijtimoiy soliqni kamaytirish: ijtimoiy soliq stavkasini 50% ga kamaytirish bandlilik xarajatlarini yanada qisqartiradi",
           "Moslashuvchan aylanma soliq rejimi: rezidentlar jami daromadidan qat'i nazar aylanma soliq to'lovchilari toifasiga kiritiladi, zarur bo'lganda umumiy belgilangan soliq tartibiga o'tish imkoniyati mavjud",
           "Foizsiz kreditlar va grantlar: ma'lum shartlarga rioya etgan holda Park rezidentlariga foizsiz kreditlar va grantlar taqdim etish, rivojlanish va innovatsiyalarni moliyaviy jihatdan to'g'ridan-to'g'ri qo'llab-quvvatlaydi",
@@ -258,7 +300,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "O'zbekistonning Kreativ industriyalar parki qanday soliq imtiyozlari taklif etadi?",
-        answer: "Kreativ industriyalar parki rezidentlari xodimlar uchun jismoniy shaxslardan daromad solig'i (JSDS) stavkalarini 50% ga kamaytirish, ijtimoiy soliqni 50% ga kamaytirish, jami daromadidan qat'i nazar moslashuvchan aylanma soliq rejimidan foydalanish, shuningdek foizsiz kreditlar va grantlar olish imkoniyatidan bahramand bo'ladilar. Ushbu imtiyozlar 2025 yil 1 maydan 2031 yil 1 yanvargacha O'zbekiston Soliq kodeksiga tegishli o'zgartishlar kiritilishi sharti bilan amal qiladi.",
+        answer: "Kreativ industriyalar parki rezidentlari xodimlar uchun jismoniy shaxslardan daromad solig'i (JShDS) stavkalarini 50% ga kamaytirish, ijtimoiy soliqni 50% ga kamaytirish, jami daromadidan qat'i nazar moslashuvchan aylanma soliq rejimidan foydalanish, shuningdek foizsiz kreditlar va grantlar olish imkoniyatidan bahramand bo'ladilar. Ushbu imtiyozlar 2025 yil 1 maydan 2031 yil 1 yanvargacha O'zbekiston Soliq kodeksiga tegishli o'zgartishlar kiritilishi sharti bilan amal qiladi.",
       },
       {
         question: "O'zbekistonning Kreativ industriyalar parki rezidenti bo'lish uchun kim munosib?",

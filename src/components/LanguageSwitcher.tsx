@@ -4,7 +4,6 @@ import { useState, useRef, useEffect, useTransition } from "react";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { useParams } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { routing, type Locale } from "@/i18n/routing";
@@ -76,15 +75,10 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
         <ChevronDown aria-hidden className={cn("w-3.5 h-3.5 transition-transform duration-200", open && "rotate-180")} />
       </button>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.96 }}
-            transition={{ duration: 0.15, ease: [0.23, 1, 0.32, 1] }}
+      {open && (
+          <div
             style={{ transformOrigin: "top right" }}
-            className="absolute right-0 top-full mt-3 min-w-[170px] p-1.5 rounded-[16px] bg-surface/90 backdrop-blur-xl border border-line shadow-[0_16px_40px_rgba(0,0,0,0.45)] z-50"
+            className="menu-in absolute right-0 top-full mt-3 min-w-[170px] p-1.5 rounded-[16px] bg-surface/90 backdrop-blur-xl border border-line shadow-[0_16px_40px_rgba(0,0,0,0.45)] z-50"
           >
             {routing.locales.map((l) => {
               const active = l === locale;
@@ -103,9 +97,8 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
                 </button>
               );
             })}
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+      )}
     </div>
   );
 }

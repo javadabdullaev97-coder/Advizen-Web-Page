@@ -5,17 +5,31 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "What the 2025–2026 legislative reforms mean for buyers, sellers, and developers",
     author: "Advizen Legal Practice",
     readTime: "9 min read",
+    inShort: {
+      figures: [
+        { value: "30%", label: "Minimum own funds a developer must contribute before drawing project financing" },
+        { value: "6 months", label: "Handover delay beyond the contract date that lets the buyer terminate and recover all deposited funds" },
+        { value: "UZS 206,000", label: "Fixed escrow fee per real estate transaction, regardless of value" },
+        { value: "UZS 103,000", label: "Fixed escrow fee per vehicle transaction" },
+      ],
+      points: [
+        "Since 1 January 2026, escrow is mandatory for all new shared construction (off-plan housing) agreements in Uzbekistan.",
+        "Since 1 April 2026, escrow is mandatory for all sales of real estate and of vehicles not older than 10 years in categories M, N, O and G.",
+        "The buyer pays the price into an escrow account at the notary's partner bank at signing, and the funds are released to the seller once the ownership transfer is registered.",
+        "Escrow funds cannot be arrested, suspended or seized in connection with claims against the developer.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "Uzbekistan has introduced mandatory escrow accounts for real estate and vehicle transactions in two legislative waves. The first wave — targeting shared construction (off-plan housing) — came into force on January 1, 2026. The second wave extended escrow requirements to all real estate and qualifying vehicle transactions from April 1, 2026.",
       },
-      { type: "h2" as const, text: "Background: Why Escrow?" },
+      { type: "h2" as const, text: "Background: why escrow?" },
       {
         type: "p" as const,
         text: "Prior to these reforms, buyers of off-plan apartments and other real estate transferred funds directly to developers and sellers with limited legal protection. The government's stated objective — articulated in the Presidential Decree on the 'Single Housing Lifecycle' concept — is to protect buyer funds, increase market transparency, and align Uzbekistan's property market practices with international standards.",
       },
-      { type: "h2" as const, text: "Part 1: Shared Construction Escrow (Effective January 1, 2026)" },
+      { type: "h2" as const, text: "Part 1: shared construction escrow (effective January 1, 2026)" },
       {
         type: "ul" as const,
         items: [
@@ -23,7 +37,7 @@ const article: Record<string, LocalizedArticle> = {
           "From January 1, 2026: escrow-only model mandatory for all new shared construction agreements",
         ],
       },
-      { type: "h3" as const, text: "Key Requirements for Developers" },
+      { type: "h3" as const, text: "Key requirements for developers" },
       {
         type: "ul" as const,
         items: [
@@ -33,12 +47,12 @@ const article: Record<string, LocalizedArticle> = {
           "If a developer delays handover by more than 6 months beyond the contractual date, the buyer acquires the right to terminate the agreement and recover all deposited funds in full",
         ],
       },
-      { type: "h2" as const, text: "Part 2: General Property and Vehicle Escrow (Effective April 1, 2026)" },
+      { type: "h2" as const, text: "Part 2: general property and vehicle escrow (effective April 1, 2026)" },
       {
         type: "p" as const,
         text: "From April 1, 2026, escrow accounts became mandatory for all purchase and sale transactions involving real estate and vehicles not older than 10 years (categories M, N, O, and G). The mechanism is straightforward: the buyer transfers the transaction amount into an escrow account at the notary's partner bank at the time of signing. Funds are held until the ownership transfer is registered, then released to the seller.",
       },
-      { type: "h3" as const, text: "Fee Structure" },
+      { type: "h3" as const, text: "Fee structure" },
       {
         type: "ul" as const,
         items: [
@@ -50,19 +64,19 @@ const article: Record<string, LocalizedArticle> = {
         type: "blockquote" as const,
         text: "For a property sold at 500,000 USD, the old 0.5% commission model would have cost approximately 2,500 USD. Under the new fixed-fee regime, the same transaction costs approximately 15 USD equivalent — a reduction of over 99%.",
       },
-      { type: "h2" as const, text: "Compliance Considerations and Key Risks" },
-      { type: "h3" as const, text: "Understating Contract Price" },
+      { type: "h2" as const, text: "Compliance considerations and key risks" },
+      { type: "h3" as const, text: "Understating contract price" },
       {
         type: "p" as const,
         text: "Escrow funds must match the stated contract price and flow through a regulated bank, creating an evidentiary paper trail visible to tax authorities and financial intelligence units. Buyers who agree to declare a lower price expose themselves to potential liability under tax and anti-money laundering legislation.",
       },
-      { type: "h3" as const, text: "Foreign Currency Transactions" },
+      { type: "h3" as const, text: "Foreign currency transactions" },
       {
         type: "p" as const,
         text: "Real estate transactions in Uzbekistan are denominated in Uzbek som. Parties negotiating in USD must account for exchange rate movements between agreement signing and registration completion, as the escrow amount is fixed in som at the time of deposit.",
       },
       { type: "divider" as const },
-      { type: "h2" as const, text: "Summary of Key Dates and Rules" },
+      { type: "h2" as const, text: "Summary of key dates and rules" },
       {
         type: "ul" as const,
         items: [
@@ -98,6 +112,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Что реформы законодательства 2025–2026 годов означают для покупателей, продавцов и застройщиков",
     author: "Advizen Legal Practice",
     readTime: "9 мин чтения",
+    inShort: {
+      figures: [
+        { value: "30%", label: "Минимальная доля собственных средств застройщика до получения проектного финансирования" },
+        { value: "6 месяцев", label: "Задержка передачи объекта сверх договорного срока, дающая покупателю право расторгнуть договор и вернуть все средства" },
+        { value: "206 000 сум", label: "Фиксированная комиссия за эскроу по сделке с недвижимостью, независимо от стоимости" },
+        { value: "103 000 сум", label: "Фиксированная комиссия за эскроу по сделке с транспортным средством" },
+      ],
+      points: [
+        "С 1 января 2026 года эскроу обязателен для всех новых договоров долевого участия в строительстве в Узбекистане.",
+        "С 1 апреля 2026 года эскроу обязателен для всех сделок купли-продажи недвижимости и транспортных средств не старше 10 лет категорий M, N, O и G.",
+        "Покупатель при подписании переводит сумму сделки на счёт эскроу в банке-партнёре нотариуса, и средства перечисляются продавцу после регистрации перехода права собственности.",
+        "Средства на счёте эскроу не могут быть арестованы, приостановлены или изъяты по требованиям к застройщику.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -191,6 +219,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "2025–2026 yilgi qonunchilik islohotlari xaridor, sotuvchi va qurilish kompaniyalari uchun nima anglatadi",
     author: "Advizen Legal Practice",
     readTime: "9 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "30%", label: "Loyiha moliyalashtirishi olinishidan oldin qurilish kompaniyasi kiritishi shart boʻlgan oʻz mablagʻlarining eng kam ulushi" },
+        { value: "6 oy", label: "Shartnoma muddatidan ortiq kechikish, bunda xaridor shartnomani bekor qilib, barcha mablagʻlarni qaytarib olishi mumkin" },
+        { value: "206 000 soʻm", label: "Koʻchmas mulk bitimi uchun qiymatidan qatʼi nazar qatʼiy escrow toʻlovi" },
+        { value: "103 000 soʻm", label: "Transport vositasi bitimi uchun qatʼiy escrow toʻlovi" },
+      ],
+      points: [
+        "2026-yil 1-yanvardan Oʻzbekistonda barcha yangi ulushli qurilish shartnomalari uchun escrow majburiy.",
+        "2026-yil 1-apreldan koʻchmas mulk va M, N, O va G toifalaridagi 10 yildan eski boʻlmagan transport vositalarining barcha oldi-sotdi bitimlari uchun escrow majburiy.",
+        "Xaridor imzolash paytida bitim summasini notarius hamkor bankidagi escrow hisobiga oʻtkazadi, mablagʻlar esa mulk huquqining oʻtishi roʻyxatga olingach sotuvchiga oʻtkaziladi.",
+        "Escrow mablagʻlari qurilish kompaniyasiga nisbatan daʼvolar boʻyicha qamoqqa olinishi, toʻxtatilishi yoki musodara qilinishi mumkin emas.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -275,7 +317,7 @@ const article: Record<string, LocalizedArticle> = {
         answer: "Agar qurilish kompaniyasi ulushli qurilish ob'ektini shartnomada belgilangan muddatdan 6 oydan ortiq kechiktirib topshirsa, xaridor shartnomani bekor qilish va barcha kiritilgan mablag'larni to'liq qaytarib olish huquqiga ega bo'ladi. Bu chiqib ketish huquqi 2026 yil 1 yanvardan kuchga kirgan majburiy ulushli qurilish escrow tizimi doirasida escrow hisobida saqlanadigan mablag'larga nisbatan qo'llaniladi.",
       },
       {
-        question: "O'zbekistonda qurilish kompaniyasi to'lovga qodir bo'lmay qolsa escrow mablag'lari himoyalanadimiі?",
+        question: "O'zbekistonda qurilish kompaniyasi to'lovga qodir bo'lmay qolsa escrow mablag'lari himoyalanadimi?",
         answer: "Ha. Escrow mablag'lari O'zbekiston qonunchiligiga ko'ra ajratilgan hisoblanadi. Ular qurilish kompaniyasiga nisbatan biron-bir da'vo bilan bog'liq hollarda qamoqqa olinishi, to'xtatilishi yoki musodara qilinishi mumkin emas. Bu shuni anglatadiki, qurilish kompaniyasi moliyaviy qiyinchiliklarga duch kelgan yoki to'lovga qodir emaslik tartiblari boshlangan taqdirda ham xaridorning kiritilgan mablag'lari himoyalanib qoladi va qaytarilishi uchun mavjud bo'ladi.",
       },
     ],

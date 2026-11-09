@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "A structured guide to the tax, customs, legal, and currency benefits available to participants of Uzbekistan's Special Economic Zones.",
     author: "Advizen Legal Practice",
     readTime: "7 min read",
+    inShort: {
+      figures: [
+        { value: "Law No. 604", label: "Law of 17 February 2020 \"On Special Economic Zones\"" },
+        { value: "3–10 years", label: "Duration of tax and customs benefits, from USD 300,000 of investment for 3 years to USD 10m and above for 10 years" },
+        { value: "120 days", label: "Maximum deferral of VAT on imported goods" },
+        { value: "7 days", label: "For refund of excess creditable VAT under the simplified procedure" },
+      ],
+      points: [
+        "SEZ participants in Uzbekistan are exempt from land tax, corporate profit tax, property tax on legal entities and the unified tax payment, and from contributions to the Republican Road Fund and the extra-budgetary fund for educational and medical institutions.",
+        "If tax legislation changes, participants may keep applying the tax rates and payment conditions in force at their registration for the duration of their benefits, up to ten years; this does not cover excise goods.",
+        "Participants are exempt from customs payments, other than VAT and customs clearance fees, on imports such as construction materials not produced in Uzbekistan and technological equipment without a domestic equivalent.",
+        "Participants may open foreign currency accounts at one or more Uzbek banks and hold accounts abroad.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "Special Economic Zones (SEZs) are designated territories operating under a special legal regime designed to attract investment and stimulate economic growth. Participants benefit from a comprehensive package of tax exemptions, customs privileges, legal guarantees, and currency freedoms. Uzbekistan recognises several types of SEZ, each with its own regulatory framework and sector focus.",
       },
-      { type: "h2" as const, text: "Legislative Framework" },
+      { type: "h2" as const, text: "Legislative framework" },
       {
         type: "ul" as const,
         items: [
@@ -22,7 +36,7 @@ const article: Record<string, LocalizedArticle> = {
           "Presidential Decree No. UP-153 of 13 June 2022 \"On additional measures to enhance the effectiveness of special economic, small industrial, youth industrial and entrepreneurial zones\"",
         ],
       },
-      { type: "h2" as const, text: "Types of Special Economic Zones" },
+      { type: "h2" as const, text: "Types of special economic zones" },
       {
         type: "p" as const,
         text: "A Special Economic Zone is a territory with defined boundaries and a special legal regime, created to attract foreign and domestic investment, advanced technology, and management expertise for the accelerated socio-economic development of a region. SEZs may be established in the following forms:",
@@ -37,7 +51,7 @@ const article: Record<string, LocalizedArticle> = {
           "Special industrial zones",
         ],
       },
-      { type: "h2" as const, text: "Special Legal Regime" },
+      { type: "h2" as const, text: "Special legal regime" },
       {
         type: "p" as const,
         text: "SEZ participants are entitled to legal protection guarantees, benefits, and preferences provided by law. When tax legislation changes, participants may continue to apply — for the duration of their benefits but no longer than ten years — the tax rates and payment conditions that were in effect at the date of their registration in the SEZ register. This stability guarantee does not extend to excise goods.",
@@ -46,7 +60,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Participants may use the payment conditions and settlement forms most convenient to them for exported and imported goods. Additional guarantees may be established by Presidential decision. Losses, lost profits, and moral damages caused by unjustified interference by state authorities are subject to court-ordered compensation.",
       },
-      { type: "h2" as const, text: "Special Customs Regime" },
+      { type: "h2" as const, text: "Special customs regime" },
       {
         type: "p" as const,
         text: "The special customs regime may include temporary exemption from or reduction of customs duties, and the abolition or relaxation of non-tariff restrictions on export or import. In practice, SEZ participants are exempt from customs payments (excluding VAT and customs clearance fees) in the following cases:",
@@ -59,7 +73,7 @@ const article: Record<string, LocalizedArticle> = {
           "Import of raw materials, components, and supplies used to manufacture products destined for export (customs clearance fees remain payable).",
         ],
       },
-      { type: "h2" as const, text: "Special Tax Regime" },
+      { type: "h2" as const, text: "Special tax regime" },
       {
         type: "p" as const,
         text: "SEZ participants are exempt from the following taxes and mandatory contributions:",
@@ -79,7 +93,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "VAT on imported goods may be deferred for up to 120 days. Where the amount of creditable VAT exceeds assessed VAT, the excess is refunded to the participant within seven days under a simplified procedure. VAT refunds from the republican budget are processed in accordance with Cabinet of Ministers regulations.",
       },
-      { type: "h2" as const, text: "Investment-Based Duration of Benefits" },
+      { type: "h2" as const, text: "Investment-based duration of benefits" },
       {
         type: "p" as const,
         text: "Tax and customs benefits are granted for 3 to 10 years depending on the volume of investment committed:",
@@ -93,12 +107,12 @@ const article: Record<string, LocalizedArticle> = {
           "USD 10,000,000 and above — benefits for 10 years",
         ],
       },
-      { type: "h2" as const, text: "Currency Regime" },
+      { type: "h2" as const, text: "Currency regime" },
       {
         type: "p" as const,
         text: "SEZ participants may freely choose their servicing bank and open foreign currency accounts at one or more commercial banks in Uzbekistan, as well as maintain accounts abroad. Foreign currency revenue — including export proceeds from goods, works, and services — must be credited to the participant's account. Within the SEZ, even non-participant Uzbek resident entities are permitted to sell goods and services to SEZ participants for foreign currency.",
       },
-      { type: "h2" as const, text: "Additional Rights of SEZ Participants" },
+      { type: "h2" as const, text: "Additional rights of SEZ participants" },
       {
         type: "ul" as const,
         items: [
@@ -108,7 +122,7 @@ const article: Record<string, LocalizedArticle> = {
           "Construct infrastructure at own expense in accordance with the SEZ master plan.",
         ],
       },
-      { type: "h2" as const, text: "Zone-Specific Benefits" },
+      { type: "h2" as const, text: "Zone-specific benefits" },
       { type: "h3" as const, text: "IT Park (it-park.uz)" },
       {
         type: "ul" as const,
@@ -118,7 +132,7 @@ const article: Record<string, LocalizedArticle> = {
           "Residents may only carry out permitted IT-related activities and must transfer contributions to the directorate's demand deposit account by the 20th of the month following each reporting period.",
         ],
       },
-      { type: "h2" as const, text: "How Advizen Can Help" },
+      { type: "h2" as const, text: "How Advizen can help" },
       {
         type: "p" as const,
         text: "Selecting the right SEZ, structuring an investment project to maximise the available benefits, and managing ongoing compliance obligations requires careful legal and tax planning. Advizen's team assists clients in assessing eligibility, preparing applications for SEZ participant status, drafting investment agreements, and navigating the regulatory requirements of the zone directorate.",
@@ -127,7 +141,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "What tax benefits do Special Economic Zone participants receive in Uzbekistan?",
-        answer: "SEZ participants in Uzbekistan receive a comprehensive package including exemptions from corporate income tax, property tax, and land tax for periods of up to ten years. Customs duty exemptions apply to imported equipment and raw materials. The Tashkent IT Park additionally offers a 1% income tax rate and 7.5% personal income tax for resident employees until 1 January 2028.",
+        answer: "SEZ participants in Uzbekistan receive a comprehensive package including exemptions from corporate income tax, property tax, and land tax for periods of up to ten years. Customs duty exemptions apply to imported equipment and raw materials. IT Park residents are exempt from all taxes and mandatory contributions to state-earmarked funds, including social tax, until 1 January 2028, and their employees pay personal income tax at a reduced rate of 7.5% on income earned until that date.",
       },
       {
         question: "What types of Special Economic Zones exist in Uzbekistan?",
@@ -147,6 +161,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Структурированное руководство по налоговым, таможенным, правовым и валютным льготам, доступным участникам особых экономических зон Узбекистана.",
     author: "Advizen Legal Practice",
     readTime: "7 мин чтения",
+    inShort: {
+      figures: [
+        { value: "Закон № 604", label: "Закон от 17 февраля 2020 года «Об особых экономических зонах»" },
+        { value: "3–10 лет", label: "Срок налоговых и таможенных льгот: от 300 000 долл. США инвестиций — 3 года, от 10 млн долл. США — 10 лет" },
+        { value: "120 дней", label: "Максимальная отсрочка НДС по импортируемым товарам" },
+        { value: "7 дней", label: "На возврат превышения зачитываемого НДС в упрощённом порядке" },
+      ],
+      points: [
+        "Участники ОЭЗ в Узбекистане освобождены от земельного налога, налога на прибыль, налога на имущество юридических лиц и единого налогового платежа, а также от отчислений в Республиканский дорожный фонд и внебюджетный фонд развития образовательных и медицинских учреждений.",
+        "При изменении налогового законодательства участники вправе применять ставки и условия уплаты налогов, действовавшие на дату регистрации, в течение срока льгот, но не более десяти лет; это не распространяется на подакцизные товары.",
+        "Участники освобождены от таможенных платежей, кроме НДС и сборов за таможенное оформление, при ввозе, например, не производимых в Узбекистане строительных материалов и технологического оборудования, не имеющего отечественных аналогов.",
+        "Участники могут открывать валютные счета в одном или нескольких банках Узбекистана и иметь счета за рубежом.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -269,7 +297,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "Какие налоговые льготы получают участники ОЭЗ в Узбекистане?",
-        answer: "Участники ОЭЗ в Узбекистане получают комплексный пакет льгот, включающий освобождение от налога на прибыль, налога на имущество и земельного налога на срок до десяти лет. Предусмотрено освобождение от таможенных пошлин на ввозимое оборудование и сырьё. Резиденты IT-парка Ташкента дополнительно пользуются ставкой налога на прибыль 1% и льготной ставкой НДФЛ 7,5% для сотрудников до 1 января 2028 года.",
+        answer: "Участники ОЭЗ в Узбекистане получают комплексный пакет льгот, включающий освобождение от налога на прибыль, налога на имущество и земельного налога на срок до десяти лет. Предусмотрено освобождение от таможенных пошлин на ввозимое оборудование и сырьё. Резиденты IT-парка освобождены от всех налогов и обязательных отчислений в государственные целевые фонды, включая социальный налог, до 1 января 2028 года, а их сотрудники уплачивают НДФЛ по сниженной ставке 7,5% на доходы, получаемые до этой даты.",
       },
       {
         question: "Какие виды ОЭЗ существуют в Узбекистане?",
@@ -289,6 +317,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "O'zbekiston maxsus iqtisodiy zonalari ishtirokchilari uchun mavjud soliq, bojxona, huquqiy va valyuta imtiyozlari bo'yicha tizimli qo'llanma.",
     author: "Advizen Legal Practice",
     readTime: "7 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "604-sonli Qonun", label: "2020-yil 17-fevraldagi «Maxsus iqtisodiy zonalar toʻgʻrisida»gi Qonun" },
+        { value: "3–10 yil", label: "Soliq va bojxona imtiyozlari muddati: 300 000 AQSh dollari investitsiyadan 3 yil, 10 mln AQSh dollari va undan koʻpdan 10 yil" },
+        { value: "120 kun", label: "Import qilinadigan tovarlar boʻyicha QQSni kechiktirishning eng uzoq muddati" },
+        { value: "7 kun", label: "Hisobga olinadigan QQSning ortiqcha qismini soddalashtirilgan tartibda qaytarish uchun" },
+      ],
+      points: [
+        "Oʻzbekistondagi MIZ ishtirokchilari yer soligʻi, foyda soligʻi, yuridik shaxslarning mulk soligʻi va yagona soliq toʻlovidan, shuningdek Respublika yoʻl fondi hamda Taʼlim va tibbiyot muassasalarini rivojlantirish byudjetdan tashqari fondiga ajratmalardan ozod.",
+        "Soliq qonunchiligi oʻzgarganda ishtirokchilar roʻyxatdan oʻtgan sanada amal qilgan soliq stavkalari va toʻlov shartlarini imtiyozlar muddati davomida, lekin oʻn yildan koʻp boʻlmagan muddatda qoʻllashi mumkin; bu aksiz tovarlariga tatbiq etilmaydi.",
+        "Ishtirokchilar Oʻzbekistonda ishlab chiqarilmaydigan qurilish materiallari va mahalliy muqobili boʻlmagan texnologik uskunalar kabi importda QQS va bojxona rasmiylashtiruvi yigʻimlaridan tashqari bojxona toʻlovlaridan ozod.",
+        "Ishtirokchilar Oʻzbekistondagi bir yoki bir nechta bankda valyuta hisobvaraqlarini ochishi va xorijda hisobvaraqlarga ega boʻlishi mumkin.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -411,7 +453,7 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "O'zbekistonda SEZ ishtirokchilari qanday soliq imtiyozlariga ega?",
-        answer: "O'zbekistonda SEZ ishtirokchilari to'liq imtiyozlar paketini oladilar: korporativ daromad solig'i, mulk solig'i va yer solig'idan o'n yilgacha ozodlik. Importqilinadigan uskunalar va xom ashyo uchun bojxona to'lovlaridan ozodlik qo'llaniladi. Toshkent IT-park rezidentlari qo'shimcha ravishda 1% daromad solig'i stavkasi va 2028 yil 1 yanvargacha xodimlar uchun 7,5% shaxsiy daromad solig'idan foydalanadi.",
+        answer: "O'zbekistonda SEZ ishtirokchilari to'liq imtiyozlar paketini oladilar: korporativ daromad solig'i, mulk solig'i va yer solig'idan o'n yilgacha ozodlik. Importqilinadigan uskunalar va xom ashyo uchun bojxona to'lovlaridan ozodlik qo'llaniladi. IT-Park rezidentlari 2028 yil 1 yanvargacha ijtimoiy soliq jumladan barcha soliqlar va davlat maqsadli jamg'armalariga majburiy ajratmalardan ozod etilgan, ularning xodimlari esa shu sanagacha olingan daromadlaridan 7,5% kamaytirilgan stavkada jismoniy shaxslardan daromad solig'i to'laydilar.",
       },
       {
         question: "O'zbekistonda qanday turdagi maxsus iqtisodiy zonalar mavjud?",

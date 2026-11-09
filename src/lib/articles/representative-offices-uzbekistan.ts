@@ -5,17 +5,31 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "A step-by-step guide to accrediting a foreign commercial organisation's representative office in Uzbekistan — documents, timelines, costs, and ongoing obligations.",
     author: "Advizen Legal Practice",
     readTime: "8 min read",
+    inShort: {
+      figures: [
+        { value: "No. 410", label: "Cabinet of Ministers Resolution of 23 October 2000 that governs accreditation" },
+        { value: "10 working days", label: "For MIVT to decide on an application" },
+        { value: "48 BCV", label: "State duty for accreditation, about USD 1,500 at current rates" },
+        { value: "1–3 years", label: "Accreditation period; the initial certificate is issued for one year" },
+      ],
+      points: [
+        "A representative office in Uzbekistan is not a legal entity and cannot conduct commercial activity; the only exception is representative offices of airlines.",
+        "The office comes into existence on the date the Ministry of Investments and Foreign Trade (MIVT) issues its accreditation certificate.",
+        "Within 10 days of receiving the certificate, the office must notify MIVT of its postal address, register with the local tax authorities and submit proof of tax registration to MIVT.",
+        "Accredited foreign staff can work at the office without a separate labour migration permit, while Uzbek staff are employed by the founding foreign organisation under Uzbek labour law.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "Foreign companies wishing to establish a presence in Uzbekistan without incorporating a local legal entity may open a representative office. The process is governed by Cabinet of Ministers Resolution No. 410 of 23 October 2000 and administered by the Ministry of Investments and Foreign Trade (MIVT). Accreditation — not registration — is the operative concept: the representative office comes into existence on the date MIVT issues its accreditation certificate.",
       },
-      { type: "h2" as const, text: "Who Can Open a Representative Office" },
+      { type: "h2" as const, text: "Who can open a representative office" },
       {
         type: "p" as const,
         text: "Any foreign commercial organisation — a firm, company, corporation, partnership, or other business form — that has the legal capacity under its home-country law to open offices abroad may apply. Commercial representations of foreign state authorities (ministries, federal agencies, etc.) may also be accredited, provided the relevant foreign authority issues a permit.",
       },
-      { type: "h2" as const, text: "Legal Status" },
+      { type: "h2" as const, text: "Legal status" },
       {
         type: "p" as const,
         text: "A representative office is not a legal entity and cannot conduct commercial activity (the sole exception is representative offices of airlines, which may engage in commercial operations). It is not a taxpayer in its own right — tax obligations are governed by the Tax Code and applicable international treaties. The office exists to represent and protect the interests of its founding organisation on the territory of Uzbekistan.",
@@ -24,12 +38,12 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "The office operates under a Regulation (Charter) approved and sealed by the founding organisation. It is managed by a Head of Representative Office who acts under a power of attorney issued by the founding organisation, which must expressly define the Head's authority.",
       },
-      { type: "h2" as const, text: "Accreditation Period" },
+      { type: "h2" as const, text: "Accreditation period" },
       {
         type: "p" as const,
         text: "Accreditation may be granted for a period of one to three years. Offices operating on a long-term basis refresh their documents with MIVT every three years (see document list below). If the founding organisation is reorganised or liquidated, the representative office must notify MIVT within two weeks.",
       },
-      { type: "h2" as const, text: "Documents Required for Initial Accreditation" },
+      { type: "h2" as const, text: "Documents required for initial accreditation" },
       {
         type: "ul" as const,
         items: [
@@ -45,7 +59,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Documents issued in CIS member states (Belarus, Kazakhstan, Russia, Tajikistan, Armenia, Ukraine, Kyrgyzstan, Moldova, Azerbaijan, Georgia, Turkmenistan) do not require legalisation — notarised copies suffice. All documents submitted must have been issued within the six months prior to submission.",
       },
-      { type: "h2" as const, text: "Timeline and Decision" },
+      { type: "h2" as const, text: "Timeline and decision" },
       {
         type: "ul" as const,
         items: [
@@ -55,17 +69,17 @@ const article: Record<string, LocalizedArticle> = {
           "The initial certificate is issued for one year; subsequent renewals may cover the full accreditation period.",
         ],
       },
-      { type: "h2" as const, text: "Grounds for Refusal" },
+      { type: "h2" as const, text: "Grounds for refusal" },
       {
         type: "p" as const,
         text: "MIVT may refuse accreditation only on three grounds: submission of knowingly false documents; the Regulation on the Representative Office contradicting Uzbek law; or documents not meeting the requirements of the applicable regulation. The refusal must be issued in writing, listing specific deficiencies. Once deficiencies are remedied, the applicant may reapply — and MIVT may not raise new objections not included in the original written refusal. Refusals may be challenged in court.",
       },
-      { type: "h2" as const, text: "Accreditation Fee" },
+      { type: "h2" as const, text: "Accreditation fee" },
       {
         type: "p" as const,
         text: "The state duty is 48 times the base calculation value (approximately USD 1,500 at current rates). Payment must be made to MIVT's account before the certificate is issued.",
       },
-      { type: "h2" as const, text: "Post-Accreditation Obligations" },
+      { type: "h2" as const, text: "Post-accreditation obligations" },
       {
         type: "p" as const,
         text: "Within 10 days of receiving the accreditation certificate, the representative office must:",
@@ -82,12 +96,12 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "The Head of the Representative Office must submit an annual activity report to MIVT in the prescribed form. In practice, MIVT also requires the representative office to sign an \"Obligations\" document at the time of certificate collection, which includes a commitment to notify MIVT promptly of any changes to staff composition.",
       },
-      { type: "h2" as const, text: "Renewing Accreditation" },
+      { type: "h2" as const, text: "Renewing accreditation" },
       {
         type: "p" as const,
         text: "To renew accreditation, the founding organisation submits to MIVT: a written renewal application; a fresh power of attorney in favour of the Head (if the previous one has expired); and written confirmation of the postal address with a copy of the current lease or title document. No additional documents beyond this list may be demanded.",
       },
-      { type: "h2" as const, text: "Finance and Operations" },
+      { type: "h2" as const, text: "Finance and operations" },
       {
         type: "p" as const,
         text: "The representative office is funded by the founding organisation. Operating expenses that may be covered by the office include: representation expenses; procurement of supplies for office needs; staff salaries; business travel; rent and utilities; and other operational costs. Uzbek-sum funds must be sourced by converting foreign currency through authorised channels or from UZS funds transferred by the parent company. Foreign currency receipts are transferred from the founding organisation to the representative office's bank account.",
@@ -103,12 +117,12 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Uzbek employees are hired under Uzbek labour law. Because the representative office is not a legal entity, the employer of record is the founding foreign commercial organisation. Employment contracts are concluded between the founding organisation and the Uzbek employee, signed by the employee and the Head of Representative Office (whose authority to hire must be stated in both the Regulation on the Representative Office and the power of attorney). The contract must specify that the place of work is the representative office in Uzbekistan, and the contract term must not exceed the remaining accreditation period of the office.",
       },
-      { type: "h2" as const, text: "Legalisation of Documents" },
+      { type: "h2" as const, text: "Legalisation of documents" },
       {
         type: "p" as const,
         text: "Documents from countries that have acceded to the Hague Convention of 5 October 1961 require an apostille rather than full consular legalisation. For countries not party to the Convention, the founding organisation must be legalised at the Uzbek consular mission in the country of incorporation (or, if none, through the foreign ministry of that country and subsequently at the Consular Division of the Uzbek Ministry of Foreign Affairs). CIS-country documents are exempt from legalisation entirely.",
       },
-      { type: "h2" as const, text: "How Advizen Can Help" },
+      { type: "h2" as const, text: "How Advizen can help" },
       {
         type: "p" as const,
         text: "Opening a representative office in Uzbekistan involves navigating document legalisation requirements, drafting a compliant Regulation on the Representative Office, managing the accreditation timeline, and meeting post-accreditation obligations. Advizen's team assists foreign companies at every stage — from document preparation and translation coordination to tax registration and ongoing MIVT compliance.",
@@ -137,6 +151,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Пошаговое руководство по аккредитации представительства иностранной коммерческой организации в Узбекистане — документы, сроки, расходы и текущие обязательства.",
     author: "Advizen Legal Practice",
     readTime: "8 мин чтения",
+    inShort: {
+      figures: [
+        { value: "№ 410", label: "Постановление Кабинета Министров от 23 октября 2000 года, регулирующее аккредитацию" },
+        { value: "10 рабочих дней", label: "На решение МИВТ по заявке" },
+        { value: "48 БРВ", label: "Государственная пошлина за аккредитацию, около 1 500 долл. США по текущему курсу" },
+        { value: "1–3 года", label: "Срок аккредитации; первоначальное свидетельство выдаётся на один год" },
+      ],
+      points: [
+        "Представительство в Узбекистане не является юридическим лицом и не вправе вести коммерческую деятельность; единственное исключение — представительства авиакомпаний.",
+        "Представительство возникает в день выдачи свидетельства об аккредитации Министерством инвестиций и внешней торговли (МИВТ).",
+        "В течение 10 дней после получения свидетельства представительство обязано уведомить МИВТ о почтовом адресе, встать на налоговый учёт и представить в МИВТ справку о постановке на учёт.",
+        "Аккредитованные иностранные сотрудники работают в представительстве без отдельного разрешения на трудовую миграцию, а узбекские сотрудники нанимаются учреждающей иностранной организацией по трудовому законодательству Узбекистана.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -269,6 +297,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "O'zbekistonda xorijiy tijorat tashkilotining vakolatxonasini akkreditatsiya qilish bo'yicha bosqichma-bosqich qo'llanma — hujjatlar, muddatlar, xarajatlar va doimiy majburiyatlar.",
     author: "Advizen Legal Practice",
     readTime: "8 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "410-son", label: "Akkreditatsiyani tartibga soluvchi Vazirlar Mahkamasining 2000-yil 23-oktyabrdagi qarori" },
+        { value: "10 ish kuni", label: "ITSV ariza boʻyicha qaror chiqarishi uchun" },
+        { value: "48 BHM", label: "Akkreditatsiya uchun davlat boji, joriy kursda taxminan 1 500 AQSh dollari" },
+        { value: "1–3 yil", label: "Akkreditatsiya muddati; birlamchi guvohnoma bir yilga beriladi" },
+      ],
+      points: [
+        "Oʻzbekistondagi vakolatxona yuridik shaxs emas va tijorat faoliyati yurita olmaydi; yagona istisno — aviakompaniyalar vakolatxonalari.",
+        "Vakolatxona Investitsiyalar va tashqi savdo vazirligi (ITSV) akkreditatsiya guvohnomasini bergan kundan boshlab mavjud boʻladi.",
+        "Guvohnoma olingandan keyin 10 kun ichida vakolatxona ITSVni pochta manzili haqida xabardor qilishi, soliq organlarida roʻyxatdan oʻtishi va buni tasdiqlovchi maʼlumotnomani ITSVga taqdim etishi shart.",
+        "Akkreditatsiya qilingan xorijiy xodimlar vakolatxonada alohida mehnat migratsiyasi ruxsatnomasisiz ishlaydi, oʻzbek xodimlar esa Oʻzbekiston mehnat qonunchiligiga koʻra tashkil etuvchi xorijiy tashkilot tomonidan yollanadi.",
+      ],
+    },
     content: [
       {
         type: "p" as const,

@@ -4,6 +4,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  // Unmatched URLs fall outside both root layouts ((en) and [locale]), so they need their own 404 page.
+  experimental: { globalNotFound: true },
   images: {
     loader: "custom",
     loaderFile: "./src/lib/image-loader.ts",

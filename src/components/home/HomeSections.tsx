@@ -26,8 +26,7 @@ export function HomeHero() {
           src="/home/tashkent-dusk.webp"
           alt={t("imageAlt")}
           fill
-          priority
-          unoptimized
+          preload
           sizes="100vw"
           className="object-cover object-[22%_45%] max-sm:object-[72%_45%] home-settle home-drift"
         />
@@ -68,7 +67,7 @@ export function HomeTrackRecord() {
         {FIGS.map(({ idx, photo }) => (
           <li key={idx}>
             <div className="relative aspect-[16/10] rounded-[var(--radius-inner)] overflow-hidden bg-surface">
-              <Image src={photo} alt="" fill unoptimized sizes="(max-width: 767px) 100vw, 33vw" className="object-cover" />
+              <Image src={photo} alt="" fill sizes="(max-width: 767px) 100vw, 33vw" className="object-cover" />
             </div>
             <span className="m-fig block mt-7 text-[64px] lg:text-[clamp(64px,7vw,96px)] leading-[.95]">{metric(idx)}</span>
             <p className="mt-4 text-[17px] leading-[1.55] text-foreground-2 max-w-[24em]">{tEng(`headlines.${idx}`)}</p>
@@ -182,7 +181,6 @@ export function HomeInsights() {
           alt=""
           width={180}
           height={217}
-          unoptimized
           className="home-cover w-[140px] sm:w-[180px] h-auto rounded-xl shadow-[0_24px_48px_rgba(0,0,0,.4)] sm:justify-self-center max-sm:order-first"
         />
       </div>
@@ -197,7 +195,6 @@ export function HomeInsights() {
                     src={p.image}
                     alt=""
                     fill
-                    unoptimized
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]"
                   />

@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "How foreign companies can hire and pay talent in Uzbekistan — without incorporating a local entity.",
     author: "Advizen HR Advisory",
     readTime: "8 min read",
+    inShort: {
+      figures: [
+        { value: "3 weeks – 6 months", label: "Time to incorporate a local entity, depending on the jurisdiction" },
+        { value: "1–15", label: "Team size for which the per-employee EoR fee is most cost-efficient" },
+        { value: "20+", label: "Long-term headcount at which a subsidiary or representative office typically makes more commercial sense" },
+        { value: "3", label: "Countries covered by Advizen's EoR service: Uzbekistan, Kazakhstan and Kyrgyzstan" },
+      ],
+      points: [
+        "An Employer of Record is a local legal entity that employs workers on behalf of a foreign company: it signs the employment contract, runs payroll, withholds income tax and social contributions, and handles labour law compliance.",
+        "The foreign company keeps full day-to-day control over the employee's work, tasks and reporting lines.",
+        "Uzbekistan's labour code requires every employment relationship to be formalised by a written contract with an employer that holds a valid tax ID, so informal hiring or a service contract for what is in fact employment carries legal risk.",
+        "An EoR can onboard an employee within days and turns entity setup and annual compliance costs into a per-employee service fee.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "You have found the right people. They are based in Tashkent — or Almaty, or Bishkek — and you need them working for your company as soon as possible. The problem is that you have no legal entity in the region, and setting one up will take months. This is precisely the situation that Employer of Record was built to solve.",
       },
-      { type: "h2" as const, text: "The Problem Every Global Company Faces" },
+      { type: "h2" as const, text: "The problem every global company faces" },
       {
         type: "p" as const,
         text: "Expanding into Central Asia is no longer a question of whether — it is a question of how fast. The region is home to a rapidly growing pool of skilled engineers, sales professionals, and operational talent, and companies across Europe, the Middle East, and Southeast Asia are actively competing for them. But the regulatory environment is layered: each country has its own labour code, tax registration requirements, mandatory social contributions, and HR compliance obligations. Without a registered legal entity, you cannot legally employ anyone — and incorporation, depending on the jurisdiction, takes anywhere from three weeks to six months.",
@@ -19,7 +33,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "The result is a gap. You have found the talent. The talent is ready. But the legal infrastructure is not there yet. Businesses that cannot bridge this gap fast enough lose candidates to competitors who can.",
       },
-      { type: "h2" as const, text: "What Is an Employer of Record?" },
+      { type: "h2" as const, text: "What is an employer of record?" },
       {
         type: "p" as const,
         text: "An Employer of Record — often called an EoR — is a local legal entity that employs workers on behalf of a foreign company. The EoR becomes the legal employer on paper: it signs the employment contract, processes payroll, withholds income tax and social contributions, provides mandatory benefits, and handles all HR and labour law compliance. The foreign company retains full day-to-day control over the employee's work, direction, and responsibilities. The EoR simply handles the legal and administrative layer.",
@@ -28,7 +42,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "blockquote" as const,
         text: "An EoR does not change who manages your team — it changes who signs the payslip. The talent works for you. The legal exposure stays with us.",
       },
-      { type: "h2" as const, text: "Why This Matters in Uzbekistan and Central Asia" },
+      { type: "h2" as const, text: "Why this matters in Uzbekistan and Central Asia" },
       {
         type: "p" as const,
         text: "Uzbekistan's labour code requires that all employment relationships be formalised through a written contract registered with an employer holding a valid tax ID. Social insurance contributions, personal income tax withholding, and mandatory vacation accruals are non-negotiable. Employing someone informally — or paying them through a service contract when the relationship is clearly one of employment — carries substantial legal and reputational risk. The State Labour Inspectorate actively audits foreign-linked businesses, and misclassification penalties can be significant.",
@@ -37,7 +51,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Beyond Uzbekistan, each country in the region has its own framework. Kazakhstan operates under a different labour code with distinct termination requirements. Kyrgyzstan imposes its own social fund contribution rates. Navigating each jurisdiction separately — while running a business — is a distraction most organisations cannot afford.",
       },
-      { type: "h2" as const, text: "How the EoR Model Works in Practice" },
+      { type: "h2" as const, text: "How the EoR model works in practice" },
       {
         type: "ul" as const,
         items: [
@@ -49,7 +63,7 @@ const article: Record<string, LocalizedArticle> = {
           "If the engagement ends, the termination is handled in full compliance with local notice and severance requirements.",
         ],
       },
-      { type: "h2" as const, text: "The Strategic Benefits" },
+      { type: "h2" as const, text: "The strategic benefits" },
       {
         type: "p" as const,
         text: "Speed is the most immediate advantage. Where entity registration takes months, an EoR can onboard an employee within days. For businesses in hyper-growth mode, or those running time-sensitive projects in the region, this difference is decisive.",
@@ -69,7 +83,7 @@ const article: Record<string, LocalizedArticle> = {
           "Clean exit: wind down the employment relationship without dissolving a legal entity.",
         ],
       },
-      { type: "h2" as const, text: "When to Use EoR — and When to Incorporate" },
+      { type: "h2" as const, text: "When to use EoR — and when to incorporate" },
       {
         type: "p" as const,
         text: "An EoR is not a permanent substitute for a legal entity in every case. If you are planning to open an office, enter into significant local contracts, hold assets, or build a team of more than twenty people long-term, establishing a wholly owned subsidiary or representative office will typically make more commercial sense. The EoR model is most powerful as an entry mechanism — letting you operate immediately while your entity registration proceeds — or as a permanent solution for small, distributed teams where the overhead of a local entity is not justified by the headcount.",
@@ -78,7 +92,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "We help clients make this determination case by case. The right answer depends on headcount projections, the nature of the work, the client's risk tolerance, and the regulatory specifics of the target country.",
       },
-      { type: "h2" as const, text: "What Advizen's EoR Service Covers" },
+      { type: "h2" as const, text: "What Advizen's EoR service covers" },
       {
         type: "p" as const,
         text: "Our Employer of Record service is fully integrated with the rest of our advisory practice. Payroll is handled by the same team that advises on tax structuring. HR compliance is managed by specialists who also advise on labour law disputes. When a question arises at the intersection of employment, tax, and corporate law — as it often does — you do not need to coordinate between three separate advisers. One team holds the full picture.",
@@ -95,7 +109,7 @@ const article: Record<string, LocalizedArticle> = {
           "Multi-country coordination across Uzbekistan, Kazakhstan, and Kyrgyzstan.",
         ],
       },
-      { type: "h2" as const, text: "The Talent Window Is Open — Act Before It Closes" },
+      { type: "h2" as const, text: "The talent window is open — act before it closes" },
       {
         type: "p" as const,
         text: "The Central Asian talent market is maturing fast. Salaries are rising, candidates have more options, and the companies that move quickly are building the teams that will define the next decade in the region. The legal and administrative complexity of hiring locally is real — but it is entirely solvable. The EoR model exists precisely to remove that barrier. The only question is whether you move first, or watch someone else do it.",
@@ -128,6 +142,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Как иностранные компании могут нанимать и оплачивать труд специалистов в Узбекистане без регистрации местного юридического лица.",
     author: "Advizen HR Advisory",
     readTime: "8 мин чтения",
+    inShort: {
+      figures: [
+        { value: "3 недели – 6 месяцев", label: "Срок регистрации местного юридического лица в зависимости от юрисдикции" },
+        { value: "1–15", label: "Размер команды, для которой модель EoR с оплатой за сотрудника наиболее эффективна" },
+        { value: "20+", label: "Численность команды в долгосрочной перспективе, при которой дочерняя компания или представительство, как правило, выгоднее" },
+        { value: "3", label: "Страны, которые охватывает услуга EoR компании Advizen: Узбекистан, Казахстан и Кыргызстан" },
+      ],
+      points: [
+        "Employer of Record — местное юридическое лицо, которое трудоустраивает работников от имени иностранной компании: подписывает трудовой договор, рассчитывает зарплату, удерживает подоходный налог и социальные взносы и обеспечивает соблюдение трудового законодательства.",
+        "Иностранная компания сохраняет полный повседневный контроль над работой сотрудника, его задачами и подчинённостью.",
+        "Трудовой кодекс Узбекистана требует оформлять все трудовые отношения письменным договором с работодателем, имеющим действующий ИНН, поэтому неформальный найм или договор услуг вместо трудового несут правовой риск.",
+        "EoR может трудоустроить сотрудника за считанные дни и превращает затраты на учреждение и ежегодный комплаенс юрлица в сервисный сбор за каждого сотрудника.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -251,6 +279,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Xorijiy kompaniyalar O'zbekistonda mahalliy yuridik shaxs ro'yxatdan o'tkazmasdan qanday qilib iste'dod topib, ularga haq to'lashi mumkin.",
     author: "Advizen HR Advisory",
     readTime: "8 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "3 hafta – 6 oy", label: "Yurisdiksiyaga qarab mahalliy yuridik shaxsni roʻyxatdan oʻtkazish muddati" },
+        { value: "1–15", label: "Har bir xodim uchun toʻlovli EoR modeli eng samarali boʻlgan jamoa hajmi" },
+        { value: "20+", label: "Uzoq muddatli xodimlar soni, bunda shoʻba korxona yoki vakolatxona odatda tijorat jihatdan toʻgʻriroq" },
+        { value: "3", label: "Advizen EoR xizmati qamrab oladigan mamlakatlar: Oʻzbekiston, Qozogʻiston va Qirgʻiziston" },
+      ],
+      points: [
+        "Employer of Record — xorijiy kompaniya nomidan xodimlarni yollaydigan mahalliy yuridik shaxs: u mehnat shartnomasini imzolaydi, ish haqini hisoblaydi, daromad soligʻi va ijtimoiy toʻlovlarni ushlab qoladi hamda mehnat qonunchiligiga rioya etilishini taʼminlaydi.",
+        "Xorijiy kompaniya xodimning ishi, vazifalari va boʻysunuv tuzilmasi ustidan toʻliq kundalik nazoratni saqlab qoladi.",
+        "Oʻzbekiston Mehnat kodeksi barcha mehnat munosabatlarini amaldagi soliq identifikatsiya raqamiga ega ish beruvchi bilan yozma shartnoma orqali rasmiylashtirishni talab qiladi, shuning uchun norasmiy yollash yoki mehnat munosabati oʻrniga xizmat shartnomasi huquqiy xavf tugʻdiradi.",
+        "EoR xodimni bir necha kunda ishga qabul qila oladi va yuridik shaxsni tashkil etish hamda yillik muvofiqlik xarajatlarini har bir xodim uchun xizmat toʻloviga aylantiradi.",
+      ],
+    },
     content: [
       {
         type: "p" as const,

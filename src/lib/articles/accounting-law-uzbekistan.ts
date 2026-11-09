@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "A practical overview of Uzbekistan's accounting law — who must comply, how books are kept, what reports are required, and what penalties apply.",
     author: "Advizen Legal Practice",
     readTime: "9 min read",
+    inShort: {
+      figures: [
+        { value: "ZRU-404", label: "Law of 13 April 2016 \"On Accounting\"" },
+        { value: "31 December", label: "Reporting date; the reporting period is the calendar year" },
+        { value: "6–270", label: "Average annual headcount, depending on sector, that defines a small enterprise eligible for simplified accounting" },
+        { value: "3–7 BCV", label: "Fine on officials for a first accounting offence, rising to 7–10 BCV for a repeat within one year" },
+      ],
+      points: [
+        "Every legal entity registered in Uzbekistan must keep accounting records, including its subsidiaries, representative offices, branches and other structural subdivisions inside or outside Uzbekistan.",
+        "All accounting uses the double-entry method, and every business operation must be supported by a primary accounting document, which may be electronic.",
+        "The director is responsible for organising accounting and may set up an in-house function, hire an external accountant, outsource to a specialised firm or keep the accounts personally.",
+        "Annual financial statements consist of a balance sheet, income statement, cash flow statement, statement of changes in equity, and notes.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "Every legal entity operating in Uzbekistan is required to maintain accounting records. The rules are set out in Law No. ZRU-404 of 13 April 2016 \"On Accounting\" and a body of supporting legislation. This guide covers the core concepts, organisational requirements, reporting obligations, and the penalties for getting it wrong.",
       },
-      { type: "h2" as const, text: "Legislative Framework" },
+      { type: "h2" as const, text: "Legislative framework" },
       {
         type: "ul" as const,
         items: [
@@ -24,7 +38,7 @@ const article: Record<string, LocalizedArticle> = {
           "Presidential Resolution No. PP-419 of 10 November 2022 \"On measures to optimise reporting and archival document storage procedures\"",
         ],
       },
-      { type: "h2" as const, text: "What Is Accounting?" },
+      { type: "h2" as const, text: "What is accounting?" },
       {
         type: "p" as const,
         text: "Under Uzbek law, accounting is defined as an ordered system for collecting, registering, and summarising accounting information through continuous, documented recording of all business operations, and the preparation of financial and other reports on that basis.",
@@ -33,7 +47,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "All accounting is conducted using the double-entry method: every business operation is recorded simultaneously in equal amounts on at least two accounts — a debit and a credit. The accountant records where money came from, where it went, how it arose, and what result it produced. The three core principles of accounting are continuity, reliability, and comparability of indicators.",
       },
-      { type: "h2" as const, text: "Primary Accounting Documents" },
+      { type: "h2" as const, text: "Primary accounting documents" },
       {
         type: "p" as const,
         text: "Every business operation must be supported by a primary accounting document. These documents are the foundation of the accounting system and record the fact that an operation took place or authorise it to proceed.",
@@ -59,17 +73,17 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Primary documents may be prepared and submitted in electronic form. Payment terminal receipts for purchases made with corporate bank cards are also recognised as primary documents. The persons who prepare and sign primary documents bear personal responsibility for their timeliness, accuracy, and completeness.",
       },
-      { type: "h2" as const, text: "Who Must Keep Accounts" },
+      { type: "h2" as const, text: "Who must keep accounts" },
       {
         type: "p" as const,
         text: "Accounting subjects include: state authorities and management bodies; and all legal entities registered in Uzbekistan, including their subsidiaries, representative offices, branches, and other structural subdivisions — whether located inside or outside Uzbekistan.",
       },
-      { type: "h2" as const, text: "Objects of Accounting" },
+      { type: "h2" as const, text: "Objects of accounting" },
       {
         type: "p" as const,
         text: "The objects of accounting are: assets; liabilities; equity; reserves; income; expenses; profit; losses; and business operations. All objects are subject to both synthetic accounting (aggregated by economic category, as required by law) and analytical accounting (detailed records maintained by the entity itself according to its own needs).",
       },
-      { type: "h2" as const, text: "Organising Accounting in a Company" },
+      { type: "h2" as const, text: "Organising accounting in a company" },
       {
         type: "p" as const,
         text: "The head of the entity (the director) is responsible for organising accounting and reporting. The director may:",
@@ -96,7 +110,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "For entities subject to mandatory audit, the chief accountant must: hold a higher education degree; and have at least 3 years of relevant work experience in the last 5 years (if the degree is in economics) or at least 7 years in the last 10 years (if the degree is in another field). The director of such entities must also ensure the chief accountant completes annual professional development training.",
       },
-      { type: "h2" as const, text: "Simplified Accounting for Small Enterprises" },
+      { type: "h2" as const, text: "Simplified accounting for small enterprises" },
       {
         type: "p" as const,
         text: "Small enterprises (defined as organisations with an average annual headcount of 6 to 270 employees, depending on sector) may voluntarily adopt simplified accounting rules under NSBU No. 20. The director retains the same options for organising accounting as described above.",
@@ -114,7 +128,7 @@ const article: Record<string, LocalizedArticle> = {
           "Accumulation and systematisation of data for management, control, analysis, and financial reporting",
         ],
       },
-      { type: "h2" as const, text: "Financial Statements" },
+      { type: "h2" as const, text: "Financial statements" },
       {
         type: "p" as const,
         text: "Financial statements are a systematised presentation of an entity's financial position at the reporting date, and its financial results and cash flows for the reporting period. The reporting period is the calendar year from 1 January to 31 December; the reporting date is 31 December.",
@@ -146,7 +160,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Accounting for budget organisations and state-targeted funds is regulated by budget legislation and supervised by the Ministry of Economy and Finance. Accounting for banks and other credit organisations is regulated by the Central Bank of the Republic of Uzbekistan, which sets the applicable rules and allows banks to apply IFRS.",
       },
-      { type: "h2" as const, text: "Recent Reform: Reduced Reporting Obligations" },
+      { type: "h2" as const, text: "Recent reform: reduced reporting obligations" },
       {
         type: "p" as const,
         text: "Presidential Resolution No. PP-419 (November 2022) introduced significant simplifications:",
@@ -163,7 +177,7 @@ const article: Record<string, LocalizedArticle> = {
           "Private archives providing electronic archiving services no longer require a licence — notification to the competent authority is sufficient.",
         ],
       },
-      { type: "h2" as const, text: "Penalties for Non-Compliance" },
+      { type: "h2" as const, text: "Penalties for non-compliance" },
       {
         type: "p" as const,
         text: "Failure by the head of an accounting entity or the accounting function to fulfil their statutory obligations — including failure to ensure the accuracy and reliability of accounting data and financial statements, or failure to conduct inventory of assets and liabilities — constitutes an administrative offence:",
@@ -175,7 +189,7 @@ const article: Record<string, LocalizedArticle> = {
           "Repeat offence within one year: fine of 7 to 10 times the base calculation value (approximately USD 240 – USD 340) imposed on officials.",
         ],
       },
-      { type: "h2" as const, text: "How Advizen Can Help" },
+      { type: "h2" as const, text: "How Advizen can help" },
       {
         type: "p" as const,
         text: "Setting up an accounting function, choosing between in-house and outsourced models, drafting accounting policies, and ensuring compliance with reporting obligations requires careful attention to Uzbekistan's regulatory framework. Advizen advises clients on the organisation of accounting, the selection of the appropriate accounting model, compliance with reporting deadlines, and responses to regulatory inquiries.",
@@ -204,6 +218,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Практический обзор законодательства Узбекистана о бухгалтерском учёте — кто обязан соблюдать, как ведётся учёт, какая отчётность требуется и какие штрафы предусмотрены.",
     author: "Advizen Legal Practice",
     readTime: "9 мин чтения",
+    inShort: {
+      figures: [
+        { value: "ЗРУ-404", label: "Закон от 13 апреля 2016 года «О бухгалтерском учёте»" },
+        { value: "31 декабря", label: "Отчётная дата; отчётный период — календарный год" },
+        { value: "6–270", label: "Среднегодовая численность работников в зависимости от отрасли, при которой организация считается малым предприятием и может применять упрощённый учёт" },
+        { value: "3–7 БРВ", label: "Штраф на должностных лиц за первое нарушение, при повторном в течение года — 7–10 БРВ" },
+      ],
+      points: [
+        "Каждое юридическое лицо, зарегистрированное в Узбекистане, обязано вести бухгалтерский учёт, включая дочерние организации, представительства, филиалы и иные структурные подразделения в Узбекистане и за его пределами.",
+        "Учёт ведётся методом двойной записи, и каждая хозяйственная операция должна подтверждаться первичным учётным документом, который может быть электронным.",
+        "За организацию учёта отвечает руководитель: он может создать бухгалтерскую службу, привлечь внешнего бухгалтера, передать учёт специализированной организации или вести его лично.",
+        "Годовая финансовая отчётность включает бухгалтерский баланс, отчёт о финансовых результатах, отчёт о движении денежных средств, отчёт об изменениях в собственном капитале и пояснения.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -402,6 +430,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "O'zbekistonning buxgalteriya hisobi to'g'risidagi qonunchiligiga amaliy umumiy nazar — kim rioya qilishi shart, hisob qanday yuritiladi, qanday hisobotlar talab etiladi va qanday jarimalar qo'llaniladi.",
     author: "Advizen Legal Practice",
     readTime: "9 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "OʻRQ-404", label: "2016-yil 13-apreldagi «Buxgalteriya hisobi toʻgʻrisida»gi Qonun" },
+        { value: "31-dekabr", label: "Hisobot sanasi; hisobot davri — kalendar yil" },
+        { value: "6–270", label: "Tarmoqqa qarab kichik korxona hisoblanib, soddalashtirilgan hisobni qoʻllashi mumkin boʻlgan oʻrtacha yillik xodimlar soni" },
+        { value: "3–7 BHM", label: "Birinchi huquqbuzarlik uchun mansabdor shaxslarga jarima, bir yil ichida takrorlansa — 7–10 BHM" },
+      ],
+      points: [
+        "Oʻzbekistonda roʻyxatdan oʻtgan har bir yuridik shaxs, jumladan uning shoʻba korxonalari, vakolatxonalari, filiallari va Oʻzbekiston ichida yoki tashqarisidagi boshqa tarkibiy boʻlinmalari buxgalteriya hisobini yuritishi shart.",
+        "Hisob ikki yozuv usulida yuritiladi va har bir xoʻjalik operatsiyasi elektron shaklda ham boʻlishi mumkin boʻlgan birlamchi hisob hujjati bilan tasdiqlanishi kerak.",
+        "Hisobni tashkil etish uchun rahbar javobgar: u ichki buxgalteriya xizmatini tuzishi, tashqi buxgalterni jalb qilishi, hisobni ixtisoslashgan tashkilotga topshirishi yoki uni shaxsan yuritishi mumkin.",
+        "Yillik moliyaviy hisobot buxgalteriya balansi, moliyaviy natijalar toʻgʻrisidagi hisobot, pul mablagʻlari harakati toʻgʻrisidagi hisobot, xususiy kapitaldagi oʻzgarishlar toʻgʻrisidagi hisobot va izohlardan iborat.",
+      ],
+    },
     content: [
       {
         type: "p" as const,

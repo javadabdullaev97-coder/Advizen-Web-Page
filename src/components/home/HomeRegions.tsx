@@ -145,14 +145,13 @@ function RegionPanel({ activeId }: { activeId: string }) {
     <article className="m-tile overflow-hidden" aria-live="polite">
       <div className="relative aspect-[16/10] bg-surface-light">
         {shown.previous && (
-          <Image src={REGION_IMAGE[shown.previous]} alt="" fill unoptimized sizes="(max-width: 1023px) 100vw, 40vw" className="object-cover" />
+          <Image src={REGION_IMAGE[shown.previous]} alt="" fill sizes="(max-width: 1023px) 100vw, 40vw" className="object-cover" />
         )}
         <Image
           key={activeId}
           src={REGION_IMAGE[activeId]}
           alt={regionName}
           fill
-          unoptimized
           sizes="(max-width: 1023px) 100vw, 40vw"
           className="object-cover home-fade"
         />

@@ -9,7 +9,7 @@ Contact: +998 33 488 48 88 (phone and WhatsApp), info@advizenco.com, Telegram @a
 
 ---
 
-## Tashkent International Financial Centre: The 2026 Constitutional Law
+## Tashkent International Financial Centre: the 2026 Constitutional Law
 URL: https://www.advizenco.com/insights/tashkent-international-financial-centre
 
 A neutral analysis of Constitutional Law No. ZRU-1158 of 13 July 2026 establishing the Tashkent International Financial Centre — its legal architecture, tax regime, operational regime, and how it compares to DIFC, ADGM, AIFC, and QFC.
@@ -36,7 +36,7 @@ The Constitutional Law is in force, but the centre is not yet operational. The T
 
 ---
 
-## Accounting Law in Uzbekistan: Key Requirements for Businesses
+## Accounting law in Uzbekistan: key requirements for businesses
 URL: https://www.advizenco.com/insights/accounting-law-uzbekistan
 
 
@@ -74,7 +74,7 @@ A: Turnover tax payers (entities on the simplified tax regime) are exempt from t
 
 ---
 
-## Accounting Policy for Tax Purposes in Uzbekistan
+## Accounting policy for tax purposes in Uzbekistan
 URL: https://www.advizenco.com/insights/accounting-policy-tax-purposes
 
 
@@ -112,7 +112,7 @@ A: Yes. It may be incorporated into the overall financial accounting policy docu
 
 ---
 
-## Creative Industry Park: Uzbekistan's Framework for Creative Economy
+## Creative Industry Park: Uzbekistan's framework for creative economy
 URL: https://www.advizenco.com/insights/creative-industry-park-uzbekistan
 
 
@@ -146,7 +146,7 @@ A: A foreign company must establish a local legal entity in Uzbekistan to access
 
 ---
 
-## Crypto-Asset Service Providers: Licensing in Uzbekistan
+## Crypto-asset service providers: licensing in Uzbekistan
 URL: https://www.advizenco.com/insights/crypto-asset-service-providers-uzbekistan
 
 
@@ -184,7 +184,7 @@ A: All servers must be physically located within Uzbekistan. Remote or cloud hos
 
 ---
 
-## Employer of Record in Central Asia: A Practical Overview
+## Employer of record in Central Asia: a practical overview
 URL: https://www.advizenco.com/insights/employer-of-record-central-asia
 
 
@@ -222,7 +222,7 @@ A: The client pays the worker's gross salary plus employer-side social contribut
 
 ---
 
-## Escrow Accounts in Uzbekistan: Legal Mechanics & Use Cases
+## Escrow accounts in Uzbekistan: legal mechanics & use cases
 URL: https://www.advizenco.com/insights/escrow-accounts-uzbekistan
 
 
@@ -260,7 +260,7 @@ A: No. The fees are flat: 206,000 UZS for real estate and 103,000 UZS for vehicl
 
 ---
 
-## Franchising in Uzbekistan: Legal Framework & Entry Structures
+## Franchising in Uzbekistan: legal framework & entry structures
 URL: https://www.advizenco.com/insights/franchising-uzbekistan
 
 
@@ -298,7 +298,7 @@ A: No. Uzbekistan competition law prohibits price-fixing between licensor and fr
 
 ---
 
-## Islamic Finance in Uzbekistan: A Practical Guide
+## Islamic finance in Uzbekistan: a practical guide
 URL: https://www.advizenco.com/insights/islamic-finance-uzbekistan
 
 
@@ -336,7 +336,7 @@ A: All penalty payments must be directed to charitable purposes and cannot be re
 
 ---
 
-## Licensing Procedures for Regulated Activities in Uzbekistan
+## Licensing procedures for regulated activities in Uzbekistan
 URL: https://www.advizenco.com/insights/licensing-procedures-uzbekistan
 
 
@@ -378,7 +378,7 @@ A: Yes. Paying 70% of the fine voluntarily while simultaneously submitting a lic
 
 ---
 
-## Online Gambling Regulation in Uzbekistan
+## Online gambling regulation in Uzbekistan
 URL: https://www.advizenco.com/insights/online-gambling-uzbekistan
 
 
@@ -412,7 +412,7 @@ A: Yes. If the platform is intended for Uzbek users, uses Uzbek bank card accept
 
 ---
 
-## Outsourcing Operational Activities in Uzbekistan
+## Outsourcing operational activities in Uzbekistan
 URL: https://www.advizenco.com/insights/outsourcing-operational-activities
 
 
@@ -446,7 +446,7 @@ A: Yes, particularly for small foreign-invested companies. Fixed monthly outsour
 
 ---
 
-## Payroll & Social Contributions: Employer Obligations in Uzbekistan
+## Payroll & social contributions: employer obligations in Uzbekistan
 URL: https://www.advizenco.com/insights/payroll-social-contributions
 
 
@@ -454,7 +454,7 @@ Uzbekistan operates a flat personal income tax (PIT) rate of 12% on employment i
 
 ### Unified Social Payment (Employer Cost)
 
-In addition to PIT, employers pay a Unified Social Payment (USP) of 12% of gross payroll. The USP is an employer cost — it is calculated on top of the employee's gross salary and is NOT deducted from the employee's take-home pay. The individual accumulative pension contribution is 0.1% (included within the PIT withholding mechanism). Total employer cost is approximately 24% of gross salary (12% net salary + 12% USP).
+In addition to PIT, employers pay a Unified Social Payment (USP) of 12% of gross payroll. The USP is an employer cost — it is calculated on top of the employee's gross salary and is NOT deducted from the employee's take-home pay. The individual accumulative pension contribution is 0.1% (included within the PIT withholding mechanism). The 12% PIT is withheld from the employee, so the employer's own cost on top of gross salary is the 12% USP.
 
 ### Payroll Mechanics
 
@@ -472,15 +472,15 @@ A: PIT is withheld from the employee's gross salary — it is the employee's tax
 **Q: What is the Unified Social Payment rate?**
 A: 12% of gross payroll, paid by the employer in addition to the employee's salary. It is not deducted from the employee.
 
-**Q: What is the total payroll cost for an employer in Uzbekistan?**
-A: Approximately 24% above the employee's take-home pay: 12% net salary + 12% USP employer contribution (simplified calculation excluding minor items).
+**Q: What does payroll cost the employer in Uzbekistan?**
+A: The employer's own cost is the 12% Unified Social Payment on top of gross salary. The 12% PIT is withheld from the employee's salary, so it is not an additional employer cost.
 
 **Q: When must payroll reports be filed?**
 A: Monthly PIT report and USP declaration by the 10th of the following month; annual payroll reconciliation by February 1.
 
 ---
 
-## Permanent Establishment Risk in Uzbekistan
+## Permanent establishment risk in Uzbekistan
 URL: https://www.advizenco.com/insights/permanent-establishment-uzbekistan
 
 
@@ -518,7 +518,7 @@ A: The tax authority may assess back taxes for all open periods, apply interest 
 
 ---
 
-## PIT Refunds for Education Expenses in Uzbekistan
+## PIT refunds for education expenses in Uzbekistan
 URL: https://www.advizenco.com/insights/pit-refunds-education-uzbekistan
 
 
@@ -550,7 +550,7 @@ A: The refund must be processed within 15 days of the refund application being s
 
 ---
 
-## Representative Offices in Uzbekistan: Registration & Compliance
+## Representative offices in Uzbekistan: registration & compliance
 URL: https://www.advizenco.com/insights/representative-offices-uzbekistan
 
 
@@ -592,7 +592,7 @@ A: Yes, provided the Head's authority to sign employment contracts is explicitly
 
 ---
 
-## Self-Employment Regime in Uzbekistan
+## Self-employment regime in Uzbekistan
 URL: https://www.advizenco.com/insights/self-employment-uzbekistan
 
 
@@ -634,7 +634,7 @@ A: A maximum of 3 activity types at once, selected from the approved list of ove
 
 ---
 
-## Special Economic Zones in Uzbekistan: A Comparative Guide
+## Special economic zones in Uzbekistan: a comparative guide
 URL: https://www.advizenco.com/insights/special-economic-zones-uzbekistan
 
 
@@ -676,7 +676,7 @@ A: IT Park employees pay 7.5% PIT (versus the standard 12%) until January 1, 202
 
 ---
 
-## Voluntary Liquidation of Companies in Uzbekistan
+## Voluntary liquidation of companies in Uzbekistan
 URL: https://www.advizenco.com/insights/voluntary-liquidation-uzbekistan
 
 

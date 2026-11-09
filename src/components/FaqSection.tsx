@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { useLocale } from "next-intl";
 import { FAQ_DATA, type FaqPage } from "@/lib/faqData";
 
@@ -92,15 +91,9 @@ function FaqItem({
   );
 }
 
-export default function FaqSection({
-  page,
-  variant = "page",
-}: {
-  page: FaqPage;
-  variant?: "page" | "sidebar";
-}) {
+export default function FaqSection({ page }: { page: FaqPage }) {
   const locale = useLocale() as Locale;
-  const [open, setOpen] = useState<number | null>(variant === "page" ? 0 : null);
+  const [open, setOpen] = useState<number | null>(0);
   const items = FAQ_DATA[page][locale] ?? FAQ_DATA[page].en;
 
   const handleToggle = useCallback((i: number) => {
@@ -116,58 +109,6 @@ export default function FaqSection({
       acceptedAnswer: { "@type": "Answer", text: a },
     })),
   };
-
-  if (variant === "sidebar") {
-    return (
-      <div className="bg-[#080808] border border-white/[0.10] rounded-xl p-6 mt-3">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <p className="text-[10px] tracking-[0.18em] uppercase text-white/50 mb-4">FAQ</p>
-        <div className="space-y-px">
-          {items.map(({ q, a }, i) => (
-            <div key={i} className="border-b border-white/[0.07] last:border-b-0">
-              <button
-                className="w-full flex items-start justify-between py-3 text-left gap-3 focus-visible:outline-none touch-manipulation"
-                onClick={() => setOpen(open === i ? null : i)}
-                aria-expanded={open === i}
-              >
-                <span className="text-[12px] text-white/80 font-medium leading-snug">{q}</span>
-                {open === i ? (
-                  <Minus className="w-3 h-3 text-white/30 shrink-0 mt-0.5" />
-                ) : (
-                  <Plus className="w-3 h-3 text-white/30 shrink-0 mt-0.5" />
-                )}
-              </button>
-              <AnimatePresence initial={false}>
-                {open === i && (
-                  <motion.div
-                    key="content"
-                    initial={{ height: 0 }}
-                    animate={{ height: "auto" }}
-                    exit={{ height: 0 }}
-                    transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-                    style={{ overflow: "hidden" }}
-                  >
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.18, delay: 0.06 }}
-                      className="pb-3 text-[11px] text-white/65 leading-relaxed"
-                    >
-                      {a}
-                    </motion.p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
 
   return (
     <section id="faq-section" className="m-wrap pt-24 lg:pt-32 pb-28 lg:pb-40">

@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "A practical guide to Uzbekistan's unified licensing, permitting, and notification framework under Law No. ZRU-701.",
     author: "Advizen Legal Practice",
     readTime: "8 min read",
+    inShort: {
+      figures: [
+        { value: "ZRU-701", label: "Law of 14 July 2021 on licensing, permitting and notification procedures" },
+        { value: "20 working days", label: "For the authority to issue or refuse a licence or permitting document" },
+        { value: "10 days", label: "Longest suspension an authority can impose without a court order" },
+        { value: "70%", label: "Share of a fine that, paid voluntarily with an application for the missing licence, waives the remaining 30%" },
+      ],
+      points: [
+        "Uzbekistan has three authorisation tracks: licences, permitting documents and notifications, and all applications are filed electronically through the License system (license.gov.uz) or EPAGU.",
+        "If the authority does not decide within the deadline, the applicant may start operating after notifying the authority electronically.",
+        "A licence or permitting document can be refused only for incomplete documents, false or distorted information, or failure to meet licensing conditions.",
+        "Licences are generally valid indefinitely, except for a minimum 5-year term in sectors such as medical and pharmaceutical activities, mobile telecoms, oil and gas extraction, and lottery and online gambling.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "Uzbekistan consolidated its rules on business authorisation into a single Law No. ZRU-701 dated 14 July 2021 \"On Licensing, Permitting and Notification Procedures\". The law establishes three distinct tracks — licensing, permitting documents, and notifications — and moves the entire process onto a unified electronic platform called the \"License\" system (license.gov.uz).",
       },
-      { type: "h2" as const, text: "Three Tracks at a Glance" },
+      { type: "h2" as const, text: "Three tracks at a glance" },
       {
         type: "ul" as const,
         items: [
@@ -19,7 +33,7 @@ const article: Record<string, LocalizedArticle> = {
           "Notifications: the most flexible track. You notify the relevant authority before starting — no approval is needed. Activities requiring notifications are listed in Appendix 3.",
         ],
       },
-      { type: "h2" as const, text: "Types of Licences" },
+      { type: "h2" as const, text: "Types of licences" },
       {
         type: "p" as const,
         text: "The law draws a clear line between two licence categories:",
@@ -35,7 +49,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Each licence covers one type of activity (though sub-types are possible). Licences are valid indefinitely as a rule. The exception: a minimum 5-year term applies to medical and pharmaceutical activities, narcotics-related operations, mobile telecoms, oil and gas extraction, lottery and online gambling operations, and a handful of other sensitive sectors.",
       },
-      { type: "h2" as const, text: "How to Apply" },
+      { type: "h2" as const, text: "How to apply" },
       {
         type: "p" as const,
         text: "All applications — for licences, permitting documents, and notifications — are filed electronically through the License system or the Unified Portal of Interactive Government Services (EPAGU), signed with a digital signature. The portal is available 24/7 including weekends. State fees and processing charges are set out in each activity's passport and must be paid before the application is forwarded to the competent authority.",
@@ -52,7 +66,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "The competent authority must issue or refuse the licence or permitting document within 20 working days of the application date. Its decision must be posted in the License system within one day, and the applicant notified within one working hour of that posting. If no decision is made within the deadline, the applicant is entitled to begin operations — provided they notify the authority electronically.",
       },
-      { type: "h2" as const, text: "Grounds for Refusal, Suspension and Revocation" },
+      { type: "h2" as const, text: "Grounds for refusal, suspension and revocation" },
       { type: "h3" as const, text: "Refusal" },
       {
         type: "p" as const,
@@ -75,7 +89,7 @@ const article: Record<string, LocalizedArticle> = {
           "Use of forged documents.",
         ],
       },
-      { type: "h2" as const, text: "Notification Procedure" },
+      { type: "h2" as const, text: "Notification procedure" },
       {
         type: "p" as const,
         text: "For notification-track activities, no advance approval is required — the business simply files a notification and can begin operating. The notification is auto-accepted if all conditions are met and a confirmation is issued instantly. A fee of up to 50 times the base calculation value (BCV) is charged for most notification filings, with retail alcohol sales being one of the exceptions.",
@@ -84,17 +98,17 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "The authority can reject a notification only in five specific circumstances: false information; non-payment of the fee; non-confirmation of compliance with requirements; a current suspension order; or a court-imposed prohibition. The authority may suspend notified activities for up to 10 working days where violations are found; court involvement is required for longer periods.",
       },
-      { type: "h2" as const, text: "Branches and Representative Offices" },
+      { type: "h2" as const, text: "Branches and representative offices" },
       {
         type: "p" as const,
         text: "Branches and representative offices of a legal entity do not need separate licences or permitting documents. Instead, their addresses are added to the parent entity's existing licence through an amendment filed with the competent authority. For entities that already have branches, the addition is handled through a notification to the authority via the License system or EPAGU.",
       },
-      { type: "h2" as const, text: "Can a Permanent Establishment Apply?" },
+      { type: "h2" as const, text: "Can a permanent establishment apply?" },
       {
         type: "p" as const,
         text: "A Permanent Establishment (PE) is a tax status — not a legal entity — and therefore has no standing as an independent civil-law subject. Under the Law, only individuals and legal entities may apply for a licence or permitting document. In practice, however, authorities sometimes issue documents to PEs on request, and tax authorities often treat PEs as though they were legal entities. This is legally inconsistent and businesses operating through a PE should take specific advice before relying on authorisations issued in the PE's name.",
       },
-      { type: "h2" as const, text: "Liability for Violations" },
+      { type: "h2" as const, text: "Liability for violations" },
       {
         type: "p" as const,
         text: "Individuals face administrative liability under Articles 165, 176³ and 241⁵ of the Administrative Responsibility Code, and criminal liability under Articles 190 and 192⁵ of the Criminal Code for operating without a licence, permitting document, or notification.",
@@ -103,7 +117,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Legal entities are subject to fines (set out in Appendix 4 of the Law) for: operating without required authorisation; using forged documents; or providing false information. The competent authority issues the fine decision within 5 working days of detecting the violation. If the entity voluntarily pays 70% of the fine and simultaneously applies for the required licence or permitting document, the remaining 30% is waived. Unpaid fines are referred to court within 5 working days.",
       },
-      { type: "h2" as const, text: "How Advizen Can Help" },
+      { type: "h2" as const, text: "How Advizen can help" },
       {
         type: "p" as const,
         text: "Navigating Uzbekistan's licensing and permitting landscape requires knowing which track applies to your activity, what conditions must be met, and how to respond if the authority pushes back. Advizen's legal team assists clients at every stage — from identifying the correct authorisation path and preparing application packages, to managing suspensions, amendments, and regulatory disputes.",
@@ -132,6 +146,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Практическое руководство по единой системе лицензирования, разрешительных документов и уведомлений в Узбекистане согласно Закону № ЗРУ-701.",
     author: "Advizen Legal Practice",
     readTime: "8 мин чтения",
+    inShort: {
+      figures: [
+        { value: "ЗРУ-701", label: "Закон от 14 июля 2021 года о лицензировании, разрешительных документах и уведомительном порядке" },
+        { value: "20 рабочих дней", label: "На выдачу или отказ в выдаче лицензии или разрешительного документа" },
+        { value: "10 дней", label: "Максимальный срок приостановления лицензии органом без решения суда" },
+        { value: "70%", label: "Доля штрафа, при добровольной уплате которой с одновременной подачей заявки на лицензию оставшиеся 30% списываются" },
+      ],
+      points: [
+        "В Узбекистане три трека авторизации: лицензии, разрешительные документы и уведомления; все заявки подаются электронно через систему «Лицензия» (license.gov.uz) или ЕПАГУ.",
+        "Если орган не принял решение в срок, заявитель вправе начать деятельность, электронно уведомив орган.",
+        "В выдаче лицензии или разрешительного документа можно отказать только при неполноте документов, недостоверных или искажённых сведениях либо несоответствии лицензионным требованиям.",
+        "Лицензии, как правило, бессрочны, но для ряда сфер — медицинской и фармацевтической деятельности, мобильной связи, добычи нефти и газа, лотерей и онлайн-гемблинга — установлен минимальный 5-летний срок.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -259,6 +287,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "O'zbekistonda OʻRQ-701-sonli Qonun asosidagi yagona litsenziyalash, ruxsat berish va xabardor qilish tartibi bo'yicha amaliy qo'llanma.",
     author: "Advizen Legal Practice",
     readTime: "8 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "OʻRQ-701", label: "Litsenziyalash, ruxsat berish va xabardor qilish tartibi toʻgʻrisidagi 2021-yil 14-iyuldagi Qonun" },
+        { value: "20 ish kuni", label: "Litsenziya yoki ruxsat hujjatini berish yoki rad etish uchun" },
+        { value: "10 kun", label: "Organ sud qarorisiz litsenziyani toʻxtatib qoʻyishi mumkin boʻlgan eng uzoq muddat" },
+        { value: "70%", label: "Jarimaning ixtiyoriy toʻlanadigan ulushi, bunda zarur litsenziyaga ariza berilsa, qolgan 30% bekor qilinadi" },
+      ],
+      points: [
+        "Oʻzbekistonda uchta ruxsat yoʻnalishi bor: litsenziyalar, ruxsat hujjatlari va xabarnomalar; barcha arizalar «Litsenziya» tizimi (license.gov.uz) yoki EPAGU orqali elektron topshiriladi.",
+        "Organ belgilangan muddatda qaror qabul qilmasa, ariza beruvchi organni elektron xabardor qilib, faoliyatni boshlashi mumkin.",
+        "Litsenziya yoki ruxsat hujjati faqat hujjatlar toʻliq boʻlmaganda, maʼlumotlar soxta yoki buzib koʻrsatilganda yoki litsenziya shartlariga javob berilmaganda rad etilishi mumkin.",
+        "Litsenziyalar odatda muddatsiz, biroq tibbiy va farmatsevtika faoliyati, mobil telekommunikatsiya, neft va gaz qazib olish, loteriya va onlayn qimorbozlik kabi sohalarga kamida 5 yillik muddat qoʻllaniladi.",
+      ],
+    },
     content: [
       {
         type: "p" as const,

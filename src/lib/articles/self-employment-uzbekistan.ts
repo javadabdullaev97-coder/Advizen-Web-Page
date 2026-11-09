@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Find out how to register, understand tax benefits, and navigate legal aspects of self-employment in Uzbekistan.",
     author: "Advizen Tax Practice",
     readTime: "6 min read",
+    inShort: {
+      figures: [
+        { value: "UZS 100m", label: "Income per tax period that a self-employed person earns free of personal income tax" },
+        { value: "4%", label: "Turnover tax rate on annual income above that threshold, as for an individual entrepreneur" },
+        { value: "1 BCV", label: "Minimum voluntary annual social tax, paid to the Pension Fund by 31 December" },
+        { value: "3", label: "Maximum number of permitted activities a self-employed person can carry on at the same time" },
+      ],
+      points: [
+        "Since 1 July 2020, registering as self-employed in Uzbekistan is a notification through the Soliq mobile app or the taxpayer's personal cabinet, with no state fee and a QR code as proof of status.",
+        "Self-employed individuals do not need to keep full accounting records.",
+        "The list of permitted activities covers more than 100 types of work and services, from tutoring and childcare to IT services, creative professions, crafts and agricultural work.",
+        "The annual social tax paid by a self-employed person goes in full to the off-budget Pension Fund and counts towards future pension benefits.",
+      ],
+    },
     content: [
       {
         type: "p",
         text: "Self-employment is increasingly popular in Uzbekistan, offering individuals a flexible way to utilise their skills and talents without the complexities of traditional business setup. For those looking to embark on this path, understanding the regulatory landscape is crucial.",
       },
-      { type: "h2", text: "Key Advantages and Simplified Registration" },
+      { type: "h2", text: "Key advantages and simplified registration" },
       {
         type: "p",
         text: "Uzbekistan has significantly streamlined the process for self-employed individuals. Since July 1, 2020, registration is a straightforward notification-based procedure through a dedicated mobile application or taxpayer's personal cabinet. This eliminates the need for temporary labour certificates and provides a QR code as proof of registration.",
@@ -24,17 +38,17 @@ const article: Record<string, LocalizedArticle> = {
           "Registration takes minutes via the Soliq mobile app with no state fee",
         ],
       },
-      { type: "h2", text: "Social Security and Pension Contributions" },
+      { type: "h2", text: "Social security and pension contributions" },
       {
         type: "p",
         text: "A significant benefit for self-employed individuals is the ability to contribute to their pension fund. They pay a social tax for the year, which is fully directed to the off-budget Pension Fund. This ensures that their work as self-employed individuals contributes to their future retirement benefits, similar to how it is calculated for individual entrepreneurs. The annual contribution is at least 1 Basic Calculated Value (BCV) and is voluntary, payable up to December 31st.",
       },
-      { type: "h2", text: "Expanding Opportunities: Over 100 Permitted Activities" },
+      { type: "h2", text: "Expanding opportunities: over 100 permitted activities" },
       {
         type: "p",
         text: "The list of permitted activities for self-employed individuals has expanded considerably, now encompassing over 100 diverse types of work and services. These range from tutoring and childcare to IT services, creative professions, and various craft and agricultural activities. This broad scope allows many professionals to operate legally and efficiently. While you can perform many activities, you may concurrently choose no more than three at any given time.",
       },
-      { type: "h2", text: "The Soliq App: Your Central Hub" },
+      { type: "h2", text: "The Soliq app: your central hub" },
       {
         type: "ul",
         items: [
@@ -73,6 +87,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Узнайте, как зарегистрироваться, разобраться в налоговых льготах и юридических аспектах самозанятости в Узбекистане.",
     author: "Налоговая практика Advizen",
     readTime: "6 мин чтения",
+    inShort: {
+      figures: [
+        { value: "100 млн сум", label: "Доход за налоговый период, освобождённый от НДФЛ для самозанятого" },
+        { value: "4%", label: "Ставка налога с оборота на годовой доход сверх этого порога, как у индивидуального предпринимателя" },
+        { value: "1 БРВ", label: "Минимальный добровольный годовой социальный налог в Пенсионный фонд, уплачивается до 31 декабря" },
+        { value: "3", label: "Максимальное число видов деятельности, которые самозанятый может вести одновременно" },
+      ],
+      points: [
+        "С 1 июля 2020 года регистрация самозанятого в Узбекистане — уведомление через приложение Soliq или личный кабинет налогоплательщика, без госпошлины, с QR-кодом в подтверждение статуса.",
+        "Самозанятым не нужно вести полный бухгалтерский учёт.",
+        "Список разрешённых видов деятельности включает более 100 видов работ и услуг — от репетиторства и присмотра за детьми до IT-услуг, творческих профессий, ремёсел и сельскохозяйственных работ.",
+        "Годовой социальный налог самозанятого полностью направляется во внебюджетный Пенсионный фонд и учитывается при расчёте будущей пенсии.",
+      ],
+    },
     content: [
       {
         type: "p",
@@ -138,52 +166,66 @@ const article: Record<string, LocalizedArticle> = {
     ],
   },
   uz: {
-    subtitle: "Oʼzbekistonda oʼzi-oʼzi band qilishning roʼyxatdan oʼtish, soliq imtiyozlari va huquqiy jihatlarini bilib oling.",
+    subtitle: "Oʻzbekistonda oʻzi-oʻzi band qilishning roʻyxatdan oʻtish, soliq imtiyozlari va huquqiy jihatlarini bilib oling.",
     author: "Advizen soliq amaliyoti",
-    readTime: "6 daqiqalik oʼqish",
+    readTime: "6 daqiqalik oʻqish",
+    inShort: {
+      figures: [
+        { value: "100 mln soʻm", label: "Oʻzini-oʻzi band qiluvchining soliq davridagi jismoniy shaxslar daromad soligʻidan ozod daromadi" },
+        { value: "4%", label: "Ushbu chegaradan oshgan yillik daromadga yakka tartibdagi tadbirkor singari qoʻllaniladigan aylanma soliq stavkasi" },
+        { value: "1 BHM", label: "Pensiya jamgʻarmasiga 31-dekabrgacha toʻlanadigan ixtiyoriy yillik ijtimoiy soliqning eng kam miqdori" },
+        { value: "3", label: "Oʻzini-oʻzi band qiluvchi bir vaqtda tanlashi mumkin boʻlgan faoliyat turlarining eng koʻp soni" },
+      ],
+      points: [
+        "2020-yil 1-iyuldan boshlab Oʻzbekistonda oʻzini-oʻzi band qiluvchi sifatida roʻyxatga olish Soliq mobil ilovasi yoki soliq toʻlovchining shaxsiy kabineti orqali xabardor qilish tartibida, davlat bojisiz amalga oshiriladi va maqom dalili sifatida QR-kod beriladi.",
+        "Oʻzini-oʻzi band qiluvchilar toʻliq buxgalteriya hisobini yuritishi shart emas.",
+        "Ruxsat etilgan faoliyatlar roʻyxati 100 dan ortiq ish va xizmat turini — repetitorlik va bolalar parvarishidan tortib IT xizmatlari, kreativ kasblar, hunarmandchilik va qishloq xoʻjaligi ishlarigacha — qamrab oladi.",
+        "Oʻzini-oʻzi band qiluvchining yillik ijtimoiy soligʻi toʻliq byudjetdan tashqari Pensiya jamgʻarmasiga yoʻnaltiriladi va kelajakdagi pensiyaga hisoblanadi.",
+      ],
+    },
     content: [
       {
         type: "p",
-        text: "Oʼzini-oʼzi band qilish Oʼzbekistonda tobora ommabop boʼlmoqda va shaxslarga anʼaNaviy biznes tashkil etishning murakkabliklarisiz oʼz koʼnikma va isteʼDodlaridan foydalanishning moslashuvchan usulini taklif qiladi. Bu yoʼlga kirmoqchi boʼLganlar uchun tartibga solish muhitini tushunish muhim.",
+        text: "Oʻzini-oʻzi band qilish Oʻzbekistonda tobora ommabop boʻlmoqda va shaxslarga anʼanaviy biznes tashkil etishning murakkabliklarisiz oʻz koʻnikma va isteʼdodlaridan foydalanishning moslashuvchan usulini taklif qiladi. Bu yoʻlga kirmoqchi boʻlganlar uchun tartibga solish muhitini tushunish muhim.",
       },
-      { type: "h2", text: "Asosiy afzalliklar va soddalashtirilgan roʼyxatga olish" },
+      { type: "h2", text: "Asosiy afzalliklar va soddalashtirilgan roʻyxatga olish" },
       {
         type: "p",
-        text: "Oʼzbekiston oʼzini-oʼzi band qiluvchilar uchun jarayonni sezilarli soddalashtirdi. 2020 yil 1 iyuldan boshlab roʼyxatga olish — maxsus mobil ilova yoki soliq toʼLovchining shaxsiy kabineti orqali oddiy xabardor qilish tartibidir. Bu vaqtinchalik mehnat sertifikatlariga ehtiyojni bartaraf qiladi va roʼyxatga olish dalili sifatida QR-kodni taqdim etadi.",
+        text: "Oʻzbekiston oʻzini-oʻzi band qiluvchilar uchun jarayonni sezilarli soddalashtirdi. 2020 yil 1 iyuldan boshlab roʻyxatga olish — maxsus mobil ilova yoki soliq toʻlovchining shaxsiy kabineti orqali oddiy xabardor qilish tartibidir. Bu vaqtinchalik mehnat sertifikatlariga ehtiyojni bartaraf qiladi va roʻyxatga olish dalili sifatida QR-kodni taqdim etadi.",
       },
       {
         type: "ul",
         items: [
-          "Soliq davrida 100 mln soʼmgacha boʼLgan daromad jismoniy shaxslar daromad soligʼidan ozod (chegara 2024 yil yanvarida yangilangan)",
+          "Soliq davrida 100 mln soʻmgacha boʻlgan daromad jismoniy shaxslar daromad soligʻidan ozod (chegara 2024 yil yanvarida yangilangan)",
           "Yillik daromad bu miqdordan oshsa, yakka tartibdagi tadbirkor singari 4% aylanma soliq stavkasida soliqqa tortiladi",
-          "ToʼLiq buxgalteriya yuritish talab qilinmaydi",
-          "Roʼyxatga olish Soliq mobil ilovasi orqali bir necha daqiqada va davlat bojisiz amalga oshiriladi",
+          "Toʻliq buxgalteriya yuritish talab qilinmaydi",
+          "Roʻyxatga olish Soliq mobil ilovasi orqali bir necha daqiqada va davlat bojisiz amalga oshiriladi",
         ],
       },
-      { type: "h2", text: "Ijtimoiy taʼMinot va pensiya badallari" },
+      { type: "h2", text: "Ijtimoiy taʼminot va pensiya badallari" },
       {
         type: "p",
-        text: "Oʼzini-oʼzi band qiluvchilar uchun muhim afzallik — pensiya jamgʼArmasiga badal toʼLash imkoniyati. Ular yiliga ijtimoiy soliq toʼLaYdilar va u toʼLiq byudjetdan tashqari Pensiya jamgʼArmasiga yoʼNaltiriladi. Bu ularning oʼzini-oʼzi band qiluvchi sifatidagi mehnati kelajakdagi pensiya nafaqalariga taʼSir qilishini taʼMinlaydi, yakka tartibdagi tadbirkorlar uchun hisoblanganidek. Yillik badal kamida 1 Bazaviy hisoblash miqdori (BHM)ni tashkil qiladi va ixtiyoriy boʼLib, 31 dekabrgacha toʼLanadi.",
+        text: "Oʻzini-oʻzi band qiluvchilar uchun muhim afzallik — pensiya jamgʻarmasiga badal toʻlash imkoniyati. Ular yiliga ijtimoiy soliq toʻlaydilar va u toʻliq byudjetdan tashqari Pensiya jamgʻarmasiga yoʻnaltiriladi. Bu ularning oʻzini-oʻzi band qiluvchi sifatidagi mehnati kelajakdagi pensiya nafaqalariga taʼsir qilishini taʼminlaydi, yakka tartibdagi tadbirkorlar uchun hisoblanganidek. Yillik badal kamida 1 Bazaviy hisoblash miqdori (BHM)ni tashkil qiladi va ixtiyoriy boʻlib, 31 dekabrgacha toʻlanadi.",
       },
       { type: "h2", text: "Imkoniyatlarning kengayishi: 100 dan ortiq ruxsat etilgan faoliyat" },
       {
         type: "p",
-        text: "Oʼzini-oʼzi band qiluvchilar uchun ruxsat etilgan faoliyatlar roʼyxati sezilarli kengaytirilib, hozir 100 dan ortiq turli ish va xizmatlarni qamrab oladi. Bu repetitorlik va bolalarni parvarish qilishdan tortib IT xizmatlari, kreativ kasblar va turli hunarmandchilik hamda qishloq xoʼJalik faoliyatlarigacha boʼLgan sohalarni oʼz ichiga oladi. Bu keng qamrov koʼPlab mutaxassislarga qonuniy va samarali ishlash imkonini beradi. KoʼPlab faoliyat turlarini bajarsangiz ham, bir vaqtning oʼZida uchtadan ortiqni tanlay olmaysiz.",
+        text: "Oʻzini-oʻzi band qiluvchilar uchun ruxsat etilgan faoliyatlar roʻyxati sezilarli kengaytirilib, hozir 100 dan ortiq turli ish va xizmatlarni qamrab oladi. Bu repetitorlik va bolalarni parvarish qilishdan tortib IT xizmatlari, kreativ kasblar va turli hunarmandchilik hamda qishloq xoʻjalik faoliyatlarigacha boʻlgan sohalarni oʻz ichiga oladi. Bu keng qamrov koʻplab mutaxassislarga qonuniy va samarali ishlash imkonini beradi. Koʻplab faoliyat turlarini bajarsangiz ham, bir vaqtning oʻzida uchtadan ortiqni tanlay olmaysiz.",
       },
       { type: "h2", text: "Soliq ilovasi: markaziy markazingiz" },
       {
         type: "ul",
         items: [
-          "Roʼyxatdan oʼTish va oʼzini-oʼzi band qilish maqomi dalili sifatida QR-kod olish",
-          "Buyurtmalarni qabul qilish va toʼLovlarni qayta ishlash",
+          "Roʻyxatdan oʻtish va oʻzini-oʻzi band qilish maqomi dalili sifatida QR-kod olish",
+          "Buyurtmalarni qabul qilish va toʻlovlarni qayta ishlash",
           "Yuridik shaxslarga elektron hisob-fakturalar berish",
-          "Istalgan vaqtda oʼzini-oʼzi band qilish maqomini ixtiyoriy ravishda tugatish",
+          "Istalgan vaqtda oʻzini-oʻzi band qilish maqomini ixtiyoriy ravishda tugatish",
           "Daromad va soliq majburiyatlarini real vaqtda kuzatish",
         ],
       },
       {
         type: "blockquote",
-        text: "Oʼzbekistonda oʼzini-oʼzi band qilish mintaqadagi eng qulay soliq rejimlaridan biridir — 100 mln soʼmgacha JShDS dan ozod qilish va minimal maʼMuriy yuk bilan birgalikda u frilanserlar, maslahatchilar va kichik xizmat koʼRsatuvchilar uchun jozibali boshlanish nuqtasiga aylanadi.",
+        text: "Oʻzbekistonda oʻzini-oʻzi band qilish mintaqadagi eng qulay soliq rejimlaridan biridir — 100 mln soʻmgacha JShDS dan ozod qilish va minimal maʼmuriy yuk bilan birgalikda u frilanserlar, maslahatchilar va kichik xizmat koʻrsatuvchilar uchun jozibali boshlanish nuqtasiga aylanadi.",
       },
     ],
     faq: [

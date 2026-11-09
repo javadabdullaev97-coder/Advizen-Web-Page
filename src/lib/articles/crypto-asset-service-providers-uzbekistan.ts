@@ -5,12 +5,26 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "A practical guide to obtaining and maintaining a licence as a crypto-asset service provider in Uzbekistan under the NAPP regulatory framework.",
     author: "Advizen Legal Practice",
     readTime: "7 min read",
+    inShort: {
+      figures: [
+        { value: "4", label: "Licence types: crypto exchange, mining pool, crypto depository and crypto shop" },
+        { value: "20 working days", label: "Maximum time from submission to NAPP's decision" },
+        { value: "73,400 BRV", label: "One-time state duty for a crypto exchange licence, about USD 2,496,000" },
+        { value: "5,000 BRV", label: "Minimum charter capital of a crypto exchange, about USD 170,000, of which 3,000 BRV is held in a reserve account" },
+      ],
+      points: [
+        "Only Uzbek-resident legal entities can obtain a crypto-asset service provider licence from NAPP; individuals and foreign companies are excluded.",
+        "Each activity type needs a separate licence, and licences are issued for an unlimited duration and cannot be transferred to another legal entity.",
+        "The platform and all servers must be physically located in Uzbekistan, and transaction data, user identification records and business correspondence must be kept for five years.",
+        "Hidden mining, operations with anonymous crypto-assets and offshore companies in the ownership structure are prohibited, and licensed providers pay a monthly activity levy by the 10th of each month.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
         text: "Uzbekistan has established a dedicated licensing regime for businesses that deal in crypto-assets. The framework is administered by the National Agency for Perspective Projects (NAPP) and is set out in the Regulation on Licensing of Crypto-Asset Service Providers (reg. No. 3380, 15 August 2022). Only Uzbek-resident legal entities may obtain a licence — individuals and foreign companies are excluded.",
       },
-      { type: "h2" as const, text: "Four Types of Licences" },
+      { type: "h2" as const, text: "Four types of licences" },
       {
         type: "p" as const,
         text: "A separate licence is required for each type of activity. The four licensed categories are:",
@@ -28,7 +42,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "All licences are issued for an unlimited duration. A licence cannot be transferred to another legal entity.",
       },
-      { type: "h2" as const, text: "How to Apply" },
+      { type: "h2" as const, text: "How to apply" },
       {
         type: "p" as const,
         text: "Applications are submitted to NAPP's Licensing and Permitting Department by email (info@napp.uz), post, or in person at: 22 Nukus Street, Mirabad District, Tashkent. No fee is charged for reviewing the application.",
@@ -65,7 +79,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "If deficiencies are identified, NAPP issues a notice giving the applicant up to 30 working days to remedy them. The review clock pauses during this period. Once remedied, a re-review takes no more than 5 working days at no additional charge.",
       },
-      { type: "h2" as const, text: "Core Licensing Requirements" },
+      { type: "h2" as const, text: "Core licensing requirements" },
       {
         type: "p" as const,
         text: "All four types of providers must comply with the following ongoing conditions:",
@@ -93,12 +107,12 @@ const article: Record<string, LocalizedArticle> = {
           "Charter capital must be funded exclusively from the founders' own cash and property — no loans, pledges, or borrowed funds.",
         ],
       },
-      { type: "h2" as const, text: "Naming Restrictions" },
+      { type: "h2" as const, text: "Naming restrictions" },
       {
         type: "p" as const,
         text: "The company name and branding may not include the words \"state\", \"government\", \"national\", \"Uzbekistan\", or the full or abbreviated name of any Uzbek city, in any language or form.",
       },
-      { type: "h2" as const, text: "Licence Fees" },
+      { type: "h2" as const, text: "Licence fees" },
       { type: "h3" as const, text: "One-time state duty (at licence issuance)" },
       {
         type: "p" as const,
@@ -131,7 +145,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "If a licence is issued before the 20th of a month, the levy is due in full for that month; if issued after the 20th, it accrues from the first of the following month. The levy is suspended from the first of the month following any suspension or cessation of activity.",
       },
-      { type: "h2" as const, text: "Suspension, Annulment and Hard Limits" },
+      { type: "h2" as const, text: "Suspension, annulment and hard limits" },
       {
         type: "p" as const,
         text: "NAPP may suspend a licence for up to 10 days where violations are found; longer suspensions require a court order (up to 6 months). Grounds for annulment by NAPP include: voluntary surrender, liquidation of the entity, or non-payment of the state duty. Annulment by court is required for more serious grounds including: systematic or single gross breach of licensing conditions, and use of forged documents.",
@@ -144,7 +158,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Where a licence is annulled for gross violations or use of forged documents, no new licence may be issued for one year — and this restriction applies to any new entity created by the same founder or beneficial owner.",
       },
-      { type: "h2" as const, text: "How Advizen Can Help" },
+      { type: "h2" as const, text: "How Advizen can help" },
       {
         type: "p" as const,
         text: "The crypto licensing process in Uzbekistan involves substantial upfront fees, strict technical and compliance requirements, and ongoing regulatory obligations. Advizen's legal team assists clients in assessing which licence category applies to their business model, preparing the full application package, structuring the ownership to meet NAPP's requirements, and managing the relationship with the regulator after licensing.",
@@ -173,6 +187,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "Практическое руководство по получению и поддержанию лицензии поставщика услуг крипто-активов в Узбекистане в рамках регуляторной системы НАПП.",
     author: "Advizen Legal Practice",
     readTime: "7 мин чтения",
+    inShort: {
+      figures: [
+        { value: "4", label: "Вида лицензий: крипто-биржа, майнинг-пул, крипто-депозитарий и крипто-магазин" },
+        { value: "20 рабочих дней", label: "Максимальный срок от подачи заявки до решения НАПП" },
+        { value: "73 400 БРВ", label: "Единовременная госпошлина за лицензию крипто-биржи, около 2 496 000 долл. США" },
+        { value: "5 000 БРВ", label: "Минимальный уставный капитал крипто-биржи, около 170 000 долл. США, из них 3 000 БРВ — на резервном счёте" },
+      ],
+      points: [
+        "Лицензию поставщика услуг в сфере крипто-активов в НАПП могут получить только юридические лица — резиденты Узбекистана; физические лица и иностранные компании исключены.",
+        "На каждый вид деятельности нужна отдельная лицензия; лицензии выдаются бессрочно и не могут передаваться другому юридическому лицу.",
+        "Платформа и все серверы должны физически находиться в Узбекистане, а данные о сделках, идентификационные сведения пользователей и деловая переписка — храниться пять лет.",
+        "Скрытый майнинг, операции с анонимными крипто-активами и офшорные компании в структуре собственности запрещены, а лицензиаты ежемесячно до 10-го числа уплачивают сбор за деятельность.",
+      ],
+    },
     content: [
       {
         type: "p" as const,
@@ -341,6 +369,20 @@ const article: Record<string, LocalizedArticle> = {
     subtitle: "NAPP tartibga soluvchi tizimi doirasida O'zbekistonda kriptoaktivlar xizmati provayderi sifatida litsenziya olish va saqlash bo'yicha amaliy qo'llanma.",
     author: "Advizen Legal Practice",
     readTime: "7 daqiqa o'qish",
+    inShort: {
+      figures: [
+        { value: "4", label: "Litsenziya turi: kripto-birja, mayning-pul, kripto-depozitariy va kripto-doʻkon" },
+        { value: "20 ish kuni", label: "Ariza topshirilgandan NAPP qaroriga qadar eng uzoq muddat" },
+        { value: "73 400 BHM", label: "Kripto-birja litsenziyasi uchun bir martalik davlat boji, taxminan 2 496 000 AQSh dollari" },
+        { value: "5 000 BHM", label: "Kripto-birjaning eng kam ustav kapitali, taxminan 170 000 AQSh dollari, shundan 3 000 BHM rezerv hisobvaragʻida saqlanadi" },
+      ],
+      points: [
+        "NAPPdan kriptoaktivlar xizmati provayderi litsenziyasini faqat Oʻzbekiston rezidenti boʻlgan yuridik shaxslar olishi mumkin; jismoniy shaxslar va xorijiy kompaniyalar istisno qilingan.",
+        "Har bir faoliyat turi uchun alohida litsenziya talab etiladi; litsenziyalar muddatsiz beriladi va boshqa yuridik shaxsga oʻtkazilmaydi.",
+        "Platforma va barcha serverlar jismonan Oʻzbekistonda joylashgan boʻlishi, bitim maʼlumotlari, foydalanuvchi identifikatsiyasi yozuvlari va biznes yozishmalari esa besh yil saqlanishi kerak.",
+        "Yashirin mayning, anonim kriptoaktivlar bilan operatsiyalar va mulkdorlar tarkibida offshor kompaniyalar taqiqlangan, litsenziya egalari esa har oyning 10-sanasigacha faoliyat yigʻimini toʻlaydi.",
+      ],
+    },
     content: [
       {
         type: "p" as const,

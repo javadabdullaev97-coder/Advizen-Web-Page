@@ -25,7 +25,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "On 13 July 2026, the President of Uzbekistan signed Constitutional Law No. ZRU-1158 establishing the Tashkent International Financial Centre (TIFC). The law was published in the National Database of Legislation on 14 July 2026 and enters into force ten days after official publication. It is not an amendment to the tax code or a new incentive package — it is a constitutional-level instrument that carves out a defined territory within Uzbekistan and places it under a distinct legal order. This briefing sets out what the law actually establishes, how the regime works in practice, and how it measures against the established financial centres it is modelled on.",
       },
-      { type: "h2" as const, text: "What TIFC Is — and What It Is Not" },
+      { type: "h2" as const, text: "What TIFC is — and what it is not" },
       {
         type: "p" as const,
         text: "TIFC is frequently described in the press as another special economic zone. It is not. A special economic zone operates inside the national legal system: it grants tax holidays, customs relief, and simplified procedures, but the companies within it remain subject to Uzbek civil, corporate, and commercial law, and disputes are heard by ordinary Uzbek courts. TIFC is structurally different. The Constitutional Law establishes a territory with its own legal regime, its own regulator, its own court, and its own body of applicable law. Within the boundaries of the centre, the decisions of TIFC bodies prevail over conflicting provisions of national legislation.",
@@ -38,7 +38,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "blockquote" as const,
         text: "The distinction matters for planning. A special economic zone changes the price of doing business. TIFC changes the law that governs it — the contracts you sign, the court that hears your disputes, and the regulator you answer to.",
       },
-      { type: "h2" as const, text: "The Legal Architecture: A Common-Law Enclave" },
+      { type: "h2" as const, text: "The legal architecture: a common-law enclave" },
       {
         type: "p" as const,
         text: "The defining feature of TIFC is the body of law that applies inside it. Article 8 sets out a hierarchy of applicable law, in descending order of precedence:",
@@ -57,7 +57,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "The reference to English and Welsh law is deliberate and precise. The TIFC Council adopts a resolution specifying which English and Welsh legislation applies, as of which date, and with what modifications; the common law and equity then fill the gaps where neither the Constitutional Law nor a TIFC resolution provides an answer. This is the same technique used by the Astana International Financial Centre, and it is the reason TIFC is best understood as a common-law enclave inside a civil-law country.",
       },
-      { type: "h3" as const, text: "How English Common Law Differs from Uzbek Law" },
+      { type: "h3" as const, text: "How English common law differs from Uzbek law" },
       {
         type: "p" as const,
         text: "Uzbekistan is a civil-law jurisdiction. Its private law is codified: the Civil Code and related statutes set out the rules in advance, and the role of a judge is to apply the written provision to the facts. Prior judgments are persuasive at most; they do not bind future courts. England and Wales operate on the opposite principle. Much of the substantive law is not found in any code but in the accumulated body of decided cases, and courts are bound by the reasoning of higher courts in comparable matters (the doctrine of precedent, or stare decisis). For parties structuring cross-border transactions, the practical differences are concrete:",
@@ -76,12 +76,12 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "In practical terms, an agreement between two TIFC participants can be governed by TIFC law and litigated in the TIFC court on essentially the same footing a party would expect in London, Dubai, or Astana — without the parties having to select a foreign governing law and a foreign forum, and without the enforcement friction that ordinarily follows.",
       },
-      { type: "h3" as const, text: "Primacy Within the Territory" },
+      { type: "h3" as const, text: "Primacy within the territory" },
       {
         type: "p" as const,
         text: "Article 8 provides that, within the territory of the centre, TIFC decisions prevail over any conflicting provision of national legislation. Article 12 reinforces this from the other direction: national law applies inside TIFC only in defined areas — the Constitution, criminal law (as qualified by Article 14), a limited category of administrative liability, and matters of national security, defence, anti-money-laundering, immigration, family, environmental, public-health and emergency law, together with international treaties and any national law a TIFC resolution expressly adopts. Everything else is governed by the TIFC framework and, subsidiarily, by English and Welsh common law.",
       },
-      { type: "h2" as const, text: "Permitted Activities" },
+      { type: "h2" as const, text: "Permitted activities" },
       {
         type: "p" as const,
         text: "Article 7 sets out an expansive list of activities that may be carried on within the centre. It spans essentially the full range of financial services and the infrastructure and support functions around them:",
@@ -99,18 +99,18 @@ const article: Record<string, LocalizedArticle> = {
           "Other permitted vehicles — holding companies, special-purpose vehicles, treasury companies, representative offices, and a defined range of retail, hospitality, and education activity supporting the centre.",
         ],
       },
-      { type: "h2" as const, text: "The Tax Regime: The 2076 Exemption and Its Limits" },
-      { type: "h3" as const, text: "The Headline: Fifty Years" },
+      { type: "h2" as const, text: "The tax regime: the 2076 exemption and its limits" },
+      { type: "h3" as const, text: "The headline: fifty years" },
       {
         type: "p" as const,
         text: "Article 18 establishes that the national Tax Code applies inside TIFC only where the Constitutional Law or a TIFC resolution expressly provides. Against that baseline, two exemptions run until 1 January 2076 — a fifty-year horizon. TIFC bodies, and the entities they establish, wholly own and control, are exempt from corporate profit tax and social tax. Qualified TIFC participants are exempt from profit tax and social tax on income derived from financial services, subject to conditions the TIFC resolutions attach — including economic-substance and corporate-governance requirements and anti-money-laundering compliance.",
       },
-      { type: "h3" as const, text: "The Pillar Two Carve-Out" },
+      { type: "h3" as const, text: "The Pillar Two carve-out" },
       {
         type: "p" as const,
         text: "Article 19 carves a significant exception out of that exemption, and it is a modern one. A TIFC participant that is a member of a multinational enterprise group with consolidated annual revenue of EUR 750 million or more — in at least two of the four financial years preceding the relevant year — does not benefit from the income-tax exemptions. Instead it is liable to a qualified domestic minimum top-up tax, charged at a rate equal to the standard national corporate profit-tax rate. This aligns TIFC from the outset with the OECD/G20 Pillar Two global minimum tax, a step that older financial centres had to retrofit years after launch.",
       },
-      { type: "h3" as const, text: "TIFC Versus a Standard Uzbek LLC (MChJ)" },
+      { type: "h3" as const, text: "TIFC versus a standard Uzbek LLC (MChJ)" },
       {
         type: "p" as const,
         text: "The contrast with an ordinary Uzbek limited liability company — an MChJ (LLC) incorporated under general law — is the clearest way to see what the regime offers and where its edges are. A standard Uzbek LLC bears the ordinary national tax burden:",
@@ -142,12 +142,12 @@ const article: Record<string, LocalizedArticle> = {
         type: "blockquote" as const,
         text: "The exemption is not automatic and it is not universal. It attaches to qualifying financial-services income, it is conditioned on economic substance, and it is switched off entirely for the largest multinational groups. For a mid-sized financial-services business it is a genuine fifty-year holiday; for a global group it is closer to rate parity with the rest of Uzbekistan.",
       },
-      { type: "h2" as const, text: "The Operational Regime" },
+      { type: "h2" as const, text: "The operational regime" },
       {
         type: "p" as const,
         text: "Beyond tax, the law disapplies several of the frictions that ordinarily constrain foreign-invested businesses in Uzbekistan.",
       },
-      { type: "h3" as const, text: "Foreign Labour — No Permits, No Quotas" },
+      { type: "h3" as const, text: "Foreign labour — no permits, no quotas" },
       {
         type: "p" as const,
         text: "Under Article 21, TIFC participants and bodies may employ qualified foreign nationals without the work-permit and foreign-labour-quota regime that applies elsewhere in Uzbekistan. Foreign employees whose principal place of work is the centre are released from the obligation to obtain an Uzbek work permit; the TIFC Administration sets qualification requirements and keeps the register, reporting employment data to the national migration authority.",
@@ -157,17 +157,17 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Article 20 allows a foreign national travelling to Uzbekistan to work in the centre to obtain an entry visa at an Uzbek embassy or on arrival at an international airport. Individuals who qualify as TIFC persons may obtain entry visas for periods of up to five years.",
       },
-      { type: "h3" as const, text: "Currency Controls Disapplied" },
+      { type: "h3" as const, text: "Currency controls disapplied" },
       {
         type: "p" as const,
         text: "Article 17 permits monetary obligations between TIFC participants to be denominated and settled in foreign currencies, and — within the limits of TIFC resolutions and the rules of the Financial Services Authority — in digital assets. National currency-control requirements that ordinarily apply — registration of currency contracts, notification of capital-movement operations, and restrictions on opening and operating foreign bank accounts — do not apply to currency operations carried out by TIFC participants within the centre's jurisdiction, save where a TIFC resolution developed jointly with the Central Bank provides otherwise.",
       },
-      { type: "h3" as const, text: "Asset Protection" },
+      { type: "h3" as const, text: "Asset protection" },
       {
         type: "p" as const,
         text: "Article 6 prohibits the confiscation, nationalisation, expropriation, sequestration, or freezing of the assets of TIFC participants, except pursuant to an order of the Tashkent International Commercial Court or under anti-money-laundering, sanctions, criminal, or insolvency law. Article 14 further provides that conduct which is, in substance, a commercial or civil-law dispute is dealt with first through the economic, civil, and regulatory measures available within TIFC's own jurisdiction, rather than being referred to the national authorities for criminal prosecution.",
       },
-      { type: "h2" as const, text: "Investment Tax Residency (Article 13)" },
+      { type: "h2" as const, text: "Investment tax residency (Article 13)" },
       {
         type: "p" as const,
         text: "The law introduces a new status: the TIFC investment tax resident. Under a programme to be adopted by the TIFC Council — in coordination with the state bodies responsible for national security, internal affairs, economy and finance, and investment policy — individuals who make qualifying investments in Uzbekistan, and their family members, may be recognised as investment tax residents of the centre. The Council's resolution will set the forms, amounts, and instruments of qualifying investment. The law itself fixes two minimum eligibility criteria:",
@@ -183,7 +183,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "The law also contains an anti-abuse provision: where the main purpose, or one of the main purposes, of participating in the programme is improper, the status may be refused. The specific investment thresholds are left to the TIFC Council's implementing resolution and are not yet published.",
       },
-      { type: "h2" as const, text: "The Institutional Framework" },
+      { type: "h2" as const, text: "The institutional framework" },
       {
         type: "p" as const,
         text: "Article 22 establishes four organs of the centre, each with financial, administrative, and operational independence:",
@@ -206,7 +206,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Article 29 establishes the Tashkent International Commercial Court as the judicial organ of the centre, exercising exclusive and independent judicial power over disputes within its jurisdiction. Its judges decide cases independently; no instructions may be given and no interference is permitted. Under Article 30, the court conducts proceedings in English, though at a party's request the applicable procedural rules may allow otherwise. The court also serves the International Centre for Digital Technologies (the IT Park), positioning it as a shared common-law forum for Uzbekistan's flagship innovation zones.",
       },
-      { type: "h2" as const, text: "How TIFC Compares: DIFC, ADGM, AIFC, and QFC" },
+      { type: "h2" as const, text: "How TIFC compares: DIFC, ADGM, AIFC, and QFC" },
       {
         type: "p" as const,
         text: "TIFC does not appear in isolation. It is the newest member of a well-established category of common-law financial centres, and its design borrows visibly from them — most of all from the Astana International Financial Centre, which Kazakhstan created on the same template in 2018. Understanding where TIFC sits against its peers is the fastest way to calibrate expectations.",
@@ -235,7 +235,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Seen against this field, TIFC is neither an outlier nor a copy. It adopts the mature common-law-enclave template proven by DIFC and ADGM, follows the AIFC almost point for point on constitutional foundation, language, regulator, court, and tax horizon, and then modernises it — hard-wiring the Pillar Two minimum tax and an explicit digital-assets regime into the founding law rather than bolting them on later.",
       },
-      { type: "h2" as const, text: "What Happens Next: The Activation Timeline" },
+      { type: "h2" as const, text: "What happens next: the activation timeline" },
       {
         type: "p" as const,
         text: "The law is in force, but the centre is not yet operational. Article 31 gives the TIFC bodies twelve months from entry into force — extendable by the Council by up to six months — to prepare and adopt the resolutions necessary for the centre to function: the rules on governance, regulation, adjudication, and day-to-day operation. Only once those foundational resolutions are in place does the Council assess readiness and submit an activation decision to the President for approval. The practical consequence is a defined window of build-out during which the detailed rules — including the tax, currency, and residency implementing resolutions — will be published.",
@@ -244,7 +244,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "The transitional provisions also address existing licensees. Under Article 32, a legal entity holding a valid national licence to provide financial services may continue to provide those services within the centre without a fresh application, provided it registers a subsidiary or branch as a permitted transitional participant within sixty days of the activation date and observes the conditions of its national licence. Under Article 33, entities licensed in recognised foreign jurisdictions may obtain a transitional licence where the TIFC Administration has concluded a memorandum of understanding or other supervisory-cooperation arrangement with the relevant foreign regulator.",
       },
-      { type: "h2" as const, text: "Open Questions Before Activation" },
+      { type: "h2" as const, text: "Open questions before activation" },
       {
         type: "p" as const,
         text: "Because the operative detail lives in the TIFC resolutions that have not yet been adopted, several questions material to any entry decision remain open:",
@@ -263,7 +263,7 @@ const article: Record<string, LocalizedArticle> = {
         type: "p" as const,
         text: "Until those resolutions are published, the sensible posture is to treat the Constitutional Law as the settled framework and the implementing resolutions as the detail to watch. The framework — a constitutional common-law enclave, an independent regulator and English-language court, a fifty-year tax horizon, disapplied currency controls, and free movement of skilled foreign labour — is now fixed. The parameters that determine whether a specific business benefits are the next thing to be written.",
       },
-      { type: "h2" as const, text: "How Advizen Can Help" },
+      { type: "h2" as const, text: "How Advizen can help" },
       {
         type: "p" as const,
         text: "Advizen advises international investors and financial-services businesses on entry into Uzbekistan, and we are tracking the TIFC implementing resolutions as they are adopted. We help clients assess whether the TIFC regime or a standard Uzbek structure better fits their model, model the tax outcome — including the Pillar Two position for larger groups — evaluate the transitional-licensing routes for existing national and foreign licensees, and prepare for the activation window. As the detailed resolutions are published, we can translate them into a concrete entry decision for your business.",

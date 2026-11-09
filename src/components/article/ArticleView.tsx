@@ -21,9 +21,9 @@ function Avatar({ size }: { size: "sm" | "lg" }) {
       className={`grid place-items-center flex-none rounded-full bg-surface border border-line ${size === "sm" ? "size-10" : "size-[52px]"}`}
     >
       {size === "sm" ? (
-        <Image src="/Logo.webp" alt="" width={22} height={19} unoptimized />
+        <Image src="/Logo.webp" alt="" width={22} height={19} />
       ) : (
-        <Image src="/Logo.webp" alt="" width={28} height={24} unoptimized />
+        <Image src="/Logo.webp" alt="" width={28} height={24} />
       )}
     </span>
   );
@@ -183,7 +183,6 @@ export default function ArticleView({ article }: { article: PublicationArticle }
                 alt=""
                 fill
                 preload
-                unoptimized
                 sizes="100vw"
                 className="object-cover object-[70%_50%] max-sm:object-[62%_50%] home-settle"
               />
@@ -318,7 +317,6 @@ export default function ArticleView({ article }: { article: PublicationArticle }
                         src={p.image}
                         alt=""
                         fill
-                        unoptimized
                         sizes="(max-width: 639px) 120px, (max-width: 1023px) 50vw, 33vw"
                         className="object-cover motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-[var(--ease-out)] motion-safe:group-hover:scale-[1.04]"
                       />

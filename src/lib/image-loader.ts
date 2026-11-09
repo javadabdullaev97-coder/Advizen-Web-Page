@@ -1,14 +1,12 @@
-export default function regionImageLoader({
-  src,
-  width,
-  quality,
-}: {
-  src: string;
-  width: number;
-  quality?: number;
-}) {
-  // Normalise path: decode any existing %20 etc, then re-encode only unsafe chars
-  const clean = encodeURIComponent(decodeURIComponent(src)).replace(/%2F/gi, "/");
-  const rawUrl = `raw.githubusercontent.com/javadabdullaev97-coder/one/main/public${clean}`;
-  return `https://images.weserv.nl/?url=${rawUrl}&w=${width}&q=${quality ?? 75}&output=webp&fit=cover`;
+"use client";
+
+import { IMAGE_VARIANTS } from "./image-variants";
+
+/* Serves the smallest pre-generated copy that covers the requested width (see scripts/image-variants.mjs);
+   images without copies, and requests wider than every copy, get the original file. */
+export default function imageLoader({ src, width }: { src: string; width: number; quality?: number }) {
+  const path = decodeURI(src);
+  const pick = IMAGE_VARIANTS[path]?.find((w) => w >= width);
+  // Encoded so file names with spaces survive inside srcset.
+  return encodeURI(pick ? `/_img/${pick}${path}` : path);
 }
