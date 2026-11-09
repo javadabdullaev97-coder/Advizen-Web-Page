@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { CSSProperties, ReactNode } from "react";
+import type { CSSProperties } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { allEngagements } from "@/lib/industries";
@@ -29,13 +29,13 @@ export function HomeHero() {
           priority
           unoptimized
           sizes="100vw"
-          className="object-cover object-[22%_45%] max-sm:object-[72%_45%] home-settle"
+          className="object-cover object-[22%_45%] max-sm:object-[72%_45%] home-settle home-drift"
         />
         <div aria-hidden className="absolute inset-0 home-hero-shade" />
       </div>
-      <div className="relative m-wrap w-full pb-[clamp(56px,8vw,104px)] max-sm:-mt-16 max-sm:pb-16">
+      <div className="relative m-wrap w-full pb-[clamp(56px,7vw,96px)] max-sm:-mt-16 max-sm:pb-12">
         <h1 className="m-h1 text-[44px] sm:text-[56px] lg:text-[clamp(56px,5.8vw,84px)] max-w-[15ch] home-rise">{t("title")}</h1>
-        <p className="mt-6 text-[18px] lg:text-[21px] leading-[1.5] text-[#e8e8ed] max-w-[34em] text-pretty home-rise" style={delay(0.08)}>
+        <p className="mt-6 text-[18px] lg:text-[20px] leading-[1.5] text-foreground max-w-[34em] text-pretty home-rise" style={delay(0.08)}>
           {t("lede")}
         </p>
         <div className="mt-9 flex flex-wrap gap-3 home-rise" style={delay(0.16)}>
@@ -62,30 +62,30 @@ export function HomeTrackRecord() {
   const caption = (idx: number) =>
     `${tEng(`sectors.${allEngagements[idx].sector}`)} · ${tEng(`metricLabels.${allEngagements[idx].metricLabel}`)}`;
   return (
-    <section className="m-wrap py-28 lg:py-40">
+    <section className="m-wrap pt-[72px] pb-24 lg:pt-24 lg:pb-32">
       <SectionHead title={t("title")} lede={t("lede")} />
-      <ul className="grid gap-10 md:grid-cols-3">
-        {FIGS.map(({ idx, photo }, i) => (
-          <li key={idx} data-reveal style={delay(i * 0.08)}>
-            <div className="relative aspect-[16/10] rounded-[18px] overflow-hidden bg-surface mb-8">
+      <ul data-reveal className="home-figs grid gap-14 md:grid-cols-3 md:gap-8">
+        {FIGS.map(({ idx, photo }) => (
+          <li key={idx}>
+            <div className="relative aspect-[16/10] rounded-[var(--radius-inner)] overflow-hidden bg-surface">
               <Image src={photo} alt="" fill unoptimized sizes="(max-width: 767px) 100vw, 33vw" className="object-cover" />
             </div>
-            <span className="m-fig block text-[72px] lg:text-[clamp(72px,8vw,116px)] tracking-[-0.05em] leading-[.95]">{metric(idx)}</span>
-            <p className="mt-5 text-[16px] lg:text-[17px] leading-[1.55] text-foreground-2 max-w-[24em]">{tEng(`headlines.${idx}`)}</p>
+            <span className="m-fig block mt-7 text-[64px] lg:text-[clamp(64px,7vw,96px)] leading-[.95]">{metric(idx)}</span>
+            <p className="mt-4 text-[17px] leading-[1.55] text-foreground-2 max-w-[24em]">{tEng(`headlines.${idx}`)}</p>
             <p className="mt-2 text-[14px] text-muted">{caption(idx)}</p>
           </li>
         ))}
       </ul>
-      <ul data-reveal className="mt-16 lg:mt-20 border-t border-line">
+      <ul className="mt-16 lg:mt-[72px] border-t border-line">
         {ROW_IDX.map((idx) => (
-          <li key={idx} className="grid gap-1.5 md:grid-cols-[200px_minmax(0,1fr)_auto] md:gap-8 md:items-baseline py-6 border-b border-line">
-            <span className="m-fig text-[30px] lg:text-[32px]">{metric(idx)}</span>
-            <span className="text-[16px] lg:text-[17px] leading-[1.5] text-foreground">{tEng(`headlines.${idx}`)}</span>
+          <li key={idx} className="grid gap-1.5 md:grid-cols-[160px_minmax(0,1fr)_auto] md:gap-8 md:items-baseline py-6 border-b border-line">
+            <span className="m-fig text-[30px]">{metric(idx)}</span>
+            <span className="text-[17px] leading-[1.5] text-foreground">{tEng(`headlines.${idx}`)}</span>
             <span className="text-[14px] text-muted">{caption(idx)}</span>
           </li>
         ))}
       </ul>
-      <div className="mt-8 flex flex-wrap justify-between items-center gap-4 text-[14px] text-muted">
+      <div className="mt-6 flex flex-wrap justify-between items-center gap-4 text-[14px] text-muted">
         <span>{t("foot")}</span>
         <Link href="/expertise" className="m-more text-[16px]">{t("all")}</Link>
       </div>
@@ -93,27 +93,22 @@ export function HomeTrackRecord() {
   );
 }
 
-function ServiceTile({ href, title, text, more, big = false, style, children }: {
-  href: string; title: string; text: string; more: string; big?: boolean; style?: CSSProperties; children?: ReactNode;
-}) {
+// Whole tiles are links; the round arrow marks it and steps forward on hover.
+// On phones the small tiles become rows of one list, so their arrow centres vertically.
+function Go({ row = false }: { row?: boolean }) {
   return (
-    <Link
-      href={href}
-      data-reveal
-      style={style}
-      className={`m-tile flex flex-col p-7 lg:p-9 min-h-[260px] transition-colors duration-300 hover:bg-[#232325] ${big ? "md:col-span-2 lg:row-span-2" : ""}`}
+    <span
+      aria-hidden
+      className={`absolute right-6 bottom-6 w-9 h-9 rounded-full bg-white/[0.08] grid place-items-center transition-[background-color,transform] duration-200 ease-[var(--ease-out)] group-hover:bg-white/[0.14] group-hover:translate-x-[3px] ${row ? "max-sm:top-1/2 max-sm:bottom-auto max-sm:right-5 max-sm:-translate-y-1/2 max-sm:w-8 max-sm:h-8" : ""}`}
     >
-      <h3 className={`font-semibold leading-[1.15] tracking-[-0.025em] text-foreground-hi ${big ? "text-[30px] lg:text-[clamp(30px,2.6vw,40px)]" : "text-[23px] lg:text-[26px]"}`}>{title}</h3>
-      <p className="mt-3 text-[16px] leading-[1.55] text-foreground-2 max-w-[32em]">{text}</p>
-      {children}
-      <span className="m-more mt-auto pt-7 text-[15px]">{more}</span>
-    </Link>
+      <span className="w-[7px] h-[7px] border-r-[1.6px] border-t-[1.6px] border-foreground-hi rotate-45 -translate-x-px" />
+    </span>
   );
 }
 
 export function HomeServices() {
   const t = useTranslations("HomeModern.services");
-  const rates = t.raw("rates") as Rate[];
+  const [main, ...rest] = t.raw("rates") as Rate[];
   const small = [
     { key: "legal", href: "/expertise/legal" },
     { key: "accounting", href: "/expertise/finance" },
@@ -122,34 +117,36 @@ export function HomeServices() {
     { key: "operations", href: "/expertise" },
   ] as const;
   return (
-    <section className="m-wrap pb-28 lg:pb-40">
+    <section className="m-wrap pb-32 lg:pb-48">
       <SectionHead title={t("title")} lede={t("lede")} />
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <ServiceTile
+      <div data-reveal className="grid gap-4 md:grid-cols-6 max-sm:gap-0">
+        <Link
           href="/expertise/tax"
-          title={t("tax.title")}
-          text={t("tax.text")}
-          more={t("tax.title")}
-          big
+          className="group home-light m-tile md:col-span-6 grid gap-7 lg:grid-cols-2 lg:gap-12 lg:items-center p-8 lg:p-11 pr-16 transition-colors duration-200 hover:bg-[#232325] active:scale-[.985] max-sm:mb-3"
         >
-          <dl className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-auto pt-12">
-            {rates.map((r) => (
-              <div key={r.label}>
-                <dt className="m-fig text-[44px] lg:text-[clamp(44px,4.6vw,68px)] tracking-[-0.05em]">{r.fig}</dt>
-                <dd className="mt-2.5 text-[14px] text-muted">{r.label}</dd>
-              </div>
-            ))}
-          </dl>
-        </ServiceTile>
+          <div>
+            <h3 className="text-[30px] lg:text-[clamp(30px,2.8vw,40px)] font-semibold leading-[1.1] tracking-[-0.03em] text-foreground-hi">{t("tax.title")}</h3>
+            <p className="mt-3 text-[17px] leading-[1.55] text-foreground-2 max-w-[32em]">{t("tax.text")}</p>
+          </div>
+          <div className="flex flex-wrap items-end gap-x-7 gap-y-3">
+            <span className="m-fig home-mask text-[72px] lg:text-[clamp(72px,8vw,112px)]"><span>{main.fig}</span></span>
+            <div className="pb-2.5">
+              <p className="text-[17px] font-semibold text-foreground-hi">{main.label}</p>
+              <p className="mt-1.5 text-[15px] text-foreground-2">{rest.map((r) => `${r.label} ${r.fig}`).join(" · ")}</p>
+            </div>
+          </div>
+          <Go />
+        </Link>
         {small.map((s, i) => (
-          <ServiceTile
+          <Link
             key={s.key}
             href={s.href}
-            title={t(`${s.key}.title`)}
-            text={t(`${s.key}.text`)}
-            more={t("more")}
-            style={delay((i % 3) * 0.06)}
-          />
+            className={`group home-light relative bg-surface transition-colors duration-200 hover:bg-[#232325] active:scale-[.985] sm:rounded-[var(--radius-tile)] sm:min-h-[210px] sm:p-8 sm:pb-16 ${i < 3 ? "md:col-span-2" : "md:col-span-3"} max-sm:py-5 max-sm:pl-6 max-sm:pr-16 ${i === 0 ? "max-sm:rounded-t-[var(--radius-tile)]" : "max-sm:border-t max-sm:border-line"} ${i === small.length - 1 ? "max-sm:rounded-b-[var(--radius-tile)]" : ""}`}
+          >
+            <h3 className="text-[19px] sm:text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-foreground-hi sm:pr-11">{t(`${s.key}.title`)}</h3>
+            <p className="mt-1 sm:mt-2.5 text-[15px] sm:text-[16px] leading-[1.55] text-foreground-2 max-w-[30em]">{t(`${s.key}.text`)}</p>
+            <Go row />
+          </Link>
         ))}
       </div>
     </section>
@@ -167,33 +164,34 @@ export function HomeInsights() {
     return locale === "uz" ? `${UZ_MONTHS[d.getMonth()]} ${d.getFullYear()}` : dateFmt.format(d);
   };
   return (
-    <section className="m-wrap pb-28 lg:pb-40">
-      <SectionHead title={t("title")} lede={t("lede")}>
-        <Link href="/insights" className="m-more mt-5 text-[16px]">{t("all")}</Link>
-      </SectionHead>
+    <section className="m-wrap pb-24 lg:pb-32">
+      <div data-reveal className="flex flex-wrap justify-between items-baseline gap-x-6 gap-y-3 mb-10">
+        <h2 className="m-h2 text-[32px] lg:text-[clamp(32px,3.2vw,44px)]">{t("title")}</h2>
+        <Link href="/insights" className="m-more">{t("all")}</Link>
+      </div>
 
-      <div data-reveal className="group m-tile grid gap-10 sm:grid-cols-[minmax(0,1fr)_auto] items-center p-8 lg:p-14 overflow-hidden">
+      <div data-reveal data-tilt className="group home-light m-tile grid gap-8 sm:grid-cols-[minmax(0,1fr)_minmax(0,.55fr)] items-center p-7 sm:p-10 lg:px-14 lg:py-12 overflow-hidden">
         <div>
           <p className="text-[14px] text-muted">{t("guideMeta")}</p>
-          <h3 className="mt-3 text-[32px] lg:text-[clamp(32px,3.4vw,48px)] font-semibold leading-[1.04] tracking-[-0.04em] text-foreground-hi">{t("guideTitle")}</h3>
-          <p className="mt-4 text-[16px] lg:text-[17px] leading-[1.55] text-foreground-2 max-w-[30em]">{t("guideText")}</p>
+          <h3 className="mt-3 text-[30px] lg:text-[clamp(30px,3vw,44px)] font-semibold leading-[1.05] tracking-[-0.035em] text-foreground-hi">{t("guideTitle")}</h3>
+          <p className="mt-3.5 text-[17px] leading-[1.55] text-foreground-2 max-w-[30em]">{t("guideText")}</p>
           <Link href="/contact" className="m-btn m-btn-p mt-7 max-sm:w-full">{t("guideCta")}</Link>
         </div>
         <Image
           src="/Articles Image/DBU_cover.webp"
           alt=""
-          width={200}
-          height={241}
+          width={180}
+          height={217}
           unoptimized
-          className="w-[130px] sm:w-[200px] h-auto rounded-xl shadow-[0_30px_60px_rgba(0,0,0,.55)] -rotate-[4deg] translate-y-2 transition-transform duration-700 ease-[var(--ease-out)] group-hover:-rotate-2 group-hover:translate-y-0 max-sm:order-first"
+          className="home-cover w-[140px] sm:w-[180px] h-auto rounded-xl shadow-[0_24px_48px_rgba(0,0,0,.4)] sm:justify-self-center max-sm:order-first"
         />
       </div>
 
-      <ul className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+      <ul className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {recent.map((p, i) => (
-          <li key={p.slug} data-reveal style={delay(i * 0.08)} className={i === 2 ? "sm:max-lg:hidden" : ""}>
+          <li key={p.slug} className={i === 2 ? "sm:max-lg:hidden" : ""}>
             <Link href={`/insights/${p.slug}`} className="group block">
-              <div className="relative aspect-[16/10] rounded-[18px] overflow-hidden bg-surface">
+              <div className="relative aspect-[16/10] rounded-[var(--radius-inner)] overflow-hidden bg-surface">
                 {p.image && (
                   <Image
                     src={p.image}
@@ -201,15 +199,17 @@ export function HomeInsights() {
                     fill
                     unoptimized
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.04]"
+                    className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]"
                   />
                 )}
               </div>
-              <p className="mt-5 text-[14px] text-muted">
+              <p className="mt-[18px] text-[14px] text-muted">
                 {tPub(`tags.${p.tag}`)}
                 {p.date ? ` · ${fmtDate(p.date)}` : ""}
               </p>
-              <h3 className="mt-2 text-[20px] lg:text-[21px] font-semibold leading-[1.25] tracking-[-0.02em] text-foreground-hi">{tPub(`items.${p.slug}.title`)}</h3>
+              <h3 className="mt-2 text-[20px] font-semibold leading-[1.25] tracking-[-0.015em] text-foreground transition-colors duration-200 group-hover:text-foreground-hi">
+                {tPub(`items.${p.slug}.title`)}
+              </h3>
             </Link>
           </li>
         ))}
@@ -231,51 +231,52 @@ export function HomeContact() {
   const ways = [
     { icon: ICONS.telegram, title: "Telegram", sub: "@advizen", href: TELEGRAM, external: true },
     { icon: ICONS.whatsapp, title: "WhatsApp", sub: PHONE, href: WHATSAPP, external: true },
-    { icon: ICONS.phone, title: t("phone"), sub: `${PHONE} · ${t("hoursValue")}`, href: "tel:+998334884888" },
+    { icon: ICONS.phone, title: t("phone"), sub: PHONE, href: "tel:+998334884888" },
     { icon: ICONS.email, title: t("email"), sub: EMAIL, href: `mailto:${EMAIL}` },
   ];
   // No bottom padding: the FAQ that follows brings its own top spacing.
   return (
     <section className="m-wrap">
-      <div data-reveal className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-[clamp(40px,5vw,80px)] bg-surface rounded-[28px] lg:rounded-[36px] p-7 sm:p-10 lg:p-[clamp(40px,5vw,72px)]">
+      <div data-reveal className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-[72px] m-tile p-7 sm:p-10 lg:p-14">
         <div>
           <h2 className="m-h2 text-[36px] sm:text-[44px] lg:text-[clamp(44px,4.4vw,64px)]">{t("title")}</h2>
-          <p className="mt-5 text-[18px] lg:text-[20px] leading-[1.5] text-foreground-2 max-w-[30em]">{t("lede")}</p>
-          <Link href="/contact" className="m-btn m-btn-p mt-8 max-sm:w-full">{t("book")}</Link>
+          <p className="mt-[18px] text-[18px] leading-[1.5] text-foreground-2 max-w-[30em]">{t("lede")}</p>
+          <Link href="/contact" className="m-btn m-btn-p mt-7 max-sm:w-full">{t("book")}</Link>
           <ol className="mt-12 grid gap-5">
             {steps.map((s, i) => (
               <li key={s.title} className="grid grid-cols-[28px_minmax(0,1fr)] gap-3.5">
-                <span aria-hidden className="w-7 h-7 rounded-full border border-white/20 grid place-items-center text-[13px] font-semibold text-foreground-2">{i + 1}</span>
+                <span aria-hidden className="w-7 h-7 rounded-full border border-white/20 grid place-items-center text-[13px] text-foreground-2">{i + 1}</span>
                 <div>
                   <h3 className="text-[17px] font-semibold tracking-[-0.01em] text-foreground-hi">{s.title}</h3>
-                  <p className="mt-1 text-[15px] leading-[1.5] text-muted">{s.text}</p>
+                  <p className="mt-0.5 text-[15px] leading-[1.5] text-muted">{s.text}</p>
                 </div>
               </li>
             ))}
           </ol>
         </div>
-        <div className="self-center">
-          <p className="mb-4 text-[14px] text-muted">{t("direct")}</p>
-          <ul className="grid gap-2.5">
+        <div className="self-start lg:pt-2">
+          <p className="mb-2 text-[14px] text-muted">{t("direct")}</p>
+          <ul className="border-b border-line">
             {ways.map((w) => (
-              <li key={w.title}>
+              <li key={w.title} className="border-t border-line">
                 <a
                   href={w.href}
                   {...(w.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="group grid grid-cols-[48px_minmax(0,1fr)_12px] items-center gap-4 rounded-[20px] bg-white/[0.05] py-4 pl-4 pr-5 transition-[background-color,transform] duration-200 hover:bg-white/[0.09] active:scale-[.985]"
+                  className="group grid grid-cols-[40px_minmax(0,1fr)_12px] items-center gap-4 py-4 transition-transform duration-150 active:scale-[.99]"
                 >
-                  <span className="w-12 h-12 rounded-[14px] bg-white/[0.08] grid place-items-center text-foreground-hi">
-                    <svg viewBox="0 0 24 24" className="w-[22px] h-[22px]" aria-hidden>{w.icon}</svg>
+                  <span className="w-10 h-10 rounded-full bg-white/[0.08] grid place-items-center text-foreground-hi transition-colors duration-200 group-hover:bg-white/[0.14]">
+                    <svg viewBox="0 0 24 24" className="w-[19px] h-[19px]" aria-hidden>{w.icon}</svg>
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-[17px] font-semibold tracking-[-0.01em] text-foreground-hi">{w.title}</span>
-                    <span className="block mt-0.5 text-[14px] text-muted [overflow-wrap:anywhere]">{w.sub}</span>
+                    <span className="block text-[17px] font-semibold text-foreground-hi">{w.title}</span>
+                    <span className="block text-[15px] text-foreground-2 [overflow-wrap:anywhere]">{w.sub}</span>
                   </span>
-                  <span aria-hidden className="w-2 h-2 border-r-[1.6px] border-t-[1.6px] border-muted rotate-45 transition-transform duration-300 group-hover:translate-x-[3px] group-hover:border-foreground-hi" />
+                  <span aria-hidden className="w-2 h-2 border-r-[1.6px] border-t-[1.6px] border-muted rotate-45 transition-transform duration-200 group-hover:translate-x-[3px] group-hover:border-foreground-hi" />
                 </a>
               </li>
             ))}
           </ul>
+          <p className="mt-4 text-[14px] text-muted">{t("hoursValue")}</p>
         </div>
       </div>
     </section>

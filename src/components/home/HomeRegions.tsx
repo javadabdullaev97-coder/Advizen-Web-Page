@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState, type CSSProperties } from "react";
 import { useTranslations } from "next-intl";
 import UzbekistanMap from "@/components/UzbekistanMap";
-import { SectionHead } from "@/components/home/SectionHead";
 
 /* ── Region data ─────────────────── */
 
@@ -144,7 +143,7 @@ function RegionPanel({ activeId }: { activeId: string }) {
   const regionName = tRegions(activeId);
   return (
     <article className="m-tile overflow-hidden" aria-live="polite">
-      <div className="relative aspect-[4/3] bg-surface-light">
+      <div className="relative aspect-[16/10] bg-surface-light">
         {shown.previous && (
           <Image src={REGION_IMAGE[shown.previous]} alt="" fill unoptimized sizes="(max-width: 1023px) 100vw, 40vw" className="object-cover" />
         )}
@@ -185,17 +184,23 @@ export default function HomeRegions() {
   const t = useTranslations("HomeModern.regions");
   const tPanel = useTranslations("Home.geography.panel");
   const tRegions = useTranslations("Home.geography.regions");
-  const [activeId, setActiveId] = useState("UZ-TK");
+  // Samarkand by default: Tashkent City is a speck on the map and its photo repeats the hero.
+  const [activeId, setActiveId] = useState("UZ-SA");
   return (
-    <section className="m-wrap pb-28 lg:pb-40">
-      <SectionHead title={t("title")} lede={t("lede")} />
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-12 items-center">
-        <div data-reveal>
+    <section className="m-wrap pb-32 lg:pb-48">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-14 items-center">
+        <div data-reveal className="max-lg:order-2">
+          <p className="mb-4 text-[14px] text-muted">{tPanel("hint")}</p>
           <UzbekistanMap activeId={activeId} onSelect={setActiveId} regionName={(id) => tRegions(id)} label={t("title")} />
-          <p className="mt-3.5 text-[14px] text-muted">{tPanel("hint")}</p>
         </div>
-        <div data-reveal style={{ "--d": ".1s" } as CSSProperties}>
-          <RegionPanel activeId={activeId} />
+        <div className="max-lg:contents">
+          <div data-reveal className="max-lg:order-1">
+            <h2 className="m-h2 text-[36px] sm:text-[44px] lg:text-[clamp(40px,4.4vw,64px)]">{t("title")}</h2>
+            <p className="mt-4 mb-9 text-[18px] leading-[1.5] text-foreground-2 max-w-[32em] max-lg:mb-0">{t("lede")}</p>
+          </div>
+          <div data-reveal style={{ "--d": ".1s" } as CSSProperties} className="max-lg:order-3">
+            <RegionPanel activeId={activeId} />
+          </div>
         </div>
       </div>
     </section>

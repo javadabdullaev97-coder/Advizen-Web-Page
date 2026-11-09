@@ -5,8 +5,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ScrollProgress from "@/components/ScrollProgress";
-import ScrollToTop from "@/components/ScrollToTop";
 import { GtmScript, GtmNoScript } from "@/components/Analytics";
 import { organizationJsonLd, websiteJsonLd, OG_IMAGE } from "@/lib/seo";
 import CookieBanner from "@/components/CookieBanner";
@@ -110,13 +108,11 @@ export default async function EnLayout({ children }: { children: ReactNode }) {
       <body className="min-h-full flex flex-col relative">
         <GtmNoScript />
         <NextIntlClientProvider>
-          <ScrollProgress />
           <Navbar />
           <main className="flex-1 relative z-10">{children}</main>
           <div className="relative z-10">
             <Footer />
           </div>
-          <ScrollToTop />
           <CookieBanner />
           <ScrollRestoration />
         </NextIntlClientProvider>

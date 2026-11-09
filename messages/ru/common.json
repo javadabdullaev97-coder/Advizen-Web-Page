@@ -28,11 +28,14 @@
     "hrServices": "HR-услуги",
     "funding": "Финансирование",
     "maAdvisory": "M&A консалтинг",
-    "dueDiligence": "Due Diligence",
+    "dueDiligence": "Due diligence",
     "entityManagement": "Управление компаниями",
     "employerOfRecord": "Employer of Record",
     "corporateServices": "Корпоративные услуги",
     "virtualOffice": "Виртуальный офис",
+    "compliance": "Комплаенс-мониторинг",
+    "workPermits": "Разрешения на работу",
+    "payroll": "Расчёт зарплаты",
     "tashkent": "Ташкент, Узбекистан"
   }
 }

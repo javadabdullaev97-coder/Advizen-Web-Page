@@ -9,9 +9,9 @@ import { FAQ_DATA, type FaqPage } from "@/lib/faqData";
 type Locale = "en" | "ru" | "uz";
 
 const HEADINGS: Record<Locale, string> = {
-  en: "Frequently Asked Questions",
-  ru: "Часто задаваемые вопросы",
-  uz: "Ko'p so'raladigan savollar",
+  en: "Common questions",
+  ru: "Частые вопросы",
+  uz: "Koʻp beriladigan savollar",
 };
 
 // Separate component so each item gets its own refs (hooks can't be in .map())
@@ -78,7 +78,7 @@ function FaqItem({
       >
         <div className="overflow-hidden">
           <p
-            className="pb-7 text-[16px] lg:text-[17px] text-foreground-2 leading-relaxed max-w-[40em]"
+            className="pb-6 text-[16px] lg:text-[17px] text-foreground-2 leading-relaxed max-w-[36em]"
             style={{
               opacity: isOpen ? 1 : 0,
               transition: isOpen ? "opacity 0.18s ease 0.08s" : "opacity 0.12s ease",
@@ -176,7 +176,7 @@ export default function FaqSection({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="grid gap-10 lg:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] lg:gap-20">
-        <h2 className="m-h2 text-[36px] sm:text-[44px] lg:text-[clamp(44px,4.4vw,64px)]">
+        <h2 className="m-h2 text-[36px] sm:text-[44px] lg:text-[clamp(40px,4.4vw,64px)] lg:sticky lg:top-28 self-start">
           {HEADINGS[locale]}
         </h2>
         <div className="border-t border-line">

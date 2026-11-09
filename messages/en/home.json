@@ -8,7 +8,7 @@
         "regionalGdp": "Regional GDP",
         "sezs": "Special Economic Zones",
         "keySectors": "Key Sectors",
-        "hint": "Tap or hover a region."
+        "hint": "Tap a region, or hover and pause on it."
       },
       "regions": {
         "UZ-QR": "Republic of Karakalpakstan",

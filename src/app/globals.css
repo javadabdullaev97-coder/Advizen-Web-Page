@@ -152,10 +152,10 @@ select:-webkit-autofill:focus {
 
 /* ── Modern building blocks (homepage and store) ──────────────────────────── */
 .m-wrap { padding-left: max(20px, 6.5vw); padding-right: max(20px, 6.5vw); }
-.m-h1 { font-weight: 600; letter-spacing: -0.045em; line-height: 1; color: var(--foreground-hi); text-wrap: balance; }
-.m-h2 { font-weight: 600; letter-spacing: -0.04em; line-height: 1.04; color: var(--foreground-hi); text-wrap: balance; }
+.m-h1 { font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: var(--foreground-hi); text-wrap: balance; }
+.m-h2 { font-weight: 600; letter-spacing: -0.035em; line-height: 1.04; color: var(--foreground-hi); text-wrap: balance; }
 .m-tile { background: var(--surface); border-radius: var(--radius-tile); }
-.m-fig { font-weight: 700; letter-spacing: -0.04em; color: var(--foreground-hi); font-variant-numeric: tabular-nums; line-height: 1; }
+.m-fig { font-weight: 600; letter-spacing: -0.045em; color: var(--foreground-hi); font-variant-numeric: tabular-nums; line-height: 1; }
 .m-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   height: 50px; padding: 0 26px; border-radius: 999px; font-weight: 600; font-size: 15px;
@@ -165,22 +165,32 @@ select:-webkit-autofill:focus {
 .m-btn:active { transform: scale(.97); }
 .m-btn:focus-visible { outline: 2px solid var(--foreground-hi); outline-offset: 3px; }
 .m-btn-p { background: var(--primary); color: #fbf6f1; }
-.m-btn-p:hover { background: var(--primary-light); }
+
 .m-btn-s { background: var(--surface-light); color: var(--foreground-hi); }
-.m-btn-s:hover { background: #3a3a3d; }
+
 .m-btn:disabled { opacity: .45; cursor: default; transform: none; }
 .m-btn-g {
   background: rgba(255, 255, 255, 0.1); color: var(--foreground-hi);
   -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%);
 }
-.m-btn-g:hover { background: rgba(255, 255, 255, 0.16); }
+
 /* "Learn more" link with a chevron that steps forward on hover */
 .m-more { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; color: var(--foreground-hi); }
 .m-more::after {
   content: ""; width: 7px; height: 7px; border-right: 1.6px solid currentColor; border-top: 1.6px solid currentColor;
   transform: rotate(45deg); transition: transform .3s var(--ease-out);
 }
-.m-more:hover::after, a:hover > .m-more::after { transform: translateX(3px) rotate(45deg); }
+
+@media (hover: hover) and (pointer: fine) {
+  .m-btn-p:hover { background: var(--primary-light); }
+  .m-btn-s:hover { background: #3a3a3d; }
+  .m-btn-g:hover { background: rgba(255, 255, 255, 0.16); }
+  .m-more:hover::after, a:hover .m-more::after { transform: translateX(3px) rotate(45deg); }
+}
+@media (max-width: 639px) {
+  .m-h1 { letter-spacing: -0.03em; }
+  .m-h2 { letter-spacing: -0.025em; }
+}
 @media (prefers-reduced-motion: reduce) {
   .m-btn { transition: none; }
 }
@@ -188,17 +198,17 @@ select:-webkit-autofill:focus {
 /* ── Homepage ─────────────────────────────────────────────────────────────── */
 /* Sections rise into view once; the observer in HomeReveal marks them shown.
    Without scripts, or with reduced motion, everything is simply visible.     */
-[data-reveal] { transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); transition-delay: var(--d, 0s); }
+[data-reveal] { transition: opacity .6s var(--ease-out), transform .6s var(--ease-out); transition-delay: var(--d, 0s); }
 @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
-  [data-reveal]:not([data-shown]) { opacity: 0; transform: translateY(18px); }
+  [data-reveal]:not([data-shown]) { opacity: 0; transform: translateY(12px); }
 }
 
-@keyframes home-rise { from { opacity: 0; transform: translateY(18px); } }
+@keyframes home-rise { from { opacity: 0; transform: translateY(16px); } }
 @keyframes home-settle { from { transform: scale(1.05); } }
 @keyframes home-fade { from { opacity: 0; } }
-.home-rise { animation: home-rise .9s var(--ease-out) both; animation-delay: var(--d, 0s); }
+.home-rise { animation: home-rise .8s var(--ease-out) both; animation-delay: var(--d, 0s); }
 .home-settle { animation: home-settle 2.2s var(--ease-out) both; }
-.home-fade { animation: home-fade .6s var(--ease-out) both; }
+.home-fade { animation: home-fade .25s ease-out both; }
 @media (prefers-reduced-motion: reduce) {
   .home-rise, .home-settle, .home-fade { animation: none; }
 }
@@ -215,9 +225,50 @@ select:-webkit-autofill:focus {
 
 /* Region map */
 .uz-region {
-  fill: rgba(255, 255, 255, .1); stroke: rgba(255, 255, 255, .22); stroke-width: .8;
-  cursor: pointer; outline: none; transition: fill .25s ease-out;
+  fill: rgba(255, 255, 255, .14); stroke: rgba(255, 255, 255, .34); stroke-width: .8;
+  cursor: pointer; outline: none; transition: fill .15s ease-out;
 }
-.uz-region:hover { fill: rgba(255, 255, 255, .18); }
+.uz-region:hover { fill: rgba(255, 255, 255, .22); }
 .uz-region:focus-visible { stroke: var(--foreground-hi); stroke-width: 1.6; }
 .uz-region-on { fill: var(--primary); stroke: #d23a57; stroke-width: 1; pointer-events: none; }
+.uz-label { font: 600 13px var(--font-manrope), sans-serif; fill: #fff; paint-order: stroke; stroke: rgba(11, 11, 12, .85); stroke-width: 4px; pointer-events: none; }
+.uz-dot { fill: #fff; pointer-events: none; }
+
+/* ── Homepage motion ──────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  /* Track record: cards arrive one after another, each photo eases out of a slight zoom */
+  .home-figs > li { transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+  .home-figs:not([data-shown]) > li { opacity: 0; transform: translateY(16px); }
+  .home-figs > li:nth-child(2) { transition-delay: .08s; }
+  .home-figs > li:nth-child(3) { transition-delay: .16s; }
+  .home-figs img { transition: transform 1.4s var(--ease-out); }
+  .home-figs:not([data-shown]) img { transform: scale(1.08); }
+
+  /* The tax rate rises out of its own line once */
+  .home-mask > span { display: inline-block; transition: transform .8s var(--ease-out) .1s; }
+  [data-reveal]:not([data-shown]) .home-mask > span { transform: translateY(105%); }
+
+  /* The guide cover slides in leaning, then settles */
+  .home-cover { transition: transform .6s var(--ease-out), box-shadow .6s var(--ease-out), opacity .8s var(--ease-out); }
+  [data-reveal]:not([data-shown]) .home-cover { opacity: 0; transform: perspective(900px) translateX(24px) rotate(4deg); }
+}
+.home-mask { display: inline-block; overflow: hidden; vertical-align: bottom; line-height: .95; }
+
+/* A soft light that follows a fine pointer across a tile (HomeReveal sets --x and --y) */
+.home-light { position: relative; }
+@media (hover: hover) and (pointer: fine) {
+  .home-light::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+    background: radial-gradient(440px circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, .07), transparent 60%);
+  }
+  .home-light:hover::before { opacity: 1; }
+}
+
+/* The guide cover leans toward the pointer and lifts on hover */
+.home-cover { transform: perspective(900px) rotate(-3deg) rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)); }
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .home-cover {
+    transform: perspective(900px) rotate(0deg) translateY(-8px) rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg));
+    box-shadow: 0 36px 64px rgba(0, 0, 0, .55);
+  }
+}

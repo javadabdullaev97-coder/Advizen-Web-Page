@@ -5,15 +5,14 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { useParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { routing, type Locale } from "@/i18n/routing";
-import { FlagBadge } from "@/components/Flags";
 
 const labels: Record<Locale, { code: string; name: string }> = {
   en: { code: "EN", name: "English" },
   ru: { code: "RU", name: "Русский" },
-  uz: { code: "UZ", name: "O'zbek" },
+  uz: { code: "UZ", name: "Oʻzbek" },
 };
 
 function useLangSwitch() {
@@ -67,22 +66,25 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
         className={cn(
           "flex items-center gap-1.5 cursor-pointer transition-colors duration-200",
           compact
-            ? "text-[12px] text-foreground/70 hover:text-foreground py-1"
-            : "text-[12px] text-foreground-2 hover:text-foreground-hi"
+            ? "text-[13px] text-foreground-2 hover:text-foreground-hi py-1"
+            : "text-[15px] font-medium text-foreground-2 hover:text-foreground-hi"
         )}
+        aria-expanded={open}
+        aria-haspopup="menu"
       >
-        <FlagBadge code={locale} size={17} />
-        <span className="font-medium tracking-wide">{labels[locale].code}</span>
+        <span>{labels[locale].code}</span>
+        <ChevronDown aria-hidden className={cn("w-3.5 h-3.5 transition-transform duration-200", open && "rotate-180")} />
       </button>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -6, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -6, scale: 0.96 }}
-            transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute right-0 top-full mt-3 min-w-[160px] bg-[#0D0D0D]/95 backdrop-blur-2xl border border-white/[0.08] rounded shadow-[0_8px_30px_rgba(0,0,0,0.4)] overflow-hidden z-50"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.96 }}
+            transition={{ duration: 0.15, ease: [0.23, 1, 0.32, 1] }}
+            style={{ transformOrigin: "top right" }}
+            className="absolute right-0 top-full mt-3 min-w-[170px] p-1.5 rounded-[16px] bg-surface/90 backdrop-blur-xl border border-line shadow-[0_16px_40px_rgba(0,0,0,0.45)] z-50"
           >
             {routing.locales.map((l) => {
               const active = l === locale;
@@ -92,15 +94,12 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
                   type="button"
                   onClick={() => handleSwitch(l)}
                   className={cn(
-                    "w-full flex items-center justify-between gap-3 px-4 py-2.5 text-left text-[12px] tracking-wide transition-colors duration-150 cursor-pointer border-b border-white/[0.04] last:border-0",
-                    active ? "text-foreground bg-white/[0.03]" : "text-muted hover:text-foreground hover:bg-white/[0.02]"
+                    "w-full h-10 flex items-center justify-between gap-3 px-3 rounded-[10px] text-left text-[15px] transition-colors duration-150 cursor-pointer",
+                    active ? "text-foreground-hi" : "text-foreground-2 hover:text-foreground-hi hover:bg-white/[0.06]"
                   )}
                 >
-                  <div className="flex items-center gap-2.5">
-                    <FlagBadge code={l} size={16} />
-                    <span>{labels[l].name}</span>
-                  </div>
-                  {active && <Check className="w-3 h-3 text-primary" strokeWidth={2} />}
+                  <span>{labels[l].name}</span>
+                  {active && <Check className="w-4 h-4 text-foreground-hi" strokeWidth={2} />}
                 </button>
               );
             })}
@@ -126,17 +125,35 @@ export function MobileLanguageSwitcher() {
             disabled={isPending}
             onClick={() => switchTo(l)}
             className={cn(
-              "flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border transition-colors touch-manipulation",
-              active
-                ? "border-white/30 text-foreground bg-white/[0.06]"
-                : "border-white/[0.08] text-white/40"
+              "px-3.5 py-2 rounded-full text-[14px] font-medium transition-colors touch-manipulation",
+              active ? "bg-foreground-hi text-background" : "bg-white/[0.07] text-foreground-2"
             )}
           >
-            <FlagBadge code={l} size={15} />
-            <span className="text-[11px] font-medium tracking-wide">{labels[l].code}</span>
+            {labels[l].name}
           </button>
         );
       })}
+    </div>
+  );
+}
+
+/* ── Footer: the three languages as plain text links ── */
+export function LanguageLinks() {
+  const { locale, isPending, switchTo } = useLangSwitch();
+  return (
+    <div className="flex items-center gap-4">
+      {routing.locales.map((l) => (
+        <button
+          key={l}
+          type="button"
+          disabled={isPending}
+          onClick={() => switchTo(l)}
+          aria-current={l === locale ? "true" : undefined}
+          className={cn("cursor-pointer transition-colors", l === locale ? "text-foreground-hi" : "hover:text-foreground-hi")}
+        >
+          {labels[l].name}
+        </button>
+      ))}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import SocialIcons from "@/components/SocialIcons";
+import { LanguageLinks } from "@/components/LanguageSwitcher";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -22,7 +23,10 @@ export default function Footer() {
       { label: t("entityManagement"),    href: "/expertise/entity-management" },
       { label: t("employerOfRecord"),    href: "/expertise/eor" },
       { label: t("corporateServices"),   href: "/expertise/corporate" },
+      { label: t("payroll"),             href: "/expertise/payroll" },
+      { label: t("workPermits"),         href: "/expertise/immigration" },
       { label: t("virtualOffice"),       href: "/expertise/virtual-office" },
+      { label: t("compliance"),          href: "/expertise/compliance" },
     ],
     [t("firm")]: [
       { label: t("insights"), href: "/insights" },
@@ -37,9 +41,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-background border-t border-line">
+    <footer className="bg-background">
       <div className="m-wrap">
-        <div className="py-16 md:py-20 grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,3fr)] lg:gap-16">
+        <div className="border-t border-line py-16 grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,4fr)] lg:gap-10">
           <div>
             <div className="flex items-center gap-2">
               <Image src="/Logo.webp" alt="Advizen" width={35} height={35} unoptimized style={{ width: "auto", height: "30px" }} />
@@ -47,12 +51,12 @@ export default function Footer() {
                 ADVIZEN
               </span>
             </div>
-            <p className="mt-5 text-[15px] text-muted leading-relaxed max-w-[34ch]">{t("tagline")}</p>
-            <div className="mt-6 flex flex-col gap-1 text-[15px]">
-              <a href="tel:+998334884888" className="text-foreground-hi w-fit py-1.5 hover:underline underline-offset-4">
+            <p className="mt-4 text-[15px] text-muted leading-relaxed max-w-[24em]">{t("tagline")}</p>
+            <div className="mt-5 flex flex-col gap-1 text-[15px]">
+              <a href="tel:+998334884888" className="text-foreground-hi w-fit py-1 hover:underline underline-offset-4">
                 +998 33 488 48 88
               </a>
-              <a href="mailto:info@advizenco.com" className="text-foreground-hi w-fit py-1.5 hover:underline underline-offset-4">
+              <a href="mailto:info@advizenco.com" className="text-foreground-hi w-fit py-1 hover:underline underline-offset-4">
                 info@advizenco.com
               </a>
             </div>
@@ -64,7 +68,7 @@ export default function Footer() {
                 <p className="text-[15px] font-semibold text-foreground-hi mb-4">{title}</p>
                 <ul className="flex flex-col gap-2.5">
                   {links.map((link) => (
-                    <li key={link.label}>
+                    <li key={link.href}>
                       <Link href={link.href} className="text-[15px] text-muted hover:text-foreground-hi transition-colors">
                         {link.label}
                       </Link>
@@ -76,13 +80,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-8 border-t border-line">
+        <div className="border-t border-line py-7">
           <SocialIcons />
         </div>
 
-        <div className="py-6 border-t border-line flex flex-wrap justify-between gap-3 text-sm text-muted-dark">
-          <p>&copy; 2024 Advizen Consulting LLC. {t("rights")}</p>
-          <p>{t("tashkent")}</p>
+        <div className="border-t border-line pt-6 pb-10 flex flex-wrap justify-between items-center gap-4 text-sm text-muted">
+          <p>&copy; 2024 Advizen Consulting LLC · {t("tashkent")}</p>
+          <LanguageLinks />
         </div>
       </div>
     </footer>

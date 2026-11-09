@@ -28,11 +28,14 @@
     "hrServices": "HR xizmatlari",
     "funding": "Moliyalashtirish",
     "maAdvisory": "M&A konsaltingi",
-    "dueDiligence": "Due Diligence",
+    "dueDiligence": "Due diligence",
     "entityManagement": "Kompaniyalarni boshqarish",
     "employerOfRecord": "Employer of Record",
     "corporateServices": "Korporativ xizmatlar",
     "virtualOffice": "Virtual ofis",
+    "compliance": "Komplayens monitoringi",
+    "workPermits": "Ishlash uchun ruxsatnomalar",
+    "payroll": "Ish haqi hisob-kitobi",
     "tashkent": "Toshkent, O'zbekiston"
   }
 }

@@ -40,7 +40,7 @@ function gtag(..._args: unknown[]) {
 }
 
 // .m-btn is unlayered CSS, so its size is adjusted inline rather than with utilities.
-const BTN = { height: 40, padding: "0 16px", fontSize: 14 };
+const BTN = { height: 38, padding: "0 14px", fontSize: 14 };
 
 const COPY = {
   en: {
@@ -93,7 +93,7 @@ export default function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 12, opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-          className="fixed z-50 right-5 bottom-5 max-sm:left-4 max-sm:right-4 max-sm:bottom-4 sm:w-[380px] rounded-[20px] border border-line bg-[#1d1d1f]/85 backdrop-blur-2xl backdrop-saturate-[1.8] p-5 shadow-[0_20px_50px_rgba(0,0,0,.5)]"
+          className="fixed z-50 right-5 bottom-5 max-sm:left-4 max-sm:right-4 max-sm:bottom-4 sm:w-[360px] rounded-[18px] border border-line bg-[#1d1d1f]/85 backdrop-blur-2xl backdrop-saturate-[1.8] p-4 shadow-[0_16px_40px_rgba(0,0,0,.45)]"
         >
           <p className="text-[14px] leading-[1.5] text-foreground-2">
             {copy.text}{" "}
@@ -101,7 +101,7 @@ export default function CookieBanner() {
               {copy.more}
             </Link>
           </p>
-          <div className="mt-4 grid grid-cols-2 gap-2">
+          <div className="mt-3 grid grid-cols-2 gap-2">
             <button type="button" onClick={() => decide("denied")} className="m-btn m-btn-g" style={BTN}>
               {copy.reject}
             </button>
