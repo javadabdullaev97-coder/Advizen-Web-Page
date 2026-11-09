@@ -28,23 +28,6 @@
       }
     }
   },
-  "AdvisorySection": {
-    "eyebrow": "Advisory",
-    "heading": "You consult — we counsel",
-    "description": "Strategic guidance across tax, legal, finance, HR, funding, M&A, and due diligence. You make the decisions; we provide the depth.",
-    "advisoryLabel": "Advisory",
-    "whoThisIsFor": "Who this is for",
-    "capabilities": "Capabilities",
-    "relatedReading": "Related reading"
-  },
-  "OperationsSection": {
-    "eyebrow": "Operations",
-    "heading": "You delegate — we execute",
-    "description": "Fully managed services where we handle execution on your behalf — one contract, one point of contact, full compliance.",
-    "servicesCount": "{count} services",
-    "operationsLabel": "Operations",
-    "whoThisIsFor": "Who this is for"
-  },
   "HomeModern": {
     "hero": {
       "title": "Tax, legal and accounting advisory in Uzbekistan",

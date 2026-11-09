@@ -30,46 +30,6 @@
       "secondary": "Tahlillarni koʻrish"
     }
   },
-  "Industries": {
-    "Financial Services": {
-      "name": "Moliyaviy xizmatlar",
-      "description": "Markaziy Osiyodagi banklar, investitsiya fondlari, PE kompaniyalari va raqamli aktivlar operatorlari litsenziyalash, meʼyoriy muvofiqlik, fond tuzilishi va chegaralararo bitimlar boʻyicha Advizen ga ishonadi.",
-      "offerings": ["Litsenziyalash va meʼyoriy muvofiqlik", "Korporativ boshqaruv konsaltingi", "MHHS va MHHM moliyaviy hisoboti", "Fond va SPV tuzilishi", "M&A va qayta tashkil etishni qoʻllab-quvvatlash", "Transfer narxlash hujjatlari", "Raqamli aktivlar yuridik tuzilishi"]
-    },
-    "Energy & Industrials": {
-      "name": "Energetika va sanoat",
-      "description": "Atom energetikasi va qayta tiklanuvchi manbalardan tortib neft va gaz, agroqayta ishlash va ogʻir sanoatgacha — biz Oʻzbekiston boʻylab kapital talab qiluvchi loyihalar va ularning investorlari uchun soliq, bojxona va yuridik konsalting taqdim etamiz.",
-      "offerings": ["Yirik loyihalar uchun soliq va bojxona tuzilishi", "Transfer narxlash hujjatlari", "Holdinglar va investitsiya tuzilishi", "Energetika va sanoat aktivlari uchun due diligence", "Erkin iqtisodiy zonalar konsaltingi", "HR va payroll keng miqyosda"]
-    },
-    "Technology & Digital": {
-      "name": "Texnologiya va raqamli iqtisodiyot",
-      "description": "Oʻzbekistonning rivojlanayotgan raqamli iqtisodiyotiga kirayotgan texnologiya kompaniyalari, fintexlar va telekomlar tezkor oʻsishni qoʻllab-quvvatlovchi soliq tuzilishi, meʼyoriy litsenziyalash va yuridik asoslar uchun bizga ishonadi.",
-      "offerings": ["Bozorga kirish uchun soliq tuzilishi", "Fintex meʼyoriy muvofiqligi", "Dasturiy taʼminot va IP litsenziyalash konsaltingi", "Investitsiya va aktsiyadorlar tuzilishi", "Raqamli aktivlar yuridik tuzilishi", "Muhandislik jamoalari uchun HR"]
-    },
-    "Real Estate & Infrastructure": {
-      "name": "Koʻchmas mulk va infratuzilma",
-      "description": "Yirik koʻchmas mulk va infratuzilma loyihalari boshidan ehtiyotkorlik bilan soliq va yuridik rejalashtirishni talab qiladi. Biz quruvchilar, pudratchilar va investorlarga loyiha tuzilishi, ruxsatnomalar va muvofiqlik boʻyicha maslahat beramiz.",
-      "offerings": ["Loyiha soliqni optimallashtirish", "Shartnomalar arxitekturasi va tekshiruvi", "Mehnat huquqi va ish kuchi muvofiqligi", "Ruxsatnomalar va meʼyoriy konsalting", "Quruvchilar uchun investitsiya tuzilishi"]
-    },
-    "Consumer & Lifestyle": {
-      "name": "Isteʼmol tovarlari va xizmatlar",
-      "description": "FMCG va chakana savdodan tortib mehmondoʻstlik, media va sportgacha — biz Oʻzbekiston boʻylab isteʼmolchilarga yoʻnaltirilgan biznesni bozorga kirish tuzilishi, keng miqyosli HR, payroll va operatsion muvofiqlik bilan qoʻllab-quvvatlaymiz.",
-      "offerings": ["Bozorga kirish va kompaniya tashkil etish", "M&A va kengayish tuzilishi", "Payroll va HR autsorsing", "Franchayzing va distribyutsiya shartnomalari", "IP va kontent shartnomalari", "Tadbirlar va homiylik tuzilishi"]
-    },
-    "Healthcare & Social": {
-      "name": "Sogʻliqni saqlash va ijtimoiy soha",
-      "description": "Xalqaro farma kompaniyalari, sogʻliqni saqlash operatorlari, xususiy maktablar va universitetlar bozorga silliq kirish, litsenziyalash konsaltingi va keng miqyosda ishlash uchun zarur boʻlgan HR va muvofiqlik infratuzilmasi uchun bizga ishonadi.",
-      "offerings": ["Bozorga kirish va mahsulotlarni roʻyxatga olish", "Meʼyoriy muvofiqlik konsaltingi", "HR, payroll va EOR xizmatlari", "Kompaniya tashkil etish va litsenziyalash", "Xorijiy xodimlar uchun mehnat ruxsatnomalari", "Soliq muvofiqlik va hisobot"]
-    }
-  },
-  "IndustryFeatured": {
-    "Financial Services": {"metric": "$200M", "label": "Bitim", "text": "Xalqaro raqamli bankning Oʻzbekistondagi shoʻba kompaniyalarini qayta tashkil etish"},
-    "Energy & Industrials": {"metric": "$10B+", "label": "Loyiha byudjeti", "text": "Atom elektr stantsiyasi qurilishining soliq, buxgalteriya va bojxona tuzilishi"},
-    "Technology & Digital": {"metric": "$5M", "label": "Investitsiya", "text": "Yirik rossiyalik IT kompaniyaning Oʻzbekiston bozoriga chiqishi paytida soliq tuzilishi"},
-    "Real Estate & Infrastructure": {"metric": "$20M", "label": "Bitim", "text": "Yirik oʻzbek tsement ishlab chiqaruvchisining M&A va qayta tashkil etilishi"},
-    "Consumer & Lifestyle": {"metric": "$250M", "label": "Bitim", "text": "Yirik oʻzbek shisha toʻldiruvchi kompaniyaning M&A bitimi"},
-    "Healthcare & Social": {"metric": "5+", "label": "Kompaniya", "text": "Xalqaro farma kompaniyalari uchun roʻyxatga olish, payroll va muvofiqlik konsaltingi"}
-  },
   "Engagements": {
     "metricLabels": {
       "Project budget": "Loyiha byudjeti",

@@ -29,7 +29,6 @@ export const IMAGE_VARIANTS: Record<string, number[]> = {
   "/home/track-companies.webp": [480],
   "/home/track-energy.webp": [480],
   "/home/track-nuclear.webp": [480],
-  "/payments no background.webp": [480, 960],
   "/Regions/Andijan.webp": [480, 960],
   "/Regions/Bukhara.webp": [480, 960],
   "/Regions/Fergana.webp": [480, 960],

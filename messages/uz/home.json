@@ -28,25 +28,6 @@
       }
     }
   },
-  "AdvisorySection": {
-    "eyebrow": "Konsalting",
-    "heading": "Siz maslahat olasiz — biz yoʻnaltiramiz",
-    "description": "Soliq, huquq, moliya, HR, moliyalashtirish, M&A va due diligence boʻyicha strategik rahbarlik. Qarorlar siznikida; biz tahlil chuqurligini taʼminlaymiz.",
-    "advisoryLabel": "Konsalting",
-    "whoThisIsFor": "Bu kimga moʻljallangan",
-    "capabilities": "Imkoniyatlar",
-    "relatedReading": "Mavzu boʻyicha"
-  },
-  "OperationsSection": {
-    "eyebrow": "Operatsiyalar",
-    "heading": "Siz topshirasiz — biz bajaramiz",
-    "description": "Biz ijroni oʻz zimmamizga oladigan toʻliq boshqariladigan xizmatlar — bitta shartnoma, bitta aloqa nuqtasi, toʻliq muvofiqlik.",
-    "operationsLabel": "Operatsiyalar",
-    "whoThisIsFor": "Bu kimga moʻljallangan",
-    "servicesCount": "{count} xizmat",
-    "capabilities": "Imkoniyatlar",
-    "relatedReading": "Mavzu boʻyicha"
-  },
   "HomeModern": {
     "hero": {
       "title": "Toshkentda konsalting: soliq, huquq, buxgalteriya",
