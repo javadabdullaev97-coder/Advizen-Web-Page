@@ -49,7 +49,11 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color] duration-300 border-b ${
         clear
           ? "bg-transparent border-transparent"
-          : `backdrop-blur-xl backdrop-saturate-[1.8] ${mobileOpen ? "bg-background" : "bg-background/75"} ${scrolled || mobileOpen ? "border-line" : "border-transparent"}`
+          : // A backdrop-filter would make the header the containing block of the fixed menu below and
+            // squeeze it into the bar, so the open menu gets an opaque background instead of glass.
+            mobileOpen
+            ? "bg-background border-line"
+            : `backdrop-blur-xl backdrop-saturate-[1.8] bg-background/75 ${scrolled ? "border-line" : "border-transparent"}`
       }`}
     >
       <nav className="m-wrap flex items-center h-20 relative">
