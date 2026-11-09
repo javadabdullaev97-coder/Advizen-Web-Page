@@ -25,21 +25,24 @@ const nextConfig: NextConfig = {
     return [
       // One canonical origin: the bare domain and plain http go to https://www. Host values are
       // anchored because OpenNext tests them unanchored ("advizenco.com" would also match www).
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "^advizenco\\.com$" }],
-        destination: `${SITE_URL}/:path*`,
-        statusCode: 301,
-      },
-      {
-        source: "/:path*",
-        has: [
-          { type: "host", value: "^www\\.advizenco\\.com$" },
-          { type: "header", key: "x-forwarded-proto", value: "^http$" },
-        ],
-        destination: `${SITE_URL}/:path*`,
-        statusCode: 301,
-      },
+      // The root has its own rule: OpenNext leaves an empty :path* in the destination as is.
+      ...["/", "/:path+"].flatMap((source) => [
+        {
+          source,
+          has: [{ type: "host" as const, value: "^advizenco\\.com$" }],
+          destination: `${SITE_URL}${source}`,
+          statusCode: 301 as const,
+        },
+        {
+          source,
+          has: [
+            { type: "host" as const, value: "^www\\.advizenco\\.com$" },
+            { type: "header" as const, key: "x-forwarded-proto", value: "^http$" },
+          ],
+          destination: `${SITE_URL}${source}`,
+          statusCode: 301 as const,
+        },
+      ]),
       // English has no prefix, so /en would otherwise serve a second copy of the English pages.
       { source: "/en", destination: "/", statusCode: 301 },
       { source: "/en/:path*", destination: "/:path*", statusCode: 301 },
