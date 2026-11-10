@@ -11,6 +11,7 @@ import { fullDate, headingIds, listItems, monthYear, practiceFor, relatedArticle
 import { COVER_SHADE_SM, COVER_TITLE_SM } from "@/lib/cover-overlay";
 import { articleUrl } from "@/lib/seo";
 import ArticleShare from "./ArticleShare";
+import { ArticleBlock } from "./ArticleBlocks";
 
 const TELEGRAM = "https://t.me/advizen";
 const BODY_ID = "article-body";
@@ -145,7 +146,7 @@ function Prose({ content, toc }: { content: ArticleContentBlock[]; toc: TocItem[
           case "divider":
             return <hr key={i} className="my-14 border-0 border-t border-line" />;
           default:
-            return null;
+            return <ArticleBlock key={i} block={block} afterHeading={afterHeading} />;
         }
       })}
     </div>

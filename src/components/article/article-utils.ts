@@ -14,12 +14,12 @@ function slugify(text: string): string {
 export function headingIds(content: ArticleContentBlock[]): TocItem[] {
   const seen = new Set<string>();
   return content
-    .filter((b) => b.type === "h2" && b.text)
-    .map((b, i) => {
-      let id = slugify(b.text!) || `section-${i}`;
+    .flatMap((b) => (b.type === "h2" && b.text ? [b.text] : []))
+    .map((text, i) => {
+      let id = slugify(text) || `section-${i}`;
       while (seen.has(id)) id = `${id}-${i}`;
       seen.add(id);
-      return { id, text: b.text! };
+      return { id, text };
     });
 }
 

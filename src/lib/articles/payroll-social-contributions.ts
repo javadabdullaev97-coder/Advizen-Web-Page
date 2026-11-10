@@ -7,10 +7,22 @@ const article: Record<string, LocalizedArticle> = {
     readTime: "8 min read",
     inShort: {
       figures: [
-        { value: "12%", label: "Flat personal income tax on all employment income, withheld by the employer" },
-        { value: "12%", label: "Standard unified social payment on gross payroll, paid by the employer on top of salary" },
-        { value: "0.1%", label: "Employee contribution to the individual accumulative pension account, included in the PIT calculation" },
-        { value: "10th", label: "Day of the following month by which the monthly PIT withholding report is due" },
+        {
+          value: "12%",
+          label: "Flat personal income tax on all employment income, withheld by the employer",
+        },
+        {
+          value: "12%",
+          label: "Standard unified social payment on gross payroll, paid by the employer on top of salary",
+        },
+        {
+          value: "0.1%",
+          label: "Employee contribution to the individual accumulative pension account, included in the PIT calculation",
+        },
+        {
+          value: "10th",
+          label: "Day of the following month by which the monthly PIT withholding report is due",
+        },
       ],
       points: [
         "Since January 2023, Uzbekistan applies a flat 12% personal income tax to all employment income, and the same rate applies to non-resident employees.",
@@ -21,16 +33,16 @@ const article: Record<string, LocalizedArticle> = {
     },
     content: [
       {
-        type: "p" as const,
+        type: "p",
         text: "Uzbekistan's payroll framework has undergone significant reform in recent years, with the government simplifying rates, consolidating social contributions, and introducing digital reporting obligations. For foreign companies employing staff locally — whether through a subsidiary, representative office, or Employer of Record arrangement — understanding these obligations is essential to compliant operations.",
       },
-      { type: "h2" as const, text: "Personal income tax" },
+      { type: "h2", text: "Personal income tax" },
       {
-        type: "p" as const,
+        type: "p",
         text: "Since January 2023, Uzbekistan applies a flat personal income tax (PIT) rate of 12% on all employment income. The tax is withheld at source by the employer and remitted monthly to the State Tax Committee.",
       },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "Flat rate: 12% on gross salary",
           "Withholding: employer obligation, remitted monthly",
@@ -38,13 +50,13 @@ const article: Record<string, LocalizedArticle> = {
           "Dividend income: taxed separately at 5%",
         ],
       },
-      { type: "h2" as const, text: "Unified social payment (USP)" },
+      { type: "h2", text: "Unified social payment (USP)" },
       {
-        type: "blockquote" as const,
+        type: "blockquote",
         text: "The USP is an employer-borne cost, not deducted from the employee's salary. It is calculated on top of gross compensation.",
       },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "Standard rate: 12% of gross payroll (employer cost)",
           "Budget organisations and certain SMEs: reduced rates may apply",
@@ -52,40 +64,75 @@ const article: Record<string, LocalizedArticle> = {
           "Late payment attracts penalties at the Central Bank refinancing rate",
         ],
       },
-      { type: "h2" as const, text: "Individual accumulative pension contribution" },
+      { type: "h2", text: "Individual accumulative pension contribution" },
       {
-        type: "p" as const,
+        type: "p",
         text: "Employees contribute 0.1% of their gross salary to an individual accumulative pension account. This deduction is included within the PIT calculation and withheld by the employer as part of the overall income tax remittance.",
       },
-      { type: "h2" as const, text: "Reporting obligations" },
+      { type: "h2", text: "Reporting obligations" },
       {
-        type: "ul" as const,
+        type: "deadlines",
         items: [
-          "Monthly PIT withholding report — due by the 10th of the following month",
-          "Monthly USP declaration — submitted alongside PIT report",
-          "Annual payroll reconciliation — due by 1 February",
-          "Employee income certificates — issued upon request or termination",
+          {
+            when: "10th",
+            whenNote: "of the next month",
+            what: "PIT withholding report and USP declaration",
+            freq: "Monthly",
+          },
+          { when: "1 Feb", whenNote: "each year", what: "Annual payroll reconciliation", freq: "Annual" },
+          {
+            when: "On request",
+            what: "Employee income certificates, also on termination",
+            freq: "As needed",
+          },
         ],
       },
-      { type: "h2" as const, text: "Common compliance risks" },
+      { type: "h2", text: "Common compliance risks" },
       {
-        type: "ul" as const,
+        type: "risks",
         items: [
-          "Contractor misclassification — individuals performing employee functions must be on payroll",
-          "In-kind benefits (housing, transport, meals) are taxable at market value",
-          "Bonuses and one-time payments are subject to PIT at the standard 12% rate",
-          "Failure to file monthly reports attracts administrative fines",
+          "Contractor misclassification. Individuals performing employee functions must be on payroll.",
+          "In-kind benefits. Housing, transport and meals are taxable at market value.",
+          "Bonuses and one-time payments. Subject to PIT at the standard 12% rate.",
+          "Missed monthly reports. Failure to file attracts administrative fines.",
         ],
       },
-      { type: "divider" as const },
-      { type: "h2" as const, text: "Summary of key rates (2024)" },
+      { type: "divider" },
+      { type: "h2", text: "Summary of key rates (2024)" },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "Personal Income Tax: 12% (flat, withheld by employer)",
           "Unified Social Payment: 12% (employer cost, on gross payroll)",
           "Accumulative Pension: 0.1% (included in PIT)",
           "Employer's own cost: 12% USP on top of gross salary; the 12% PIT is withheld from the employee's salary",
+        ],
+      },
+      { type: "p", text: "For a gross monthly salary of 10,000,000 UZS:" },
+      {
+        type: "example",
+        title: "Worked example",
+        meta: "Gross salary 10,000,000 UZS",
+        split: [
+          { label: "Employee receives", value: 8.8, tone: "light" },
+          { label: "PIT withheld", value: 1.2, tone: "red" },
+          { label: "USP paid by the employer", value: 1.2, tone: "dark" },
+        ],
+        rows: [
+          { label: "Gross salary", value: "10,000,000" },
+          {
+            label: "Personal income tax, 12%",
+            note: "Withheld from the salary. Includes the 0.1% pension contribution, 10,000",
+            value: "− 1,200,000",
+            kind: "minus",
+          },
+          { label: "Employee receives", value: "8,800,000" },
+          {
+            label: "Unified social payment, 12%",
+            note: "Employer cost on top of gross salary",
+            value: "+ 1,200,000",
+          },
+          { label: "Total cost to the employer", value: "11,200,000", kind: "sum" },
         ],
       },
     ],
@@ -115,9 +162,18 @@ const article: Record<string, LocalizedArticle> = {
     inShort: {
       figures: [
         { value: "12%", label: "Единая ставка НДФЛ на все трудовые доходы, удерживается работодателем" },
-        { value: "12%", label: "Стандартная ставка единого социального платежа от фонда оплаты труда, расход работодателя сверх зарплаты" },
-        { value: "0,1%", label: "Взнос работника на индивидуальный накопительный пенсионный счёт, включается в расчёт НДФЛ" },
-        { value: "10-е число", label: "Число следующего месяца — срок ежемесячного отчёта об удержании НДФЛ" },
+        {
+          value: "12%",
+          label: "Стандартная ставка единого социального платежа от фонда оплаты труда, расход работодателя сверх зарплаты",
+        },
+        {
+          value: "0,1%",
+          label: "Взнос работника на индивидуальный накопительный пенсионный счёт, включается в расчёт НДФЛ",
+        },
+        {
+          value: "10-е число",
+          label: "Число следующего месяца — срок ежемесячного отчёта об удержании НДФЛ",
+        },
       ],
       points: [
         "С января 2023 года в Узбекистане действует единая ставка НДФЛ 12% на все трудовые доходы; та же ставка применяется к сотрудникам-нерезидентам.",
@@ -128,16 +184,16 @@ const article: Record<string, LocalizedArticle> = {
     },
     content: [
       {
-        type: "p" as const,
+        type: "p",
         text: "Система расчёта заработной платы в Узбекистане претерпела существенные реформы в последние годы: правительство упростило ставки, консолидировало социальные взносы и ввело цифровые обязательства по отчётности. Для иностранных компаний, нанимающих местных сотрудников — будь то через дочернюю структуру, представительство или модель Employer of Record — понимание этих обязательств является обязательным условием ведения законной деятельности.",
       },
-      { type: "h2" as const, text: "Налог на доходы физических лиц" },
+      { type: "h2", text: "Налог на доходы физических лиц" },
       {
-        type: "p" as const,
+        type: "p",
         text: "С января 2023 года в Узбекистане применяется единая ставка налога на доходы физических лиц (НДФЛ) в размере 12% на все доходы от трудовой деятельности. Налог удерживается у источника выплаты работодателем и ежемесячно перечисляется в Государственный налоговый комитет.",
       },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "Единая ставка: 12% от валовой заработной платы",
           "Удержание: обязанность работодателя, перечисляется ежемесячно",
@@ -145,13 +201,13 @@ const article: Record<string, LocalizedArticle> = {
           "Дивидендный доход: облагается отдельно по ставке 5%",
         ],
       },
-      { type: "h2" as const, text: "Единый социальный платёж (ЕСП)" },
+      { type: "h2", text: "Единый социальный платёж (ЕСП)" },
       {
-        type: "blockquote" as const,
+        type: "blockquote",
         text: "ЕСП является расходом работодателя и не вычитается из заработной платы сотрудника. Он рассчитывается сверх совокупного вознаграждения.",
       },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "Стандартная ставка: 12% от фонда оплаты труда (расход работодателя)",
           "Бюджетные организации и отдельные МСП: возможно применение пониженных ставок",
@@ -159,40 +215,80 @@ const article: Record<string, LocalizedArticle> = {
           "Просрочка оплаты влечёт начисление пеней по ставке рефинансирования Центрального банка",
         ],
       },
-      { type: "h2" as const, text: "Индивидуальный накопительный пенсионный взнос" },
+      { type: "h2", text: "Индивидуальный накопительный пенсионный взнос" },
       {
-        type: "p" as const,
+        type: "p",
         text: "Работники вносят 0,1% от валовой заработной платы на индивидуальный накопительный пенсионный счёт. Этот взнос включается в расчёт НДФЛ и удерживается работодателем в составе общего перечисления подоходного налога.",
       },
-      { type: "h2" as const, text: "Обязательства по отчётности" },
+      { type: "h2", text: "Обязательства по отчётности" },
       {
-        type: "ul" as const,
+        type: "deadlines",
         items: [
-          "Ежемесячный отчёт об удержании НДФЛ — представляется до 10-го числа следующего месяца",
-          "Ежемесячная декларация по ЕСП — представляется одновременно с отчётом по НДФЛ",
-          "Годовая сверка по заработной плате — представляется до 1 февраля",
-          "Справки о доходах сотрудников — выдаются по запросу или при увольнении",
+          {
+            when: "10-е",
+            whenNote: "число следующего месяца",
+            what: "Отчёт об удержании НДФЛ и декларация по ЕСП",
+            freq: "Ежемесячно",
+          },
+          {
+            when: "1 февраля",
+            whenNote: "каждого года",
+            what: "Годовая сверка по заработной плате",
+            freq: "Ежегодно",
+          },
+          {
+            when: "По запросу",
+            what: "Справки о доходах сотрудников, а также при увольнении",
+            freq: "По необходимости",
+          },
         ],
       },
-      { type: "h2" as const, text: "Распространённые риски несоблюдения требований" },
+      { type: "h2", text: "Распространённые риски несоблюдения требований" },
       {
-        type: "ul" as const,
+        type: "risks",
         items: [
-          "Неправильная классификация подрядчиков — физические лица, выполняющие функции сотрудников, должны быть включены в штат",
-          "Неденежные льготы (жильё, транспорт, питание) облагаются налогом по рыночной стоимости",
-          "Премии и единовременные выплаты облагаются НДФЛ по стандартной ставке 12%",
-          "Непредставление ежемесячных отчётов влечёт административные штрафы",
+          "Неправильная классификация подрядчиков. Физические лица, выполняющие функции сотрудников, должны быть включены в штат.",
+          "Неденежные льготы. Жильё, транспорт и питание облагаются налогом по рыночной стоимости.",
+          "Премии и единовременные выплаты. Облагаются НДФЛ по стандартной ставке 12%.",
+          "Пропущенные ежемесячные отчёты. Непредставление отчётов влечёт административные штрафы.",
         ],
       },
-      { type: "divider" as const },
-      { type: "h2" as const, text: "Ключевые ставки (2024)" },
+      { type: "divider" },
+      { type: "h2", text: "Ключевые ставки (2024)" },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "НДФЛ: 12% (единая ставка, удерживается работодателем)",
           "Единый социальный платёж: 12% (расход работодателя, от фонда оплаты труда)",
           "Накопительный пенсионный взнос: 0,1% (включён в НДФЛ)",
           "Собственный расход работодателя: 12% ЕСП сверх валовой заработной платы; НДФЛ 12% удерживается из заработной платы сотрудника",
+        ],
+      },
+      { type: "p", text: "Для начисленной месячной зарплаты 10 000 000 сумов:" },
+      {
+        type: "example",
+        title: "Расчёт на примере",
+        meta: "Начисленная зарплата 10 000 000 сумов",
+        split: [
+          { label: "Сотрудник получает", value: 8.8, tone: "light" },
+          { label: "Удержанный НДФЛ", value: 1.2, tone: "red" },
+          { label: "ЕСП за счёт работодателя", value: 1.2, tone: "dark" },
+        ],
+        rows: [
+          { label: "Начисленная зарплата", value: "10 000 000" },
+          {
+            label: "НДФЛ, 12%",
+            note: "Удерживается из зарплаты. Включает пенсионный взнос 0,1%, то есть 10 000",
+            value: "− 1 200 000",
+            kind: "minus",
+          },
+          { label: "Сотрудник получает", value: "8 800 000" },
+          {
+            label: "Единый социальный платёж, 12%",
+            note: "Расход работодателя сверх начисленной зарплаты",
+            value: "+ 1 200 000",
+          },
+          { label: "Всего расходы работодателя", value: "11 200 000", kind: "sum" },
         ],
       },
     ],
@@ -221,10 +317,22 @@ const article: Record<string, LocalizedArticle> = {
     readTime: "8 daqiqa oʻqish",
     inShort: {
       figures: [
-        { value: "12%", label: "Barcha mehnat daromadlariga yagona JShDS stavkasi, ish beruvchi ushlab qoladi" },
-        { value: "12%", label: "Yalpi ish haqi fondidan yagona ijtimoiy toʻlovning standart stavkasi, ish haqiga qoʻshimcha ish beruvchi xarajati" },
-        { value: "0,1%", label: "Xodimning individual jamgʻarma pensiya hisobiga badali, JShDS hisobiga kiritiladi" },
-        { value: "10-sana", label: "Keyingi oyning shu sanasi — JShDS ushlab qolish boʻyicha oylik hisobot muddati" },
+        {
+          value: "12%",
+          label: "Barcha mehnat daromadlariga yagona JShDS stavkasi, ish beruvchi ushlab qoladi",
+        },
+        {
+          value: "12%",
+          label: "Yalpi ish haqi fondidan yagona ijtimoiy toʻlovning standart stavkasi, ish haqiga qoʻshimcha ish beruvchi xarajati",
+        },
+        {
+          value: "0,1%",
+          label: "Xodimning individual jamgʻarma pensiya hisobiga badali, JShDS hisobiga kiritiladi",
+        },
+        {
+          value: "10-sana",
+          label: "Keyingi oyning shu sanasi — JShDS ushlab qolish boʻyicha oylik hisobot muddati",
+        },
       ],
       points: [
         "2023-yil yanvardan Oʻzbekiston barcha mehnat daromadlariga 12% yagona JShDS stavkasini qoʻllaydi; norezident xodimlarga ham shu stavka qoʻllaniladi.",
@@ -235,16 +343,16 @@ const article: Record<string, LocalizedArticle> = {
     },
     content: [
       {
-        type: "p" as const,
+        type: "p",
         text: "Oʻzbekistonda ish haqi hisoblash tizimi soʻnggi yillarda muhim islohotlarga uchradi: hukumat stavkalarni soddalashtirib, ijtimoiy toʻlovlarni birlashtirdi va raqamli hisobot majburiyatlarini joriy etdi. Mahalliy xodimlarni yollovchi xorijiy kompaniyalar uchun — shoʻba korxona, vakolatxona yoki Employer of Record modeli orqali boʻlishidan qatʼi nazar — bu majburiyatlarni tushunish qonuniy faoliyat yuritishning zaruriy shartidir.",
       },
-      { type: "h2" as const, text: "Jismoniy shaxslardan olinadigan daromad soligʻi" },
+      { type: "h2", text: "Jismoniy shaxslardan olinadigan daromad soligʻi" },
       {
-        type: "p" as const,
+        type: "p",
         text: "2023-yil yanvardan Oʻzbekiston barcha mehnat daromadlariga 12% miqdorida yagona jismoniy shaxslardan olinadigan daromad soligʻi (JShDS) stavkasini qoʻllaydi. Soliq ish beruvchi tomonidan manba boʻyicha ushlab qolinadi va har oy Davlat soliq qoʻmitasiga oʻtkaziladi.",
       },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "Yagona stavka: yalpi ish haqining 12%",
           "Ushlab qolish: ish beruvchining majburiyati, har oy oʻtkaziladi",
@@ -252,13 +360,13 @@ const article: Record<string, LocalizedArticle> = {
           "Dividend daromadi: 5% stavkada alohida soliqqa tortiladi",
         ],
       },
-      { type: "h2" as const, text: "Yagona ijtimoiy toʻlov (YIT)" },
+      { type: "h2", text: "Yagona ijtimoiy toʻlov (YIT)" },
       {
-        type: "blockquote" as const,
+        type: "blockquote",
         text: "YIT ish beruvchining xarajati boʻlib, xodimning ish haqidan ushlab qolinmaydi. U yalpi ish haqiga qoʻshimcha ravishda hisoblanadi.",
       },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "Standart stavka: yalpi ish haqi fondining 12% (ish beruvchi xarajati)",
           "Byudjet tashkilotlari va baʼzi kichik biznes subyektlari: pasaytirilgan stavkalar qoʻllanilishi mumkin",
@@ -266,40 +374,80 @@ const article: Record<string, LocalizedArticle> = {
           "Kech toʻlash Markaziy bank qayta moliyalash stavkasida penya hisoblashga olib keladi",
         ],
       },
-      { type: "h2" as const, text: "Individual jamgʻarma pensiya badali" },
+      { type: "h2", text: "Individual jamgʻarma pensiya badali" },
       {
-        type: "p" as const,
+        type: "p",
         text: "Xodimlar oʻzlarining yalpi ish haqining 0,1% ini individual jamgʻarma pensiya hisobiga oʻtkazadilar. Bu badal JShDS tarkibiga kiritiladi va ish beruvchi tomonidan umumiy daromad soligʻi oʻtkazmasi doirasida ushlab qolinadi.",
       },
-      { type: "h2" as const, text: "Hisobot majburiyatlari" },
+      { type: "h2", text: "Hisobot majburiyatlari" },
       {
-        type: "ul" as const,
+        type: "deadlines",
         items: [
-          "JShDS ushlab qolish boʻyicha oylik hisobot — keyingi oyning 10-sanasigacha topshiriladi",
-          "YIT boʻyicha oylik deklaratsiya — JShDS hisoboti bilan birga topshiriladi",
-          "Ish haqi boʻyicha yillik solishtirma — 1-fevralga qadar topshiriladi",
-          "Xodimlar daromadi haqidagi maʼlumotnomalar — soʻrov yoki ishdan boʻshatish boʻyicha beriladi",
+          {
+            when: "10-sana",
+            whenNote: "keyingi oyning",
+            what: "JShDS ushlab qolish boʻyicha hisobot va YIT boʻyicha deklaratsiya",
+            freq: "Har oy",
+          },
+          {
+            when: "1-fevral",
+            whenNote: "har yili",
+            what: "Ish haqi boʻyicha yillik solishtirma",
+            freq: "Har yili",
+          },
+          {
+            when: "Soʻrov boʻyicha",
+            what: "Xodimlar daromadi haqidagi maʼlumotnomalar, ishdan boʻshatishda ham",
+            freq: "Zarur boʻlganda",
+          },
         ],
       },
-      { type: "h2" as const, text: "Keng tarqalgan muvofiqlik xatarlari" },
+      { type: "h2", text: "Keng tarqalgan muvofiqlik xatarlari" },
       {
-        type: "ul" as const,
+        type: "risks",
         items: [
-          "Pudratchilarni notoʻgʻri tasniflash — xodim vazifalarini bajaradigan jismoniy shaxslar shtatga kiritilishi shart",
-          "Natura shaklida berilgan imtiyozlar (uy-joy, transport, ovqat) bozor qiymati boʻyicha soliqqa tortiladi",
-          "Mukofotlar va bir martalik toʻlovlar standart 12% stavkada JShDSga tortiladi",
-          "Oylik hisobotlarni topshirmaslik maʼmuriy jarimaga olib keladi",
+          "Pudratchilarni notoʻgʻri tasniflash. Xodim vazifalarini bajaradigan jismoniy shaxslar shtatga kiritilishi shart.",
+          "Natura shaklidagi imtiyozlar. Uy-joy, transport va ovqat bozor qiymati boʻyicha soliqqa tortiladi.",
+          "Mukofotlar va bir martalik toʻlovlar. Standart 12% stavkada JShDSga tortiladi.",
+          "Topshirilmagan oylik hisobotlar. Hisobotlarni topshirmaslik maʼmuriy jarimaga olib keladi.",
         ],
       },
-      { type: "divider" as const },
-      { type: "h2" as const, text: "Asosiy stavkalar xulosasi (2024)" },
+      { type: "divider" },
+      { type: "h2", text: "Asosiy stavkalar xulosasi (2024)" },
       {
-        type: "ul" as const,
+        type: "ul",
         items: [
           "Jismoniy shaxslardan olinadigan daromad soligʻi: 12% (yagona stavka, ish beruvchi ushlab qoladi)",
           "Yagona ijtimoiy toʻlov: 12% (ish beruvchi xarajati, yalpi ish haqi fondidan)",
           "Jamgʻarma pensiya badali: 0,1% (JShDSga kiritilgan)",
           "Ish beruvchining oʻz xarajati: yalpi ish haqiga qoʻshimcha 12% YIT; 12% JShDS xodimning ish haqidan ushlab qolinadi",
+        ],
+      },
+      { type: "p", text: "Oylik yalpi ish haqi 10 000 000 soʻm boʻlganda:" },
+      {
+        type: "example",
+        title: "Hisob-kitob misoli",
+        meta: "Yalpi ish haqi 10 000 000 soʻm",
+        split: [
+          { label: "Xodim oladi", value: 8.8, tone: "light" },
+          { label: "Ushlab qolingan JShDS", value: 1.2, tone: "red" },
+          { label: "Ish beruvchi toʻlaydigan YIT", value: 1.2, tone: "dark" },
+        ],
+        rows: [
+          { label: "Hisoblangan ish haqi", value: "10 000 000" },
+          {
+            label: "JShDS, 12%",
+            note: "Ish haqidan ushlab qolinadi. 0,1% pensiya badalini, yaʼni 10 000 soʻmni oʻz ichiga oladi",
+            value: "− 1 200 000",
+            kind: "minus",
+          },
+          { label: "Xodim oladi", value: "8 800 000" },
+          {
+            label: "Yagona ijtimoiy toʻlov, 12%",
+            note: "Yalpi ish haqidan tashqari ish beruvchi xarajati",
+            value: "+ 1 200 000",
+          },
+          { label: "Ish beruvchining jami xarajati", value: "11 200 000", kind: "sum" },
         ],
       },
     ],

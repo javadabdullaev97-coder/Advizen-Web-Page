@@ -12,11 +12,45 @@ export interface Publication {
   hasRead?: boolean;
 }
 
-export interface ArticleContentBlock {
-  type: "h2" | "h3" | "p" | "ul" | "blockquote" | "divider";
-  text?: string;
-  items?: string[];
-}
+/* Article body blocks. The first group is plain prose; the rest are structured blocks rendered by
+   components/article/ArticleBlocks.tsx. Every word shown comes from the block itself, so each locale
+   writes its own. */
+export type ArticleContentBlock =
+  | { type: "h2" | "h3" | "p" | "blockquote"; text: string }
+  | { type: "ul"; items: string[] }
+  | { type: "divider" }
+  /** Table. `bar` (0–1) draws a bar before the text of the row's last cell; `highlight` tints the row. */
+  | { type: "table"; head: string[]; rows: { cells: string[]; bar?: number; highlight?: boolean }[]; caption?: string }
+  /** Grid of ticked items, e.g. taxes a regime exempts from; `except` is one greyed item for what is not covered. */
+  | { type: "checks"; items: string[]; except?: string }
+  /** Two or three large figures inside a section. */
+  | { type: "figures"; items: { value: string; unit?: string; label: string }[] }
+  /** "What this means for you" box. */
+  | { type: "takeaway"; title: string; items: string[] }
+  /** Legal acts as cards; `href` links the card to the act's text. */
+  | { type: "sources"; items: { title: string; meta?: string; href?: string }[] }
+  /** Worked calculation. `split` draws a proportional bar with a legend above the rows. */
+  | {
+      type: "example";
+      title: string;
+      meta?: string;
+      split?: { label: string; value: number; tone: "light" | "red" | "dark" }[];
+      rows: { label: string; note?: string; value: string; kind?: "minus" | "sum" }[];
+    }
+  /** Reporting calendar. */
+  | { type: "deadlines"; items: { when: string; whenNote?: string; what: string; freq?: string }[] }
+  /** Common risks; an item written "Label. text" or "Label — text" shows the label in bold. */
+  | { type: "risks"; title?: string; items: string[] }
+  /** Numbered procedure. `due` is the step's time limit; `key` marks a milestone step. */
+  | {
+      type: "steps";
+      items: { title: string; due?: string; key?: boolean; text: string[] }[];
+      summary?: { label: string; value: string }[];
+    }
+  /** Order of priority, first to last. */
+  | { type: "priority"; items: { title: string; text?: string }[] }
+  /** Document checklist. */
+  | { type: "checklist"; title: string; meta?: string; items: { text: string; note?: string }[] };
 
 export interface ArticleFaqItem {
   question: string;
