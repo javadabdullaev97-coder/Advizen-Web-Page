@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import type { TocItem } from "./article-utils";
 
 const SPY_LINE = 130; // px from the top of the viewport, just under the nav
@@ -21,8 +21,8 @@ function jumpTo(e: MouseEvent<HTMLAnchorElement>, id: string, before?: () => voi
 
 const num = (i: number) => String(i + 1).padStart(2, "0");
 
-/** Desktop: sticky list beside the text that marks the section being read. */
-export function ArticleToc({ items, label }: { items: TocItem[]; label: string }) {
+/** Desktop: sticky list beside the text that marks the section being read, with `footer` below it. */
+export function ArticleToc({ items, label, footer }: { items: TocItem[]; label: string; footer?: ReactNode }) {
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
@@ -73,6 +73,7 @@ export function ArticleToc({ items, label }: { items: TocItem[]; label: string }
           );
         })}
       </ol>
+      {footer}
     </aside>
   );
 }

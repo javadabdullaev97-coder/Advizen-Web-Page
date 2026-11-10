@@ -30,6 +30,12 @@
         "text": "Our advisers can review how these rules apply to your business and what to do next.",
         "button": "Explore our expertise"
       }
+    },
+    "share": {
+      "label": "Share",
+      "on": "Share on {service}",
+      "copy": "Copy link",
+      "copied": "Link copied"
     }
   },
   "Publications": {

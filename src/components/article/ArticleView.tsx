@@ -9,6 +9,8 @@ import ArticleProgress from "./ArticleProgress";
 import { ArticleMobileToc, ArticleToc } from "./ArticleToc";
 import { fullDate, headingIds, listItems, monthYear, practiceFor, relatedArticles, type TocItem } from "./article-utils";
 import { COVER_SHADE_SM, COVER_TITLE_SM } from "@/lib/cover-overlay";
+import { articleUrl } from "@/lib/seo";
+import ArticleShare from "./ArticleShare";
 
 const TELEGRAM = "https://t.me/advizen";
 const BODY_ID = "article-body";
@@ -162,6 +164,22 @@ export default function ArticleView({ article }: { article: PublicationArticle }
   const toc = headingIds(article.content);
   const practice = practiceFor(article.category);
   const related = relatedArticles(article);
+  const shareUrl = articleUrl(article.slug, locale);
+  const share = {
+    url: shareUrl,
+    title,
+    labels: {
+      label: t("share.label"),
+      copy: t("share.copy"),
+      copied: t("share.copied"),
+      on: Object.fromEntries(
+        (["telegram:Telegram", "whatsapp:WhatsApp", "linkedin:LinkedIn"] as const).map((p) => {
+          const [key, name] = p.split(":");
+          return [key, t("share.on", { service: name })];
+        }),
+      ),
+    },
+  };
 
   const published = (): ReactNode =>
     article.date
@@ -242,7 +260,13 @@ export default function ArticleView({ article }: { article: PublicationArticle }
         </header>
 
         <div className="m-wrap pt-6 grid min-[1181px]:grid-cols-[minmax(220px,1fr)_minmax(0,720px)_minmax(0,1fr)] min-[1181px]:gap-x-12">
-          {toc.length > 0 && <ArticleToc items={toc} label={t("contents")} />}
+          {toc.length > 0 && (
+            <ArticleToc
+              items={toc}
+              label={t("contents")}
+              footer={<ArticleShare {...share} stacked className="mt-9" />}
+            />
+          )}
 
           <div className="min-w-0 w-full max-w-[720px] mx-auto min-[1181px]:col-start-2">
             {toc.length > 0 && <ArticleMobileToc items={toc} label={t("contents")} />}
@@ -250,19 +274,22 @@ export default function ArticleView({ article }: { article: PublicationArticle }
 
             <Prose content={article.content} toc={toc} />
 
-            {article.author && (
-              <div className="mt-[72px] pt-7 border-t border-line flex items-center gap-4">
-                <Avatar size="lg" />
-                <div>
-                  <b className="block text-[17px] font-semibold text-foreground-hi">{article.author}</b>
-                  <span className="text-[15px] text-muted">
-                    {tag}
-                    {article.date ? " · " : ""}
-                    {published()}
-                  </span>
+            <div className="mt-[72px] pt-7 border-t border-line flex flex-wrap items-center justify-between gap-x-8 gap-y-6">
+              {article.author && (
+                <div className="flex items-center gap-4">
+                  <Avatar size="lg" />
+                  <div>
+                    <b className="block text-[17px] font-semibold text-foreground-hi">{article.author}</b>
+                    <span className="text-[15px] text-muted">
+                      {tag}
+                      {article.date ? " · " : ""}
+                      {published()}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+              <ArticleShare {...share} />
+            </div>
 
             {article.faq && article.faq.length > 0 && (
               <section aria-labelledby="faq" className="mt-24">

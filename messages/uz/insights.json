@@ -30,6 +30,12 @@
         "text": "Maslahatchilarimiz ushbu qoidalar biznesingizga qanday taʼsir qilishini baholab, keyingi qadamlarni taklif qiladi.",
         "button": "Barcha yoʻnalishlar"
       }
+    },
+    "share": {
+      "label": "Ulashish",
+      "on": "{service} orqali ulashish",
+      "copy": "Havolani nusxalash",
+      "copied": "Havola nusxalandi"
     }
   },
   "Publications": {

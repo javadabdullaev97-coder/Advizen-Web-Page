@@ -78,7 +78,7 @@ function homeUrl(locale: Locale) {
   return locale === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${locale}`;
 }
 
-function articleUrl(slug: string, locale: string) {
+export function articleUrl(slug: string, locale: string) {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
   return `${SITE_URL}${prefix}/insights/${slug}`;
 }
