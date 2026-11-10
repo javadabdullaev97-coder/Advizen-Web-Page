@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { COVER_SHADE_SM, COVER_TITLE_SM } from "@/lib/cover-overlay";
 
 export type InsightItem = {
   slug: string;
@@ -158,7 +159,7 @@ export default function InsightsBrowser({
             <li key={a.slug} className={on ? "home-fade" : "hidden"}>
               <Link
                 href={`/insights/${a.slug}`}
-                className={`group block max-sm:grid max-sm:grid-cols-[120px_minmax(0,1fr)] max-sm:gap-4 max-sm:items-start max-sm:pb-4 max-sm:border-b max-sm:border-line ${i === 0 ? "" : "max-sm:pt-4"}`}
+                className={`group block sm:relative max-sm:grid max-sm:grid-cols-[120px_minmax(0,1fr)] max-sm:gap-4 max-sm:items-start max-sm:pb-4 max-sm:border-b max-sm:border-line ${i === 0 ? "" : "max-sm:pt-4"}`}
               >
                 <div className="relative aspect-[16/10] rounded-[var(--radius-inner)] max-sm:rounded-xl overflow-hidden bg-surface">
                   {a.image && (
@@ -170,12 +171,13 @@ export default function InsightsBrowser({
                       className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]"
                     />
                   )}
+                  <div aria-hidden="true" className={COVER_SHADE_SM} />
                 </div>
                 <div className="min-w-0">
                   <span className="block mt-[18px] text-[14px] text-muted max-sm:mt-0 max-sm:text-[13px]">
                     {a.tag} · {a.date}
                   </span>
-                  <h3 className="mt-2 text-[20px] font-semibold leading-[1.25] tracking-[-0.015em] text-foreground transition-colors duration-200 group-hover:text-foreground-hi max-sm:mt-1 max-sm:text-[17px] max-sm:leading-[1.3]">
+                  <h3 className={`font-semibold tracking-[-0.015em] max-sm:mt-1 max-sm:text-[17px] max-sm:leading-[1.3] max-sm:text-foreground max-sm:transition-colors max-sm:duration-200 max-sm:group-hover:text-foreground-hi ${COVER_TITLE_SM}`}>
                     {a.title}
                   </h3>
                 </div>

@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { allEngagements } from "@/lib/industries";
 import { publications, sortedPublications } from "@/lib/publications";
 import { SectionHead } from "@/components/home/SectionHead";
+import { COVER_SHADE, COVER_TITLE } from "@/lib/cover-overlay";
 
 const TELEGRAM = "https://t.me/advizen";
 const WHATSAPP = "https://wa.me/message/EKU3HEOTSK43O1";
@@ -188,7 +189,7 @@ export function HomeInsights() {
       <ul className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {recent.map((p, i) => (
           <li key={p.slug} className={i === 2 ? "sm:max-lg:hidden" : ""}>
-            <Link href={`/insights/${p.slug}`} className="group block">
+            <Link href={`/insights/${p.slug}`} className="group relative block">
               <div className="relative aspect-[16/10] rounded-[var(--radius-inner)] overflow-hidden bg-surface">
                 {p.image && (
                   <Image
@@ -199,12 +200,13 @@ export function HomeInsights() {
                     className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]"
                   />
                 )}
+                <div aria-hidden="true" className={COVER_SHADE} />
               </div>
               <p className="mt-[18px] text-[14px] text-muted">
                 {tPub(`tags.${p.tag}`)}
                 {p.date ? ` · ${fmtDate(p.date)}` : ""}
               </p>
-              <h3 className="mt-2 text-[20px] font-semibold leading-[1.25] tracking-[-0.015em] text-foreground transition-colors duration-200 group-hover:text-foreground-hi">
+              <h3 className={`font-semibold tracking-[-0.015em] ${COVER_TITLE}`}>
                 {tPub(`items.${p.slug}.title`)}
               </h3>
             </Link>
