@@ -140,19 +140,26 @@
       "lede": "Soliq, huquq, buxgalteriya va HR boʻyicha maslahatchilarimiz yozgan sharhlar va amaliy qoʻllanmalar. Bepul oʻqish mumkin."
     },
     "guide": {
-      "meta": "Asosiy qoʻllanma · 2026 nashri",
+      "meta": "Asosiy qoʻllanma · 2026 nashri · PDF ingliz tilida, 58 sahifa",
       "title": "Doing Business in Uzbekistan",
-      "text": "Bozorga kirish, tartibga solish va kundalik faoliyat: mamlakatda biznes ochayotgan xorijiy investorlar va kompaniyalar uchun bitta qoʻllanmada.",
+      "text": "Oʻzbekistondagi xorijiy kompaniyalar uchun soliq, huquq, buxgalteriya hisobi va mehnat munosabatlari: oʻn bir bob, ikki tomonlama soliqqa tortishdan qochish shartnomalari stavkalari va soliq taqvimi. 2026-yil noyabr holatiga.",
       "chapters": [
-        "Bozor va iqtisodiyot sharhi",
-        "Xorijiy investitsiyalarning huquqiy asoslari",
-        "Soliq tizimi va imtiyozlar",
-        "Mehnat huquqi va ishga yollash",
-        "Bank, moliya va valyuta nazorati",
-        "Kompaniyani roʻyxatdan oʻtkazish amaliyoti"
+        "Oʻzbekiston qisqacha",
+        "Iqtisodiyot va bozor",
+        "Kirish, vizalar va yashash",
+        "Biznesni ochish",
+        "Maxsus iqtisodiy rejimlar",
+        "Soliqlar",
+        "Buxgalteriya hisobi va audit",
+        "Mehnat munosabatlari",
+        "Bojxona va savdo",
+        "Bank, valyuta va kapital bozori",
+        "Huquqiy asoslar",
+        "Soliq shartnomalari stavkalari va soliq taqvimi"
       ],
-      "cta": "Qoʻllanmani soʻrash",
-      "coverAlt": "Doing Business in Uzbekistan qoʻllanmasining muqovasi, 2026 nashri"
+      "cta": "Qoʻllanmani ochish",
+      "coverAlt": "Doing Business in Uzbekistan qoʻllanmasining muqovasi, 2026 nashri",
+      "download": "PDF yuklab olish, 7 MB"
     },
     "latest": {
       "title": "Soʻnggi nashr",

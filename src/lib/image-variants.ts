@@ -59,7 +59,7 @@ export const IMAGE_VERSIONS: Record<string, string> = {
   "/Articles Image/Accounting Policy for Tax Purposes.webp": "d85aa863",
   "/Articles Image/Creative Industry Park.webp": "5174da4a",
   "/Articles Image/Crypto-Asset Service Providers.webp": "6c26a67e",
-  "/Articles Image/DBU_cover.webp": "ab4201ee",
+  "/Articles Image/DBU_cover.webp": "06f106a7",
   "/Articles Image/Employer of Record.webp": "c22578b3",
   "/Articles Image/Escrow Accounts.webp": "aec2a815",
   "/Articles Image/Franchising.webp": "14d4a954",

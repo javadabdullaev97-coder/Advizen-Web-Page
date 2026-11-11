@@ -140,19 +140,26 @@
       "lede": "Briefings and practical guides written by our tax, legal, accounting and HR advisers. Free to read."
     },
     "guide": {
-      "meta": "Flagship guide · 2026 edition",
+      "meta": "Flagship guide · 2026 edition · PDF, 58 pages",
       "title": "Doing Business in Uzbekistan",
-      "text": "Market entry, regulation and day-to-day operations in one guide for foreign investors and companies setting up in the country.",
+      "text": "Tax, law, accounting and employment for foreign companies in Uzbekistan: eleven chapters, treaty withholding rates and a tax calendar, updated to November 2026.",
       "chapters": [
-        "Market overview and economy",
-        "Legal framework for foreign investment",
-        "Tax system and incentives",
-        "Labour law and employment",
-        "Banking, finance and currency controls",
-        "Company registration in practice"
+        "Uzbekistan at a glance",
+        "Economy and market",
+        "Entry, visas and residence",
+        "Setting up a business",
+        "Special economic regimes",
+        "Taxation",
+        "Accounting and audit",
+        "Employment",
+        "Customs and trade",
+        "Banking, currency and capital markets",
+        "Legal essentials",
+        "Treaty rates and tax calendar"
       ],
-      "cta": "Request the guide",
-      "coverAlt": "Cover of Doing Business in Uzbekistan, 2026 edition"
+      "cta": "Open the guide",
+      "coverAlt": "Cover of Doing Business in Uzbekistan, 2026 edition",
+      "download": "Download PDF, 7 MB"
     },
     "latest": {
       "title": "Latest",

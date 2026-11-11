@@ -25,3 +25,7 @@
   Cache-Control: public, max-age=2592000
 /Logo.webp
   Cache-Control: public, max-age=2592000
+
+# The guide PDF keeps its name between corrections, so browsers check for a new copy daily.
+/guides/*
+  Cache-Control: public, max-age=86400

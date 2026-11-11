@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { allEngagements } from "@/lib/industries";
 import { publications, sortedPublications } from "@/lib/publications";
+import { GUIDE_PDF } from "@/lib/guide";
 import { SectionHead } from "@/components/home/SectionHead";
 import { COVER_SHADE, COVER_TITLE } from "@/lib/cover-overlay";
 
@@ -175,14 +176,15 @@ export function HomeInsights() {
           <p className="text-[14px] text-muted">{t("guideMeta")}</p>
           <h3 className="mt-3 text-[30px] lg:text-[clamp(30px,3vw,44px)] font-semibold leading-[1.05] tracking-[-0.035em] text-foreground-hi">{t("guideTitle")}</h3>
           <p className="mt-3.5 text-[17px] leading-[1.55] text-foreground-2 max-w-[30em]">{t("guideText")}</p>
-          <Link href="/contact" className="m-btn m-btn-p mt-7 max-sm:w-full">{t("guideCta")}</Link>
+          <a href={GUIDE_PDF} target="_blank" rel="noopener" className="m-btn m-btn-p mt-7 max-sm:w-full">{t("guideCta")}</a>
         </div>
         <Image
           src="/Articles Image/DBU_cover.webp"
           alt=""
-          width={180}
-          height={217}
-          className="home-cover w-[140px] sm:w-[180px] h-auto rounded-xl shadow-[0_24px_48px_rgba(0,0,0,.4)] sm:justify-self-center max-sm:order-first"
+          width={1000}
+          height={1000}
+          sizes="(max-width: 639px) 200px, 280px"
+          className="home-cover w-[200px] sm:w-[240px] lg:w-[280px] h-auto rounded-xl shadow-[0_24px_48px_rgba(0,0,0,.4)] sm:justify-self-center max-sm:order-first"
         />
       </div>
 
