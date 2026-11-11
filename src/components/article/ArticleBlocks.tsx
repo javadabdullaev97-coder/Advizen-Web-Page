@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import type { ArticleContentBlock } from "@/lib/publications";
+import { Link } from "@/i18n/navigation";
 import { listItems } from "./article-utils";
+import FuelCalculator from "./FuelCalculator";
 
 /* Structured article blocks: tables, figures, worked examples, steps and the like (types in
    lib/publications.ts). Server-rendered, no client code. Brand red appears as the bright triple
@@ -363,7 +365,41 @@ function Checklist({ b }: { b: Block<"checklist"> }) {
   );
 }
 
+function Offer({ b }: { b: Block<"offer"> }) {
+  const external = (href: string) => /^https?:/.test(href);
+  const button = (l: { label: string; href: string }, cls: string) =>
+    external(l.href) ? (
+      <a href={l.href} target="_blank" rel="noopener noreferrer" className={cls}>
+        {l.label}
+      </a>
+    ) : (
+      <Link href={l.href} className={cls}>
+        {l.label}
+      </Link>
+    );
+  return (
+    <aside className="relative overflow-hidden rounded-[var(--radius-tile)] border border-[rgba(205,30,70,.3)] bg-[linear-gradient(140deg,rgba(205,30,70,.2),rgba(205,30,70,.05)_55%,rgba(255,255,255,.02))] px-9 py-9 max-sm:px-5 max-sm:py-7">
+      <p className="text-[26px] max-sm:text-[23px] font-semibold leading-[1.15] tracking-[-0.025em] text-foreground-hi text-balance">{b.title}</p>
+      {b.text && <p className="mt-3 text-[16.5px] leading-[1.55] text-foreground-2 max-w-[34em]">{b.text}</p>}
+      <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-3">
+        {b.items.map((it) => (
+          <li key={it} className="flex gap-3 text-[15.5px] leading-[1.45] text-foreground">
+            <Tick className={`size-[18px] mt-[.15em] ${PINK}`} />
+            <span>{it}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-8 flex flex-wrap gap-3">
+        {button(b.button, "m-btn m-btn-p max-sm:w-full")}
+        {b.secondary && button(b.secondary, "m-btn m-btn-g max-sm:w-full")}
+      </div>
+    </aside>
+  );
+}
+
 const RENDER: { [T in ArticleContentBlock["type"]]?: (props: { b: Block<T> }) => ReactNode } = {
+  calculator: ({ b }) => <FuelCalculator t={b} />,
+  offer: Offer,
   table: Table,
   checks: Checks,
   figures: Figures,

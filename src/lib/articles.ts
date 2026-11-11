@@ -18,6 +18,7 @@ import voluntaryLiquidation from "./articles/voluntary-liquidation-uzbekistan";
 import employerOfRecord from "./articles/employer-of-record-central-asia";
 import islamicFinance from "./articles/islamic-finance-uzbekistan";
 import tashkentFinancialCentre from "./articles/tashkent-international-financial-centre";
+import hybridFuel from "./articles/hybrid-fuel-electricity-accounting";
 
 type LocalizedArticleMap = Record<string, LocalizedArticle>;
 type ArticleSource = LocalizedArticleMap | LocalizedArticle;
@@ -42,6 +43,7 @@ const articleSources: Record<string, ArticleSource> = {
   "employer-of-record-central-asia": employerOfRecord,
   "islamic-finance-uzbekistan": islamicFinance,
   "tashkent-international-financial-centre": tashkentFinancialCentre,
+  "hybrid-fuel-electricity-accounting": hybridFuel,
 };
 
 function isLocalizedMap(source: ArticleSource): source is LocalizedArticleMap {

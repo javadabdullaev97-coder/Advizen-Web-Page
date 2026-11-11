@@ -127,6 +127,10 @@
       "islamic-finance-uzbekistan": {
         "title": "Oʻzbekistonda islom moliyasi: amaliy qoʻllanma",
         "description": "Oʻzbekistonda islom moliyasini tartibga solish tizimi: qonunchilik asosi va mikromoliya tashkilotlari uchun ruxsat etilgan vositalardan tortib Maxsus kengash talablari va shariatga muvofiq jarima mexanizmigacha."
+      },
+      "hybrid-fuel-electricity-accounting": {
+        "title": "Gibridlar uchun benzin va elektr: sarfni qanday hisobdan chiqarish va tekshirish",
+        "description": "Nega butun masofaga ikki meʼyor sarfni ikki baravar oshiradi, uni bitta formula bilan qanday tekshirish va hisob siyosatida nimani belgilash kerak."
       }
     }
   },

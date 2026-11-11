@@ -50,7 +50,54 @@ export type ArticleContentBlock =
   /** Order of priority, first to last. */
   | { type: "priority"; items: { title: string; text?: string }[] }
   /** Document checklist. */
-  | { type: "checklist"; title: string; meta?: string; items: { text: string; note?: string }[] };
+  | { type: "checklist"; title: string; meta?: string; items: { text: string; note?: string }[] }
+  /** Interactive sufficiency check for fuel and electricity (components/article/FuelCalculator.tsx). */
+  | ({ type: "calculator" } & FuelCalculatorText)
+  /** Service offer at the end of an article: what we do, and a button to the contact page. */
+  | {
+      type: "offer";
+      title: string;
+      text?: string;
+      items: string[];
+      button: { label: string; href: string };
+      secondary?: { label: string; href: string };
+    };
+
+/** Every word the fuel calculator shows. `{x}` placeholders are filled with numbers. */
+export interface FuelCalculatorText {
+  title: string;
+  intro?: string;
+  /** Decimal separator used to read and print numbers. */
+  decimal: "," | ".";
+  fields: {
+    fuel: string;
+    fuelNorm: string;
+    power: string;
+    powerNorm: string;
+    distance: string;
+    tolerance: string;
+  };
+  units: { l: string; kwh: string; km: string; per100: string; kwhPer100: string };
+  out: {
+    fuelKm: string;
+    powerKm: string;
+    total: string;
+    odometer: string;
+    deviation: string;
+    band: string;
+  };
+  verdict: {
+    ok: { title: string; text: string };
+    over: { title: string; text: string; split: string };
+    under: { title: string; text: string };
+    idle: { title: string; text: string };
+    noDistance: { title: string; text: string };
+    short: string;
+  };
+  reset: string;
+  privacy: string;
+  defaults: { fuel: number; fuelNorm: number; power: number; powerNorm: number; distance: number; tolerance: number };
+}
 
 export interface ArticleFaqItem {
   question: string;
@@ -95,6 +142,19 @@ export interface PublicationArticle extends Publication {
 }
 
 export const publications: Publication[] = [
+  {
+    slug: "hybrid-fuel-electricity-accounting",
+    tag: "Tax Briefing",
+    category: "Tax",
+    title: "Fuel and electricity for hybrid company cars in Uzbekistan",
+    description:
+      "Why two norms over the full mileage double consumption, how to check it with one formula, and what to put in the accounting policy.",
+    year: "2026",
+    date: "2026-11-11",
+    pages: 8,
+    image: "/Articles Image/Hybrid Fuel and Electricity.webp",
+    hasRead: true,
+  },
   {
     slug: "tashkent-international-financial-centre",
     tag: "Legal Briefing",
