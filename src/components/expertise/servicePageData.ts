@@ -7,7 +7,6 @@ export const DISCIPLINE_MAP: Record<string, string[]> = {
   legal: ["Legal"],
   finance: ["Finance"],
   hr: ["HR"],
-  funding: ["Tax", "Legal"],
   "ma-advisory": ["Tax", "Legal"],
   "due-diligence": ["Tax", "Legal"],
   "entity-management": ["Legal"],
@@ -24,7 +23,6 @@ export const RELATED_SERVICES_MAP: Record<string, string[]> = {
   legal: ["tax", "corporate", "ma-advisory"],
   finance: ["tax", "entity-management", "due-diligence"],
   hr: ["eor", "payroll", "immigration"],
-  funding: ["tax", "legal", "finance"],
   "ma-advisory": ["due-diligence", "legal", "tax"],
   "due-diligence": ["ma-advisory", "tax", "legal"],
   "entity-management": ["corporate", "compliance", "payroll"],
@@ -40,7 +38,6 @@ export const RELATED_SERVICES_MAP: Record<string, string[]> = {
    service's disciplines; where a later one is the closer match, its index in
    allEngagements (it is always within the same disciplines). */
 const PROOF_OVERRIDE: Record<string, number> = {
-  funding: 7, // seed round structuring
   "ma-advisory": 2, // M&A of a bottler
   "due-diligence": 14, // 30+ tax and legal DDs
   "entity-management": 13, // 80+ entities incorporated

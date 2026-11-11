@@ -9,7 +9,7 @@ const EMAIL = "info@advizenco.com";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // Values are the expertise slugs; the contact API maps each one to a readable label.
-const ADVISORY = ["tax", "legal", "finance", "hr", "funding", "ma-advisory", "due-diligence"];
+const ADVISORY = ["tax", "legal", "finance", "hr", "ma-advisory", "due-diligence"];
 const MANAGED = ["entity-management", "corporate", "eor", "payroll", "immigration", "virtual-office", "compliance"];
 
 type Values = { name: string; company: string; email: string; phone: string; service: string; message: string };

@@ -74,7 +74,6 @@ export const CAPABILITY_ICONS: Record<string, IconName[]> = {
   legal: ["buildings", "signature", "tree-structure", "shield-check", "lightbulb", "gavel", "handshake"],
   finance: ["calculator", "file-text", "magnifying-glass", "chart-line-up", "coins", "chart-bar", "presentation-chart", "shield-check"],
   hr: ["user-plus", "users-three", "clipboard-text", "chalkboard-teacher", "chart-bar", "tree-structure", "gavel"],
-  funding: ["hand-coins", "chart-line-up", "file-text", "handshake", "chart-bar", "magnifying-glass", "presentation-chart", "shield-check"],
   "ma-advisory": ["arrows-left-right", "tree-structure", "chart-line-up", "handshake", "puzzle-piece", "intersect", "briefcase", "globe-hemisphere-west"],
   "due-diligence": ["seal-percent", "scales", "chart-line-up", "shield-check", "users", "storefront", "flag", "magnifying-glass"],
   "entity-management": ["calculator", "list-checks", "scales", "users", "calendar-check", "file-text", "tree-structure", "headset"],
@@ -95,7 +94,6 @@ export const ADVISORY_ICONS: Record<string, IconName> = {
   legal: "scales",
   finance: "chart-line-up",
   hr: "users-three",
-  funding: "hand-coins",
   "ma-advisory": "handshake",
   "due-diligence": "magnifying-glass",
 };

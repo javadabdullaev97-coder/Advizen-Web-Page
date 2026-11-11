@@ -3,7 +3,11 @@
     "tax": {
       "title": "Soliq konsaltingi",
       "whoFor": "Oʻzbekistonning murakkab soliq tizimida faoliyat yuritayotgan xorijiy investitsiyali korxonalar, xolding tuzilmalari va transchegaraviy operatsiyalar olib boruvchi kompaniyalar.",
-      "whoForItems": ["Xorijiy investitsiyali korxonalar", "Xolding tuzilmalari", "Transchegaraviy operatsiyalar olib boruvchi kompaniyalar"],
+      "whoForItems": [
+        "Xorijiy investitsiyali korxonalar",
+        "Xolding tuzilmalari",
+        "Transchegaraviy operatsiyalar olib boruvchi kompaniyalar"
+      ],
       "description": "Bizning soliq amaliyotimiz Oʻzbekistonning oʻzgarib borayotgan soliq tizimida ishonchli yoʻl topadi: transchegaraviy operatsiyalar, mahalliy QQS va boshqa barcha jihatlar boʻyicha talablarga toʻliq rioya qilgan holda pozitsiyangizni optimallashtiradigan tuzilmalarni ishlab chiqamiz.",
       "capabilities": [
         "Soliq rejalashtirish va optimallashtirish",
@@ -57,21 +61,6 @@
         "Ish haqi darajasini qiyosiy tahlil qilish",
         "Tashkiliy dizayn",
         "Mehnat huquqi konsaltingi"
-      ]
-    },
-    "funding": {
-      "title": "Moliyalashtirish va grantlar",
-      "whoFor": "Grant izlayotgan startaplar, investitsiya raundlariga tayyorlanayotgan kompaniyalar va davlat imtiyozlariga ariza berayotgan korxonalar.",
-      "description": "Biz kompaniyalarga mavjud moliyalashtirish manbalarini tanlashda yordam beramiz: grantlar, investitsiyaga tayyorgarlik, donorlar bilan ishlash va oʻsish uchun moliyaviy tuzilmalash. Bunda Markaziy Osiyodagi moliyalashtirish institutlari bilan mustahkam aloqalarimizga tayanamiz.",
-      "capabilities": [
-        "Grantlarni topish va ariza topshirish",
-        "Investitsiyaga tayyorlikni baholash",
-        "Biznes-rejani ishlab chiqish",
-        "Donorlar va investorlarni tanlash",
-        "Moliyaviy modellashtirish va prognozlar",
-        "Due diligence jarayoniga tayyorgarlik",
-        "Investorlar uchun taqdimot (pitch deck) tayyorlash",
-        "Moliyalashtirishdan keyin muvofiqlik"
       ]
     },
     "ma-advisory": {

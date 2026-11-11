@@ -12,15 +12,14 @@ import { ServiceIcon } from "@/components/expertise/ServiceIcons";
 const TELEGRAM = "https://t.me/advizen";
 const delay = (d: number) => ({ "--d": `${d}s` }) as CSSProperties;
 
-// Photos are placeholders from the site's library until each practice has its own.
+// One studio still life per practice, each with a single red glass object.
 const ADVISORY = [
-  { slug: "tax", photo: "/home/track-nuclear.webp" },
-  { slug: "legal", photo: "/home/track-companies.webp" },
-  { slug: "finance", photo: "/Regions/Tashkent City.webp" },
-  { slug: "hr", photo: "/Regions/Fergana.webp" },
-  { slug: "funding", photo: "/Sectors/Banking.webp" },
-  { slug: "ma-advisory", photo: "/Sectors/Retail.webp" },
-  { slug: "due-diligence", photo: "/home/track-energy.webp" },
+  { slug: "tax", photo: "/Practice Images/tax.webp" },
+  { slug: "legal", photo: "/Practice Images/legal.webp" },
+  { slug: "finance", photo: "/Practice Images/accounting.webp" },
+  { slug: "hr", photo: "/Practice Images/hr.webp" },
+  { slug: "ma-advisory", photo: "/Practice Images/ma-advisory.webp" },
+  { slug: "due-diligence", photo: "/Practice Images/due-diligence.webp" },
 ];
 const MANAGED = ["entity-management", "corporate", "eor", "payroll", "immigration", "virtual-office", "compliance"];
 const SECTOR_PHOTOS = ["Banking", "Energy", "Technology", "Real Estate", "Retail", "Healthcare"];
@@ -85,8 +84,8 @@ export default function ExpertiseContent() {
       <section className="m-wrap pt-24 lg:pt-32">
         <SectionHead title={t("advisory.title")} lede={t("advisory.lede")} />
         <ul data-reveal className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-12">
-          {ADVISORY.map(({ slug, photo }, i) => (
-            <li key={slug} className={i < 4 ? "lg:col-span-3" : "lg:col-span-4"}>
+          {ADVISORY.map(({ slug, photo }) => (
+            <li key={slug} className="lg:col-span-4">
               <Link href={`/expertise/${slug}`} className="group m-tile flex flex-col h-full overflow-hidden transition-colors duration-200 hover:bg-[#232325]">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image

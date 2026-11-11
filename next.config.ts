@@ -50,6 +50,9 @@ const nextConfig: NextConfig = {
       { source: "/store/:path*", destination: "/expertise/legal", permanent: true },
       { source: "/:locale(ru|uz)/store/:path*", destination: "/:locale/expertise/legal", permanent: true },
       { source: "/terms-of-sale", destination: "/terms", permanent: true },
+      // Funding and grants is no longer offered as a separate practice.
+      { source: "/expertise/funding", destination: "/expertise", permanent: true },
+      { source: "/:locale(ru|uz)/expertise/funding", destination: "/:locale/expertise", permanent: true },
       { source: "/:locale(ru|uz)/terms-of-sale", destination: "/:locale/terms", permanent: true },
     ];
   },

@@ -15,7 +15,6 @@ export default function Footer() {
       { label: t("legalAdvisory"),  href: "/expertise/legal" },
       { label: t("accounting"),     href: "/expertise/finance" },
       { label: t("hrServices"),     href: "/expertise/hr" },
-      { label: t("funding"),        href: "/expertise/funding" },
       { label: t("maAdvisory"),     href: "/expertise/ma-advisory" },
       { label: t("dueDiligence"),   href: "/expertise/due-diligence" },
     ],

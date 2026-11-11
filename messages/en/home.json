@@ -31,7 +31,7 @@
   "HomeModern": {
     "hero": {
       "title": "Tax, legal and accounting advisory in Uzbekistan",
-      "lede": "One team for companies entering and operating in Uzbekistan: tax, law, accounting, HR and funding, coordinated by a single partner. In English, Russian or Uzbek.",
+      "lede": "One team for companies entering and operating in Uzbekistan: tax, law, accounting, HR and M&A, coordinated by a single partner. In English, Russian or Uzbek.",
       "book": "Book a consultation",
       "telegram": "Message us on Telegram",
       "imageAlt": "Tashkent at dusk"
@@ -73,9 +73,9 @@
         "title": "HR and payroll",
         "text": "Payroll, labour contracts and contributions for local and expatriate staff."
       },
-      "funding": {
-        "title": "Funding and M&A",
-        "text": "IFI programmes, grants, due diligence and deal structuring."
+      "deals": {
+        "title": "M&A and due diligence",
+        "text": "Deal structuring, buy-side and sell-side support, and checks before you sign."
       },
       "operations": {
         "title": "Operations",

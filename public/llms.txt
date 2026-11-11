@@ -1,6 +1,6 @@
 # Advizen Consulting
 
-> Advizen Consulting LLC is an advisory firm in Tashkent, Uzbekistan. It advises foreign and local companies entering and operating in Uzbekistan on tax, law, accounting, HR and payroll, funding, M&A and due diligence, and runs managed services such as entity management, Employer of Record, payroll, work permits and a virtual office. Work is coordinated by one partner, in English, Russian or Uzbek.
+> Advizen Consulting LLC is an advisory firm in Tashkent, Uzbekistan. It advises foreign and local companies entering and operating in Uzbekistan on tax, law, accounting, HR and payroll, M&A and due diligence, and runs managed services such as entity management, Employer of Record, payroll, work permits and a virtual office. Work is coordinated by one partner, in English, Russian or Uzbek.
 
 ## Contact
 
@@ -15,7 +15,6 @@
 - [Legal advisory](https://www.advizenco.com/expertise/legal): company formation, licensing, contracts, governance
 - [Accounting](https://www.advizenco.com/expertise/finance): bookkeeping, IFRS and national standards, audit preparation
 - [Human resources](https://www.advizenco.com/expertise/hr): recruitment, HR outsourcing, HR audits
-- [Funding and grants](https://www.advizenco.com/expertise/funding): grant applications, investment readiness, business plans
 - [M&A advisory](https://www.advizenco.com/expertise/ma-advisory): buy-side and sell-side advice, structuring, valuation
 - [Due diligence](https://www.advizenco.com/expertise/due-diligence): tax, legal and financial review before an investment or acquisition
 

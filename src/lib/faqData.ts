@@ -7,7 +7,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     en: [
       {
         q: "What is Advizen Consulting?",
-        a: "Advizen Consulting LLC is an advisory firm in Tashkent, Uzbekistan. It advises foreign and local companies on tax, law, accounting, HR and payroll, funding, M&A and due diligence, and runs managed services such as entity management, Employer of Record, payroll, work permits and a virtual office. Work is coordinated by one partner, in English, Russian or Uzbek.",
+        a: "Advizen Consulting LLC is an advisory firm in Tashkent, Uzbekistan. It advises foreign and local companies on tax, law, accounting, HR and payroll, M&A and due diligence, and runs managed services such as entity management, Employer of Record, payroll, work permits and a virtual office. Work is coordinated by one partner, in English, Russian or Uzbek.",
       },
       {
         q: "Which markets do you serve?",
@@ -15,7 +15,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "What makes Advizen Consulting different from other consultancies?",
-        a: "We combine seven advisory disciplines and seven managed services in one firm, so tax, legal, accounting and HR work on the same matter is done by one team and coordinated by one partner. Our advisers' record includes fifteen engagements, more than 80 companies registered and more than 30 tax and legal due diligences.",
+        a: "We combine six advisory disciplines and seven managed services in one firm, so tax, legal, accounting and HR work on the same matter is done by one team and coordinated by one partner. Our advisers' record includes fifteen engagements, more than 80 companies registered and more than 30 tax and legal due diligences.",
       },
       {
         q: "How do I start working with Advizen Consulting?",
@@ -45,7 +45,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     ru: [
       {
         q: "Что такое Advizen Consulting?",
-        a: "Advizen Consulting LLC — консалтинговая компания из Ташкента. Консультирует иностранные и местные компании по налогам, праву, бухгалтерии, HR и зарплате, финансированию, M&A и due diligence, а также ведёт операционные сервисы: управление компанией, Employer of Record, расчёт зарплаты, разрешения на работу и виртуальный офис. Работу координирует один партнёр, на русском, английском или узбекском.",
+        a: "Advizen Consulting LLC — консалтинговая компания из Ташкента. Консультирует иностранные и местные компании по налогам, праву, бухгалтерии, HR и зарплате, M&A и due diligence, а также ведёт операционные сервисы: управление компанией, Employer of Record, расчёт зарплаты, разрешения на работу и виртуальный офис. Работу координирует один партнёр, на русском, английском или узбекском.",
       },
       {
         q: "На каких рынках вы работаете?",
@@ -53,7 +53,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "Чем Advizen Consulting отличается от других консалтинговых компаний?",
-        a: "Мы объединяем семь консалтинговых направлений и семь операционных сервисов в одной компании, поэтому налоговые, юридические, бухгалтерские и кадровые вопросы по одному проекту ведёт одна команда под координацией одного партнёра. В активе наших консультантов — пятнадцать проектов, более 80 зарегистрированных компаний и более 30 налоговых и юридических due diligence.",
+        a: "Мы объединяем шесть консалтинговых направлений и семь операционных сервисов в одной компании, поэтому налоговые, юридические, бухгалтерские и кадровые вопросы по одному проекту ведёт одна команда под координацией одного партнёра. В активе наших консультантов — пятнадцать проектов, более 80 зарегистрированных компаний и более 30 налоговых и юридических due diligence.",
       },
       {
         q: "Как начать сотрудничество с Advizen Consulting?",
@@ -83,7 +83,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     uz: [
       {
         q: "Advizen Consulting nima?",
-        a: "Advizen Consulting LLC — Toshkentdagi maslahat kompaniyasi. Xorijiy va mahalliy kompaniyalarga soliq, huquq, buxgalteriya, HR va ish haqi, moliyalashtirish, M&A va due diligence boʻyicha maslahat beradi, shuningdek kompaniyani boshqarish, Employer of Record, ish haqi hisob-kitobi, ish ruxsatnomalari va virtual ofis xizmatlarini koʻrsatadi. Ishni bitta hamkor muvofiqlashtiradi, oʻzbek, rus yoki ingliz tilida.",
+        a: "Advizen Consulting LLC — Toshkentdagi maslahat kompaniyasi. Xorijiy va mahalliy kompaniyalarga soliq, huquq, buxgalteriya, HR va ish haqi, M&A va due diligence boʻyicha maslahat beradi, shuningdek kompaniyani boshqarish, Employer of Record, ish haqi hisob-kitobi, ish ruxsatnomalari va virtual ofis xizmatlarini koʻrsatadi. Ishni bitta hamkor muvofiqlashtiradi, oʻzbek, rus yoki ingliz tilida.",
       },
       {
         q: "Qaysi bozorlarda xizmat koʻrsatasiz?",
@@ -91,7 +91,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
       },
       {
         q: "Advizen Consulting boshqa konsalting kompaniyalaridan qanday farq qiladi?",
-        a: "Biz yetti maslahat yoʻnalishi va yetti operatsion xizmatni bitta kompaniyada birlashtiramiz, shuning uchun bitta loyiha boʻyicha soliq, yuridik, buxgalteriya va kadrlar masalalarini bitta jamoa olib boradi va ularni bitta hamkor muvofiqlashtiradi. Maslahatchilarimiz hisobida oʻn beshta loyiha, 80 dan ortiq roʻyxatdan oʻtkazilgan kompaniya va 30 dan ortiq soliq va yuridik due diligence bor.",
+        a: "Biz olti maslahat yoʻnalishi va yetti operatsion xizmatni bitta kompaniyada birlashtiramiz, shuning uchun bitta loyiha boʻyicha soliq, yuridik, buxgalteriya va kadrlar masalalarini bitta jamoa olib boradi va ularni bitta hamkor muvofiqlashtiradi. Maslahatchilarimiz hisobida oʻn beshta loyiha, 80 dan ortiq roʻyxatdan oʻtkazilgan kompaniya va 30 dan ortiq soliq va yuridik due diligence bor.",
       },
       {
         q: "Advizen Consulting bilan hamkorlikni qanday boshlash mumkin?",
@@ -123,7 +123,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     en: [
       {
         q: "What advisory disciplines does Advizen Consulting offer?",
-        a: "Seven: tax, legal, accounting, HR and payroll, funding, M&A and due diligence. Alongside them we run managed services: entity management, corporate services, Employer of Record, payroll, work permits, virtual office and compliance monitoring.",
+        a: "Six: tax, legal, accounting, HR and payroll, M&A and due diligence. Alongside them we run managed services: entity management, corporate services, Employer of Record, payroll, work permits, virtual office and compliance monitoring.",
       },
       {
         q: "Can you handle tax and legal matters together?",
@@ -161,7 +161,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     ru: [
       {
         q: "Какие консалтинговые направления предлагает Advizen Consulting?",
-        a: "Семь: налоги, право, бухгалтерский учёт, HR и расчёт зарплаты, финансирование, M&A и due diligence. Помимо этого мы ведём операционные сервисы: управление компанией, корпоративное обслуживание, Employer of Record, расчёт зарплаты, разрешения на работу, виртуальный офис и мониторинг комплаенса.",
+        a: "Шесть: налоги, право, бухгалтерский учёт, HR и расчёт зарплаты, M&A и due diligence. Помимо этого мы ведём операционные сервисы: управление компанией, корпоративное обслуживание, Employer of Record, расчёт зарплаты, разрешения на работу, виртуальный офис и мониторинг комплаенса.",
       },
       {
         q: "Можете ли вы одновременно заниматься налоговыми и юридическими вопросами?",
@@ -199,7 +199,7 @@ export const FAQ_DATA: Record<FaqPage, LocaleData> = {
     uz: [
       {
         q: "Advizen Consulting qanday maslahat yoʻnalishlarini taklif etadi?",
-        a: "Yettita: soliq, huquq, buxgalteriya, HR va ish haqi, moliyalashtirish, M&A va due diligence. Ular bilan birga operatsion xizmatlarni ham koʻrsatamiz: kompaniyani boshqarish, korporativ xizmatlar, Employer of Record, ish haqi hisob-kitobi, ish ruxsatnomalari, virtual ofis va muvofiqlik monitoringi.",
+        a: "Oltita: soliq, huquq, buxgalteriya, HR va ish haqi, M&A va due diligence. Ular bilan birga operatsion xizmatlarni ham koʻrsatamiz: kompaniyani boshqarish, korporativ xizmatlar, Employer of Record, ish haqi hisob-kitobi, ish ruxsatnomalari, virtual ofis va muvofiqlik monitoringi.",
       },
       {
         q: "Soliq va yuridik masalalarni bir vaqtda hal qila olasizmi?",

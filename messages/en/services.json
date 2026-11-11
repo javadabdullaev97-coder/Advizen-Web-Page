@@ -3,7 +3,11 @@
     "tax": {
       "title": "Tax Consulting",
       "whoFor": "Foreign-invested companies, holding structures, and cross-border operators navigating Uzbekistan's fiscal complexity.",
-      "whoForItems": ["Foreign-invested companies", "Holding structures", "Cross-border operators"],
+      "whoForItems": [
+        "Foreign-invested companies",
+        "Holding structures",
+        "Cross-border operators"
+      ],
       "description": "Our tax practice navigates Uzbekistan's evolving fiscal landscape with precision — designing structures that optimise your position while maintaining full regulatory compliance across cross-border transactions, local VAT obligations, and everything in between.",
       "capabilities": [
         "Tax planning & optimization",
@@ -57,21 +61,6 @@
         "Compensation benchmarking",
         "Organisational design",
         "Labour law advisory"
-      ]
-    },
-    "funding": {
-      "title": "Funding & Grants",
-      "whoFor": "Startups seeking grants, companies preparing for investment rounds, and businesses applying for state incentives.",
-      "description": "We guide businesses through the landscape of available funding — grants, investment readiness, donor engagement, and financial structuring for growth — drawing on deep relationships across the institutional funding ecosystem in Central Asia.",
-      "capabilities": [
-        "Grant identification & applications",
-        "Investment readiness assessment",
-        "Business plan development",
-        "Donor & investor matching",
-        "Financial modelling & projections",
-        "Due diligence preparation",
-        "Pitch deck development",
-        "Post-funding compliance"
       ]
     },
     "ma-advisory": {

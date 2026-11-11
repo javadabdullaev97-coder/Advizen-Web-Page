@@ -114,7 +114,7 @@ export function HomeServices() {
     { key: "legal", href: "/expertise/legal" },
     { key: "accounting", href: "/expertise/finance" },
     { key: "hr", href: "/expertise/hr" },
-    { key: "funding", href: "/expertise/funding" },
+    { key: "deals", href: "/expertise/ma-advisory" },
     { key: "operations", href: "/expertise" },
   ] as const;
   return (

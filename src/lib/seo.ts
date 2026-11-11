@@ -408,17 +408,17 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
     en: {
       title: "Tax, Legal, Accounting and HR Services in Uzbekistan | Advizen",
       description:
-        "14 services for companies in Uzbekistan: tax, legal, accounting, HR, funding, M&A and due diligence, plus entity management, EOR, payroll and work permits.",
+        "13 services for companies in Uzbekistan: tax, legal, accounting, HR, M&A and due diligence, plus entity management, EOR, payroll and work permits.",
     },
     ru: {
       title: "Налоговые, юридические, бухгалтерские и HR-услуги в Узбекистане | Advizen",
       description:
-        "14 услуг для компаний в Узбекистане: налоги, право, бухгалтерия, HR, финансирование, M&A, due diligence, управление компанией, EOR, зарплата и разрешения.",
+        "13 услуг для компаний в Узбекистане: налоги, право, бухгалтерия, HR, M&A, due diligence, управление компанией, EOR, зарплата и разрешения.",
     },
     uz: {
       title: "Oʻzbekistonda soliq, yuridik, buxgalteriya va HR xizmatlari | Advizen",
       description:
-        "Oʻzbekistondagi kompaniyalar uchun 14 xizmat: soliq, huquq, buxgalteriya, HR, moliyalashtirish, M&A, due diligence, EOR, ish haqi va ish ruxsatnomalari.",
+        "Oʻzbekistondagi kompaniyalar uchun 13 xizmat: soliq, huquq, buxgalteriya, HR, M&A, due diligence, EOR, ish haqi va ish ruxsatnomalari.",
     },
   },
   contact: {

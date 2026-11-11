@@ -3,7 +3,7 @@
     "hero": {
       "eyebrow": "Bizning ekspertizamiz",
       "heading": "Oʻzbekistonda soliq, yuridik, buxgalteriya va HR xizmatlari",
-      "description": "Yettita konsalting yoʻnalishi. Yettita tayyor operatsion xizmat. Markaziy Osiyo bozorlarining murakkab sharoitlari uchun yaratilgan yagona amaliyot."
+      "description": "Oltita konsalting yoʻnalishi. Yettita tayyor operatsion xizmat. Markaziy Osiyo bozorlarining murakkab sharoitlari uchun yaratilgan yagona amaliyot."
     },
     "stats": {
       "eyebrow": "Bizning yutuqlarimiz",
@@ -78,7 +78,7 @@
     ]
   },
   "ExpertiseModern": {
-    "lede": "Yettita maslahat amaliyoti va yettita operatsion xizmat — bitta jamoa va bitta muvofiqlashtiruvchi hamkor, oʻzbek, rus yoki ingliz tilida.",
+    "lede": "Oltita maslahat amaliyoti va yettita operatsion xizmat — bitta jamoa va bitta muvofiqlashtiruvchi hamkor, oʻzbek, rus yoki ingliz tilida.",
     "advisory": {
       "title": "Maslahat xizmatlari",
       "lede": "Qarorni siz qabul qilasiz, biz esa soliq, huquq, buxgalteriya, kadrlar va bitimlar boʻyicha chuqur bilim va tajribani taqdim etamiz."
@@ -114,10 +114,6 @@
       "hr": [
         "HR xizmatlari",
         "Xodim tanlash, HR autsorsing, audit va oʻqitish."
-      ],
-      "funding": [
-        "Moliyalashtirish va grantlar",
-        "Grantlar, investitsiyaga tayyorgarlik, biznes-rejalar."
       ],
       "ma-advisory": [
         "M&A konsaltingi",

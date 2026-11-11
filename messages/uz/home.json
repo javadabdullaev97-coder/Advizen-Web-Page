@@ -31,7 +31,7 @@
   "HomeModern": {
     "hero": {
       "title": "Toshkentda konsalting: soliq, huquq, buxgalteriya",
-      "lede": "Oʻzbekistonda faoliyat boshlayotgan va yuritayotgan kompaniyalar uchun bitta jamoa: soliq, huquq, buxgalteriya, kadrlar va moliyalashtirish, bitta hamkor boshchiligida. Oʻzbek, rus yoki ingliz tilida.",
+      "lede": "Oʻzbekistonda faoliyat boshlayotgan va yuritayotgan kompaniyalar uchun bitta jamoa: soliq, huquq, buxgalteriya, kadrlar va M&A, bitta hamkor boshchiligida. Oʻzbek, rus yoki ingliz tilida.",
       "book": "Konsultatsiyaga yozilish",
       "telegram": "Telegram orqali yozish",
       "imageAlt": "Kechki Toshkent"
@@ -73,9 +73,9 @@
         "title": "Kadrlar va ish haqi",
         "text": "Mahalliy va xorijiy xodimlar uchun ish haqi, mehnat shartnomalari va badallar."
       },
-      "funding": {
-        "title": "Moliyalashtirish va M&A",
-        "text": "XMI dasturlari, grantlar, due diligence va bitimlarni tuzish."
+      "deals": {
+        "title": "M&A va due diligence",
+        "text": "Bitimlarni tuzish, sotib olish va sotishda yordam, imzolashdan oldin tekshiruv."
       },
       "operations": {
         "title": "Operatsion xizmatlar",

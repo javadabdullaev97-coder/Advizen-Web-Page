@@ -17,6 +17,8 @@
   Cache-Control: public, max-age=2592000
 /Articles%20Image/*
   Cache-Control: public, max-age=2592000
+/Practice%20Images/*
+  Cache-Control: public, max-age=2592000
 /Hero%20and%20CTA%20images/*
   Cache-Control: public, max-age=2592000
 /Advizen%20Logo/*
