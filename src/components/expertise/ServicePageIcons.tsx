@@ -81,7 +81,7 @@ export const CAPABILITY_ICONS: Record<string, IconName[]> = {
   eor: ["signature", "calculator", "hand-coins", "list-checks", "user-plus", "users-three", "arrows-left-right"],
   payroll: ["calculator", "seal-percent", "coins", "receipt", "file-text", "calendar-check", "currency-circle-dollar", "shield-check"],
   immigration: ["identification-card", "airplane-tilt", "house", "stamp", "bank", "calendar-check", "users-three", "sign-out"],
-  "virtual-office": ["map-pin", "envelope-simple", "scan", "users-three", "phone-call", "truck"],
+  "virtual-office": ["map-pin", "envelope-simple", "scan", "phone-call", "truck"],
   compliance: ["calendar-check", "eye", "list-checks", "clipboard-text", "repeat", "envelope-simple", "file-text", "bell-ringing"],
 };
 

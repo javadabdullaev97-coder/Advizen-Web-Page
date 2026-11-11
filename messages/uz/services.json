@@ -174,13 +174,12 @@
     "virtual-office": {
       "title": "Virtual ofis",
       "whoFor": "Oʻzbekiston bozorini oʻrganayotgan xorijiy kompaniyalar yoki ofis ijaraga olmasdan yuridik manzilga ega boʻlmoqchi boʻlgan korxonalar.",
-      "description1": "Jismoniy joy ijaraga olmasdan biznesingiz uchun Oʻzbekistonda ishonchli manzilga ega boʻling. Virtual ofis xizmatimiz roʻyxatga olingan manzil, pochtani qabul qilish va kerak boʻlganda majlislar xonasidan foydalanishni oʻz ichiga oladi.",
+      "description1": "Jismoniy joy ijaraga olmasdan biznesingiz uchun Oʻzbekistonda ishonchli manzilga ega boʻling. Virtual ofis xizmatimiz roʻyxatga olingan manzil, pochta va hujjatlar bilan ishlash hamda mahalliy telefon raqamini oʻz ichiga oladi.",
       "description2": "Bozorni oʻrganayotgan, majburiy talablarni bajarayotgan yoki mamlakatda kichik ishtirokni saqlab turgan kompaniyalar uchun qulay.",
       "capabilities": [
         "Roʻyxatga olingan biznes manzili",
         "Pochta qabul qilish va yoʻnaltirish",
         "Hujjatlarni skanerlash va yetkazib berish",
-        "Majlislar xonasidan foydalanish",
         "Mahalliy telefon raqami va qoʻngʻiroqlarga javob berish",
         "Kuryerlik va logistika xizmatlari"
       ]

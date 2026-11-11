@@ -259,14 +259,13 @@ export const operationsServices: ServiceData[] = [
     type: "operations",
     headline: "A professional presence\nwithout the overhead",
     description: [
-      "Establish a credible Uzbekistan address for your business without committing to physical space. Our virtual office service provides a registered address, mail handling, and access to meeting facilities when you need them.",
+      "Establish a credible Uzbekistan address for your business without committing to physical space. Our virtual office service provides a registered address, mail and document handling, and a local phone line.",
       "Ideal for companies exploring the market, managing compliance obligations, or running a lean local presence.",
     ],
     capabilities: [
       "Registered business address",
       "Mail receipt & forwarding",
       "Document scanning & delivery",
-      "Meeting room access",
       "Local phone number & call handling",
       "Courier & logistics support",
     ],
