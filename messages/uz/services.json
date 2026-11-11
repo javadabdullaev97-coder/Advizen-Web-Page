@@ -242,5 +242,83 @@
     "allInsights": "Barcha maqolalar",
     "ctaTitle": "{title}: muhokama qilishga tayyormisiz?",
     "ctaBody": "Jamoamiz ish hajmini belgilash va savollaringizga javob berishga tayyor."
+  },
+  "EorPricing": {
+    "title": "Narxlar",
+    "lede": "Har ikki tarifda bir xodim uchun oyiga $249. Ulanish toʻlovi va depozit yoʻq; har oy oldindan toʻlanadi.",
+    "perEmployee": "bir xodim uchun oyiga",
+    "socLabel": "Ish beruvchining ijtimoiy soligʻi",
+    "pitLabel": "Xodimning daromad soligʻi",
+    "rolesLabel": "Odatiy lavozimlar",
+    "plans": {
+      "standard": {
+        "name": "Standart EOR",
+        "desc": "Oʻzbekistonda joyida ishlaydigan xodimlar uchun.",
+        "soc": "12%",
+        "pit": "12%",
+        "rates": "Ijtimoiy soliq 12% · Daromad soligʻi 12%",
+        "roles": [
+          "Savdo va biznesni rivojlantirish",
+          "Mamlakat rahbarlari va ofis menejerlari",
+          "Obyektdagi muhandislar va xodimlar",
+          "Haydovchilar, ombor va logistika"
+        ]
+      },
+      "it": {
+        "name": "IT va masofaviy xizmatlar",
+        "desc": "Masofaviy IT va xizmat lavozimlari uchun, IT Park stavkalarida.",
+        "soc": "0%",
+        "pit": "7,5%",
+        "rates": "Ijtimoiy soliq 0% · Daromad soligʻi 7,5%",
+        "roles": [
+          "Dasturchilar, QA va DevOps",
+          "UI/UX, grafik va motion dizaynerlar",
+          "Maʼlumotlar tahlilchilari va maʼlumotlarga ishlov berish",
+          "Mijozlarni qoʻllab-quvvatlash va bek-ofis"
+        ]
+      }
+    },
+    "terms": [
+      {
+        "title": "Narxga kiradi",
+        "items": [
+          "Oʻzbekiston qonunchiligi boʻyicha mehnat shartnomasi",
+          "Oylik ish haqi hisob-kitobi va hisob varaqalari",
+          "Daromad soligʻi, ijtimoiy soliq va barcha hisobotlar",
+          "Taʼtillar, kasallik varaqalari va kadrlar hisobi",
+          "Yagona milliy mehnat tizimida roʻyxatdan oʻtkazish",
+          "Ishdan boʻshatish hujjatlari"
+        ]
+      },
+      {
+        "title": "Haqiqiy xarajat boʻyicha",
+        "items": [
+          "Yalpi ish haqi va ish beruvchi soligʻi",
+          "Qonun talab qilsa, ishdan boʻshatish nafaqasi"
+        ]
+      },
+      {
+        "title": "Shartlar",
+        "items": [
+          "Ulanish toʻlovi yoʻq",
+          "Depozit yoʻq",
+          "Oyma-oy, istalgan vaqtda bekor qilish mumkin",
+          "Hisobimizda Oʻzbekiston QQSi yoʻq"
+        ]
+      }
+    ],
+    "calc": {
+      "title": "Bir xodim sizga qanchaga tushadi",
+      "lede": "Xodim har oy qoʻliga qancha olishi kerakligini kiriting.",
+      "field": "Oylik sof ish haqi",
+      "inHand": "qoʻlga",
+      "youPay": "Oyiga toʻlaysiz",
+      "perYear": "yiliga",
+      "net": "Xodim oladi",
+      "pit": "Xodimning daromad soligʻi",
+      "gross": "Yalpi ish haqi",
+      "soc": "Ish beruvchining ijtimoiy soligʻi",
+      "fee": "Bizning haqimiz"
+    }
   }
 }

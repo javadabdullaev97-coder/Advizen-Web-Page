@@ -8,6 +8,7 @@ import HomeReveal from "@/components/home/HomeReveal";
 import { ServiceIcon } from "@/components/expertise/ServiceIcons";
 import { ADVISORY_ICONS, CAPABILITY_ICONS, Duo, WHO_ICONS } from "@/components/expertise/ServicePageIcons";
 import ServicePageFaq from "@/components/expertise/ServicePageFaq";
+import EorPricing from "@/components/expertise/EorPricing";
 import {
   RELATED_SERVICES_MAP,
   WORK_ROWS,
@@ -164,6 +165,8 @@ export default async function ServicePageContent({ slug, locale }: { slug: strin
           ))}
         </ul>
       </section>
+
+      {slug === "eor" && <EorPricing locale={loc} />}
 
       {isTax && (
         <section className={SECTION} aria-labelledby="who-this-is-for">

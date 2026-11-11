@@ -242,5 +242,83 @@
     "allInsights": "All insights",
     "ctaTitle": "Ready to discuss {title}?",
     "ctaBody": "Our team is available to scope your engagement and answer initial questions."
+  },
+  "EorPricing": {
+    "title": "Pricing",
+    "lede": "$249 per employee per month on either plan. No setup fee and no deposit; each month is paid in advance.",
+    "perEmployee": "per employee per month",
+    "socLabel": "Employer social tax",
+    "pitLabel": "Employee income tax",
+    "rolesLabel": "Typical roles",
+    "plans": {
+      "standard": {
+        "name": "Standard EOR",
+        "desc": "For people who work on the ground in Uzbekistan.",
+        "soc": "12%",
+        "pit": "12%",
+        "rates": "Social tax 12% · Income tax 12%",
+        "roles": [
+          "Sales and business development",
+          "Country and office managers",
+          "Engineers and staff on site",
+          "Drivers, warehouse and logistics"
+        ]
+      },
+      "it": {
+        "name": "IT and remote services",
+        "desc": "For remote IT and service roles, at IT Park tax rates.",
+        "soc": "0%",
+        "pit": "7.5%",
+        "rates": "Social tax 0% · Income tax 7.5%",
+        "roles": [
+          "Developers, QA and DevOps",
+          "UI/UX, graphic and motion designers",
+          "Data analysts and data processing",
+          "Customer support and back office"
+        ]
+      }
+    },
+    "terms": [
+      {
+        "title": "Included",
+        "items": [
+          "Employment contract under Uzbek law",
+          "Monthly payroll and payslips",
+          "Income tax, social tax and all filings",
+          "Leave, sick leave and HR records",
+          "Registration in the national labour system",
+          "Termination paperwork"
+        ]
+      },
+      {
+        "title": "Billed at cost",
+        "items": [
+          "Gross salary and employer tax",
+          "Severance where Uzbek law requires it"
+        ]
+      },
+      {
+        "title": "Terms",
+        "items": [
+          "No setup fee",
+          "No deposit",
+          "Monthly, cancel any time",
+          "No Uzbek VAT on our invoice"
+        ]
+      }
+    ],
+    "calc": {
+      "title": "What one employee costs you",
+      "lede": "Enter what the employee should receive in hand each month.",
+      "field": "Net salary per month",
+      "inHand": "in hand",
+      "youPay": "You pay per month",
+      "perYear": "per year",
+      "net": "Employee receives",
+      "pit": "Employee income tax",
+      "gross": "Gross salary",
+      "soc": "Employer social tax",
+      "fee": "Our fee"
+    }
   }
 }
