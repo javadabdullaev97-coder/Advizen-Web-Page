@@ -90,7 +90,7 @@
   .svc li:first-child { padding-top: 0; }
   .svc li::before { content: ""; position: absolute; left: 0; top: 4mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--muted); }
   .svc li:first-child::before { top: 1.9mm; }
-  .band { position: relative; height: 50mm; margin: calc(var(--pad-top) * -1) calc(var(--pad-x) * -1) 8mm; }
+  .band { position: relative; flex-shrink: 0; height: 50mm; margin: calc(var(--pad-top) * -1) calc(var(--pad-x) * -1) 8mm; }
   .band .photo { inset: 0; }
   .band-b { position: relative; flex: 1; min-height: 30mm; margin: 8mm calc(var(--pad-x) * -1) -6mm; }
   .band-b .photo { inset: 0; }

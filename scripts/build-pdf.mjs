@@ -1,4 +1,4 @@
-// Renders one of the HTML brochures in docs/ to an A4 PDF.
+// Renders one of the HTML brochures in docs/ to a PDF. The page size comes from the CSS @page rule.
 // Usage: NODE_PATH=$(npm root -g) node scripts/build-pdf.mjs <source.html> <output.pdf> [--theme guide|dark]
 // Needs Playwright with Chromium (installed globally in Claude Code cloud sessions, or `npx playwright install chromium`).
 import { createRequire } from "node:module";
@@ -29,14 +29,16 @@ const clash = await page.evaluate(() =>
     const limit = foot.getBoundingClientRect().top;
     let bottom = 0;
     pg.querySelectorAll(".inner *").forEach((el) => {
-      if (el.closest(".band-b")) return;
+      // A bottom photo strip may run into the bottom margin, but not under the footer line.
+      const strip = el.closest(".band-b");
+      if (strip && strip !== el) return;
       const r = el.getBoundingClientRect();
       if (r.height && r.bottom > bottom) bottom = r.bottom;
     });
     return bottom > limit ? [`page ${i + 1} overlaps its footer by ${Math.ceil((bottom - limit) / 3.78)} mm`] : [];
   }),
 );
-await page.pdf({ path: path.resolve(out), format: "A4", printBackground: true, preferCSSPageSize: true });
+await page.pdf({ path: path.resolve(out), printBackground: true, preferCSSPageSize: true });
 await browser.close();
 console.log(`${src} → ${out}`);
 if (clash.length) {

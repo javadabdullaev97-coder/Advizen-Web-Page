@@ -1,20 +1,36 @@
 <!doctype html>
 <!-- IT Business in Uzbekistan 2026 (EN). Source of public/guides/IT-Business-in-Uzbekistan-2026.pdf.
-     Build: NODE_PATH=$(npm root -g) node scripts/build-pdf.mjs docs/it-guide/en.html public/guides/IT-Business-in-Uzbekistan-2026.pdf
+     Square 228.6 mm pages (9 x 9 in), 12 pages. The Russian edition (ru.html) follows it page by page.
+     Build: NODE_PATH=$(npm root -g) node scripts/build-pdf.mjs docs/it-guide/en.html public/guides/IT-Business-in-Uzbekistan-2026.pdf --theme guide
      Copy rules: no em dashes, no semicolons, no prices or fees, no client names or project credentials.
-     Facts follow the Doing Business in Uzbekistan 2026 guide, the Tax Code and the IT Park regulations (PP-589, PP-388). -->
+     A guide, not a memo (docs/guides-vs-articles.md, rule 7): overview level, article numbers only at key figures.
+     Facts follow the Doing Business in Uzbekistan 2026 guide, the Tax Code and the IT Park regulations (PP-589, PP-388), Decree UP-5099 for the 7.5% rate. -->
 <html lang="en" data-theme="guide">
 <head>
 <meta charset="utf-8">
 <title>IT Business in Uzbekistan 2026 · Advizen</title>
 <link rel="stylesheet" href="../company-profile/fonts.css">
 <link rel="stylesheet" href="../brochure.css">
+<style>
+  /* Square edition: small layout tweaks for this guide only. Font sizes stay at the brochure.css defaults. */
+  .compare th:first-child, .compare td:first-child { width: 27mm; }
+  .process.four { grid-template-columns: repeat(4, 1fr); }
+  .process.four li { min-height: 40mm; }
+  .prep { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; margin-top: 9mm; }
+  .prep h3 { padding-bottom: 2.4mm; border-bottom: 1px solid var(--ink); }
+  .prep .facts { margin-top: 1mm; }
+  .prep .check { display: block; margin-top: 0; }
+  .band { flex-shrink: 0; }
+  .band.tall { height: 62mm; }
+  .road { margin-top: 7mm; }
+  .road li { padding: 3.8mm 0; }
+</style>
 </head>
 <body>
 
 <!-- 1 · Cover -->
 <section class="page cover on-photo">
-  <div class="photo" style="background-image:url('img/it-cover.jpg');background-position:50% 45%"></div>
+  <div class="photo" style="background-image:url('img/it-cover.jpg');background-position:50% 50%"></div>
   <div class="inner">
     <div class="wordmark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</div>
     <div>
@@ -30,25 +46,19 @@
 <!-- 2 · Why Uzbekistan -->
 <section class="page">
   <div class="inner">
-    <div class="band"><div class="photo" style="background-image:url('img/it-team.jpg');background-position:50% 55%"></div></div>
+    <div class="band tall"><div class="photo" style="background-image:url('img/it-team.jpg');background-position:50% 55%"></div></div>
     <p class="eyebrow">Why Uzbekistan</p>
     <h2>A growing base for IT teams</h2>
-    <p class="lede">Uzbekistan combines a large young workforce, a time zone between Europe and Asia and one of the most generous tax regimes for IT companies in the region.</p>
+    <p class="lede">A large young workforce, a time zone between Europe and Asia and one of the most generous tax regimes for IT companies in the region.</p>
     <div class="cols" style="margin-top:7mm">
-      <div>
-        <p>Software development, outsourcing and IT services are among the fastest growing exports of the country. Many foreign companies use Tashkent as a delivery centre for clients in Europe, the Middle East and the CIS.</p>
-        <p>The IT Park is the main instrument. Its residents are exempt from most taxes, their employees pay a reduced personal income tax, and they can hire foreign specialists without work permits.</p>
-      </div>
-      <div>
-        <p>Entry is simple for many nationalities. Citizens of the CIS, the EU, the UK, the US, China and many other countries enter visa-free, and IT specialists can obtain a multiple-entry IT visa for up to three years.</p>
-        <p>This guide explains the ways to start, how the IT Park works, what relocating a team involves, and the order in which the steps usually run.</p>
-      </div>
+      <p>Software development, outsourcing and IT services are among the fastest growing exports of the country. Many foreign companies use Tashkent as a delivery centre for clients in Europe, the Middle East and the CIS.</p>
+      <p style="margin-top:0">The IT Park is the main instrument. Its residents are exempt from most taxes, their employees pay a reduced personal income tax, and they can hire foreign specialists without work permits.</p>
     </div>
     <div class="figs">
       <div class="fig"><b>GMT+5</b><span>One time zone, no daylight saving</span></div>
       <div class="fig"><b>39.0m</b><span>Population, 2026 census</span></div>
       <div class="fig"><b>$921.5m</b><span>Exports of telecom, computer and information services, 2025</span></div>
-      <div class="fig"><b>7.5%</b><span>Personal income tax on salaries at IT Park residents</span></div>
+      <div class="fig"><b>7.5%</b><span>Personal income tax on salaries at IT Park residents until 1 January 2028</span></div>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">2</span></footer>
@@ -59,19 +69,16 @@
   <div class="inner">
     <p class="eyebrow">Ways to start</p>
     <h2>Three ways to start working in Uzbekistan</h2>
-    <p class="lede">Most IT companies move from the first to the third over a few months. The right starting point depends on how quickly the team must start and how large it will be.</p>
+    <p class="lede">Most IT companies move from the first to the third over a few months. The starting point depends on how quickly the team must start and how large it will be.</p>
     <table class="compare">
       <tr><th></th><th>Employer of Record<small>No local entity</small></th><th>Own LLC<small>Standard tax regime</small></th><th class="hl">LLC and IT Park<small>Special IT regime</small></th></tr>
-      <tr><td>How it works</td><td>A local employer of record hires your staff, runs payroll and handles HR. You direct the work.</td><td>Your own Uzbek company employs the team, signs contracts and holds assets.</td><td class="hl">Your Uzbek company becomes an IT Park resident and uses its tax and hiring regime.</td></tr>
-      <tr><td>How fast</td><td>The team can start within days</td><td>Registration takes 2 to 3 days once the documents are ready</td><td class="hl">Registration of the LLC, then up to 15 working days for the IT Park review</td></tr>
-      <tr><td>Taxes</td><td>Standard payroll taxes</td><td>Standard regime: 15% profit tax, 12% VAT, 12% personal income tax, 12% social tax</td><td class="hl">Exempt from most taxes and social tax until 2028, 7.5% personal income tax on salaries</td></tr>
-      <tr><td>Foreign staff</td><td>Work permit needed</td><td>Work permit needed</td><td class="hl">No work permit needed for foreign specialists. IT visa available</td></tr>
+      <tr><td>How it works</td><td>A local employer hires your staff and runs payroll and HR. You direct the work</td><td>Your own Uzbek company employs the team and signs the contracts</td><td class="hl">Your Uzbek company becomes an IT Park resident</td></tr>
+      <tr><td>How fast</td><td>The team can start within days</td><td>Registration takes 2 to 3 days once the documents are ready</td><td class="hl">LLC registration, then up to 15 working days for the IT Park review</td></tr>
+      <tr><td>Taxes</td><td>Standard payroll taxes</td><td>15% profit tax, 12% VAT, 12% personal income tax, 12% social tax</td><td class="hl">Exempt from most taxes and 7.5% personal income tax until 2028</td></tr>
+      <tr><td>Foreign staff</td><td>Work permit needed</td><td>Work permit needed</td><td class="hl">No work permit. IT visa available</td></tr>
       <tr><td>Suits</td><td>Testing the market, small teams, the first months</td><td>Businesses outside the IT Park list or without export income</td><td class="hl">IT companies with a growing team and export income</td></tr>
     </table>
-    <div class="box">
-      <p class="eyebrow">A common path</p>
-      <p>The team starts under Employer of Record contracts while the LLC is registered and the IT Park application is reviewed. Once the company becomes a resident, employees move to it and the IT Park regime applies.</p>
-    </div>
+    <p class="note">The right choice depends on the activities, the team and the export income. We go through it on the first call.</p>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">3</span></footer>
 </section>
@@ -89,7 +96,7 @@
           <li>Uzbek legal entities only. A foreign company first registers a local LLC</li>
           <li>Software development and IT services</li>
           <li>IT outsourcing and business process outsourcing</li>
-          <li>Data processing and other activities on the official list in Resolution PP-589</li>
+          <li>Data processing and other activities on the list in Resolution PP-589</li>
         </ul>
       </div>
       <div>
@@ -99,15 +106,14 @@
           <li>Marketplaces</li>
           <li>Microfinance organisations</li>
         </ul>
-        <p class="muted" style="margin-top:4mm;font-size:8.4pt">These activities lost access to the benefits under Presidential Resolution PP-388 of 26 December 2025.</p>
+        <p class="muted" style="margin-top:3mm;font-size:8.4pt">These activities lost access to the benefits under Presidential Resolution PP-388 of 26 December 2025.</p>
       </div>
     </div>
     <p class="sub">From registration to resident status</p>
-    <ol class="process">
+    <ol class="process four">
       <li><b>Register an LLC</b><span>State registration of the Uzbek company</span><em>2 to 3 days</em></li>
-      <li><b>Prepare the file</b><span>Application, charter and business plan</span></li>
-      <li class="hl"><b>File the application</b><span>Through the personal cabinet at my.it-park.uz with the company's digital signature</span></li>
-      <li><b>Review</b><span>The IT Park directorate reviews the application</span><em>Up to 15 working days</em></li>
+      <li class="hl"><b>File the application</b><span>Application and business plan, filed online</span></li>
+      <li><b>Review</b><span>By the IT Park directorate</span><em>Up to 15 working days</em></li>
       <li><b>Resident status</b><span>Agreement with the IT Park and entry in the register of residents</span></li>
     </ol>
     <p class="note">Benefits apply from the first day of the month after the company is entered in the register of residents.</p>
@@ -121,28 +127,27 @@
     <p class="eyebrow">IT Park</p>
     <h2>Keeping the status</h2>
     <p class="lede">Resolution PP-388 tightened the regime from 1 April 2026. Residents now have to earn part of their income from exports and pay a monthly contribution to the park.</p>
-    <div class="figs" style="margin-top:9mm;grid-template-columns:repeat(3,1fr)">
+    <div class="figs" style="margin-top:8mm;grid-template-columns:repeat(3,1fr)">
       <div class="fig"><b>20%</b><span>Minimum export share of total income from 1 April 2026</span></div>
       <div class="fig"><b>35%</b><span>Minimum export share of total income from 1 January 2027</span></div>
-      <div class="fig"><b>1%</b><span>Monthly contribution to the park, as a share of revenue, for residents that meet the export share</span></div>
+      <div class="fig"><b>1%</b><span>Monthly contribution, as a share of revenue, when the export share is met</span></div>
     </div>
-    <div class="cols" style="margin-top:9mm">
+    <div class="cols" style="margin-top:8mm">
       <div>
         <h3>If the export share is not met</h3>
-        <p style="margin-top:2.4mm;color:var(--ink-2)">The contribution rises to 2% of revenue for residents with revenue of UZS 5 to 100 billion and to 3% above UZS 100 billion.</p>
+        <p style="margin-top:2.4mm;color:var(--ink-2)">The contribution rises to 2% of revenue at UZS 5 to 100 billion of revenue and to 3% above UZS 100 billion.</p>
       </div>
       <div>
         <h3>From 2028 to 2040</h3>
-        <p style="margin-top:2.4mm;color:var(--ink-2)">The Tax Code continues the exemption from all taxes except VAT from 1 January 2028 to 1 January 2040, but only for residents whose exports exceed 50% of total income (Art. 483).</p>
+        <p style="margin-top:2.4mm;color:var(--ink-2)">The exemption from all taxes except VAT continues to 1 January 2040, but only for residents whose exports exceed 50% of total income (Tax Code, Art. 483).</p>
       </div>
     </div>
     <div class="box" style="margin-top:auto">
-      <p class="eyebrow">What this means in practice</p>
+      <p class="eyebrow">In practice</p>
       <ul>
         <li>Plan the share of export contracts before applying, not after</li>
-        <li>Keep contracts, invoices and payment records that prove export income</li>
-        <li>Track the export share every month and the 50% threshold for 2028</li>
-        <li>Report to the IT Park on time to keep the status</li>
+        <li>Keep the contracts, invoices and payments that prove export income</li>
+        <li>Track the export share every month and report to the IT Park on time</li>
       </ul>
     </div>
   </div>
@@ -156,23 +161,15 @@
     <h2>Standard regime and IT Park</h2>
     <table class="compare">
       <tr><th></th><th>Standard regime</th><th class="hl">IT Park resident</th></tr>
-      <tr><td>Profit tax</td><td>15% (Tax Code, Art. 337)</td><td class="hl">Exempt</td></tr>
-      <tr><td>VAT</td><td>12%, 0% on exports (Art. 258)</td><td class="hl">Exempt until 1 January 2028, payable from 2028</td></tr>
-      <tr><td>Property, land and water taxes</td><td>Property tax 1.5% (Art. 415)</td><td class="hl">Exempt</td></tr>
-      <tr><td>Social tax</td><td>12%, paid by the employer (Art. 405)</td><td class="hl">Exempt</td></tr>
-      <tr><td>Personal income tax on salaries</td><td>12% (Art. 381)</td><td class="hl">7.5% flat (PP-589)</td></tr>
-      <tr><td>Dividends to non-resident founders</td><td>10% withholding tax (Art. 353), a treaty may reduce it</td><td class="hl">Taxed at resident rates until 1 January 2040 when exports exceed 50% of income (Art. 483)</td></tr>
-      <tr><td>Customs on equipment</td><td>Standard duties</td><td class="hl">No customs payments other than clearance fees on equipment and software for own needs not produced in Uzbekistan</td></tr>
+      <tr><td>Profit tax</td><td>15%</td><td class="hl">Exempt</td></tr>
+      <tr><td>VAT</td><td>12%, 0% on exports</td><td class="hl">Exempt until 1 January 2028, payable from 2028</td></tr>
+      <tr><td>Property, land and water taxes</td><td>Property tax 1.5%</td><td class="hl">Exempt</td></tr>
+      <tr><td>Social tax</td><td>12%, paid by the employer</td><td class="hl">Exempt</td></tr>
+      <tr><td>Personal income tax on salaries</td><td>12%</td><td class="hl">7.5% until 1 January 2028 (UP-5099), not added to the employee's annual income</td></tr>
+      <tr><td>Dividends to non-resident founders</td><td>10% withholding tax, a treaty may reduce it</td><td class="hl">Resident rates until 1 January 2040 when exports exceed 50% of income (Art. 483)</td></tr>
+      <tr><td>Customs on equipment</td><td>Standard duties</td><td class="hl">Only clearance fees on equipment and software for own needs not produced in Uzbekistan</td></tr>
     </table>
-    <div class="box">
-      <p class="eyebrow">Worth knowing</p>
-      <ul>
-        <li>Employees' income from a resident is taxed at 7.5% and is not added to their annual income for tax purposes</li>
-        <li>The 2028 to 2040 exemption does not cover VAT and requires exports above 50% of income</li>
-        <li>Founders that do not qualify for resident rates on dividends should check the tax treaty with their country</li>
-      </ul>
-    </div>
-    <p class="note">Rates as of November 2026 under the Tax Code of the Republic of Uzbekistan and Resolutions PP-589 and PP-388. Benefits apply only when their conditions are met.</p>
+    <p class="note">Rates as of November 2026 under the Tax Code, Decree UP-5099 and Resolutions PP-589 and PP-388. Benefits apply only when their conditions are met.</p>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">6</span></footer>
 </section>
@@ -180,32 +177,31 @@
 <!-- 7 · Relocating the team -->
 <section class="page">
   <div class="inner">
-    <div class="band"><div class="photo" style="background-image:url('img/it-arrival.jpg');background-position:50% 62%"></div></div>
+    <div class="band"><div class="photo" style="background-image:url('img/it-arrival.jpg');background-position:55% 30%"></div></div>
     <p class="eyebrow">Relocation</p>
     <h2>Moving people to Uzbekistan</h2>
     <div class="cols" style="margin-top:6mm">
       <div>
         <h3>Entry and IT visa</h3>
         <ul class="facts">
-          <li><b>Visa-free entry</b> for citizens of the CIS, the EU, the UK, the US, China and many other countries, mostly for 30 days</li>
-          <li><b>E-visa</b> online at e-visa.gov.uz for many other nationalities</li>
-          <li><b>IT visa:</b> multiple entry for up to three years, on the recommendation of the IT Park, for IT specialists, investors, founders and managers of residents</li>
-          <li>The IT visa can be renewed without leaving the country</li>
+          <li><b>Visa-free entry:</b> citizens of most CIS countries without a time limit, citizens of the EU, the UK, the US, China, Korea, Japan and the Gulf states for 30 days</li>
+          <li><b>E-visa</b> online for many other nationalities</li>
+          <li><b>IT visa:</b> multiple entry for up to three years, on the recommendation of the IT Park, for IT specialists, investors, founders and managers of residents. Renewable without leaving the country</li>
         </ul>
       </div>
       <div>
         <h3>Work and registration</h3>
         <ul class="facts">
           <li><b>No work permit</b> for foreign specialists employed by IT Park residents</li>
-          <li><b>PINFL,</b> the personal identification number, for each foreign employee at a Public Services Centre</li>
+          <li><b>PINFL,</b> the personal identification number, for each foreign employee</li>
           <li><b>Registration of stay</b> within three working days of entry</li>
-          <li>Employers outside the IT Park need a work permit for each foreign employee. Qualified specialists get permits for up to three years</li>
+          <li>Other employers need a work permit for each foreign employee: up to three years for qualified and highly qualified specialists, up to one year for others</li>
         </ul>
       </div>
     </div>
     <div class="box" style="margin-top:auto">
       <p class="eyebrow">Families</p>
-      <p>Plan visas and registration for spouses and children together with the employee. Keep apostilled marriage and birth certificates with notarised translations ready before the move.</p>
+      <p>Plan visas and registration for spouses and children together with the employee. The IT Park exemption from work permits covers the specialist, not family members.</p>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">7</span></footer>
@@ -216,14 +212,14 @@
   <div class="inner">
     <p class="eyebrow">Hiring and payroll</p>
     <h2>Employing the team</h2>
-    <div class="cols" style="margin-top:7mm">
+    <div class="cols" style="margin-top:5mm">
       <div>
         <h3>Labour Code essentials</h3>
         <ul class="facts">
           <li>Written contract, on paper or electronic, registered in the Unified National Labour System</li>
           <li>Probation of up to three months</li>
-          <li>40-hour working week and at least 21 calendar days of annual leave</li>
-          <li>Remote work is allowed and must be set out in the contract</li>
+          <li>40-hour week, at least 21 calendar days of annual leave</li>
+          <li>Remote work is allowed and set out in the contract</li>
           <li>An employee resigns with 14 calendar days' notice</li>
           <li>Dismissal by the employer only on grounds listed in the Code, with notice and severance</li>
         </ul>
@@ -231,21 +227,20 @@
       <div>
         <h3>Payroll</h3>
         <ul class="facts">
-          <li>Salaries are paid in soums and payroll taxes are withheld every month</li>
-          <li>IT Park residents withhold 7.5% personal income tax and pay no social tax</li>
+          <li>Salaries are paid in soums, taxes are withheld every month</li>
+          <li>IT Park residents withhold 7.5% until 1 January 2028 and pay no social tax</li>
           <li>Other employers withhold 12% and pay 12% social tax on top of salary</li>
-          <li>Intellectual property created by employees should be assigned to the company in the contract</li>
         </ul>
       </div>
     </div>
-    <p class="sub">Banking and money flows</p>
-    <ul class="facts">
-      <li>Uzbek companies hold accounts in soums and in foreign currency with Uzbek banks</li>
-      <li>Payments between residents inside Uzbekistan are made in soums, cross-border payments in any currency</li>
-      <li>An Uzbek company may hold accounts with foreign banks only where a law or decision allows it</li>
-      <li>The bank account application can be filed together with state registration. For a company with foreign founders the bank checks the founders and beneficial owners separately</li>
-      <li>The company must actually be present at its legal address</li>
-    </ul>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">Banking</p>
+      <ul>
+        <li>Accounts in soums and in foreign currency with Uzbek banks</li>
+        <li>Payments between residents inside Uzbekistan in soums, cross-border payments in any currency</li>
+        <li>Accounts with foreign banks only where a law or decision allows it</li>
+      </ul>
+    </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">8</span></footer>
 </section>
@@ -253,69 +248,56 @@
 <!-- 9 · Relocation roadmap -->
 <section class="page">
   <div class="inner">
-    <p class="eyebrow">Roadmap</p>
+    <p class="eyebrow">Timeline</p>
     <h2>A typical relocation plan</h2>
-    <p class="lede">The order in which the work usually runs. Several steps go in parallel, and the longest one is often the apostille of the parent company's documents.</p>
+    <p class="lede">The team can start under Employer of Record and move to the company once it becomes an IT Park resident.</p>
     <ol class="road">
-      <li><span class="when">Start</span><div><b>Introductory call and plan</b><span>Choice of structure, list of documents and timeline for the team</span></div></li>
-      <li><span class="when">First week</span><div><b>Team starts under Employer of Record</b><span>Optional. Employees start work while the company is set up</span></div></li>
-      <li><span class="when">2 to 3 days</span><div><b>Registration of the LLC</b><span>Once the founder's documents are apostilled and translated and the founder has an Uzbek digital signature. Bank account application at the same time</span></div></li>
-      <li><span class="when">Up to 15 working days</span><div><b>IT Park application and review</b><span>Filing through my.it-park.uz, agreement and entry in the register</span></div></li>
-      <li><span class="when">In parallel</span><div><b>Visas, PINFL and registration</b><span>IT visas, personal identification numbers and registration of stay for employees and families</span></div></li>
-      <li><span class="when">After status</span><div><b>Team moves to the company</b><span>Employment contracts with the resident, payroll at 7.5% and accounting</span></div></li>
-      <li><span class="when">Every month</span><div><b>Ongoing compliance</b><span>Tax and IT Park reporting, export share tracking and payroll</span></div></li>
+      <li><span class="when">Start</span><div><b>Introductory call and plan</b><span>Structure, documents and timeline for the team</span></div></li>
+      <li><span class="when">First week</span><div><b>Team starts under Employer of Record</b><span>Optional, while the company is set up</span></div></li>
+      <li><span class="when">2 to 3 days</span><div><b>Registration of the LLC</b><span>Once the founder's documents are apostilled and translated. Bank account application at the same time</span></div></li>
+      <li><span class="when">Up to 15 working days</span><div><b>IT Park application and review</b><span>Filing, agreement and entry in the register</span></div></li>
+      <li><span class="when">In parallel</span><div><b>Visas, PINFL and registration</b><span>For employees and their families</span></div></li>
+      <li><span class="when">After status</span><div><b>Team moves to the company</b><span>Employment contracts with the resident and payroll</span></div></li>
+      <li><span class="when">Every month</span><div><b>Ongoing compliance</b><span>Tax and IT Park reporting, export share, payroll</span></div></li>
     </ol>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">9</span></footer>
 </section>
 
-<!-- 10 · Checklist -->
+<!-- 10 · Before you start: pitfalls and main documents -->
 <section class="page">
   <div class="inner">
-    <p class="eyebrow">Checklist</p>
-    <h2>Documents to prepare</h2>
-    <div class="check">
+    <p class="eyebrow">Before you start</p>
+    <h2>Where time is lost</h2>
+    <p class="lede">A few points are worth planning early. We check them for each case before the work starts.</p>
+    <div class="prep">
       <div>
-        <h3>Company registration</h3>
+        <h3>Common pitfalls</h3>
+        <ul class="facts">
+          <li>The apostille of the parent company's documents is often the longest step</li>
+          <li>The company must actually be present at its legal address</li>
+          <li>With foreign founders the bank checks the founders and beneficial owners separately</li>
+          <li>Intellectual property created by employees should be assigned to the company in the contract</li>
+          <li>Founders that do not qualify for resident rates on dividends should check the tax treaty with their country</li>
+        </ul>
+      </div>
+      <div class="check">
+        <h3>Main documents</h3>
         <ul>
-          <li>Parent company charter and register extract, apostilled</li>
+          <li>Parent company charter and register extract, apostilled and translated</li>
           <li>Decision to establish the Uzbek company</li>
-          <li>Notarised translations of foreign documents</li>
-          <li>Charter of the Uzbek LLC in Uzbek</li>
-          <li>Passport of the director and a PINFL</li>
-          <li>Legal address: lease or letter from the owner</li>
-        </ul>
-      </div>
-      <div>
-        <h3>IT Park application</h3>
-        <ul>
-          <li>Application for resident status</li>
-          <li>Charter of the Uzbek company</li>
-          <li>Business plan with planned IT activities</li>
-          <li>Planned export contracts and clients</li>
-          <li>Digital signature of the company</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Each foreign employee</h3>
-        <ul>
-          <li>Passport valid for at least six months</li>
-          <li>Employment contract or offer</li>
-          <li>Diploma and CV where requested</li>
-          <li>Address in Uzbekistan for registration of stay</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Family members</h3>
-        <ul>
-          <li>Passports valid for at least six months</li>
-          <li>Apostilled marriage and birth certificates</li>
-          <li>Notarised translations</li>
-          <li>Address for registration of stay</li>
+          <li>Passport of the director</li>
+          <li>Legal address of the company</li>
+          <li>Business plan and planned export contracts for the IT Park</li>
+          <li>Passports valid for at least six months, and apostilled marriage and birth certificates for families</li>
         </ul>
       </div>
     </div>
-    <p class="note">Requirements can differ by nationality and are updated often. We confirm the exact list for each case.</p>
+    <p class="muted" style="margin:6mm 0 5mm;font-size:8.4pt">Requirements can differ by nationality and are updated often. We confirm the exact list for each case.</p>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">The first step</p>
+      <p>The introductory call ends with a choice of structure, a list of documents and a timeline for your team.</p>
+    </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">10</span></footer>
 </section>
@@ -325,23 +307,22 @@
   <div class="inner">
     <p class="eyebrow">How we help</p>
     <h2>One team for the whole move</h2>
-    <p class="lede">We handle the legal, tax, HR and immigration side so that your team can keep working while the structure is built.</p>
-    <ul class="why" style="margin-top:8mm">
-      <li><span class="n">01</span><div><h3>Employer of Record</h3><p>Your team starts in days under our contracts, with payroll and HR handled locally.</p></div></li>
-      <li><span class="n">02</span><div><h3>Company registration</h3><p>LLC registration, bank account, digital signature and legal address.</p></div></li>
-      <li><span class="n">03</span><div><h3>IT Park application</h3><p>Eligibility review, business plan, filing and follow-up with the directorate.</p></div></li>
-      <li><span class="n">04</span><div><h3>Visas and registration</h3><p>IT visas, PINFL and registration of stay for employees and their families.</p></div></li>
-      <li><span class="n">05</span><div><h3>Accounting and reporting</h3><p>Bookkeeping, tax and IT Park reporting, and monthly tracking of the export share.</p></div></li>
-      <li><span class="n">06</span><div><h3>Legal and tax advice</h3><p>Client contracts, IP assignment, dividends, tax treaties and permanent establishment risk.</p></div></li>
+    <ul class="why" style="margin-top:6mm">
+      <li><span class="n">01</span><div><h3>Employer of Record</h3><p>Your team starts in days under our contracts.</p></div></li>
+      <li><span class="n">02</span><div><h3>Company registration</h3><p>LLC, bank account, digital signature and legal address.</p></div></li>
+      <li><span class="n">03</span><div><h3>IT Park application</h3><p>Eligibility review, business plan, filing and follow-up.</p></div></li>
+      <li><span class="n">04</span><div><h3>Visas and registration</h3><p>IT visas, PINFL and registration for employees and families.</p></div></li>
+      <li><span class="n">05</span><div><h3>Accounting and reporting</h3><p>Bookkeeping, tax and IT Park reporting, export share tracking.</p></div></li>
+      <li><span class="n">06</span><div><h3>Legal and tax advice</h3><p>Client contracts, IP, dividends, tax treaties and permanent establishment risk.</p></div></li>
     </ul>
-    <div class="band-b"><div class="photo" style="background-image:url('img/it-meeting.jpg');background-position:50% 70%"></div></div>
+    <div class="band-b"><div class="photo" style="background-image:url('img/it-meeting.jpg');background-position:45% 78%"></div></div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">11</span></footer>
 </section>
 
 <!-- 12 · Contacts -->
 <section class="page contacts-page on-photo">
-  <div class="photo" style="background-image:url('../company-profile/img/khiva.jpg')"></div>
+  <div class="photo" style="background-image:url('../company-profile/img/khiva.jpg');background-position:50% 40%"></div>
   <div class="inner">
     <p class="eyebrow" style="color:rgba(255,255,255,.65)">Contacts</p>
     <h2>Planning to move your IT team to Uzbekistan?</h2>
