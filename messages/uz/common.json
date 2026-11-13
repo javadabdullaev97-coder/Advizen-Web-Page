@@ -7,7 +7,8 @@
     "inquire": "Bogʻlanish",
     "book": "Konsultatsiyaga yozilish",
     "openMenu": "Menyuni ochish",
-    "closeMenu": "Menyuni yopish"
+    "closeMenu": "Menyuni yopish",
+    "guides": "Qoʻllanmalar"
   },
   "Footer": {
     "expertise": "Xizmatlar",
@@ -35,6 +36,7 @@
     "compliance": "Muvofiqlik monitoringi",
     "workPermits": "Ishlash uchun ruxsatnomalar",
     "payroll": "Ish haqi hisob-kitobi",
-    "tashkent": "Toshkent, Oʻzbekiston"
+    "tashkent": "Toshkent, Oʻzbekiston",
+    "guides": "Qoʻllanmalar"
   }
 }

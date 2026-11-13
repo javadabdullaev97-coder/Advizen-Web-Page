@@ -11,6 +11,7 @@ const STATIC_PATHS = [
   "",
   "/expertise",
   "/insights",
+  "/guides",
   "/contact",
   "/privacy",
   "/terms",
@@ -23,7 +24,8 @@ const STATIC_PATHS = [
 const LAST_CHANGED: Record<string, string> = {
   "": "2026-11-09",
   "/expertise": "2026-11-09",
-  "/insights": "2026-11-09",
+  "/insights": "2026-11-13",
+  "/guides": "2026-11-13",
   "/contact": "2026-11-09",
 };
 const LAST_CHANGED_DEFAULT = "2026-10-31";

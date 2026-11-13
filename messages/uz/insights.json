@@ -136,11 +136,11 @@
   },
   "InsightsModern": {
     "hero": {
-      "title": "Oʻzbekiston soliqlari, huquqi va biznesi boʻyicha maqolalar va qoʻllanmalar",
-      "lede": "Soliq, huquq, buxgalteriya va HR boʻyicha maslahatchilarimiz yozgan sharhlar va amaliy qoʻllanmalar. Bepul oʻqish mumkin."
+      "title": "Oʻzbekiston soliqlari, huquqi va biznesi boʻyicha maqolalar",
+      "lede": "Soliq, huquq, buxgalteriya va HR boʻyicha maslahatchilarimiz yozgan sharhlar. Bepul oʻqish mumkin."
     },
     "guide": {
-      "meta": "Asosiy qoʻllanma · 2026 nashri · PDF ingliz tilida, 58 sahifa",
+      "meta": "Asosiy qoʻllanma · 2026 nashri · PDF ingliz tilida",
       "title": "Doing Business in Uzbekistan",
       "text": "Oʻzbekistondagi xorijiy kompaniyalar uchun soliq, huquq, buxgalteriya hisobi va mehnat munosabatlari: oʻn bir bob, ikki tomonlama soliqqa tortishdan qochish shartnomalari stavkalari va soliq taqvimi. 2026-yil noyabr holatiga.",
       "chapters": [
@@ -183,11 +183,15 @@
       "text": "Direktorlar kengashingiz yoki investorlaringiz beradigan savollar boʻyicha soʻrovga koʻra yozma sharhlar va bozor tadqiqotlarini tayyorlaymiz.",
       "primary": "Hisobot buyurtma qilish",
       "telegram": "Telegramda yozish"
+    },
+    "guidesLink": {
+      "text": "PDF qoʻllanmalarimizni qidiryapsizmi? Doing Business in Uzbekistan va mavzuli qoʻllanmalar endi alohida sahifada.",
+      "cta": "Barcha qoʻllanmalar"
     }
   },
   "Guides": {
-    "title": "Boshqa qoʻllanmalar",
-    "lede": "Har biri bitta mavzuga bagʻishlangan amaliy qoʻllanmalar, bepul.",
+    "title": "Mavzuli qoʻllanmalar",
+    "lede": "Har biri bitta mavzuda, umumiy koʻrinishda, 2026-yil uchun yangilangan.",
     "open": "Qoʻllanmani ochish",
     "items": {
       "company-setup": {
@@ -214,6 +218,12 @@
         "meta": "Qoʻllanma · 2026-yil nashri · PDF, ingliz tilida",
         "coverAlt": "«Oʻzbekiston soliq qoʻllanmasi» muqovasi, 2026-yil nashri"
       }
+    }
+  },
+  "GuidesPage": {
+    "hero": {
+      "title": "Oʻzbekistonda biznes yuritish boʻyicha qoʻllanmalar",
+      "lede": "Maslahatchilarimizning amaliy PDF qoʻllanmalari: Doing Business in Uzbekistan toʻliq manzarani beradi, quyidagi qoʻllanmalar esa har biri bitta mavzuga bagʻishlangan. Bepul."
     }
   }
 }

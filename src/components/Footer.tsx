@@ -29,6 +29,7 @@ export default function Footer() {
     ],
     [t("firm")]: [
       { label: t("insights"), href: "/insights" },
+      { label: t("guides"),   href: "/guides" },
       { label: t("contact"),  href: "/contact" },
     ],
     [t("legal")]: [

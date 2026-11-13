@@ -3,8 +3,6 @@ import type { CSSProperties } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { publications, sortedPublications } from "@/lib/publications";
-import { GUIDE_PDF } from "@/lib/guide";
-import GuideCards from "@/components/insights/GuideCards";
 import HomeReveal from "@/components/home/HomeReveal";
 import InsightsBrowser, { type InsightItem } from "@/components/insights/InsightsBrowser";
 
@@ -44,7 +42,6 @@ export default function InsightsContent() {
     count: pubs.filter((p) => p.category === c).length,
   }));
 
-  const chapters = t.raw("guide.chapters") as string[];
 
   return (
     <>
@@ -69,37 +66,13 @@ export default function InsightsContent() {
       </section>
 
       <section className="m-wrap pt-6">
-        {/* The cover gets its own half of the tile, large enough to read as the guide itself. */}
-        <div data-reveal className="group m-tile grid lg:grid-cols-[minmax(0,.9fr)_minmax(0,1fr)] overflow-hidden">
-          <div className="flex items-center justify-center bg-[#151517] px-8 py-10 sm:py-14 lg:p-14">
-            <Image
-              src="/Articles Image/DBU_cover.webp"
-              alt={t("guide.coverAlt")}
-              width={1000}
-              height={1000}
-              sizes="(max-width: 639px) 240px, (max-width: 1023px) 320px, 460px"
-              className="home-cover w-[240px] sm:w-[320px] lg:w-full lg:max-w-[460px] h-auto rounded-xl shadow-[0_32px_64px_rgba(0,0,0,.55)]"
-            />
-          </div>
-          <div className="p-7 sm:p-10 lg:px-14 lg:py-14 self-center">
-            <p className="text-[14px] text-muted">{t("guide.meta")}</p>
-            <h2 className="mt-3 m-h2 text-[32px] lg:text-[clamp(32px,3.2vw,46px)] leading-[1.05]">{t("guide.title")}</h2>
-            <p className="mt-4 text-[17px] leading-[1.55] text-foreground-2 max-w-[32em]">{t("guide.text")}</p>
-            <ol className="mt-7 grid sm:grid-cols-2 gap-x-6 border-t border-line max-sm:hidden">
-              {chapters.map((c, i) => (
-                <li key={c} className="grid grid-cols-[26px_minmax(0,1fr)] gap-2 py-[9px] border-b border-line text-[14px] leading-[1.4] text-foreground-2">
-                  <span className="font-medium text-muted tabular-nums">{String(i + 1).padStart(2, "0")}</span>
-                  {c}
-                </li>
-              ))}
-            </ol>
-            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-4">
-              <a href={GUIDE_PDF} target="_blank" rel="noopener" className="m-btn m-btn-p max-sm:w-full">{t("guide.cta")}</a>
-              <a href={GUIDE_PDF} download className="m-more">{t("guide.download")}</a>
-            </div>
-          </div>
-        </div>
-        <GuideCards />
+        <Link data-reveal href="/guides" className="group m-tile flex flex-wrap items-center justify-between gap-x-8 gap-y-4 px-6 py-5 sm:px-8 sm:py-6 transition-colors duration-200 hover:bg-[#232325]">
+          <span className="flex items-center gap-4 text-[16px] leading-[1.5] text-foreground-2 max-w-[48em]">
+            <Image src="/Articles Image/DBU_cover.webp" alt="" width={1000} height={1000} sizes="56px" className="w-14 h-14 rounded-md shrink-0" />
+            {t("guidesLink.text")}
+          </span>
+          <span className="m-more text-[15px]">{t("guidesLink.cta")}</span>
+        </Link>
       </section>
 
       {latest && (

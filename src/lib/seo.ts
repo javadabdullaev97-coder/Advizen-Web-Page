@@ -204,6 +204,7 @@ const PAGE_PATHS = {
   expertise: "/expertise",
   contact: "/contact",
   insights: "/insights",
+  guides: "/guides",
   privacy: "/privacy",
   terms: "/terms",
   cookies: "/cookies",
@@ -234,18 +235,21 @@ const BREADCRUMB_LABELS: Record<Locale, { home: string; expertise: string; insig
     expertise: "Expertise",
     contact: "Contact",
     insights: "Insights",
+    guides: "Guides",
   },
   ru: {
     home: "Главная",
     expertise: "Услуги",
     contact: "Контакты",
     insights: "Аналитика",
+    guides: "Гиды",
   },
   uz: {
     home: "Bosh sahifa",
     expertise: "Xizmatlar",
     contact: "Bogʻlanish",
     insights: "Tahlillar",
+    guides: "Qoʻllanmalar",
   },
 };
 
@@ -453,6 +457,23 @@ const PAGE_CONTENT: Record<PageKey, Record<Locale, { title: string; description:
       title: "Oʻzbekiston biznesi, soliqlari va huquqi boʻyicha tahlillar | Advizen Consulting",
       description:
         "Oʻzbekiston va Markaziy Osiyoda soliq, huquq, moliya, HR va tartibga solish oʻzgarishlari boʻyicha Advizen Consulting jamoasidan ekspert tahlillari.",
+    },
+  },
+  guides: {
+    en: {
+      title: "Guides to Doing Business in Uzbekistan: Tax, Company Setup, Hiring | Advizen",
+      description:
+        "Free PDF guides for foreign investors: Doing Business in Uzbekistan 2026 and topic guides on company setup, hiring and migration, tax and IT business.",
+    },
+    ru: {
+      title: "Гиды по бизнесу в Узбекистане: налоги, открытие компании, найм | Advizen",
+      description:
+        "Бесплатные PDF-гиды для иностранных инвесторов: Doing Business in Uzbekistan 2026 и тематические гиды по открытию компании, найму и миграции, налогам и IT.",
+    },
+    uz: {
+      title: "Oʻzbekistonda biznes boʻyicha qoʻllanmalar: soliqlar, kompaniya ochish, xodim yollash | Advizen",
+      description:
+        "Xorijiy investorlar uchun bepul PDF qoʻllanmalar: Doing Business in Uzbekistan 2026 hamda kompaniya ochish, xodim yollash va migratsiya, soliqlar va IT boʻyicha mavzuli qoʻllanmalar.",
     },
   },
   privacy: {

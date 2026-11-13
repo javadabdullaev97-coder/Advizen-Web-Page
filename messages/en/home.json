@@ -98,11 +98,12 @@
       "title": "Read before you invest",
       "lede": "Plain-language briefings on Uzbek tax, law and regulation, written by the advisers who do the work.",
       "all": "All articles",
-      "guideMeta": "Flagship guide · 2026 edition · PDF, 58 pages",
+      "guideMeta": "Flagship guide · 2026 edition · PDF",
       "guideTitle": "Doing Business in Uzbekistan",
       "guideText": "Market entry, regulation and day-to-day operations in one guide for foreign investors.",
       "guideCta": "Open the guide",
-      "read": "Read"
+      "read": "Read",
+      "allGuides": "All guides"
     },
     "contact": {
       "title": "Start with a conversation",

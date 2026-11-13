@@ -136,11 +136,11 @@
   },
   "InsightsModern": {
     "hero": {
-      "title": "Articles and guides on Uzbek tax, law and business",
-      "lede": "Briefings and practical guides written by our tax, legal, accounting and HR advisers. Free to read."
+      "title": "Articles on Uzbek tax, law and business",
+      "lede": "Briefings written by our tax, legal, accounting and HR advisers. Free to read."
     },
     "guide": {
-      "meta": "Flagship guide · 2026 edition · PDF, 58 pages",
+      "meta": "Flagship guide · 2026 edition · PDF",
       "title": "Doing Business in Uzbekistan",
       "text": "Tax, law, accounting and employment for foreign companies in Uzbekistan: eleven chapters, treaty withholding rates and a tax calendar, updated to November 2026.",
       "chapters": [
@@ -183,11 +183,15 @@
       "text": "We prepare written briefings and market studies on request, on the questions your board or investors are asking.",
       "primary": "Commission a report",
       "telegram": "Message us on Telegram"
+    },
+    "guidesLink": {
+      "text": "Looking for our PDF guides? Doing Business in Uzbekistan and the topic guides now have their own page.",
+      "cta": "All guides"
     }
   },
   "Guides": {
-    "title": "More guides",
-    "lede": "Practical guides on one topic each, free to download.",
+    "title": "Topic guides",
+    "lede": "One subject each, at overview level, updated for 2026.",
     "open": "Open the guide",
     "items": {
       "company-setup": {
@@ -214,6 +218,12 @@
         "meta": "Guide · 2026 edition · PDF",
         "coverAlt": "Cover of Tax Guide Uzbekistan, 2026 edition"
       }
+    }
+  },
+  "GuidesPage": {
+    "hero": {
+      "title": "Guides for doing business in Uzbekistan",
+      "lede": "Practical PDF guides from our advisers: the full picture in Doing Business in Uzbekistan, and one topic each in the guides below. Free to download."
     }
   }
 }

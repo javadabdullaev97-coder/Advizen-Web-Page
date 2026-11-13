@@ -7,7 +7,8 @@
     "inquire": "Inquire",
     "book": "Book a consultation",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "guides": "Guides"
   },
   "Footer": {
     "expertise": "Expertise",
@@ -35,6 +36,7 @@
     "compliance": "Compliance monitoring",
     "workPermits": "Work permits",
     "payroll": "Payroll bureau",
-    "tashkent": "Tashkent, Uzbekistan"
+    "tashkent": "Tashkent, Uzbekistan",
+    "guides": "Guides"
   }
 }
