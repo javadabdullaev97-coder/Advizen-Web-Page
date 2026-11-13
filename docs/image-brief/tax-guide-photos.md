@@ -1,0 +1,13 @@
+# Tax guide photos — generation brief
+
+For `docs/tax-guide/en.html` and `ru.html`. Generate in Gemini, 3–4 candidates per slot, show the owner, then save the pick as JPEG (quality ~82, long side 2000 px) in `docs/tax-guide/img/` under the file name below, put it in both HTML files and rebuild with `scripts/build-pdf.mjs`.
+
+Style: the light still lifes of the site's practice photos (`public/Practice Images/tax.webp`, `accounting.webp`, `legal.webp`). Attach one of them as the style reference. Light warm grey background, soft daylight, gentle shadows, few objects, exactly one deep red accent, lots of calm space, no text, no logos, no readable numbers. The cover is the exception: it carries white text, so it is darker.
+
+| Slot | Page | File | Prompt |
+|---|---|---|---|
+| cover | Cover, portrait, title on the left and bottom | `tax-cover.jpg` | Editorial photograph, portrait 3:4: a modern finance office in Tashkent at blue hour, a desk by floor-to-ceiling windows with neat documents, a calculator and a laptop showing abstract charts, the softly blurred Tashkent skyline with warm city lights, warm desk lamp light, one deep red folder as the only accent, the lower third darker and calm, realistic, no text, no logos |
+| cross-border | Page 5 band (withholding tax and treaties), very wide crop | `tax-cross-border.jpg` | Minimal editorial still life, wide 21:9, light warm grey background: a folded world map, two passports, a short stack of invoices and a small glass globe, soft daylight, gentle shadows, one deep red pen as the only accent, lots of empty space, realistic, no readable text, no logos |
+| digital | Page 9 bottom (services from abroad, digital sellers) | `tax-digital.jpg` | Minimal editorial still life, wide 16:9, light warm grey background: an open laptop with an abstract online shop page, two small parcel boxes and a card terminal, soft daylight, one deep red parcel tape as the only accent, calm and clean, realistic, no readable text, no logos |
+| small-business | Page 10 bottom (turnover tax, 6% VAT) | `tax-small-business.jpg` | Minimal editorial still life, wide 16:9, light warm grey background: a small shop counter corner with a receipt printer, a card terminal and a paper bag, soft daylight, one deep red apple as the only accent, calm and clean, realistic, no readable text, no logos |
+| property | Page 12 band (property, land, water), very wide crop | `tax-property.jpg` | Minimal editorial still life, wide 21:9, light warm grey background: a small white architectural model of an office building on a square of grass, a glass of water and a set of keys, soft daylight, gentle shadows, one deep red key tag as the only accent, lots of empty space, realistic, no text, no logos |
