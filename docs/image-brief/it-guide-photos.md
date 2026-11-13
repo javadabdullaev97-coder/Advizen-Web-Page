@@ -12,3 +12,5 @@ Common rules: realistic editorial photograph, natural light, modern and optimist
 | meeting | Page 11 photo at the bottom (how we help). No people, so it does not repeat the team photo | `it-meeting.jpg` | Editorial still life photograph, wide 16:9, close-up on a light wood desk by a window in warm afternoon light: two passports, a set of apartment keys, a signed employment contract without readable text, a laptop slightly open and a cup of tea, a softly blurred Tashkent city view in the background, one deep red passport cover as the only accent, shallow depth of field, calm and optimistic, realistic, no readable text, no logos |
 
 The contacts page keeps `khiva.jpg`.
+
+Done in November 2026: all four slots were filled from the owner's Gemini picks (`docs/it-guide/img/`).
