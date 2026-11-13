@@ -10,7 +10,9 @@
      (АО и МСФО по Закону об АО, первый год аудированной МСФО-отчётности новых ОЗО, правила для малого бизнеса после 2027 года,
      филиалы, МФЦТ) даны формулой «смотрим под конкретный случай».
      Страницы совпадают с en.html одна к одной. Стили и спрайт иконок те же, что в en.html.
-     Фото в img/: acc-cover (финальное), acc-standards, acc-statements, acc-audit (заглушки). -->
+     Уровень обзора после замечаний владельца (ноябрь 2026): одна строка на плитку, одна карточка с советом или ошибкой
+     на страницу, без кодов счетов и номеров строк, не больше одной ссылки на статью закона на странице.
+     Фото в img/: acc-cover, acc-standards, acc-statements, acc-audit (все финальные). -->
 <html lang="ru" data-theme="guide">
 <head>
 <meta charset="utf-8">
@@ -19,46 +21,54 @@
 <link rel="stylesheet" href="../brochure.css">
 <link rel="stylesheet" href="../brochure-kit.css">
 <style>
-  /* Components of this guide on top of brochure.css and brochure-kit.css. Candidates for the kit are marked KIT. */
+  /* Components of this guide on top of brochure.css and brochure-kit.css. Candidates for the kit are marked KIT.
+     Surface level: big type, one line per tile, at most one tip or mistake card per page. */
   .nw { white-space: nowrap; }
-  .tline .ev .c span .nw { display: inline; margin: 0; color: inherit; }
-  .lede.s { font-size: 11.4pt; margin-top: 4mm; max-width: 178mm; }
-  .sub.t { margin-top: 6mm; }
-  .note { margin-top: 3mm; padding-top: 0; }
+  .lede.s { font-size: 12.6pt; line-height: 1.42; margin-top: 5mm; max-width: 172mm; }
+  .sub.t { margin-top: 9mm; }
+  .note { margin-top: 4mm; padding-top: 0; font-size: 9pt; }
+
+  /* Cards with one sentence each. The chip sits centred against the text block */
+  .card { align-items: center; padding: 5.4mm 6mm; }
+  .card h4 { font-size: 11.8pt; }
+  .card p { font-size: 10pt; line-height: 1.42; }
+  .cards.one { grid-template-columns: 1fr; }
+  .cards.end { margin-top: auto; }
+  .card.more .chip { background: rgba(255,255,255,.12); }
 
   /* KIT: progress bar with a chapter label */
   .progress { align-items: center; }
   .progress em { font-style: normal; font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-right: 2mm; }
 
-  /* Contents in four columns */
-  .toc.four { grid-template-columns: repeat(4, 1fr); gap: 3.5mm; margin-top: 7mm; }
-  .toc.four a { min-height: 52mm; padding: 4.6mm; }
-  .toc.four a .n { top: 4.6mm; right: 4.6mm; }
-  .toc.four a b { font-size: 10.6pt; }
+  /* Contents in four columns, titles only */
+  .toc.four { grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 9mm; }
+  .toc.four a { min-height: 46mm; padding: 5mm; }
+  .toc.four a .n { top: 5mm; right: 5mm; font-size: 9pt; }
+  .toc.four a b { font-size: 12.6pt; line-height: 1.2; }
   .figs.toc-figs { margin-top: auto; }
+  .figs.toc-figs .fig span { font-size: 9.4pt; }
 
   /* KIT: opener with an in-chapter link list, and a flipped variant */
   .opener .side { padding-right: 14mm; }
-  .opener h2 { font-size: 27pt; }
-  .opener p { font-size: 10.6pt; }
-  .opener .inch { list-style: none; margin-top: 7mm; border-top: 1px solid rgba(255,255,255,.3); }
-  .opener .inch a { display: grid; grid-template-columns: 8mm 1fr 5mm; align-items: center; padding: 2.5mm 0; border-bottom: 1px solid rgba(255,255,255,.3); color: #fff; text-decoration: none; font-size: 9.6pt; font-weight: 600; }
-  .opener .inch a span { font-size: 7.6pt; font-weight: 700; color: rgba(255,255,255,.66); }
-  .opener .inch .ic { width: 4.4mm; height: 4.4mm; color: rgba(255,255,255,.8); }
+  .opener h2 { font-size: 28pt; }
+  .opener p { font-size: 12pt; line-height: 1.45; }
+  .opener .inch { list-style: none; margin-top: 8mm; border-top: 1px solid rgba(255,255,255,.3); }
+  .opener .inch a { display: grid; grid-template-columns: 9mm 1fr 5mm; align-items: center; padding: 3mm 0; border-bottom: 1px solid rgba(255,255,255,.3); color: #fff; text-decoration: none; font-size: 10.4pt; font-weight: 600; }
+  .opener .inch a span { font-size: 8pt; font-weight: 700; color: rgba(255,255,255,.66); }
+  .opener .inch .ic { width: 4.6mm; height: 4.6mm; color: rgba(255,255,255,.8); }
   .opener.flip .side { order: 2; padding: 17mm 18mm 23mm 14mm; }
   .opener-page.flip .foot { left: calc(50% + 14mm); right: var(--pad-x); }
 
   /* KIT: horizontal timeline */
-  .tline { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 3mm; margin-top: 7mm; }
+  .tline { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 3mm; margin-top: 9mm; }
   .tline::before { content: ""; position: absolute; left: 0; right: 1mm; top: 8mm; border-top: 1.4px solid var(--ink); }
   .tline::after { content: ""; position: absolute; right: 0; top: 6.7mm; width: 2.4mm; height: 2.4mm; border-top: 1.4px solid var(--ink); border-right: 1.4px solid var(--ink); transform: rotate(45deg); }
   .tline .ev { position: relative; display: flex; flex-direction: column; }
-  .tline .ev .c { flex: 1; }
-  .tline .ev .d { display: block; height: 5mm; font-size: 7.6pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .tline .ev .d { display: block; height: 5mm; font-size: 8.2pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
   .tline .ev > i { position: absolute; left: 0; top: 6.3mm; width: 3.4mm; height: 3.4mm; border-radius: 50%; background: var(--paper); border: 1.4px solid var(--ink); }
-  .tline .ev .c { margin-top: 7mm; background: #fff; border-radius: 3mm; padding: 3.6mm 3.6mm 4mm; min-height: 41mm; }
-  .tline .ev .c b { display: block; font-size: 9.8pt; line-height: 1.22; font-weight: 700; }
-  .tline .ev .c span { display: block; margin-top: 1.6mm; font-size: 8.2pt; line-height: 1.4; color: var(--ink-2); }
+  .tline .ev .c { flex: 1; margin-top: 7mm; background: #fff; border-radius: 3mm; padding: 4mm 4mm 4.4mm; min-height: 33mm; }
+  .tline .ev .c b { display: block; font-size: 11pt; line-height: 1.25; font-weight: 700; }
+  .tline .ev .c span { display: block; margin-top: 2mm; font-size: 9.4pt; line-height: 1.38; color: var(--ink-2); }
   .tline .ev.key > i { background: var(--accent); border-color: var(--accent); width: 4.6mm; height: 4.6mm; top: 5.7mm; }
   .tline .ev.key .d { color: var(--accent); }
   .tline .ev.key .c { background: var(--accent); color: #fff; }
@@ -66,204 +76,191 @@
   .tline .ev.past .c { background: var(--tint-grey); }
 
   /* Two-column fact lists with icons */
-  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 0 9mm; margin-top: 6mm; }
-  .duo h3 { display: flex; align-items: center; gap: 2.4mm; padding-bottom: 2.2mm; border-bottom: 1px solid var(--ink); }
-  .duo h3 .ic { width: 5mm; height: 5mm; color: var(--accent); }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10mm; margin-top: 10mm; }
+  .duo h3 { display: flex; align-items: center; gap: 2.4mm; padding-bottom: 2.4mm; border-bottom: 1px solid var(--ink); }
+  .duo h3 .ic { width: 5.4mm; height: 5.4mm; color: var(--accent); }
   .duo .facts { margin-top: 0; }
-  .duo .facts li { padding: 2.2mm 0 2.2mm 5mm; font-size: 9.4pt; line-height: 1.42; }
-  .duo .facts li::before { top: 3.9mm; background: var(--accent); }
+  .duo .facts li { padding: 3.2mm 0 3.2mm 5mm; font-size: 10.8pt; line-height: 1.4; }
+  .duo .facts li::before { top: 5.2mm; background: var(--accent); }
 
   /* KIT: standards matrix */
-  .mlegend { display: flex; flex-wrap: wrap; gap: 2mm 5mm; margin-top: 5mm; font-size: 8pt; color: var(--ink-2); }
-  .mlegend span { display: flex; align-items: center; gap: 1.8mm; }
-  .mlegend i { width: 4mm; height: 4mm; border-radius: 1mm; }
-  .mx { width: calc(100% + 3.2mm); margin: 2mm -1.6mm 0; border-collapse: separate; border-spacing: 1.6mm; table-layout: fixed; }
-  .mx th { font-size: 7.4pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 0 3mm .4mm; }
-  .mx th:first-child { width: 64mm; }
-  .mx td { border-radius: 2mm; padding: 2.2mm 3mm; font-size: 7.8pt; line-height: 1.3; vertical-align: middle; height: 12.6mm; }
-  .mx td.who { background: #fff; }
-  .mx td.who b { display: block; font-size: 9pt; line-height: 1.2; }
-  .mx td.who small { display: block; font-size: 7.4pt; color: var(--muted); margin-top: .5mm; line-height: 1.28; }
-  .mx td .s { display: block; font-weight: 700; font-size: 8.8pt; line-height: 1.15; }
-  .mx td .s + span { display: block; margin-top: .5mm; opacity: .82; }
+  .mlegend { display: flex; flex-wrap: wrap; gap: 2mm 6mm; margin-top: 6mm; font-size: 9pt; color: var(--ink-2); }
+  .mlegend span { display: flex; align-items: center; gap: 2mm; }
+  .mlegend i { width: 4.4mm; height: 4.4mm; border-radius: 1mm; }
+  .mx { width: calc(100% + 3.6mm); margin: 3mm -1.8mm 0; border-collapse: separate; border-spacing: 1.8mm; table-layout: fixed; }
+  .mx th { font-size: 8pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 0 3.4mm .4mm; }
+  .mx th:first-child { width: 62mm; }
+  .mx td { border-radius: 2.2mm; padding: 2.4mm 3.4mm; vertical-align: middle; height: 14.6mm; }
+  .mx td.who { background: #fff; font-size: 10.6pt; line-height: 1.22; font-weight: 700; }
+  .mx td .s { display: block; font-weight: 700; font-size: 10.4pt; line-height: 1.2; }
   .c-ifrs { background: var(--accent); color: #fff; }
   .c-nsfo { background: var(--block); color: #fff; }
   .c-nsbu { background: var(--tint-grey); color: var(--ink); }
   .c-chk { background: rgba(255,255,255,.55); outline: 1.2px dashed var(--accent); outline-offset: -1.2px; color: var(--ink-2); }
   .c-chk .s { color: var(--accent); }
+  .stat.row { display: grid; grid-template-columns: 11mm 1fr; gap: 4.4mm; align-items: center; padding: 5.4mm 6mm; }
+  .stat.row b { display: block; }
+  .stat.row p { margin-top: 1.4mm; font-size: 10pt; line-height: 1.4; color: var(--ink-2); }
 
   /* KIT: chart of accounts classes */
-  .cls10 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; margin-top: 5mm; }
-  .cl { border-radius: 2.4mm; padding: 3mm 3.2mm 3.2mm; min-height: 22mm; display: flex; flex-direction: column; justify-content: space-between; background: #fff; }
-  .cl b { font-family: var(--display); font-weight: 700; font-size: 19pt; line-height: 1; letter-spacing: -0.03em; color: var(--accent); }
-  .cl span { font-size: 7.8pt; line-height: 1.25; font-weight: 600; }
+  .cls10 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.4mm; margin-top: 7mm; }
+  .cl { border-radius: 2.6mm; padding: 3.6mm 3.8mm 3.8mm; min-height: 27mm; display: flex; flex-direction: column; justify-content: space-between; background: #fff; }
+  .cl b { font-family: var(--display); font-weight: 700; font-size: 22pt; line-height: 1; letter-spacing: -0.03em; color: var(--accent); }
+  .cl span { font-size: 9.4pt; line-height: 1.25; font-weight: 600; }
   .cl.l { background: var(--block); color: #fff; } .cl.l b { color: rgba(255,255,255,.5); }
   .cl.e { background: var(--accent); color: #fff; } .cl.e b { color: rgba(255,255,255,.6); }
   .cl.i { background: var(--tint-grey); } .cl.i b { color: var(--ink); }
-  .codes { display: flex; flex-wrap: wrap; gap: 1.6mm; margin-top: 3mm; }
-  .codes span { font-size: 7.8pt; padding: 1mm 2.6mm; border-radius: 99px; border: 1px solid var(--line); color: var(--ink-2); background: rgba(255,255,255,.5); }
-  .codes span b { color: var(--ink); font-weight: 700; margin-right: 1mm; }
 
   /* KIT: steps with arrows, light cards */
-  .steps4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 4mm; }
-  .steps4 > div { position: relative; background: #fff; border-radius: 3mm; padding: 4mm 4mm 4.4mm; min-height: 40mm; }
-  .steps4 > div:not(:last-child)::after { content: ""; position: absolute; right: -3.3mm; top: 50%; width: 2.2mm; height: 2.2mm; border-top: 1.4px solid var(--ink); border-right: 1.4px solid var(--ink); transform: translateY(-50%) rotate(45deg); }
-  .steps4 em { display: block; font-style: normal; font-size: 7.4pt; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
-  .steps4 b { display: block; margin-top: 1.6mm; font-size: 9.6pt; line-height: 1.22; }
-  .steps4 span { display: block; margin-top: 1.4mm; font-size: 8pt; line-height: 1.38; color: var(--ink-2); }
+  .steps4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4.4mm; margin-top: 4.4mm; }
+  .steps4 > div { position: relative; background: #fff; border-radius: 3mm; padding: 4.4mm 4.4mm 4.8mm; min-height: 28mm; }
+  .steps4 > div:not(:last-child)::after { content: ""; position: absolute; right: -3.5mm; top: 50%; width: 2.2mm; height: 2.2mm; border-top: 1.4px solid var(--ink); border-right: 1.4px solid var(--ink); transform: translateY(-50%) rotate(45deg); }
+  .steps4 em { display: block; font-style: normal; font-size: 8pt; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+  .steps4 b { display: block; margin-top: 2mm; font-size: 11pt; line-height: 1.25; }
   .steps4 > div.hl { background: var(--accent); color: #fff; }
-  .steps4 > div.hl em, .steps4 > div.hl span { color: rgba(255,255,255,.85); }
+  .steps4 > div.hl em { color: rgba(255,255,255,.85); }
 
   /* KIT: full vs short set */
-  .setc { display: grid; grid-template-columns: 1fr 56mm; gap: 6mm; margin-top: 6mm; }
+  .setc { display: grid; grid-template-columns: 1fr 58mm; gap: 7mm; margin-top: 8mm; }
   .sets { width: 100%; border-collapse: collapse; }
-  .sets th { font-size: 9.4pt; font-weight: 700; text-align: center; padding: 0 1mm 2.4mm; vertical-align: bottom; line-height: 1.2; }
-  .sets th small { display: block; font-size: 7.4pt; font-weight: 500; color: var(--muted); margin-top: .6mm; }
+  .sets th { font-size: 10pt; font-weight: 700; text-align: center; padding: 0 1mm 3mm; vertical-align: bottom; line-height: 1.2; }
   .sets th:first-child { text-align: left; }
-  .sets td { border-top: 1px solid var(--line); padding: 2.4mm 1mm; text-align: center; vertical-align: middle; }
+  .sets td { border-top: 1px solid var(--line); padding: 3mm 1mm; text-align: center; vertical-align: middle; }
   .sets td:first-child { text-align: left; }
-  .sets td .rp { display: grid; grid-template-columns: 9mm 1fr; gap: 2.6mm; align-items: center; }
-  .sets td .rp .chip { width: 9mm; height: 9mm; }
-  .sets td .rp .ic { width: 4.8mm; height: 4.8mm; }
-  .sets td .rp b { display: block; font-size: 9.6pt; line-height: 1.2; }
-  .sets td .rp small { display: block; font-size: 7.6pt; color: var(--muted); margin-top: .3mm; }
-  .yes, .no { display: inline-grid; place-items: center; width: 7mm; height: 7mm; border-radius: 50%; }
+  .sets td .rp { display: grid; grid-template-columns: 10mm 1fr; gap: 3mm; align-items: center; }
+  .sets td .rp .chip { width: 10mm; height: 10mm; }
+  .sets td .rp b { display: block; font-size: 10.8pt; line-height: 1.2; }
+  .sets td .rp small { display: block; font-size: 8.6pt; color: var(--muted); margin-top: .4mm; }
+  /* round tick holders: same centring rules as .chip */
+  .yes, .no { display: inline-flex; align-items: center; justify-content: center; width: 7.6mm; height: 7.6mm; border-radius: 50%; line-height: 0; vertical-align: middle; }
   .yes { background: var(--accent); color: #fff; }
   .no { background: var(--tint-grey); color: var(--muted); }
-  .yes .ic, .no .ic { width: 4.2mm; height: 4.2mm; stroke-width: 2.2; }
-  .dl { display: flex; flex-direction: column; gap: 2.4mm; }
-  .dl > div { border-radius: 3mm; padding: 4mm 4.4mm; flex: 1; }
-  .dl b { display: block; font-family: var(--display); font-weight: 700; font-size: 21pt; line-height: 1; letter-spacing: -0.03em; }
-  .dl span { display: block; margin-top: 1.8mm; font-size: 8.2pt; line-height: 1.38; }
+  .yes > .ic, .no > .ic { display: block; width: 4.4mm; height: 4.4mm; stroke-width: 2.2; }
+  .dl { display: flex; flex-direction: column; gap: 3mm; }
+  .dl > div { border-radius: 3mm; padding: 4.6mm 5mm; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .dl b { display: block; font-family: var(--display); font-weight: 700; font-size: 23pt; line-height: 1; letter-spacing: -0.03em; }
+  .dl span { display: block; margin-top: 2mm; font-size: 9.8pt; line-height: 1.35; }
   .dl .r { background: var(--accent); color: #fff; } .dl .r span { color: rgba(255,255,255,.86); }
   .dl .k { background: var(--block); color: #fff; } .dl .k span { color: var(--block-muted); }
   .dl .g { background: #fff; } .dl .g b { color: var(--accent); } .dl .g span { color: var(--ink-2); }
 
   /* KIT: balance sheet structure */
-  .bs { display: grid; grid-template-columns: 1fr 10mm 1fr; margin-top: 5mm; }
-  .bs .col { display: flex; flex-direction: column; gap: 1.8mm; height: 94mm; }
-  .bs .hd { display: flex; justify-content: space-between; align-items: baseline; font-size: 7.4pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 0 .6mm .6mm; }
-  .bs .blk { border-radius: 2.6mm; padding: 3.2mm 3.8mm; display: flex; flex-direction: column; min-height: 0; }
-  .bs .blk .ln { font-size: 7.4pt; font-weight: 700; letter-spacing: .06em; color: var(--muted); }
-  .bs .blk b { display: block; margin-top: .8mm; font-size: 10.4pt; line-height: 1.2; }
-  .bs .blk span { display: block; margin-top: 1mm; font-size: 7.8pt; line-height: 1.35; color: var(--ink-2); }
-  .bs .blk .cl2 { margin-top: auto; padding-top: 1.6mm; display: flex; gap: 1.4mm; flex-wrap: wrap; }
-  .bs .blk .cl2 i { font-style: normal; font-size: 7.2pt; font-weight: 700; padding: .7mm 2.2mm; border-radius: 99px; background: var(--tint-grey); color: var(--ink); }
+  .bs { display: grid; grid-template-columns: 1fr 12mm 1fr; margin-top: 7mm; }
+  .bs .col { display: flex; flex-direction: column; gap: 2mm; height: 80mm; }
+  .bs .hd { font-size: 8pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 0 .6mm .8mm; }
+  .bs .blk { border-radius: 2.8mm; padding: 4mm 4.6mm; display: flex; flex-direction: column; justify-content: center; min-height: 0; }
+  .bs .blk b { display: block; font-size: 12pt; line-height: 1.2; }
+  .bs .blk span { display: block; margin-top: 1.4mm; font-size: 9.6pt; line-height: 1.35; color: var(--ink-2); }
   .bs .w { background: #fff; }
   .bs .e { background: var(--accent); color: #fff; }
   .bs .k { background: var(--block); color: #fff; }
   .bs .k2 { background: #3a393c; color: #fff; }
-  .bs .e .ln, .bs .k .ln, .bs .k2 .ln { color: rgba(255,255,255,.66); }
-  .bs .e span, .bs .k span, .bs .k2 span { color: rgba(255,255,255,.82); }
-  .bs .e .cl2 i, .bs .k .cl2 i, .bs .k2 .cl2 i { background: rgba(255,255,255,.16); color: #fff; }
-  .bs .tot { display: flex; justify-content: space-between; align-items: baseline; margin-top: .6mm; padding: 1.8mm .6mm 0; border-top: 1.4px solid var(--ink); font-size: 8.6pt; font-weight: 700; }
-  .bs .tot small { font-size: 7.4pt; color: var(--muted); font-weight: 600; }
-  .bs .eq { display: grid; place-items: center; }
-  .bs .eq span { display: grid; place-items: center; width: 8mm; height: 8mm; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 700; font-size: 12pt; line-height: 1; }
+  .bs .e span { color: rgba(255,255,255,.86); }
+  .bs .eq { display: flex; align-items: center; justify-content: center; }
+  .bs .eq span { position: relative; display: block; width: 8.4mm; height: 8.4mm; border-radius: 50%; background: var(--ink); }
+  /* the equals sign is drawn, so it sits in the exact centre of its circle whatever the font metrics */
+  .bs .eq span::before, .bs .eq span::after { content: ""; position: absolute; left: 2.5mm; right: 2.5mm; height: .5mm; border-radius: .25mm; background: #fff; top: calc(50% - 1.05mm); }
+  .bs .eq span::after { top: calc(50% + .55mm); }
 
-  /* KIT: results waterfall */
-  .wfwrap { display: grid; grid-template-columns: 1fr 58mm; gap: 6mm; margin-top: 4mm; align-items: end; }
-  .wf { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.4mm; align-items: end; }
+  /* KIT: results bars */
+  .wfwrap { display: grid; grid-template-columns: 1fr 58mm; gap: 7mm; margin-top: 5mm; align-items: end; }
+  .wf { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.6mm; align-items: end; }
   .wf .bar { display: flex; flex-direction: column; justify-content: flex-end; }
-  .wf .bar .op { font-size: 7.2pt; line-height: 1.25; color: var(--muted); margin-bottom: 1.4mm; min-height: 6mm; display: flex; align-items: flex-end; }
-  .wf .bar i { display: flex; align-items: flex-start; justify-content: flex-start; border-radius: 2mm 2mm 0 0; background: #c9c6be; font-style: normal; font-size: 7.4pt; font-weight: 700; color: var(--ink); padding: 1.6mm 2mm; }
-  .wf .bar.first i { background: var(--block); color: #fff; }
-  .wf .bar.last i { background: var(--accent); color: #fff; }
-  .wf .bar .lb { margin-top: 2mm; padding-top: 1.6mm; border-top: 1.4px solid var(--ink); font-size: 8.6pt; font-weight: 700; line-height: 1.2; min-height: 9mm; }
+  .wf .bar .op { font-size: 8.4pt; line-height: 1.25; color: var(--muted); margin-bottom: 1.6mm; min-height: 7mm; display: flex; align-items: flex-end; }
+  .wf .bar i { display: block; border-radius: 2mm 2mm 0 0; background: #c9c6be; }
+  .wf .bar.first i { background: var(--block); }
+  .wf .bar.last i { background: var(--accent); }
+  .wf .bar .lb { margin-top: 2mm; padding-top: 1.8mm; border-top: 1.4px solid var(--ink); font-size: 9.6pt; font-weight: 700; line-height: 1.2; min-height: 10mm; }
   .wfwrap .card { grid-template-columns: 1fr; margin: 0; }
 
-  /* Calendar tweaks */
-  .year .m { min-height: 21mm; }
-  .year .m .dot.g { color: var(--muted); }
-  .year .m.peak .dot.g { color: var(--block-muted); }
-  .chk2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 9mm; margin-top: 6mm; }
-  .chk2 h3 { display: flex; align-items: center; gap: 2.4mm; padding-bottom: 2.2mm; border-bottom: 1px solid var(--ink); }
-  .chk2 h3 .ic { width: 5mm; height: 5mm; color: var(--accent); }
-  .chk2 .ticks { grid-template-columns: 1fr; gap: 2.2mm; margin-top: 3mm; }
-  .chk2 .ticks li { font-size: 9.2pt; }
+  /* Calendar */
+  .year { margin-top: 8mm; gap: 2.4mm; }
+  .year .m { min-height: 22mm; padding: 3.2mm 3mm; gap: 2mm; }
+  .year .m b { font-size: 8.2pt; }
+  .year .dot { font-size: 8.8pt; line-height: 1.22; gap: 1.6mm; }
+  .legend { font-size: 8.6pt; margin-top: 4mm; }
+  .chk2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10mm; margin-top: 9mm; }
+  .chk2 h3 { display: flex; align-items: center; gap: 2.4mm; padding-bottom: 2.4mm; border-bottom: 1px solid var(--ink); }
+  .chk2 h3 .ic { width: 5.4mm; height: 5.4mm; color: var(--accent); }
+  .chk2 .ticks { grid-template-columns: 1fr; gap: 3mm; margin-top: 4mm; }
+  .chk2 .ticks li { font-size: 10.8pt; align-items: center; }
+  .chk2 .ticks li .ic { margin-top: 0; }
 
   /* Audit flow */
-  .flow.audit { grid-template-columns: 1.5fr 15mm 1fr; margin-top: 6mm; row-gap: 2.4mm; }
-  .flow.audit .q { font-size: 9.6pt; }
-  .flow.audit .q small { display: block; font-weight: 500; font-size: 8pt; color: var(--ink-2); margin-top: 1mm; }
-  .th3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; margin-top: 3mm; }
-  .th3 span { display: flex; flex-direction: column; gap: 1.4mm; background: var(--tint-grey); border-radius: 2mm; padding: 2.4mm 2.6mm; font-weight: 500; font-size: 7.8pt; line-height: 1.3; color: var(--ink-2); }
-  .th3 span b { font-size: 10pt; color: var(--ink); font-weight: 700; }
-  .th3 .ic { width: 5mm; height: 5mm; color: var(--accent); }
-  .flow.audit .a { font-size: 8.4pt; }
+  .flow.audit { grid-template-columns: 1.7fr 14mm 1fr; margin-top: 6mm; row-gap: 2.4mm; }
+  .flow.audit .q { font-size: 10.6pt; padding: 4mm 5mm; }
+  .th3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2mm; margin-top: 3.4mm; }
+  .th3 span { display: flex; flex-direction: column; gap: 1mm; background: var(--tint-grey); border-radius: 2mm; padding: 2.6mm 2.8mm; white-space: nowrap; font-weight: 500; font-size: 9pt; line-height: 1.3; color: var(--ink-2); }
+  .th3 span b { font-size: 11pt; color: var(--ink); font-weight: 700; }
+  .flow.audit .a { font-size: 9.6pt; padding: 4mm 5mm; }
+  .flow.audit .a b { font-size: 11pt; }
   .flow.audit .a.grey { background: #fff; border: 1.2px dashed var(--muted); color: var(--ink-2); }
   .flow.audit .a.grey b { color: var(--ink); }
   .flow.audit .a.red { background: var(--accent); color: #fff; }
   .flow.audit .a.red b { color: #fff; }
-  .stats.four { grid-template-columns: repeat(4, 1fr); gap: 3mm; margin-top: 5mm; }
-  .stats.four .stat { padding: 3.4mm 3.6mm; gap: 1mm 2.6mm; display: grid; grid-template-columns: 9mm 1fr; align-items: center; }
-  .stats.four .stat .chip { grid-row: span 2; }
-  .stats.four .stat b { font-size: 13pt; }
-  .stats.four .stat span { font-size: 7.6pt; line-height: 1.3; }
-  .stats.four .chip { width: 9mm; height: 9mm; }
-  .stats.four .chip .ic { width: 5mm; height: 5mm; }
+  .stats.three { grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 6mm; margin-bottom: 6mm; }
+  .stats.three .stat { padding: 4.4mm 4.6mm; display: grid; grid-template-columns: 10mm 1fr; gap: 1mm 3.4mm; align-items: center; }
+  .stats.three .stat .chip { grid-row: span 2; width: 10mm; height: 10mm; }
+  .stats.three .stat b { font-size: 16pt; }
+  .stats.three .stat > span:not(.chip) { font-size: 9.4pt; line-height: 1.3; }
 
   /* KIT: people and documents */
-  .pd { display: grid; grid-template-columns: 1fr 1fr; gap: 0 9mm; margin-top: 7mm; }
-  .pd h3 { display: flex; align-items: center; gap: 2.4mm; padding-bottom: 2.2mm; border-bottom: 1px solid var(--ink); }
-  .pd h3 .ic { width: 5mm; height: 5mm; color: var(--accent); }
-  .ways { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm; margin-top: 3mm; }
-  .way { background: #fff; border-radius: 2.6mm; padding: 4mm 3.4mm; min-height: 21mm; display: grid; grid-template-columns: 9mm 1fr; gap: 2.4mm; align-items: center; font-size: 8.8pt; line-height: 1.25; font-weight: 600; }
-  .way .chip { width: 9mm; height: 9mm; } .way .ic { width: 4.8mm; height: 4.8mm; }
-  .resp { margin-top: 3mm; background: var(--block); color: #fff; border-radius: 2.6mm; padding: 4.4mm 4.4mm; font-size: 9pt; line-height: 1.4; display: grid; grid-template-columns: 6mm 1fr; gap: 2.6mm; align-items: center; }
-  .resp .ic { width: 5.4mm; height: 5.4mm; color: #fff; }
+  .pd { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10mm; margin-top: 8mm; }
+  .pd h3 { display: flex; align-items: center; gap: 2.4mm; padding-bottom: 2.4mm; border-bottom: 1px solid var(--ink); }
+  .pd h3 .ic { width: 5.4mm; height: 5.4mm; color: var(--accent); }
+  .ways { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4mm; margin-top: 4mm; }
+  .way { background: #fff; border-radius: 2.8mm; padding: 4.4mm 3.8mm; min-height: 24mm; display: grid; grid-template-columns: 10mm 1fr; gap: 3mm; align-items: center; font-size: 10pt; line-height: 1.25; font-weight: 600; }
+  .way .chip { width: 10mm; height: 10mm; }
+  .resp { margin-top: 2.4mm; background: var(--block); color: #fff; border-radius: 2.8mm; padding: 5mm; font-size: 10.4pt; line-height: 1.4; display: grid; grid-template-columns: 6mm 1fr; gap: 3mm; align-items: center; }
+  .resp .ic { display: block; width: 6mm; height: 6mm; color: #fff; }
   .resp b { color: #fff; }
-  .pd .facts { margin-top: 3mm; }
-  .pd .facts li { padding: 2.6mm 0 2.6mm 5mm; font-size: 9.2pt; line-height: 1.42; }
-  .pd .facts li::before { top: 4.4mm; background: var(--accent); }
-  .pipe { list-style: none; margin-top: 3mm; }
-  .pipe li { position: relative; display: grid; grid-template-columns: 10mm 1fr; gap: 3.4mm; padding-bottom: 6mm; }
+  .pipe { list-style: none; margin-top: 4mm; }
+  .pipe li { position: relative; display: grid; grid-template-columns: 10mm 1fr; gap: 3.6mm; align-items: center; padding-bottom: 5mm; }
   .pipe li:not(:last-child)::after { content: ""; position: absolute; left: 5mm; top: 10.6mm; bottom: .6mm; border-left: 1.4px dashed var(--muted); }
-  .pipe .chip { width: 10mm; height: 10mm; } .pipe .ic { width: 5.2mm; height: 5.2mm; }
-  .pipe b { display: block; font-size: 10pt; line-height: 1.2; padding-top: .8mm; }
-  .pipe span { display: block; margin-top: 1mm; font-size: 8.8pt; line-height: 1.38; color: var(--ink-2); }
-  .cards.end { margin-top: auto; }
-  .contacts-page .lede { max-width: 168mm; font-size: 12pt; }
+  .pipe .chip { width: 10mm; height: 10mm; }
+  .pipe li > div b { display: block; font-size: 11pt; line-height: 1.2; }
+  .pipe li > div span { display: block; margin-top: .8mm; font-size: 9.6pt; line-height: 1.35; color: var(--ink-2); }
+  .contacts-page .lede { max-width: 168mm; font-size: 12.6pt; }
   /* Russian edition: longer words, a little more room for labels */
-  html[lang="ru"] .mx th:first-child { width: 68mm; }
-  html[lang="ru"] .setc { grid-template-columns: 1fr 50mm; }
-  html[lang="ru"] .sets td { padding: 1.9mm 1mm; }
-  html[lang="ru"] .sets th small { white-space: nowrap; }
+  html[lang="ru"] .mx th:first-child { width: 66mm; }
+  html[lang="ru"] .setc { grid-template-columns: 1fr 54mm; }
+  html[lang="ru"] .toc.four a b { font-size: 11.8pt; }
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13h2M14 13h2M8 16.5h2"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g transform="translate(0 0.5)"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13h2M14 13h2M8 16.5h2"/></g></symbol>
   <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15.5h6M9 9h3"/></symbol>
   <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h3.5"/></symbol>
   <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.6 3.8 5.4 3.8 8.5s-1.2 5.9-3.8 8.5c-2.6-2.6-3.8-5.4-3.8-8.5S9.4 6.1 12 3.5z"/></symbol>
-  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5c.6-3.4 2.8-5.3 5.5-5.3s4.9 1.9 5.5 5.3"/><circle cx="16.8" cy="9" r="2.6"/><path d="M15.6 14.4c2.4-.3 4.3 1.3 4.9 4.6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><g transform="translate(0 -0.15)"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5c.6-3.4 2.8-5.3 5.5-5.3s4.9 1.9 5.5 5.3"/><circle cx="16.8" cy="9" r="2.6"/><path d="M15.6 14.4c2.4-.3 4.3 1.3 4.9 4.6"/></g></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.4-3 7.7-7 9.5-4-1.8-7-5.1-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
-  <symbol id="i-stamp" viewBox="0 0 24 24"><path d="M9.5 3.5h5l-.8 6.5h-3.4z"/><path d="M5 13.5c0-1.9 1.6-3.5 3.5-3.5h7c1.9 0 3.5 1.6 3.5 3.5V16H5z"/><path d="M5 20h14"/></symbol>
+  <symbol id="i-stamp" viewBox="0 0 24 24"><g transform="translate(0 0.25)"><path d="M9.5 3.5h5l-.8 6.5h-3.4z"/><path d="M5 13.5c0-1.9 1.6-3.5 3.5-3.5h7c1.9 0 3.5 1.6 3.5 3.5V16H5z"/><path d="M5 20h14"/></g></symbol>
   <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.8.6 1.1 1.4 1.1 2.2h5c0-.8.3-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></symbol>
-  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g transform="translate(0 0.5)"><path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.5h.01"/></g></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
-  <!-- added for this guide, same 24px line style -->
-  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3.5V20M8 20h8M4.5 7h15M4.5 7L2 13h5zM19.5 7L17 13h5z"/><path d="M2 13a2.5 2.5 0 0 0 5 0M17 13a2.5 2.5 0 0 0 5 0"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><g transform="translate(0 -0.25)"><path d="M5 12.5l4.5 4.5L19 7.5"/></g></symbol>
+  <!-- added for this guide, same 24px line style. Every drawing is centred in its 24px box (bounding box within 0.05 of 12,12) -->
+  <symbol id="i-scale" viewBox="0 0 24 24"><g transform="translate(0 0.25)"><path d="M12 3.5V20M8 20h8M4.5 7h15M4.5 7L2 13h5zM19.5 7L17 13h5z"/><path d="M2 13a2.5 2.5 0 0 0 5 0M17 13a2.5 2.5 0 0 0 5 0"/></g></symbol>
   <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3.5l8.5 4.5-8.5 4.5L3.5 8z"/><path d="M3.5 12l8.5 4.5 8.5-4.5M3.5 16l8.5 4.5 8.5-4.5"/></symbol>
-  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5c2.5-1 5.5-1 8 .5v14c-2.5-1.5-5.5-1.5-8-.5z"/><path d="M20 5.5c-2.5-1-5.5-1-8 .5v14c2.5-1.5 5.5-1.5 8-.5z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><g transform="translate(0 -0.4)"><path d="M4 5.5c2.5-1 5.5-1 8 .5v14c-2.5-1.5-5.5-1.5-8-.5z"/><path d="M20 5.5c-2.5-1-5.5-1-8 .5v14c2.5-1.5 5.5-1.5 8-.5z"/></g></symbol>
   <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M3.5 9.2h17M3.5 14.8h17M9.2 3.5v17M14.8 3.5v17"/></symbol>
-  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M4 17l5-5 3.5 3.5L20 8M15 8h5v5"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><g transform="translate(0 -0.5)"><path d="M4 17l5-5 3.5 3.5L20 8M15 8h5v5"/></g></symbol>
   <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5"/></symbol>
-  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3.5 20.5h17M6 20.5V5l7-2v17.5M13 8h5v12.5M9 8h1M9 11.5h1M9 15h1M15.5 11.5h.01M15.5 15h.01"/></symbol>
-  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M3.5 20c2-1 3.5-3.5 5-3.5s1 2.5 3 2.5 2.5-2 4-2"/><path d="M15 4l3 3-8.5 8.5-3.5.5.5-3.5z"/></symbol>
-  <symbol id="i-screen" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="12" rx="1.6"/><path d="M8.5 20h7M12 16.5V20"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><g transform="translate(0 0.25)"><path d="M3.5 20.5h17M6 20.5V5l7-2v17.5M13 8h5v12.5M9 8h1M9 11.5h1M9 15h1M15.5 11.5h.01M15.5 15h.01"/></g></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><g transform="translate(1.25 0)"><path d="M3.5 20c2-1 3.5-3.5 5-3.5s1 2.5 3 2.5 2.5-2 4-2"/><path d="M15 4l3 3-8.5 8.5-3.5.5.5-3.5z"/></g></symbol>
+  <symbol id="i-screen" viewBox="0 0 24 24"><g transform="translate(0 -0.25)"><rect x="3.5" y="4.5" width="17" height="12" rx="1.6"/><path d="M8.5 20h7M12 16.5V20"/></g></symbol>
   <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3.5h12v17l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4-2 1.4z"/><path d="M9 8h6M9 11.5h6M9 15h3"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g transform="translate(-0.25 -0.25)"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></g></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
   <symbol id="i-minus" viewBox="0 0 24 24"><path d="M7 12h10"/></symbol>
   <symbol id="i-archive" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="4.5" rx="1"/><path d="M5 8.5V20h14V8.5M10 12h4"/></symbol>
   <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 14.5h3"/></symbol>
-  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-4 3.6-6 7-6s6.2 2 7 6"/></symbol>
-  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3.5" y="7" width="17" height="12.5" rx="2"/><path d="M9 7V5h6v2M3.5 12.5h17"/></symbol>
-  <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="10" cy="7" rx="6" ry="2.5"/><path d="M4 7v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7"/><path d="M8 16.2c.6 1.3 3.1 2.3 6 2.3 3.3 0 6-1.1 6-2.5v-4c0-1-1.3-1.8-3.2-2.2"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><g transform="translate(0 -0.25)"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-4 3.6-6 7-6s6.2 2 7 6"/></g></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><g transform="translate(0 -0.25)"><rect x="3.5" y="7" width="17" height="12.5" rx="2"/><path d="M9 7V5h6v2M3.5 12.5h17"/></g></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><g transform="translate(0 0.5)"><ellipse cx="10" cy="7" rx="6" ry="2.5"/><path d="M4 7v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7"/><path d="M8 16.2c.6 1.3 3.1 2.3 6 2.3 3.3 0 6-1.1 6-2.5v-4c0-1-1.3-1.8-3.2-2.2"/></g></symbol>
 </svg>
+
 
 <!-- 1 · Обложка -->
 <section class="page cover on-photo" id="p1">
@@ -285,22 +282,22 @@
   <div class="inner">
     <p class="eyebrow">Что внутри</p>
     <h2>Бухучёт в Узбекистане за восемь шагов</h2>
-    <p class="lede s">Нажмите на плитку, чтобы открыть страницу. Красные карточки на страницах отмечают ошибки, которые иностранные компании совершают чаще всего.</p>
+    <p class="lede s">Нажмите на плитку, чтобы открыть страницу.</p>
     <div class="toc four">
-      <a href="#p4"><span class="chip"><svg class="ic"><use href="#i-layers"/></svg></span><span class="n">04</span><b>От НСБУ к НСФО</b><span>Что меняется 1 января 2027 года</span></a>
-      <a href="#p5" class="hl"><span class="chip"><svg class="ic"><use href="#i-grid"/></svg></span><span class="n">05</span><b>Какие стандарты применять</b><span>Найдите свою строку в матрице</span></a>
-      <a href="#p6"><span class="chip"><svg class="ic"><use href="#i-book"/></svg></span><span class="n">06</span><b>План счетов и учётная политика</b><span>Десять классов и один приказ</span></a>
-      <a href="#p8"><span class="chip"><svg class="ic"><use href="#i-doc"/></svg></span><span class="n">08</span><b>Годовой комплект</b><span>Пять отчётов или два, 1 марта или 1 мая</span></a>
-      <a href="#p9"><span class="chip"><svg class="ic"><use href="#i-scale"/></svg></span><span class="n">09</span><b>Внутри форм</b><span>Баланс и отчёт о финансовых результатах</span></a>
-      <a href="#p10"><span class="chip"><svg class="ic"><use href="#i-cal"/></svg></span><span class="n">10</span><b>Закрытие года</b><span>Календарь отчётности и чек-лист закрытия месяца</span></a>
-      <a href="#p12" class="hl"><span class="chip"><svg class="ic"><use href="#i-search"/></svg></span><span class="n">12</span><b>Обязательный аудит</b><span>Нужен или нет, в двух вопросах</span></a>
-      <a href="#p13"><span class="chip"><svg class="ic"><use href="#i-people"/></svg></span><span class="n">13</span><b>Люди и документы</b><span>Главный бухгалтер, аутсорсинг и ЭСФ</span></a>
+      <a href="#p4"><span class="chip"><svg class="ic"><use href="#i-layers"/></svg></span><span class="n">04</span><b>От НСБУ к НСФО</b></a>
+      <a href="#p5" class="hl"><span class="chip"><svg class="ic"><use href="#i-grid"/></svg></span><span class="n">05</span><b>Какие стандарты применять</b></a>
+      <a href="#p6"><span class="chip"><svg class="ic"><use href="#i-book"/></svg></span><span class="n">06</span><b>План счетов и учётная политика</b></a>
+      <a href="#p8"><span class="chip"><svg class="ic"><use href="#i-doc"/></svg></span><span class="n">08</span><b>Годовой комплект</b></a>
+      <a href="#p9"><span class="chip"><svg class="ic"><use href="#i-scale"/></svg></span><span class="n">09</span><b>Внутри форм</b></a>
+      <a href="#p10"><span class="chip"><svg class="ic"><use href="#i-cal"/></svg></span><span class="n">10</span><b>Закрытие года</b></a>
+      <a href="#p12" class="hl"><span class="chip"><svg class="ic"><use href="#i-search"/></svg></span><span class="n">12</span><b>Обязательный аудит</b></a>
+      <a href="#p13"><span class="chip"><svg class="ic"><use href="#i-people"/></svg></span><span class="n">13</span><b>Люди и документы</b></a>
     </div>
     <div class="figs toc-figs">
-      <div class="fig"><b>UZS</b><span>Единственная валюта учёта для любой компании</span></div>
-      <div class="fig"><b>1 марта</b><span>Срок годовой отчётности по национальным стандартам</span></div>
-      <div class="fig"><b>2027</b><span>Первый год по новым национальным стандартам НСФО</span></div>
-      <div class="fig"><b>2 из 3</b><span>Условия по размеру, при которых аудит обязателен</span></div>
+      <div class="fig"><b>UZS</b><span>Единственная валюта учёта</span></div>
+      <div class="fig"><b>1 марта</b><span>Срок годовой отчётности</span></div>
+      <div class="fig"><b>2027</b><span>Первый год по НСФО</span></div>
+      <div class="fig"><b>2 из 3</b><span>Условия по размеру для аудита</span></div>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">2</span></footer>
@@ -312,14 +309,14 @@
     <div class="side">
       <span class="num">01</span>
       <h2>Стандарты и правила</h2>
-      <p>Любая компания в Узбекистане ведёт учёт в сумах по единому национальному плану счетов. С 2027 года на смену НСБУ поэтапно приходят новые национальные стандарты на основе МСФО для МСП.</p>
+      <p>Любая компания ведёт учёт в сумах по единому национальному плану счетов. С 2027 года поэтапно вводятся новые национальные стандарты.</p>
       <div class="inch">
         <a href="#p4"><span>04</span>От НСБУ к НСФО<svg class="ic"><use href="#i-arrow"/></svg></a>
         <a href="#p5"><span>05</span>Какие стандарты применять<svg class="ic"><use href="#i-arrow"/></svg></a>
         <a href="#p6"><span>06</span>План счетов и политика<svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
-    <div class="pic"><div class="photo" style="background-image:url('img/acc-standards.jpg');background-position:56% 50%"></div></div>
+    <div class="pic"><div class="photo" style="background-image:url('img/acc-standards.jpg');background-position:50% 60%"></div></div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com</span><span class="num">3</span></footer>
 </section>
@@ -330,35 +327,32 @@
   <div class="inner">
     <p class="eyebrow">Правила</p>
     <h2>От НСБУ к НСФО на одной линии</h2>
-    <p class="lede s">Учёт регулирует Закон <span class="nw">ЗРУ-404</span> «О бухгалтерском учёте» 2016 года. Компания с иностранным капиталом применяет те же стандарты, план счетов и сроки, что и любая местная компания.</p>
+    <p class="lede s">Учёт регулирует Закон <span class="nw">ЗРУ-404</span> «О бухгалтерском учёте». Компания с иностранным капиталом работает по тем же правилам, что и местная.</p>
     <div class="tline">
-      <div class="ev past"><span class="d">1 янв 2025</span><i></i><div class="c"><b>Новые НСБУ и формы</b><span>Новые стандарты о представлении и валюте, новый план счетов и формы</span></div></div>
-      <div class="ev past"><span class="d">17 дек 2025</span><i></i><div class="c"><b>МСФО по статусу</b><span>По <span class="nw">ПП-282</span> полные МСФО обязательны только для организаций общественного интереса</span></div></div>
-      <div class="ev"><span class="d">2026</span><i></i><div class="c"><b>Последний год по НСБУ</b><span>Отчётность за 2026 год ещё по НСБУ</span></div></div>
-      <div class="ev key"><span class="d">1 янв 2027</span><i></i><div class="c"><b>НСФО № 1 и № 2</b><span>Стандарты на основе МСФО для МСП и новая концептуальная основа. НСБУ 1 отменяется</span></div></div>
-      <div class="ev"><span class="d">1 мар 2028</span><i></i><div class="c"><b>Первая отчётность по НСФО</b><span>Годовая отчётность за 2027 год первой составляется по НСФО</span></div></div>
+      <div class="ev past"><span class="d">1 янв 2025</span><i></i><div class="c"><b>Новый план счетов и формы</b></div></div>
+      <div class="ev past"><span class="d">17 дек 2025</span><i></i><div class="c"><b>Полные МСФО только для ОЗО</b></div></div>
+      <div class="ev"><span class="d">2026</span><i></i><div class="c"><b>Последний год по НСБУ</b></div></div>
+      <div class="ev key"><span class="d">1 янв 2027</span><i></i><div class="c"><b>НСФО №&nbsp;1 и №&nbsp;2</b><span>На основе МСФО для МСП</span></div></div>
+      <div class="ev"><span class="d">1 мар 2028</span><i></i><div class="c"><b>Первая отчётность по НСФО</b></div></div>
     </div>
     <div class="duo">
       <div>
         <h3><svg class="ic"><use href="#i-check"/></svg>Что остаётся в 2027 году</h3>
         <ul class="facts">
-          <li>Все НСБУ, кроме НСБУ 1, действуют, пока их не заменят новые стандарты</li>
-          <li>Национальный план счетов сохраняется. Новый запланирован, но не принят</li>
-          <li>Учёт в сумах, подписанная отчётность и прежние сроки</li>
+          <li>Остальные НСБУ, пока их не заменят новые стандарты</li>
+          <li>Национальный план счетов, учёт в сумах и прежние сроки</li>
         </ul>
       </div>
       <div>
         <h3><svg class="ic"><use href="#i-clock"/></svg>За чем следить</h3>
         <ul class="facts">
-          <li>Готовятся новые НСФО о запасах, основных средствах, выручке и аренде</li>
-          <li>Новый закон о бухучёте и финансовой отчётности пока только проект</li>
-          <li>Участники МФЦТ с 25 июля 2026 года могут вести учёт по особым правилам</li>
+          <li>Готовятся новые НСФО</li>
+          <li>Новый закон о бухучёте пока только проект</li>
         </ul>
       </div>
     </div>
-    <div class="cards end">
-      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Ждать полностью новых правил</h4><p>Приняты только НСФО № 1 и № 2. Основные средства, запасы и выручка пока остаются на НСБУ.</p></div></div>
-      <div class="card tip"><span class="chip grey"><svg class="ic"><use href="#i-bulb"/></svg></span><div><span class="tag">Полезно знать</span><h4>Правил перехода пока нет</h4><p>Стандарт о первом применении запланирован. Мы следим за каждым новым НСФО и уточняем ваш план.</p></div></div>
+    <div class="cards one end">
+      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Ждать полностью новых правил</h4><p>Приняты только НСФО №&nbsp;1 и №&nbsp;2, поэтому основные средства, запасы и выручка пока остаются на НСБУ.</p></div></div>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">4</span></footer>
@@ -371,25 +365,23 @@
     <p class="eyebrow">Какие стандарты применять</p>
     <h2>Найдите свою строку</h2>
     <div class="mlegend">
-      <span><i class="c-ifrs"></i>МСФО, обязательные или добровольные</span>
+      <span><i class="c-ifrs"></i>МСФО</span>
       <span><i class="c-nsfo"></i>НСФО, новые стандарты</span>
       <span><i class="c-nsbu"></i>НСБУ, действующие стандарты</span>
       <span><i class="c-chk"></i>Открытый вопрос, уточняем под клиента</span>
     </div>
     <table class="mx">
       <tr><th>Кто вы</th><th>2026</th><th>2027</th><th>С 2028</th></tr>
-      <tr><td class="who"><b>Организация общественного интереса</b><small>В реестре с 2026 года</small></td><td class="c-nsbu"><span class="s">НСБУ</span><span>Реестр с июня</span></td><td class="c-ifrs"><span class="s">Учёт по МСФО</span><span>С 1 января</span></td><td class="c-ifrs"><span class="s">МСФО с аудитом</span><span>Первый год уточняем</span></td></tr>
-      <tr><td class="who"><b>ООО или другая компания</b><small>Вне реестра</small></td><td class="c-nsbu"><span class="s">НСБУ</span><span>Полный комплект</span></td><td class="c-nsfo"><span class="s">НСФО 1 и 2</span><span>Вместе с другими НСБУ</span></td><td class="c-nsfo"><span class="s">НСФО</span><span>По мере принятия новых</span></td></tr>
-      <tr><td class="who"><b>Акционерное общество</b><small>Вне реестра, своя норма в Законе об АО</small></td><td class="c-nsbu"><span class="s">НСБУ</span><span>Полный комплект</span></td><td class="c-nsfo"><span class="s">НСФО 1 и 2</span><span>Вместе с другими НСБУ</span></td><td class="c-chk"><span class="s">И МСФО?</span><span>Уточняем под клиента</span></td></tr>
-      <tr><td class="who"><b>Микрофирма, малое предприятие</b><small>Сокращённый комплект</small></td><td class="c-nsbu"><span class="s">НСБУ</span><span>Упрощённо по желанию</span></td><td class="c-nsfo"><span class="s">НСФО 1 и 2</span><span>Вместе с другими НСБУ</span></td><td class="c-chk"><span class="s">Правила для малых</span><span>Пока не определены</span></td></tr>
-      <tr><td class="who"><b>Добровольные МСФО</b><small>Любая компания, уведомившая налоговую</small></td><td class="c-ifrs" colspan="3"><span class="s">МСФО с выбранной даты</span><span>После перехода национальный комплект не сдаётся</span></td></tr>
-      <tr><td class="who"><b>Филиал или представительство</b><small>Иностранной компании</small></td><td class="c-chk" colspan="3"><span class="s">Учёт в порядке, установленном законодательством</span><span>Отдельного стандарта нет. Подход уточняем под клиента</span></td></tr>
-      <tr><td class="who"><b>Участник МФЦТ</b><small>Ташкентский международный финансовый центр</small></td><td class="c-chk" colspan="3"><span class="s">С 25 июля 2026 года возможны особые правила</span><span>Уточняем под клиента</span></td></tr>
+      <tr><td class="who">Организация общественного интереса</td><td class="c-nsbu"><span class="s">НСБУ</span></td><td class="c-ifrs"><span class="s">МСФО</span></td><td class="c-ifrs"><span class="s">МСФО с аудитом</span></td></tr>
+      <tr><td class="who">ООО или другая компания</td><td class="c-nsbu"><span class="s">НСБУ</span></td><td class="c-nsfo"><span class="s">НСФО 1 и 2</span></td><td class="c-nsfo"><span class="s">НСФО</span></td></tr>
+      <tr><td class="who">Акционерное общество</td><td class="c-nsbu"><span class="s">НСБУ</span></td><td class="c-nsfo"><span class="s">НСФО 1 и 2</span></td><td class="c-chk"><span class="s">И МСФО?</span></td></tr>
+      <tr><td class="who">Микрофирма, малое предприятие</td><td class="c-nsbu"><span class="s">НСБУ</span></td><td class="c-nsfo"><span class="s">НСФО 1 и 2</span></td><td class="c-chk"><span class="s">Правила пока не определены</span></td></tr>
+      <tr><td class="who">Добровольные МСФО</td><td class="c-ifrs" colspan="3"><span class="s">МСФО с выбранной даты</span></td></tr>
+      <tr><td class="who">Филиал или участник МФЦТ</td><td class="c-chk" colspan="3"><span class="s">Уточняем под клиента</span></td></tr>
     </table>
-    <p class="note">Организации общественного интереса (ОЗО): котируемые компании, банки и другие финансовые организации, фонды, биржи, компании с госдолей от 50% сверх порогов и крупные компании. Если другой акт установил более ранний срок МСФО, действует он.</p>
     <div class="cards end">
-      <div class="stat" style="flex-direction:row;align-items:center;gap:4mm"><span class="chip"><svg class="ic"><use href="#i-building"/></svg></span><div><b style="display:block">449</b><span style="display:block;margin-top:1.4mm">Организаций в реестре на октябрь 2026 года. Крупная компания входит в него при активах и выручке от 1 000 000 БРВ и 500 работниках, все три условия два года подряд</span></div></div>
-      <div class="card tip"><span class="chip grey"><svg class="ic"><use href="#i-layers"/></svg></span><div><span class="tag">Входите в группу?</span><h4>Один комплект вместо двух</h4><p>Если группа отчитывается по МСФО, добровольный переход снимает второй комплект. Уведомите налоговую до 1 марта.</p></div></div>
+      <div class="stat row"><span class="chip"><svg class="ic"><use href="#i-building"/></svg></span><div><b>449</b><p>Организаций в реестре ОЗО на октябрь 2026 года.</p></div></div>
+      <div class="card tip"><span class="chip grey"><svg class="ic"><use href="#i-layers"/></svg></span><div><span class="tag">Входите в группу?</span><h4>Один комплект вместо двух</h4><p>Если группа отчитывается по МСФО, добровольный переход снимает второй комплект.</p></div></div>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">5</span></footer>
@@ -401,6 +393,7 @@
   <div class="inner">
     <p class="eyebrow">Учёт и политика</p>
     <h2>Один план счетов, один приказ о политике</h2>
+    <p class="lede s">Единый план счетов обязателен для всех с 2025 года, в нём десять классов.</p>
     <div class="cls10">
       <div class="cl"><b>0</b><span>Долгосрочные активы</span></div>
       <div class="cl"><b>1</b><span>Запасы</span></div>
@@ -413,20 +406,16 @@
       <div class="cl e"><b>8</b><span>Собственный капитал</span></div>
       <div class="cl i"><b>9</b><span>Доходы и расходы</span></div>
     </div>
-    <div class="codes">
-      <span><b>0100</b>основные средства</span><span><b>5100</b>расчётный счёт</span><span><b>6410</b>расчёты с бюджетом</span><span><b>6710</b>оплата труда</span><span><b>8300</b>уставный капитал</span><span><b>8700</b>нераспределённая прибыль</span><span><b>9010–9030</b>выручка</span>
-    </div>
-    <p class="note">Единый план счетов НСБУ 21 обязателен для всех с 1 января 2025 года. Десять классов, четырёхзначные коды и типовые проводки. Строки баланса привязаны к этим счетам.</p>
     <p class="sub t">Учётная политика</p>
     <div class="steps4">
-      <div><em>Регистрация</em><b>Политика действует с первого дня</b><span>Во всех подразделениях, включая обособленные</span></div>
-      <div><em>В течение 90 дней</em><b>Директор подписывает приказ</b><span>Новая компания делает это не позднее 90 дней с регистрации</span></div>
-      <div><em>С 1 января</em><b>Изменения вступают в силу</b><span>В течение года только в перечисленных законом случаях</span></div>
-      <div class="hl"><em>До 31.12.2026</em><b>Подпишите политику на 2027 год</b><span>С 2027 года правила о политике переходят в НСФО № 2</span></div>
+      <div><em>Регистрация</em><b>Политика действует с первого дня</b></div>
+      <div><em>В течение 90 дней</em><b>Директор подписывает приказ</b></div>
+      <div><em>С 1 января</em><b>Изменения вступают в силу</b></div>
+      <div class="hl"><em>До 31.12.2026</em><b>Подпишите политику на 2027 год</b></div>
     </div>
     <div class="cards end">
-      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Учёт только по плану группы</h4><p>Для ERP с планом группы нужен маппинг на национальный план до первой отчётности.</p></div></div>
-      <a class="card more" href="https://www.advizenco.com/ru/insights/accounting-policy-tax-purposes"><span class="chip dark" style="background:rgba(255,255,255,.12)"><svg class="ic"><use href="#i-arrow"/></svg></span><div><span class="tag">Подробнее на нашем сайте</span><h4>Налоговая учётная политика</h4><p>Отдельный документ с обязательными пунктами.</p><span class="go">advizenco.com/ru/insights</span></div></a>
+      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Учёт только по плану группы</h4><p>Для ERP с планом группы нужен маппинг на национальный план.</p></div></div>
+      <a class="card more" href="https://www.advizenco.com/ru/insights/accounting-policy-tax-purposes"><span class="chip dark"><svg class="ic"><use href="#i-arrow"/></svg></span><div><span class="tag">Подробнее на нашем сайте</span><h4>Налоговая учётная политика</h4><p>Это отдельный документ.</p><span class="go">advizenco.com/ru/insights</span></div></a>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">6</span></footer>
@@ -438,14 +427,14 @@
     <div class="side">
       <span class="num">02</span>
       <h2>Финансовая отчётность</h2>
-      <p>Один годовой комплект в сумах за подписью директора и главного бухгалтера. Отчётность по национальным стандартам сдаётся до 1 марта, по МСФО до 1 мая.</p>
+      <p>Один годовой комплект в сумах. По национальным стандартам он сдаётся до 1 марта, по МСФО до 1 мая.</p>
       <div class="inch">
         <a href="#p8"><span>08</span>Годовой комплект<svg class="ic"><use href="#i-arrow"/></svg></a>
         <a href="#p9"><span>09</span>Внутри форм<svg class="ic"><use href="#i-arrow"/></svg></a>
         <a href="#p10"><span>10</span>Закрытие года<svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
-    <div class="pic"><div class="photo" style="background-image:url('img/acc-statements.jpg');background-position:30% 50%"></div></div>
+    <div class="pic"><div class="photo" style="background-image:url('img/acc-statements.jpg');background-position:50% 60%"></div></div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com</span><span class="num">7</span></footer>
 </section>
@@ -456,30 +445,25 @@
   <div class="inner">
     <p class="eyebrow">Финансовая отчётность</p>
     <h2>Пять отчётов или два</h2>
-    <p class="lede s">Отчётность годовая. Микрофирмы и малые предприятия сдают сокращённый комплект.</p>
+    <p class="lede s">Микрофирмы и малые предприятия сдают сокращённый комплект.</p>
     <div class="setc">
       <table class="sets">
-        <tr><th>Отчёт</th><th>Полный<small>Большинство</small></th><th>Сокращённый<small>Микро и малые</small></th></tr>
-        <tr><td><div class="rp"><span class="chip"><svg class="ic"><use href="#i-scale"/></svg></span><div><b>Бухгалтерский баланс</b><small>Форма № 1</small></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td></tr>
-        <tr><td><div class="rp"><span class="chip"><svg class="ic"><use href="#i-trend"/></svg></span><div><b>Отчёт о финансовых результатах</b><small>Форма № 2</small></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td></tr>
-        <tr><td><div class="rp"><span class="chip grey"><svg class="ic"><use href="#i-coins"/></svg></span><div><b>Отчёт о движении денежных средств</b><small>Прямой метод</small></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="no"><svg class="ic"><use href="#i-minus"/></svg></span></td></tr>
-        <tr><td><div class="rp"><span class="chip grey"><svg class="ic"><use href="#i-layers"/></svg></span><div><b>Отчёт о собственном капитале</b><small>Капитал, резервы, нераспределённая прибыль</small></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="no"><svg class="ic"><use href="#i-minus"/></svg></span></td></tr>
-        <tr><td><div class="rp"><span class="chip grey"><svg class="ic"><use href="#i-doc"/></svg></span><div><b>Пояснения</b><small>Основа подготовки и учётная политика</small></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="no"><svg class="ic"><use href="#i-minus"/></svg></span></td></tr>
+        <tr><th>Отчёт</th><th>Полный</th><th>Сокращённый</th></tr>
+        <tr><td><div class="rp"><span class="chip"><svg class="ic"><use href="#i-scale"/></svg></span><div><b>Бухгалтерский баланс</b><small>Форма №&nbsp;1</small></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td></tr>
+        <tr><td><div class="rp"><span class="chip"><svg class="ic"><use href="#i-trend"/></svg></span><div><b>Отчёт о финансовых результатах</b><small>Форма №&nbsp;2</small></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td></tr>
+        <tr><td><div class="rp"><span class="chip grey"><svg class="ic"><use href="#i-coins"/></svg></span><div><b>Отчёт о движении денежных средств</b></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="no"><svg class="ic"><use href="#i-minus"/></svg></span></td></tr>
+        <tr><td><div class="rp"><span class="chip grey"><svg class="ic"><use href="#i-layers"/></svg></span><div><b>Отчёт о собственном капитале</b></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="no"><svg class="ic"><use href="#i-minus"/></svg></span></td></tr>
+        <tr><td><div class="rp"><span class="chip grey"><svg class="ic"><use href="#i-doc"/></svg></span><div><b>Пояснения</b></div></div></td><td><span class="yes"><svg class="ic"><use href="#i-check"/></svg></span></td><td><span class="no"><svg class="ic"><use href="#i-minus"/></svg></span></td></tr>
       </table>
       <div class="dl">
-        <div class="r"><b>1 марта</b><span>Отчётность за прошлый год по национальным стандартам</span></div>
-        <div class="k"><b>1 мая</b><span>Отчётность по МСФО. Национальный комплект не нужен</span></div>
-        <div class="g"><b>Раз в год</b><span>Квартальной отчётности нет с 2023 года</span></div>
+        <div class="r"><b>1 марта</b><span>Национальные стандарты</span></div>
+        <div class="k"><b>1 мая</b><span>МСФО</span></div>
+        <div class="g"><b>Раз в год</b><span>Квартальной отчётности нет</span></div>
       </div>
     </div>
-    <ul class="facts" style="margin-top:5mm">
-      <li><b>Первый год.</b> При регистрации после 1 октября он длится до 31 декабря следующего года</li>
-      <li><b>Группы.</b> Материнская компания консолидирует отчётность по НСБУ 8, включая иностранные дочерние</li>
-      <li><b>Названия.</b> Положение 2024 года называет формы приложениями, в обиходе остались «форма № 1» и «№ 2»</li>
-    </ul>
     <div class="cards end">
-      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Опираться на старую льготу</h4><p>Льгота для налога с оборота по фиксированной ставке действовала только в 2023–2025 годах.</p></div></div>
-      <a class="card more" href="https://www.advizenco.com/ru/insights/accounting-law-uzbekistan"><span class="chip dark" style="background:rgba(255,255,255,.12)"><svg class="ic"><use href="#i-arrow"/></svg></span><div><span class="tag">Подробнее на нашем сайте</span><h4>Закон о бухгалтерском учёте</h4><p>Кто ведёт учёт и чего требует закон.</p><span class="go">advizenco.com/ru/insights</span></div></a>
+      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Опираться на старую льготу</h4><p>Плательщики налога с оборота по фиксированной ставке были освобождены только в 2023–2025 годах и за 2026 год сдают отчётность снова.</p></div></div>
+      <a class="card more" href="https://www.advizenco.com/ru/insights/accounting-law-uzbekistan"><span class="chip dark"><svg class="ic"><use href="#i-arrow"/></svg></span><div><span class="tag">Подробнее на нашем сайте</span><h4>Закон о бухгалтерском учёте</h4><p>Кто ведёт учёт и чего требует закон.</p><span class="go">advizenco.com/ru/insights</span></div></a>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">8</span></footer>
@@ -490,33 +474,31 @@
   <div class="progress"><em>Отчётность</em><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
   <div class="inner">
     <p class="eyebrow">Внутри форм</p>
-    <h2>Как устроены формы № 1 и № 2</h2>
+    <h2>Как устроены формы №&nbsp;1 и №&nbsp;2</h2>
     <div class="bs">
       <div class="col">
-        <div class="hd"><span>Актив</span><span>Строки 010–390</span></div>
-        <div class="blk w" style="flex:1"><span class="ln">Строки 010–130</span><b>I. Долгосрочные активы</b><span>Основные средства, нематериальные активы, долгосрочные инвестиции</span><div class="cl2"><i>Класс 0</i></div></div>
-        <div class="blk w" style="flex:1.3"><span class="ln">Строки 140–390</span><b>II. Текущие активы</b><span>Запасы, дебиторская задолженность, касса, расчётный и валютные счета</span><div class="cl2"><i>Классы 1–5</i></div></div>
-        <div class="tot"><span>Итого актив</span><small>Строка 400</small></div>
+        <div class="hd">Актив</div>
+        <div class="blk w" style="flex:1"><b>I. Долгосрочные активы</b><span>Основные средства, нематериальные активы, инвестиции</span></div>
+        <div class="blk w" style="flex:1.3"><b>II. Текущие активы</b><span>Запасы, дебиторская задолженность, деньги</span></div>
       </div>
-      <div class="eq"><span>=</span></div>
+      <div class="eq"><span></span></div>
       <div class="col">
-        <div class="hd"><span>Пассив</span><span>Строки 410–760</span></div>
-        <div class="blk e" style="flex:1"><span class="ln">Строки 410–480</span><b>I. Собственные средства</b><span>Уставный капитал, резервы, нераспределённая прибыль</span><div class="cl2"><i>Класс 8</i></div></div>
-        <div class="blk k" style="flex:.62"><span class="ln">Строки 490–590</span><b>II. Долгосрочные обязательства</b><div class="cl2"><i>Класс 7</i></div></div>
-        <div class="blk k2" style="flex:.68"><span class="ln">Строки 600–760</span><b>II. Текущие обязательства</b><div class="cl2"><i>Класс 6</i></div></div>
-        <div class="tot"><span>Итого пассив</span><small>Строка 780</small></div>
+        <div class="hd">Пассив</div>
+        <div class="blk e" style="flex:1"><b>I. Собственные средства</b><span>Капитал, резервы, нераспределённая прибыль</span></div>
+        <div class="blk k" style="flex:.62"><b>II. Долгосрочные обязательства</b></div>
+        <div class="blk k2" style="flex:.68"><b>II. Текущие обязательства</b></div>
       </div>
     </div>
     <p class="sub t">Отчёт о финансовых результатах, упрощённо</p>
     <div class="wfwrap">
       <div class="wf">
-        <div class="bar first"><span class="op">&nbsp;</span><i style="height:44mm">010</i><span class="lb">Чистая выручка</span></div>
-        <div class="bar"><span class="op">минус себестоимость продаж</span><i style="height:33mm">030</i><span class="lb">Валовая прибыль</span></div>
-        <div class="bar"><span class="op">минус расходы периода</span><i style="height:23mm">100</i><span class="lb">Операционная прибыль</span></div>
-        <div class="bar"><span class="op">плюс или минус финансовые статьи</span><i style="height:19mm">240</i><span class="lb">Прибыль до налога</span></div>
-        <div class="bar last"><span class="op">минус налоги из прибыли</span><i style="height:14mm">270</i><span class="lb">Чистая прибыль</span></div>
+        <div class="bar first"><span class="op">&nbsp;</span><i style="height:42mm"></i><span class="lb">Чистая выручка</span></div>
+        <div class="bar"><span class="op">минус себестоимость продаж</span><i style="height:32mm"></i><span class="lb">Валовая прибыль</span></div>
+        <div class="bar"><span class="op">минус расходы периода</span><i style="height:23mm"></i><span class="lb">Операционная прибыль</span></div>
+        <div class="bar"><span class="op">плюс или минус финансовые статьи</span><i style="height:19mm"></i><span class="lb">Прибыль до налога</span></div>
+        <div class="bar last"><span class="op">минус налоги из прибыли</span><i style="height:14mm"></i><span class="lb">Чистая прибыль</span></div>
       </div>
-      <div class="card warn"><div><span class="tag">Частая ошибка</span><h4>Комплект только на английском</h4><p>Официальные формы изданы на узбекском и заполняются в сумах. Английская версия нужна группе, а не государству.</p></div></div>
+      <div class="card warn"><div><span class="tag">Частая ошибка</span><h4>Комплект только на английском</h4><p>Официальные формы на узбекском и в сумах, английская версия нужна только группе.</p></div></div>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">9</span></footer>
@@ -529,43 +511,42 @@
     <p class="eyebrow">Закрытие года</p>
     <h2>Отчётный год на одной странице</h2>
     <div class="year">
-      <div class="m"><b>Янв</b><span class="dot o">1 Новая политика</span><span class="dot g">Закрытие месяца</span></div>
-      <div class="m"><b>Фев</b><span class="dot g">Закрытие месяца</span></div>
-      <div class="m peak"><b>Мар</b><span class="dot">1 Национальная отчётность</span><span class="dot">1 Уведомление о МСФО</span></div>
-      <div class="m"><b>Апр</b><span class="dot g">Закрытие месяца</span></div>
-      <div class="m peak"><b>Май</b><span class="dot">1 Отчётность по МСФО</span></div>
-      <div class="m peak"><b>Июн</b><span class="dot">15 Заключение аудитора в налоговую</span><span class="dot">15 Публикация ОЗО</span></div>
-      <div class="m"><b>Июл</b><span class="dot o">1 Реестр ОЗО</span></div>
-      <div class="m"><b>Авг</b><span class="dot g">Закрытие месяца</span></div>
-      <div class="m"><b>Сен</b><span class="dot g">Закрытие месяца</span></div>
-      <div class="m"><b>Окт</b><span class="dot g">Закрытие месяца</span></div>
-      <div class="m"><b>Ноя</b><span class="dot g">Закрытие месяца</span></div>
-      <div class="m peak"><b>Дек</b><span class="dot o">31 Приказ о политике</span><span class="dot o">Инвентаризация к годовому отчёту</span></div>
+      <div class="m"><b>Янв</b><span class="dot o">1&nbsp;Новая политика</span></div>
+      <div class="m"><b>Фев</b></div>
+      <div class="m peak"><b>Мар</b><span class="dot">1&nbsp;Национальная отчётность</span><span class="dot">1&nbsp;Уведомление о МСФО</span></div>
+      <div class="m"><b>Апр</b></div>
+      <div class="m peak"><b>Май</b><span class="dot">1&nbsp;Отчётность по МСФО</span></div>
+      <div class="m peak"><b>Июн</b><span class="dot">15&nbsp;Заключение аудитора в налоговую</span></div>
+      <div class="m"><b>Июл</b><span class="dot o">1&nbsp;Реестр ОЗО</span></div>
+      <div class="m"><b>Авг</b></div>
+      <div class="m"><b>Сен</b></div>
+      <div class="m"><b>Окт</b></div>
+      <div class="m"><b>Ноя</b></div>
+      <div class="m peak"><b>Дек</b><span class="dot o">31&nbsp;Приказ о политике</span><span class="dot o">Инвентаризация</span></div>
     </div>
-    <div class="legend"><span><i></i>Срок по закону</span><span><i class="o"></i>Внутренний шаг</span><span><i class="g"></i>Каждый месяц</span></div>
+    <div class="legend"><span><i></i>Срок по закону</span><span><i class="o"></i>Внутренний шаг</span></div>
     <div class="chk2">
       <div>
         <h3><svg class="ic"><use href="#i-clock"/></svg>Каждый месяц</h3>
         <ul class="ticks">
-          <li><svg class="ic"><use href="#i-check"/></svg>Переоценить валютные остатки по курсу ЦБ на последний день</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Сверить ЭСФ и проверить их рейтинг риска</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Переоценить валютные остатки</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Сверить ЭСФ</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Провести инвентаризацию кассы</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Проверить подписи уполномоченных лиц на документах</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Проверить подписи на документах</li>
         </ul>
       </div>
       <div>
         <h3><svg class="ic"><use href="#i-cal"/></svg>Каждый год</h3>
         <ul class="ticks">
-          <li><svg class="ic"><use href="#i-check"/></svg>Инвентаризация запасов ежегодно, основных средств раз в два года</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Проверить пороги аудита и критерии ОЗО</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Сверить пакет для группы с бухгалтерским учётом</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Хранить документы за год не менее пяти лет</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Инвентаризация запасов и основных средств</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Проверить пороги аудита</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Сверить пакет для группы</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Хранить документы пять лет</li>
         </ul>
       </div>
     </div>
-    <div class="cards end">
-      <div class="card tip"><span class="chip grey"><svg class="ic"><use href="#i-swap"/></svg></span><div><span class="tag">Учёт только в сумах</span><h4>Валюта переоценивается каждый месяц</h4><p>Операции по курсу ЦБ на дату операции. Курсовые разницы идут в финансовые доходы или расходы.</p></div></div>
-      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Курсовые сюрпризы для группы</h4><p>Ежемесячная переоценка двигает результат. Взнос в капитал в долларах остаётся по курсу на дату внесения.</p></div></div>
+    <div class="cards one end">
+      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Курсовые сюрпризы для группы</h4><p>Валютные остатки переоцениваются каждый месяц, и это двигает результат.</p></div></div>
     </div>
     <p class="note">Налоговые декларации идут по своему календарю. Смотрите наш <a href="https://www.advizenco.com/ru/guides">Налоговый гид 2026</a>.</p>
   </div>
@@ -578,14 +559,14 @@
     <div class="side">
       <span class="num">03</span>
       <h2>Аудит, люди и документы</h2>
-      <p>Крупным компаниям и некоторым организационно-правовым формам нужен ежегодный аудит. Учёт можно передать на аутсорсинг, ответственность нельзя.</p>
+      <p>Крупным компаниям и некоторым формам нужен ежегодный аудит. Учёт можно передать на аутсорсинг, ответственность нельзя.</p>
       <div class="inch">
         <a href="#p12"><span>12</span>Обязательный аудит<svg class="ic"><use href="#i-arrow"/></svg></a>
         <a href="#p13"><span>13</span>Люди и документы<svg class="ic"><use href="#i-arrow"/></svg></a>
         <a href="#p14"><span>14</span>Контакты<svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
-    <div class="pic"><div class="photo" style="background-image:url('img/acc-audit.jpg');background-position:66% 50%"></div></div>
+    <div class="pic"><div class="photo" style="background-image:url('img/acc-audit.jpg');background-position:50% 65%"></div></div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com</span><span class="num">11</span></footer>
 </section>
@@ -596,33 +577,31 @@
   <div class="inner">
     <p class="eyebrow">Обязательный аудит</p>
     <h2>Нужен ли аудит?</h2>
-    <p class="lede s">Ответ дают два вопроса (Закон <span class="nw">ЗРУ-677</span>, ст. 35). Иностранный капитал сам по себе аудита не требует.</p>
+    <p class="lede s">Ответ дают два вопроса (Закон <span class="nw">ЗРУ-677</span>, ст. 35).</p>
     <div class="flow audit">
-      <div class="q">АО, банк, страховщик, фонд, биржа, сельхозкооператив или компания с долей государства?</div>
+      <div class="q">АО, банк, страховщик, фонд, биржа, сельхозкооператив или доля государства?</div>
       <div class="arr"><em>Да</em></div>
-      <div class="a dark"><b>Ежегодный аудит</b>Каждый год, независимо от размера</div>
+      <div class="a dark"><b>Ежегодный аудит</b>Независимо от размера</div>
       <div class="down"><em>Нет</em></div><div></div><div></div>
       <div class="q">За отчётный год выполнены два условия из трёх?
         <div class="th3">
-          <span><svg class="ic"><use href="#i-scale"/></svg><b>Активы</b>свыше 100 000 БРВ</span>
-          <span><svg class="ic"><use href="#i-trend"/></svg><b>Выручка</b>свыше 200 000 БРВ</span>
-          <span><svg class="ic"><use href="#i-people"/></svg><b>Работники</b>в среднем свыше 100</span>
+          <span><b>Активы</b>свыше 100 000 БРВ</span>
+          <span><b>Выручка</b>свыше 200 000 БРВ</span>
+          <span><b>Работники</b>свыше 100</span>
         </div>
       </div>
       <div class="arr"><em>Да</em></div>
-      <div class="a red"><b>Ежегодный аудит</b>Копия заключения в налоговую в течение 15 дней после аудита, не позднее 15 июня</div>
+      <div class="a red"><b>Ежегодный аудит</b>Заключение в налоговую до <span class="nw">15 июня</span></div>
       <div class="down"><em>Нет</em></div><div></div><div></div>
-      <div class="a grey"><b>Обязательного аудита нет</b>Компания или собственники могут заказать его сами</div><div></div><div></div>
+      <div class="a grey"><b>Обязательного аудита нет</b>Иностранный капитал сам по себе его не требует</div><div></div><div></div>
     </div>
-    <div class="stats four">
+    <div class="stats three">
       <div class="stat"><span class="chip"><svg class="ic"><use href="#i-globe"/></svg></span><b>МСА</b><span>Международные стандарты аудита</span></div>
-      <div class="stat"><span class="chip"><svg class="ic"><use href="#i-shield"/></svg></span><b>Реестр</b><span>Аудиторская организация из госреестра</span></div>
+      <div class="stat"><span class="chip"><svg class="ic"><use href="#i-shield"/></svg></span><b>Реестр</b><span>Аудиторская фирма в госреестре</span></div>
       <div class="stat"><span class="chip"><svg class="ic"><use href="#i-clock"/></svg></span><b>7 лет</b><span>Не дольше подряд с одним клиентом</span></div>
-      <div class="stat"><span class="chip"><svg class="ic"><use href="#i-swap"/></svg></span><b>Раздельно</b><span>Аудитор не ведёт ваш учёт за проверяемый период</span></div>
     </div>
-    <div class="cards end">
-      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Заплатить штраф вместо аудита</h4><p>Уплата штрафа не освобождает от аудита. Его всё равно нужно провести.</p></div></div>
-      <div class="card tip"><span class="chip grey"><svg class="ic"><use href="#i-bulb"/></svg></span><div><span class="tag">Полезно знать</span><h4>Аудит возможен и при 50 работниках</h4><p>Достаточно активов и выручки выше порогов. Проверяйте все три условия каждый год.</p></div></div>
+    <div class="cards one end">
+      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Заплатить штраф вместо аудита</h4><p>Уплата штрафа не освобождает от аудита, его всё равно нужно провести.</p></div></div>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">12</span></footer>
@@ -634,7 +613,7 @@
   <div class="inner">
     <p class="eyebrow">Люди и документы</p>
     <h2>Кто ведёт учёт и на чём</h2>
-    <p class="lede s">Учёт организует директор и выбирает одну из четырёх моделей, которые допускает закон. Документы могут быть электронными, а на каждую продажу выставляется ЭСФ.</p>
+    <p class="lede s">Директор выбирает одну из четырёх моделей, которые допускает закон. На каждую продажу выставляется ЭСФ.</p>
     <div class="pd">
       <div>
         <h3><svg class="ic"><use href="#i-people"/></svg>Четыре способа организовать учёт</h3>
@@ -644,26 +623,22 @@
           <div class="way"><span class="chip"><svg class="ic"><use href="#i-brief"/></svg></span>Аутсорсинг специализированной фирме</div>
           <div class="way"><span class="chip"><svg class="ic"><use href="#i-person"/></svg></span>Директор ведёт учёт сам</div>
         </div>
-        <div class="resp"><svg class="ic"><use href="#i-shield"/></svg><span><b>Работа переходит, ответственность нет.</b> Перед государством отвечают компания и директор. Исполнитель отвечает по договору</span></div>
-        <ul class="facts">
-          <li>Сертификат не нужен. При обязательном аудите главному бухгалтеру нужны высшее образование, стаж и ежегодное обучение. Это касается и работника аутсорсера</li>
-          <li>Директор утверждает два списка лиц с правом подписи. Без их подписей документ недействителен</li>
-        </ul>
+        <div class="resp"><svg class="ic"><use href="#i-shield"/></svg><span><b>Работа переходит, ответственность нет.</b> Перед государством отвечают компания и директор.</span></div>
       </div>
       <div>
         <h3><svg class="ic"><use href="#i-screen"/></svg>От документа до архива</h3>
         <ul class="pipe">
-          <li><span class="chip"><svg class="ic"><use href="#i-doc"/></svg></span><div><b>Первичные документы</b><span>На бумаге или в электронном виде, как регистры и отчётность</span></div></li>
-          <li><span class="chip"><svg class="ic"><use href="#i-receipt"/></svg></span><div><b>ЭСФ на каждую продажу</b><span>Выставляется через оператора. Кассовый чек его заменяет</span></div></li>
-          <li><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><b>Рейтинг риска</b><span>С 2026 года каждый ЭСФ получает рейтинг. Высокий риск откладывает зачёт НДС</span></div></li>
-          <li><span class="chip"><svg class="ic"><use href="#i-card"/></svg></span><div><b>Безналичная оплата свыше 400 БРВ</b><span>Онлайн-касса и единый QR-код в рознице</span></div></li>
-          <li><span class="chip dark"><svg class="ic"><use href="#i-archive"/></svg></span><div><b>Архив</b><span>Не менее пяти лет после отчётного года</span></div></li>
+          <li><span class="chip"><svg class="ic"><use href="#i-doc"/></svg></span><div><b>Первичные документы</b><span>На бумаге или в электронном виде</span></div></li>
+          <li><span class="chip"><svg class="ic"><use href="#i-receipt"/></svg></span><div><b>ЭСФ на каждую продажу</b><span>Выставляется через оператора</span></div></li>
+          <li><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><b>Рейтинг риска</b><span>Высокий риск откладывает зачёт НДС</span></div></li>
+          <li><span class="chip"><svg class="ic"><use href="#i-card"/></svg></span><div><b>Безнал свыше 400 БРВ</b><span>Онлайн-касса в рознице</span></div></li>
+          <li><span class="chip dark"><svg class="ic"><use href="#i-archive"/></svg></span><div><b>Архив</b><span>Не менее пяти лет</span></div></li>
         </ul>
       </div>
     </div>
     <div class="cards end">
-      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Одна фирма для учёта и аудита</h4><p>Аудитор не может проверять период, за который вёл учёт. Нужны две фирмы.</p></div></div>
-      <a class="card more" href="https://www.advizenco.com/ru/insights/outsourcing-operational-activities"><span class="chip dark" style="background:rgba(255,255,255,.12)"><svg class="ic"><use href="#i-arrow"/></svg></span><div><span class="tag">Подробнее на нашем сайте</span><h4>Аутсорсинг в Узбекистане</h4><p>Что прописать в договоре с исполнителем.</p><span class="go">advizenco.com/ru/insights</span></div></a>
+      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Частая ошибка</span><h4>Одна фирма для учёта и аудита</h4><p>Аудитор не может проверять период, за который вёл учёт.</p></div></div>
+      <a class="card more" href="https://www.advizenco.com/ru/insights/outsourcing-operational-activities"><span class="chip dark"><svg class="ic"><use href="#i-arrow"/></svg></span><div><span class="tag">Подробнее на нашем сайте</span><h4>Аутсорсинг в Узбекистане</h4><p>Что прописать в договоре с исполнителем.</p><span class="go">advizenco.com/ru/insights</span></div></a>
     </div>
   </div>
   <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">13</span></footer>
@@ -675,7 +650,7 @@
   <div class="inner">
     <p class="eyebrow" style="color:rgba(255,255,255,.65)">Контакты</p>
     <h2>Нужна помощь с учётом в Узбекистане?</h2>
-    <p class="lede">Мы готовим учётную политику, ведём учёт, составляем отчётность и пакеты для группы и работаем с вашим аудитором. Отвечаем на русском, английском, узбекском и немецком. Первый созвон бесплатный.</p>
+    <p class="lede">Мы готовим учётную политику, ведём учёт, составляем отчётность и пакеты для группы и работаем с вашим аудитором. Первый созвон бесплатный.</p>
     <a class="cta" href="https://www.advizenco.com/ru/contact">Записаться на вводный созвон</a>
     <div class="clist">
       <dl>

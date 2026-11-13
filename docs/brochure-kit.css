@@ -9,7 +9,11 @@
   .ic { width: 6mm; height: 6mm; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex: none; }
   .ic.lg { width: 9mm; height: 9mm; stroke-width: 1.4; }
   .ic.xl { width: 14mm; height: 14mm; stroke-width: 1.2; }
-  .chip { display: inline-grid; place-items: center; width: 11mm; height: 11mm; border-radius: 50%; background: var(--tint-red); color: var(--accent); flex: none; }
+  /* Icon holder. brochure.css styles .chip as a text pill (padding, 1px border, font size): reset all of it,
+     or the icon drifts right by the left padding. The icon is a block box centred on both axes at a fixed
+     share of the holder, so every chip of one size carries an icon of one size. */
+  .chip { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; width: 11mm; height: 11mm; padding: 0; margin: 0; border: 0; border-radius: 50%; background: var(--tint-red); color: var(--accent); flex: none; line-height: 0; font-size: 0; vertical-align: middle; }
+  .chip > .ic { display: block; width: 55%; height: 55%; margin: 0; }
   .chip.dark { background: var(--block); color: #fff; }
   .chip.grey { background: var(--tint-grey); color: var(--ink); }
 
@@ -18,9 +22,9 @@
   .toc a { display: flex; flex-direction: column; gap: 3mm; min-height: 44mm; padding: 5mm; border-radius: 3mm; background: #fff; color: var(--ink); text-decoration: none; position: relative; box-shadow: 0 1px 0 rgba(0,0,0,.04); }
   .toc a .n { position: absolute; top: 5mm; right: 5mm; font-size: 8pt; font-weight: 700; color: var(--muted); letter-spacing: .06em; }
   .toc a b { font-size: 11pt; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; margin-top: auto; }
-  .toc a span { font-size: 8pt; line-height: 1.4; color: var(--ink-2); }
+  .toc a > span:not(.chip):not(.n) { font-size: 8pt; line-height: 1.4; color: var(--ink-2); }
   .toc a.hl { background: var(--accent); color: #fff; }
-  .toc a.hl span, .toc a.hl .n { color: rgba(255,255,255,.8); }
+  .toc a.hl > span:not(.chip), .toc a.hl .n { color: rgba(255,255,255,.8); }
   .toc a.hl .chip { background: rgba(255,255,255,.16); color: #fff; }
 
   /* Chapter opener: colour block on the left, photo on the right */
@@ -91,7 +95,7 @@
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 7mm; }
   .stat { background: #fff; border-radius: 3mm; padding: 5mm; display: flex; flex-direction: column; gap: 3mm; }
   .stat b { font-family: var(--display); font-size: 26pt; line-height: 1; letter-spacing: -0.03em; color: var(--accent); }
-  .stat span { font-size: 8.4pt; line-height: 1.4; color: var(--ink-2); }
+  .stat > span:not(.chip) { font-size: 8.4pt; line-height: 1.4; color: var(--ink-2); }
 
   /* Section progress in the top right corner */
   .progress { position: absolute; top: 9mm; right: var(--pad-x); display: flex; gap: 1.4mm; }
