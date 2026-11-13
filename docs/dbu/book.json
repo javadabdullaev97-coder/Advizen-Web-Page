@@ -1,0 +1,134 @@
+{
+  "title": "Doing Business in Uzbekistan 2026",
+  "edition": "Edition updated to November 2026",
+  "front": {
+    "cover": "img/cover.jpg",
+    "foreword": "img/metro.jpg",
+    "contents": "img/dome.jpg"
+  },
+  "chapters": [
+    {
+      "file": "01-at-a-glance.md",
+      "opener": "photo",
+      "image": "img/kalta-minor.jpg",
+      "fillers": [
+        "img/samarkand.jpg",
+        "img/khiva.jpg"
+      ]
+    },
+    {
+      "file": "02-economy-and-market.md",
+      "opener": "dark",
+      "image": "img/tashkent-city.jpg",
+      "fillers": [
+        "img/freight-train.jpg",
+        "img/solar.jpg",
+        "img/chorsu.jpg"
+      ]
+    },
+    {
+      "file": "03-entry-and-residence.md",
+      "opener": "split",
+      "image": "img/shahi-zinda.jpg",
+      "fillers": [
+        "img/bukhara.jpg",
+        "img/blossom.jpg"
+      ]
+    },
+    {
+      "file": "04-setting-up.md",
+      "opener": "dark",
+      "image": "img/tashkent-city-build.jpg",
+      "fillers": [
+        "img/technology.jpg",
+        "img/jizzakh.jpg"
+      ]
+    },
+    {
+      "file": "05-special-regimes.md",
+      "opener": "split",
+      "image": "img/green-domes.jpg",
+      "fillers": [
+        "img/tech-park.jpg",
+        "img/syrdarya.jpg"
+      ]
+    },
+    {
+      "file": "06-taxation.md",
+      "opener": "dark",
+      "image": "img/tax-opener.jpg",
+      "fillers": [
+        "img/carved-door.jpg",
+        "img/cotton.jpg",
+        "img/spices.jpg",
+        "img/samarkand.jpg"
+      ]
+    },
+    {
+      "file": "07-accounting-and-audit.md",
+      "opener": "split",
+      "image": "img/bowls-dark.jpg",
+      "fillers": [
+        "img/teapot.jpg",
+        "img/column.jpg"
+      ]
+    },
+    {
+      "file": "08-employment.md",
+      "opener": "dark",
+      "image": "img/fergana.jpg",
+      "fillers": [
+        "img/ikat.jpg",
+        "img/plov.jpg"
+      ]
+    },
+    {
+      "file": "09-customs-and-trade.md",
+      "opener": "photo",
+      "image": "img/chorsu-hall.jpg",
+      "fillers": [
+        "img/ceramics.jpg",
+        "img/surkhandarya.jpg"
+      ]
+    },
+    {
+      "file": "10-banking-and-finance.md",
+      "opener": "dark",
+      "image": "img/banking-district.jpg",
+      "fillers": [
+        "img/law-shelf.jpg",
+        "img/kashkadarya.jpg"
+      ]
+    },
+    {
+      "file": "11-legal-essentials.md",
+      "opener": "photo",
+      "image": "img/ark.jpg",
+      "fillers": [
+        "img/chimgan.jpg",
+        "img/andijan.jpg"
+      ]
+    },
+    {
+      "file": "appendix-treaties.md",
+      "kind": "appendix",
+      "fillers": [
+        "img/registan.jpg"
+      ]
+    },
+    {
+      "file": "appendix-tax-calendar.md",
+      "kind": "appendix",
+      "fillers": [
+        "img/khiva.jpg"
+      ]
+    }
+  ],
+  "spares": [
+    "img/khiva-palace.jpg",
+    "img/carpets.jpg",
+    "img/mountains.jpg",
+    "img/meadow.jpg",
+    "img/mountain-river.jpg"
+  ]
+}

@@ -1,0 +1,25 @@
+# Doing Business in Uzbekistan 2026 — source
+
+Source of the A4 PDF guide published at `public/guides/Doing-Business-in-Uzbekistan-2026.pdf`.
+This folder is not part of the website build.
+
+## Files
+
+- `content/*.md` — the text, one file per chapter, plus the tax calendar appendix.
+- `book.json` — chapter order, opener style and pictures for each chapter.
+- `build.py` — turns `content/*.md` and `book.json` into `book-data.js`.
+- `book.html`, `book.css`, `engine.js` — the page layout engine; open `book.html` in Chrome to see the book.
+- `img/` — pictures and flags used in the book.
+- `export.sh` — rebuilds `book-data.js` and prints the PDF with headless Chrome.
+- `checktext.py` — checks that every paragraph made it into the PDF (needs `pypdf`).
+- `verify-list.md` — facts marked for checking before publishing.
+
+## Rebuild the PDF
+
+```sh
+cd docs/dbu
+./export.sh
+```
+
+The script writes `Doing-Business-in-Uzbekistan-2026.pdf` here (Google Chrome must be installed in `/Applications`).
+Copy it to `public/guides/` to update the site. The generated PDF in this folder is not committed.
