@@ -1,13 +1,14 @@
-/* Shared look of the Advizen PDF guides (IT, tax and the next ones). Based on docs/company-profile/profile.html. */
-  @page { size: A4; margin: 0; }
+/* Shared look of the Advizen PDF guides (IT, tax and the next ones). Based on docs/company-profile/profile.html.
+     Square 228.6 mm pages (9 x 9 in), the same format as the Doing Business in Uzbekistan guide. */
+  @page { size: 228.6mm 228.6mm; margin: 0; }
   :root {
-    --page-w: 210mm; --page-h: 297mm; --pad-x: 18mm; --pad-top: 20mm;
+    --page-w: 228.6mm; --page-h: 228.6mm; --pad-x: 18mm; --pad-top: 17mm;
   }
   html[data-theme="guide"] {
     --paper: #f2f1ec; --ink: #1c1c1e; --ink-2: #48474a; --muted: #79776f; --line: rgba(28, 28, 30, .14);
     --accent: #a3192f; --block: #1f1f21; --block-ink: #f2f1ec; --block-muted: #a8a59d; --block-line: rgba(255, 255, 255, .14);
     --display: 'Manrope', sans-serif; --text: 'Manrope', sans-serif;
-    --h-weight: 700; --h-track: -0.025em; --h1: 50pt; --h2: 30pt; --h3: 14pt;
+    --h-weight: 700; --h-track: -0.025em; --h1: 46pt; --h2: 26pt; --h3: 13pt;
   }
   html[data-theme="dark"] {
     --paper: #111113; --ink: #ece8e2; --ink-2: #c9c4bc; --muted: #9b938a; --line: rgba(255, 255, 255, .12);
@@ -22,7 +23,7 @@
 
   .page { width: var(--page-w); height: var(--page-h); position: relative; overflow: hidden; background: var(--paper); margin: 0 auto 8mm; break-after: page; }
   @media print { html, body { background: none; } .page { margin: 0; } }
-  .inner { position: absolute; inset: var(--pad-top) var(--pad-x) 26mm; display: flex; flex-direction: column; }
+  .inner { position: absolute; inset: var(--pad-top) var(--pad-x) 23mm; display: flex; flex-direction: column; }
 
   /* Type */
   .eyebrow { font-family: var(--text); font-size: 7.6pt; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
@@ -38,7 +39,7 @@
   .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
 
   /* Footer on every page */
-  .foot { position: absolute; left: var(--pad-x); right: var(--pad-x); bottom: 10mm; display: flex; align-items: center; gap: 4mm; padding-top: 3.2mm; border-top: 1px solid var(--line); font-size: 7.2pt; color: var(--muted); }
+  .foot { position: absolute; left: var(--pad-x); right: var(--pad-x); bottom: 8.5mm; display: flex; align-items: center; gap: 4mm; padding-top: 3mm; border-top: 1px solid var(--line); font-size: 7.2pt; color: var(--muted); }
   .foot .mark { display: flex; align-items: center; gap: 2mm; color: var(--ink); font-weight: 600; letter-spacing: .18em; font-size: 7.6pt; }
   .foot .mark img { height: 3.6mm; }
   .foot .contacts { flex: 1; }
@@ -56,12 +57,12 @@
   /* Cover */
   .cover { background: #0d0d0e; color: #fff; }
   .cover .photo { inset: 0; background-position: 70% 50%; }
-  .cover .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 10, 11, .55) 0%, rgba(10, 10, 11, .12) 30%, rgba(10, 10, 11, .25) 55%, rgba(10, 10, 11, .92) 82%, rgba(10, 10, 11, .97) 100%); }
+  .cover .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 10, 11, .38) 0%, rgba(10, 10, 11, 0) 18%, rgba(10, 10, 11, 0) 40%, rgba(10, 10, 11, .78) 62%, rgba(10, 10, 11, .96) 100%); }
   .cover .inner { justify-content: space-between; }
   .cover h1 { color: #fff; font-size: calc(var(--h1) * 1.08); max-width: 165mm; }
   .cover .sub { margin-top: 6mm; font-size: 14pt; line-height: 1.38; color: rgba(255, 255, 255, .86); max-width: 135mm; }
   html[data-theme="dark"] .cover .sub { font-family: var(--display); font-size: 18pt; font-weight: 500; }
-  .cover .year { font-family: var(--display); font-weight: var(--h-weight); font-size: 96pt; line-height: .9; letter-spacing: -0.04em; color: #fff; margin-top: 8mm; }
+  .cover .year { font-family: var(--display); font-weight: var(--h-weight); font-size: 80pt; line-height: .9; letter-spacing: -0.04em; color: #fff; margin-top: 8mm; }
   .cover .eyebrow { color: rgba(255, 255, 255, .7); }
 
   /* Figures */
@@ -89,9 +90,9 @@
   .svc li:first-child { padding-top: 0; }
   .svc li::before { content: ""; position: absolute; left: 0; top: 4mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--muted); }
   .svc li:first-child::before { top: 1.9mm; }
-  .band { position: relative; height: 62mm; margin: calc(var(--pad-top) * -1) calc(var(--pad-x) * -1) 8mm; }
+  .band { position: relative; height: 50mm; margin: calc(var(--pad-top) * -1) calc(var(--pad-x) * -1) 8mm; }
   .band .photo { inset: 0; }
-  .band-b { position: relative; flex: 1; min-height: 40mm; margin: 8mm calc(var(--pad-x) * -1) -6mm; }
+  .band-b { position: relative; flex: 1; min-height: 30mm; margin: 8mm calc(var(--pad-x) * -1) -6mm; }
   .band-b .photo { inset: 0; }
 
   /* Journeys */
@@ -137,7 +138,7 @@
 
   /* Contacts */
   .contacts-page { background: #0d0d0e; color: #fff; }
-  .contacts-page .photo { inset: 0 0 auto 0; height: 150mm; background-position: 50% 60%; }
+  .contacts-page .photo { inset: 0 0 auto 0; height: 118mm; background-position: 50% 60%; }
   .contacts-page .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13, 13, 14, .2) 0%, rgba(13, 13, 14, .35) 55%, #0d0d0e 100%); }
   .contacts-page .inner { justify-content: flex-end; }
   .contacts-page h2 { color: #fff; font-size: calc(var(--h2) * 1.2); max-width: 150mm; }
