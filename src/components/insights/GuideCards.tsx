@@ -2,15 +2,14 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { GUIDES, localized } from "@/lib/guide";
 
-/* Topic guides (PDF) listed under the Doing Business guide. With one guide the card spans the row,
-   more guides fall into a grid. Each opens in a new tab, like the flagship guide. */
+/* Topic guides (PDF) listed under the Doing Business guide. Each card is the guide's cover photo with
+   the title and description laid over its dark lower part, so the title is not repeated on a cover
+   image and again below it. Each opens in a new tab, like the flagship guide. */
 export default function GuideCards({ heading = true }: { heading?: boolean }) {
   const t = useTranslations("Guides");
   const locale = useLocale();
   if (!GUIDES.length) return null;
   const single = GUIDES.length === 1;
-  // Three or more cards share a row from tablet width up, so the cover sits above the text there.
-  const many = GUIDES.length >= 3;
 
   return (
     <div className="mt-4">
@@ -21,43 +20,39 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
         </div>
       )}
       <ul data-reveal className={`grid gap-4 ${single ? "" : GUIDES.length === 2 ? "sm:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"}`}>
-        {GUIDES.map((g) => {
-          const pdf = localized(g.pdf, locale);
-          return (
-            <li key={g.slug}>
-              <a
-                href={pdf}
-                target="_blank"
-                rel="noopener"
-                className={`group m-tile grid h-full items-center gap-6 p-6 sm:p-7 transition-colors duration-200 hover:bg-[#232325] ${
-                  single
-                    ? "grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[170px_minmax(0,1fr)_auto] sm:gap-10 lg:px-12 lg:py-9"
-                    : many
-                      ? "grid-cols-[112px_minmax(0,1fr)] md:grid-cols-1 md:content-start md:items-start md:gap-7 lg:p-8"
-                      : "grid-cols-[112px_minmax(0,1fr)] lg:grid-cols-[150px_minmax(0,1fr)] lg:gap-8 lg:p-8"
-                }`}
-              >
-                <Image
-                  src={localized(g.cover, locale)}
-                  alt={t(`items.${g.slug}.coverAlt`)}
-                  width={900}
-                  height={900}
-                  sizes="(max-width: 1023px) 112px, 170px"
-                  className={`home-cover w-full h-auto rounded-lg shadow-[0_20px_40px_rgba(0,0,0,.5)] ${many ? "md:w-[150px]" : ""}`}
-                />
-                <div className="min-w-0">
-                  <p className="text-[14px] text-muted">{t(`items.${g.slug}.meta`)}</p>
-                  <h3 className="mt-2 text-[21px] sm:text-[24px] font-semibold leading-[1.15] tracking-[-0.02em] text-foreground-hi">
-                    {t(`items.${g.slug}.title`)}
-                  </h3>
-                  <p className="mt-2 text-[15px] leading-[1.5] text-foreground-2 max-w-[40em]">{t(`items.${g.slug}.text`)}</p>
-                  <div className={`mt-4 ${single ? "sm:hidden" : ""}`}><span className="m-more text-[15px]">{t("open")}</span></div>
-                </div>
-                {single && <div className="max-sm:hidden"><span className="m-btn m-btn-g">{t("open")}</span></div>}
-              </a>
-            </li>
-          );
-        })}
+        {GUIDES.map((g) => (
+          <li key={g.slug}>
+            <a
+              href={localized(g.pdf, locale)}
+              target="_blank"
+              rel="noopener"
+              className={`group relative block h-full overflow-hidden rounded-[var(--radius-tile)] bg-[#1c1c1e] ${
+                single ? "aspect-[4/5] sm:aspect-[21/9]" : "aspect-[4/5] lg:aspect-square"
+              }`}
+            >
+              <Image
+                src={g.photo}
+                alt=""
+                fill
+                sizes={single ? "100vw" : "(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"}
+                className="object-cover transition-transform duration-700 ease-[cubic-bezier(.2,.7,.2,1)] motion-safe:group-hover:scale-[1.03]"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(180deg, rgba(8,8,9,0) 30%, rgba(8,8,9,.78) 58%, rgba(8,8,9,.96) 100%)" }}
+              />
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
+                <p className="text-[14px] text-white/65">{t(`items.${g.slug}.meta`)}</p>
+                <h3 className="mt-2 text-[22px] sm:text-[24px] font-semibold leading-[1.15] tracking-[-0.02em] text-white">
+                  {t(`items.${g.slug}.title`)}
+                </h3>
+                <p className="mt-2 text-[15px] leading-[1.5] text-white/80 max-w-[40em]">{t(`items.${g.slug}.text`)}</p>
+                <div className="mt-4"><span className="m-more text-[15px] text-white">{t("open")}</span></div>
+              </div>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );

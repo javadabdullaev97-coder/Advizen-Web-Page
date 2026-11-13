@@ -192,19 +192,19 @@
     "items": {
       "company-setup": {
         "title": "Oʻzbekistonda kompaniya ochish",
-        "text": "MChJ toʻgʻrisidagi yangi qonun boʻyicha huquqiy shakllar, xorijiy taʼsischi hujjatlari, roʻyxatdan oʻtish, bank hisobvaragʻi va ERI, soliq rejimi, xorijiy direktor, litsenziyalar va bosqichma-bosqich reja.",
+        "text": "MChJ toʻgʻrisidagi yangi qonun boʻyicha shakllar, roʻyxatdan oʻtish, bank, soliq rejimi, xorijiy direktor va litsenziyalar.",
         "meta": "Qoʻllanma · 2026-yil nashri · PDF, ingliz tilida",
         "coverAlt": "«Oʻzbekistonda kompaniya ochish» qoʻllanmasi muqovasi, 2026-yil nashri"
       },
       "it-business": {
         "title": "Oʻzbekistonda IT-biznes",
-        "text": "Texnologiya kompaniyalari uchun IT Park, relokatsiya va xodimlarni yollash: boshlashning uch yoʻli, rezidentlik qoidalari, soliqlar, vizalar va koʻchish rejasi.",
+        "text": "IT Park, texnologiya kompaniyalari uchun relokatsiya va yollash: boshlash yoʻllari, rezidentlik, soliqlar va vizalar.",
         "meta": "Qoʻllanma · 2026-yil nashri · PDF, ingliz tilida",
         "coverAlt": "«Oʻzbekistonda IT-biznes» qoʻllanmasi muqovasi, 2026-yil nashri"
       },
       "tax": {
         "title": "Oʻzbekiston soliq qoʻllanmasi",
-        "text": "Kompaniyalar uchun foyda soligʻi, QQS, ish haqidan olinadigan soliqlar, xalqaro soliqqa tortish va soliq shartnomalari, transfer narxlari, maxsus rejimlar va asosiy muddatlar.",
+        "text": "Foyda soligʻi, QQS, ish haqi soliqlari, xalqaro soliqqa tortish, maxsus rejimlar va asosiy muddatlar.",
         "meta": "Qoʻllanma · 2026-yil nashri · PDF, ingliz tilida",
         "coverAlt": "«Oʻzbekiston soliq qoʻllanmasi» muqovasi, 2026-yil nashri"
       }
