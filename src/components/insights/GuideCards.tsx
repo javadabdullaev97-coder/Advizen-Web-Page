@@ -19,7 +19,7 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
           <p className="text-[15px] text-muted">{t("lede")}</p>
         </div>
       )}
-      <ul data-reveal className={`grid gap-4 ${single ? "" : GUIDES.length === 2 ? "sm:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"}`}>
+      <ul data-reveal className={`grid gap-4 ${single ? "" : GUIDES.length % 3 === 0 ? "md:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"}`}>
         {GUIDES.map((g) => (
           <li key={g.slug}>
             <a
@@ -27,15 +27,15 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
               target="_blank"
               rel="noopener"
               className={`group relative block h-full overflow-hidden rounded-[var(--radius-tile)] bg-[#1c1c1e] ${
-                single ? "aspect-[4/5] sm:aspect-[21/9]" : "aspect-[4/5] lg:aspect-square"
+                single ? "aspect-[4/5] sm:aspect-[21/9]" : GUIDES.length % 3 === 0 ? "aspect-[4/5] lg:aspect-square" : "aspect-[4/5] lg:aspect-[4/3]"
               }`}
             >
               <Image
                 src={g.photo}
                 alt=""
                 fill
-                sizes={single ? "100vw" : "(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"}
-                className="object-cover transition-transform duration-700 ease-[cubic-bezier(.2,.7,.2,1)] motion-safe:group-hover:scale-[1.03]"
+                sizes={single ? "100vw" : GUIDES.length % 3 === 0 ? "(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" : "(max-width: 639px) 100vw, 50vw"}
+                className="object-cover object-[50%_22%] transition-transform duration-700 ease-[cubic-bezier(.2,.7,.2,1)] motion-safe:group-hover:scale-[1.03]"
               />
               <div
                 aria-hidden

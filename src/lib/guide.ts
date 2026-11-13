@@ -27,6 +27,11 @@ export const GUIDES: Guide[] = [
     photo: "/guides/photos/company-setup.webp",
   },
   {
+    slug: "hiring",
+    pdf: { en: "/guides/Hiring-and-Migration-Uzbekistan-2026.pdf", ru: "/guides/Hiring-and-Migration-Uzbekistan-2026-RU.pdf" },
+    photo: "/guides/photos/hiring.webp",
+  },
+  {
     slug: "tax",
     pdf: { en: "/guides/Tax-Guide-Uzbekistan-2026.pdf", ru: "/guides/Tax-Guide-Uzbekistan-2026-RU.pdf" },
     photo: "/guides/photos/tax.webp",
