@@ -12,7 +12,7 @@ const article: Record<string, LocalizedArticle> = {
       points: [
         "Outsourcing means delegating specific business functions or processes to external service providers.",
         "Accounting, legal compliance and HR administration are among the most commonly outsourced functions because they require specialist knowledge.",
-        "When a compliance function is outsourced, the provider takes on responsibility for keeping it in line with Uzbekistan's changing regulation.",
+        "Outsourcing transfers the work, not the legal responsibility: the company and its head remain responsible to the state for accounting and tax reporting, while the provider is liable to the company under the contract.",
         "Outsourcing removes the overheads of an internal department, such as salaries, social contributions, office space, software licences and training, and the service can be scaled up or down without hiring or redundancies.",
       ],
     },
@@ -24,7 +24,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "What is outsourcing and why is it essential today?" },
       {
         type: "p",
-        text: "Outsourcing involves delegating specific business functions or processes to external service providers. This model originated in developed economies as an effective way to streamline operations, and its popularity stems from the mutual benefits it offers. Companies gain the ability to transfer certain responsibilities from their internal staff to expert external teams, leading to significant savings on personnel costs. For management, outsourcing means not only shifting duties but also transferring associated liabilities, allowing them to dedicate more energy and resources to strategic development.",
+        text: "Outsourcing involves delegating specific business functions or processes to external service providers. This model originated in developed economies as an effective way to streamline operations, and its popularity stems from the mutual benefits it offers. Companies gain the ability to transfer certain responsibilities from their internal staff to expert external teams, leading to significant savings on personnel costs. For management, outsourcing shifts the day-to-day workload, allowing them to dedicate more energy and resources to strategic development. It does not shift legal responsibility: the company and its head remain answerable to the state, and the provider answers to the company under the contract.",
       },
       {
         type: "p",
@@ -42,7 +42,7 @@ const article: Record<string, LocalizedArticle> = {
           "Enhanced Focus on Core Business Operations: Free your internal teams from complex administrative tasks so employees can concentrate on core duties, driving productivity and innovation.",
           "Optimised Resource Allocation and Cost Savings: Eliminate overheads associated with internal departments — salaries, social contributions, office space, software licences, and training.",
           "Uninterrupted Service and Reliability: Unlike internal staff, outsourced professionals do not take sick leave or vacation that could disrupt critical operations.",
-          "Mitigated Risk and Robust Compliance: An outsourcing partner bears the responsibility for ensuring your compliance with Uzbekistan's constantly evolving regulatory landscape.",
+          "Mitigated Risk and Robust Compliance: An experienced partner keeps track of Uzbekistan's constantly evolving regulatory landscape and reduces the risk of errors. Legal responsibility stays with your company and its head; the partner answers to you under the contract, which should therefore set quality standards, deadlines, liability and insurance.",
           "Scalability and Flexibility: Outsourced services can be easily scaled up or down to match your business's fluctuating needs without the complexities of internal hiring or downsizing.",
         ],
       },
@@ -63,7 +63,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Does outsourcing compliance functions transfer legal liability to the provider in Uzbekistan?",
-        answer: "Yes. When outsourcing compliance-related functions such as accounting or HR administration, the service provider bears responsibility for ensuring regulatory adherence. This significantly reduces the company's exposure to penalties from Uzbekistan's constantly evolving tax and labour legislation.",
+        answer: "No. Outsourcing transfers the work, not the legal responsibility. Under Law No. ZRU-404 \"On Accounting\" (Art. 11), the head of the company organises the accounting and must ensure that it is complete and reliable; the law allows the bookkeeping to be delegated under a contract to a specialised organisation or to an engaged accountant, and no licence is required for this. Under the Tax Code (Art. 81), the taxpayer is responsible for the accuracy of its tax returns. The company and its head therefore remain responsible to the state, while the provider is liable to the company only under the contract, for example by compensating for its errors as agreed. The contract should define quality standards, deadlines, liability and insurance. If the company is subject to mandatory audit, the provider's employee who keeps its books must meet the chief accountant's higher education and experience requirements and complete annual professional training (Art. 12 of the Law; banks and credit organisations follow Central Bank rules).",
       },
       {
         question: "How does outsourcing compare to hiring in-house staff in Uzbekistan?",
@@ -86,7 +86,7 @@ const article: Record<string, LocalizedArticle> = {
       points: [
         "Аутсорсинг — это передача определённых бизнес-функций или процессов внешним поставщикам услуг.",
         "Бухгалтерия, юридическое сопровождение и кадровое администрирование — наиболее востребованные услуги аутсорсинга, поскольку требуют специальных знаний.",
-        "При передаче комплаенс-функций на аутсорсинг поставщик услуг берёт на себя ответственность за соблюдение меняющихся нормативных требований Узбекистана.",
+        "Аутсорсинг передаёт работу, а не юридическую ответственность: перед государством за бухгалтерский учёт и налоговую отчётность отвечают компания и её руководитель, а поставщик услуг отвечает перед компанией по договору.",
         "Аутсорсинг исключает накладные расходы на внутренний отдел — зарплаты, социальные взносы, офисные площади, лицензии на ПО и обучение, а объём услуг можно увеличить или сократить без найма и сокращения штата.",
       ],
     },
@@ -98,7 +98,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Что такое аутсорсинг и почему он важен сегодня?" },
       {
         type: "p",
-        text: "Аутсорсинг — это передача определённых бизнес-функций или процессов внешним поставщикам услуг. Эта модель зародилась в развитых экономиках как эффективный способ оптимизировать операции, а её популярность объясняется взаимной выгодой. Компании получают возможность переложить часть обязанностей с внутренних сотрудников на экспертные внешние команды, что существенно экономит затраты на персонал. Для руководства аутсорсинг означает не только перераспределение задач, но и передачу связанных рисков, что позволяет уделять больше энергии и ресурсов стратегическому развитию.",
+        text: "Аутсорсинг — это передача определённых бизнес-функций или процессов внешним поставщикам услуг. Эта модель зародилась в развитых экономиках как эффективный способ оптимизировать операции, а её популярность объясняется взаимной выгодой. Компании получают возможность переложить часть обязанностей с внутренних сотрудников на экспертные внешние команды, что существенно экономит затраты на персонал. Для руководства аутсорсинг означает передачу текущей работы, что позволяет уделять больше энергии и ресурсов стратегическому развитию. Юридическая ответственность при этом не переходит: перед государством отвечают компания и её руководитель, а поставщик услуг отвечает перед компанией по договору.",
       },
       {
         type: "p",
@@ -116,7 +116,7 @@ const article: Record<string, LocalizedArticle> = {
           "Усиленный фокус на основной деятельности: освободите внутренние команды от сложных административных задач, чтобы сотрудники сосредоточились на ключевых обязанностях, что повышает продуктивность и инновационность.",
           "Оптимизация ресурсов и экономия: устраните накладные расходы на внутренние отделы — зарплаты, социальные взносы, офисные площади, лицензии на ПО и обучение.",
           "Бесперебойность и надёжность: в отличие от штатных сотрудников, аутсорсинговые специалисты не уходят на больничный или в отпуск, что могло бы прервать критические процессы.",
-          "Снижение рисков и надёжный комплаенс: аутсорсинговый партнёр берёт на себя ответственность за соответствие постоянно меняющимся нормативным требованиям Узбекистана.",
+          "Снижение рисков и надёжный комплаенс: опытный партнёр отслеживает постоянно меняющиеся нормативные требования Узбекистана и снижает риск ошибок. Юридическая ответственность остаётся за вашей компанией и её руководителем, а партнёр отвечает перед вами по договору, поэтому в нём стоит закрепить стандарты качества, сроки, ответственность и страхование.",
           "Масштабируемость и гибкость: объёмы аутсорсинговых услуг легко увеличиваются или сокращаются под колеблющиеся потребности бизнеса без сложностей с наймом и сокращением штата.",
         ],
       },
@@ -137,7 +137,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Переходит ли юридическая ответственность на аутсорсингового провайдера в Узбекистане?",
-        answer: "Да. При передаче на аутсорсинг комплаенс-функций — таких как бухгалтерский учёт или кадровое администрирование — поставщик услуг берёт на себя ответственность за соблюдение нормативных требований. Это существенно снижает риск штрафных санкций для компании в условиях постоянно меняющегося налогового и трудового законодательства Узбекистана.",
+        answer: "Нет. Аутсорсинг передаёт работу, а не юридическую ответственность. По Закону № ЗРУ-404 «О бухгалтерском учёте» (ст. 11) организацию бухгалтерского учёта осуществляет руководитель компании, и он обязан обеспечить полный и достоверный учёт; закон позволяет на договорной основе поручить ведение учёта специализированной организации или привлечённому бухгалтеру, лицензия для этого не требуется. По Налоговому кодексу (ст. 81) ответственность за достоверность налоговой отчётности несёт налогоплательщик. Поэтому перед государством отвечают компания и её руководитель, а провайдер отвечает перед компанией только по договору, например возмещает ущерб от своих ошибок в согласованном порядке. В договоре следует закрепить стандарты качества, сроки, ответственность и страхование. Если компания подлежит обязательному аудиту, работник провайдера, ведущий её учёт, должен соответствовать требованиям к высшему образованию и стажу главного бухгалтера и ежегодно повышать квалификацию (ст. 12 Закона; для банков и кредитных организаций требования устанавливает Центральный банк).",
       },
       {
         question: "В чём разница между аутсорсингом и наймом штатных сотрудников в Узбекистане?",
@@ -160,7 +160,7 @@ const article: Record<string, LocalizedArticle> = {
       points: [
         "Autsorsing — muayyan biznes funksiyalari yoki jarayonlarini tashqi xizmat koʻrsatuvchilarga topshirish.",
         "Buxgalteriya, yuridik xizmatlar va HR boshqaruvi ixtisoslashgan bilim talab qilgani uchun eng talabgir autsorsing xizmatlari hisoblanadi.",
-        "Muvofiqlik funksiyalari autsorsingga topshirilganda, xizmat koʻrsatuvchi Oʻzbekistonning oʻzgarib turuvchi tartibga solish talablariga rioya etilishi uchun javobgarlikni oʻz zimmasiga oladi.",
+        "Autsorsing ishni oʻtkazadi, yuridik javobgarlikni emas: buxgalteriya hisobi va soliq hisoboti uchun davlat oldida kompaniya va uning rahbari javob beradi, xizmat koʻrsatuvchi esa kompaniya oldida shartnoma boʻyicha javobgar boʻladi.",
         "Autsorsing ichki boʻlim bilan bogʻliq xarajatlarni — oylik, ijtimoiy badallar, ofis joyi, dasturiy taʼminot litsenziyalari va oʻqitishni — bartaraf etadi, xizmatlar hajmini esa ishga olish yoki qisqartirishsiz oshirish yoki kamaytirish mumkin.",
       ],
     },
@@ -172,7 +172,7 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Autsorsing nima va bugun nega muhim?" },
       {
         type: "p",
-        text: "Autsorsing — muayyan biznes funksiyalari yoki jarayonlarini tashqi xizmat koʻrsatuvchilarga topshirish. Bu model rivojlangan iqtisodiyotlarda operatsiyalarni soddalashtirish usuli sifatida vujudga kelgan boʻlib, uning ommabopligi oʻzaro foydadan kelib chiqadi. Kompaniyalar muayyan vazifalarni ichki xodimlardan ekspert tashqi jamoalarga oʻtkazib, kadr xarajatlarini sezilarli darajada kamaytiradilar. Rahbariyat uchun autsorsing — vazifalarnigina emas, balki ular bilan bogʻliq xatarlarni ham oʻtkazish demakdir, bu esa strategik rivojlanishga koʻproq energiya va resurs ajratishga imkon beradi.",
+        text: "Autsorsing — muayyan biznes funksiyalari yoki jarayonlarini tashqi xizmat koʻrsatuvchilarga topshirish. Bu model rivojlangan iqtisodiyotlarda operatsiyalarni soddalashtirish usuli sifatida vujudga kelgan boʻlib, uning ommabopligi oʻzaro foydadan kelib chiqadi. Kompaniyalar muayyan vazifalarni ichki xodimlardan ekspert tashqi jamoalarga oʻtkazib, kadr xarajatlarini sezilarli darajada kamaytiradilar. Rahbariyat uchun autsorsing — kundalik ishni oʻtkazish demakdir, bu esa strategik rivojlanishga koʻproq energiya va resurs ajratishga imkon beradi. Biroq yuridik javobgarlik oʻtmaydi: davlat oldida kompaniya va uning rahbari javob beradi, xizmat koʻrsatuvchi esa kompaniya oldida shartnoma boʻyicha javobgar boʻladi.",
       },
       {
         type: "p",
@@ -190,7 +190,7 @@ const article: Record<string, LocalizedArticle> = {
           "Asosiy biznesga eʼtibor: ichki jamoangizni murakkab maʼmuriy vazifalardan ozod qilib, xodimlar asosiy majburiyatlariga eʼtibor qaratishi, mahsuldorlik va innovatsiyani oshirishi mumkin.",
           "Resurslarni optimallashtirish va xarajatlarni tejash: ichki boʻlimlar bilan bogʻliq qoʻshimcha xarajatlarni — oylik, ijtimoiy badallar, ofis joyi, dasturiy taʼminot litsenziyalari va oʻqitishni — bartaraf etadi.",
           "Uzluksizlik va ishonchlilik: ichki xodimlardan farqli oʻlaroq, autsorsing mutaxassislari kasallik yoki taʼtilga chiqib, muhim operatsiyalarni toʻxtatib qoʻyishmaydi.",
-          "Xatarlarni kamaytirish va ishonchli muvofiqlik: autsorsing hamkori Oʻzbekistonning doimiy oʻzgarib turuvchi tartibga solish muhitiga muvofiqligi uchun javobgardir.",
+          "Xatarlarni kamaytirish va ishonchli muvofiqlik: tajribali hamkor Oʻzbekistonning doimiy oʻzgarib turuvchi tartibga solish talablarini kuzatib boradi va xatolar xavfini kamaytiradi. Yuridik javobgarlik kompaniyangiz va uning rahbarida qoladi, hamkor esa sizning oldingizda shartnoma boʻyicha javob beradi, shuning uchun shartnomada sifat standartlari, muddatlar, javobgarlik va sugʻurta belgilanishi lozim.",
           "Masshtablilik va moslashuvchanlik: autsorsing xizmatlarini biznesning oʻzgaruvchan ehtiyojlariga moslashtirib, ichki ishga olish yoki qisqartirish murakkabliklarisiz oson kengaytirish yoki kamaytirish mumkin.",
         ],
       },
@@ -211,7 +211,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda autsorsing muvofiqlik funksiyalari uchun yuridik masʼuliyatni provayderga oʻtkazadimi?",
-        answer: "Ha. Buxgalteriya yoki HR boshqaruvi kabi muvofiqlik funksiyalari autsorsingga topshirilganda, xizmat koʻrsatuvchi tartibga solish talablariga rioya qilish uchun masʼuliyatni oʻz zimmasiga oladi. Bu Oʻzbekistonning doimo oʻzgarib turadigan soliq va mehnat qonunchiligi sharoitida kompaniyaning jarimalarga duchor boʻlish xavfini sezilarli darajada kamaytiradi.",
+        answer: "Yoʻq. Autsorsing ishni oʻtkazadi, yuridik masʼuliyatni emas. «Buxgalteriya hisobi toʻgʻrisida»gi OʻRQ-404-sonli Qonunning 11-moddasiga koʻra, buxgalteriya hisobini kompaniya rahbari tashkil etadi va hisobning toʻliq va ishonchli yuritilishini taʼminlashi shart; qonun hisob yuritishni shartnoma asosida ixtisoslashgan tashkilotga yoki jalb qilingan buxgalterga topshirishga ruxsat beradi, buning uchun litsenziya talab qilinmaydi. Soliq kodeksining 81-moddasiga koʻra, soliq hisobotidagi maʼlumotlarning ishonchliligi uchun soliq toʻlovchi javobgardir. Shu sababli davlat oldida kompaniya va uning rahbari javob beradi, provayder esa kompaniya oldida faqat shartnoma boʻyicha javobgar boʻladi, masalan, oʻz xatolari uchun zararni kelishilgan tartibda qoplaydi. Shartnomada sifat standartlari, muddatlar, javobgarlik va sugʻurta belgilanishi lozim. Agar kompaniya majburiy auditga tortiladigan boʻlsa, uning hisobini yurituvchi provayder xodimi bosh buxgalterga qoʻyiladigan oliy maʼlumot va ish staji talablariga javob berishi hamda har yili malakasini oshirishi kerak (Qonunning 12-moddasi; banklar va kredit tashkilotlari uchun talablarni Markaziy bank belgilaydi).",
       },
       {
         question: "Oʻzbekistonda autsorsing va shtatdagi xodim yollash oʻrtasidagi farq nima?",
