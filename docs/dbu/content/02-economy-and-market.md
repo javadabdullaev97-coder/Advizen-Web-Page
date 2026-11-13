@@ -95,11 +95,11 @@ Foreign investors can sign an investment agreement with the Government (Arts. 40
 Beyond the general law, two regimes matter most to foreign investors:
 
 - Special economic zones (Law No. ZRU-604 of 17 February 2020): property and land tax exemptions for 3 to 10 years depending on the amount invested, customs relief on equipment and inputs, and a requirement that at least 90% of staff be Uzbek citizens.
-- Foreign-invested enterprises outside Tashkent city and region with at least 33% foreign capital (15% for joint-stock companies): exemption from land, property and water taxes for 3 to 7 years, for investments from USD 300,000 (Tax Code, Art. 471).
+- Foreign-invested enterprises with at least 33% foreign capital (15% for joint-stock companies): exemption from land tax and property tax for a period set by the President (Tax Code, Arts. 471–472, as amended by Law ZRU-1108 from 1 January 2026).
 
 Each regime has conditions, such as reinvesting at least half of the tax saved, and benefits are clawed back if they are breached.
 
-The 10-year tax stabilisation that Decree PF-4434 of 10 April 2012 gave new enterprises with a foreign cash contribution of at least USD 5 million lapsed on 1 October 2020 (Decree UP-6011). The general 10-year guarantee in Art. 19 of the investment law remains.
+The 10-year tax stabilisation that Decree UP-4434 of 10 April 2012 gave new enterprises with a foreign cash contribution of at least USD 5 million lapsed on 1 October 2020 (Decree UP-6011). The general 10-year guarantee in Art. 19 of the investment law remains.
 
 ### Treaties
 
@@ -183,7 +183,7 @@ https://cbu.uz/upload/iblock/2cf/9yaq7tnvvjzjw48cux11o4rr24v6rr0e/Labor-market-Q
 https://kun.uz/ru/news/2026/01/24/vvp-uzbekistana-v-2025-godu-vyros-na-77-i-prevysil-147-mlrd-dollarov (GDP per capita UZS 48.4 million, USD 3,846, preliminary)
 https://za.investing.com/news/world-news/sp-affirms-uzbekistan-bbb-rating-on-strong-reserves-gold-prices-93CH-4297681 (S&P affirmation, 22 May 2026)
 https://lex.uz/ru/docs/4664144 (Law ZRU-598, current edition of 25.07.2026, Art. 19)
-https://lex.uz/ru/docs/1994791 (Decree PF-4434; Annex 1 lapsed from 1 October 2020 under Decree UP-6011)
+https://lex.uz/ru/docs/1994791 (Decree UP-4434; Annex 1 lapsed from 1 October 2020 under Decree UP-6011)
 https://www.legal500.com/guides/chapter/uzbekistan-investment-treaty-arbitration/ (50 BITs in force; Italy and Jordan 2025 not in force)
 https://www.uzdaily.uz/en/uzbekistan-rapidly-expands-renewable-energy-capacity-irena/ (IRENA Renewable Capacity Statistics 2026: solar 5,934 MW, renewables 10,027 MW)
 Tax Code Art. 471

@@ -77,7 +77,7 @@ The Labour Code (Art. 208) sets nine non-working public holidays. Seven have fix
 
 The two Hayits follow the lunar calendar and move about 11 days earlier each year. Their dates are fixed by decree shortly before each holiday; the 2027 dates have not yet been published. In 2026 they fell on 20 March and 27 May.
 
-A holiday falling on a weekend moves to the next working day. Each December a presidential decree also sets bridge days for the coming year; for 2026 (PF-257 of 24 December 2025) these were 2 January, 28 and 29 May and 31 August. Because the calendar moves every year, check the annual decree before fixing deadlines or closing dates.
+A holiday falling on a weekend moves to the next working day. Each December a presidential decree also sets bridge days for the coming year; for 2026 (UP-257 of 24 December 2025) these were 2 January, 28 and 29 May and 31 August. Because the calendar moves every year, check the annual decree before fixing deadlines or closing dates.
 
 > Because the calendar moves every year, check the annual decree before fixing deadlines or closing dates.
 

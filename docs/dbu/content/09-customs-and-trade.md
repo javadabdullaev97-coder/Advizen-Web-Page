@@ -59,7 +59,7 @@ Clearance fees are set in multiples of the base calculation value (BCV, ~USD 37 
 | USD 1 million and above | 25 BCV (~USD 920) |
 :::
 
-Transit and processing declarations, and clearance outside working hours, cost 25% of the BCV (~USD 9) each. Declaring goods before arrival earns a 20% discount. The courier shipment fee fell from 2% to 1.6% of the BCV (~USD 0.60) per kilogram on 1 November 2026. Presidential Decree PF-174 of 27 August 2026 cuts fees for export clearance, phytosanitary certificates, fumigation and certificates of origin by 30% from 1 October 2026. By November 2026 the Resolution No. 55 scale had not yet been amended to match.
+Transit and processing declarations, and clearance outside working hours, cost 25% of the BCV (~USD 9) each. Declaring goods before arrival earns a 20% discount. The courier shipment fee fell from 2% to 1.6% of the BCV (~USD 0.60) per kilogram on 1 November 2026. Presidential Decree UP-174 of 27 August 2026 cuts fees for export clearance, phytosanitary certificates, fumigation and certificates of origin by 30% from 1 October 2026. By November 2026 the Resolution No. 55 scale had not yet been amended to match.
 
 :::box Practical tip
 - The fee is charged per declaration, so consolidating shipments lowers the cost per unit.
@@ -88,7 +88,7 @@ Since 1 March 2026, a permissive regime has applied at the till under Presidenti
 
 Listed products need a certificate or declaration of conformity before release for free circulation; goods for processing and exhibition samples are exempt. Foreign certificates are recognised only through an accredited Uzbek body or a mutual recognition agreement. Medicines and medical devices must be registered, and food, plant and animal products need sanitary, phytosanitary or veterinary clearance.
 
-Presidential Decree PF-25 of 16 February 2026 moves conformity assessment to a risk-based approach. From 1 January 2027 it introduces a national conformity mark, Conformity Uzbekistan (CUz), for products covered by technical regulations (para. 6). A few goods, such as weapons and certain chemicals, still need an import or export licence.
+Presidential Decree UP-25 of 16 February 2026 moves conformity assessment to a risk-based approach. From 1 January 2027 it introduces a national conformity mark, Conformity Uzbekistan (CUz), for products covered by technical regulations (para. 6). A few goods, such as weapons and certain chemicals, still need an import or export licence.
 
 ## WTO accession
 
@@ -129,7 +129,7 @@ https://kun.uz/en/news/2026/08/03/uzbekistan-advances-wto-membership-talks-targe
 https://kun.uz/en/news/2024/02/28/customs-code-introduced-a-series-of-amendments
 https://kun.uz/en/news/2026/04/14/uzbekistan-to-establish-bonded-warehouses-to-boost-e-commerce-sector
 https://kun.uz/en/news/2026/07/18/government-adopts-framework-for-bonded-warehouses-and-cross-border-e-commerce-7bf812
-https://lex.uz/docs/8444993 (Presidential Decree PF-174 of 27.08.2026, para. 3(b)(ii))
+https://lex.uz/docs/8444993 (Presidential Decree UP-174 of 27.08.2026, para. 3(b)(ii))
 https://advice.uz/ru/news/3590
-https://lex.uz/docs/8053023 (Presidential Decree PF-25 of 16.02.2026, para. 6)
+https://lex.uz/docs/8053023 (Presidential Decree UP-25 of 16.02.2026, para. 6)
 -->

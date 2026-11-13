@@ -40,7 +40,7 @@ Presidential Resolution No. PP-388 of 26 December 2025 tightened the regime from
 
 ### International Digital Technologies Centre
 
-Constitutional Law No. ZRU-1169 of 19 August 2026 creates a separate International Digital Technologies Centre with its own legal regime until 2100; it enters into force on 21 February 2027. Participants' income from priority activities will be exempt from profit tax, and sales inside the centre and abroad will be zero-rated for VAT. Highly qualified foreign employees will pay no personal income tax. The tax chapter does not apply to IT Park residents.
+Constitutional Law No. ZRU-1169 of 19 August 2026 creates a separate International Digital Technologies Centre with its own legal regime until 2100; it is due to enter into force in early 2027; check the exact date on lex.uz. Participants' income from priority activities will be exempt from profit tax, and sales inside the centre and abroad will be zero-rated for VAT. Highly qualified foreign employees will pay no personal income tax. The tax chapter does not apply to IT Park residents.
 
 ## Creative Industry Park
 
@@ -72,7 +72,7 @@ Outside the zones, the main tool is an investment agreement with the Government 
 
 The state can also provide an investment subsidy by building the external engineering and utility networks to the project site at its own expense (Art. 36). An investment tax credit allows tax payments to be deferred and repaid in stages (Art. 35). A Cabinet of Ministers regulation governs state reimbursement of the cost of external infrastructure. Investors in projects worth at least USD 10 million can be allocated land directly by the Cabinet of Ministers rather than at auction (Land Code, Art. 24).
 
-Enterprises with direct private foreign investment in listed sectors can be exempt from land and property tax for three to seven years, depending on the investment (Tax Code, Arts. 471 and 472). They must be located outside Tashkent city and region, have a foreign share of at least 33% (15% for a JSC) and reinvest at least half the tax saved.
+Enterprises with direct private foreign investment can be exempt from land tax and property tax for a period set by the President (Tax Code, Art. 471, as amended by Law ZRU-1108 from 1 January 2026). Article 472 sets the conditions, including a foreign share of at least 33% (15% for a JSC). The exclusion of Tashkent city and region comes from the presidential decrees, not from the Code.
 
 :::table Special regimes compared
 | Regime | Main benefit | Term | Main condition |
@@ -82,7 +82,7 @@ Enterprises with direct private foreign investment in listed sectors can be exem
 | Creative Industry Park | PIT and social tax halved | To 1 January 2031 | Creative industry activity |
 | TIFC | 0% profit and social tax | To 1 January 2076 | Financial services; substance |
 | High-tech production | 0% profit tax | 3 years | Listed high-tech product |
-| Foreign-invested enterprise | Land and property tax exempt | 3 to 7 years | Foreign share 33%; outside Tashkent |
+| Foreign-invested enterprise | Land and property tax exempt | Set by the President | Foreign share 33% (15% for a JSC) |
 :::
 
 <!-- sources

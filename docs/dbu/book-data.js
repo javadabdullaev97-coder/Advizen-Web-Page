@@ -247,7 +247,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "A holiday falling on a weekend moves to the next working day. Each December a presidential decree also sets bridge days for the coming year; for 2026 (PF-257 of 24 December 2025) these were 2 January, 28 and 29 May and 31 August. Because the calendar moves every year, check the annual decree before fixing deadlines or closing dates."
+     "html": "A holiday falling on a weekend moves to the next working day. Each December a presidential decree also sets bridge days for the coming year; for 2026 (UP-257 of 24 December 2025) these were 2 January, 28 and 29 May and 31 August. Because the calendar moves every year, check the annual decree before fixing deadlines or closing dates."
     },
     {
      "t": "quote",
@@ -547,7 +547,7 @@ window.BOOK = {
      "t": "ul",
      "items": [
       "Special economic zones (Law No. ZRU-604 of 17 February 2020): property and land tax exemptions for 3 to 10 years depending on the amount invested, customs relief on equipment and inputs, and a requirement that at least 90% of staff be Uzbek citizens.",
-      "Foreign-invested enterprises outside Tashkent city and region with at least 33% foreign capital (15% for joint-stock companies): exemption from land, property and water taxes for 3 to 7 years, for investments from USD 300,000 (Tax Code, Art. 471)."
+      "Foreign-invested enterprises with at least 33% foreign capital (15% for joint-stock companies): exemption from land tax and property tax for a period set by the President (Tax Code, Arts. 471–472, as amended by Law ZRU-1108 from 1 January 2026)."
      ]
     },
     {
@@ -556,7 +556,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The 10-year tax stabilisation that Decree PF-4434 of 10 April 2012 gave new enterprises with a foreign cash contribution of at least USD 5 million lapsed on 1 October 2020 (Decree UP-6011). The general 10-year guarantee in Art. 19 of the investment law remains."
+     "html": "The 10-year tax stabilisation that Decree UP-4434 of 10 April 2012 gave new enterprises with a foreign cash contribution of at least USD 5 million lapsed on 1 October 2020 (Decree UP-6011). The general 10-year guarantee in Art. 19 of the investment law remains."
     },
     {
      "t": "h3",
@@ -828,7 +828,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Since 1 June 2025, a foreign national can obtain a five-year residence permit, in a simplified procedure, by paying USD 250,000 (Presidential Decree PF-67 of 18 April 2025, para. 26). Each family member, meaning a spouse, child or parent, requires a further USD 150,000. The decree treats the sum as a payment, not as an investment in a business, and sets no rules on refunds or renewal."
+     "html": "Since 1 June 2025, a foreign national can obtain a five-year residence permit, in a simplified procedure, by paying USD 250,000 (Presidential Decree UP-67 of 18 April 2025, para. 26). Each family member, meaning a spouse, child or parent, requires a further USD 150,000. The decree treats the sum as a payment, not as an investment in a business, and sets no rules on refunds or renewal."
     },
     {
      "t": "quote",
@@ -892,7 +892,7 @@ window.BOOK = {
      "label": "Maximum number of participants in an LLC"
     },
     {
-     "value": "10 working days",
+     "value": "5 working days",
      "label": "For a decision on accrediting a representative office"
     },
     {
@@ -927,7 +927,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "A JSC issues shares and may have one or more shareholders. It has a mandatory supervisory board elected at the constituent assembly, which makes it heavier to run than an LLC. Banking and certain other financial activities can only be carried out through a JSC."
+     "html": "A JSC issues shares and may have one or more shareholders. It normally has a supervisory board, which makes it heavier to run than an LLC; where there are fewer than 30 holders of voting shares, the general meeting may perform the board's functions (Law on Joint-Stock Companies, Art. 74). Banking and certain other financial activities can only be carried out through a JSC."
     },
     {
      "t": "h3",
@@ -1015,7 +1015,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "An investor who wants the status of an enterprise with foreign investments should check two thresholds. The Law on Investments requires a foreign share of at least 15%. A presidential decree adds a charter capital of at least UZS 400 million for newly established enterprises. The two rules sit uneasily together, and investors relying on this status usually satisfy both."
+     "html": "An investor who wants the status of an enterprise with foreign investments should check two thresholds. The Law on Investments requires a foreign share of at least 15%. Cabinet of Ministers Resolution No. 66, Annex 11 (as amended by Resolution No. 165 of 28 March 2024), adds a charter capital of at least UZS 400 million, or UZS 200 million in Karakalpakstan and Khorezm region. Registration as an enterprise with foreign investments is refused if the threshold is not met (para. 40). Investors relying on this status should satisfy both rules."
     },
     {
      "t": "h2",
@@ -1023,7 +1023,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Legal entities are registered on a one-stop basis by the Public Services Centres, under Cabinet of Ministers Resolution No. 66 of 9 February 2017. Filing can be made in person or online through the Unified Portal of Interactive State Services (my.gov.uz and fo.birdarcha.uz). One application registers the company with the justice, tax and statistics authorities at the same time."
+     "html": "Legal entities are registered on a one-stop basis by the Public Services Centres, under Cabinet of Ministers Resolution No. 66 of 9 February 2017. Filing can be made in person or online through the Unified Portal of Interactive State Services (my.gov.uz and birdarcha.uz) or through us-uz.gov.uz (Cabinet of Ministers Resolution No. 393). One application registers the company with the justice, tax and statistics authorities at the same time."
     },
     {
      "t": "ul",
@@ -1032,13 +1032,14 @@ window.BOOK = {
       "Prepare the charter and, where there are several founders, the foundation agreement in Uzbek.",
       "Obtain notarised and apostilled (or legalised) copies of the foreign founder's documents, with a notarised translation.",
       "Obtain a personal identification number (PINFL) for a foreign director. It is issued in one business day.",
+      "A foreign founder signs the application with its own electronic digital signature (Resolution No. 66, para. 13).",
       "File the application and pay the state duty of 1 base calculation value (BCV, ~USD 37), reduced by 10% when filed through the Unified Portal (Law on State Duty, Art. 22¹).",
-      "Receive the registration certificate and taxpayer number. Registration should take no more than two business days when the file is complete."
+      "Receive the registration certificate and taxpayer number. By law, registration of a complete application takes no more than 30 minutes (Resolution No. 66, Annex 3, para. 2); in practice, allow one to three working days."
      ]
     },
     {
      "t": "p",
-     "html": "From 1 January 2026, Presidential Decree No. PF-214 of 14 November 2025 introduced the \"Business in 15 minutes\" principle. At registration the founder can order, in one step, an electronic digital signature key, a bank account, a licence or notification, registration of a commercial lease, a VAT certificate, an online cash register and the appointment of the director in the Unified National Labour System. Each service is optional and can be paid for with a single QR code."
+     "html": "From 1 January 2026, Presidential Decree No. UP-214 of 14 November 2025 introduced the \"Business in 15 minutes\" principle. At registration the founder can order, in one step, an electronic digital signature key, a bank account, a licence or notification, registration of a commercial lease, a VAT certificate, an online cash register and the appointment of the director in the Unified National Labour System. Each service is optional and can be paid for with a single QR code."
     },
     {
      "t": "box",
@@ -1055,16 +1056,24 @@ window.BOOK = {
      "table": null
     },
     {
+     "t": "h3",
+     "html": "Beneficial owners"
+    },
+    {
+     "t": "p",
+     "html": "Uzbekistan has no public register of beneficial owners and no fixed ownership threshold for disclosure. The registration application includes a questionnaire on the company's beneficial owners, and banks identify them again when they open the account. Foreign founders should have a chart showing the chain of ownership up to the individuals who control the company."
+    },
+    {
      "t": "h2",
      "html": "Accreditation of representative offices"
     },
     {
      "t": "p",
-     "html": "Representative offices are accredited by the Ministry of Investment, Industry and Trade under Cabinet of Ministers Resolution No. 410 of 23 October 2000. Applications are filed online through the public services portal. The head office submits its charter, proof of registration, a power of attorney for the head of office, the regulation on the office and a letter from the owner of the premises. Foreign documents must be apostilled or legalised and must have been issued within the previous six months."
+     "html": "Representative offices are accredited by the Ministry of Investment, Industry and Trade under Cabinet of Ministers Resolution No. 76 of 7 February 2024, which replaced Resolution No. 410 of 2000. Applications are filed through a Public Services Centre or my.gov.uz. The head office submits its charter, proof of registration, a power of attorney for the head of office and the regulation on the office. No lease is needed for first accreditation; a copy of the lease is filed only on renewal. Foreign documents must be apostilled or legalised and submitted within six months of issue."
     },
     {
      "t": "p",
-     "html": "The Ministry decides within 10 working days and issues the certificate within five days of receiving the state duty of 48 BCV (~USD 1,800). The office comes into existence on the day its accreditation certificate is issued. Accreditation runs for one to three years; the first certificate is issued for one year. Within 10 days of receiving it, the office must report its postal address to the Ministry and register with the local tax authority. The head of office files an annual activity report."
+     "html": "The Ministry decides within 5 working days. After approval the state duty must be paid within one month, and the certificate is issued within one working day of payment (para. 16). The office comes into existence on the day its accreditation certificate is issued. Accreditation runs for one to three years at the applicant's choice (para. 15). Registration with the tax authority is automatic (para. 22), and the office provides information on its activity at the Ministry's request (para. 25)."
     },
     {
      "t": "p",
@@ -1076,7 +1085,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "A company's legal address is the address in its charter, and a representative office's is the address stated at accreditation. A private residence cannot be used. The tax authorities check that the entity is actually present at that address. If no one representing the entity is found, it can be fined and its bank accounts can be frozen. The address also determines the competent court and tax office."
+     "html": "A company's legal address is the address in its charter, and a representative office's is the address stated at accreditation. A private residence cannot be used. The tax authorities check that the entity is actually present at that address. If no one representing the entity is found there, the tax authority can suspend operations on its bank accounts (Tax Code, Art. 111). The address also determines the competent court and tax office."
     },
     {
      "t": "h2",
@@ -1084,7 +1093,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Uzbek legal entities and accredited representative offices may hold accounts in soums and in foreign currency with Uzbek banks. Payments between residents inside Uzbekistan are generally made in soums, while cross-border transactions may be in any currency. Resident companies may open accounts with foreign banks only where a decision of the President or the Government, or an international agreement, allows it. Under Decree PF-214 the account can be applied for and activated during state registration."
+     "html": "Uzbek legal entities and accredited representative offices may hold accounts in soums and in foreign currency with Uzbek banks. Payments between residents inside Uzbekistan are generally made in soums, while cross-border transactions may be in any currency. Resident companies may open accounts with foreign banks only where a decision of the President or the Government, or an international agreement, allows it. Under Decree UP-214 the account application can be filed together with state registration. Remote opening is available to resident founders; where the founders are foreign, only the application is filed at registration and the bank completes its own checks (Resolution No. 66, para. 19)."
     },
     {
      "t": "h2",
@@ -1092,11 +1101,11 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Law No. ZRU-701 of 14 July 2021 sets three tracks: licences, permitting documents and notifications. All applications go through the License system (license.gov.uz) or the Unified Portal and are signed with a digital signature. The authority must decide on a licence or permit within 20 working days. If it misses the deadline, the applicant may start operating after notifying the authority electronically."
+     "html": "Law No. ZRU-701 of 14 July 2021 sets three tracks: licences, permitting documents and notifications. All applications go through the License system (license.gov.uz) or the Unified Portal and are signed with a digital signature. The authority must decide on a licence or permit within 20 working days. If it misses the deadline, the applicant may start operating once it has paid the fee through the License system (Art. 28, parts 5–6). Since 14 August 2026, Article 28¹, added by Law ZRU-1164, lets a company start activities designated by the Cabinet of Ministers by notifying the authority before the licence is issued."
     },
     {
      "t": "p",
-     "html": "A licence may be refused only for incomplete documents, false information or failure to meet licensing conditions. Notification-track activities can start as soon as the notification is accepted. Decree PF-214 added an optional preliminary assessment of an application in the License system, taking up to 20 days. Branches and representative offices of a licensed legal entity do not need their own licence; their addresses are added to the parent's licence."
+     "html": "A licence may be refused only on the five grounds in Article 29: incomplete documents, non-compliance with licensing requirements, a one-year ban on obtaining a licence, false or distorted information, or a well-founded negative conclusion of a required study or inspection. Since 1 March 2026 foreign companies apply through their registered permanent establishment (Law ZRU-1099), and fines for licensing breaches are imposed on the organisation only, not on its officials. Notification-track activities can start as soon as the notification is accepted. Decree UP-214 added an optional preliminary assessment of an application in the License system, taking up to 20 days. Branches and representative offices of a licensed legal entity do not need their own licence; their addresses are added to the parent's licence."
     },
     {
      "t": "h2",
@@ -1118,7 +1127,7 @@ window.BOOK = {
       ],
       [
        "State registration of an LLC",
-       "Up to 2 business days"
+       "Up to 30 minutes by law; 1–3 working days in practice"
       ],
       [
        "Bank account, digital signature, VAT certificate",
@@ -1134,7 +1143,7 @@ window.BOOK = {
       ],
       [
        "Representative office, as an alternative",
-       "10 working days plus 5 days for the certificate"
+       "5 working days plus 1 working day for the certificate"
       ]
      ],
      "t": "table",
@@ -1239,7 +1248,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Constitutional Law No. ZRU-1169 of 19 August 2026 creates a separate International Digital Technologies Centre with its own legal regime until 2100; it enters into force on 21 February 2027. Participants' income from priority activities will be exempt from profit tax, and sales inside the centre and abroad will be zero-rated for VAT. Highly qualified foreign employees will pay no personal income tax. The tax chapter does not apply to IT Park residents."
+     "html": "Constitutional Law No. ZRU-1169 of 19 August 2026 creates a separate International Digital Technologies Centre with its own legal regime until 2100; it is due to enter into force in early 2027; check the exact date on lex.uz. Participants' income from priority activities will be exempt from profit tax, and sales inside the centre and abroad will be zero-rated for VAT. Highly qualified foreign employees will pay no personal income tax. The tax chapter does not apply to IT Park residents."
     },
     {
      "t": "h2",
@@ -1303,7 +1312,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Enterprises with direct private foreign investment in listed sectors can be exempt from land and property tax for three to seven years, depending on the investment (Tax Code, Arts. 471 and 472). They must be located outside Tashkent city and region, have a foreign share of at least 33% (15% for a JSC) and reinvest at least half the tax saved."
+     "html": "Enterprises with direct private foreign investment can be exempt from land tax and property tax for a period set by the President (Tax Code, Art. 471, as amended by Law ZRU-1108 from 1 January 2026). Article 472 sets the conditions, including a foreign share of at least 33% (15% for a JSC). The exclusion of Tashkent city and region comes from the presidential decrees, not from the Code."
     },
     {
      "head": [
@@ -1346,8 +1355,8 @@ window.BOOK = {
       [
        "Foreign-invested enterprise",
        "Land and property tax exempt",
-       "3 to 7 years",
-       "Foreign share 33%; outside Tashkent"
+       "Set by the President",
+       "Foreign share 33% (15% for a JSC)"
       ]
      ],
      "t": "table",
@@ -1717,7 +1726,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Every Uzbek company is a VAT payer unless it uses turnover tax, which since 1 June 2026 is possible up to annual income of 12,000 BCV (~USD 440,000) (Presidential Decree UP-100). Above that level VAT applies from the day the threshold is crossed. Registration is made in the taxpayer's online account, and voluntary registration is possible. Returns are monthly, filed and paid by the 20th (Tax Code, Arts. 259, 273)."
+     "html": "Every Uzbek company is a VAT payer unless it uses turnover tax, which since 1 June 2026 is possible up to annual income of 12,000 BCV (Presidential Decree UP-100). Above that level VAT applies from the day the threshold is crossed. Registration is made in the taxpayer's online account, and voluntary registration is possible. Returns are monthly, filed and paid by the 20th (Tax Code, Arts. 259, 273)."
     },
     {
      "t": "h3",
@@ -1809,7 +1818,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Turnover tax replaces profit tax and VAT for small businesses. Since 1 June 2026 a company may use it while annual income stays below 12,000 BCV (~USD 440,000), instead of UZS 1 billion (Presidential Decree UP-100 of 26 May 2026)."
+     "html": "Turnover tax replaces profit tax and VAT for small businesses. Since 1 June 2026 a company may use it while annual income stays below 12,000 BCV, instead of UZS 1 billion (Presidential Decree UP-100 of 26 May 2026)."
     },
     {
      "t": "p",
@@ -1871,7 +1880,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The regime is closed to importers, producers of excisable goods, mining companies, fuel sellers, markets and shopping centres, alcohol retailers, pharmacies and medical providers, jewellers, tax consultants, auditors and non-profit organisations, among others (Tax Code, Art. 461). Decree UP-100 ended the rule that importers must register for VAT, but Art. 461 still excludes them from turnover tax."
+     "html": "The regime is closed to producers of excisable goods, mining companies, fuel sellers, markets and shopping centres, alcohol retailers, pharmacies and medical providers, jewellers, tax consultants, auditors and non-profit organisations, among others (Tax Code, Art. 461). Decree UP-100 ended the rule that importers must register for VAT. Whether importers may now use turnover tax is not settled, and should be confirmed with the Tax Committee before relying on it."
     },
     {
      "t": "h3",
@@ -2457,7 +2466,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Since 1 July 2026, temporary disability benefit is assigned automatically through the State Social Insurance Fund under Presidential Decree PF-206 of 3 November 2025. The employer pays for the first five days of incapacity in each calendar year, and the fund pays from the sixth day (Cabinet Resolution No. 796 of 17 December 2025, Annex 4, para. 20). The benefit is 60% of average earnings for an insurance record of six months to eight years and 80% above eight years, based on earnings up to ten times the minimum wage. It is paid for up to 182 calendar days a year."
+     "html": "Since 1 July 2026, temporary disability benefit is assigned automatically through the State Social Insurance Fund under Presidential Decree UP-206 of 3 November 2025. The employer pays for the first five days of incapacity in each calendar year, and the fund pays from the sixth day (Cabinet Resolution No. 796 of 17 December 2025, Annex 4, para. 20). The benefit is 60% of average earnings for an insurance record of six months to eight years and 80% above eight years, based on earnings up to ten times the minimum wage. It is paid for up to 182 calendar days a year."
     },
     {
      "t": "h2",
@@ -2537,7 +2546,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Presidential Decree PF-115 of 23 June 2026 raised both reference values from 1 September 2026:"
+     "html": "Presidential Decree UP-115 of 23 June 2026 raised both reference values from 1 September 2026:"
     },
     {
      "t": "ul",
@@ -2630,7 +2639,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Workers from visa-regime countries need a work visa. Qualified and highly qualified specialists can receive multiple-entry work visas for the contract term, up to three years, and can extend them without leaving the country. Highly qualified specialists and their family members may also obtain residence permits for the term of the contract. Since 1 June 2025, any foreign national can obtain a five-year residence permit under a simplified procedure for a fee of USD 250,000, plus USD 150,000 per family member (Decree PF-67 of 18 April 2025). The Entry, Visas and Residence chapter has the details."
+     "html": "Workers from visa-regime countries need a work visa. Qualified and highly qualified specialists can receive multiple-entry work visas for the contract term, up to three years, and can extend them without leaving the country. Highly qualified specialists and their family members may also obtain residence permits for the term of the contract. Since 1 June 2025, any foreign national can obtain a five-year residence permit under a simplified procedure for a fee of USD 250,000, plus USD 150,000 per family member (Decree UP-67 of 18 April 2025). The Entry, Visas and Residence chapter has the details."
     },
     {
      "t": "h2",
@@ -2802,7 +2811,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Transit and processing declarations, and clearance outside working hours, cost 25% of the BCV (~USD 9) each. Declaring goods before arrival earns a 20% discount. The courier shipment fee fell from 2% to 1.6% of the BCV (~USD 0.60) per kilogram on 1 November 2026. Presidential Decree PF-174 of 27 August 2026 cuts fees for export clearance, phytosanitary certificates, fumigation and certificates of origin by 30% from 1 October 2026. By November 2026 the Resolution No. 55 scale had not yet been amended to match."
+     "html": "Transit and processing declarations, and clearance outside working hours, cost 25% of the BCV (~USD 9) each. Declaring goods before arrival earns a 20% discount. The courier shipment fee fell from 2% to 1.6% of the BCV (~USD 0.60) per kilogram on 1 November 2026. Presidential Decree UP-174 of 27 August 2026 cuts fees for export clearance, phytosanitary certificates, fumigation and certificates of origin by 30% from 1 October 2026. By November 2026 the Resolution No. 55 scale had not yet been amended to match."
     },
     {
      "t": "box",
@@ -2864,7 +2873,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Presidential Decree PF-25 of 16 February 2026 moves conformity assessment to a risk-based approach. From 1 January 2027 it introduces a national conformity mark, Conformity Uzbekistan (CUz), for products covered by technical regulations (para. 6). A few goods, such as weapons and certain chemicals, still need an import or export licence."
+     "html": "Presidential Decree UP-25 of 16 February 2026 moves conformity assessment to a risk-based approach. From 1 January 2027 it introduces a national conformity mark, Conformity Uzbekistan (CUz), for products covered by technical regulations (para. 6). A few goods, such as weapons and certain chemicals, still need an import or export licence."
     },
     {
      "t": "h2",

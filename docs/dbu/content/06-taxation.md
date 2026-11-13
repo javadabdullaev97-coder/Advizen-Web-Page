@@ -140,7 +140,7 @@ An Uzbek company pays a German consultant UZS 500 million for advice delivered i
 
 VAT is charged at 12% on supplies of goods and services in Uzbekistan and on imports. Payers deduct the VAT on their purchases from the VAT on their sales.
 
-Every Uzbek company is a VAT payer unless it uses turnover tax, which since 1 June 2026 is possible up to annual income of 12,000 BCV (~USD 440,000) (Presidential Decree UP-100). Above that level VAT applies from the day the threshold is crossed. Registration is made in the taxpayer's online account, and voluntary registration is possible. Returns are monthly, filed and paid by the 20th (Tax Code, Arts. 259, 273).
+Every Uzbek company is a VAT payer unless it uses turnover tax, which since 1 June 2026 is possible up to annual income of 12,000 BCV (Presidential Decree UP-100). Above that level VAT applies from the day the threshold is crossed. Registration is made in the taxpayer's online account, and voluntary registration is possible. Returns are monthly, filed and paid by the 20th (Tax Code, Arts. 259, 273).
 
 ### Rates
 
@@ -185,7 +185,7 @@ Larger refunds are paid within 30 days of a desk audit (Tax Code, Art. 274). Lar
 
 ### Thresholds
 
-Turnover tax replaces profit tax and VAT for small businesses. Since 1 June 2026 a company may use it while annual income stays below 12,000 BCV (~USD 440,000), instead of UZS 1 billion (Presidential Decree UP-100 of 26 May 2026).
+Turnover tax replaces profit tax and VAT for small businesses. Since 1 June 2026 a company may use it while annual income stays below 12,000 BCV, instead of UZS 1 billion (Presidential Decree UP-100 of 26 May 2026).
 
 A company that crossed the old limit before 1 June 2026 stays on VAT for the rest of 2026, because a move to turnover tax takes effect only from the next tax year. It may switch from 2027 if its 2026 income stays below the new limit, giving notice at least ten days before the year starts (Tax Code, Art. 462). Turnover tax payers still pay social tax and property, land and water taxes.
 
@@ -209,7 +209,7 @@ Returns are monthly, filed and paid by the 15th, with an annual return by 15 Feb
 
 ### Who cannot use turnover tax
 
-The regime is closed to importers, producers of excisable goods, mining companies, fuel sellers, markets and shopping centres, alcohol retailers, pharmacies and medical providers, jewellers, tax consultants, auditors and non-profit organisations, among others (Tax Code, Art. 461). Decree UP-100 ended the rule that importers must register for VAT, but Art. 461 still excludes them from turnover tax.
+The regime is closed to producers of excisable goods, mining companies, fuel sellers, markets and shopping centres, alcohol retailers, pharmacies and medical providers, jewellers, tax consultants, auditors and non-profit organisations, among others (Tax Code, Art. 461). Decree UP-100 ended the rule that importers must register for VAT. Whether importers may now use turnover tax is not settled, and should be confirmed with the Tax Committee before relying on it.
 
 ### The simplified 6% VAT option
 

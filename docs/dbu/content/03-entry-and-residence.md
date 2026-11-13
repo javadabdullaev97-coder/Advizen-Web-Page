@@ -63,7 +63,7 @@ Highly qualified specialists (a degree from a university in the top 1,000 of an 
 
 ### Investment residence permit
 
-Since 1 June 2025, a foreign national can obtain a five-year residence permit, in a simplified procedure, by paying USD 250,000 (Presidential Decree PF-67 of 18 April 2025, para. 26). Each family member, meaning a spouse, child or parent, requires a further USD 150,000. The decree treats the sum as a payment, not as an investment in a business, and sets no rules on refunds or renewal.
+Since 1 June 2025, a foreign national can obtain a five-year residence permit, in a simplified procedure, by paying USD 250,000 (Presidential Decree UP-67 of 18 April 2025, para. 26). Each family member, meaning a spouse, child or parent, requires a further USD 150,000. The decree treats the sum as a payment, not as an investment in a business, and sets no rules on refunds or renewal.
 
 > Since 1 June 2025, a five-year residence permit can be obtained for a payment of USD 250,000.
 
@@ -94,7 +94,7 @@ https://en.fergana.agency/news/142389/
 https://kun.uz/en/news/2025/12/24/uzbekistan-introduces-30-day-visa-free-entry-for-us-citizens-from-january-1
 https://gov.uz/en/mfa/news/view/53659
 https://www.roedl.com/wp-content/uploads/2026/02/20260210-Roedl-Brochure-Central-Asia-Global-Mobility.pdf
-https://lex.uz/docs/7483820 (Presidential Decree PF-67 of 18.04.2025, para. 26)
+https://lex.uz/docs/7483820 (Presidential Decree UP-67 of 18.04.2025, para. 26)
 https://www.uzdaily.uz/en/golden-visa-uzbekistan-raises-investment-threshold-for-residence-permit
 https://www.spot.uz/ru/2025/05/01/gold-visa/
 https://lex.uz/docs/7627933 (Law ZRU-1074 of 10.07.2025, Arts. 7, 13, 16, 17)

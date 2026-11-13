@@ -83,7 +83,7 @@ https://gov.uz/en/imv/news/view/152944
 https://gov.uz/en/imv/news/view/143997
 https://lex.uz/ru/docs/5307899 (Law on Auditing Activity ZRU-677, Art. 35)
 https://buxgalter.uz/ru/publish/doc/text213301_kak_sdaem_finansovuyu_otchetnost_po_itogam_2025_goda
-https://yep.uz/?p=67360 (base calculation amount UZS 440,000 from 1 September 2026, PF-115)
+https://yep.uz/?p=67360 (base calculation amount UZS 440,000 from 1 September 2026, UP-115)
 Law on Accounting ZRU-404, Arts. 11, 12, 14, 15, 17, 22, 24, 25, 26, 29
 NSBU 1 (reg. No. 3544, 6 August 2024); NSBU 20; NSBU 21 chart of accounts (Order No. 191, 14 November 2024); NSBU 22 (reg. No. 3587, 19 December 2024)
 Tax Code Arts. 47, 77, 78

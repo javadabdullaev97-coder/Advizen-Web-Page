@@ -37,7 +37,7 @@ The minimum annual leave is 21 calendar days (Art. 217). Employees earn two extr
 
 ### Sick pay
 
-Since 1 July 2026, temporary disability benefit is assigned automatically through the State Social Insurance Fund under Presidential Decree PF-206 of 3 November 2025. The employer pays for the first five days of incapacity in each calendar year, and the fund pays from the sixth day (Cabinet Resolution No. 796 of 17 December 2025, Annex 4, para. 20). The benefit is 60% of average earnings for an insurance record of six months to eight years and 80% above eight years, based on earnings up to ten times the minimum wage. It is paid for up to 182 calendar days a year.
+Since 1 July 2026, temporary disability benefit is assigned automatically through the State Social Insurance Fund under Presidential Decree UP-206 of 3 November 2025. The employer pays for the first five days of incapacity in each calendar year, and the fund pays from the sixth day (Cabinet Resolution No. 796 of 17 December 2025, Annex 4, para. 20). The benefit is 60% of average earnings for an insurance record of six months to eight years and 80% above eight years, based on earnings up to ten times the minimum wage. It is paid for up to 182 calendar days a year.
 
 ## Termination
 
@@ -73,7 +73,7 @@ Severance is due on dismissal at the employer's initiative, except for misconduc
 
 ## Minimum wage and base calculation value
 
-Presidential Decree PF-115 of 23 June 2026 raised both reference values from 1 September 2026:
+Presidential Decree UP-115 of 23 June 2026 raised both reference values from 1 September 2026:
 
 - Minimum monthly wage: UZS 1,360,000, up from UZS 1,271,000.
 - Base calculation value (BCV): UZS 440,000 (~USD 37), up from UZS 412,000.
@@ -117,7 +117,7 @@ There is no numerical quota on foreign workers. Instead, the authorities check t
 
 ### Visas and residence
 
-Workers from visa-regime countries need a work visa. Qualified and highly qualified specialists can receive multiple-entry work visas for the contract term, up to three years, and can extend them without leaving the country. Highly qualified specialists and their family members may also obtain residence permits for the term of the contract. Since 1 June 2025, any foreign national can obtain a five-year residence permit under a simplified procedure for a fee of USD 250,000, plus USD 150,000 per family member (Decree PF-67 of 18 April 2025). The Entry, Visas and Residence chapter has the details.
+Workers from visa-regime countries need a work visa. Qualified and highly qualified specialists can receive multiple-entry work visas for the contract term, up to three years, and can extend them without leaving the country. Highly qualified specialists and their family members may also obtain residence permits for the term of the contract. Since 1 June 2025, any foreign national can obtain a five-year residence permit under a simplified procedure for a fee of USD 250,000, plus USD 150,000 per family member (Decree UP-67 of 18 April 2025). The Entry, Visas and Residence chapter has the details.
 
 ## Employer of Record
 
@@ -130,9 +130,9 @@ https://lex.uz/ru/docs/6257291 (Labour Code, Russian text, version of 15.10.2026
 https://lex.uz/uz/docs/6257288 (Labour Code, Uzbek text, Art. 161 amended by ZRU-1180 of 14.10.2026)
 https://kun.uz/en/news/2025/11/12/uzbekistan-revises-overtime-pay-rules-as-most-civil-servants-report-unpaid-extra-hours
 https://anhor.uz/news/obnovjat-poradok-vyplaty-bolnichnyh/
-https://advice.uz/ru/news/2557 (PF-206 of 3 November 2025)
+https://advice.uz/ru/news/2557 (UP-206 of 3 November 2025)
 https://www.norma.uz/raznoe/prakticheskiy_informacionnyy_kit
-https://yep.uz/?p=67360 (PF-115 of 23 June 2026)
+https://yep.uz/?p=67360 (UP-115 of 23 June 2026)
 https://kun.uz/en/news/2026/06/23/uzbekistan-to-raise-pensions-allowances-and-stipends-by-7-from-july-1-6552ad
 https://azizovpartners.uz/en/memos/foreign-labour-in-uzbekistan/
 https://bondstonelaw.com/work-permits-in-uzbekistan-foreign-nationals-employers/
