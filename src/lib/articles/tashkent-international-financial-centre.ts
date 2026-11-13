@@ -17,7 +17,7 @@ const article: Record<string, LocalizedArticle> = {
         "TIFC is not a special economic zone. It has its own legal regime, its own regulator and its own court, and its decisions prevail over conflicting national law inside the centre.",
         "Where TIFC rules are silent, the common law and equity of England and Wales apply.",
         "Foreign employees whose principal place of work is the centre need no Uzbek work permit, and national currency-control requirements do not apply to participants’ currency operations within the centre, unless a TIFC resolution provides otherwise.",
-        "The law is in force, but the centre is not yet operational. The detailed tax, currency and residency rules will follow in TIFC resolutions.",
+        "The law is in force, but the centre is not yet operational. The detailed tax, currency and residency rules will follow in TIFC resolutions. Officials expect it to start operating in 2027.",
       ],
     },
     content: [
@@ -242,6 +242,10 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
+        text: "Since the law was signed, the build-out has moved on. The centre itself had already been created by Presidential Decree UP-48 of 30 March 2026, together with the Tashkent International Commercial Court, and the Constitutional Law then gave it its legal regime. On 10 September 2026 the President appointed the Governor of the centre. The President's press secretary and the Deputy Prime Minister have both said the centre is expected to start operating in 2027. As of November 2026, no TIFC resolutions on the registration or licensing of participants had been published.",
+      },
+      {
+        type: "p" as const,
         text: "The transitional provisions also address existing licensees. Under Article 32, a legal entity holding a valid national licence to provide financial services may continue to provide those services within the centre without a fresh application, provided it registers a subsidiary or branch as a permitted transitional participant within sixty days of the activation date and observes the conditions of its national licence. Under Article 33, entities licensed in recognised foreign jurisdictions may obtain a transitional licence where the TIFC Administration has concluded a memorandum of understanding or other supervisory-cooperation arrangement with the relevant foreign regulator.",
       },
       { type: "h2" as const, text: "Open questions before activation" },
@@ -292,7 +296,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "When will TIFC be operational?",
-        answer: "The Constitutional Law is in force, but the centre is not yet operational. The TIFC bodies have twelve months from entry into force — extendable by the Council by up to six months — to adopt the foundational resolutions on governance, regulation, adjudication, and operations. Only then does the Council assess readiness and submit an activation decision to the President for approval. The detailed tax, currency, and residency rules will be published as implementing resolutions during that window.",
+        answer: "The Constitutional Law is in force, but the centre is not yet operational. The TIFC bodies have twelve months from entry into force — extendable by the Council by up to six months — to adopt the foundational resolutions on governance, regulation, adjudication, and operations. Only then does the Council assess readiness and submit an activation decision to the President for approval. The detailed tax, currency, and residency rules will be published as implementing resolutions during that window. Officials expect the centre to start operating in 2027.",
       },
     ],
   },
@@ -312,7 +316,7 @@ const article: Record<string, LocalizedArticle> = {
         "ТМФЦ — не свободная экономическая зона. У него собственный правовой режим, собственный регулятор и собственный суд, а его решения в пределах центра имеют приоритет над противоречащим национальным законодательством.",
         "Там, где правила ТМФЦ не дают ответа, применяются общее право и право справедливости Англии и Уэльса.",
         "Иностранным сотрудникам, для которых центр является основным местом работы, не нужно узбекское разрешение на работу, а требования национального валютного контроля не применяются к валютным операциям участников в пределах центра, если решение ТМФЦ не предусматривает иное.",
-        "Закон вступил в силу, но центр ещё не действует. Детальные правила по налогам, валюте и резидентности будут установлены решениями ТМФЦ.",
+        "Закон вступил в силу, но центр ещё не действует. Детальные правила по налогам, валюте и резидентности будут установлены решениями ТМФЦ. Власти ожидают начала работы центра в 2027 году.",
       ],
     },
     content: [
@@ -537,6 +541,10 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
+        text: "После подписания закона работа продвинулась. Сам центр был создан ещё раньше, Указом Президента УП-48 от 30 марта 2026 года, вместе с Ташкентским международным коммерческим судом, а Конституционный закон затем установил его правовой режим. 10 сентября 2026 года Президент назначил Губернатора центра. Пресс-секретарь Президента и вице-премьер заявляли, что центр начнёт работу в 2027 году. По состоянию на ноябрь 2026 года решения ТМФЦ о регистрации и лицензировании участников не опубликованы.",
+      },
+      {
+        type: "p" as const,
         text: "Переходные положения также касаются действующих лицензиатов. Согласно статье 32, юридическое лицо, обладающее действующей национальной лицензией на оказание финансовых услуг, может продолжать оказывать эти услуги в пределах центра без нового заявления при условии, что оно зарегистрирует дочернюю компанию или филиал в качестве разрешённого переходного участника в течение шестидесяти дней с даты активации и соблюдает условия своей национальной лицензии. Согласно статье 33, лица, лицензированные в признанных иностранных юрисдикциях, могут получить переходную лицензию, если Администрация ТМФЦ заключила меморандум о взаимопонимании или иное соглашение о надзорном сотрудничестве с соответствующим иностранным регулятором.",
       },
       { type: "h2" as const, text: "Открытые вопросы до активации" },
@@ -587,7 +595,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Когда ТМФЦ начнёт работать?",
-        answer: "Конституционный закон вступил в силу, но центр ещё не действует. У органов ТМФЦ есть двенадцать месяцев с момента вступления закона в силу — с возможностью продления Советом до шести месяцев — на принятие основополагающих решений об управлении, регулировании, правосудии и деятельности. Только после этого Совет оценивает готовность и представляет решение об активации на утверждение Президенту. Детальные правила по налогам, валюте и резидентности будут опубликованы в виде решений о порядке реализации закона в течение этого периода.",
+        answer: "Конституционный закон вступил в силу, но центр ещё не действует. У органов ТМФЦ есть двенадцать месяцев с момента вступления закона в силу — с возможностью продления Советом до шести месяцев — на принятие основополагающих решений об управлении, регулировании, правосудии и деятельности. Только после этого Совет оценивает готовность и представляет решение об активации на утверждение Президенту. Детальные правила по налогам, валюте и резидентности будут опубликованы в виде решений о порядке реализации закона в течение этого периода. Власти ожидают начала работы центра в 2027 году.",
       },
     ],
   },
@@ -607,7 +615,7 @@ const article: Record<string, LocalizedArticle> = {
         "TXMM erkin iqtisodiy zona emas. Uning oʻz huquqiy rejimi, oʻz regulyatori va oʻz sudi bor, markaz doirasida esa uning qarorlari milliy qonunchilikning zid qoidalaridan ustun turadi.",
         "TXMM qoidalari javob bermagan hollarda Angliya va Uelsning umumiy huquqi va adolat huquqi qoʻllaniladi.",
         "Asosiy ish joyi markaz boʻlgan chet el xodimlariga oʻzbek mehnat ruxsatnomasi kerak emas, milliy valyuta nazorati talablari esa ishtirokchilarning markaz doirasidagi valyuta operatsiyalariga nisbatan qoʻllanilmaydi, agar TXMM qarorida boshqacha tartib nazarda tutilmagan boʻlsa.",
-        "Qonun kuchga kirgan, biroq markaz hali ishlamaydi. Soliq, valyuta va rezidentlik boʻyicha batafsil qoidalar TXMM qarorlarida belgilanadi.",
+        "Qonun kuchga kirgan, biroq markaz hali ishlamaydi. Soliq, valyuta va rezidentlik boʻyicha batafsil qoidalar TXMM qarorlarida belgilanadi. Rasmiylar markaz 2027-yilda ishga tushishini kutmoqda.",
       ],
     },
     content: [
@@ -832,6 +840,10 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "p" as const,
+        text: "Qonun imzolanganidan keyin ishlar ilgarilab ketdi. Markazning oʻzi bundan oldin, Prezidentning 2026-yil 30-martdagi PF-48-son Farmoni bilan Toshkent xalqaro tijorat sudi bilan birga tashkil etilgan edi, Konstitutsiyaviy qonun esa uning huquqiy rejimini belgiladi. 2026-yil 10-sentyabrda Prezident markaz Gubernatorini tayinladi. Prezident matbuot kotibi va Bosh vazir oʻrinbosari markaz 2027-yilda ishga tushishini maʼlum qilgan. 2026-yil noyabr holatiga koʻra, ishtirokchilarni roʻyxatdan oʻtkazish va litsenziyalash boʻyicha TXMM qarorlari eʼlon qilinmagan.",
+      },
+      {
+        type: "p" as const,
         text: "Oʻtish qoidalari amaldagi litsenziyalarga ham taalluqli. 32-moddaga koʻra, moliyaviy xizmatlar koʻrsatish uchun amaldagi milliy litsenziyaga ega yuridik shaxs bu xizmatlarni markaz doirasida yangi arizasiz koʻrsatishni davom ettirishi mumkin, agar u faollashtirish sanasidan oltmish kun ichida ruxsat etilgan oʻtish davri ishtirokchisi sifatida shoʻba kompaniya yoki filialini roʻyxatdan oʻtkazsa va oʻz milliy litsenziyasi shartlariga rioya qilsa. 33-moddaga koʻra, tan olingan xorijiy yurisdiksiyalarda litsenziyalangan shaxslar, agar TXMM maʼmuriyati tegishli xorijiy regulyator bilan oʻzaro anglashuv memorandumini yoki boshqa nazorat hamkorligi kelishuvini tuzgan boʻlsa, oʻtish davri litsenziyasini olishi mumkin.",
       },
       { type: "h2" as const, text: "Faollashtirishdan oldingi ochiq savollar" },
@@ -882,7 +894,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "TXMM qachon ishga tushadi?",
-        answer: "Konstitutsiyaviy qonun kuchga kirgan, biroq markaz hali ishlamaydi. TXMM organlarida qonun kuchga kirgan kundan oʻn ikki oy — Kengash tomonidan olti oygacha uzaytirilishi mumkin — boshqaruv, tartibga solish, sudlov va faoliyat boʻyicha asosiy qarorlarni qabul qilish uchun bor. Faqat shundan keyin Kengash tayyorlikni baholaydi va faollashtirish qarorini Prezidentga tasdiqlash uchun taqdim etadi. Soliq, valyuta va rezidentlik boʻyicha batafsil qoidalar shu davr mobaynida ijro qarorlari sifatida eʼlon qilinadi.",
+        answer: "Konstitutsiyaviy qonun kuchga kirgan, biroq markaz hali ishlamaydi. TXMM organlarida qonun kuchga kirgan kundan oʻn ikki oy — Kengash tomonidan olti oygacha uzaytirilishi mumkin — boshqaruv, tartibga solish, sudlov va faoliyat boʻyicha asosiy qarorlarni qabul qilish uchun bor. Faqat shundan keyin Kengash tayyorlikni baholaydi va faollashtirish qarorini Prezidentga tasdiqlash uchun taqdim etadi. Soliq, valyuta va rezidentlik boʻyicha batafsil qoidalar shu davr mobaynida ijro qarorlari sifatida eʼlon qilinadi. Rasmiylar markaz 2027-yilda ishga tushishini kutmoqda.",
       },
     ],
   },

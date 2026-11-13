@@ -20,6 +20,11 @@ export const GUIDES: Guide[] = [
     cover: { en: "/guides/covers/tax-guide-2026.webp", ru: "/guides/covers/tax-guide-2026-ru.webp" },
   },
   {
+    slug: "tifc",
+    pdf: { en: "/guides/TIFC-Guide-Uzbekistan-2026.pdf", ru: "/guides/TIFC-Guide-Uzbekistan-2026-RU.pdf" },
+    cover: { en: "/guides/covers/tifc-guide-2026.webp", ru: "/guides/covers/tifc-guide-2026-ru.webp" },
+  },
+  {
     slug: "it-business",
     pdf: { en: "/guides/IT-Business-in-Uzbekistan-2026.pdf", ru: "/guides/IT-Business-in-Uzbekistan-2026-RU.pdf" },
     cover: { en: "/guides/covers/it-business-2026.webp", ru: "/guides/covers/it-business-2026-ru.webp" },
