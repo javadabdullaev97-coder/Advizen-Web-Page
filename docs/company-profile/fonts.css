@@ -1,0 +1,4 @@
+/* Latin subsets of Cormorant Garamond, DM Sans and Manrope (Google Fonts, SIL Open Font License), kept here so the PDF builds the same way offline. */
+@font-face { font-family: 'Cormorant Garamond'; font-weight: 500 600; font-style: normal; src: url('fonts/CormorantGaramond.woff2') format('woff2'); }
+@font-face { font-family: 'DM Sans'; font-weight: 400 600; font-style: normal; src: url('fonts/DMSans.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-weight: 400 700; font-style: normal; src: url('fonts/Manrope.woff2') format('woff2'); }

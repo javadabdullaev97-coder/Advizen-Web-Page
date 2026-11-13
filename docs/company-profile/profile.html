@@ -1,0 +1,486 @@
+<!doctype html>
+<!-- Advizen Company Profile 2026 (EN). Source of public/guides/Advizen-Company-Profile-2026.pdf.
+     Build: NODE_PATH=$(npm root -g) node scripts/build-company-profile.mjs
+     Two looks from one source: data-theme="guide" (matches the Doing Business guide) and data-theme="dark".
+     House rules for the copy: no em dashes, no semicolons, no prices, no client names, only verified figures. -->
+<html lang="en" data-theme="guide">
+<head>
+<meta charset="utf-8">
+<title>Advizen Consulting · Company Profile 2026</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --page-w: 210mm; --page-h: 297mm; --pad-x: 18mm; --pad-top: 20mm;
+  }
+  html[data-theme="guide"] {
+    --paper: #f2f1ec; --ink: #1c1c1e; --ink-2: #48474a; --muted: #79776f; --line: rgba(28, 28, 30, .14);
+    --accent: #a3192f; --block: #1f1f21; --block-ink: #f2f1ec; --block-muted: #a8a59d; --block-line: rgba(255, 255, 255, .14);
+    --display: 'Manrope', sans-serif; --text: 'Manrope', sans-serif;
+    --h-weight: 700; --h-track: -0.025em; --h1: 50pt; --h2: 30pt; --h3: 14pt;
+  }
+  html[data-theme="dark"] {
+    --paper: #111113; --ink: #ece8e2; --ink-2: #c9c4bc; --muted: #9b938a; --line: rgba(255, 255, 255, .12);
+    --accent: #c4223f; --block: #1d1d1f; --block-ink: #ece8e2; --block-muted: #9b938a; --block-line: rgba(255, 255, 255, .12);
+    --display: 'Cormorant Garamond', serif; --text: 'DM Sans', sans-serif;
+    --h-weight: 600; --h-track: -0.01em; --h1: 60pt; --h2: 38pt; --h3: 17pt;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #777; }
+  body { font-family: var(--text); color: var(--ink); font-size: 9.6pt; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; font-variant-numeric: lining-nums; }
+
+  .page { width: var(--page-w); height: var(--page-h); position: relative; overflow: hidden; background: var(--paper); margin: 0 auto 8mm; break-after: page; }
+  @media print { html, body { background: none; } .page { margin: 0; } }
+  .inner { position: absolute; inset: var(--pad-top) var(--pad-x) 26mm; display: flex; flex-direction: column; }
+
+  /* Type */
+  .eyebrow { font-family: var(--text); font-size: 7.6pt; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  h1, h2, h3, .display { font-family: var(--display); font-weight: var(--h-weight); letter-spacing: var(--h-track); line-height: 1.04; }
+  h1 { font-size: var(--h1); }
+  h2 { font-size: var(--h2); margin-top: 3mm; }
+  h3 { font-size: var(--h3); line-height: 1.2; }
+  .lede { font-size: 13pt; line-height: 1.42; color: var(--ink); max-width: 150mm; margin-top: 6mm; }
+  html[data-theme="dark"] .lede { font-family: var(--display); font-size: 16pt; line-height: 1.35; font-weight: 500; }
+  p + p { margin-top: 2.6mm; }
+  .muted { color: var(--muted); }
+  .accent { color: var(--accent); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+
+  /* Footer on every page */
+  .foot { position: absolute; left: var(--pad-x); right: var(--pad-x); bottom: 10mm; display: flex; align-items: center; gap: 4mm; padding-top: 3.2mm; border-top: 1px solid var(--line); font-size: 7.2pt; color: var(--muted); }
+  .foot .mark { display: flex; align-items: center; gap: 2mm; color: var(--ink); font-weight: 600; letter-spacing: .18em; font-size: 7.6pt; }
+  .foot .mark img { height: 3.6mm; }
+  .foot .contacts { flex: 1; }
+  .foot .num { font-variant-numeric: tabular-nums; }
+  .on-photo .foot, .on-block .foot { color: rgba(255, 255, 255, .72); border-top-color: rgba(255, 255, 255, .22); }
+  .on-photo .foot .mark, .on-block .foot .mark { color: #fff; }
+
+  .wordmark { display: flex; align-items: center; gap: 2.6mm; font-family: var(--text); font-weight: 600; letter-spacing: .22em; font-size: 9pt; color: #fff; }
+  .wordmark img { height: 5mm; }
+
+  /* Photos */
+  .photo { position: absolute; background-size: cover; background-position: center; }
+  .shade-b::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 10, 11, 0) 35%, rgba(10, 10, 11, .55) 70%, rgba(10, 10, 11, .9) 100%); }
+
+  /* Cover */
+  .cover { background: #0d0d0e; color: #fff; }
+  .cover .photo { inset: 0; background-position: 70% 50%; }
+  .cover .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 10, 11, .55) 0%, rgba(10, 10, 11, .12) 30%, rgba(10, 10, 11, .25) 55%, rgba(10, 10, 11, .92) 82%, rgba(10, 10, 11, .97) 100%); }
+  .cover .inner { justify-content: space-between; }
+  .cover h1 { color: #fff; font-size: calc(var(--h1) * 1.08); max-width: 165mm; }
+  .cover .sub { margin-top: 6mm; font-size: 14pt; line-height: 1.38; color: rgba(255, 255, 255, .86); max-width: 135mm; }
+  html[data-theme="dark"] .cover .sub { font-family: var(--display); font-size: 18pt; font-weight: 500; }
+  .cover .year { font-family: var(--display); font-weight: var(--h-weight); font-size: 96pt; line-height: .9; letter-spacing: -0.04em; color: #fff; margin-top: 8mm; }
+  .cover .eyebrow { color: rgba(255, 255, 255, .7); }
+
+  /* Figures */
+  .figs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6mm; margin-top: auto; padding-top: 6mm; border-top: 1px solid var(--line); }
+  .fig b { display: block; font-family: var(--display); font-weight: var(--h-weight); font-size: 30pt; line-height: 1; letter-spacing: -0.03em; color: var(--accent); }
+  .fig span { display: block; margin-top: 2.4mm; font-size: 8pt; line-height: 1.35; color: var(--muted); }
+
+  .langs { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 3mm; }
+  .chip { font-size: 8.4pt; font-weight: 500; padding: 1.4mm 3.4mm; border-radius: 99px; border: 1px solid var(--line); color: var(--ink); }
+
+  /* Why */
+  .why { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10mm; margin-top: 9mm; }
+  .why li { list-style: none; padding: 5.4mm 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 9mm 1fr; }
+  .why li .n { font-size: 8pt; font-weight: 600; color: var(--accent); padding-top: .8mm; }
+  .why li p { color: var(--ink-2); margin-top: 1.6mm; }
+
+  /* Services */
+  .svc { padding: 7mm 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 52mm 1fr; gap: 8mm; }
+  .svc + .svc { margin-top: 7mm; }
+  .svc .n { font-size: 8pt; font-weight: 600; color: var(--accent); letter-spacing: .08em; }
+  .svc h3 { margin-top: 2mm; }
+  .svc .intro { color: var(--ink-2); margin-top: 3mm; }
+  .svc ul { list-style: none; columns: 1; }
+  .svc li { position: relative; padding: 1.9mm 0 1.9mm 5mm; border-bottom: 1px solid var(--line); color: var(--ink); }
+  .svc li:first-child { padding-top: 0; }
+  .svc li::before { content: ""; position: absolute; left: 0; top: 4mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--muted); }
+  .svc li:first-child::before { top: 1.9mm; }
+  .band { position: relative; height: 62mm; margin: calc(var(--pad-top) * -1) calc(var(--pad-x) * -1) 8mm; }
+  .band .photo { inset: 0; }
+  .band-b { position: relative; flex: 1; min-height: 40mm; margin: 8mm calc(var(--pad-x) * -1) -6mm; }
+  .band-b .photo { inset: 0; }
+
+  /* Journeys */
+  .journey { margin-top: 6.5mm; padding-top: 5mm; border-top: 1px solid var(--line); }
+  .journey h3 { display: flex; align-items: baseline; gap: 3mm; }
+  .journey h3 .n { font-family: var(--text); font-size: 8pt; font-weight: 600; color: var(--accent); letter-spacing: .08em; }
+  .journey .goal { color: var(--ink-2); margin-top: 1.6mm; }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.4mm; margin-top: 4mm; counter-reset: s; }
+  .step { position: relative; background: var(--block); color: var(--block-ink); border-radius: 3mm; padding: 3.6mm 3.4mm 4mm; min-height: 31mm; }
+  .step::before { counter-increment: s; content: counter(s); display: block; font-size: 7.4pt; font-weight: 600; color: var(--block-muted); margin-bottom: 2mm; }
+  .step:not(:last-child)::after { content: ""; position: absolute; right: -2.4mm; top: 50%; width: 2.4mm; height: 1px; background: var(--muted); }
+  .step b { display: block; font-size: 8.8pt; line-height: 1.25; font-weight: 600; }
+  .step span { display: block; margin-top: 1.6mm; font-size: 7.6pt; line-height: 1.38; color: var(--block-muted); }
+  .step.hl { background: var(--accent); }
+  .step.hl::before, .step.hl span { color: rgba(255, 255, 255, .78); }
+
+  /* How we work */
+  .flow { list-style: none; margin-top: 9mm; counter-reset: f; }
+  .flow li { display: grid; grid-template-columns: 14mm 50mm 1fr; gap: 4mm; padding: 4.2mm 0; border-top: 1px solid var(--line); align-items: baseline; }
+  .flow li::before { counter-increment: f; content: counter(f, decimal-leading-zero); font-size: 8pt; font-weight: 600; color: var(--accent); }
+  .flow li b { font-size: 11pt; font-weight: 600; }
+  .flow li span { color: var(--ink-2); }
+  .fees { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: auto; }
+  .fee { background: var(--block); color: var(--block-ink); border-radius: 3mm; padding: 6mm 5mm; }
+  .fee b { display: block; font-family: var(--display); font-weight: var(--h-weight); font-size: 15pt; line-height: 1.15; }
+  html[data-theme="dark"] .fee b { font-size: 18pt; }
+  .fee span { display: block; margin-top: 2.4mm; font-size: 8.4pt; line-height: 1.45; color: var(--block-muted); }
+
+  /* At a glance */
+  .rates { background: var(--block); color: var(--block-ink); border-radius: 3mm; padding: 4mm 7mm; margin-top: 6mm; }
+  .rates table { width: 100%; border-collapse: collapse; }
+  .rates td { padding: 2.1mm 0; border-top: 1px solid var(--block-line); vertical-align: baseline; }
+  .rates tr:first-child td { border-top: 0; }
+  .rates td.r { font-family: var(--display); font-weight: var(--h-weight); font-size: 16pt; letter-spacing: -0.02em; width: 30mm; white-space: nowrap; }
+  .rates td.ref { color: var(--block-muted); font-size: 7.6pt; text-align: right; width: 34mm; }
+  .rates td small { display: block; color: var(--block-muted); font-size: 7.6pt; margin-top: .6mm; }
+  .itpark { display: grid; grid-template-columns: 50mm 1fr; gap: 8mm; margin-top: 6mm; padding-top: 5mm; border-top: 1px solid var(--line); }
+  .itpark ul { list-style: none; }
+  .itpark li { padding: 1.5mm 0 1.5mm 5mm; position: relative; border-bottom: 1px solid var(--line); }
+  .itpark li::before { content: ""; position: absolute; left: 0; top: 3.7mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--accent); }
+  .note { margin-top: auto; padding-top: 5mm; font-size: 7.6pt; line-height: 1.45; color: var(--muted); }
+  .note a { color: var(--ink); }
+
+  /* Contacts */
+  .contacts-page { background: #0d0d0e; color: #fff; }
+  .contacts-page .photo { inset: 0 0 auto 0; height: 150mm; background-position: 50% 60%; }
+  .contacts-page .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13, 13, 14, .2) 0%, rgba(13, 13, 14, .35) 55%, #0d0d0e 100%); }
+  .contacts-page .inner { justify-content: flex-end; }
+  .contacts-page h2 { color: #fff; font-size: calc(var(--h2) * 1.2); max-width: 150mm; }
+  .contacts-page .lede { color: rgba(255, 255, 255, .8); }
+  .cta { display: inline-flex; align-items: center; margin-top: 8mm; padding: 3.6mm 7mm; border-radius: 99px; background: var(--accent); color: #fff; font-weight: 600; font-size: 10pt; text-decoration: none; width: max-content; }
+  .clist { display: grid; grid-template-columns: 1fr 1fr 32mm; gap: 6mm; margin-top: 12mm; padding-top: 7mm; border-top: 1px solid rgba(255, 255, 255, .2); }
+  .clist dt { font-size: 7.4pt; letter-spacing: .16em; text-transform: uppercase; color: rgba(255, 255, 255, .55); font-weight: 600; }
+  .clist dd { margin: 1.4mm 0 4.6mm; font-size: 11pt; color: #fff; }
+  .clist a { color: #fff; text-decoration: none; }
+  .qr { background: #fff; border-radius: 2.4mm; padding: 2.6mm; width: 32mm; height: 32mm; }
+  .qr img { width: 100%; height: 100%; display: block; }
+  .qr-cap { font-size: 7.2pt; color: rgba(255, 255, 255, .6); margin-top: 2mm; text-align: center; }
+  .legal { margin-top: 8mm; font-size: 7pt; line-height: 1.45; color: rgba(255, 255, 255, .45); }
+</style>
+</head>
+<body>
+
+<!-- 1 · Cover -->
+<section class="page cover on-photo">
+  <div class="photo" style="background-image:url('img/tashkent-dusk.jpg')"></div>
+  <div class="inner">
+    <div class="wordmark"><img src="img/logo.png" alt="">ADVIZEN</div>
+    <div>
+      <p class="eyebrow">Company Profile 2026</p>
+      <h1 style="margin-top:4mm">Advizen Consulting</h1>
+      <p class="sub">Your partner for doing business in Uzbekistan and Central Asia</p>
+      <p class="year">2026</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span>Tashkent, Uzbekistan</span></footer>
+</section>
+
+<!-- 2 · About us -->
+<section class="page">
+  <div class="inner">
+    <div class="band"><div class="photo" style="background-image:url('img/samarkand.jpg')"></div></div>
+    <p class="eyebrow">About us</p>
+    <h2>Tax, legal, accounting and HR advice in Tashkent</h2>
+    <p class="lede">Advizen Consulting helps local companies and foreign investors set up, run and grow their business in Uzbekistan and Central Asia.</p>
+    <div class="cols" style="margin-top:7mm">
+      <div>
+        <p>We are an advisory firm based in Tashkent. Our advisers bring Big Four-level expertise to every engagement and work as one team across tax, law, accounting, HR and immigration, so a client deals with one coordinating partner instead of several firms.</p>
+        <p>We advise foreign companies entering the market, international groups with local subsidiaries, and Uzbek businesses that need advice to international standards.</p>
+      </div>
+      <div>
+        <p>Our work ranges from a single company registration to tax structuring of large investment projects and support with due diligence and M&amp;A transactions.</p>
+        <p class="eyebrow" style="margin-top:6mm">Working languages</p>
+        <div class="langs"><span class="chip">English</span><span class="chip">Russian</span><span class="chip">Uzbek</span><span class="chip">German</span></div>
+      </div>
+    </div>
+    <div class="figs">
+      <div class="fig"><b>$10B+</b><span>Largest project our advisers structured</span></div>
+      <div class="fig"><b>80+</b><span>Company registrations</span></div>
+      <div class="fig"><b>30+</b><span>Due diligences</span></div>
+      <div class="fig"><b>3</b><span>Laws our advisers helped shape</span></div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">2</span></footer>
+</section>
+
+<!-- 3 · Why Advizen -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Why Advizen</p>
+    <h2>Six reasons clients work with us</h2>
+    <p class="lede">Doing business in Uzbekistan means many authorities, frequent changes in the rules and documents mostly in Uzbek and Russian. We take that load off your team.</p>
+    <ul class="why">
+      <li><span class="n">01</span><div><h3>One window for every service</h3><p>Tax, legal, accounting, payroll, HR and immigration under one agreement and one coordinating partner. Advice in one area is always checked against the others.</p></div></li>
+      <li><span class="n">02</span><div><h3>Local practice, first-hand</h3><p>We know how the rules work in practice at the tax office, the registration authorities and the banks, not only how they read on paper.</p></div></li>
+      <li><span class="n">03</span><div><h3>International standards</h3><p>IFRS reporting, transfer pricing files and due diligence reports prepared to the standard that foreign headquarters, auditors and lenders expect.</p></div></li>
+      <li><span class="n">04</span><div><h3>Speed</h3><p>A clear plan and timeline from the first call. We know which documents each authority needs, so filings go in complete and on time.</p></div></li>
+      <li><span class="n">05</span><div><h3>Transparent fixed fees</h3><p>Most engagements are quoted as a fixed fee or a monthly retainer agreed in advance. You know the cost before the work starts.</p></div></li>
+      <li><span class="n">06</span><div><h3>Four working languages</h3><p>Advice, reports and correspondence in English, Russian, Uzbek or German. We translate the local context for your headquarters.</p></div></li>
+    </ul>
+    <div class="band-b"><div class="photo" style="background-image:url('img/bukhara.jpg')"></div></div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">3</span></footer>
+</section>
+
+<!-- 4 · Services 01–03 -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Services</p>
+    <h2>What we do</h2>
+    <p class="lede" style="margin-bottom:6mm">Ten service groups that cover the life of a business in Uzbekistan, from the first registration to ongoing compliance. Take one or combine several.</p>
+    <div class="svc">
+      <div><span class="n">01</span><h3>Market Entry and Corporate Services</h3><p class="intro">Setting up a legal presence and keeping it in good order.</p></div>
+      <ul>
+        <li>Company registration: LLC, branch or representative office</li>
+        <li>Corporate secretarial services and changes to company documents</li>
+        <li>Entity management with a dedicated client manager</li>
+        <li>Nominee director and registered address</li>
+        <li>Virtual office with registered address, mail handling and a local phone line</li>
+        <li>Liquidation and closing of a company</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <div><span class="n">02</span><h3>IT Park Residency</h3><p class="intro">Joining the IT Park and keeping the resident status.</p></div>
+      <ul>
+        <li>Eligibility review and preparation of the residency application</li>
+        <li>Submission and follow-up with the IT Park directorate</li>
+        <li>Advice on resident incentives and their conditions</li>
+        <li>Accounting, tax and payroll for residents</li>
+        <li>Periodic reporting to the IT Park</li>
+        <li>Monitoring of the conditions for keeping the status</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <div><span class="n">03</span><h3>Employer of Record and Payroll</h3><p class="intro">Hiring in Uzbekistan with or without a local entity.</p></div>
+      <ul>
+        <li>Employer of Record: we employ your staff in Uzbekistan for you</li>
+        <li>Employment contracts, onboarding and offboarding</li>
+        <li>Monthly payroll calculation and salary payment</li>
+        <li>Withholding and reporting of personal income tax and social tax</li>
+        <li>Payslips and year-end reconciliation</li>
+        <li>Transfer of employees to your own entity when it is ready</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">4</span></footer>
+</section>
+
+<!-- 5 · Services 04–06 -->
+<section class="page">
+  <div class="inner">
+    <div class="band"><div class="photo" style="background-image:url('img/tashkent-city.jpg')"></div></div>
+    <div class="svc" style="border-top:0;padding-top:0">
+      <div><span class="n">04</span><h3>Work Permits and Immigration</h3><p class="intro">Bringing foreign specialists and their families to Uzbekistan.</p></div>
+      <ul>
+        <li>Work permits for foreign employees and their renewal</li>
+        <li>Business and work visas</li>
+        <li>Residence permits</li>
+        <li>Registration at the place of stay</li>
+        <li>Document preparation, translation and apostille</li>
+        <li>Support for family members</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <div><span class="n">05</span><h3>HR</h3><p class="intro">Employment documents that hold up in an inspection.</p></div>
+      <ul>
+        <li>Employment contracts and amendments</li>
+        <li>HR record keeping: orders, personal files and timesheets</li>
+        <li>Internal policies: labour regulations, job descriptions and other local acts</li>
+        <li>HR audits and labour inspection readiness</li>
+        <li>Advice on hiring, transfers and dismissals under the Labour Code</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <div><span class="n">06</span><h3>Tax Consulting</h3><p class="intro">Structures that work under Uzbek tax law and abroad.</p></div>
+      <ul>
+        <li>Tax advice on operations and transactions</li>
+        <li>Double tax treaties and withholding tax on payments abroad</li>
+        <li>Transfer pricing documentation and advice</li>
+        <li>Structuring of holdings, financing and cross-border flows</li>
+        <li>Tax incentives and special regimes</li>
+        <li>Support in tax audits and disputes</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">5</span></footer>
+</section>
+
+<!-- 6 · Services 07–10 -->
+<section class="page">
+  <div class="inner">
+    <div class="svc" style="border-top:0;padding-top:0">
+      <div><span class="n">07</span><h3>Accounting</h3><p class="intro">Books that satisfy both the tax office and headquarters.</p></div>
+      <ul>
+        <li>Bookkeeping under National Accounting Standards</li>
+        <li>Monthly, quarterly and annual tax reporting</li>
+        <li>IFRS reporting and conversion</li>
+        <li>Management reporting for headquarters</li>
+        <li>Preparation for statutory audit</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <div><span class="n">08</span><h3>Legal Advisory</h3><p class="intro">Contracts, corporate matters and regulation.</p></div>
+      <ul>
+        <li>Drafting and review of contracts</li>
+        <li>Corporate law: shareholders, governance and charter changes</li>
+        <li>Regulatory advice and licences</li>
+        <li>Labour law</li>
+        <li>Intellectual property</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <div><span class="n">09</span><h3>M&amp;A and Due Diligence</h3><p class="intro">A clear view of the target and a deal that closes.</p></div>
+      <ul>
+        <li>Tax, legal and financial due diligence</li>
+        <li>Red flag reports for early decisions</li>
+        <li>Transaction structuring</li>
+        <li>Support in negotiations and transaction documents</li>
+        <li>Closing and registration of changes</li>
+        <li>Post-deal integration</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <div><span class="n">10</span><h3>Compliance Monitoring</h3><p class="intro">Every filing and every change in the rules under control.</p></div>
+      <ul>
+        <li>Calendar of filing deadlines with reminders</li>
+        <li>Monitoring of changes in legislation</li>
+        <li>Oversight of tax and statutory filings</li>
+        <li>AML/CFT compliance for virtual asset service providers (VASPs)</li>
+        <li>Handling of correspondence with authorities</li>
+        <li>Regular compliance status reports</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">6</span></footer>
+</section>
+
+<!-- 7 · Typical client journeys -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Typical client journeys</p>
+    <h2>How an engagement usually develops</h2>
+    <p class="lede">Three common scenarios and the order in which the work usually runs.</p>
+    <div class="journey">
+      <h3><span class="n">A</span>An IT company relocates a team</h3>
+      <p class="goal">Start working in Uzbekistan quickly, then move to a structure of its own.</p>
+      <div class="steps">
+        <div class="step hl"><b>Hire through EOR</b><span>The team starts work under our Employer of Record contracts</span></div>
+        <div class="step"><b>Permits and relocation</b><span>Work permits, visas and registration for foreign staff and families</span></div>
+        <div class="step"><b>Own entity</b><span>Registration of the company and a bank account</span></div>
+        <div class="step"><b>IT Park</b><span>Residency application and access to the incentives</span></div>
+        <div class="step"><b>Team transfer</b><span>Employees move from EOR to the new entity, with payroll and accounting</span></div>
+      </div>
+    </div>
+    <div class="journey">
+      <h3><span class="n">B</span>A foreign investor opens a subsidiary</h3>
+      <p class="goal">A local company that is set up correctly and runs smoothly from day one.</p>
+      <div class="steps">
+        <div class="step"><b>Structure review</b><span>Legal form, ownership and tax position, including treaty access</span></div>
+        <div class="step hl"><b>Registration</b><span>Incorporation, charter and appointment of the director</span></div>
+        <div class="step"><b>Bank</b><span>Opening of accounts and setup of payments</span></div>
+        <div class="step"><b>Accounting and payroll</b><span>Bookkeeping, payroll and first filings</span></div>
+        <div class="step"><b>Ongoing tax</b><span>Tax reporting and compliance monitoring</span></div>
+      </div>
+    </div>
+    <div class="journey">
+      <h3><span class="n">C</span>An M&amp;A transaction</h3>
+      <p class="goal">Know the risks before signing and close the deal on time.</p>
+      <div class="steps">
+        <div class="step hl"><b>Due diligence</b><span>Tax, legal and financial review of the target</span></div>
+        <div class="step"><b>Structuring</b><span>Deal structure and the tax effect for both sides</span></div>
+        <div class="step"><b>Documents</b><span>Support in negotiations and transaction documents</span></div>
+        <div class="step"><b>Closing</b><span>Approvals and registration of the change of ownership</span></div>
+        <div class="step"><b>Integration</b><span>Reporting, compliance and HR after the deal</span></div>
+      </div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">7</span></footer>
+</section>
+
+<!-- 8 · How we work -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">How we work</p>
+    <h2>From the first request to ongoing support</h2>
+    <ol class="flow">
+      <li><b>Request</b><span>You write to us by email, phone, Telegram or through the website and describe the task.</span></li>
+      <li><b>Introductory call</b><span>A free call to understand your plans and the questions that need answers first.</span></li>
+      <li><b>Proposal</b><span>A written proposal with the scope of work, the timeline and the fee.</span></li>
+      <li><b>Agreement</b><span>A service agreement that fixes the scope, deliverables and responsibilities.</span></li>
+      <li><b>Delivery</b><span>A named adviser leads the work and keeps you informed at every step.</span></li>
+      <li><b>Ongoing support</b><span>Accounting, payroll, compliance and advice for as long as you need them.</span></li>
+    </ol>
+    <p class="eyebrow" style="margin-top:auto;margin-bottom:4mm">Fee models</p>
+    <div class="fees" style="margin-top:0">
+      <div class="fee"><b>Fixed fee</b><span>For projects with a clear scope, such as company registration, due diligence or a tax review.</span></div>
+      <div class="fee"><b>Monthly retainer</b><span>For ongoing services such as accounting, payroll, EOR and compliance monitoring.</span></div>
+      <div class="fee"><b>Hourly</b><span>For advisory work where the scope is hard to define in advance.</span></div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">8</span></footer>
+</section>
+
+<!-- 9 · Uzbekistan at a glance -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Uzbekistan at a glance</p>
+    <h2>Key tax rates</h2>
+    <div class="rates">
+      <table>
+        <tr><td class="r">15%</td><td>Corporate income tax<small>20% for banks and mobile network operators</small></td><td class="ref">Tax Code, Art. 337</td></tr>
+        <tr><td class="r">12%</td><td>Value added tax<small>0% on exports of goods and services</small></td><td class="ref">Art. 258</td></tr>
+        <tr><td class="r">12%</td><td>Personal income tax<small>Flat rate for residents. 5% on dividends and interest</small></td><td class="ref">Art. 381</td></tr>
+        <tr><td class="r">12%</td><td>Social tax, paid by the employer</td><td class="ref">Art. 405</td></tr>
+        <tr><td class="r">5%</td><td>Dividends received by Uzbek companies</td><td class="ref">Art. 337</td></tr>
+        <tr><td class="r">10%</td><td>Withholding tax on dividends and interest paid to non-residents<small>20% on royalties and other income. A tax treaty may reduce the rate</small></td><td class="ref">Art. 353</td></tr>
+        <tr><td class="r">1.5%</td><td>Property tax for legal entities</td><td class="ref">Art. 415</td></tr>
+        <tr><td class="r">4%</td><td>Turnover tax for small businesses below the general regime threshold</td><td class="ref">Art. 467</td></tr>
+      </table>
+    </div>
+    <div class="itpark">
+      <div><p class="eyebrow">IT Park</p><h3 style="margin-top:2mm">Incentives for residents</h3></div>
+      <ul>
+        <li>Exemption from all taxes, mandatory contributions and social tax (Resolution PP-589)</li>
+        <li>From 1 January 2028 to 1 January 2040, exemption from all taxes except VAT (Tax Code, Art. 483)</li>
+        <li>7.5% personal income tax on employees' salaries</li>
+        <li>Dividends to non-resident founders taxed at resident rates when exports exceed 50% of income, until 1 January 2040</li>
+        <li>Exemption from customs payments on equipment and software imported for own needs</li>
+      </ul>
+    </div>
+    <p class="note">Rates as of November 2026 under the Tax Code of the Republic of Uzbekistan and the IT Park regulations. Special regimes, incentives and tax treaties can change the rate for a particular case. Full detail on taxes, visas, setting up a company and employment is in our guide Doing Business in Uzbekistan 2026: <a href="https://www.advizenco.com/guides/Doing-Business-in-Uzbekistan-2026.pdf">advizenco.com/guides/Doing-Business-in-Uzbekistan-2026.pdf</a></p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">9</span></footer>
+</section>
+
+<!-- 10 · Contacts -->
+<section class="page contacts-page on-photo">
+  <div class="photo" style="background-image:url('img/khiva.jpg')"></div>
+  <div class="inner">
+    <p class="eyebrow" style="color:rgba(255,255,255,.65)">Contacts</p>
+    <h2>Tell us what you are planning in Uzbekistan</h2>
+    <p class="lede">We answer in English, Russian, Uzbek or German. The first call is free.</p>
+    <a class="cta" href="https://www.advizenco.com/contact">Book an introductory call</a>
+    <div class="clist">
+      <dl>
+        <dt>Website</dt><dd><a href="https://www.advizenco.com">advizenco.com</a></dd>
+        <dt>Email</dt><dd><a href="mailto:info@advizenco.com">info@advizenco.com</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+998334884888">+998 33 488 48 88</a></dd>
+      </dl>
+      <dl>
+        <dt>Telegram</dt><dd><a href="https://t.me/advizen">t.me/advizen</a></dd>
+        <dt>Location</dt><dd>Tashkent, Uzbekistan</dd>
+      </dl>
+      <div><div class="qr"><img src="qr.svg" alt=""></div><p class="qr-cap">advizenco.com</p></div>
+    </div>
+    <p class="legal">© 2026 Advizen Consulting LLC, Tashkent. This profile is for general information only and is not legal, tax or accounting advice.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">10</span></footer>
+</section>
+
+</body>
+</html>
