@@ -1,0 +1,432 @@
+<!doctype html>
+<!-- Setting Up a Company in Uzbekistan 2026 (EN). Client guide, not published yet (folder kept out of git).
+     Build: NODE_PATH=$(npm root -g) node scripts/build-pdf.mjs docs/company-setup-guide/en.html <output.pdf> --theme guide
+     Copy rules: no em dashes, no semicolons, en dashes only in number ranges. No prices, fees or state duty amounts,
+     no client names, no project credentials. Law codes ZRU / PP / UP, "Cabinet of Ministers Resolution No. 66".
+     Only facts the research report "Открытие компании в Узбекистане 2026" and its practice notes mark as confirmed.
+     Uncertain points are phrased cautiously or left out. Residential premises are not discussed.
+     Photos in img/: setup-cover, setup-overview, setup-registration, setup-team. -->
+<html lang="en" data-theme="guide">
+<head>
+<meta charset="utf-8">
+<title>Setting Up a Company in Uzbekistan 2026 · Advizen</title>
+<link rel="stylesheet" href="../company-profile/fonts.css">
+<link rel="stylesheet" href="../brochure.css">
+<style>.road.tight { margin-top: 6mm } .road.tight li { padding: 3mm 0 }</style>
+</head>
+<body>
+
+<!-- 1 · Cover -->
+<section class="page cover on-photo">
+  <div class="photo" style="background-image:url('img/setup-cover.jpg');background-position:60% 50%"></div>
+  <div class="inner">
+    <div class="wordmark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</div>
+    <div>
+      <p class="eyebrow">Guide for foreign investors</p>
+      <h1 style="margin-top:4mm">Setting Up a Company in Uzbekistan</h1>
+      <p class="sub">Legal forms, registration and the first steps of a foreign-owned company</p>
+      <p class="year">2026</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span>Edition of November 2026</span></footer>
+</section>
+
+<!-- 2 · At a glance -->
+<section class="page">
+  <div class="inner">
+    <div class="band"><div class="photo" style="background-image:url('img/setup-overview.jpg');background-position:50% 55%"></div></div>
+    <p class="eyebrow">At a glance</p>
+    <h2>What changed in 2026</h2>
+    <p class="lede">Registration now takes minutes. The time goes into what comes before and after it: documents, digital identity of the founders, bank checks and licences.</p>
+    <div class="cols" style="margin-top:7mm">
+      <div>
+        <p><b>A new LLC law.</b> Since 22 July 2026 limited liability companies are governed by Law ZRU-1137. It keeps the LLC flexible: no general minimum capital, up to 50 participants and any person with full legal capacity as director.</p>
+        <p><b>Business in 15 minutes.</b> Since 1 January 2026, under Decree UP-214, the e-signature key, the bank account application, a licence application, the VAT certificate and other services can be ordered in the same registration application.</p>
+        <p><b>Small business tax.</b> Since 1 June 2026 turnover tax is available up to annual income of 12,000 BCV, and trade, catering and services may opt for a simplified 6% VAT.</p>
+      </div>
+      <div>
+        <p><b>Beneficial owners.</b> The registration application now includes a questionnaire on the individual who ultimately owns or controls the company.</p>
+        <p><b>Lighter licensing.</b> Licence decisions are due within 20 working days, silence of the authority counts as consent, and refusal is possible only on five listed grounds. For activities listed by the Cabinet of Ministers, a business may start without a licence for three months.</p>
+        <p><b>Director checks.</b> Since 1 July 2026 the registry checks the proposed director against court bans and other official databases.</p>
+      </div>
+    </div>
+    <div class="figs">
+      <div class="fig"><b>30 min</b><span>Registration time limit by law, once the file is complete and the duty paid</span></div>
+      <div class="fig"><b>1–50</b><span>Participants in an LLC, companies or individuals of any nationality</span></div>
+      <div class="fig"><b>15%</b><span>Minimum foreign share for foreign-investment enterprise status</span></div>
+      <div class="fig"><b>20</b><span>Working days for the authority to decide on a licence</span></div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">2</span></footer>
+</section>
+
+<!-- 3 · Choosing the form -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Choosing the form</p>
+    <h2>Three ways to be present in Uzbekistan</h2>
+    <p class="lede">For most investors the answer is a subsidiary LLC. A representative office cannot trade, and a permanent establishment suits a single project or contract.</p>
+    <table class="compare">
+      <tr><th></th><th class="hl">Subsidiary LLC<small>Uzbek legal entity</small></th><th>Representative office<small>Accredited, not a legal entity</small></th><th>Permanent establishment<small>Tax registration only</small></th></tr>
+      <tr><td>What it is</td><td class="hl">An Uzbek company that can be 100% foreign owned</td><td>An office of the foreign company accredited by the Ministry of Investment, Industry and Trade</td><td>The foreign company itself, registered with the tax authority for its activity in Uzbekistan</td></tr>
+      <tr><td>Commercial activity</td><td class="hl">Any lawful business, with a licence where one is required</td><td>Not allowed. Representative and auxiliary functions only</td><td>The work under its contracts in Uzbekistan</td></tr>
+      <tr><td>Timing</td><td class="hl">30 minutes by law once the file is complete. Allow 2 to 3 days in practice</td><td>Decision within 5 working days</td><td>Within 30 days when a contract runs longer than 183 days, otherwise within 183 days</td></tr>
+      <tr><td>Suits</td><td class="hl">Trade, services, production and hiring a team</td><td>Market research and liaison with partners</td><td>A construction site or a service contract without a local company</td></tr>
+    </table>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">Two forms that rarely fit</p>
+      <ul>
+        <li><b>Branch.</b> Uzbek law has no procedure to register a branch of a foreign commercial company, and in practice such filings are refused. Use one of the three forms above</li>
+        <li><b>Joint stock company.</b> Required for a bank. Otherwise choose it only where sector rules call for it. Like the LLC, it has no general minimum capital</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">3</span></footer>
+</section>
+
+<!-- 4 · The LLC under the new law -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">The LLC</p>
+    <h2>The LLC under the new law</h2>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>Owners and capital</h3>
+        <ul class="facts">
+          <li><b>1 to 50 participants,</b> companies or individuals, with no nationality limits (Art. 8)</li>
+          <li><b>No general minimum capital.</b> A minimum applies only where licensing rules set one (Art. 15)</li>
+          <li>Contributions are paid within the term in the charter, and no later than <b>one year</b> after registration</li>
+          <li>Capital is stated in soums. It may be paid in foreign currency or in kind, and in-kind contributions above 10,000 BCV are valued by an appraiser</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Management</h3>
+        <ul class="facts">
+          <li>The general meeting of participants is the supreme body. A supervisory board is optional</li>
+          <li><b>Director:</b> any natural person with full legal capacity. No citizenship or residence requirement, and the director need not be a participant (Art. 42)</li>
+          <li>Management can be passed to a managing company under a contract</li>
+          <li>A company seal is not required</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box">
+      <p class="eyebrow">A sole foreign parent</p>
+      <p>An LLC may not have as its only participant another company that itself has a single participant, unless that participant is a joint stock company with one shareholder (Art. 8). Whether this covers a foreign Ltd or GmbH with one shareholder is not settled. To be safe, add a second participant, such as another group company with a small stake, or hold the LLC through a parent with two or more shareholders.</p>
+    </div>
+    <p class="sub">Foreign-investment enterprise status</p>
+    <div class="cols" style="margin-top:3mm">
+      <p>An LLC has this status when foreign investment is at least 15% of its capital and the capital is at least UZS 400 million, or UZS 200 million in Karakalpakstan and Khorezm. Below these figures the company registers as an ordinary LLC with foreign capital.</p>
+      <p>The status brings a 10-year guarantee against adverse changes in law, free transfer of funds abroad and land leases of up to 25 years (ZRU-598). Since 2026 the Tax Code offers only land and property tax relief, for a term set by the President, with a foreign share of at least 33% and further conditions (Arts. 471, 472).</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">4</span></footer>
+</section>
+
+<!-- 5 · Before you file -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Preparation</p>
+    <h2>Before you file</h2>
+    <p class="lede">Most of the time goes here. Foreign documents need an apostille and a translation, and online signers need an Uzbek e-signature.</p>
+    <div class="check">
+      <div>
+        <h3>Corporate founder</h3>
+        <ul>
+          <li>Register extract and charter of the parent, ideally under six months old</li>
+          <li>Decision to set up the Uzbek LLC</li>
+          <li>Power of attorney for the local representative</li>
+          <li>Apostille or legalisation, and a notarised translation into Uzbek or Russian</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Individual founder</h3>
+        <ul>
+          <li>Passport with a notarised translation</li>
+          <li>PINFL, the personal identification number, issued at a Public Services Centre in 2–4 working days, also through a representative</li>
+          <li>Personal Uzbek e-signature, if filing online</li>
+          <li>Power of attorney, if a representative files</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Director</h3>
+        <ul>
+          <li>Passport</li>
+          <li>PINFL, needed in practice for the e-signature, the labour system and the bank</li>
+          <li>Right to work for a foreign director (page 8)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The Uzbek LLC</h3>
+        <ul>
+          <li>Name in Latin script, reserved for 60 days</li>
+          <li>Charter in Uzbek, no notary needed</li>
+          <li>Foundation agreement for several participants</li>
+          <li>Legal address in the tax and cadastre databases</li>
+          <li>Beneficial owner details and tax regime</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">Good to know</p>
+      <ul>
+        <li>An e-signature is issued only to its holder in person, never by proxy</li>
+        <li>Uzbekistan applies the Apostille Convention. Some states have objected to it, and their documents need consular legalisation</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">5</span></footer>
+</section>
+
+<!-- 6 · Registration -->
+<section class="page">
+  <div class="inner">
+    <div class="band"><div class="photo" style="background-image:url('img/setup-registration.jpg');background-position:50% 45%"></div></div>
+    <p class="eyebrow">Registration</p>
+    <h2>One application, one window</h2>
+    <ol class="process">
+      <li><b>Name</b><span>A free name in Latin script, reserved for 60 days</span></li>
+      <li class="hl"><b>Application</b><span>Online at my.gov.uz or in person at any Public Services Centre</span></li>
+      <li><b>Extra services</b><span>E-signature key, bank account, VAT certificate and others in the same filing</span></li>
+      <li><b>Duty</b><span>All services are paid with one QR code</span></li>
+      <li><b>Registered</b><span>Certificate with QR code, tax number and tax registration</span><em>30 minutes by law</em></li>
+    </ol>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>Online or in person</h3>
+        <p style="margin-top:2.4mm">Online, through my.gov.uz or birdarcha.uz, each founder who is not an Uzbek citizen must sign with an own Uzbek e-signature. In person, a representative with a power of attorney files at a Public Services Centre and signs on paper, without founder e-signatures. Most companies are registered this way.</p>
+        <p>By law the company is registered within 30 minutes of a complete, paid filing. In practice allow 2 to 3 days.</p>
+        <p>The extra services include the company e-signature key, the bank account application, a licence application, registration of the lease, the VAT certificate, an online cash register and appointment of the director in the labour system.</p>
+      </div>
+      <div>
+        <h3>New checks in the application</h3>
+        <p style="margin-top:2.4mm">A questionnaire names the beneficial owner, the individual who ultimately owns or controls the company, with passport details. The company undertakes to report changes.</p>
+        <p>Since 1 July 2026 registration is refused if the director is, for example, barred from business by a court, serving a prison sentence or on the terrorism list. Citizenship of the director is not a ground.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">6</span></footer>
+</section>
+
+<!-- 7 · After registration -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">After registration</p>
+    <h2>Bank, e-signature and tax regime</h2>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>Bank account</h3>
+        <p style="margin-top:2.4mm">The account application can go in with the registration, but remote opening is reserved for companies with Uzbek resident founders. A foreign-owned company goes through bank checks of its founders, parent and beneficial owners. The signatory, usually the director, signs the specimen card in person at the bank. The law does not require the owner to travel, though some banks ask. Allow one to three weeks, depending on the bank. Payments inside Uzbekistan are made in soums.</p>
+        <h3 style="margin-top:6mm">Company e-signature</h3>
+        <p style="margin-top:2.4mm">The company key is issued to the director on the company's tax number and the director's PINFL, for up to 24 months. It signs e-invoices, labour contracts and licence applications. A new director gets a new key.</p>
+      </div>
+      <div>
+        <h3>Tax regime</h3>
+        <table class="compare dense">
+          <tr><th>Regime</th><th>Main terms</th></tr>
+          <tr><td>Turnover tax</td><td>Instead of profit tax and VAT, while annual income stays below 12,000 BCV. Chosen in the registration application</td></tr>
+          <tr><td>Simplified 6% VAT</td><td>Trade, catering and services, until 2030. 6% of turnover without input VAT, 0% profit tax</td></tr>
+          <tr><td>General regime</td><td>15% profit tax and 12% VAT, with monthly VAT returns</td></tr>
+        </table>
+        <p class="muted" style="margin-top:3mm;font-size:8.4pt">Tax Code, Arts. 258, 337, 461–462, as changed by Decree UP-100 from 1 June 2026. Large taxpayers and companies with a state share of 50% or more cannot use the 6% option.</p>
+      </div>
+    </div>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">From the first sale</p>
+      <ul>
+        <li>VAT payers hold a VAT certificate. It can be ordered at registration where it is issued automatically</li>
+        <li>Invoices are issued in the state e-invoicing system (Tax Code, Art. 47)</li>
+        <li>Sales to consumers usually require an online cash register, which can be ordered at registration</li>
+        <li>The company must actually be at its legal address. If it is not, the tax authority can suspend operations on its accounts (Tax Code, Art. 111)</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">7</span></footer>
+</section>
+
+<!-- 8 · People -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">People</p>
+    <h2>Director and staff</h2>
+    <p class="lede">A foreign national may be director. If that person works in Uzbekistan, the company usually needs a confirmation of the right to work first.</p>
+    <div class="cols" style="margin-top:7mm">
+      <div>
+        <h3>Right to work</h3>
+        <p style="margin-top:2.4mm">The employer obtains the confirmation from the Ministry of Poverty Reduction and Employment, which decides within 15 working days. It lasts up to three years for qualified specialists and up to one year for others (Law ZRU-642, Art. 107).</p>
+        <h3 style="margin-top:6mm">No confirmation needed for</h3>
+        <ul class="facts">
+          <li>Foreigners who invested at least 8,500 BCV in the company, for any position in it</li>
+          <li>Founders and first heads of foreign and joint enterprises, for up to three months</li>
+          <li>Holders of an Uzbek residence permit</li>
+          <li>Foreign specialists of IT Park residents</li>
+          <li>Staff who work remotely from abroad</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contracts and payroll</h3>
+        <ul class="facts">
+          <li>Every labour contract, change and termination is registered in the Unified National Labour System with the company e-signature</li>
+          <li>The director can be appointed in that system as part of registration</li>
+          <li>A director can later be changed online or at a Public Services Centre within minutes</li>
+          <li><b>12%</b> personal income tax, withheld by the employer</li>
+          <li><b>12%</b> social tax, paid by the employer on top of gross pay. There is no separate pension fund registration</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">In practice</p>
+      <p>A director hired by a foreign parent usually needs the confirmation from the first day. The investor exemption is written for individuals who invested in the company themselves. Visas and registration of stay are handled separately.</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">8</span></footer>
+</section>
+
+<!-- 9 · Licences and restrictions -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Licences and restrictions</p>
+    <h2>Licences and sector limits</h2>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>How licensing works</h3>
+        <ul class="facts">
+          <li>Three regimes under Law ZRU-701: licence, permit or notification</li>
+          <li>Applications only online, in the Litsenziya system or at my.gov.uz</li>
+          <li>Decision within <b>20 working days</b>. The Cabinet may set longer terms for some activities</li>
+          <li>If the authority misses the deadline, the business may start once it pays the fee, and the licence counts as issued</li>
+          <li>Refusal only on five listed grounds. Defects can be cured and the file is reviewed again without a new fee</li>
+          <li>Most licences have no expiry date</li>
+        </ul>
+      </div>
+      <div>
+        <h3>New in 2026</h3>
+        <ul class="facts">
+          <li><b>Entry without a licence.</b> For activities the Cabinet lists, a free notice allows three months of work while the licence is obtained</li>
+          <li><b>Preliminary assessment</b> of premises, equipment and staff in the Litsenziya system, with a result within 20 days</li>
+          <li>Only the company, not its officers, is fined for licensing breaches</li>
+          <li>A licence application can be filed together with registration</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sub">Limits for foreign-owned companies</p>
+    <ul class="facts" style="margin-top:3mm">
+      <li>There is no general cap on foreign ownership. Limits come from sector laws</li>
+      <li><b>Land</b> can only be leased by foreign companies, for up to 25 years for a foreign-investment enterprise</li>
+      <li><b>Agricultural land:</b> since 1 May 2026 foreign persons and foreign-investment enterprises may not lease it directly, bid at auctions or acquire stakes in agricultural land users (Decree UP-68)</li>
+      <li><b>Banks</b> must be joint stock companies licensed by the Central Bank. <b>Mass media</b> have a cap on foreign participation</li>
+      <li>Buying a large stake in an existing company may need prior antitrust clearance</li>
+    </ul>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">9</span></footer>
+</section>
+
+<!-- 10 · Representative office -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Representative office</p>
+    <h2>An office without trading</h2>
+    <p class="lede">A representative office is not a legal entity and may not carry on commercial activity. Since 2024 it is accredited under Cabinet of Ministers Resolution No. 76.</p>
+    <div class="cols" style="margin-top:7mm">
+      <div>
+        <h3>Accreditation</h3>
+        <ul class="facts">
+          <li>By the Ministry of Investment, Industry and Trade, on an online application through my.gov.uz or a Public Services Centre</li>
+          <li>Five documents: application, parent's constituent documents, proof of registration, power of attorney for the head, regulations of the office</li>
+          <li>Notarised, translated into Uzbek or Russian, apostilled or legalised, and issued no more than six months before filing</li>
+          <li>Decision within <b>5 working days</b>, certificate within one working day after the duty is paid</li>
+          <li>For <b>one to three years,</b> at the applicant's choice</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Operating rules</h3>
+        <ul class="facts">
+          <li>No commercial activity. Going beyond the office's regulations can end the accreditation</li>
+          <li>Foreign staff up to 40% of headcount and no more than five people</li>
+          <li>Registered for tax automatically on accreditation</li>
+          <li>Pays social tax on staff pay. Activity beyond auxiliary functions can create a permanent establishment (Tax Code, Art. 36)</li>
+          <li>No annual report. The Ministry may request information</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">The permanent establishment route</p>
+      <p>A foreign company that performs a contract in Uzbekistan without a local entity registers with the tax authority as a permanent establishment. A building site or services lasting more than 183 days in any twelve months create one, while preparatory and auxiliary work does not. Registration is due within 30 days when a contract runs longer than 183 days, and otherwise within 183 days of starting work.</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">10</span></footer>
+</section>
+
+<!-- 11 · Roadmap -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Roadmap</p>
+    <h2>From decision to first month</h2>
+    <p class="lede">For a foreign founder the project usually takes two to six weeks. The documents abroad and the bank checks take longest.</p>
+    <ol class="road tight">
+      <li><span class="when">Start</span><div><b>Decision and structure</b><span>Form, participants, capital, foreign-investment status and tax regime</span></div></li>
+      <li><span class="when">Days to weeks</span><div><b>Documents abroad</b><span>Parent company documents and power of attorney, apostilled or legalised</span></div></li>
+      <li><span class="when">In parallel</span><div><b>PINFL and e-signatures</b><span>For founders who will sign online and for the director</span></div></li>
+      <li><span class="when">A few days</span><div><b>Translations and charter</b><span>Notarised translations, charter in Uzbek, name check and legal address</span></div></li>
+      <li><span class="when">2 to 3 days</span><div><b>Registration</b><span>Filing with the extra services. 30 minutes by law once the file is complete</span></div></li>
+      <li><span class="when">1 to 3 weeks</span><div><b>Bank account and company e-signature</b><span>Bank checks of owners, signatory in person at the bank</span></div></li>
+      <li><span class="when">First month</span><div><b>First operations</b><span>Labour contracts, right to work, licences, e-invoices and accounting. Capital paid within one year</span></div></li>
+    </ol>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">Open points we check case by case</p>
+      <ul>
+        <li>Whether a sole foreign parent with one shareholder needs a second participant</li>
+        <li>Whose e-signature signs an online filing for a corporate founder</li>
+        <li>Whether the chosen bank onboards without a visit by the owner</li>
+        <li>Whether the activity qualifies for the three-month start without a licence</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">11</span></footer>
+</section>
+
+<!-- 12 · How we help -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">How we help</p>
+    <h2>One team from decision to first month</h2>
+    <p class="lede">We run the legal, tax and administrative side of the set-up, so that you can focus on the business you are building.</p>
+    <ul class="why" style="margin-top:8mm">
+      <li><span class="n">01</span><div><h3>Structure choice</h3><p>LLC, representative office or permanent establishment, participants, capital and foreign-investment status.</p></div></li>
+      <li><span class="n">02</span><div><h3>Documents and apostille</h3><p>Checklist for the parent company, powers of attorney, apostille, translations and the charter.</p></div></li>
+      <li><span class="n">03</span><div><h3>Registration</h3><p>Filing at a Public Services Centre as your representative, with the extra services you need.</p></div></li>
+      <li><span class="n">04</span><div><h3>Bank and e-signature</h3><p>PINFL, e-signatures, bank selection and support through the bank checks.</p></div></li>
+      <li><span class="n">05</span><div><h3>Tax regime and accounting</h3><p>Choice of regime, VAT, e-invoicing, bookkeeping and monthly filings from day one.</p></div></li>
+      <li><span class="n">06</span><div><h3>Licences and people</h3><p>Licence applications, right to work for foreign staff and labour contracts.</p></div></li>
+    </ul>
+    <div class="band-b"><div class="photo" style="background-image:url('img/setup-team.jpg');background-position:50% 62%"></div></div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">12</span></footer>
+</section>
+
+<!-- 13 · Contacts -->
+<section class="page contacts-page on-photo">
+  <div class="photo" style="background-image:url('../company-profile/img/khiva.jpg')"></div>
+  <div class="inner">
+    <p class="eyebrow" style="color:rgba(255,255,255,.65)">Contacts</p>
+    <h2>Planning to set up a company in Uzbekistan?</h2>
+    <p class="lede">Tell us about your plans and the timeline. We answer in English, Russian, Uzbek or German. The first call is free.</p>
+    <a class="cta" href="https://www.advizenco.com/contact">Book an introductory call</a>
+    <div class="clist">
+      <dl>
+        <dt>Website</dt><dd><a href="https://www.advizenco.com">advizenco.com</a></dd>
+        <dt>Email</dt><dd><a href="mailto:info@advizenco.com">info@advizenco.com</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+998334884888">+998 33 488 48 88</a></dd>
+      </dl>
+      <dl>
+        <dt>Telegram</dt><dd><a href="https://t.me/advizen">t.me/advizen</a></dd>
+        <dt>Location</dt><dd>Tashkent, Uzbekistan</dd>
+      </dl>
+      <div><div class="qr"><img src="../company-profile/qr.svg" alt=""></div><p class="qr-cap">advizenco.com</p></div>
+    </div>
+    <p class="legal">© 2026 Advizen Consulting LLC, Tashkent. This guide is for general information only and is not legal, tax or immigration advice. Rules as of November 2026.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">13</span></footer>
+</section>
+
+</body>
+</html>

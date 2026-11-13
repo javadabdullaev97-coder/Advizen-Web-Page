@@ -15,6 +15,11 @@ export type Guide = {
 
 export const GUIDES: Guide[] = [
   {
+    slug: "company-setup",
+    pdf: { en: "/guides/Company-Setup-Uzbekistan-2026.pdf", ru: "/guides/Company-Setup-Uzbekistan-2026-RU.pdf" },
+    cover: { en: "/guides/covers/company-setup-2026.webp", ru: "/guides/covers/company-setup-2026-ru.webp" },
+  },
+  {
     slug: "tax",
     pdf: { en: "/guides/Tax-Guide-Uzbekistan-2026.pdf", ru: "/guides/Tax-Guide-Uzbekistan-2026-RU.pdf" },
     cover: { en: "/guides/covers/tax-guide-2026.webp", ru: "/guides/covers/tax-guide-2026-ru.webp" },

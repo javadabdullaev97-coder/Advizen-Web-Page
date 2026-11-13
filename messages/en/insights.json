@@ -190,6 +190,12 @@
     "lede": "Practical guides on one topic each, free to download.",
     "open": "Open the guide",
     "items": {
+      "company-setup": {
+        "title": "Setting Up a Company in Uzbekistan",
+        "text": "Legal forms under the new LLC law, documents for foreign founders, registration, bank account and e-signature, tax regime, foreign directors, licences and a step-by-step roadmap.",
+        "meta": "Guide · 2026 edition · PDF",
+        "coverAlt": "Cover of Setting Up a Company in Uzbekistan, 2026 edition"
+      },
       "it-business": {
         "title": "IT Business in Uzbekistan",
         "text": "IT Park, relocation and hiring for technology companies: three ways to start, residency rules, taxes, visas and a relocation plan.",
