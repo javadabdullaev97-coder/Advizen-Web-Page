@@ -66,7 +66,7 @@ export const IMAGE_VARIANTS: Record<string, number[]> = {
   "/Sectors/Technology.webp": [480, 960],
 };
 
-// Content hash of each original, added to its URLs so a replaced photo is not served from cache.
+// Content hash of each original photo and guide PDF, added to its URLs so a replaced file is not served from cache.
 export const IMAGE_VERSIONS: Record<string, string> = {
   "/Articles Image/Accounting Law in Uzbekistan.webp": "10923835",
   "/Articles Image/Accounting Policy for Tax Purposes.webp": "d85aa863",
@@ -89,15 +89,23 @@ export const IMAGE_VERSIONS: Record<string, string> = {
   "/Articles Image/Special Economic Zones.webp": "7bdb539f",
   "/Articles Image/TIFC.webp": "d6eb3f89",
   "/Articles Image/Voluntary Liquidation.webp": "c8deced1",
+  "/guides/Advizen-Company-Profile-2026.pdf": "731e6694",
+  "/guides/Company-Setup-Uzbekistan-2026-RU.pdf": "02c6b8ca",
+  "/guides/Company-Setup-Uzbekistan-2026.pdf": "a8e0bcb0",
   "/guides/covers/company-setup-2026-ru.webp": "13140619",
   "/guides/covers/company-setup-2026.webp": "6f5ebfef",
   "/guides/covers/it-business-2026-ru.webp": "1e557159",
   "/guides/covers/it-business-2026.webp": "c8c6cc1d",
   "/guides/covers/tax-guide-2026-ru.webp": "2c5c5e3a",
   "/guides/covers/tax-guide-2026.webp": "79a4de5d",
+  "/guides/Doing-Business-in-Uzbekistan-2026.pdf": "e2193ce0",
+  "/guides/IT-Business-in-Uzbekistan-2026-RU.pdf": "4a1d462a",
+  "/guides/IT-Business-in-Uzbekistan-2026.pdf": "21e33781",
   "/guides/photos/company-setup.webp": "fccfe4ad",
   "/guides/photos/it-business.webp": "a3583c78",
   "/guides/photos/tax.webp": "4cc0ec75",
+  "/guides/Tax-Guide-Uzbekistan-2026-RU.pdf": "8650a45b",
+  "/guides/Tax-Guide-Uzbekistan-2026.pdf": "46743930",
   "/Hero and CTA images/Contact Hero.webp": "a60bb111",
   "/Hero and CTA images/Expertise Hero.webp": "31a20d25",
   "/Hero and CTA images/Insights Hero.webp": "6ba4aa9a",

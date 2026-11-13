@@ -1,6 +1,12 @@
 // The Doing Business in Uzbekistan guide, published as a PDF in public/guides. Replace the file and
 // this path when a new edition comes out.
-export const GUIDE_PDF = "/guides/Doing-Business-in-Uzbekistan-2026.pdf";
+import { IMAGE_VERSIONS } from "./image-variants";
+
+// Adds the file's content hash (written by scripts/image-variants.mjs) so browsers fetch a replaced PDF
+// at once instead of opening the copy in their cache. Run the script after replacing a PDF.
+const versioned = (file: string) => (IMAGE_VERSIONS[file] ? `${file}?v=${IMAGE_VERSIONS[file]}` : file);
+
+export const GUIDE_PDF = versioned("/guides/Doing-Business-in-Uzbekistan-2026.pdf");
 
 /* Topic guides shown under the Doing Business guide on the home and Insights pages.
    To add one: put the PDF(s) in public/guides, the cover photo without text as a square webp in
@@ -32,4 +38,4 @@ export const GUIDES: Guide[] = [
   },
 ];
 
-export const localized = (v: Guide["pdf"], locale: string) => v[locale as keyof Guide["pdf"]] ?? v.en;
+export const localized = (v: Guide["pdf"], locale: string) => versioned(v[locale as keyof Guide["pdf"]] ?? v.en);

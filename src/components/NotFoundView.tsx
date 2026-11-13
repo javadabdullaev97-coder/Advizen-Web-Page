@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GUIDE_PDF } from "@/lib/guide";
 
 const LINKS = [
   { href: "/expertise", title: "Expertise", text: "Tax, legal, accounting, HR and operations services" },
   { href: "/insights", title: "Insights", text: "Briefings on Uzbek tax, law and regulation" },
-  { href: "/guides/Doing-Business-in-Uzbekistan-2026.pdf", title: "Doing Business 2026", text: "Our guide for foreign investors, PDF" },
+  { href: GUIDE_PDF, title: "Doing Business 2026", text: "Our guide for foreign investors, PDF" },
   { href: "/contact", title: "Contact", text: "Tell us what you are planning" },
 ];
 
