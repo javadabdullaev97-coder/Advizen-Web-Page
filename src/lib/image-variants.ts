@@ -99,7 +99,7 @@ export const IMAGE_VERSIONS: Record<string, string> = {
   "/guides/covers/it-business-2026.webp": "c8c6cc1d",
   "/guides/covers/tax-guide-2026-ru.webp": "2c5c5e3a",
   "/guides/covers/tax-guide-2026.webp": "79a4de5d",
-  "/guides/Doing-Business-in-Uzbekistan-2026.pdf": "e2193ce0",
+  "/guides/Doing-Business-in-Uzbekistan-2026.pdf": "c7c88ffa",
   "/guides/Hiring-and-Migration-Uzbekistan-2026-RU.pdf": "48aaed60",
   "/guides/Hiring-and-Migration-Uzbekistan-2026.pdf": "0116ba2c",
   "/guides/IT-Business-in-Uzbekistan-2026-RU.pdf": "4a1d462a",

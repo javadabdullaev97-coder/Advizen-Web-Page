@@ -1,0 +1,130 @@
+<!doctype html>
+<!-- Design sample for livelier inner pages (not published). Build:
+     NODE_PATH=$(npm root -g) node scripts/build-pdf.mjs docs/kit-demo/en.html <out.pdf> --theme guide
+     Content is taken from the published tax guide so the sample shows real facts. -->
+<html lang="en" data-theme="guide">
+<head>
+<meta charset="utf-8">
+<title>Guide design sample · Advizen</title>
+<link rel="stylesheet" href="../company-profile/fonts.css">
+<link rel="stylesheet" href="../brochure.css">
+<link rel="stylesheet" href="../brochure-kit.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13h2M14 13h2M8 16.5h2"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15.5h6M9 9h3"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h3.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.6 3.8 5.4 3.8 8.5s-1.2 5.9-3.8 8.5c-2.6-2.6-3.8-5.4-3.8-8.5S9.4 6.1 12 3.5z"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5c.6-3.4 2.8-5.3 5.5-5.3s4.9 1.9 5.5 5.3"/><circle cx="16.8" cy="9" r="2.6"/><path d="M15.6 14.4c2.4-.3 4.3 1.3 4.9 4.6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.4-3 7.7-7 9.5-4-1.8-7-5.1-7-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-stamp" viewBox="0 0 24 24"><path d="M9.5 3.5h5l-.8 6.5h-3.4z"/><path d="M5 13.5c0-1.9 1.6-3.5 3.5-3.5h7c1.9 0 3.5 1.6 3.5 3.5V16H5z"/><path d="M5 20h14"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.8.6 1.1 1.4 1.1 2.2h5c0-.8.3-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+</svg>
+
+<!-- 1 · Contents -->
+<section class="page" id="p1">
+  <div class="inner">
+    <p class="eyebrow">Inside this guide</p>
+    <h2>Find what you need in one click</h2>
+    <p class="lede" style="max-width:none">Every tile below opens its section. Pages with a red tile are the ones most clients ask about.</p>
+    <div class="toc">
+      <a href="#p2"><span class="chip"><svg class="ic"><use href="#i-calc"/></svg></span><span class="n">01</span><b>Tax system at a glance</b><span>Rates, who pays and the paperwork behind them</span></a>
+      <a href="#p3" class="hl"><span class="chip"><svg class="ic"><use href="#i-cal"/></svg></span><span class="n">02</span><b>The tax year</b><span>Monthly, quarterly and annual deadlines on one page</span></a>
+      <a href="#p3"><span class="chip"><svg class="ic"><use href="#i-doc"/></svg></span><span class="n">03</span><b>Which regime fits</b><span>A three-question test for small and new businesses</span></a>
+      <a href="#p4"><span class="chip"><svg class="ic"><use href="#i-globe"/></svg></span><span class="n">04</span><b>International tax</b><span>Withholding tax, treaties and permanent establishment</span></a>
+      <a href="#p4" class="hl"><span class="chip"><svg class="ic"><use href="#i-people"/></svg></span><span class="n">05</span><b>Payroll</b><span>Income tax, social tax and the monthly returns</span></a>
+      <a href="#p4"><span class="chip"><svg class="ic"><use href="#i-shield"/></svg></span><span class="n">06</span><b>Audits and disputes</b><span>How desk and field audits work and how to appeal</span></a>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">2</span></footer>
+</section>
+
+<!-- 2 · Chapter opener -->
+<section class="page opener-page" id="p2">
+  <div class="opener">
+    <div class="side">
+      <span class="num">02</span>
+      <h2>The tax year</h2>
+      <p>Most taxes are paid monthly. A few annual returns cluster in February and March, so plan the first quarter early.</p>
+      <div class="chips"><span class="chip"><svg class="ic"><use href="#i-cal"/></svg></span><span class="chip"><svg class="ic"><use href="#i-doc"/></svg></span><span class="chip"><svg class="ic"><use href="#i-calc"/></svg></span></div>
+    </div>
+    <div class="pic"><div class="photo" style="background-image:url('../tax-guide/img/accounting.jpg');background-position:50% 50%"></div></div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com</span><span class="num">3</span></footer>
+</section>
+
+<!-- 3 · Year at a glance + decision flow -->
+<section class="page" id="p3">
+  <div class="progress"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">The tax year at a glance</p>
+    <h2>Twelve months, three rhythms</h2>
+    <div class="year">
+      <div class="m"><b>Jan</b><span class="dot g">15 payroll</span><span class="dot">20 VAT</span></div>
+      <div class="m peak"><b>Feb</b><span class="dot g">15 payroll</span><span class="dot o">15 annual payroll returns</span><span class="dot">20 VAT</span></div>
+      <div class="m peak"><b>Mar</b><span class="dot o">1 annual profit tax and statements</span><span class="dot g">15 payroll</span><span class="dot">20 VAT</span></div>
+      <div class="m"><b>Apr</b><span class="dot g">15 payroll</span><span class="dot">20 VAT and profit tax</span></div>
+      <div class="m"><b>May</b><span class="dot g">15 payroll</span><span class="dot">20 VAT</span></div>
+      <div class="m"><b>Jun</b><span class="dot g">15 payroll</span><span class="dot">20 VAT</span></div>
+      <div class="m"><b>Jul</b><span class="dot g">15 payroll</span><span class="dot">20 VAT and profit tax</span></div>
+      <div class="m"><b>Aug</b><span class="dot g">15 payroll</span><span class="dot">20 VAT</span></div>
+      <div class="m"><b>Sep</b><span class="dot g">15 payroll</span><span class="dot">20 VAT</span></div>
+      <div class="m"><b>Oct</b><span class="dot g">15 payroll</span><span class="dot">20 VAT and profit tax</span></div>
+      <div class="m"><b>Nov</b><span class="dot g">15 payroll</span><span class="dot">20 VAT</span></div>
+      <div class="m"><b>Dec</b><span class="dot g">15 payroll</span><span class="dot">20 VAT</span></div>
+    </div>
+    <div class="legend"><span><i class="g"></i>Monthly payroll, by the 15th</span><span><i></i>Monthly VAT and quarterly profit tax, by the 20th</span><span><i class="o"></i>Annual returns</span></div>
+
+    <p class="sub" style="margin-top:6mm">Which regime fits a small business</p>
+    <div class="flow">
+      <div class="q">Annual income above 12,000 BCV?</div>
+      <div class="arr"><em>Yes</em></div>
+      <div class="a dark"><b>General regime</b>15% profit tax and 12% VAT</div>
+      <div></div><div></div>
+      <div class="down"><em>No</em></div><div></div><div></div><div></div><div></div>
+      <div class="q">Trade, catering or services?</div>
+      <div class="arr"><em>Yes</em></div>
+      <div class="a"><b>Turnover tax or 6% VAT</b>The simplified 6% VAT runs until 2030</div>
+      <div></div><div></div>
+      <div class="down"><em>No</em></div><div></div><div></div><div></div><div></div>
+      <div class="a"><b>Turnover tax</b>Rates from 1% to 4% by activity and place</div>
+      <div></div><div></div><div></div><div></div>
+    </div>
+    <p class="note">Overview only. Some activities and taxpayers are excluded from turnover tax. We check the regime for each business.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">4</span></footer>
+</section>
+
+<!-- 4 · Stats, tips and read more -->
+<section class="page" id="p4">
+  <div class="progress"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">Payroll</p>
+    <h2>What every salary carries</h2>
+    <div class="stats">
+      <div class="stat"><span class="chip"><svg class="ic"><use href="#i-people"/></svg></span><b>12%</b><span>Personal income tax, withheld from the salary</span></div>
+      <div class="stat"><span class="chip"><svg class="ic"><use href="#i-stamp"/></svg></span><b>12%</b><span>Social tax, paid by the employer on top</span></div>
+      <div class="stat"><span class="chip"><svg class="ic"><use href="#i-cal"/></svg></span><b>15th</b><span>Monthly returns and payment for the previous month</span></div>
+    </div>
+    <div class="cards">
+      <div class="card tip"><span class="chip grey"><svg class="ic"><use href="#i-bulb"/></svg></span><div><span class="tag">Good to know</span><h4>Returns arrive pre-filled</h4><p>Since 2026 the tax authority prepares payroll returns itself. Check them within five days, or they count as filed.</p></div></div>
+      <div class="card warn"><span class="chip"><svg class="ic"><use href="#i-alert"/></svg></span><div><span class="tag">Common mistake</span><h4>Treating 7.5% as permanent</h4><p>The IT Park rate on salaries runs until 1 January 2028. Plan payroll costs beyond that date.</p></div></div>
+    </div>
+    <p class="sub" style="margin-top:8mm">Before the first payroll</p>
+    <ul class="ticks">
+      <li><svg class="ic"><use href="#i-check"/></svg>Contracts registered in the national labour system</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Company e-signature for the tax cabinet</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Salary card project with the bank</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Tax status of each foreign employee</li>
+    </ul>
+    <a class="card more" style="margin-top:auto" href="https://www.advizenco.com/insights/payroll-social-contributions"><span class="chip dark" style="background:rgba(255,255,255,.12)"><svg class="ic"><use href="#i-arrow"/></svg></span><div><span class="tag">Read more on our site</span><h4>Payroll taxes and social contributions</h4><p>Rates, deadlines and a worked example in our article.</p><span class="go">advizenco.com/insights</span></div></a>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">5</span></footer>
+</section>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 ---
 title: Entry, Visas and Residence
-lead: Citizens of more than 90 countries, including the EU, UK and US, can visit Uzbekistan without a visa for up to 30 days. Longer stays and employment need a visa, and every visitor must register within three working days.
+lead: Citizens of the EU, UK, US, China and many other countries can visit Uzbekistan without a visa for up to 30 days. Longer stays and employment need a visa, and every visitor must register within three working days.
 figures:
   - 30 days | Visa-free stay for most visitors
   - 3 working days | Deadline to register a stay
@@ -16,20 +16,20 @@ The list of visa-free countries is set by Cabinet of Ministers Resolution No. 40
 |---|---|
 | Armenia, Azerbaijan, Belarus, Georgia, Kazakhstan, Moldova, Russia, Ukraine | No limit set in Annex 5 |
 | Kyrgyzstan | 60 days |
-| EU and EEA states, UK, Switzerland, Türkiye, Japan, Korea, Canada, Australia and others | 30 days |
+| EU states, UK, Türkiye, Japan, Korea and others | 30 days |
 | China, UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, Jordan | 30 days |
 | United States (from 1 January 2026) | 30 days |
 | Tajikistan | 30 days |
 | Hong Kong SAR | 7 days, via international airports |
 :::
 
-China and five Gulf states plus Jordan were added in October 2025. A presidential decree of 3 November 2025 extended the 30-day regime to all US citizens from 1 January 2026; previously only US citizens aged 55 or over travelling as tourists were exempt. Foreign residents of the UAE holding a residence visa valid for at least 90 days also enter visa-free for 30 days.
+Since October 2025 China, the Gulf states and Jordan also have 30 days. China, Bahrain, Kuwait and Oman previously had 10 days. Presidential Decree UP-203 of 3 November 2025 extended the 30-day regime to all US citizens from 1 January 2026; previously only US citizens aged 55 or over travelling as tourists were exempt. Foreign residents of the UAE holding a residence visa valid for at least 90 days also enter visa-free for 30 days.
 
 A passport should be valid for at least six months. To stay beyond the visa-free period, a visitor must obtain one of the visa categories below.
 
 ## E-visa
 
-Nationals of countries on the e-visa list can apply online at e-visa.gov.uz without visiting a consulate. The e-visa allows a stay of up to 30 days with single, double or multiple entry. Applications are processed within two working days, not counting the day of filing, and the fee is USD 20 for a single entry, USD 35 for a double entry and USD 50 for multiple entries.
+Nationals of countries on the e-visa list can apply online at e-visa.gov.uz without visiting a consulate. The e-visa allows a stay of up to 30 days with single, double or multiple entry and is not a work visa. The foreign ministry gives a processing time of two working days, and the fee is USD 20 for a single entry, USD 35 for a double entry and USD 50 for multiple entries.
 
 ## Visas for business, investors and workers
 
@@ -51,19 +51,19 @@ The B-2 business visa is issued for up to one year, usually on an invitation fro
 
 ### Investor visa
 
-The multiple-entry INV visa is issued for up to three years to a foreign investor who has acquired shares or set up a foreign-invested enterprise with an investment of at least 8,500 BCV (~USD 310,000), counted at the value in force at the time of investment. The visa is issued at the request of the enterprise and can be extended without leaving the country.
+The multiple-entry INV visa is issued for up to three years to a foreign investor who has acquired shares or set up a foreign-invested enterprise with an investment of at least 8,500 BCV (~USD 310,000), counted at the value in force at the time of investment. The visa can be extended without leaving the country, and family members of INV and IT visa holders receive guest visas for the same term.
 
 ### Work visa and work authorisation
 
-A foreign employee needs a work authorisation (confirmation of the right to work), applied for by the employer, and then an E work visa for the same period. The employer must register the employment contract on the national labour portal.
+A foreign employee needs a work authorisation (confirmation of the right to work), applied for by the employer, and then an E work visa for the same period. The employer must register the employment contract on the national labour portal. Family members of INV and IT visa holders who take a job need their own work authorisation.
 
-Highly qualified specialists (a degree from a university in the top 1,000 of an international ranking, at least five years' experience, salary of at least USD 60,000 a year) and qualified specialists (higher education, at least five years' experience, at least USD 30,000 a year) benefit from simplified rules (Law on Employment, Art. 109). They receive a multiple-entry work visa for up to three years, renewable without leaving the country. If the contract ends early, they have 30 working days to find a new job.
+Highly qualified specialists (a degree from a university on the official top 1,000 list, at least five years' experience, salary of at least USD 60,000 a year) and qualified specialists (higher education, at least five years' experience, at least USD 30,000 a year) are defined in the Law on Employment (Art. 109). They receive a multiple-entry work visa for up to three years, renewable without leaving the country (Presidential Resolution PP-4008, para. 3). If the contract ends early, they have 30 working days to find a new job (Law on Employment, Art. 112).
 
 ## Residence permits
 
 ### Investment residence permit
 
-Since 1 June 2025, a foreign national can obtain a five-year residence permit, in a simplified procedure, by paying USD 250,000 (Presidential Decree UP-67 of 18 April 2025, para. 26). Each family member, meaning a spouse, child or parent, requires a further USD 150,000. The decree treats the sum as a payment, not as an investment in a business, and sets no rules on refunds or renewal.
+Since 1 June 2025, a foreign national can obtain a five-year residence permit, in a simplified procedure, by paying USD 250,000 (Presidential Decree UP-67 of 18 April 2025, para. 26). Each family member, meaning a spouse, child or parent, requires a further USD 150,000. The decree treats the sum as a payment, not as an investment in a business, and sets no rules on refunds or renewal. No implementing procedure had been published by October 2026, so the process should be confirmed with the migration authorities first.
 
 > Since 1 June 2025, a five-year residence permit can be obtained for a payment of USD 250,000.
 
@@ -75,9 +75,9 @@ A residence permit certifies permanent residence. A foreign individual who inves
 
 ## Registration of stay
 
-Under the Law on Registration at the Place of Residence and Place of Stay (No. ZRU-1074 of 10 July 2025, in force since 12 October 2025), a foreign visitor must register within three working days of entry (Art. 7). Hotels and clinics register guests through the E-mehmon system. Visitors staying in private housing are registered at a migration office on the owner's written consent; an employer hosting a foreign worker files its own request (Art. 19).
+Under the Law on Registration at the Place of Residence and Place of Stay (No. ZRU-1074 of 10 July 2025, in force since 12 October 2025), a foreign visitor must register within three working days of entry, and within ten working days after moving to a new address (Art. 7). Hotels and clinics register guests through the E-mehmon system (Arts. 6, 16, 19). Visitors staying in private housing are registered at a migration office on the owner's written consent; an employer hosting a foreign worker files its own request (Art. 19).
 
-Registration runs for the period stated by the host, but not beyond the visa-free period or the visa's validity. Nationals of visa-free CIS countries can be registered for up to six months at a time. Foreign residents who hold a residence permit follow separate rules and may also register online.
+Registration runs for the period stated by the host, up to one year at a time (Art. 16), but not beyond the visa-free period or the visa's validity. Nationals of visa-free CIS countries can be registered for up to six months at a time (Art. 19). Registration is filed at a migration office or police point, or online through my.gov.uz or E-xabar berish (Art. 16). Residence permit holders register at their place of residence (Art. 17).
 
 :::box Practical tips
 - Keep hotel registration slips or the electronic certificate until departure; officers may ask for them.
@@ -110,4 +110,10 @@ https://lex.uz/ru/docs/4045563 (Presidential Resolution PP-4008 of 07.11.2018, p
 https://kun.uz/en/news/2026/08/26/uzbekistan-to-raise-public-sector-wages-and-scholarships-from-september-1 (base calculation amount UZS 440,000 from 1 September 2026)
 https://www.uzdaily.uz/en/golden-visa-uzbekistan-raises-investment-threshold-for-residence-permit (housing route thresholds by region)
 https://realty.rbc.ru/news/62928a639a79472644f6e5da (housing route thresholds changed from 1 May 2022)
+https://lex.uz/ru/docs/7807760 (Presidential Decree UP-203 of 03.11.2025, US citizens 30 days from 01.01.2026)
+https://lex.uz/ru/docs/7627933 (Law ZRU-1074, Arts. 6, 7, 16, 17, 19: 10 working days after a move, one year per registration, online filing)
+https://lex.uz/ru/docs/512233 (Resolution No. 408, Annex 4: guest visas for families of INV and IT holders)
+https://pactum.uz/en/blog/vnzh-v-uzbekistane-dlya-investora-2026-250-000-nedvizhimost-investviza (no implementing procedure for UP-67 para. 26, single source)
+https://pactum.uz/en/blog/it-viza-v-uzbekistane-2026-kto-mozhet-poluchit-i-prava-semi (IT visa exemption does not cover family members, single source)
+https://lex.uz/ru/docs/5055690 (Law on Employment, Arts. 109, 112; PP-4008 para. 3 for visa benefits)
 -->

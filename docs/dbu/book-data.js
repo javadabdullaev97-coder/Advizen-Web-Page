@@ -668,7 +668,7 @@ window.BOOK = {
     "img/blossom.jpg"
    ],
    "title": "Entry, Visas and Residence",
-   "lead": "Citizens of more than 90 countries, including the EU, UK and US, can visit Uzbekistan without a visa for up to 30 days. Longer stays and employment need a visa, and every visitor must register within three working days.",
+   "lead": "Citizens of the EU, UK, US, China and many other countries can visit Uzbekistan without a visa for up to 30 days. Longer stays and employment need a visa, and every visitor must register within three working days.",
    "figures": [
     {
      "value": "30 days",
@@ -707,7 +707,7 @@ window.BOOK = {
        "60 days"
       ],
       [
-       "EU and EEA states, UK, Switzerland, Türkiye, Japan, Korea, Canada, Australia and others",
+       "EU states, UK, Türkiye, Japan, Korea and others",
        "30 days"
       ],
       [
@@ -732,7 +732,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "China and five Gulf states plus Jordan were added in October 2025. A presidential decree of 3 November 2025 extended the 30-day regime to all US citizens from 1 January 2026; previously only US citizens aged 55 or over travelling as tourists were exempt. Foreign residents of the UAE holding a residence visa valid for at least 90 days also enter visa-free for 30 days."
+     "html": "Since October 2025 China, the Gulf states and Jordan also have 30 days. China, Bahrain, Kuwait and Oman previously had 10 days. Presidential Decree UP-203 of 3 November 2025 extended the 30-day regime to all US citizens from 1 January 2026; previously only US citizens aged 55 or over travelling as tourists were exempt. Foreign residents of the UAE holding a residence visa valid for at least 90 days also enter visa-free for 30 days."
     },
     {
      "t": "p",
@@ -744,7 +744,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Nationals of countries on the e-visa list can apply online at e-visa.gov.uz without visiting a consulate. The e-visa allows a stay of up to 30 days with single, double or multiple entry. Applications are processed within two working days, not counting the day of filing, and the fee is USD 20 for a single entry, USD 35 for a double entry and USD 50 for multiple entries."
+     "html": "Nationals of countries on the e-visa list can apply online at e-visa.gov.uz without visiting a consulate. The e-visa allows a stay of up to 30 days with single, double or multiple entry and is not a work visa. The foreign ministry gives a processing time of two working days, and the fee is USD 20 for a single entry, USD 35 for a double entry and USD 50 for multiple entries."
     },
     {
      "t": "h2",
@@ -804,7 +804,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The multiple-entry INV visa is issued for up to three years to a foreign investor who has acquired shares or set up a foreign-invested enterprise with an investment of at least 8,500 BCV (~USD 310,000), counted at the value in force at the time of investment. The visa is issued at the request of the enterprise and can be extended without leaving the country."
+     "html": "The multiple-entry INV visa is issued for up to three years to a foreign investor who has acquired shares or set up a foreign-invested enterprise with an investment of at least 8,500 BCV (~USD 310,000), counted at the value in force at the time of investment. The visa can be extended without leaving the country, and family members of INV and IT visa holders receive guest visas for the same term."
     },
     {
      "t": "h3",
@@ -812,11 +812,11 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "A foreign employee needs a work authorisation (confirmation of the right to work), applied for by the employer, and then an E work visa for the same period. The employer must register the employment contract on the national labour portal."
+     "html": "A foreign employee needs a work authorisation (confirmation of the right to work), applied for by the employer, and then an E work visa for the same period. The employer must register the employment contract on the national labour portal. Family members of INV and IT visa holders who take a job need their own work authorisation."
     },
     {
      "t": "p",
-     "html": "Highly qualified specialists (a degree from a university in the top 1,000 of an international ranking, at least five years' experience, salary of at least USD 60,000 a year) and qualified specialists (higher education, at least five years' experience, at least USD 30,000 a year) benefit from simplified rules (Law on Employment, Art. 109). They receive a multiple-entry work visa for up to three years, renewable without leaving the country. If the contract ends early, they have 30 working days to find a new job."
+     "html": "Highly qualified specialists (a degree from a university on the official top 1,000 list, at least five years' experience, salary of at least USD 60,000 a year) and qualified specialists (higher education, at least five years' experience, at least USD 30,000 a year) are defined in the Law on Employment (Art. 109). They receive a multiple-entry work visa for up to three years, renewable without leaving the country (Presidential Resolution PP-4008, para. 3). If the contract ends early, they have 30 working days to find a new job (Law on Employment, Art. 112)."
     },
     {
      "t": "h2",
@@ -828,7 +828,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Since 1 June 2025, a foreign national can obtain a five-year residence permit, in a simplified procedure, by paying USD 250,000 (Presidential Decree UP-67 of 18 April 2025, para. 26). Each family member, meaning a spouse, child or parent, requires a further USD 150,000. The decree treats the sum as a payment, not as an investment in a business, and sets no rules on refunds or renewal."
+     "html": "Since 1 June 2025, a foreign national can obtain a five-year residence permit, in a simplified procedure, by paying USD 250,000 (Presidential Decree UP-67 of 18 April 2025, para. 26). Each family member, meaning a spouse, child or parent, requires a further USD 150,000. The decree treats the sum as a payment, not as an investment in a business, and sets no rules on refunds or renewal. No implementing procedure had been published by October 2026, so the process should be confirmed with the migration authorities first."
     },
     {
      "t": "quote",
@@ -852,11 +852,11 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Under the Law on Registration at the Place of Residence and Place of Stay (No. ZRU-1074 of 10 July 2025, in force since 12 October 2025), a foreign visitor must register within three working days of entry (Art. 7). Hotels and clinics register guests through the E-mehmon system. Visitors staying in private housing are registered at a migration office on the owner's written consent; an employer hosting a foreign worker files its own request (Art. 19)."
+     "html": "Under the Law on Registration at the Place of Residence and Place of Stay (No. ZRU-1074 of 10 July 2025, in force since 12 October 2025), a foreign visitor must register within three working days of entry, and within ten working days after moving to a new address (Art. 7). Hotels and clinics register guests through the E-mehmon system (Arts. 6, 16, 19). Visitors staying in private housing are registered at a migration office on the owner's written consent; an employer hosting a foreign worker files its own request (Art. 19)."
     },
     {
      "t": "p",
-     "html": "Registration runs for the period stated by the host, but not beyond the visa-free period or the visa's validity. Nationals of visa-free CIS countries can be registered for up to six months at a time. Foreign residents who hold a residence permit follow separate rules and may also register online."
+     "html": "Registration runs for the period stated by the host, up to one year at a time (Art. 16), but not beyond the visa-free period or the visa's validity. Nationals of visa-free CIS countries can be registered for up to six months at a time (Art. 19). Registration is filed at a migration office or police point, or online through my.gov.uz or E-xabar berish (Art. 16). Residence permit holders register at their place of residence (Art. 17)."
     },
     {
      "t": "box",
@@ -1952,7 +1952,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Employers transfer 0.1% of each employee's salary to an individual pension account. It is not an extra cost, because it is deducted from the income tax withheld (Tax Code, Art. 385). Foreign citizens are covered only when permanently resident in Uzbekistan, on the same terms as citizens."
+     "html": "Employers transfer 0.1% of each employee's salary to an individual pension account. It is not an extra cost, because it is deducted from the income tax withheld (Tax Code, Art. 385). Published commentary says foreign citizens are covered only when permanently resident in Uzbekistan, but it dates from 2019 and 2020, so the position of each foreign employee should be confirmed."
     },
     {
      "t": "h3",
@@ -1960,7 +1960,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Employers pay social tax of 12% on top of gross payroll, filed and paid monthly by the 15th (Tax Code, Art. 405). Temporary rates of 1% apply in some sectors, such as textiles."
+     "html": "Employers pay social tax of 12% on top of gross payroll (Tax Code, Art. 405), filed and paid monthly by the 15th (Art. 407). Temporary rates of 1% apply in some sectors, such as textiles."
     },
     {
      "t": "h3",
@@ -1968,7 +1968,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Foreign employees of an Uzbek company are taxed like local staff. When a foreign company seconds staff under a service contract, the Uzbek recipient pays social tax on their pay, and at least on 90% of the contract value (Tax Code, Art. 404). Since 1 January 2026 foreign citizens who pay a USD 50,000 fee, own or rent housing in Uzbekistan and spend more than 30 days a year there may have their foreign-source income exempted for up to five years (Presidential Decree UP-180 of 4 October 2025)."
+     "html": "Foreign employees of an Uzbek company are taxed like local staff. When a foreign company seconds staff under a service contract, the Uzbek recipient pays social tax on their pay, and at least on 90% of the contract value (Tax Code, Art. 404). Presidential Decree UP-180 of 4 October 2025 introduced a special regime that exempts only the foreign-source income of qualifying foreign citizens. It applies once the Tax Code is amended, when its procedure, Cabinet Resolution No. 270 of 21 May 2026, also takes effect. It does not change the tax on salaries paid by Uzbek employers."
     },
     {
      "t": "example",
@@ -2082,7 +2082,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Invoices are issued only through the state e-invoicing system, and retail sales through online tills linked to the tax authority. Since 2026 the authority pre-fills VAT, turnover tax and payroll returns, which the taxpayer can correct within five working days."
+     "html": "Invoices are issued only through the state e-invoicing system, and retail sales through online tills linked to the tax authority. Since 2026 the authority pre-fills VAT, turnover tax, payroll, property tax and land tax returns (Tax Code, Art. 81). The taxpayer can correct them within five days, but no later than the filing deadline, and is otherwise deemed to agree."
     },
     {
      "t": "h3",
@@ -2414,7 +2414,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The Code is amended often. Changes since 2025 include electronic employment contracts, a new overtime pay scale and revised severance rules. The State Labour Inspectorate of the Ministry of Employment and Poverty Reduction supervises compliance."
+     "html": "The Code is amended often. Changes since 2025 include electronic contracts (Law No. ZRU-1030), a new overtime pay scale (ZRU-1095), revised severance rules (ZRU-1070) and, from 12 September 2026, strike rules and part-time work on request for parents and carers (ZRU-1150). The State Labour Inspectorate of the Ministry of Employment and Poverty Reduction supervises compliance and since 1 September 2025 inspects without notice (Decree UP-126)."
     },
     {
      "t": "h2",
@@ -2426,7 +2426,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "An employment contract must be in writing, on paper or electronically, in at least two copies signed by both parties (Labour Code, Art. 106). An electronic contract is concluded in the Unified National Labour System, the state platform that also holds each worker's electronic labour book. The conclusion, amendment and termination of every contract must be registered in the system (Art. 109). The electronic labour book is the main record of an employee's service (Art. 125)."
+     "html": "An employment contract must be in writing, on paper or electronically, in at least two copies signed by both parties (Labour Code, Art. 106). An electronic contract is concluded in the Unified National Labour System, the state platform that also holds each worker's electronic labour book. The conclusion, amendment and termination of every contract must be registered in the system with the employer's digital signature (Art. 109), a paper contract within five working days and a termination within three (Cabinet Resolution No. 971). The electronic labour book is the main record of an employee's service (Art. 125)."
     },
     {
      "t": "h3",
@@ -2454,7 +2454,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Overtime requires the employee's written consent, except in emergencies listed in the Code. It may not exceed four hours over two consecutive days, or two hours a day in adverse working conditions (Art. 190). Overtime is not allowed on 12-hour shifts. Since a November 2025 amendment (Law No. ZRU-1095), the first two hours of overtime are paid at least 150% of the normal rate and further hours at least 200% (Art. 262). The same law abolished the general annual cap of 120 overtime hours. Work on a rest day or public holiday is paid at least double."
+     "html": "Overtime requires the employee's written consent, except in emergencies listed in the Code. It may not exceed four hours over two consecutive days, or two hours a day in adverse working conditions (Art. 190). Overtime is not allowed on 12-hour shifts. Since a November 2025 amendment (Law No. ZRU-1095), the first two hours of overtime in a day are paid at least 150% of the normal rate and further hours at least 200% (Art. 262). The same law abolished the general annual cap of 120 overtime hours. Work on a rest day or public holiday is paid at least double."
     },
     {
      "t": "p",
@@ -2466,7 +2466,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Since 1 July 2026, temporary disability benefit is assigned automatically through the State Social Insurance Fund under Presidential Decree UP-206 of 3 November 2025. The employer pays for the first five days of incapacity in each calendar year, and the fund pays from the sixth day (Cabinet Resolution No. 796 of 17 December 2025, Annex 4, para. 20). The benefit is 60% of average earnings for an insurance record of six months to eight years and 80% above eight years, based on earnings up to ten times the minimum wage. It is paid for up to 182 calendar days a year."
+     "html": "Since 1 July 2026, temporary disability benefit is assigned automatically through the State Social Insurance Fund under Presidential Decree UP-206 of 3 November 2025. The employer pays for the first five days of incapacity in each calendar year, and the fund pays from the sixth day (Cabinet Resolution No. 796 of 17 December 2025, Annex 4, para. 20). The benefit is 60% of average earnings for an insurance record of six months to eight years and 80% above eight years, based on earnings up to ten times the minimum wage (Cabinet Resolution No. 239 of 12 May 2026). It is paid for up to 182 calendar days a year."
     },
     {
      "t": "h2",
@@ -2474,7 +2474,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "A contract ends by agreement, on expiry of its term, at the initiative of either party, or on other grounds in the Code (Art. 155). An employee may resign with 14 calendar days' written notice (Art. 160). A chief executive must give two months' notice, and deputies and chief accountants one month (Art. 489)."
+     "html": "A contract ends by agreement, on expiry of its term, at the initiative of either party, or on other grounds in the Code (Art. 155). An employee may resign with 14 calendar days' written notice (Art. 160). A chief executive must give two months' notice, and deputies and chief accountants one month (Art. 489). Since 1 November 2025 Decree UP-126 extends the micro-firm rules to employers with up to 50 staff: seven days' notice of resignation, notice and severance set by contract, and optional local acts."
     },
     {
      "t": "p",
@@ -2489,6 +2489,10 @@ window.BOOK = {
       "Repeated breach of duties within a year of an earlier disciplinary measure.",
       "A single gross breach of duties."
      ]
+    },
+    {
+     "t": "p",
+     "html": "Other laws may add grounds, such as ZRU-1180 for education staff. Union consent is needed only under a collective agreement (Art. 164). A pregnant employee may be dismissed only on liquidation, and a mother of a child under three or a single father only on liquidation or for misconduct (Arts. 408, 409)."
     },
     {
      "t": "p",
@@ -2557,11 +2561,11 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The minimum wage is the floor for full-time pay. The BCV is the unit for fines, state fees and many thresholds in this guide, including work permit fees."
+     "html": "The minimum wage is the floor for full-time pay. The BCV is the unit for fines, state fees and many thresholds in this guide."
     },
     {
      "t": "p",
-     "html": "Payroll taxes and social contributions are withheld and paid monthly by the employer; the rates are set out in the Taxation chapter."
+     "html": "The employer withholds and pays payroll taxes monthly, as set out in the Taxation chapter."
     },
     {
      "t": "h2",
@@ -2569,7 +2573,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The Code treats remote work as ordinary employment with special rules (Arts. 452 to 459). It may be permanent, temporary or combined with office work. Temporary remote work requires the employee's consent, except in emergencies such as epidemics or disasters (Art. 454), and may last no more than one year, after which the employee returns to the previous arrangement. Moving an employee to remote work under the same job is a change in working conditions and must be documented. The contract should state how equipment and software are provided and how costs are reimbursed."
+     "html": "The Code treats remote work as ordinary employment with special rules (Arts. 452 to 464). It may be permanent, temporary or combined with office work. Temporary remote work requires the employee's consent and may last no more than one year (Art. 453). Without consent, an employee may be moved only in emergencies such as epidemics or disasters (Art. 454). The contract must state how equipment is provided and repaired, how communication and other costs are reimbursed and how tasks are exchanged (Art. 456)."
     },
     {
      "t": "h2",
@@ -2585,7 +2589,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The employer applies electronically with a digital signature, and the Ministry of Employment and Poverty Reduction reviews the application within 15 working days (Law on Employment, Art. 111). The application fee is 1 BCV (~USD 37). The issue fee is 1 BCV for highly qualified specialists, 2 BCV (~USD 75) for qualified specialists and 30 BCV (~USD 1,100) for other workers. A standard permit is valid for the contract term, up to one year, and can be renewed."
+     "html": "The employer applies at a Public Services Centre or through my.gov.uz. The local labour office checks for local candidates within five working days, and the ministry responsible for employment, currently the Ministry of Employment and Poverty Reduction, decides within 15 working days (Law on Employment, Art. 111). A standard permit is valid for the contract term, up to one year, and can be renewed."
     },
     {
      "t": "h3",
@@ -2593,12 +2597,12 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Two categories receive better terms under Presidential Resolution PP-4008 of 7 November 2018:"
+     "html": "Two categories receive better terms under the Law on Employment (Art. 109) and Presidential Resolution PP-4008 of 7 November 2018:"
     },
     {
      "t": "ul",
      "items": [
-      "Highly qualified specialist: degree from a university in the top 1,000 of the QS, THE or ARWU rankings, five years' experience and pay of at least USD 60,000 a year.",
+      "Highly qualified specialist: degree from a university on the official top 1,000 list of the Ministry of Higher Education, five years' experience and pay of at least USD 60,000 a year.",
       "Qualified specialist: higher education, five years' experience and pay of at least USD 30,000 a year."
      ]
     },
@@ -2612,7 +2616,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "No work permit is needed by holders of an Uzbek residence permit, by staff of accredited representative offices of foreign commercial organisations, by founders of foreign and joint enterprises on visits of up to three months, or by several other groups such as accredited diplomats and journalists (Law on Employment, Art. 110). Since 1 July 2022, foreign nationals who work online for an Uzbek employer from abroad also need no permit."
+     "html": "No work permit is needed by residence permit holders, foreign staff of accredited representative offices (at most 40% of staff and five people), founders of foreign and joint enterprises, including founders who head them, for up to three months, diplomats, journalists and some other groups (Law on Employment, Art. 110). Annex 20 to Cabinet Resolution No. 86 adds investors of at least 8,500 BCV (~USD 310,000), specialists of IT Park residents, Vatandosh card holders and teachers at Presidential Schools and universities. Since Cabinet Resolution No. 541 of 28 September 2022, people working for an Uzbek employer from abroad are also exempt while abroad."
     },
     {
      "t": "p",
@@ -2625,7 +2629,7 @@ window.BOOK = {
       {
        "t": "ul",
        "items": [
-        "Budget at least three weeks for a permit, then add time for the work visa.",
+        "Budget at least three weeks for a permit, then add time for the work visa (see Entry, Visas and Residence).",
         "Set the salary in the contract at or above the USD threshold for the category you claim.",
         "Diarise renewals well ahead: the contract ends on the day the permit expires."
        ]
@@ -2634,24 +2638,16 @@ window.BOOK = {
      "table": null
     },
     {
-     "t": "h3",
-     "html": "Visas and residence"
-    },
-    {
-     "t": "p",
-     "html": "Workers from visa-regime countries need a work visa. Qualified and highly qualified specialists can receive multiple-entry work visas for the contract term, up to three years, and can extend them without leaving the country. Highly qualified specialists and their family members may also obtain residence permits for the term of the contract. Since 1 June 2025, any foreign national can obtain a five-year residence permit under a simplified procedure for a fee of USD 250,000, plus USD 150,000 per family member (Decree UP-67 of 18 April 2025). The Entry, Visas and Residence chapter has the details."
-    },
-    {
      "t": "h2",
      "html": "Employer of Record"
     },
     {
      "t": "p",
-     "html": "A foreign company without a local entity cannot normally employ staff in Uzbekistan directly. An Employer of Record (EoR) solves this: a local company signs the employment contract, registers it in the Unified National Labour System, runs payroll, withholds tax and contributions, and handles leave and termination. The foreign client directs the employee's daily work."
+     "html": "A foreign company without a local entity may in law employ staff directly (Labour Code, Art. 12), but registration, tax agent duties (Tax Code, Art. 386) and permanent establishment risk make it impractical. An Employer of Record (EoR) solves this through outstaffing (Law on Employment, Art. 16, and Cabinet Resolution No. 706 of 25 October 2024). A local company employs the worker and runs payroll, while the client directs the daily work. An assignment lasts up to nine months a calendar year, extendable by agreement, pay may not fall below that of the client's own staff, and the client is secondarily liable for wages."
     },
     {
      "t": "p",
-     "html": "The model suits small teams and market entry, because onboarding takes days rather than the weeks needed to register a company. For a larger long-term team, or where the business will hold assets and sign local contracts, a subsidiary or representative office is usually more economical. The service agreement should allocate employment risk clearly and be reviewed for permanent establishment exposure."
+     "html": "The model suits small teams and market entry, because an Uzbek citizen can start within days, while foreign staff still need a work permit. For a larger long-term team, or one that will hold assets and sign contracts, a subsidiary or representative office is usually more economical."
     }
    ]
   },

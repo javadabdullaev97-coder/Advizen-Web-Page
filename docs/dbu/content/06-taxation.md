@@ -244,15 +244,15 @@ Residents pay 5% on dividends and interest, withheld by the payer. Interest on b
 
 ### Pension contribution
 
-Employers transfer 0.1% of each employee's salary to an individual pension account. It is not an extra cost, because it is deducted from the income tax withheld (Tax Code, Art. 385). Foreign citizens are covered only when permanently resident in Uzbekistan, on the same terms as citizens.
+Employers transfer 0.1% of each employee's salary to an individual pension account. It is not an extra cost, because it is deducted from the income tax withheld (Tax Code, Art. 385). Published commentary says foreign citizens are covered only when permanently resident in Uzbekistan, but it dates from 2019 and 2020, so the position of each foreign employee should be confirmed.
 
 ### Social tax
 
-Employers pay social tax of 12% on top of gross payroll, filed and paid monthly by the 15th (Tax Code, Art. 405). Temporary rates of 1% apply in some sectors, such as textiles.
+Employers pay social tax of 12% on top of gross payroll (Tax Code, Art. 405), filed and paid monthly by the 15th (Art. 407). Temporary rates of 1% apply in some sectors, such as textiles.
 
 ### Foreign employees
 
-Foreign employees of an Uzbek company are taxed like local staff. When a foreign company seconds staff under a service contract, the Uzbek recipient pays social tax on their pay, and at least on 90% of the contract value (Tax Code, Art. 404). Since 1 January 2026 foreign citizens who pay a USD 50,000 fee, own or rent housing in Uzbekistan and spend more than 30 days a year there may have their foreign-source income exempted for up to five years (Presidential Decree UP-180 of 4 October 2025).
+Foreign employees of an Uzbek company are taxed like local staff. When a foreign company seconds staff under a service contract, the Uzbek recipient pays social tax on their pay, and at least on 90% of the contract value (Tax Code, Art. 404). Presidential Decree UP-180 of 4 October 2025 introduced a special regime that exempts only the foreign-source income of qualifying foreign citizens. It applies once the Tax Code is amended, when its procedure, Cabinet Resolution No. 270 of 21 May 2026, also takes effect. It does not change the tax on salaries paid by Uzbek employers.
 
 :::example The full cost of an employee
 An Uzbek company employs a resident specialist at a gross salary of UZS 10,000,000 a month. The employer withholds income tax, of which 0.1% of salary goes to the pension account, and pays social tax on top.
@@ -294,7 +294,7 @@ A company is registered for tax automatically on incorporation. A foreign compan
 
 ### E-invoicing
 
-Invoices are issued only through the state e-invoicing system, and retail sales through online tills linked to the tax authority. Since 2026 the authority pre-fills VAT, turnover tax and payroll returns, which the taxpayer can correct within five working days.
+Invoices are issued only through the state e-invoicing system, and retail sales through online tills linked to the tax authority. Since 2026 the authority pre-fills VAT, turnover tax, payroll, property tax and land tax returns (Tax Code, Art. 81). The taxpayer can correct them within five days, but no later than the filing deadline, and is otherwise deemed to agree.
 
 ### Filing and payment calendar
 
@@ -395,4 +395,9 @@ https://www.spot.uz/ru/2026/01/08/land-tax-2026/
 https://buxgalter.uz/publish/doc/text212712_nk-2026_izmeneniya_po_nalogu_s_oborota_dlya_ip_i_samozanyatyh
 https://leaderaudit.uz/turnover-tax-uzbekistan
 https://www.oecd.org/en/about/news/announcements/2023/06/uzbekistan-joins-the-inclusive-framework-on-beps-and-participates-in-the-agreement-to-address-the-tax-challenges-arising-from-the-digitalisation-of-the-economy.html
+Tax Code Art. 81 parts 5-8 as amended by ZRU-1108 (pre-filled returns, five days but no later than the deadline)
+Tax Code Arts. 405, 407 (social tax rate and deadlines)
+https://lex.uz/ru/docs/7755357 (Presidential Decree UP-180 of 04.10.2025)
+https://lex.uz/ru/docs/8218139 (Cabinet Resolution No. 270 of 21.05.2026, para. 4: in force once the Tax Code is amended)
+https://buxgalter.uz/publish/doc/text160782_uderjivat_li_vznosy_na_inps_s_inostranca-rezidenta (INPS for foreign citizens, older commentary)
 -->

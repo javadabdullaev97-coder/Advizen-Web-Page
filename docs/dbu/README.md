@@ -23,3 +23,13 @@ cd docs/dbu
 
 The script writes `Doing-Business-in-Uzbekistan-2026.pdf` here (Google Chrome must be installed in `/Applications`).
 Copy it to `public/guides/` to update the site. The generated PDF in this folder is not committed.
+
+On Linux (for example in a Claude Code cloud session), build with Playwright Chromium instead of export.sh:
+
+```sh
+cd docs/dbu && python3 build.py && cd ../..
+NODE_PATH=$(npm root -g) node docs/dbu/build-linux.cjs docs/dbu public/guides/Doing-Business-in-Uzbekistan-2026.pdf
+node scripts/image-variants.mjs   # new content hash for the PDF link
+```
+
+Line breaks can differ slightly from the Mac build because of hyphenation.
