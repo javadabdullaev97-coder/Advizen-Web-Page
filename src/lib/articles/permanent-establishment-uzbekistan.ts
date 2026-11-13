@@ -7,10 +7,10 @@ const article: Record<string, LocalizedArticle> = {
     readTime: "7 min read",
     inShort: {
       figures: [
-        { value: "1 month", label: "A workplace that exists for longer than this generally counts as permanent" },
-        { value: "183 days", label: "Duration of a construction, assembly or installation project, or of services through employees, that creates a PE" },
+        { value: "12 months", label: "Window within which at least 183 days of services through employees or other personnel create a PE" },
+        { value: "183 days", label: "Duration of a construction, assembly or installation project, or of services through employees or other personnel, that creates a PE" },
         { value: "10%", label: "Tax that may apply to a PE's after-tax net profit, which is treated as dividends; treaties may lower it" },
-        { value: "10% of costs", label: "Income cap under which providing foreign personnel usually does not create a PE" },
+        { value: "10% of costs", label: "Margin cap for providing foreign personnel without creating a PE — one of three conditions that must all be met" },
       ],
       points: [
         "A foreign company creates a permanent establishment in Uzbekistan when it has a fixed place through which it conducts business there, such as an office, branch, factory, workshop or laboratory.",
@@ -22,7 +22,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p",
-        text: "For foreign companies looking to operate in Uzbekistan, understanding the concept of a Permanent Establishment (PE) is fundamental. Essentially, a PE is established when a foreign company has a fixed place through which it conducts business activities within Uzbekistan. This can be a physical location or certain types of ongoing activities within the country. If a workplace is established for more than one month, it generally counts as a permanent workplace.",
+        text: "For foreign companies looking to operate in Uzbekistan, understanding the concept of a Permanent Establishment (PE) is fundamental. Essentially, a PE is established when a foreign company has a fixed place through which it conducts business activities within Uzbekistan. This can be a physical location or certain types of ongoing activities within the country. The \"more than one month\" test sometimes quoted in this context does not come from the PE rules: it is in Article 32 of the Tax Code, which treats a workplace created for more than one month as stationary for the purposes of separate subdivisions (local branches) of Uzbek legal entities. Article 36, which defines a PE, sets no such one-month threshold.",
       },
       { type: "h2", text: "What might be considered a PE?" },
       {
@@ -35,7 +35,7 @@ const article: Record<string, LocalizedArticle> = {
           "Physical Locations: any type of office (management, branch, bureau), a factory, workshop, or laboratory",
           "Production & Sales: manufacturing, processing, or packaging goods, or using a warehouse as a sales point",
           "Resource Extraction: activities related to mining, oil or gas wells, quarries, or any other natural resource extraction",
-          "Long-Term Projects & Services: construction, assembly, or installation projects lasting over 183 days; or providing services through employees for at least 183 days",
+          "Long-Term Projects & Services: construction, assembly, or installation projects lasting over 183 days; or providing services, including consulting, through employees or other personnel engaged for that purpose for at least 183 days within any consecutive 12-month period, on the same or a connected project",
           "Insurance & Agency: foreign insurance companies collecting premiums through a dependent agent, or anyone consistently concluding contracts on behalf of the foreign company",
         ],
       },
@@ -49,7 +49,7 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Storage and Display: using facilities solely for storing or displaying goods",
           "Limited Activities: maintaining a fixed place of business purely for purchasing goods or collecting information for preparatory purposes",
-          "Personnel Provision (with conditions): providing foreign personnel to another company in Uzbekistan usually will not create a PE if your company is not responsible for their work results and your income from this does not exceed 10% of total costs for providing that personnel",
+          "Personnel Provision (with conditions): providing foreign personnel to another legal entity for work in Uzbekistan does not create a PE if all three conditions are met at once — the personnel act on behalf and in the interests of the entity they are provided to; your company is not responsible for the results of their work; and your income from providing the personnel does not exceed 10% of your total costs of providing it for the tax period (Tax Code, Article 36, part 11)",
         ],
       },
       { type: "h2", text: "Starting operations and registration" },
@@ -80,11 +80,11 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "What activities create a Permanent Establishment in Uzbekistan?",
-        answer: "A Permanent Establishment (PE) arises in Uzbekistan when a foreign company has a fixed place of business for more than one month, including any type of office, factory, workshop, or laboratory. PE status is also triggered by: construction, assembly, or installation projects lasting more than 183 days; providing services through employees for at least 183 days; dependent agents who consistently conclude contracts on behalf of the foreign company; and foreign insurance companies collecting premiums through a dependent agent.",
+        answer: "A Permanent Establishment (PE) arises in Uzbekistan when a foreign company has a permanent place of activity through which it carries on business in Uzbekistan, in whole or in part, including any type of office, factory, workshop, or laboratory. PE status is also triggered by: construction, assembly, or installation projects lasting more than 183 days; providing services through employees or other personnel engaged for that purpose for at least 183 days within any consecutive 12-month period; dependent agents who consistently conclude contracts on behalf of the foreign company; and foreign insurance companies collecting premiums through a dependent agent.",
       },
       {
         question: "What activities do NOT create a Permanent Establishment in Uzbekistan?",
-        answer: "Certain preparatory and auxiliary activities do not automatically trigger a PE in Uzbekistan: using facilities solely for storing or displaying goods; maintaining a fixed place purely for purchasing goods or collecting information for preparatory purposes; and providing foreign personnel to another company in Uzbekistan, provided the foreign company is not responsible for their work results and the income from this does not exceed 10% of the total costs of providing that personnel.",
+        answer: "Certain preparatory and auxiliary activities do not automatically trigger a PE in Uzbekistan: using facilities solely for storing or displaying goods; maintaining a fixed place purely for purchasing goods or collecting information for preparatory purposes; and providing foreign personnel to another legal entity for work in Uzbekistan, provided all three conditions of Article 36, part 11 of the Tax Code are met: the personnel act on behalf and in the interests of the entity they are provided to, the foreign company is not responsible for the results of their work, and its income from providing them does not exceed 10% of its total costs of providing that personnel for the tax period.",
       },
       {
         question: "What taxes apply to a Permanent Establishment in Uzbekistan?",
@@ -102,10 +102,10 @@ const article: Record<string, LocalizedArticle> = {
     readTime: "7 мин чтения",
     inShort: {
       figures: [
-        { value: "1 месяц", label: "Рабочее место, существующее дольше этого срока, как правило, считается постоянным" },
-        { value: "183 дня", label: "Длительность строительного, монтажного или установочного проекта либо услуг через работников, создающая ПУ" },
+        { value: "12 месяцев", label: "Период, в пределах которого оказание услуг через работников или иной персонал не менее 183 дней создаёт ПУ" },
+        { value: "183 дня", label: "Длительность строительного, монтажного или установочного проекта либо услуг через работников или иной персонал, создающая ПУ" },
         { value: "10%", label: "Ставка, которая может применяться к чистой прибыли ПУ после налогообложения как к дивидендам; соглашения могут её снижать" },
-        { value: "10% расходов", label: "Предел дохода, при котором предоставление иностранного персонала обычно не создаёт ПУ" },
+        { value: "10% расходов", label: "Предел дохода от предоставления иностранного персонала без образования ПУ — одно из трёх условий, которые должны выполняться одновременно" },
       ],
       points: [
         "Иностранная компания образует постоянное учреждение в Узбекистане, когда у неё есть постоянное место, через которое она ведёт деятельность, — например, офис, филиал, завод, мастерская или лаборатория.",
@@ -117,7 +117,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p",
-        text: "Для иностранных компаний, планирующих деятельность в Узбекистане, понимание концепции постоянного учреждения (ПУ) принципиально. По сути, ПУ возникает, когда у иностранной компании есть постоянное место, через которое она ведёт предпринимательскую деятельность в Узбекистане. Это может быть физическая локация или определённые виды длящейся деятельности в стране. Рабочее место, существующее более одного месяца, как правило, считается постоянным.",
+        text: "Для иностранных компаний, планирующих деятельность в Узбекистане, понимание концепции постоянного учреждения (ПУ) принципиально. По сути, ПУ возникает, когда у иностранной компании есть постоянное место, через которое она ведёт предпринимательскую деятельность в Узбекистане. Это может быть физическая локация или определённые виды длящейся деятельности в стране. Критерий «более одного месяца», который иногда приводят в этом контексте, взят не из правил о ПУ: он содержится в статье 32 Налогового кодекса, по которой рабочее место, создаваемое на срок более одного месяца, считается стационарным для целей обособленных подразделений (местных филиалов) узбекских юридических лиц. Статья 36, определяющая ПУ, такого месячного порога не устанавливает.",
       },
       { type: "h2", text: "Что может считаться ПУ?" },
       {
@@ -130,7 +130,7 @@ const article: Record<string, LocalizedArticle> = {
           "Физические локации: любой тип офиса (управление, филиал, бюро), завод, мастерская или лаборатория",
           "Производство и продажи: производство, переработка или упаковка товаров, либо использование склада как точки продаж",
           "Добыча ресурсов: деятельность, связанная с добычей полезных ископаемых, нефтяных или газовых скважин, карьеров или иных природных ресурсов",
-          "Длительные проекты и услуги: строительные, монтажные или установочные проекты длительностью более 183 дней; либо оказание услуг через работников на протяжении не менее 183 дней",
+          "Длительные проекты и услуги: строительные, монтажные или установочные проекты длительностью более 183 дней; либо оказание услуг, включая консультационные, через своих служащих или иной нанимаемый для этих целей персонал на протяжении не менее 183 дней в течение любого последовательного 12-месячного периода по одному или связанным проектам",
           "Страхование и агентирование: иностранные страховые компании, собирающие премии через зависимого агента, или лица, систематически заключающие договоры от имени иностранной компании",
         ],
       },
@@ -144,7 +144,7 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Хранение и демонстрация: использование помещений исключительно для хранения или демонстрации товаров",
           "Ограниченная деятельность: содержание постоянного места деятельности исключительно для закупки товаров или сбора информации в подготовительных целях",
-          "Предоставление персонала (с условиями): предоставление иностранного персонала другой компании в Узбекистане обычно не создаёт ПУ, если ваша компания не отвечает за результаты их работы, а ваш доход от этого не превышает 10% общих расходов на предоставление такого персонала",
+          "Предоставление персонала (с условиями): предоставление иностранного персонала другому юридическому лицу для работы в Узбекистане не создаёт ПУ при одновременном выполнении трёх условий — персонал действует от имени и в интересах юридического лица, которому он предоставлен; ваша компания не несёт ответственности за результаты работы этого персонала; ваш доход от предоставления персонала не превышает 10% общей суммы затрат на его предоставление за налоговый период (часть 11 статьи 36 Налогового кодекса)",
         ],
       },
       { type: "h2", text: "Начало деятельности и регистрация" },
@@ -175,11 +175,11 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "Какие виды деятельности создают Постоянное учреждение в Узбекистане?",
-        answer: "Постоянное учреждение (ПУ) возникает в Узбекистане, когда у иностранной компании есть постоянное место деятельности на срок более одного месяца, включая любой тип офиса, завода, мастерской или лаборатории. Статус ПУ также возникает при: строительных, монтажных или установочных проектах длительностью более 183 дней; оказании услуг через работников не менее 183 дней; наличии зависимых агентов, систематически заключающих договоры от имени иностранной компании; иностранных страховых компаниях, собирающих премии через зависимого агента.",
+        answer: "Постоянное учреждение (ПУ) возникает в Узбекистане, когда у иностранной компании есть постоянное место деятельности, через которое она полностью или частично ведёт предпринимательскую деятельность в Узбекистане, включая любой тип офиса, завода, мастерской или лаборатории. Статус ПУ также возникает при: строительных, монтажных или установочных проектах длительностью более 183 дней; оказании услуг через работников или иной нанимаемый для этих целей персонал не менее 183 дней в течение любого последовательного 12-месячного периода; наличии зависимых агентов, систематически заключающих договоры от имени иностранной компании; иностранных страховых компаниях, собирающих премии через зависимого агента.",
       },
       {
         question: "Какие виды деятельности НЕ создают Постоянное учреждение в Узбекистане?",
-        answer: "Ряд подготовительных и вспомогательных видов деятельности автоматически не влечёт возникновения ПУ в Узбекистане: использование помещений исключительно для хранения или демонстрации товаров; содержание постоянного места деятельности исключительно для закупки товаров или сбора информации в подготовительных целях; предоставление иностранного персонала другой компании в Узбекистане при условии, что иностранная компания не несёт ответственности за результаты их работы, а доход от этого не превышает 10% общих расходов на предоставление персонала.",
+        answer: "Ряд подготовительных и вспомогательных видов деятельности автоматически не влечёт возникновения ПУ в Узбекистане: использование помещений исключительно для хранения или демонстрации товаров; содержание постоянного места деятельности исключительно для закупки товаров или сбора информации в подготовительных целях; предоставление иностранного персонала другому юридическому лицу для работы в Узбекистане при одновременном выполнении трёх условий части 11 статьи 36 Налогового кодекса: персонал действует от имени и в интересах юридического лица, которому он предоставлен, иностранная компания не несёт ответственности за результаты его работы, а её доход от предоставления персонала не превышает 10% общей суммы затрат на его предоставление за налоговый период.",
       },
       {
         question: "Какие налоги применяются к Постоянному учреждению в Узбекистане?",
@@ -197,10 +197,10 @@ const article: Record<string, LocalizedArticle> = {
     readTime: "7 daqiqa oʻqish",
     inShort: {
       figures: [
-        { value: "1 oy", label: "Bundan uzoq mavjud boʻlgan ish joyi odatda doimiy hisoblanadi" },
-        { value: "183 kun", label: "DM yaratadigan qurilish, montaj yoki oʻrnatish loyihasi yoxud xodimlar orqali xizmat koʻrsatish muddati" },
+        { value: "12 oy", label: "Xodimlar yoki boshqa personal orqali kamida 183 kun xizmat koʻrsatish DM yaratadigan davr" },
+        { value: "183 kun", label: "DM yaratadigan qurilish, montaj yoki oʻrnatish loyihasi yoxud xodimlar yoki boshqa personal orqali xizmat koʻrsatish muddati" },
         { value: "10%", label: "Dividend sifatida koʻriladigan DMning soliqdan keyingi sof foydasiga qoʻllanishi mumkin boʻlgan soliq; shartnomalar uni pasaytirishi mumkin" },
-        { value: "Xarajatlarning 10%", label: "Chet el xodimlarini taqdim etish odatda DM yaratmaydigan daromad chegarasi" },
+        { value: "Xarajatlarning 10%", label: "Chet el xodimlarini DM yaratmasdan taqdim etish uchun daromad chegarasi — bir vaqtda bajarilishi shart boʻlgan uchta shartdan biri" },
       ],
       points: [
         "Chet el kompaniyasi Oʻzbekistonda biznes faoliyatini yuritadigan doimiy joyga — masalan, ofis, filial, zavod, ustaxona yoki laboratoriyaga — ega boʻlganda doimiy muassasa yuzaga keladi.",
@@ -212,7 +212,7 @@ const article: Record<string, LocalizedArticle> = {
     content: [
       {
         type: "p",
-        text: "Oʻzbekistonda faoliyat yuritmoqchi boʻlgan chet el kompaniyalari uchun doimiy muassasa (DM) tushunchasini bilish asosiydir. Mohiyatan, DM chet el kompaniyasi Oʻzbekistonda biznes faoliyatini yuritish uchun doimiy joyga ega boʻlganda paydo boʻladi. Bu jismoniy joy yoki mamlakatda davom etayotgan muayyan turdagi faoliyat boʻlishi mumkin. Bir oydan ortiq mavjud boʻlgan ish joyi odatda doimiy hisoblanadi.",
+        text: "Oʻzbekistonda faoliyat yuritmoqchi boʻlgan chet el kompaniyalari uchun doimiy muassasa (DM) tushunchasini bilish asosiydir. Mohiyatan, DM chet el kompaniyasi Oʻzbekistonda biznes faoliyatini yuritish uchun doimiy joyga ega boʻlganda paydo boʻladi. Bu jismoniy joy yoki mamlakatda davom etayotgan muayyan turdagi faoliyat boʻlishi mumkin. Bu borada baʼzan keltiriladigan «bir oydan ortiq» mezoni DM qoidalaridan olinmagan: u Soliq kodeksining 32-moddasida boʻlib, unga koʻra bir oydan ortiq muddatga yaratiladigan ish joyi Oʻzbekiston yuridik shaxslarining alohida boʻlinmalari (mahalliy filiallari) maqsadlarida statsionar hisoblanadi. DMni belgilaydigan 36-modda bunday bir oylik chegarani belgilamaydi.",
       },
       { type: "h2", text: "DM deb hisoblanishi mumkin boʻlgan narsalar" },
       {
@@ -225,7 +225,7 @@ const article: Record<string, LocalizedArticle> = {
           "Jismoniy joylashuv: har qanday turdagi ofis (boshqaruv, filial, byuro), zavod, ustaxona yoki laboratoriya",
           "Ishlab chiqarish va sotish: tovarlarni ishlab chiqarish, qayta ishlash yoki qadoqlash, yoki omborni sotuv nuqtasi sifatida ishlatish",
           "Resurs qazib olish: togʻ-kon, neft yoki gaz quduqlari, karyerlar yoki har qanday tabiiy resurslarni qazib olish bilan bogʻliq faoliyat",
-          "Uzoq muddatli loyihalar va xizmatlar: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; yoki kamida 183 kun davomida xodimlar orqali xizmatlar koʻrsatish",
+          "Uzoq muddatli loyihalar va xizmatlar: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; yoki bitta yoxud bogʻliq loyihalar boʻyicha istalgan ketma-ket 12 oylik davr ichida kamida 183 kun davomida oʻz xodimlari yoki shu maqsadda yollangan boshqa personal orqali xizmatlar, shu jumladan konsalting xizmatlarini koʻrsatish",
           "Sugʻurta va agentlik: bogʻliq agent orqali sugʻurta mukofotlarini yigʻuvchi chet el sugʻurta kompaniyalari yoki chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzuvchi shaxslar",
         ],
       },
@@ -239,7 +239,7 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Saqlash va namoyish: obyektlarni faqat tovarlarni saqlash yoki namoyish qilish uchun ishlatish",
           "Cheklangan faoliyat: faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼlumot toʻplash uchun doimiy biznes joyini saqlash",
-          "Xodimlar taqdim etish (shartlar bilan): Oʻzbekistondagi boshqa kompaniyaga chet el xodimlarini taqdim etish odatda DM yaratmaydi, agar kompaniyangiz ularning ish natijalari uchun javobgar boʻlmasa va bundan oladigan daromad bunday xodimlarni taqdim etish jami xarajatlarining 10% dan oshmasa",
+          "Xodimlar taqdim etish (shartlar bilan): chet el xodimlarini Oʻzbekistonda ishlash uchun boshqa yuridik shaxsga taqdim etish uchta shart bir vaqtda bajarilganda DM yaratmaydi — xodimlar oʻzlari taqdim etilgan yuridik shaxs nomidan va uning manfaatlarida harakat qiladi; kompaniyangiz ularning ish natijalari uchun javobgar emas; xodimlarni taqdim etishdan oladigan daromadingiz soliq davri uchun ularni taqdim etish jami xarajatlarining 10% dan oshmaydi (Soliq kodeksi 36-moddasining 11-qismi)",
         ],
       },
       { type: "h2", text: "Faoliyatni boshlash va roʻyxatga olish" },
@@ -270,11 +270,11 @@ const article: Record<string, LocalizedArticle> = {
     faq: [
       {
         question: "Qaysi faoliyat Oʻzbekistonda doimiy muassasa yaratadi?",
-        answer: "Chet el kompaniyasi Oʻzbekistonda bir oydan ortiq doimiy faoliyat joyiga ega boʻlganda doimiy muassasa (DM) paydo boʻladi, shu jumladan har qanday turdagi ofis, zavod, ustaxona yoki laboratoriya. DM maqomi quyidagi hollarda ham yuzaga keladi: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; kamida 183 kun davomida xodimlar orqali xizmatlar koʻrsatish; chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzadigan bogʻliq agentlar; bogʻliq agent orqali sugʻurta mukofotlarini yigʻuvchi chet el sugʻurta kompaniyalari.",
+        answer: "Chet el kompaniyasi Oʻzbekistonda tadbirkorlik faoliyatini toʻliq yoki qisman amalga oshiradigan doimiy faoliyat joyiga ega boʻlganda doimiy muassasa (DM) paydo boʻladi, shu jumladan har qanday turdagi ofis, zavod, ustaxona yoki laboratoriya. DM maqomi quyidagi hollarda ham yuzaga keladi: 183 kundan ortiq davom etadigan qurilish, montaj yoki oʻrnatish loyihalari; istalgan ketma-ket 12 oylik davr ichida kamida 183 kun davomida xodimlar yoki shu maqsadda yollangan boshqa personal orqali xizmatlar koʻrsatish; chet el kompaniyasi nomidan muntazam ravishda shartnomalar tuzadigan bogʻliq agentlar; bogʻliq agent orqali sugʻurta mukofotlarini yigʻuvchi chet el sugʻurta kompaniyalari.",
       },
       {
         question: "Qaysi faoliyat Oʻzbekistonda doimiy muassasa yaratmaydi?",
-        answer: "Bir qator tayyorgarlik va yordamchi faoliyat turlari Oʻzbekistonda avtomatik ravishda DM yaratmaydi: obyektlarni faqat tovarlarni saqlash yoki namoyish qilish uchun ishlatish; faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼlumot toʻplash uchun doimiy biznes joyini saqlash; Oʻzbekistondagi boshqa kompaniyaga chet el xodimlarini taqdim etish — agar chet el kompaniyasi ularning ish natijalari uchun javobgar boʻlmasa va bundan oladigan daromad bunday xodimlarni taqdim etish jami xarajatlarining 10% dan oshmasa.",
+        answer: "Bir qator tayyorgarlik va yordamchi faoliyat turlari Oʻzbekistonda avtomatik ravishda DM yaratmaydi: obyektlarni faqat tovarlarni saqlash yoki namoyish qilish uchun ishlatish; faqat tovar sotib olish yoki tayyorgarlik maqsadida maʼlumot toʻplash uchun doimiy biznes joyini saqlash; chet el xodimlarini Oʻzbekistonda ishlash uchun boshqa yuridik shaxsga taqdim etish — agar Soliq kodeksi 36-moddasi 11-qismining uchala sharti bir vaqtda bajarilsa: xodimlar oʻzlari taqdim etilgan yuridik shaxs nomidan va uning manfaatlarida harakat qiladi, chet el kompaniyasi ularning ish natijalari uchun javobgar emas, uning xodimlarni taqdim etishdan oladigan daromadi esa soliq davri uchun ularni taqdim etish jami xarajatlarining 10% dan oshmaydi.",
       },
       {
         question: "Oʻzbekistondagi doimiy muassasaga qanday soliqlar qoʻllaniladi?",

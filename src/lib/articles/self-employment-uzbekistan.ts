@@ -7,16 +7,18 @@ const article: Record<string, LocalizedArticle> = {
     readTime: "6 min read",
     inShort: {
       figures: [
-        { value: "UZS 100m", label: "Income per tax period that a self-employed person earns free of personal income tax" },
-        { value: "4%", label: "Turnover tax rate on annual income above that threshold, as for an individual entrepreneur" },
+        { value: "1%", label: "Turnover tax on a self-employed person's income since 1 January 2026, from the first soum up to UZS 1 billion a year" },
+        { value: "UZS 1bn", label: "Annual income above which a self-employed person moves to VAT and profit tax" },
         { value: "1 BCV", label: "Minimum voluntary annual social tax, paid to the Pension Fund by 31 December" },
-        { value: "3", label: "Maximum number of permitted activities a self-employed person can carry on at the same time" },
+        { value: "72", label: "Permitted activities on the list in force since 1 January 2026, down from 104" },
       ],
       points: [
         "Since 1 July 2020, registering as self-employed in Uzbekistan is a notification through the Soliq mobile app or the taxpayer's personal cabinet, with no state fee and a QR code as proof of status.",
+        "Since 1 January 2026 the former exemption for income up to UZS 100 million no longer applies: self-employed income is subject to 1% turnover tax up to UZS 1 billion a year.",
+        "A company that pays a self-employed person withholds the 1% tax at source once the tax authority notifies it.",
         "Self-employed individuals do not need to keep full accounting records.",
-        "The list of permitted activities covers more than 100 types of work and services, from tutoring and childcare to IT services, creative professions, crafts and agricultural work.",
-        "The annual social tax paid by a self-employed person goes in full to the off-budget Pension Fund and counts towards future pension benefits.",
+        "Since 1 January 2026 the list of permitted activities has 72 items, down from 104, under Presidential Decree UP-50 of 19 March 2025.",
+        "The annual social tax paid by a self-employed person is voluntary, goes in full to the off-budget Pension Fund and counts towards future pension benefits.",
       ],
     },
     content: [
@@ -32,8 +34,9 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul",
         items: [
-          "Income exempt from personal income tax up to 100 million UZS within a tax period (threshold updated January 2024)",
-          "If annual income exceeds this amount, taxed at a 4% turnover tax rate like an individual entrepreneur",
+          "Since 1 January 2026, income from sales of goods and services up to UZS 1 billion a year is subject to 1% turnover tax; the former exemption for income up to UZS 100 million has been abolished",
+          "Above UZS 1 billion a year, VAT and profit tax apply from the day the threshold is reached, and taxes other than social tax are paid as by an individual entrepreneur",
+          "A company paying a self-employed person withholds the 1% tax at source once the tax authority notifies it",
           "No need to maintain full accounting records",
           "Registration takes minutes via the Soliq mobile app with no state fee",
         ],
@@ -41,12 +44,12 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Social security and pension contributions" },
       {
         type: "p",
-        text: "A significant benefit for self-employed individuals is the ability to contribute to their pension fund. They pay a social tax for the year, which is fully directed to the off-budget Pension Fund. This ensures that their work as self-employed individuals contributes to their future retirement benefits, similar to how it is calculated for individual entrepreneurs. The annual contribution is at least 1 Basic Calculated Value (BCV) and is voluntary, payable up to December 31st.",
+        text: "A significant benefit for self-employed individuals is the ability to contribute to their pension fund. They pay a social tax for the year, which is fully directed to the off-budget Pension Fund. This ensures that their work as self-employed individuals contributes to their future retirement benefits, similar to how it is calculated for individual entrepreneurs. The annual contribution is at least 1 Basic Calculated Value (BCV) and is voluntary, payable up to December 31st at the BCV in force on the day of payment.",
       },
-      { type: "h2", text: "Expanding opportunities: over 100 permitted activities" },
+      { type: "h2", text: "Permitted activities: a shorter list since 1 January 2026" },
       {
         type: "p",
-        text: "The list of permitted activities for self-employed individuals has expanded considerably, now encompassing over 100 diverse types of work and services. These range from tutoring and childcare to IT services, creative professions, and various craft and agricultural activities. This broad scope allows many professionals to operate legally and efficiently. While you can perform many activities, you may concurrently choose no more than three at any given time.",
+        text: "Since 1 January 2026 the activities open to the self-employed are set out in Annex 2 to Presidential Decree UP-50 of 19 March 2025. The list has 72 items, down from 104, so some activities that were open to the self-employed before 2026 are no longer on it. Check that your activity is on the current list before registering — and, for a business, before engaging a self-employed contractor. While you can perform many activities, you may concurrently choose no more than three at any given time.",
       },
       { type: "h2", text: "The Soliq app: your central hub" },
       {
@@ -61,7 +64,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "blockquote",
-        text: "Self-employment in Uzbekistan offers one of the most accessible tax regimes in the region — a flat PIT exemption up to 100 million UZS combined with minimal administrative burden makes it an attractive starting point for freelancers, consultants, and small service providers.",
+        text: "Self-employment in Uzbekistan remains one of the most accessible tax regimes in the region — since 1 January 2026, a 1% turnover tax on income up to UZS 1 billion a year combined with minimal administrative burden makes it an attractive starting point for freelancers and small service providers whose activity is on the permitted list.",
       },
     ],
     faq: [
@@ -71,11 +74,15 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "What taxes do self-employed individuals pay in Uzbekistan?",
-        answer: "Self-employed individuals in Uzbekistan pay no personal income tax on annual income up to 100 million UZS. If income exceeds this threshold, a 4% turnover tax applies — the same rate as for individual entrepreneurs. No full accounting records are required.",
+        answer: "Since 1 January 2026, self-employed individuals in Uzbekistan pay 1% turnover tax on income from sales of goods and services up to UZS 1 billion a year; the former exemption for income up to UZS 100 million has been abolished. Once income exceeds UZS 1 billion, VAT and profit tax apply from the day the threshold is reached. Social tax is voluntary. No full accounting records are required.",
+      },
+      {
+        question: "Does a company have to withhold tax when it pays a self-employed person?",
+        answer: "Yes. Since 1 January 2026, a legal entity that pays a self-employed person for goods or services is a tax agent: it withholds the 1% turnover tax at source once the tax authority notifies it.",
       },
       {
         question: "What activities are allowed under self-employed status in Uzbekistan?",
-        answer: "Over 100 types of activities are permitted, including tutoring, IT services, creative professions, childcare, crafts, and agricultural work. You may register for up to three activities simultaneously.",
+        answer: "Since 1 January 2026, permitted activities are those on the list in Annex 2 to Presidential Decree UP-50 of 19 March 2025. It has 72 items, down from 104, so check that your activity is still on it before registering. You may register for up to three activities simultaneously.",
       },
       {
         question: "Can self-employed individuals in Uzbekistan contribute to a pension?",
@@ -89,16 +96,18 @@ const article: Record<string, LocalizedArticle> = {
     readTime: "6 мин чтения",
     inShort: {
       figures: [
-        { value: "100 млн сум", label: "Доход за налоговый период, освобождённый от НДФЛ для самозанятого" },
-        { value: "4%", label: "Ставка налога с оборота на годовой доход сверх этого порога, как у индивидуального предпринимателя" },
+        { value: "1%", label: "Налог с оборота на доход самозанятого с 1 января 2026 года — с первого сума и до 1 млрд сумов в год" },
+        { value: "1 млрд сум", label: "Годовой доход, при превышении которого самозанятый переходит на НДС и налог на прибыль" },
         { value: "1 БРВ", label: "Минимальный добровольный годовой социальный налог в Пенсионный фонд, уплачивается до 31 декабря" },
-        { value: "3", label: "Максимальное число видов деятельности, которые самозанятый может вести одновременно" },
+        { value: "72", label: "Число разрешённых видов деятельности в перечне, действующем с 1 января 2026 года (было 104)" },
       ],
       points: [
         "С 1 июля 2020 года регистрация самозанятого в Узбекистане — уведомление через приложение Soliq или личный кабинет налогоплательщика, без госпошлины, с QR-кодом в подтверждение статуса.",
+        "С 1 января 2026 года прежнее освобождение для доходов до 100 млн сумов не действует: доход самозанятого облагается налогом с оборота по ставке 1% до 1 млрд сумов в год.",
+        "Компания, которая платит самозанятому, удерживает налог 1% у источника выплаты на основании уведомления налоговых органов.",
         "Самозанятым не нужно вести полный бухгалтерский учёт.",
-        "Список разрешённых видов деятельности включает более 100 видов работ и услуг — от репетиторства и присмотра за детьми до IT-услуг, творческих профессий, ремёсел и сельскохозяйственных работ.",
-        "Годовой социальный налог самозанятого полностью направляется во внебюджетный Пенсионный фонд и учитывается при расчёте будущей пенсии.",
+        "С 1 января 2026 года перечень разрешённых видов деятельности сокращён со 104 до 72 пунктов Указом Президента № УП-50 от 19 марта 2025 года.",
+        "Годовой социальный налог самозанятого уплачивается добровольно, полностью направляется во внебюджетный Пенсионный фонд и учитывается при расчёте будущей пенсии.",
       ],
     },
     content: [
@@ -114,8 +123,9 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul",
         items: [
-          "Доход освобождён от НДФЛ до 100 млн сум в налоговом периоде (порог обновлён в январе 2024 года)",
-          "Если годовой доход превышает эту сумму, облагается налогом с оборота по ставке 4%, как у индивидуального предпринимателя",
+          "С 1 января 2026 года доход от реализации товаров и услуг до 1 млрд сумов в год облагается налогом с оборота по ставке 1%; прежнее освобождение для доходов до 100 млн сумов отменено",
+          "При доходе свыше 1 млрд сумов в год со дня достижения порога применяются НДС и налог на прибыль, а налоги (кроме социального) уплачиваются в порядке, установленном для индивидуальных предпринимателей",
+          "Компания, которая платит самозанятому, удерживает налог 1% у источника выплаты на основании уведомления налоговых органов",
           "Полный бухгалтерский учёт не требуется",
           "Регистрация занимает несколько минут через приложение Soliq без госпошлины",
         ],
@@ -123,12 +133,12 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Социальные взносы и пенсия" },
       {
         type: "p",
-        text: "Существенное преимущество для самозанятых — возможность отчислять взносы в Пенсионный фонд. Они уплачивают социальный налог за год, полностью направляемый во внебюджетный Пенсионный фонд. Это позволяет учитывать работу самозанятого при расчёте будущих пенсионных выплат, аналогично индивидуальным предпринимателям. Годовой взнос — не менее 1 БРВ, добровольный, оплачивается до 31 декабря.",
+        text: "Существенное преимущество для самозанятых — возможность отчислять взносы в Пенсионный фонд. Они уплачивают социальный налог за год, полностью направляемый во внебюджетный Пенсионный фонд. Это позволяет учитывать работу самозанятого при расчёте будущих пенсионных выплат, аналогично индивидуальным предпринимателям. Годовой взнос — не менее 1 БРВ, добровольный, оплачивается до 31 декабря по БРВ, действующей на дату уплаты.",
       },
-      { type: "h2", text: "Расширение возможностей: более 100 разрешённых видов деятельности" },
+      { type: "h2", text: "Разрешённые виды деятельности: сокращённый перечень с 1 января 2026 года" },
       {
         type: "p",
-        text: "Список разрешённых для самозанятых видов деятельности значительно расширен и сейчас включает более 100 разнообразных работ и услуг — от репетиторства и присмотра за детьми до IT-услуг, творческих профессий и ремесленной и сельскохозяйственной деятельности. Такая широкая сфера позволяет многим специалистам работать легально и эффективно. Можно заниматься многим, но одновременно выбирать не более трёх видов деятельности.",
+        text: "С 1 января 2026 года виды деятельности, доступные самозанятым, определены приложением № 2 к Указу Президента № УП-50 от 19 марта 2025 года. В перечне 72 пункта вместо 104, поэтому часть видов деятельности, доступных самозанятым до 2026 года, в него не вошла. До регистрации проверьте, что ваш вид деятельности есть в действующем перечне; компаниям стоит проверить это до привлечения самозанятого исполнителя. Можно заниматься многим, но одновременно выбирать не более трёх видов деятельности.",
       },
       { type: "h2", text: "Приложение Soliq: ваш центральный инструмент" },
       {
@@ -143,7 +153,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "blockquote",
-        text: "Самозанятость в Узбекистане предлагает один из самых доступных налоговых режимов в регионе — освобождение от НДФЛ до 100 млн сум в сочетании с минимальной административной нагрузкой делает её привлекательной отправной точкой для фрилансеров, консультантов и небольших поставщиков услуг.",
+        text: "Самозанятость в Узбекистане остаётся одним из самых доступных налоговых режимов в регионе — с 1 января 2026 года налог с оборота 1% на доход до 1 млрд сумов в год в сочетании с минимальной административной нагрузкой делает её привлекательной отправной точкой для фрилансеров и небольших поставщиков услуг, чей вид деятельности есть в разрешённом перечне.",
       },
     ],
     faq: [
@@ -153,11 +163,15 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Какие налоги платят самозанятые в Узбекистане?",
-        answer: "Самозанятые в Узбекистане освобождены от НДФЛ на годовой доход до 100 млн сумов. При превышении этого порога применяется налог с оборота по ставке 4% — как у индивидуального предпринимателя. Вести полный бухгалтерский учёт не требуется.",
+        answer: "С 1 января 2026 года самозанятые в Узбекистане уплачивают налог с оборота по ставке 1% с дохода от реализации товаров и услуг до 1 млрд сумов в год; прежнее освобождение для доходов до 100 млн сумов отменено. При превышении 1 млрд сумов со дня достижения порога применяются НДС и налог на прибыль. Социальный налог уплачивается добровольно. Вести полный бухгалтерский учёт не требуется.",
+      },
+      {
+        question: "Должна ли компания удерживать налог при оплате услуг самозанятого?",
+        answer: "Да. С 1 января 2026 года юридическое лицо, которое платит самозанятому за товары или услуги, является налоговым агентом: оно удерживает налог с оборота 1% у источника выплаты на основании уведомления налоговых органов.",
       },
       {
         question: "Какие виды деятельности разрешены самозанятым в Узбекистане?",
-        answer: "Самозанятым разрешено более 100 видов деятельности: репетиторство, ИТ-услуги, творческие профессии, уход за детьми, ремёсла, сельскохозяйственные работы и другие. Одновременно можно вести не более трёх видов деятельности.",
+        answer: "С 1 января 2026 года разрешены виды деятельности из перечня в приложении № 2 к Указу Президента № УП-50 от 19 марта 2025 года. В нём 72 пункта вместо 104, поэтому перед регистрацией проверьте, что ваш вид деятельности в нём остался. Одновременно можно вести не более трёх видов деятельности.",
       },
       {
         question: "Могут ли самозанятые в Узбекистане формировать пенсию?",
@@ -171,16 +185,18 @@ const article: Record<string, LocalizedArticle> = {
     readTime: "6 daqiqa oʻqish",
     inShort: {
       figures: [
-        { value: "100 mln soʻm", label: "Oʻzini-oʻzi band qiluvchining soliq davridagi jismoniy shaxslardan olinadigan daromad soligʻidan ozod daromadi" },
-        { value: "4%", label: "Ushbu chegaradan oshgan yillik daromadga yakka tartibdagi tadbirkor singari qoʻllaniladigan aylanma soliq stavkasi" },
+        { value: "1%", label: "2026-yil 1-yanvardan oʻzini-oʻzi band qiluvchining birinchi soʻmdan yiliga 1 mlrd soʻmgacha boʻlgan daromadiga aylanma soliq" },
+        { value: "1 mlrd soʻm", label: "Yillik daromad chegarasi: undan oshganda oʻzini-oʻzi band qiluvchi QQS va foyda soligʻiga oʻtadi" },
         { value: "1 BHM", label: "Pensiya jamgʻarmasiga 31-dekabrgacha toʻlanadigan ixtiyoriy yillik ijtimoiy soliqning eng kam miqdori" },
-        { value: "3", label: "Oʻzini-oʻzi band qiluvchi bir vaqtda tanlashi mumkin boʻlgan faoliyat turlarining eng koʻp soni" },
+        { value: "72", label: "2026-yil 1-yanvardan amal qilayotgan roʻyxatdagi ruxsat etilgan faoliyat turlari soni (avval 104 ta edi)" },
       ],
       points: [
         "2020-yil 1-iyuldan boshlab Oʻzbekistonda oʻzini-oʻzi band qiluvchi sifatida roʻyxatga olish Soliq mobil ilovasi yoki soliq toʻlovchining shaxsiy kabineti orqali xabardor qilish tartibida, davlat bojisiz amalga oshiriladi va maqom dalili sifatida QR-kod beriladi.",
+        "2026-yil 1-yanvardan 100 mln soʻmgacha boʻlgan daromad uchun avvalgi ozod qilish amal qilmaydi: oʻzini-oʻzi band qiluvchining yiliga 1 mlrd soʻmgacha boʻlgan daromadi 1% aylanma soliqqa tortiladi.",
+        "Oʻzini-oʻzi band qiluvchiga haq toʻlaydigan kompaniya soliq organlarining xabarnomasi asosida 1% soliqni toʻlov manbaida ushlab qoladi.",
         "Oʻzini-oʻzi band qiluvchilar toʻliq buxgalteriya hisobini yuritishi shart emas.",
-        "Ruxsat etilgan faoliyatlar roʻyxati 100 dan ortiq ish va xizmat turini — repetitorlik va bolalar parvarishidan tortib IT xizmatlari, kreativ kasblar, hunarmandchilik va qishloq xoʻjaligi ishlarigacha — qamrab oladi.",
-        "Oʻzini-oʻzi band qiluvchining yillik ijtimoiy soligʻi toʻliq byudjetdan tashqari Pensiya jamgʻarmasiga yoʻnaltiriladi va kelajakdagi pensiyaga hisoblanadi.",
+        "2026-yil 1-yanvardan Prezidentning 2025-yil 19-martdagi PF-50-son Farmoni bilan ruxsat etilgan faoliyatlar roʻyxati 104 tadan 72 taga qisqartirildi.",
+        "Oʻzini-oʻzi band qiluvchining yillik ijtimoiy soligʻi ixtiyoriy toʻlanadi, toʻliq byudjetdan tashqari Pensiya jamgʻarmasiga yoʻnaltiriladi va kelajakdagi pensiyaga hisoblanadi.",
       ],
     },
     content: [
@@ -196,8 +212,9 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul",
         items: [
-          "Soliq davrida 100 mln soʻmgacha boʻlgan daromad jismoniy shaxslardan olinadigan daromad soligʻidan ozod (chegara 2024-yil yanvarida yangilangan)",
-          "Yillik daromad bu miqdordan oshsa, yakka tartibdagi tadbirkor singari 4% aylanma soliq stavkasida soliqqa tortiladi",
+          "2026-yil 1-yanvardan tovarlar va xizmatlarni sotishdan olingan yiliga 1 mlrd soʻmgacha boʻlgan daromad 1% aylanma soliqqa tortiladi; 100 mln soʻmgacha boʻlgan daromad uchun avvalgi ozod qilish bekor qilingan",
+          "Yillik daromad 1 mlrd soʻmdan oshsa, chegaraga yetgan kundan boshlab QQS va foyda soligʻi qoʻllaniladi, soliqlar (ijtimoiy soliqdan tashqari) yakka tartibdagi tadbirkorlar uchun belgilangan tartibda toʻlanadi",
+          "Oʻzini-oʻzi band qiluvchiga haq toʻlaydigan kompaniya soliq organlarining xabarnomasi asosida 1% soliqni toʻlov manbaida ushlab qoladi",
           "Toʻliq buxgalteriya yuritish talab qilinmaydi",
           "Roʻyxatga olish Soliq mobil ilovasi orqali bir necha daqiqada va davlat bojisiz amalga oshiriladi",
         ],
@@ -205,12 +222,12 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Ijtimoiy taʼminot va pensiya badallari" },
       {
         type: "p",
-        text: "Oʻzini-oʻzi band qiluvchilar uchun muhim afzallik — pensiya jamgʻarmasiga badal toʻlash imkoniyati. Ular yiliga ijtimoiy soliq toʻlaydilar va u toʻliq byudjetdan tashqari Pensiya jamgʻarmasiga yoʻnaltiriladi. Shu tariqa, yakka tartibdagi tadbirkorlar singari, ularning oʻzini-oʻzi band qiluvchi sifatidagi mehnati kelajakdagi pensiyani hisoblashda inobatga olinadi. Yillik badal kamida 1 bazaviy hisoblash miqdori (BHM)ni tashkil qiladi va ixtiyoriy boʻlib, 31-dekabrgacha toʻlanadi.",
+        text: "Oʻzini-oʻzi band qiluvchilar uchun muhim afzallik — pensiya jamgʻarmasiga badal toʻlash imkoniyati. Ular yiliga ijtimoiy soliq toʻlaydilar va u toʻliq byudjetdan tashqari Pensiya jamgʻarmasiga yoʻnaltiriladi. Shu tariqa, yakka tartibdagi tadbirkorlar singari, ularning oʻzini-oʻzi band qiluvchi sifatidagi mehnati kelajakdagi pensiyani hisoblashda inobatga olinadi. Yillik badal kamida 1 bazaviy hisoblash miqdori (BHM)ni tashkil qiladi va ixtiyoriy boʻlib, 31-dekabrgacha toʻlov kunida amal qilayotgan BHM boʻyicha toʻlanadi.",
       },
-      { type: "h2", text: "Imkoniyatlarning kengayishi: 100 dan ortiq ruxsat etilgan faoliyat" },
+      { type: "h2", text: "Ruxsat etilgan faoliyat turlari: 2026-yil 1-yanvardan qisqartirilgan roʻyxat" },
       {
         type: "p",
-        text: "Oʻzini-oʻzi band qiluvchilar uchun ruxsat etilgan faoliyatlar roʻyxati sezilarli kengaytirilib, hozir 100 dan ortiq turli ish va xizmatlarni qamrab oladi. Bu repetitorlik va bolalarni parvarish qilishdan tortib IT xizmatlari, kreativ kasblar va turli hunarmandchilik hamda qishloq xoʻjaligi faoliyatlarigacha boʻlgan sohalarni oʻz ichiga oladi. Bu keng qamrov koʻplab mutaxassislarga qonuniy va samarali ishlash imkonini beradi. Bir nechta faoliyat bilan shugʻullansangiz ham, bir vaqtning oʻzida uchtadan ortiq faoliyat turini tanlay olmaysiz.",
+        text: "2026-yil 1-yanvardan oʻzini-oʻzi band qiluvchilar shugʻullanishi mumkin boʻlgan faoliyat turlari Prezidentning 2025-yil 19-martdagi PF-50-son Farmonining 2-ilovasida belgilangan. Roʻyxatda 104 ta oʻrniga 72 ta band bor, shuning uchun 2026-yilgacha oʻzini-oʻzi band qiluvchilarga ochiq boʻlgan ayrim faoliyat turlari unga kirmagan. Roʻyxatdan oʻtishdan oldin faoliyatingiz amaldagi roʻyxatda borligini tekshiring; kompaniyalar buni oʻzini-oʻzi band qiluvchi ijrochini jalb qilishdan oldin tekshirishi kerak. Bir nechta faoliyat bilan shugʻullansangiz ham, bir vaqtning oʻzida uchtadan ortiq faoliyat turini tanlay olmaysiz.",
       },
       { type: "h2", text: "Soliq ilovasi: barcha amallar bir joyda" },
       {
@@ -225,7 +242,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         type: "blockquote",
-        text: "Oʻzbekistonda oʻzini-oʻzi band qilish mintaqadagi eng qulay soliq rejimlaridan biridir — 100 mln soʻmgacha JShDSdan ozod qilish va minimal maʼmuriy yuk bilan birgalikda u frilanserlar, maslahatchilar va kichik xizmat koʻrsatuvchilar uchun jozibali boshlanish nuqtasiga aylanadi.",
+        text: "Oʻzbekistonda oʻzini-oʻzi band qilish mintaqadagi eng qulay soliq rejimlaridan biri boʻlib qolmoqda — 2026-yil 1-yanvardan yiliga 1 mlrd soʻmgacha boʻlgan daromadga 1% aylanma soliq va minimal maʼmuriy yuk bilan birgalikda u faoliyati ruxsat etilgan roʻyxatda boʻlgan frilanserlar va kichik xizmat koʻrsatuvchilar uchun jozibali boshlanish nuqtasiga aylanadi.",
       },
     ],
     faq: [
@@ -235,11 +252,15 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda oʻzini-oʻzi band qiluvchilar qanday soliqlar toʻlaydi?",
-        answer: "Oʻzbekistonda oʻzini-oʻzi band qiluvchilar yillik 100 mln soʻmgacha boʻlgan daromadga jismoniy shaxslardan olinadigan daromad soligʻidan ozod. Bu chegaradan oshilsa, yakka tartibdagi tadbirkorlar kabi 4% aylanma soliq stavkasi qoʻllaniladi. Toʻliq buxgalteriya hisobi yuritish shart emas.",
+        answer: "2026-yil 1-yanvardan Oʻzbekistonda oʻzini-oʻzi band qiluvchilar tovarlar va xizmatlarni sotishdan olingan yiliga 1 mlrd soʻmgacha boʻlgan daromaddan 1% aylanma soliq toʻlaydi; 100 mln soʻmgacha boʻlgan daromad uchun avvalgi ozod qilish bekor qilingan. Daromad 1 mlrd soʻmdan oshsa, chegaraga yetgan kundan boshlab QQS va foyda soligʻi qoʻllaniladi. Ijtimoiy soliq ixtiyoriy toʻlanadi. Toʻliq buxgalteriya hisobi yuritish shart emas.",
+      },
+      {
+        question: "Kompaniya oʻzini-oʻzi band qiluvchiga haq toʻlaganda soliqni ushlab qolishi shartmi?",
+        answer: "Ha. 2026-yil 1-yanvardan oʻzini-oʻzi band qiluvchiga tovarlar yoki xizmatlar uchun haq toʻlaydigan yuridik shaxs soliq agenti hisoblanadi: u soliq organlarining xabarnomasi asosida 1% aylanma soliqni toʻlov manbaida ushlab qoladi.",
       },
       {
         question: "Oʻzbekistonda oʻzini-oʻzi band qilish maqomi uchun qanday faoliyat turlari ruxsat etilgan?",
-        answer: "100 dan ortiq faoliyat turi ruxsat etilgan: repetitorlik, IT xizmatlari, kreativ kasblar, bolalar parvarishi, hunarmandchilik va qishloq xoʻjaligi ishlari. Bir vaqtning oʻzida uchta faoliyatgacha roʻyxatdan oʻtish mumkin.",
+        answer: "2026-yil 1-yanvardan Prezidentning 2025-yil 19-martdagi PF-50-son Farmonining 2-ilovasidagi roʻyxatga kiritilgan faoliyat turlari ruxsat etilgan. Unda 104 ta oʻrniga 72 ta band bor, shuning uchun roʻyxatdan oʻtishdan oldin faoliyatingiz unda qolganini tekshiring. Bir vaqtning oʻzida uchta faoliyatgacha roʻyxatdan oʻtish mumkin.",
       },
       {
         question: "Oʻzbekistondagi oʻzini-oʻzi band qiluvchilar pensiyaga badallar toʻlashi mumkinmi?",
