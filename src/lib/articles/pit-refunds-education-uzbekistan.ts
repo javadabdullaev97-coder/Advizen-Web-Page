@@ -14,7 +14,7 @@ const article: Record<string, LocalizedArticle> = {
       ],
       points: [
         "Tuition at higher education institutions in Uzbekistan for yourself, your spouse or your children up to 26 years old is exempt from PIT, including educational loans and their interest.",
-        "Mortgage payments and accrued interest are exempt up to 80 times the minimum old-age pension a year, where the property was bought with a budget subsidy.",
+        "Mortgage payments and accrued interest are exempt up to 80 times the minimum wage a year, where the property was bought with a budget subsidy.",
         "The benefits can be used either through a direct exemption under a tripartite agreement with the employer or through an annual refund of overpaid PIT.",
         "The refund is claimed online: file the annual declaration at my3.soliq.uz with an electronic digital signature, then submit a refund application with bank card details.",
       ],
@@ -30,9 +30,9 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Education expenses: tuition fees for yourself, spouse, or children (up to 26 years old) at higher education institutions in Uzbekistan, including educational loans and their interest",
           "Private schools and kindergartens: parents or adoptive parents can exempt up to 3 million UZS per month per child for educational services at non-state preschools and schools",
-          "Mortgage interest: amounts paid towards mortgage loans and their accrued interest, up to 80 times the Minimum Rate of Old-Age Pension (MROT) annually, where the property was acquired with a budget subsidy",
+          "Mortgage interest: amounts paid towards mortgage loans and their accrued interest, up to 80 times the minimum wage annually, where the property was acquired with a budget subsidy",
           "Pension savings: salary amounts voluntarily directed to Individual Accumulative Pension Accounts (INPS) at the People's Bank",
-          "Investment accounts: salary directed to individual investment accounts for purchasing shares, up to 100 times the MROT annually (funds locked for 12 months)",
+          "Investment accounts: salary directed to individual investment accounts for purchasing shares, up to 100 times the minimum wage annually (funds locked for 12 months)",
           "Employer-provided benefits: certain material assistance, medical compensation, children's camp vouchers, and non-cash gifts within prescribed limits",
         ],
       },
@@ -77,11 +77,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Can mortgage interest payments qualify for a PIT benefit in Uzbekistan?",
-        answer: "Yes. Amounts paid towards mortgage loans and their accrued interest are exempt from PIT, up to 80 times the Minimum Rate of Old-Age Pension (MROT) annually, provided the property was acquired with a budget subsidy. The benefit is claimed through the annual income declaration at my3.soliq.uz using an Electronic Digital Signature.",
+        answer: "Yes. Amounts paid towards mortgage loans and their accrued interest are exempt from PIT, up to 80 times the minimum wage annually, provided the property was acquired with a budget subsidy. The benefit is claimed through the annual income declaration at my3.soliq.uz using an Electronic Digital Signature.",
       },
       {
         question: "What other income categories are exempt from PIT in Uzbekistan?",
-        answer: "Additional PIT exemptions include: salary voluntarily directed to Individual Accumulative Pension Accounts (INPS) at the People's Bank; salary directed to individual investment accounts for purchasing shares (up to 100× MROT annually, with funds locked for 12 months); and certain employer-provided benefits within prescribed limits — including material assistance, medical compensation, children's camp vouchers, and non-cash gifts.",
+        answer: "Additional PIT exemptions include: salary voluntarily directed to Individual Accumulative Pension Accounts (INPS) at the People's Bank; salary directed to individual investment accounts for purchasing shares (up to 100 times the minimum wage annually, with funds locked for 12 months); and certain employer-provided benefits within prescribed limits — including material assistance, medical compensation, children's camp vouchers, and non-cash gifts.",
       },
     ],
     howTo: {
@@ -128,7 +128,7 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Расходы на образование: оплата обучения за себя, супруга или детей (до 26 лет) в высших учебных заведениях Узбекистана, включая образовательные кредиты и проценты по ним",
           "Частные школы и детские сады: родители или усыновители могут получить освобождение до 3 млн сум в месяц на ребёнка за услуги в негосударственных дошкольных учреждениях и школах",
-          "Ипотечные проценты: суммы, уплаченные по ипотечным кредитам и начисленные проценты — до 80 минимальных размеров пенсии по возрасту (МРОТ) в год, если жильё приобретено с бюджетной субсидией",
+          "Ипотечные проценты: суммы, уплаченные по ипотечным кредитам и начисленные проценты — до 80 минимальных размеров оплаты труда (МРОТ) в год, если жильё приобретено с бюджетной субсидией",
           "Пенсионные накопления: суммы зарплаты, добровольно направленные на индивидуальные накопительные пенсионные счета (ИНПС) в Народном банке",
           "Инвестиционные счета: зарплата, направленная на индивидуальные инвестиционные счета для покупки акций, до 100 МРОТ в год (средства заблокированы на 12 месяцев)",
           "Льготы от работодателя: определённая материальная помощь, медицинские компенсации, путёвки в детские лагеря и неденежные подарки в установленных лимитах",
@@ -175,7 +175,7 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Дают ли ипотечные платежи право на льготу по НДФЛ в Узбекистане?",
-        answer: "Да. Суммы, уплаченные по ипотечным кредитам и начисленные проценты, освобождаются от НДФЛ — до 80 минимальных размеров пенсии по возрасту (МРОТ) в год, при условии, что жильё приобретено с бюджетной субсидией. Льгота заявляется через годовую декларацию о доходах на my3.soliq.uz с использованием электронной цифровой подписи.",
+        answer: "Да. Суммы, уплаченные по ипотечным кредитам и начисленные проценты, освобождаются от НДФЛ — до 80 минимальных размеров оплаты труда (МРОТ) в год, при условии, что жильё приобретено с бюджетной субсидией. Льгота заявляется через годовую декларацию о доходах на my3.soliq.uz с использованием электронной цифровой подписи.",
       },
       {
         question: "Какие ещё категории доходов освобождены от НДФЛ в Узбекистане?",
@@ -210,7 +210,7 @@ const article: Record<string, LocalizedArticle> = {
       ],
       points: [
         "Oʻzingiz, turmush oʻrtogʻingiz yoki 26 yoshgacha boʻlgan bolalaringiz uchun Oʻzbekiston oliy taʼlim muassasalaridagi oʻqish haqi, jumladan taʼlim kreditlari va ularning foizlari JShDSdan ozod.",
-        "Uy-joy byudjet subsidiyasi bilan olingan boʻlsa, ipoteka toʻlovlari va hisoblangan foizlar yiliga MROTning 80 baravarigacha ozod etiladi.",
+        "Uy-joy byudjet subsidiyasi bilan olingan boʻlsa, ipoteka toʻlovlari va hisoblangan foizlar yiliga mehnatga haq toʻlashning eng kam miqdorining 80 baravarigacha ozod etiladi.",
         "Imtiyozdan ish beruvchi bilan uch tomonlama shartnoma orqali bevosita ozod qilish yoki ortiqcha toʻlangan JShDSni yillik qaytarish orqali foydalanish mumkin.",
         "Qaytarim onlayn rasmiylashtiriladi: my3.soliq.uz saytida ERI bilan yillik deklaratsiya topshiriladi, soʻng bank karta rekvizitlari bilan qaytarish arizasi beriladi.",
       ],
@@ -226,9 +226,9 @@ const article: Record<string, LocalizedArticle> = {
         items: [
           "Taʼlim xarajatlari: oʻzingiz, turmush oʻrtogʻingiz yoki bolalaringiz (26 yoshgacha) uchun Oʻzbekiston oliy taʼlim muassasalaridagi oʻquv haqi, jumladan taʼlim kreditlari va ularning foizlari",
           "Xususiy maktablar va bogʻchalar: ota-onalar yoki farzandlikka olganlar nodavlat maktabgacha taʼlim muassasalari va maktablar xizmatlari uchun bola boshiga oyiga 3 mln soʻmgacha imtiyoz olishlari mumkin",
-          "Ipoteka foizlari: ipoteka kreditlari va hisoblangan foizlarga toʻlangan summalar — yiliga Pensiyaning eng kam miqdori (MROT)ning 80 baravarigacha, agar uy-joy byudjet subsidiyasi bilan olingan boʻlsa",
+          "Ipoteka foizlari: ipoteka kreditlari va hisoblangan foizlarga toʻlangan summalar — yiliga mehnatga haq toʻlashning eng kam miqdorining 80 baravarigacha, agar uy-joy byudjet subsidiyasi bilan olingan boʻlsa",
           "Pensiya jamgʻarmalari: Xalq bankidagi individual jamgʻarib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yoʻnaltirilgan maosh summalari",
-          "Investitsiya hisobvaraqlari: aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yoʻnaltirilgan maosh, yiliga MROTning 100 baravarigacha (mablagʻlar 12 oyga blokirovka qilinadi)",
+          "Investitsiya hisobvaraqlari: aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yoʻnaltirilgan maosh, yiliga mehnatga haq toʻlashning eng kam miqdorining 100 baravarigacha (mablagʻlar 12 oyga blokirovka qilinadi)",
           "Ish beruvchi tomonidan beriladigan imtiyozlar: belgilangan limitlar doirasidagi muayyan moddiy yordam, tibbiy kompensatsiya, bolalar lagerlari yoʻllanmalari va naqd boʻlmagan sovgʻalar",
         ],
       },
@@ -273,11 +273,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda ipoteka toʻlovlari JShDS imtiyoziga ega boʻla oladimi?",
-        answer: "Ha. Uy-joy byudjet subsidiyasi bilan olingan taqdirda, ipoteka kreditlari va hisoblangan foizlarga toʻlangan summalar yiliga Pensiyaning eng kam miqdori (MROT)ning 80 baravarigacha JShDSdan ozod etiladi. Imtiyoz ERI yordamida my3.soliq.uz saytida yillik daromad deklaratsiyasi orqali talab qilinadi.",
+        answer: "Ha. Uy-joy byudjet subsidiyasi bilan olingan taqdirda, ipoteka kreditlari va hisoblangan foizlarga toʻlangan summalar yiliga mehnatga haq toʻlashning eng kam miqdorining 80 baravarigacha JShDSdan ozod etiladi. Imtiyoz ERI yordamida my3.soliq.uz saytida yillik daromad deklaratsiyasi orqali talab qilinadi.",
       },
       {
         question: "Oʻzbekistonda boshqa qanday daromad toifalari JShDSdan ozod etilgan?",
-        answer: "Qoʻshimcha JShDS imtiyozlari: Xalq bankidagi individual jamgʻarib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yoʻnaltirilgan maosh summalari; aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yoʻnaltirilgan maosh (yiliga MROTning 100 baravarigacha, mablagʻlar 12 oyga blokirovka qilinadi); belgilangan limitlar doirasidagi ish beruvchi tomonidan beriladigan imtiyozlar — jumladan moddiy yordam, tibbiy kompensatsiya, bolalar lagerlari yoʻllanmalari va naqd boʻlmagan sovgʻalar.",
+        answer: "Qoʻshimcha JShDS imtiyozlari: Xalq bankidagi individual jamgʻarib boriladigan pensiya hisobvaraqlariga (INPS) ixtiyoriy ravishda yoʻnaltirilgan maosh summalari; aksiyalar sotib olish uchun individual investitsiya hisobvaraqlariga yoʻnaltirilgan maosh (yiliga mehnatga haq toʻlashning eng kam miqdorining 100 baravarigacha, mablagʻlar 12 oyga blokirovka qilinadi); belgilangan limitlar doirasidagi ish beruvchi tomonidan beriladigan imtiyozlar — jumladan moddiy yordam, tibbiy kompensatsiya, bolalar lagerlari yoʻllanmalari va naqd boʻlmagan sovgʻalar.",
       },
     ],
     howTo: {
