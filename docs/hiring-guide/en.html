@@ -1,0 +1,450 @@
+<!doctype html>
+<!-- Hiring and Migration in Uzbekistan 2026 (EN). Client guide, not published yet.
+     Build: NODE_PATH=$(npm root -g) node scripts/build-pdf.mjs docs/hiring-guide/en.html <output.pdf> --theme guide
+     Square 228.6 mm pages (brochure.css). Guide, not a memo: overview level, see docs/guides-vs-articles.md, rule 7.
+     Copy rules: no em dashes, no semicolons, en dashes only in number ranges. No prices, fees or fine amounts,
+     no client names. Law codes ZRU / PP / UP, article numbers only for key figures.
+     Only facts the research report "Найм и миграция в Узбекистане 2026" marks as confirmed. Single-source and
+     open points are phrased cautiously or left out. Residential premises are not discussed.
+     The Russian edition (ru.html) follows it page by page.
+     Photos in img/: hiring-cover (final), hiring-permits, hiring-visas, hiring-team (placeholders). -->
+<html lang="en" data-theme="guide">
+<head>
+<meta charset="utf-8">
+<title>Hiring and Migration in Uzbekistan 2026 · Advizen</title>
+<link rel="stylesheet" href="../company-profile/fonts.css">
+<link rel="stylesheet" href="../brochure.css">
+<style>
+  /* Local tweaks for the square format. Shared styles stay in brochure.css. */
+  .why.three { grid-template-columns: repeat(3, 1fr); gap: 0 8mm; margin-top: 7mm; }
+  .why.three li { grid-template-columns: 1fr; padding: 4.6mm 0 0; }
+  .why.three li .n { padding: 0 0 1.6mm; }
+  .why.three li p { margin-top: 1.4mm; }
+  .figs.top { margin-top: 7mm; padding-top: 5mm; }
+  .figs.end { margin-top: auto; }
+  .figs.mid { margin-top: 7mm; padding-top: 5mm; }
+  .box.end { margin-top: auto; }
+  .box ul.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8mm; }
+  .box ul.two li:nth-child(2) { border-top: 0; }
+  .road.tight { margin-top: 6mm; }
+  .road.tight li { padding: 2.6mm 0; grid-template-columns: 34mm 1fr; }
+  .road.tight li span { margin-top: .6mm; }
+  .nw { white-space: nowrap; }
+  .compare.ways { table-layout: fixed; margin-top: 6mm; }
+  .compare.ways td { padding: 3.2mm 3mm 3.2mm 0; }
+  .compare.ways th:first-child, .compare.ways td:first-child { width: 36mm; }
+  .compare.ways td:first-child b { display: block; font-size: 10pt; font-weight: 600; letter-spacing: 0; color: var(--ink); }
+  .compare.ways td:first-child small { display: block; font-size: 7.6pt; font-weight: 500; letter-spacing: 0; color: var(--muted); margin-top: .6mm; }
+  .compare.ways tr.hl td:first-child b { color: var(--accent); }
+  .compare.ways tr.hl td { color: var(--ink); }
+  .facts.snug li { padding: 2.2mm 0 2.2mm 5mm; }
+  .facts.snug li::before { top: 3.6mm; }
+  .facts.cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 9mm; }
+  .tnote { margin-top: 3mm; font-size: 8.4pt; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- 1 · Cover -->
+<section class="page cover on-photo">
+  <div class="photo" style="background-image:url('img/hiring-cover.jpg');background-position:50% 50%"></div>
+  <div class="inner">
+    <div class="wordmark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</div>
+    <div>
+      <p class="eyebrow">Guide for employers</p>
+      <h1 style="margin-top:4mm">Hiring and Migration in Uzbekistan</h1>
+      <p class="sub">Contracts, payroll, the right to work and visas</p>
+      <p class="year">2026</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span>Edition of November 2026</span></footer>
+</section>
+
+<!-- 2 · At a glance -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">At a glance</p>
+    <h2>What an employer must know</h2>
+    <p class="lede">Every hire rests on a written contract registered in the national labour system. For a foreign national the employer first obtains a confirmation of the right to work, and the contract is signed after it.</p>
+    <ul class="why three">
+      <li><span class="n">01</span><div><h3>Contract and registration</h3><p>A written contract, on paper or electronic, registered in the Unified National Labour System with the employer's e-signature.</p></div></li>
+      <li><span class="n">02</span><div><h3>Payroll by the 15th</h3><p>The employer withholds 12% income tax, pays 12% social tax on top and files by the 15th of the next month.</p></div></li>
+      <li><span class="n">03</span><div><h3>Right to work</h3><p>A foreign employee needs a confirmation that the employer obtains before the contract is signed.</p></div></li>
+      <li><span class="n">04</span><div><h3>Wide exemptions</h3><p>Residence permit holders, investors, IT Park specialists, founders for up to three months and several other groups need no confirmation.</p></div></li>
+      <li><span class="n">05</span><div><h3>Visa and registration</h3><p>Visa-free entry allows a stay, not work. The stay is registered within three working days of arrival.</p></div></li>
+      <li><span class="n">06</span><div><h3>Strong protection</h3><p>Dismissal only on grounds set by law, with notice and severance. In a dispute the employer proves the grounds.</p></div></li>
+    </ul>
+    <div class="figs end">
+      <div class="fig"><b>12%</b><span>Personal income tax, withheld by the employer</span></div>
+      <div class="fig"><b>12%</b><span>Social tax, paid by the employer on top of gross pay</span></div>
+      <div class="fig"><b>15</b><span>Working days for a decision on the right to work</span></div>
+      <div class="fig"><b>5</b><span>Working days to register a paper contract</span></div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">2</span></footer>
+</section>
+
+<!-- 3 · Ways to engage people -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Choosing the model</p>
+    <h2>Five ways to engage people</h2>
+    <p class="lede">For a lasting team the answer is your own employee. The other models are regulated too, but each has a limit.</p>
+    <table class="compare ways">
+      <tr><th></th><th>How it works</th><th>When it fits</th><th>Main risk</th></tr>
+      <tr class="hl"><td><b>Own employee</b><small>Uzbek company</small></td><td>Your Uzbek company signs and registers a labour contract</td><td>A lasting team, managers, any role</td><td>Full employer duties from day one and strict dismissal rules</td></tr>
+      <tr><td><b>Outstaffing</b><small>Employer of Record</small></td><td>An Uzbek provider employs the person for you</td><td>A start before your company is ready, short projects</td><td>Up to 9 months a year. Permanent establishment risk</td></tr>
+      <tr><td><b>Civil-law contract</b><small>With an individual</small></td><td>A contract for a defined result or service</td><td>Genuine one-off work</td><td>The same payroll taxes, and reclassification as employment</td></tr>
+      <tr><td><b>Self-employed</b><small>Uzbek citizens</small></td><td>The company withholds a 1% tax on the payment</td><td>Occasional services in listed activities</td><td>Cannot replace an employee doing the same work</td></tr>
+      <tr><td><b>Secondment</b><small>From a group company</small></td><td>A worker of the group works at the Uzbek company</td><td>Specialists sent by the parent for a set period</td><td>Tax on the cross-border model and permanent establishment</td></tr>
+    </table>
+    <div class="box end">
+      <p class="eyebrow">Two more options</p>
+      <ul class="two">
+        <li><b>Remote staff abroad.</b> An Uzbek company may employ a foreigner working from abroad without a confirmation. Social tax is paid</li>
+        <li><b>Representative office.</b> Hires staff under the Labour Code. Foreign staff up to 40% of headcount and no more than five people</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">3</span></footer>
+</section>
+
+<!-- 4 · Employment contract -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Employment contract</p>
+    <h2>The contract and its registration</h2>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>Form and registration</h3>
+        <ul class="facts">
+          <li>Written, on paper or electronic in the <b>Unified National Labour System</b></li>
+          <li>A paper contract is entered there within <b>5 working days</b>, a termination within 3 working days. Changes are registered too</li>
+          <li>A record not confirmed with the employer's e-signature counts as unregistered</li>
+          <li>At hiring the employer may ask only for listed documents: passport, work record, military record, a diploma where the job needs one, and PINFL</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Term and probation</h3>
+        <ul class="facts">
+          <li>Indefinite, or fixed-term for up to <b>3 years</b> on grounds set by law. With renewals no longer than 5 years</li>
+          <li>With a foreigner who came to work the contract is fixed-term and no longer than the confirmation</li>
+          <li>Probation only if written in the contract. Up to <b>3 months</b>, or 6 months for heads, deputies and chief accountants</li>
+          <li>During probation either side may end the contract with 3 days' written notice</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box end">
+      <p class="eyebrow">Working time and leave</p>
+      <ul class="two">
+        <li><b>40 hours</b> a week at most. Night work and work on days off are paid at higher rates</li>
+        <li><b>Overtime</b> only with written consent, up to 4 hours over two days in a row. No annual cap</li>
+        <li><b>Overtime pay</b> at least 150% for the first two hours a day and 200% after</li>
+        <li><b>Leave</b> at least 21 calendar days, plus 2 days for every 5 years of service, up to 8 extra</li>
+        <li><b>Remote work</b> is ordinary employment. The contract sets equipment, communications and compensation</li>
+        <li><b>Inspections</b> by the labour inspectorate take place without prior notice since 1 September 2025</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">4</span></footer>
+</section>
+
+<!-- 5 · Ending employment -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Ending employment</p>
+    <h2>Notice, grounds and severance</h2>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>Grounds and notice</h3>
+        <ul class="facts snug">
+          <li><b>Only on grounds set by law:</b> liquidation, redundancy, insufficient qualification, repeated or gross breach of duties</li>
+          <li>Before redundancy the employer offers a suitable vacancy</li>
+          <li><b>Notice:</b> 2 months for liquidation and redundancy, 2 weeks for qualification, 3 days for misconduct. Notice may be replaced by pay</li>
+          <li>Union consent only where a collective agreement requires it</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Protection</h3>
+        <ul class="facts snug">
+          <li>A pregnant employee may be dismissed only on liquidation</li>
+          <li>No dismissal during sick leave, holiday or a business trip, except on liquidation</li>
+          <li>The employer proves the grounds. Claims within 3 months, and reinstatement is enforced at once</li>
+          <li>The final settlement, with all unused leave, is paid on the last day</li>
+        </ul>
+      </div>
+    </div>
+    <div class="figs mid">
+      <div class="fig"><b>2 months</b><span>Notice for liquidation and redundancy</span></div>
+      <div class="fig"><b>50–200%</b><span>Severance, of average monthly pay by length of service (Art. 173)</span></div>
+      <div class="fig"><b>14 days</b><span>Notice when an employee resigns</span></div>
+      <div class="fig"><b>3</b><span>Working days to register the termination</span></div>
+    </div>
+    <div class="box end">
+      <p class="eyebrow">Resignation and small employers</p>
+      <ul class="two">
+        <li>A head gives 2 months' notice, deputies and the chief accountant 1 month</li>
+        <li>Under Decree <span class="nw">UP-126</span> companies with up to 50 staff have lighter rules, such as 7 days' notice. We check how they apply case by case</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">5</span></footer>
+</section>
+
+<!-- 6 · Payroll -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Payroll</p>
+    <h2>Payroll taxes and benefits</h2>
+    <div class="figs top">
+      <div class="fig"><b>12%</b><span>Personal income tax for residents and non-residents</span></div>
+      <div class="fig"><b>12%</b><span>Social tax on top of gross pay (Art. 405)</span></div>
+      <div class="fig"><b>15th</b><span>Of the next month, for the return and payment</span></div>
+      <div class="fig"><b>5 days</b><span>Of sick leave a year paid by the employer</span></div>
+    </div>
+    <div class="cols" style="margin-top:7mm">
+      <div>
+        <h3>Withholding and filing</h3>
+        <ul class="facts snug">
+          <li>Income tax is withheld at source. The <b>0.1%</b> pension contribution is part of it</li>
+          <li>Monthly return and payment by the 15th, the annual return by 15 February</li>
+          <li>Since 2026 returns come pre-filled. Uncorrected, they count as agreed</li>
+          <li>A foreigner on an Uzbek payroll pays income tax from the first day, resident or not</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Pay and benefits</h3>
+        <ul class="facts snug">
+          <li>Salary in soums, at least twice a month. In practice the contract may state a currency equivalent</li>
+          <li>From day 6 of sick leave the Social Insurance Fund pays. Maternity benefit is paid by the Fund too</li>
+          <li>Tax residence after more than 183 days in any 12 months</li>
+          <li>Treaty relief for short stays usually helps only a genuine secondee paid from abroad</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box end">
+      <p class="eyebrow">Special regimes</p>
+      <ul class="two">
+        <li><b>IT Park.</b> 7.5% income tax and no social tax until 1 January 2028</li>
+        <li><b>Creative Industry Park.</b> Income tax and social tax halved until 1 January 2031</li>
+        <li>Some sectors, such as textiles, have temporary reduced social tax rates</li>
+        <li>The regime for foreigners under Decree <span class="nw">UP-180</span> covers only foreign income and applies once the Tax Code is amended</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">6</span></footer>
+</section>
+
+<!-- 7 · Right to work -->
+<section class="page">
+  <div class="inner">
+    <div class="band"><div class="photo" style="background-image:url('img/hiring-permits.jpg');background-position:50% 50%"></div></div>
+    <p class="eyebrow">Foreign employees</p>
+    <h2>The confirmation of the right to work</h2>
+    <p class="lede">There is no general quota. Each application is tested against local candidates and the real need for the staff.</p>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>How it is issued</h3>
+        <ul class="facts snug">
+          <li>Issued by the labour authority, currently the Ministry of Employment and Poverty Reduction. The employer applies at a Public Services Centre or on my.gov.uz</li>
+          <li>Local labour test within 5 working days, then a decision within <b>15 working days</b> (Law <span class="nw">ZRU-642</span>, Art. 111)</li>
+          <li>Refusal only on listed grounds. Past hiring of foreigners without a confirmation is one of them</li>
+        </ul>
+      </div>
+      <div>
+        <h3>How long it lasts</h3>
+        <ul class="facts snug">
+          <li><b>Up to 3 years</b> for qualified and highly qualified specialists, up to 1 year for others. Renewals without limit</li>
+          <li><b>Qualified:</b> higher education, 5 years of experience, salary of at least USD 30,000 a year. <b>Highly qualified:</b> a top 1,000 university and at least USD 60,000</li>
+          <li>Salaries of these specialists are checked against tax data every quarter</li>
+        </ul>
+      </div>
+    </div>
+    <div class="figs end">
+      <div class="fig"><b>15</b><span>Working days for the decision</span></div>
+      <div class="fig"><b>3 years</b><span>Longest term, for qualified specialists</span></div>
+      <div class="fig"><b>20</b><span>Working days before expiry to apply for renewal</span></div>
+      <div class="fig"><b>5</b><span>Foreigners at most in a representative office, within 40% of staff</span></div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">7</span></footer>
+</section>
+
+<!-- 8 · Exemptions -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Exemptions</p>
+    <h2>Who needs no confirmation</h2>
+    <p class="lede">For many employers the first question is whether a confirmation is needed at all. The visa and both registrations still apply.</p>
+    <ul class="facts snug cols2" style="margin-top:6mm">
+      <li><b>Founders</b> of foreign and joint enterprises for up to 3 months, including a founder who is the head</li>
+      <li><b>Investors</b> who put at least 8,500 BCV into the shares of the company</li>
+      <li><b>Residence permit holders,</b> who work on general terms</li>
+      <li><b>Foreign specialists</b> of IT Park residents</li>
+      <li><b>Remote staff</b> while they work physically from abroad</li>
+      <li><b>Staff of accredited representative offices,</b> within the cap on foreign staff</li>
+      <li><b>Holders of the Vatandosh card</b></li>
+      <li><b>Other groups:</b> diplomats, media, teachers at Presidential schools, staff of TIFC participants and cases under international treaties</li>
+    </ul>
+    <h3 style="margin-top:7mm">Qualified specialists also get</h3>
+    <ul class="facts snug cols2" style="margin-top:2mm">
+      <li>Part-time work without a separate confirmation</li>
+      <li>A multiple-entry work visa for the contract, up to 3 years</li>
+      <li>30 working days to find a new employer, with the confirmation and visa still valid</li>
+      <li>For the highly qualified, a residence permit with the family for the term of the contract</li>
+    </ul>
+    <div class="box end">
+      <p class="eyebrow">The foreign director</p>
+      <p>A hired director who is not a founder usually needs a confirmation from the first day. The investor exemption covers only individuals who invested their own funds. A founder who is the head should apply well before the three months run out. We check each case.</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">8</span></footer>
+</section>
+
+<!-- 9 · Visas and stay -->
+<section class="page">
+  <div class="inner">
+    <div class="band"><div class="photo" style="background-image:url('img/hiring-visas.jpg');background-position:50% 50%"></div></div>
+    <p class="eyebrow">Visas and stay</p>
+    <h2>Entry, registration and residence</h2>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>Entry and visas</h3>
+        <ul class="facts snug">
+          <li><b>Visa-free:</b> most CIS citizens without a time limit, citizens of the EU, the UK, the US, China, Korea, Japan and the Gulf states for 30 days. It allows a stay, not work</li>
+          <li><b>Work visa E</b> for the term of the confirmation, issued after it. For visa-free nationals we check the need case by case</li>
+          <li><b>INV and IT visas:</b> multiple entry for up to 3 years, for investors and on the recommendation of the IT Park. <b>Business visa:</b> up to 1 year</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Registration and residence</h3>
+        <ul class="facts snug">
+          <li><b>Registration of stay</b> within 3 working days of arrival. For an employee the host company files</li>
+          <li><b>PINFL,</b> the personal number for payroll, obtained after registration</li>
+          <li><b>Families</b> of INV and IT visa holders get guest visas for the same term. A working spouse needs an own confirmation</li>
+          <li><b>Residence permit</b> holders work without a confirmation and register at their place of residence</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box end">
+      <p class="eyebrow">Good to know</p>
+      <ul class="two">
+        <li>An e-visa gives up to 30 days and is not a work visa</li>
+        <li>A new address is registered within 10 working days. One registration lasts up to a year</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">9</span></footer>
+</section>
+
+<!-- 10 · Outstaffing, contractors and secondment -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Beyond direct hiring</p>
+    <h2>Outstaffing, contractors and secondment</h2>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>Outstaffing</h3>
+        <ul class="facts snug">
+          <li>Regulated by Law <span class="nw">ZRU-642</span> and Cabinet of Ministers Resolution No. 706. No licence is needed</li>
+          <li>The provider is an Uzbek company, and the work is done in Uzbekistan</li>
+          <li>Up to <b>9 months</b> in a calendar year, extended by agreement with the worker's consent</li>
+          <li>Pay no lower than for the client's own staff. The client is secondarily liable for wages and benefits</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contractors</h3>
+        <ul class="facts snug">
+          <li>Pay to an individual for work or services bears the same <b>12% and 12%</b> as salary</li>
+          <li>A civil-law contract that in fact governs work is reclassified as employment from its start date</li>
+          <li>A self-employed person pays 1%, withheld by the company since 2026</li>
+          <li>Moving an employee to self-employment for the same work invites reclassification</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box end">
+      <p class="eyebrow">Secondment and permanent establishment</p>
+      <ul class="two">
+        <li><b>Local contract.</b> The Uzbek company signs a fixed-term contract for up to 1 year, plus 1 more, pays the salary and obtains the confirmation</li>
+        <li><b>Cross-border invoice.</b> The foreign company keeps paying and charges for the staff. Social tax applies to at least 90% of the contract value</li>
+        <li>An outstaffed worker who sells or negotiates for a foreign client may create a permanent establishment</li>
+        <li>Whether a foreign company without a local presence can be the client of outstaffing we check case by case</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">10</span></footer>
+</section>
+
+<!-- 11 · Roadmap -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Roadmap</p>
+    <h2>Hiring a foreign specialist</h2>
+    <p class="lede">Allow three to four weeks to the confirmation, then the visa. The order of steps matters most.</p>
+    <ol class="road tight">
+      <li><span class="when">Start</span><div><b>Exemptions and model</b><span>Whether a confirmation is needed, which visa and which way to engage</span></div></li>
+      <li><span class="when">First week</span><div><b>Application</b><span>Passport, qualification documents and a draft contract that states the salary</span></div></li>
+      <li><span class="when">Up to 15 working days</span><div><b>Confirmation</b><span>Local labour test and decision, then issue once the fee is paid</span></div></li>
+      <li><span class="when">Then</span><div><b>Work visa</b><span>For the term of the confirmation</span></div></li>
+      <li><span class="when">3 working days</span><div><b>Registration of stay</b><span>Filed by the host company after arrival, then PINFL</span></div></li>
+      <li><span class="when">First month</span><div><b>Contract and payroll</b><span>Contract registered in the labour system, taxes from the first salary</span></div></li>
+    </ol>
+    <div class="box end">
+      <p class="eyebrow">Where employers go wrong</p>
+      <ul class="two">
+        <li>A contract signed before the confirmation</li>
+        <li>A stay unregistered for more than 3 days</li>
+        <li>Past hiring without a confirmation</li>
+        <li>A salary below the category threshold</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">11</span></footer>
+</section>
+
+<!-- 12 · How we help -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">How we help</p>
+    <h2>One team for every hire</h2>
+    <p class="lede">We run the legal, payroll and migration side of hiring, so that your people can start on time and on the right terms.</p>
+    <ul class="why" style="margin-top:5mm">
+      <li><span class="n">01</span><div><h3>Choice of model</h3><p>Own employees, outstaffing, contractors or secondment.</p></div></li>
+      <li><span class="n">02</span><div><h3>Contracts and policies</h3><p>Labour contracts, IP clauses and registration in the labour system.</p></div></li>
+      <li><span class="n">03</span><div><h3>Right to work</h3><p>Exemption check, application and renewals.</p></div></li>
+      <li><span class="n">04</span><div><h3>Visas and registration</h3><p>Work and IT visas, registration of stay and PINFL.</p></div></li>
+      <li><span class="n">05</span><div><h3>Payroll</h3><p>Monthly payroll, tax returns and special regimes.</p></div></li>
+      <li><span class="n">06</span><div><h3>Changes and exits</h3><p>Transfers, dismissals and disputes with staff.</p></div></li>
+    </ul>
+    <div class="band-b"><div class="photo" style="background-image:url('img/hiring-team.jpg');background-position:50% 70%"></div></div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">12</span></footer>
+</section>
+
+<!-- 13 · Contacts -->
+<section class="page contacts-page on-photo">
+  <div class="photo" style="background-image:url('../company-profile/img/khiva.jpg');background-position:50% 50%"></div>
+  <div class="inner">
+    <p class="eyebrow" style="color:rgba(255,255,255,.65)">Contacts</p>
+    <h2>Planning to hire in Uzbekistan?</h2>
+    <p class="lede">Tell us about the roles, the people and the timeline. We answer in English, Russian, Uzbek or German. The first call is free.</p>
+    <a class="cta" href="https://www.advizenco.com/contact">Book an introductory call</a>
+    <div class="clist">
+      <dl>
+        <dt>Website</dt><dd><a href="https://www.advizenco.com">advizenco.com</a></dd>
+        <dt>Email</dt><dd><a href="mailto:info@advizenco.com">info@advizenco.com</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+998334884888">+998 33 488 48 88</a></dd>
+      </dl>
+      <dl>
+        <dt>Telegram</dt><dd><a href="https://t.me/advizen">t.me/advizen</a></dd>
+        <dt>Location</dt><dd>Tashkent, Uzbekistan</dd>
+      </dl>
+      <div><div class="qr"><img src="../company-profile/qr.svg" alt=""></div><p class="qr-cap">advizenco.com</p></div>
+    </div>
+    <p class="legal">© 2026 Advizen Consulting LLC, Tashkent. This guide is for general information only and is not legal, tax or immigration advice. Rules as of November 2026.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">13</span></footer>
+</section>
+
+</body>
+</html>
