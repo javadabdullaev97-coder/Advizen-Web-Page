@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { publications, sortedPublications } from "@/lib/publications";
 import { GUIDE_PDF } from "@/lib/guide";
+import GuideCards from "@/components/insights/GuideCards";
 import HomeReveal from "@/components/home/HomeReveal";
 import InsightsBrowser, { type InsightItem } from "@/components/insights/InsightsBrowser";
 
@@ -98,6 +99,7 @@ export default function InsightsContent() {
             </div>
           </div>
         </div>
+        <GuideCards />
       </section>
 
       {latest && (

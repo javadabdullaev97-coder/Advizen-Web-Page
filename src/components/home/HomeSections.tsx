@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { allEngagements } from "@/lib/industries";
 import { publications, sortedPublications } from "@/lib/publications";
 import { GUIDE_PDF } from "@/lib/guide";
+import GuideCards from "@/components/insights/GuideCards";
 import { SectionHead } from "@/components/home/SectionHead";
 import { COVER_SHADE, COVER_TITLE } from "@/lib/cover-overlay";
 
@@ -187,6 +188,7 @@ export function HomeInsights() {
           className="home-cover w-[200px] sm:w-[240px] lg:w-[280px] h-auto rounded-xl shadow-[0_24px_48px_rgba(0,0,0,.4)] sm:justify-self-center max-sm:order-first"
         />
       </div>
+      <GuideCards heading={false} />
 
       <ul className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {recent.map((p, i) => (
