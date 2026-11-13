@@ -1,0 +1,374 @@
+<!doctype html>
+<!-- IT-бизнес в Узбекистане 2026 (RU). Исходник public/guides/IT-Business-in-Uzbekistan-2026-RU.pdf.
+     Сборка: NODE_PATH=$(npm root -g) node scripts/build-pdf.mjs docs/it-guide/ru.html public/guides/IT-Business-in-Uzbekistan-2026-RU.pdf
+     Правила текста: без тире-разделителей и точек с запятой, без цен и сборов, без названий клиентов и проектов.
+     Факты сверены с гайдом Doing Business in Uzbekistan 2026, Налоговым кодексом и положениями об IT Park (ПП-589, ПП-388). -->
+<html lang="ru" data-theme="guide">
+<head>
+<meta charset="utf-8">
+<title>IT-бизнес в Узбекистане 2026 · Advizen</title>
+<link rel="stylesheet" href="../company-profile/fonts.css">
+<link rel="stylesheet" href="guide.css">
+<style>
+  /* Russian runs longer than English: slightly smaller headings keep the same page breaks. */
+  html[lang="ru"] { --h1: 44pt; --h2: 27pt; }
+  html[lang="ru"] .compare td:first-child { width: 33mm; }
+  html[lang="ru"] .compare td { padding-top: 3.4mm; padding-bottom: 3.4mm; }
+</style>
+</head>
+<body>
+
+<!-- 1 · Обложка -->
+<section class="page cover on-photo">
+  <div class="photo" style="background-image:url('../company-profile/img/tashkent-city.jpg');background-position:55% 50%"></div>
+  <div class="inner">
+    <div class="wordmark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</div>
+    <div>
+      <p class="eyebrow">Гайд для технологических компаний</p>
+      <h1 style="margin-top:4mm">IT-бизнес в Узбекистане</h1>
+      <p class="sub">IT Park, релокация и найм для технологических компаний</p>
+      <p class="year">2026</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span>Редакция ноября 2026</span></footer>
+</section>
+
+<!-- 2 · Почему Узбекистан -->
+<section class="page">
+  <div class="inner">
+    <div class="band"><div class="photo" style="background-image:url('../company-profile/img/tashkent-dusk.jpg');background-position:40% 45%"></div></div>
+    <p class="eyebrow">Почему Узбекистан</p>
+    <h2>Растущая база для IT-команд</h2>
+    <p class="lede">В Узбекистане большой молодой рынок труда, часовой пояс между Европой и Азией и один из самых выгодных налоговых режимов для IT-компаний в регионе.</p>
+    <div class="cols" style="margin-top:7mm">
+      <div>
+        <p>Разработка ПО, аутсорсинг и IT-услуги входят в число самых быстрорастущих статей экспорта страны. Многие иностранные компании используют Ташкент как центр разработки для клиентов в Европе, на Ближнем Востоке и в СНГ.</p>
+        <p>Главный инструмент здесь IT Park. Его резиденты освобождены от большинства налогов, их сотрудники платят пониженный НДФЛ, а иностранных специалистов можно нанимать без разрешений на работу.</p>
+      </div>
+      <div>
+        <p>Въезд для многих стран простой. Граждане СНГ, ЕС, Великобритании, США, Китая и многих других стран въезжают без визы, а IT-специалисты могут получить многократную IT-визу сроком до трёх лет.</p>
+        <p>В гайде описаны способы начать работу, правила IT Park, этапы переезда команды и обычный порядок шагов.</p>
+      </div>
+    </div>
+    <div class="figs">
+      <div class="fig"><b>GMT+5</b><span>Один часовой пояс, без перехода на летнее время</span></div>
+      <div class="fig"><b>39,0 млн</b><span>Население, перепись 2026 года</span></div>
+      <div class="fig"><b>$921,5 млн</b><span>Экспорт телекоммуникационных, компьютерных и информационных услуг, 2025</span></div>
+      <div class="fig"><b>7,5%</b><span>НДФЛ с зарплаты у резидентов IT Park</span></div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">2</span></footer>
+</section>
+
+<!-- 3 · Три способа начать -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">С чего начать</p>
+    <h2>Три способа начать работу в Узбекистане</h2>
+    <p class="lede">Большинство IT-компаний за несколько месяцев проходят путь от первого варианта к третьему. Точка старта зависит от того, как быстро нужно начать и какой будет команда.</p>
+    <table class="compare">
+      <tr><th></th><th>Employer of Record<small>Без местного юрлица</small></th><th>Своё ООО<small>Общий налоговый режим</small></th><th class="hl">ООО и IT Park<small>Специальный IT-режим</small></th></tr>
+      <tr><td>Как это работает</td><td>Местный работодатель оформляет ваших сотрудников, ведёт зарплату и кадры. Работой руководите вы.</td><td>Ваша узбекская компания нанимает команду, заключает договоры и владеет имуществом.</td><td class="hl">Ваша узбекская компания становится резидентом IT Park и пользуется его налоговым режимом и правилами найма.</td></tr>
+      <tr><td>Сроки</td><td>Команда может начать работу за несколько дней</td><td>Регистрация занимает <span style="white-space:nowrap">2–3 дня</span> после подготовки документов</td><td class="hl">Регистрация ООО, затем до 15 рабочих дней на рассмотрение заявки в IT Park</td></tr>
+      <tr><td>Налоги</td><td>Обычные налоги с зарплаты</td><td>Общий режим: налог на прибыль 15%, НДС 12%, НДФЛ 12%, социальный налог 12%</td><td class="hl">Освобождение от большинства налогов и соцналога до 2028 года, НДФЛ с зарплаты 7,5%</td></tr>
+      <tr><td>Иностранные сотрудники</td><td>Нужно разрешение на работу</td><td>Нужно разрешение на работу</td><td class="hl">Разрешение на работу иностранным специалистам не нужно. Доступна IT-виза</td></tr>
+      <tr><td>Кому подходит</td><td>Для проверки рынка, небольших команд и первых месяцев работы</td><td>Бизнесу вне перечня IT Park или без экспортной выручки</td><td class="hl">IT-компаниям с растущей командой и экспортной выручкой</td></tr>
+    </table>
+    <div class="box">
+      <p class="eyebrow">Частый сценарий</p>
+      <p>Команда начинает работать по договорам Employer of Record, пока регистрируется ООО и рассматривается заявка в IT Park. Когда компания становится резидентом, сотрудники переходят в неё и начинает действовать режим IT Park.</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">3</span></footer>
+</section>
+
+<!-- 4 · IT Park: как стать резидентом -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">IT Park</p>
+    <h2>Как стать резидентом</h2>
+    <p class="lede">IT Park (Технологический парк программных продуктов и информационных технологий) принимает узбекские юридические лица, которые ведут IT-деятельность из официального перечня.</p>
+    <div class="cols" style="margin-top:7mm">
+      <div>
+        <h3>Кто может подать заявку</h3>
+        <ul class="facts">
+          <li>Только узбекские юридические лица. Иностранная компания сначала регистрирует местное ООО</li>
+          <li>Разработка программного обеспечения и IT-услуги</li>
+          <li>IT-аутсорсинг и аутсорсинг бизнес-процессов</li>
+          <li>Обработка данных и другие виды деятельности из перечня постановления ПП-589</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Кто не может</h3>
+        <ul class="facts">
+          <li>С 1 апреля 2026 года платёжные организации и операторы платёжных систем</li>
+          <li>Маркетплейсы</li>
+          <li>Микрофинансовые организации</li>
+        </ul>
+        <p class="muted" style="margin-top:4mm;font-size:8.4pt">Эти виды деятельности потеряли доступ к льготам по постановлению Президента ПП-388 от 26 декабря 2025 года.</p>
+      </div>
+    </div>
+    <p class="sub">От регистрации до статуса резидента</p>
+    <ol class="process">
+      <li><b>Регистрация ООО</b><span>Государственная регистрация узбекской компании</span><em>2–3 дня</em></li>
+      <li><b>Подготовка пакета</b><span>Заявление, устав и бизнес-план</span></li>
+      <li class="hl"><b>Подача заявки</b><span>Через личный кабинет на my.it-park.uz с ЭЦП компании</span></li>
+      <li><b>Рассмотрение</b><span>Заявку рассматривает дирекция IT Park</span><em>До 15 рабочих дней</em></li>
+      <li><b>Статус резидента</b><span>Договор с IT Park и внесение в реестр резидентов</span></li>
+    </ol>
+    <p class="note">Льготы применяются с первого числа месяца, следующего за месяцем внесения компании в реестр резидентов.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">4</span></footer>
+</section>
+
+<!-- 5 · IT Park: как сохранить статус -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">IT Park</p>
+    <h2>Как сохранить статус</h2>
+    <p class="lede">Постановление ПП-388 ужесточило режим с 1 апреля 2026 года. Теперь резиденты должны получать часть дохода от экспорта и ежемесячно платить взнос парку.</p>
+    <div class="figs" style="margin-top:9mm;grid-template-columns:repeat(3,1fr)">
+      <div class="fig"><b>20%</b><span>Минимальная доля экспорта в совокупном доходе с 1 апреля 2026 года</span></div>
+      <div class="fig"><b>35%</b><span>Минимальная доля экспорта в совокупном доходе с 1 января 2027 года</span></div>
+      <div class="fig"><b>1%</b><span>Ежемесячный взнос парку от выручки для резидентов, выполняющих требование по экспорту</span></div>
+    </div>
+    <div class="cols" style="margin-top:9mm">
+      <div>
+        <h3>Если доля экспорта не выполнена</h3>
+        <p style="margin-top:2.4mm;color:var(--ink-2)">Взнос растёт до 2% выручки для резидентов с выручкой от 5 до 100 млрд сумов и до 3% при выручке выше 100 млрд сумов.</p>
+      </div>
+      <div>
+        <h3>С 2028 по 2040 год</h3>
+        <p style="margin-top:2.4mm;color:var(--ink-2)">Налоговый кодекс продлевает освобождение от всех налогов, кроме НДС, с 1 января 2028 года по 1 января 2040 года, но только для резидентов с долей экспорта выше 50% совокупного дохода (ст. 483).</p>
+      </div>
+    </div>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">Что это значит на практике</p>
+      <ul>
+        <li>Планируйте долю экспортных контрактов до подачи заявки, а не после</li>
+        <li>Храните договоры, инвойсы и платёжные документы, которые подтверждают экспортную выручку</li>
+        <li>Отслеживайте долю экспорта каждый месяц и порог 50% к 2028 году</li>
+        <li>Сдавайте отчётность в IT Park вовремя, чтобы сохранить статус</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">5</span></footer>
+</section>
+
+<!-- 6 · Налоги: общий режим и IT Park -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Налоги</p>
+    <h2>Общий режим и IT Park</h2>
+    <table class="compare">
+      <tr><th></th><th>Общий режим</th><th class="hl">Резидент IT Park</th></tr>
+      <tr><td>Налог на прибыль</td><td>15% (НК, ст. 337)</td><td class="hl">Освобождение</td></tr>
+      <tr><td>НДС</td><td>12%, 0% на экспорт (ст. 258)</td><td class="hl">Освобождение до 1 января 2028 года, с 2028 года уплачивается</td></tr>
+      <tr><td>Налоги на имущество, землю и воду</td><td>Налог на имущество 1,5% (ст. 415)</td><td class="hl">Освобождение</td></tr>
+      <tr><td>Социальный налог</td><td>12%, платит работодатель (ст. 405)</td><td class="hl">Освобождение</td></tr>
+      <tr><td>НДФЛ с зарплаты</td><td>12% (ст. 381)</td><td class="hl">7,5%, фиксированная ставка (ПП-589)</td></tr>
+      <tr><td>Дивиденды учредителям-нерезидентам</td><td>Налог у источника 10% (ст. 353), налоговое соглашение может снизить ставку</td><td class="hl">По ставкам для резидентов до 1 января 2040 года, если экспорт превышает 50% дохода (ст. 483)</td></tr>
+      <tr><td>Таможня на оборудование</td><td>Обычные пошлины</td><td class="hl">Без таможенных платежей, кроме сборов за оформление, на оборудование и ПО для собственных нужд, не производимые в Узбекистане</td></tr>
+    </table>
+    <div class="box">
+      <p class="eyebrow">Полезно знать</p>
+      <ul>
+        <li>Доход сотрудников резидента облагается по ставке 7,5% и не включается в их совокупный годовой доход</li>
+        <li>Освобождение на 2028–2040 годы не распространяется на НДС и требует экспорта выше 50% дохода</li>
+        <li>Учредителям без права на ставки для резидентов стоит проверить налоговое соглашение со своей страной</li>
+      </ul>
+    </div>
+    <p class="note">Ставки на ноябрь 2026 года по Налоговому кодексу Республики Узбекистан и постановлениям ПП-589 и ПП-388. Льготы применяются только при выполнении их условий.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">6</span></footer>
+</section>
+
+<!-- 7 · Переезд команды -->
+<section class="page">
+  <div class="inner">
+    <div class="band"><div class="photo" style="background-image:url('../company-profile/img/samarkand.jpg')"></div></div>
+    <p class="eyebrow">Релокация</p>
+    <h2>Переезд сотрудников в Узбекистан</h2>
+    <div class="cols" style="margin-top:6mm">
+      <div>
+        <h3>Въезд и IT-виза</h3>
+        <ul class="facts">
+          <li><b>Безвизовый въезд</b> для граждан СНГ, ЕС, Великобритании, США, Китая и многих других стран, чаще всего на 30 дней</li>
+          <li><b>Электронная виза</b> на e-visa.gov.uz для граждан многих других стран</li>
+          <li><b>IT-виза:</b> многократная, сроком до трёх лет, по рекомендации IT Park, для IT-специалистов, инвесторов, учредителей и руководителей резидентов</li>
+          <li>IT-визу можно продлить, не выезжая из страны</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Работа и регистрация</h3>
+        <ul class="facts">
+          <li><b>Разрешение на работу не нужно</b> иностранным специалистам резидентов IT Park</li>
+          <li><b>ПИНФЛ,</b> персональный идентификационный номер, для каждого иностранного сотрудника в Центре госуслуг</li>
+          <li><b>Регистрация по месту пребывания</b> в течение трёх рабочих дней после въезда</li>
+          <li>Работодателям вне IT Park нужно разрешение на работу для каждого иностранного сотрудника. Квалифицированные специалисты получают разрешения на срок до трёх лет</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box" style="margin-top:auto">
+      <p class="eyebrow">Семьи</p>
+      <p>Визы и регистрацию для супругов и детей лучше планировать вместе с сотрудником. Заранее подготовьте апостилированные свидетельства о браке и рождении с нотариальным переводом.</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">7</span></footer>
+</section>
+
+<!-- 8 · Найм, зарплата и банки -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Найм и зарплата</p>
+    <h2>Оформление команды</h2>
+    <div class="cols" style="margin-top:7mm">
+      <div>
+        <h3>Главное из Трудового кодекса</h3>
+        <ul class="facts">
+          <li>Письменный договор, бумажный или электронный, регистрируется в Единой национальной системе труда</li>
+          <li>Испытательный срок до трёх месяцев</li>
+          <li>40-часовая рабочая неделя и не менее 21 календарного дня ежегодного отпуска</li>
+          <li>Удалённая работа разрешена и закрепляется в договоре</li>
+          <li>Сотрудник увольняется по своему желанию, предупредив за 14 календарных дней</li>
+          <li>Работодатель увольняет только по основаниям из Кодекса, с предупреждением и выходным пособием</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Зарплата</h3>
+        <ul class="facts">
+          <li>Зарплата выплачивается в сумах, налоги удерживаются ежемесячно</li>
+          <li>Резиденты IT Park удерживают НДФЛ 7,5% и не платят социальный налог</li>
+          <li>Остальные работодатели удерживают 12% и платят 12% социального налога сверх зарплаты</li>
+          <li>Права на результаты работы сотрудников стоит закрепить за компанией в договоре</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sub">Банки и движение денег</p>
+    <ul class="facts">
+      <li>Узбекские компании открывают счета в сумах и в иностранной валюте в узбекских банках</li>
+      <li>Расчёты между резидентами внутри страны ведутся в сумах, трансграничные платежи в любой валюте</li>
+      <li>Счёт в иностранном банке узбекская компания может открыть, только если это разрешено законом или решением</li>
+      <li>Банковский счёт можно заказать вместе с государственной регистрацией компании</li>
+      <li>Компания должна находиться по своему юридическому адресу. Жилое помещение для этого не подходит</li>
+    </ul>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">8</span></footer>
+</section>
+
+<!-- 9 · План переезда -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">План</p>
+    <h2>Типовой план релокации</h2>
+    <p class="lede">Обычный порядок работы. Часть шагов идёт параллельно, а дольше всего часто длится апостилирование документов материнской компании.</p>
+    <ol class="road">
+      <li><span class="when">Старт</span><div><b>Вводный созвон и план</b><span>Выбор структуры, список документов и сроки для команды</span></div></li>
+      <li><span class="when">Первая неделя</span><div><b>Команда начинает работу через Employer of Record</b><span>По желанию. Сотрудники работают, пока создаётся компания</span></div></li>
+      <li><span class="when">2–3 дня</span><div><b>Регистрация ООО</b><span>После апостилирования и перевода документов учредителя. Одновременно банковский счёт и ЭЦП</span></div></li>
+      <li><span class="when">До 15 рабочих дней</span><div><b>Заявка и рассмотрение в IT Park</b><span>Подача через my.it-park.uz, договор и внесение в реестр</span></div></li>
+      <li><span class="when">Параллельно</span><div><b>Визы, ПИНФЛ и регистрация</b><span>IT-визы, персональные идентификационные номера и регистрация по месту пребывания для сотрудников и семей</span></div></li>
+      <li><span class="when">После статуса</span><div><b>Переход команды в компанию</b><span>Трудовые договоры с резидентом, зарплата с НДФЛ 7,5% и бухгалтерия</span></div></li>
+      <li><span class="when">Каждый месяц</span><div><b>Текущее сопровождение</b><span>Налоговая отчётность и отчётность в IT Park, контроль доли экспорта, зарплата</span></div></li>
+    </ol>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">9</span></footer>
+</section>
+
+<!-- 10 · Чек-лист -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Чек-лист</p>
+    <h2>Какие документы подготовить</h2>
+    <div class="check">
+      <div>
+        <h3>Регистрация компании</h3>
+        <ul>
+          <li>Устав и выписка из реестра материнской компании с апостилем</li>
+          <li>Решение о создании узбекской компании</li>
+          <li>Нотариальные переводы иностранных документов</li>
+          <li>Устав узбекского ООО на узбекском языке</li>
+          <li>Паспорт директора и ПИНФЛ</li>
+          <li>Юридический адрес: договор аренды или письмо собственника</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Заявка в IT Park</h3>
+        <ul>
+          <li>Заявление на статус резидента</li>
+          <li>Устав узбекской компании</li>
+          <li>Бизнес-план с планируемой IT-деятельностью</li>
+          <li>Планируемые экспортные контракты и клиенты</li>
+          <li>ЭЦП компании</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Каждый иностранный сотрудник</h3>
+        <ul>
+          <li>Паспорт, действующий не менее шести месяцев</li>
+          <li>Трудовой договор или оффер</li>
+          <li>Диплом и резюме, если их запросят</li>
+          <li>Адрес в Узбекистане для регистрации по месту пребывания</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Члены семьи</h3>
+        <ul>
+          <li>Паспорта, действующие не менее шести месяцев</li>
+          <li>Свидетельства о браке и рождении с апостилем</li>
+          <li>Нотариальные переводы</li>
+          <li>Адрес для регистрации по месту пребывания</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Требования зависят от гражданства и часто обновляются. Точный список мы подтверждаем для каждого случая.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">10</span></footer>
+</section>
+
+<!-- 11 · Чем мы помогаем -->
+<section class="page">
+  <div class="inner">
+    <p class="eyebrow">Чем мы помогаем</p>
+    <h2>Одна команда на весь переезд</h2>
+    <p class="lede">Мы берём на себя юридическую, налоговую, кадровую и миграционную часть, чтобы ваша команда продолжала работать, пока выстраивается структура.</p>
+    <ul class="why" style="margin-top:8mm">
+      <li><span class="n">01</span><div><h3>Employer of Record</h3><p>Команда начинает работу за несколько дней по нашим договорам, зарплату и кадры ведём на месте.</p></div></li>
+      <li><span class="n">02</span><div><h3>Регистрация компании</h3><p>Регистрация ООО, банковский счёт, ЭЦП и юридический адрес.</p></div></li>
+      <li><span class="n">03</span><div><h3>Заявка в IT Park</h3><p>Проверка соответствия, бизнес-план, подача заявки и сопровождение в дирекции.</p></div></li>
+      <li><span class="n">04</span><div><h3>Визы и регистрация</h3><p>IT-визы, ПИНФЛ и регистрация по месту пребывания для сотрудников и их семей.</p></div></li>
+      <li><span class="n">05</span><div><h3>Бухгалтерия и отчётность</h3><p>Бухучёт, налоговая отчётность и отчётность в IT Park, ежемесячный контроль доли экспорта.</p></div></li>
+      <li><span class="n">06</span><div><h3>Юридические и налоговые вопросы</h3><p>Договоры с клиентами, права на результаты работы, дивиденды, соглашения об избежании двойного налогообложения и риск постоянного представительства.</p></div></li>
+    </ul>
+    <div class="band-b"><div class="photo" style="background-image:url('../company-profile/img/bukhara.jpg')"></div></div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">11</span></footer>
+</section>
+
+<!-- 12 · Контакты -->
+<section class="page contacts-page on-photo">
+  <div class="photo" style="background-image:url('../company-profile/img/khiva.jpg')"></div>
+  <div class="inner">
+    <p class="eyebrow" style="color:rgba(255,255,255,.65)">Контакты</p>
+    <h2>Планируете перевезти IT-команду в Узбекистан?</h2>
+    <p class="lede">Расскажите о команде и сроках. Отвечаем на русском, английском, узбекском и немецком. Первый созвон бесплатный.</p>
+    <a class="cta" href="https://www.advizenco.com/ru/contact">Записаться на вводный созвон</a>
+    <div class="clist">
+      <dl>
+        <dt>Сайт</dt><dd><a href="https://www.advizenco.com/ru">advizenco.com</a></dd>
+        <dt>Email</dt><dd><a href="mailto:info@advizenco.com">info@advizenco.com</a></dd>
+        <dt>Телефон</dt><dd><a href="tel:+998334884888">+998 33 488 48 88</a></dd>
+      </dl>
+      <dl>
+        <dt>Telegram</dt><dd><a href="https://t.me/advizen">t.me/advizen</a></dd>
+        <dt>Город</dt><dd>Ташкент, Узбекистан</dd>
+      </dl>
+      <div><div class="qr"><img src="../company-profile/qr.svg" alt=""></div><p class="qr-cap">advizenco.com</p></div>
+    </div>
+    <p class="legal">© 2026 Advizen Consulting LLC, Ташкент. Гайд носит информационный характер и не является юридической, налоговой или миграционной консультацией. Правила на ноябрь 2026 года.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">12</span></footer>
+</section>
+
+</body>
+</html>
