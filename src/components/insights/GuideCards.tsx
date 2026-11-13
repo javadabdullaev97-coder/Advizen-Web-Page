@@ -41,7 +41,7 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
                   src={localized(g.cover, locale)}
                   alt={t(`items.${g.slug}.coverAlt`)}
                   width={900}
-                  height={1274}
+                  height={900}
                   sizes="(max-width: 1023px) 112px, 170px"
                   className={`home-cover w-full h-auto rounded-lg shadow-[0_20px_40px_rgba(0,0,0,.5)] ${many ? "md:w-[150px]" : ""}`}
                 />
