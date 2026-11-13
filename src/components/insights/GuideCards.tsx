@@ -18,7 +18,7 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
           <p className="text-[15px] text-muted">{t("lede")}</p>
         </div>
       )}
-      <ul data-reveal className={`grid gap-4 ${single ? "" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
+      <ul data-reveal className={`grid gap-4 ${single ? "" : GUIDES.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
         {GUIDES.map((g) => {
           const pdf = localized(g.pdf, locale);
           return (
@@ -28,7 +28,7 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
                 target="_blank"
                 rel="noopener"
                 className={`group m-tile grid h-full items-center gap-6 p-6 sm:p-7 transition-colors duration-200 hover:bg-[#232325] ${
-                  single ? "grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[170px_minmax(0,1fr)_auto] sm:gap-10 lg:px-12 lg:py-9" : "grid-cols-[112px_minmax(0,1fr)]"
+                  single ? "grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[170px_minmax(0,1fr)_auto] sm:gap-10 lg:px-12 lg:py-9" : "grid-cols-[112px_minmax(0,1fr)] lg:grid-cols-[150px_minmax(0,1fr)] lg:gap-8 lg:p-8"
                 }`}
               >
                 <Image
@@ -36,7 +36,7 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
                   alt={t(`items.${g.slug}.coverAlt`)}
                   width={900}
                   height={1274}
-                  sizes="(max-width: 639px) 112px, 170px"
+                  sizes="(max-width: 1023px) 112px, 170px"
                   className="home-cover w-full h-auto rounded-lg shadow-[0_20px_40px_rgba(0,0,0,.5)]"
                 />
                 <div className="min-w-0">

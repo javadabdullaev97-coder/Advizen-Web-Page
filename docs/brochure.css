@@ -1,4 +1,4 @@
-/* Shared look of the Advizen PDFs (from docs/company-profile/profile.html) plus IT guide components. */
+/* Shared look of the Advizen PDF guides (IT, tax and the next ones). Based on docs/company-profile/profile.html. */
   @page { size: A4; margin: 0; }
   :root {
     --page-w: 210mm; --page-h: 297mm; --pad-x: 18mm; --pad-top: 20mm;
@@ -209,3 +209,19 @@
   .road li b { font-size: 11.6pt; }
   .check li { padding: 2.8mm 0 2.8mm 6.4mm; }
   .note { font-size: 8.2pt; }
+
+  /* Dense tables (treaty rates, tax calendar) */
+  .compare.dense { font-size: 9pt; margin-top: 6mm; }
+  .compare.dense th { font-size: 9.6pt; padding-bottom: 2.4mm; }
+  .compare.dense td { padding: 1.9mm 3mm 1.9mm 0; }
+  .compare.dense td:first-child { font-size: 9pt; font-weight: 500; letter-spacing: 0; color: var(--ink); width: auto; }
+  .compare.dense td.n { font-variant-numeric: tabular-nums; }
+  .example { background: var(--block); color: var(--block-ink); border-radius: 3mm; padding: 6mm 7mm; margin-top: 7mm; }
+  .example h3 { color: var(--block-ink); }
+  .example p { color: var(--block-muted); margin-top: 2mm; font-size: 9pt; }
+  .example .calc { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin-top: 4mm; }
+  .example table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+  .example caption { text-align: left; font-size: 7.6pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--block-muted); padding-bottom: 2mm; }
+  .example td { padding: 1.7mm 0; border-top: 1px solid var(--block-line); }
+  .example td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+  .example tr.total td { font-weight: 600; color: #fff; }
