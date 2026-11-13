@@ -2211,7 +2211,7 @@ window.BOOK = {
     "img/column.jpg"
    ],
    "title": "Accounting and Audit",
-   "lead": "Most companies keep their books in sums under national standards and file annual statements by 1 March. Full IFRS is now reserved for a register of public-interest entities, and new IFRS-based national standards are phased in from 2027.",
+   "lead": "Most companies keep their books in sums under national standards and file annual statements by 1 March. Full IFRS is mandatory for registered public-interest entities and joint-stock companies, and IFRS-based national standards are phased in from 2027.",
    "figures": [
     {
      "value": "1 March",
@@ -2233,15 +2233,15 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Accounting is governed by the Law on Accounting (No. ZRU-404 of 13 April 2016) and by national accounting standards (NSBU) issued by the Ministry of Economy and Finance. The Central Bank sets the rules for banks. Every legal entity registered in Uzbekistan must keep accounts, including its branches, representative offices and other subdivisions inside or outside the country."
+     "html": "Accounting is governed by the Law on Accounting (No. ZRU-404 of 13 April 2016) and by national accounting standards (NSBU) issued by the Ministry of Economy and Finance. The Central Bank sets the rules for banks. Every legal entity registered in Uzbekistan must keep accounts, including its branches, representative offices and other subdivisions inside or outside the country. Representative offices and branches of foreign companies report in the manner set by legislation (Art. 6)."
     },
     {
      "t": "p",
-     "html": "The director is responsible for organising accounting. The director may set up an in-house function under a chief accountant, hire an accountant under a services contract, outsource to an audit firm, tax consultancy or accounting firm, or keep the books personally (Law on Accounting, Art. 11). In audited companies the chief accountant must hold a degree and meet experience requirements."
+     "html": "The director organises accounting: through an in-house function under a chief accountant, an accountant under a services contract, an outsourced audit, tax or accounting firm, or personally (Law on Accounting, Art. 11). In companies subject to mandatory audit (other than banks) the chief accountant must hold a degree and meet experience requirements; no certificate is needed (Art. 12)."
     },
     {
      "t": "p",
-     "html": "New editions of NSBU 1 (accounting policy and presentation), NSBU 22 (foreign currency) and a new chart of accounts (NSBU 21, Order No. 191 of 14 November 2024) took effect on 1 January 2025. Small businesses may use simplified accounting under NSBU 20."
+     "html": "New editions of NSBU 1 (accounting policy and presentation), NSBU 22 (foreign currency) and a new chart of accounts (NSBU 21, Order No. 191 of 14 November 2024) took effect on 1 January 2025. Small businesses may opt for simplified accounting under NSBU 20."
     },
     {
      "t": "h2",
@@ -2253,7 +2253,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "PP-282 repealed the paragraph of PP-4611 of 24 February 2020 that required joint-stock companies, commercial banks, insurers and large taxpayers to apply IFRS, so those outside the register no longer have to. NSFO will be introduced in phases from 1 January 2027 (PP-282, roadmap item 8). NSFO No. 2 (preparation basis, accounting policies and estimates; reg. No. 3810 of 11 April 2026) and NSFO No. 1 (presentation and disclosure; reg. No. 3923 of 13 August 2026) both apply from 1 January 2027. They cover all legal entities except public-interest entities and budget organisations."
+     "html": "PP-282 repealed the paragraph of PP-4611 of 24 February 2020 that required joint-stock companies, commercial banks, insurers and large taxpayers to apply IFRS, so the resolution no longer requires it outside the register. Until the JSC Law is amended, a joint-stock company still publishes IFRS statements under the JSC Law, register or not, audited under ISA (Art. 102). NSFO is phased in from 1 January 2027 (PP-282, roadmap item 8), starting with NSFO No. 2 (preparation basis, accounting policies and estimates; reg. No. 3810 of 11 April 2026) and NSFO No. 1 (presentation and disclosure; reg. No. 3923 of 13 August 2026), which replaces NSBU 1. They cover all legal entities except public-interest entities and budget organisations."
     },
     {
      "t": "h3",
@@ -2261,11 +2261,11 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The Ministry of Economy and Finance keeps the register and publishes it on the government portal. An entity qualifies if it is listed on a stock exchange, is a commercial bank, microfinance institution or payment service provider, is an investment fund or an exchange, or is a large enterprise with state participation. A private company also qualifies if, in each of the two preceding years, it had assets and net revenue of at least 1,000,000 BCV (~USD 37 million) each and at least 500 employees."
+     "html": "The Ministry of Economy and Finance keeps the register and publishes it on the government portal. An entity qualifies if it is listed on a stock exchange, is a commercial bank, microfinance institution or payment service provider, is an investment fund or an exchange, or is an enterprise with a state share of at least 50% above size thresholds. A private company also qualifies if, in each of the two preceding years, it met all three tests at once: assets and net revenue of at least 1,000,000 BCV (~USD 37 million) each and at least 500 employees."
     },
     {
      "t": "p",
-     "html": "The first register, published in June 2026, listed 425 organisations. An update of 12 October 2026 raised the total to 449. An entity added in 2026 keeps its books under IFRS from 1 January 2027 and publishes audited IFRS statements for 2028. Entities whose IFRS deadline was already earlier keep that date. IFRS sustainability disclosure standards also become mandatory for public-interest entities from 1 January 2027."
+     "html": "The first register, published in June 2026, listed 425 organisations. An update of 12 October 2026 raised the total to 449. An entity added in 2026 keeps its books under IFRS from 1 January 2027, and its first audited IFRS statements are for 2028. Entities whose IFRS deadline was already earlier keep that date. IFRS sustainability disclosure standards also become mandatory for public-interest entities from 1 January 2027."
     },
     {
      "head": [
@@ -2285,6 +2285,11 @@ window.BOOK = {
        "Already in force"
       ],
       [
+       "Joint-stock companies off the register",
+       "IFRS for publication, plus NSBU or NSFO",
+       "JSC Law, Art. 102"
+      ],
+      [
        "Medium and other companies",
        "NSBU, then NSFO",
        "NSFO phased from 1 January 2027"
@@ -2292,12 +2297,12 @@ window.BOOK = {
       [
        "Small enterprises",
        "Simplified NSBU 20, then NSFO",
-       "NSFO phased from 1 January 2027"
+       "NSBU 20 after 2027 not yet settled"
       ],
       [
        "Any entity",
        "Full IFRS, voluntary",
-       "Notify tax authority by 1 March"
+       "Notice via tax cabinet by 1 March of next year"
       ]
      ],
      "t": "table",
@@ -2309,7 +2314,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Under the Law on Auditing Activity (No. ZRU-677 of 25 February 2021, Art. 35), an annual audit is mandatory for joint-stock companies, banks and credit organisations, insurers, agricultural cooperatives, investment funds and their managers, exchanges, charitable and public funds, and companies with a state share. Other commercial companies must be audited if, in the reporting year, they meet two of three criteria:"
+     "html": "Under the Law on Auditing Activity (No. ZRU-677 of 25 February 2021, Art. 35), an annual audit is mandatory for joint-stock companies, banks and credit organisations, insurers, agricultural cooperatives, investment and other pooled funds and their trust managers, exchanges, charitable and public funds (except public funds with no bank turnover for a year), and companies with a state share. Other commercial companies must be audited if, in the reporting year, they meet two of three criteria:"
     },
     {
      "t": "ul",
@@ -2321,11 +2326,11 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "A copy of the audit report goes to the tax authority within 15 days of completion and no later than 15 June of the following year. Joint-stock companies, banks and insurers must publish audited annual statements at least two weeks before the annual general meeting (Law on Accounting, Art. 26). At the end of 2025 there were 175 audit organisations in the register."
+     "html": "A copy of the audit report goes to the tax authority within 15 days of completion and no later than 15 June of the following year. Joint-stock companies, banks, insurers, public funds and other organisations required by law publish audited annual statements at least two weeks before the annual general meeting (Law on Accounting, Art. 26)."
     },
     {
      "t": "quote",
-     "html": "An entity added in 2026 keeps its books under IFRS from 1 January 2027 and publishes audited IFRS statements for 2028."
+     "html": "A joint-stock company still publishes IFRS statements under the JSC Law, register or not."
     },
     {
      "t": "h2",
@@ -2337,7 +2342,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Annual statements under NSBU are due by 1 March and IFRS statements by 1 May of the following year (Ministry Order No. 181 of 8 October 2024). They go electronically to the tax and statistics authorities. Quarterly statements were abolished from 1 January 2023. Turnover tax payers, exempt for 2023 to 2025, file again from the 2026 reporting year. Late filing exposes officials to fines of 3 to 7 BCV (~USD 110 to 260)."
+     "html": "Annual statements under NSBU are due by 1 March and IFRS statements by 1 May of the following year (Regulation reg. No. 3567, Ministry Order No. 181 of 8 October 2024). They go to the tax and statistics authorities and may be filed as an electronic document (Law on Accounting, Art. 25). PP-419 ended quarterly filing with these bodies from 1 January 2023. Fixed-rate turnover tax payers, exempt for 2023 to 2025, file again from the 2026 reporting year. Breach of accounting duties is an administrative offence of officials (Administrative Code, Art. 175-1)."
     },
     {
      "t": "h2",
@@ -2345,7 +2350,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "The director approves the accounting policy by order. Under NSBU 1 it may not be changed during the calendar year except in the cases the standard lists. The Tax Code also requires a tax accounting policy, in free form, covering tax registers, depreciation rates and expense methods (Tax Code, Art. 77). The two are often combined in one document."
+     "html": "The director approves the accounting policy by order; a new company adopts it within 90 days of registration (NSBU 1). It may not be changed during the calendar year except in the cases the standard lists (NSFO No. 2 from 2027). The Tax Code also requires a tax accounting policy, in free form, covering tax registers, depreciation rates and expense methods (Tax Code, Art. 77). The two are often combined in one document."
     },
     {
      "t": "box",
@@ -2354,7 +2359,8 @@ window.BOOK = {
       {
        "t": "ul",
        "items": [
-        "Approve both policies before the first transaction; changes normally apply from 1 January.",
+        "Adopt the accounting policy within 90 days of registration and the tax policy in the first reporting period; changes normally apply from 1 January.",
+        "Sign the 2027 policy order under NSFO before 31 December 2026.",
         "Check each year whether the company has crossed the audit or public-interest thresholds."
        ]
       }
@@ -2375,7 +2381,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Primary documents and accounting registers may be electronic (Law on Accounting, Arts. 14 and 15). Invoices are normally issued in the state electronic invoicing system (Tax Code, Art. 47). Reports filed electronically since 1 January 2022 no longer need to be archived on paper (PP-419 of 10 November 2022)."
+     "html": "Primary documents and accounting registers may be electronic (Law on Accounting, Arts. 14 and 15). Invoices are normally issued in the e-invoice information system, through an operator chosen in the my.soliq.uz cabinet (Tax Code, Art. 47). Reports filed electronically since 1 January 2022 no longer need to be stored or transferred to archives (PP-419 of 10 November 2022)."
     }
    ]
   },
@@ -3985,12 +3991,17 @@ window.BOOK = {
       [
        "1 March",
        "Financial statements under national standards",
-       "Annual statements"
+       "Annual statements; micro and small firms: balance sheet and income statement"
       ],
       [
        "1 March",
        "Transfer pricing",
        "Notification of controlled transactions"
+      ],
+      [
+       "1 March",
+       "Voluntary transition to IFRS",
+       "Notice to the tax authority (PP-282, para 6(a))"
       ],
       [
        "20 March",
@@ -4011,6 +4022,16 @@ window.BOOK = {
        "1 May",
        "Land tax, agricultural land",
        "Annual return"
+      ],
+      [
+       "15 June",
+       "Statutory audit",
+       "Copy of the audit report to the tax authority"
+      ],
+      [
+       "15 June",
+       "Public-interest entities",
+       "Publication of audited IFRS statements"
       ]
      ],
      "t": "table",
@@ -4018,7 +4039,7 @@ window.BOOK = {
     },
     {
      "t": "p",
-     "html": "Controlled transactions are notified by the deadline for the annual financial statements, so a company reporting under IFRS notifies by 1 May. A new participation in a foreign company must be notified within one month."
+     "html": "Controlled transactions are notified by the deadline for the annual financial statements, so a company reporting under IFRS notifies by 1 May. A new participation in a foreign company must be notified within one month. Joint-stock companies publish audited annual statements at least two weeks before the annual general meeting, which is held within six months of year end (Law on Accounting, Art. 26; JSC Law, Arts. 58, 102). There is no quarterly financial reporting."
     }
    ]
   }

@@ -12,8 +12,8 @@ const article: Record<string, LocalizedArticle> = {
       ],
       points: [
         "All taxpayers in Uzbekistan, both legal entities and individual entrepreneurs, must approve an accounting policy for tax purposes.",
-        "The policy is approved by an order or directive of the company's head and generally stays unchanged for the calendar year, except when tax or accounting legislation changes.",
-        "The policy should cover deductible and non-deductible expenses, loss carryforward and expense reserves, tax depreciation, VAT accounting, and tax registers and document storage.",
+        "The policy is approved by an order or directive of the company's head and stays unchanged for the calendar year, except when tax legislation or taxation conditions change, and then only in the part affected (Tax Code, Art. 77).",
+        "Article 77 lists what the policy must contain, including tax registers, responsible officials, separate accounting, cost allocation and VAT offset methods, hedging and depreciation; loss carryforward, expense reserves and document storage are useful additions.",
         "There is no single approved form: the policy can be a standalone document or a separate section of the financial accounting policy.",
       ],
     },
@@ -33,6 +33,26 @@ const article: Record<string, LocalizedArticle> = {
         ],
       },
       { type: "h2", text: "Key aspects to address when developing your policy" },
+      {
+        type: "p",
+        text: "Article 77 of the Tax Code sets the mandatory content. The policy must set out:",
+      },
+      {
+        type: "ul",
+        items: [
+          "The forms and procedure for tax registers developed by the taxpayer or tax agent, unless tax legislation provides otherwise",
+          "The officials responsible for compliance with the policy",
+          "The procedure for separate tax accounting where the Tax Code requires it",
+          "The methods chosen for allocating costs to expenses for profit tax and for offsetting VAT",
+          "The hedging policy, where the company carries out hedging operations",
+          "Depreciation rates or methods for each group and subgroup of assets",
+          "Since 29 June 2026, separate accounting of income from Islamic finance activities and Islamic securities (Law No. ZRU-1126)",
+        ],
+      },
+      {
+        type: "p",
+        text: "The topics below include both statutory items and recommended ones. Loss carryforward, expense reserves and document storage are not on the Article 77 list, but setting them out helps in a tax audit.",
+      },
       { type: "h3", text: "Deductible and non-deductible expenses" },
       {
         type: "p",
@@ -62,8 +82,9 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul",
         items: [
-          "Approval and Changes: Your Policy is approved by an order or directive from the company's head. Generally, it should not be changed within a calendar year — exceptions are made only if there are changes in tax or accounting legislation, with such changes typically coming into effect from January 1 of the following year.",
-          "Integration with Financial Accounting Policy: The Policy can be a standalone document or integrated as a separate section within your overall financial accounting policy. There is no single approved form.",
+          "Approval and Changes: Your Policy is approved by an order or directive from the company's head. It may not be changed within a calendar year, except when tax legislation or taxation conditions change, and then only in the part caused by those changes (Tax Code, Art. 77). The methods chosen when the policy is formed apply from 1 January of the year following its approval. A change in accounting legislation is a ground for changing the financial accounting policy (NSBU No. 1, para 52), not the tax policy.",
+          "New Entities: A newly created legal entity, or a permanent establishment of a foreign legal entity, decides on its tax accounting methods within its first reporting period after creation (Tax Code, Art. 77).",
+          "Integration with Financial Accounting Policy: The Policy can be a standalone document or integrated as a separate section within your overall financial accounting policy. There is no single approved form. The financial accounting policy has its own rules: a new company adopts it within 90 days of state registration (NSBU No. 1, para 51), and from 1 January 2027 these rules move to NSFO No. 2.",
           "Fiscal Focus in Uzbekistan: Uzbekistan's accounting standards often have a strong fiscal orientation. Many organisations incorporate methods that bring accounting and tax data closer — a practice generally supported by tax authorities.",
         ],
       },
@@ -80,11 +101,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Can an Accounting Policy for Tax Purposes be changed during the year in Uzbekistan?",
-        answer: "Generally no. The policy must remain unchanged throughout the calendar year. Exceptions are permitted only when tax or accounting legislation changes, and any such amendments typically take effect from 1 January of the following year.",
+        answer: "Generally no. The policy must remain unchanged throughout the calendar year. A change is permitted only when tax legislation or taxation conditions change, and only in the part caused by those changes (Tax Code, Art. 77). The methods chosen when the policy is formed apply from 1 January of the year following its approval.",
       },
       {
         question: "What must an Accounting Policy for Tax Purposes cover in Uzbekistan?",
-        answer: "The policy must address: deductible and non-deductible expenses, depreciation and amortisation methods for tax purposes, VAT accounting (including offset conditions and separate accounting rules), loss carryforward methodology, expense reserves, and the forms and procedures for tax registers and document management.",
+        answer: "Under Article 77 of the Tax Code, the policy must set out: the forms and procedure for the taxpayer's own tax registers; the officials responsible; separate accounting where the Code requires it; the methods for allocating costs for profit tax and for VAT offset; the hedging policy, if any; depreciation rates or methods for each asset group; and, since 29 June 2026, separate accounting of Islamic finance income. In practice it should also cover deductible and non-deductible expenses, loss carryforward, expense reserves and document storage.",
       },
       {
         question: "How does an Accounting Policy for Tax Purposes protect a company during a tax audit in Uzbekistan?",
@@ -103,8 +124,8 @@ const article: Record<string, LocalizedArticle> = {
       ],
       points: [
         "Все налогоплательщики Узбекистана — юридические лица и индивидуальные предприниматели — обязаны утвердить учётную политику для целей налогообложения.",
-        "Политика утверждается приказом или распоряжением руководителя и, как правило, не меняется в течение календарного года, кроме случаев изменения налогового или бухгалтерского законодательства.",
-        "Политика должна охватывать вычитаемые и невычитаемые расходы, перенос убытков и резервы расходов, налоговую амортизацию, учёт НДС, а также налоговые регистры и сроки хранения документов.",
+        "Политика утверждается приказом или распоряжением руководителя и не меняется в течение календарного года, кроме случаев изменения налогового законодательства или условий налогообложения, и только в затронутой части (ст. 77 НК).",
+        "Статья 77 перечисляет обязательное содержание политики, в том числе налоговые регистры, ответственных лиц, раздельный учёт, методы отнесения затрат и зачёта НДС, хеджирование и амортизацию; перенос убытков, резервы расходов и хранение документов полезно описать дополнительно.",
         "Единой утверждённой формы нет: политика может быть отдельным документом или разделом общей учётной политики.",
       ],
     },
@@ -124,6 +145,26 @@ const article: Record<string, LocalizedArticle> = {
         ],
       },
       { type: "h2", text: "Ключевые аспекты при разработке политики" },
+      {
+        type: "p",
+        text: "Обязательное содержание устанавливает статья 77 Налогового кодекса. В политике должны быть отражены:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Формы и порядок составления налоговых регистров, разработанных налогоплательщиком или налоговым агентом самостоятельно, если иное не предусмотрено налоговым законодательством",
+          "Должностные лица, ответственные за её соблюдение",
+          "Порядок ведения раздельного учёта в целях налогообложения, когда его требует Налоговый кодекс",
+          "Выбранные методы отнесения затрат на расходы для налога на прибыль и отнесения в зачёт НДС",
+          "Политика хеджирования, если компания проводит операции хеджирования",
+          "Нормы (методы начисления) амортизации по каждой группе и подгруппе активов",
+          "С 29 июня 2026 года — раздельный учёт доходов от деятельности в сфере исламского финансирования и по исламским ценным бумагам (Закон № ЗРУ-1126)",
+        ],
+      },
+      {
+        type: "p",
+        text: "Ниже описаны как обязательные, так и рекомендуемые разделы. Перенос убытков, резервы расходов и хранение документов в статье 77 не названы, но их описание помогает при налоговой проверке.",
+      },
       { type: "h3", text: "Вычитаемые и невычитаемые расходы" },
       {
         type: "p",
@@ -153,8 +194,9 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul",
         items: [
-          "Утверждение и изменения: политика утверждается приказом или распоряжением руководителя. Как правило, в течение календарного года она не меняется — исключения делаются только при изменениях налогового или бухгалтерского законодательства, и такие изменения обычно вступают в силу с 1 января следующего года.",
-          "Интеграция с учётной политикой по бухучёту: политика может быть отдельным документом или входить отдельным разделом в общую учётную политику. Единой утверждённой формы не существует.",
+          "Утверждение и изменения: политика утверждается приказом или распоряжением руководителя. В течение календарного года она не меняется, кроме случаев изменения налогового законодательства или условий налогообложения, и только в той части, которая обусловлена этими изменениями (ст. 77 НК). Способы учёта, выбранные при формировании политики, применяются с 1 января года, следующего за годом её утверждения. Изменение законодательства о бухгалтерском учёте — основание для изменения бухгалтерской учётной политики (п. 52 НСБУ № 1), а не налоговой.",
+          "Новые организации: вновь созданное юридическое лицо или постоянное учреждение иностранного юридического лица принимает решение о способах налогового учёта в течение первого отчётного периода после создания (ст. 77 НК).",
+          "Интеграция с учётной политикой по бухучёту: политика может быть отдельным документом или входить отдельным разделом в общую учётную политику. Единой утверждённой формы не существует. Для бухгалтерской учётной политики действуют свои правила: новая компания утверждает её не позднее 90 дней со дня государственной регистрации (п. 51 НСБУ № 1), а с 1 января 2027 года эти правила переходят в НСФО № 2.",
           "Фискальная направленность в Узбекистане: стандарты бухгалтерского учёта Узбекистана часто имеют выраженную фискальную ориентацию. Многие организации внедряют методы, сближающие данные бухгалтерского и налогового учёта — практика, в целом поддерживаемая налоговыми органами.",
         ],
       },
@@ -171,11 +213,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Можно ли изменить учётную политику для целей налогообложения в течение года в Узбекистане?",
-        answer: "Как правило, нет. Политика должна оставаться неизменной в течение всего календарного года. Исключения допускаются только при изменении налогового или бухгалтерского законодательства, при этом такие поправки обычно вступают в силу с 1 января следующего года.",
+        answer: "Как правило, нет. Политика должна оставаться неизменной в течение всего календарного года. Изменения допускаются только при изменении налогового законодательства или условий налогообложения и только в той части, которая обусловлена этими изменениями (ст. 77 НК). Способы учёта, выбранные при формировании политики, применяются с 1 января года, следующего за годом её утверждения.",
       },
       {
         question: "Что должна охватывать учётная политика для целей налогообложения в Узбекистане?",
-        answer: "Политика должна охватывать: вычитаемые и невычитаемые расходы, методы амортизации для налоговых целей, учёт НДС (включая условия зачёта и правила раздельного учёта), методологию переноса убытков, резервы расходов, а также формы и процедуры ведения налоговых регистров и документооборота.",
+        answer: "По статье 77 Налогового кодекса в политике должны быть отражены: формы и порядок составления собственных налоговых регистров; ответственные должностные лица; раздельный учёт, когда его требует Кодекс; методы отнесения затрат на расходы для налога на прибыль и отнесения в зачёт НДС; политика хеджирования, если оно проводится; нормы или методы амортизации по группам активов; с 29 июня 2026 года — раздельный учёт доходов от исламского финансирования. На практике в ней стоит также описать вычитаемые и невычитаемые расходы, перенос убытков, резервы расходов и хранение документов.",
       },
       {
         question: "Как учётная политика для целей налогообложения защищает компанию при налоговой проверке в Узбекистане?",
@@ -194,8 +236,8 @@ const article: Record<string, LocalizedArticle> = {
       ],
       points: [
         "Oʻzbekistondagi barcha soliq toʻlovchilar — yuridik shaxslar ham, yakka tartibdagi tadbirkorlar ham — soliq maqsadlaridagi hisob siyosatini tasdiqlashi shart.",
-        "Siyosat kompaniya rahbarining buyrugʻi yoki koʻrsatmasi bilan tasdiqlanadi va odatda kalendar yili davomida oʻzgartirilmaydi, soliq yoki buxgalteriya qonunchiligi oʻzgargan hollar bundan mustasno.",
-        "Siyosat chegirib tashlanadigan va chegirib tashlanmaydigan xarajatlar, zararlarni keyingi davrlarga oʻtkazish va xarajat zaxiralari, soliq amortizatsiyasi, QQS hisobi hamda soliq registrlari va hujjatlarni saqlash muddatlarini qamrab olishi kerak.",
+        "Siyosat kompaniya rahbarining buyrugʻi yoki koʻrsatmasi bilan tasdiqlanadi va kalendar yili davomida oʻzgartirilmaydi; soliq qonunchiligi yoki soliq solish shartlari oʻzgargan hollar bundan mustasno va bunda faqat tegishli qismi oʻzgartiriladi (Soliq kodeksi, 77-modda).",
+        "77-modda siyosatning majburiy mazmunini belgilaydi, jumladan soliq registrlari, masʼul shaxslar, alohida hisob, xarajatlarni taqsimlash va QQSni hisobga olish usullari, xedjlash va amortizatsiya; zararlarni oʻtkazish, xarajat zaxiralari va hujjatlarni saqlashni qoʻshimcha ravishda yoritish foydali.",
         "Yagona tasdiqlangan shakl yoʻq: siyosat alohida hujjat yoki umumiy moliyaviy hisob siyosatining alohida boʻlimi boʻlishi mumkin.",
       ],
     },
@@ -215,6 +257,26 @@ const article: Record<string, LocalizedArticle> = {
         ],
       },
       { type: "h2", text: "Siyosatni ishlab chiqishda hal qilinishi kerak boʻlgan asosiy jihatlar" },
+      {
+        type: "p",
+        text: "Majburiy mazmunni Soliq kodeksining 77-moddasi belgilaydi. Siyosatda quyidagilar aks ettirilishi shart:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Soliq toʻlovchi yoki soliq agenti mustaqil ishlab chiqqan soliq registrlarining shakllari va tuzish tartibi, agar soliq qonunchiligida boshqacha tartib nazarda tutilmagan boʻlsa",
+          "Siyosatga rioya etilishi uchun masʼul mansabdor shaxslar",
+          "Soliq kodeksi talab qilgan hollarda soliq solish maqsadida alohida hisob yuritish tartibi",
+          "Foyda soligʻini hisoblashda xarajatlarni chegirib tashlash va QQSni hisobga olishning tanlangan usullari",
+          "Kompaniya xedjlash operatsiyalarini amalga oshirsa, xedjlash siyosati",
+          "Aktivlarning har bir guruhi va kichik guruhi boʻyicha amortizatsiya normalari (hisoblash usullari)",
+          "2026-yil 29-iyundan — islomiy moliya faoliyati va islomiy qimmatli qogʻozlardan olinadigan daromadlarning alohida hisobi (OʻRQ-1126-sonli Qonun)",
+        ],
+      },
+      {
+        type: "p",
+        text: "Quyida majburiy va tavsiya etiladigan boʻlimlar birga koʻrib chiqiladi. Zararlarni oʻtkazish, xarajat zaxiralari va hujjatlarni saqlash 77-moddada nomlanmagan, biroq ularni yoritish soliq tekshiruvida yordam beradi.",
+      },
       { type: "h3", text: "Chegirib tashlanadigan va chegirib tashlanmaydigan xarajatlar" },
       {
         type: "p",
@@ -244,8 +306,9 @@ const article: Record<string, LocalizedArticle> = {
       {
         type: "ul",
         items: [
-          "Tasdiqlash va oʻzgartirishlar: siyosat kompaniya rahbarining buyrugʻi yoki koʻrsatmasi bilan tasdiqlanadi. Odatda, kalendar yili davomida oʻzgartirilmaydi — istisno faqat soliq yoki buxgalteriya qonunchiligida oʻzgarishlar boʻlganda qilinadi va bunday oʻzgarishlar odatda keyingi yilning 1-yanvaridan kuchga kiradi.",
-          "Moliyaviy hisob siyosati bilan integratsiya: siyosat alohida hujjat yoki umumiy moliyaviy hisob siyosatining alohida boʻlimi sifatida boʻlishi mumkin. Yagona tasdiqlangan shakl mavjud emas.",
+          "Tasdiqlash va oʻzgartirishlar: siyosat kompaniya rahbarining buyrugʻi yoki koʻrsatmasi bilan tasdiqlanadi. Kalendar yili davomida u oʻzgartirilmaydi; istisno faqat soliq qonunchiligi yoki soliq solish shartlari oʻzgarganda va faqat shu oʻzgarishlar taqozo etgan qismda qilinadi (Soliq kodeksi, 77-modda). Siyosatni shakllantirishda tanlangan hisob usullari u tasdiqlangan yildan keyingi yilning 1-yanvaridan qoʻllaniladi. Buxgalteriya hisobi toʻgʻrisidagi qonunchilikning oʻzgarishi soliq siyosatini emas, buxgalteriya hisob siyosatini oʻzgartirish uchun asos boʻladi (BHMS № 1, 52-band).",
+          "Yangi tashkilotlar: yangi tashkil etilgan yuridik shaxs yoki chet el yuridik shaxsining doimiy muassasasi soliq hisobini yuritish usullari toʻgʻrisida tashkil etilganidan keyingi birinchi hisobot davri mobaynida qaror qabul qiladi (Soliq kodeksi, 77-modda).",
+          "Moliyaviy hisob siyosati bilan integratsiya: siyosat alohida hujjat yoki umumiy moliyaviy hisob siyosatining alohida boʻlimi sifatida boʻlishi mumkin. Yagona tasdiqlangan shakl mavjud emas. Buxgalteriya hisob siyosati uchun oʻz qoidalari bor: yangi kompaniya uni davlat roʻyxatidan oʻtgan kundan boshlab 90 kundan kechiktirmay tasdiqlaydi (BHMS № 1, 51-band), 2027-yil 1-yanvardan esa bu qoidalar Moliyaviy hisobotning milliy standarti № 2 ga oʻtadi.",
           "Oʻzbekistonda fiskal yoʻnaltirilganlik: Oʻzbekistonning buxgalteriya standartlari koʻpincha kuchli fiskal yoʻnalishga ega. Koʻplab tashkilotlar buxgalteriya va soliq maʼlumotlarini yaqinlashtiradigan usullarni qoʻllaydi — bu amaliyot odatda soliq organlari tomonidan qoʻllab-quvvatlanadi.",
         ],
       },
@@ -262,11 +325,11 @@ const article: Record<string, LocalizedArticle> = {
       },
       {
         question: "Oʻzbekistonda soliq maqsadlaridagi hisob siyosatini yil davomida oʻzgartirish mumkinmi?",
-        answer: "Odatda, yoʻq. Siyosat butun kalendar yili davomida oʻzgarishsiz qolishi kerak. Istisnolar faqat soliq yoki buxgalteriya qonunchiligida oʻzgarishlar boʻlganda ruxsat etiladi va bunday oʻzgartirishlar odatda keyingi yilning 1-yanvaridan kuchga kiradi.",
+        answer: "Odatda, yoʻq. Siyosat butun kalendar yili davomida oʻzgarishsiz qolishi kerak. Oʻzgartirishga faqat soliq qonunchiligi yoki soliq solish shartlari oʻzgarganda va faqat shu oʻzgarishlar taqozo etgan qismda ruxsat etiladi (Soliq kodeksi, 77-modda). Siyosatni shakllantirishda tanlangan hisob usullari u tasdiqlangan yildan keyingi yilning 1-yanvaridan qoʻllaniladi.",
       },
       {
         question: "Oʻzbekistonda soliq maqsadlaridagi hisob siyosati nimalarni qamrab olishi kerak?",
-        answer: "Siyosat quyidagilarni qamrab olishi kerak: chegirib tashlanadigan va chegirib tashlanmaydigan xarajatlar, soliq maqsadlari uchun amortizatsiya usullari, QQS hisobi (hisobga olish shartlari va alohida hisob qoidalari), zararlarni keyingi davrlarga oʻtkazish metodologiyasi, xarajat zaxiralari, soliq registrlarini yuritish shakllari va tartiblari hamda hujjatlar boshqaruvi.",
+        answer: "Soliq kodeksining 77-moddasiga koʻra siyosatda quyidagilar aks ettirilishi shart: oʻzi ishlab chiqqan soliq registrlarining shakllari va tuzish tartibi; masʼul mansabdor shaxslar; Kodeks talab qilgan hollarda alohida hisob; foyda soligʻi uchun xarajatlarni chegirib tashlash va QQSni hisobga olish usullari; xedjlash operatsiyalari boʻlsa, xedjlash siyosati; aktivlar guruhlari boʻyicha amortizatsiya normalari yoki usullari; 2026-yil 29-iyundan — islomiy moliyadan olinadigan daromadlarning alohida hisobi. Amalda siyosatda chegirib tashlanadigan va chegirib tashlanmaydigan xarajatlar, zararlarni oʻtkazish, xarajat zaxiralari va hujjatlarni saqlashni ham yoritish maqsadga muvofiq.",
       },
       {
         question: "Oʻzbekistonda soliq tekshiruvi paytida soliq maqsadlaridagi hisob siyosati kompaniyani qanday himoya qiladi?",
