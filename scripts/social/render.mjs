@@ -20,6 +20,8 @@ if (!slug) {
 const post = JSON.parse(fs.readFileSync(path.join(ROOT, "social/posts", slug, "post.json"), "utf8"));
 // "format": "story" renders 1080×1920 Instagram stories (for highlights); the default is a 1080×1350 feed carousel.
 const STORY = post.format === "story";
+// SHOW_STICKER=1 draws a dashed box where the link sticker goes (for previews only).
+const SHOW_STICKER = process.env.SHOW_STICKER === "1";
 const W = 1080, H = STORY ? 1920 : 1350;
 const outDir = path.join(ROOT, "public/social", slug);
 fs.rmSync(outDir, { recursive: true, force: true });
@@ -73,6 +75,11 @@ b { color: #f5f5f7; font-weight: 700; }
 .foot .pg { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .bar { position: absolute; left: 0; top: 0; height: 10px; background: #940e27; }
 .photo { padding: 0; background: #e9e6e1; }
+.doc { padding: 0; background: radial-gradient(circle at 50% 60%, #f6f4f0 0%, #e9e6e1 60%, #ddd9d2 100%); }
+.doc .ptext { position: absolute; left: 88px; right: 88px; top: 250px; display: block; flex: none; padding-bottom: 8px; max-height: 450px; }
+.doc .cover { position: absolute; left: 50%; top: 720px; width: 700px; height: 700px; transform: translateX(-50%); border-radius: 18px; object-fit: cover;
+  box-shadow: 0 40px 80px rgba(40, 20, 20, .28), 0 8px 20px rgba(0, 0, 0, .18); }
+.doc .sticker { position: absolute; left: 50%; top: 1480px; transform: translateX(-50%); width: 560px; height: 120px; border: 3px dashed rgba(148, 14, 39, .35); border-radius: 24px; display: grid; place-items: center; font-size: 26px; font-weight: 600; color: rgba(148, 14, 39, .55); }
 .photo .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .photo .low { -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%); mask-image: linear-gradient(180deg, transparent 0, #000 14%); }
 .photo .shade { position: absolute; left: 0; right: 0; top: 0; height: ${STORY ? 1050 : 620}px; background: linear-gradient(180deg, rgba(244,242,238,.82) 0%, rgba(244,242,238,.55) 55%, rgba(244,242,238,0) 100%); }
@@ -113,8 +120,17 @@ function photoHTML(sl, i, total) {
 <div class="pfoot"><div class="pmark"><img src="${logo}" alt="">ADVIZEN</div><span>${esc(sl.source ?? post.source ?? "")}${last ? "" : ""}</span></div></section>`;
 }
 
+// A story that shows a document cover (a guide) on light stone, with an empty band under it
+// for the Instagram link sticker, which is added by hand in the app.
+function docHTML(sl) {
+  const src = "file://" + path.join(ROOT, "social/posts", slug, sl.img);
+  return `<section class="s doc"><div class="body ptext">${sl.kicker ? `<div class="pkicker">${esc(sl.kicker)}</div>` : ""}<h2 class="ph">${rich(sl.title)}</h2>${sl.text ? `<p class="psub">${rich(sl.text)}</p>` : ""}</div>
+<img class="cover" src="${src}" alt="">${SHOW_STICKER ? `<div class="sticker">${esc(sl.sticker || "ссылка")}</div>` : ""}</section>`;
+}
+
 function slideHTML(sl, i, total) {
   if (sl.type === "photo") return photoHTML(sl, i, total);
+  if (sl.type === "doc") return docHTML(sl);
   const head = `<div class="top"><div class="mark"><img src="${logo}" alt="">ADVIZEN</div><div class="rub">${esc(post.rubric)}</div></div>`;
   const last = i === total - 1;
   const swipe = sl.type === "cover" ? `${L.swipe} →` : `${i + 1} ${L.of} ${total}`;

@@ -2,23 +2,71 @@
   "status": "draft",
   "format": "story",
   "lang": "ru",
-  "source": "advizenco.com → Гиды",
   "slides": [
     {
-      "type": "photo",
-      "img": "../../highlights/img/guides-1.jpg",
-      "pos": "50% 50%",
-      "kicker": "Гиды",
-      "title": "Бесплатные **гиды 2026**",
-      "items": [
-        "Налоги",
-        "Открытие компании",
-        "Валютный контроль",
-        "Бухгалтерия и отчётность",
-        "Найм и миграция",
-        "IT-бизнес"
-      ],
-      "text": "Скачать — по ссылке в шапке профиля"
+      "type": "doc",
+      "img": "../../highlights/guides/Tax-Guide-Uzbekistan-2026-RU.jpg",
+      "kicker": "Гид 2026 · бесплатно",
+      "title": "Налоговый **гид**",
+      "text": "Налог на прибыль, НДС, налоги на зарплату",
+      "sticker": "advizenco.com/guides/Tax-Guide-Uzbekistan-2026-RU.pdf"
+    },
+    {
+      "type": "doc",
+      "img": "../../highlights/guides/Company-Setup-Uzbekistan-2026-RU.jpg",
+      "kicker": "Гид 2026 · бесплатно",
+      "title": "Открытие **компании**",
+      "text": "Правовые формы, регистрация, первые шаги",
+      "sticker": "advizenco.com/guides/Company-Setup-Uzbekistan-2026-RU.pdf"
+    },
+    {
+      "type": "doc",
+      "img": "../../highlights/guides/Accounting-and-Reporting-Uzbekistan-2026-RU.jpg",
+      "kicker": "Гид 2026 · бесплатно",
+      "title": "Бухучёт и **отчётность**",
+      "text": "Стандарты, отчётность, аудит, переход на НСФО",
+      "sticker": "advizenco.com/guides/Accounting-and-Reporting-Uzbekistan-2026-RU.pdf"
+    },
+    {
+      "type": "doc",
+      "img": "../../highlights/guides/Currency-Control-Uzbekistan-2026-RU.jpg",
+      "kicker": "Гид 2026 · бесплатно",
+      "title": "Валютный **контроль**",
+      "text": "E-контракт, конвертация, платежи материнской компании",
+      "sticker": "advizenco.com/guides/Currency-Control-Uzbekistan-2026-RU.pdf"
+    },
+    {
+      "type": "doc",
+      "img": "../../highlights/guides/Hiring-and-Migration-Uzbekistan-2026-RU.jpg",
+      "kicker": "Гид 2026 · бесплатно",
+      "title": "Найм и **миграция**",
+      "text": "Договоры, зарплата, разрешения на работу и визы",
+      "sticker": "advizenco.com/guides/Hiring-and-Migration-Uzbekistan-2026-RU.pdf"
+    },
+    {
+      "type": "doc",
+      "img": "../../highlights/guides/IT-Business-in-Uzbekistan-2026-RU.jpg",
+      "kicker": "Гид 2026 · бесплатно",
+      "title": "IT-**бизнес**",
+      "text": "IT Park, релокация и найм для технологических компаний",
+      "sticker": "advizenco.com/guides/IT-Business-in-Uzbekistan-2026-RU.pdf"
+    },
+    {
+      "type": "doc",
+      "img": "../../highlights/guides/Doing-Business-in-Uzbekistan-2026.jpg",
+      "kicker": "Гид 2026 · бесплатно",
+      "title": "Doing Business **2026**",
+      "text": "Большой гид на английском: право, налоги, учёт, найм",
+      "sticker": "advizenco.com/guides/Doing-Business-in-Uzbekistan-2026.pdf"
     }
-  ]
+  ],
+  "links": {
+    "Tax-Guide-Uzbekistan-2026-RU": "https://www.advizenco.com/guides/Tax-Guide-Uzbekistan-2026-RU.pdf",
+    "Company-Setup-Uzbekistan-2026-RU": "https://www.advizenco.com/guides/Company-Setup-Uzbekistan-2026-RU.pdf",
+    "Accounting-and-Reporting-Uzbekistan-2026-RU": "https://www.advizenco.com/guides/Accounting-and-Reporting-Uzbekistan-2026-RU.pdf",
+    "Currency-Control-Uzbekistan-2026-RU": "https://www.advizenco.com/guides/Currency-Control-Uzbekistan-2026-RU.pdf",
+    "Hiring-and-Migration-Uzbekistan-2026-RU": "https://www.advizenco.com/guides/Hiring-and-Migration-Uzbekistan-2026-RU.pdf",
+    "IT-Business-in-Uzbekistan-2026-RU": "https://www.advizenco.com/guides/IT-Business-in-Uzbekistan-2026-RU.pdf",
+    "Doing-Business-in-Uzbekistan-2026": "https://www.advizenco.com/guides/Doing-Business-in-Uzbekistan-2026.pdf"
+  }
 }
