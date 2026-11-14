@@ -31,7 +31,7 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "advizen-social-"));
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 // **bold** inside text becomes the accent colour.
 // Russian typesetting: keep "№ 76", "п. 15", "ст. 36" and one- or two-letter words with the next word.
-const nb = (s) => s.replace(/(№|п\.|ст\.|ч\.) /g, "$1\u00a0").replace(/(^|[\s(«—])([А-Яа-яЁёA-Za-z]{1,2}) /g, "$1$2\u00a0");
+const nb = (s) => s.replace(/(№|п\.|ст\.|ч\.) /g, "$1\u00a0").replace(/(^|[\s(«—*])([А-Яа-яЁёA-Za-z]{1,2}) /g, "$1$2\u00a0");
 const rich = (s) => nb(esc(s)).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br>");
 const logo = "file://" + path.join(ROOT, "public/Logo.webp");
 const L = post.lang === "en" ? { swipe: "Swipe", of: "of" } : { swipe: "Листайте", of: "из" };
