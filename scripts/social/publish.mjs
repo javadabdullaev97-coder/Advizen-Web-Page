@@ -84,7 +84,44 @@ async function publishInstagram() {
   console.log(`Instagram: published ${info.permalink}`);
 }
 
+// Stories ("format": "story"): each slide becomes one Instagram story, published in order.
+// The API cannot add link stickers or put stories into highlights; those are done in the app.
+async function publishStories() {
+  const urls = files.map((f) => `${SITE}/social/${slug}/${f}`);
+  for (const u of urls) {
+    const r = await fetch(u, { method: "HEAD" });
+    if (!r.ok) throw new Error(`${u} is not live yet (HTTP ${r.status}). Push public/social/${slug}/ and wait for the deploy.`);
+  }
+  published.stories ||= {};
+  console.log(`Instagram stories: ${urls.length}, all live.`);
+  for (const [i, u] of urls.entries()) {
+    const key = files[i];
+    if (published.stories[key]) { console.log(`  ${key}: already published, skipped.`); continue; }
+    if (dry) { console.log(`  ${key}: would publish`); continue; }
+    const container = (await graph("POST", `/${igId}/media`, { media_type: "STORIES", image_url: u, access_token: token })).id;
+    for (let t = 0; t < 30; t++) {
+      const s = await graph("GET", `/${container}`, { fields: "status_code", access_token: token });
+      if (s.status_code === "FINISHED") break;
+      if (s.status_code === "ERROR" || s.status_code === "EXPIRED") throw new Error(`Story ${key}: container status ${s.status_code}`);
+      await sleep(2000);
+    }
+    const media = (await graph("POST", `/${igId}/media_publish`, { creation_id: container, access_token: token })).id;
+    published.stories[key] = { id: media, at: new Date().toISOString() };
+    save();
+    console.log(`  ${key}: published (${media})`);
+    await sleep(3000); // keep the order stable
+  }
+}
+
 if (!dry && (!token || (wantIg && !igId))) throw new Error("META_PAGE_TOKEN / IG_USER_ID are empty. Run scripts/social/setup-token.mjs first.");
+if (post.format === "story") {
+  await publishStories();
+  if (!dry && Object.keys(published.stories || {}).length === files.length) {
+    post.status = "published";
+    fs.writeFileSync(path.join(postDir, "post.json"), JSON.stringify(post, null, 2) + "\n");
+  }
+  process.exit(0);
+}
 if (wantFb) await publishFacebook();
 if (wantIg) await publishInstagram();
 if (!dry && (published.facebook || published.instagram)) {
