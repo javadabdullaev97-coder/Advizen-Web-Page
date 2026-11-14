@@ -50,3 +50,6 @@ next-env.d.ts
 # generated cover candidates (see docs/image-brief)
 /image-candidates/
 docs/dbu/*.pdf
+
+# Social posts: local previews
+social/posts/*/preview.jpg
