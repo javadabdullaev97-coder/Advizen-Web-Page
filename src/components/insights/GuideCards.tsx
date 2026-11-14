@@ -20,21 +20,24 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
         </div>
       )}
       <ul data-reveal className={`grid gap-4 ${single ? "" : GUIDES.length % 3 === 0 ? "md:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2"}`}>
-        {GUIDES.map((g) => (
-          <li key={g.slug}>
+        {GUIDES.map((g, i) => {
+          // In the two-column grid an odd last card spans the row, so no card is left alone.
+          const wide = !single && GUIDES.length % 3 !== 0 && GUIDES.length % 2 === 1 && i === GUIDES.length - 1;
+          return (
+          <li key={g.slug} className={wide ? "sm:col-span-2" : ""}>
             <a
               href={localized(g.pdf, locale)}
               target="_blank"
               rel="noopener"
               className={`group relative block h-full overflow-hidden rounded-[var(--radius-tile)] bg-[#1c1c1e] ${
-                single ? "aspect-[4/5] sm:aspect-[21/9]" : GUIDES.length % 3 === 0 ? "aspect-[4/5] lg:aspect-square" : "aspect-[4/5] lg:aspect-[4/3]"
+                single || wide ? "aspect-[4/5] sm:aspect-[21/9]" : GUIDES.length % 3 === 0 ? "aspect-[4/5] lg:aspect-square" : "aspect-[4/5] lg:aspect-[4/3]"
               }`}
             >
               <Image
                 src={g.photo}
                 alt=""
                 fill
-                sizes={single ? "100vw" : GUIDES.length % 3 === 0 ? "(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" : "(max-width: 639px) 100vw, 50vw"}
+                sizes={single || wide ? "100vw" : GUIDES.length % 3 === 0 ? "(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" : "(max-width: 639px) 100vw, 50vw"}
                 className="object-cover object-[50%_22%] transition-transform duration-700 ease-[cubic-bezier(.2,.7,.2,1)] motion-safe:group-hover:scale-[1.03]"
               />
               <div
@@ -52,7 +55,8 @@ export default function GuideCards({ heading = true }: { heading?: boolean }) {
               </div>
             </a>
           </li>
-        ))}
+          );
+        })}
       </ul>
     </div>
   );
