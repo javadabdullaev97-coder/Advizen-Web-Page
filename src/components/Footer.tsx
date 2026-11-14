@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import SocialIcons from "@/components/SocialIcons";
 import { LanguageLinks } from "@/components/LanguageSwitcher";
 
 export default function Footer() {
@@ -78,10 +77,6 @@ export default function Footer() {
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="border-t border-line py-7">
-          <SocialIcons />
         </div>
 
         <div className="border-t border-line pt-6 pb-10 flex flex-wrap justify-between items-center gap-4 text-sm text-muted">
