@@ -7,6 +7,7 @@ Carousels for Instagram, single-photo posts for the Facebook Page, PDF documents
 `social/posts/<slug>/`
 - `post.json` holds the slides, the captions (`caption.ru` for Instagram, `caption.fb` for Facebook) and the status: `draft` → `approved` (the owner said yes) → `published`.
 - `img/` holds the background pictures, generated in Gemini: natural light, light stone, one deep-burgundy glass object, an empty top for the text.
+- The last slide (`"contacts": true`) and every caption end with all four contacts: advizenco.com, +998 33 488 48 88, info@advizenco.com, Telegram @advizen.
 - `published.json` records the post IDs and links once a post is live.
 
 ## Commands

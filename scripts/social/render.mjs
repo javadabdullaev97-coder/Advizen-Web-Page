@@ -79,7 +79,7 @@ b { color: #f5f5f7; font-weight: 700; }
 .ph b { color: #940e27; font-weight: 800; }
 .psub { font-size: 40px; line-height: 1.3; font-weight: 500; color: #3a3a3d; margin-top: 30px; text-wrap: pretty; }
 .psub b { color: #1d1d1f; }
-.pcontacts { margin-top: 34px; font-size: 36px; font-weight: 700; color: #940e27; }
+.pcontacts { margin-top: 34px; font-size: 34px; line-height: 1.32; font-weight: 700; color: #940e27; }
 .pfoot { position: absolute; left: 88px; right: 88px; bottom: 64px; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
 .pmark { display: flex; align-items: center; gap: 14px; font-weight: 800; font-size: 26px; letter-spacing: 0.22em; color: #1d1d1f; padding: 14px 22px; border-radius: 999px; background: rgba(255,255,255,.82); }
 .pmark img { width: 40px; height: 40px; object-fit: contain; }
@@ -91,7 +91,10 @@ b { color: #f5f5f7; font-weight: 700; }
 function photoHTML(sl, i, total) {
   const src = "file://" + path.join(ROOT, "social/posts", slug, sl.img);
   const last = i === total - 1;
-  const contacts = sl.contacts ? `<div class="pcontacts">advizenco.com · +998&nbsp;33&nbsp;488&nbsp;48&nbsp;88</div>` : "";
+  // The closing slide always carries all four contacts.
+  const contacts = sl.contacts
+    ? `<div class="pcontacts"><div>advizenco.com</div><div>+998&nbsp;33&nbsp;488&nbsp;48&nbsp;88</div><div>info@advizenco.com</div><div>Telegram: @advizen</div></div>`
+    : "";
   return `<section class="s photo"><img class="bg" src="${src}" style="object-position:${sl.pos || "50% 50%"}" alt="">
 <div class="shade"></div>
 <div class="body ptext">${sl.kicker ? `<div class="pkicker">${esc(sl.kicker)}</div>` : ""}<h2 class="ph">${rich(sl.title)}</h2>${sl.text ? `<p class="psub">${rich(sl.text)}</p>` : ""}${contacts}</div>
@@ -112,8 +115,8 @@ function slideHTML(sl, i, total) {
     inner = `<div class="fig">${esc(sl.figure)}${sl.unit ? `<small>${esc(sl.unit)}</small>` : ""}</div><h2 style="margin-top:48px">${rich(sl.title)}</h2>${sl.text ? `<div class="text">${rich(sl.text)}</div>` : ""}`;
   } else if (sl.type === "cta") {
     const c = post.lang === "en"
-      ? [["Website", "advizenco.com"], ["Phone", "+998 33 488 48 88"], ["Email", "info@advizenco.com"]]
-      : [["Сайт", "advizenco.com"], ["Телефон", "+998 33 488 48 88"], ["Почта", "info@advizenco.com"]];
+      ? [["Website", "advizenco.com"], ["Phone", "+998 33 488 48 88"], ["Email", "info@advizenco.com"], ["Telegram", "@advizen"]]
+      : [["Сайт", "advizenco.com"], ["Телефон", "+998 33 488 48 88"], ["Почта", "info@advizenco.com"], ["Telegram", "@advizen"]];
     inner = `<h2>${rich(sl.title)}</h2>${sl.text ? `<div class="text">${rich(sl.text)}</div>` : ""}<div class="contacts">${c.map(([k, v]) => `<div><span>${k}</span>${v}</div>`).join("")}</div>`;
   } else {
     const num = sl.n ?? String(i).padStart(2, "0");
