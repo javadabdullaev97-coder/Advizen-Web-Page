@@ -1,0 +1,432 @@
+<!doctype html>
+<!-- Валютный контроль и платежи в Узбекистане 2026 (RU), гид для клиентов. Пока не публикуется.
+     Сборка: NODE_PATH=$(npm root -g) node scripts/build-pdf.mjs docs/currency-guide/ru.html <output.pdf> --theme guide
+     Квадратные страницы 228,6 мм в спокойном фирменном стиле brochure.css. Структура и блок <style> повторяют
+     гид по бухучёту (docs/accounting-guide): обложка, содержание со ссылками, три красных разделителя глав,
+     полоска прогресса на внутренних страницах, контакты. Сам файл brochure-kit.css не подключается.
+     Гид, а не меморандум: уровень обзора, см. docs/guides-vs-articles.md, правило 7. Налоги с дивидендов, процентов
+     и услуг относятся к налоговому гиду и даны одной строкой.
+     Правила текста: без тире-разделителей и точек с запятой, короткое тире только в диапазонах чисел. Без цен и
+     комиссий (проценты штрафов допустимы), без названий клиентов. Акты: ЗРУ / ПП / УП, ПКМ № 283, система
+     называется E-kontrakt. Номера статей только у главных цифр.
+     Только факты, которые отчёт «Валютный контроль и платежи в Узбекистане 2026» отмечает как подтверждённые.
+     Как открытые вопросы не взяты: возврат штрафа после репатриации (закон и Положение расходятся), судьба
+     законопроекта о ст. 11-1 (только «на рассмотрении»), суммовые пороги Правил 2886, предоплата по импортному
+     инвойсу (УП-174).
+     Страницы совпадают с en.html одна к одной. Стили те же, что в en.html.
+     Фото в img/ пока заглушки под финальными именами: cv-cover (квадрат), cv-rules, cv-trade, cv-parent
+     (вертикальные, около 1:2, разделители глав). -->
+<html lang="ru" data-theme="guide">
+<head>
+<meta charset="utf-8">
+<title>Валютный контроль и платежи в Узбекистане 2026 · Advizen</title>
+<link rel="stylesheet" href="../company-profile/fonts.css">
+<link rel="stylesheet" href="../brochure.css">
+<style>
+  /* Local tweaks for the square format. Shared styles stay in brochure.css. */
+  .nw { white-space: nowrap; }
+  .box.end { margin-top: auto; }
+  .note.end { margin-top: auto; }
+
+  /* Chapter openers, copied from brochure-kit.css: colour block with the chapter's page links, photo beside it */
+  .opener { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; }
+  .opener .side { background: var(--accent); color: #fff; padding: 17mm 14mm 23mm 18mm; display: flex; flex-direction: column; }
+  .opener .num { font-family: var(--display); font-weight: 700; font-size: 92pt; line-height: .85; letter-spacing: -0.05em; color: rgba(255,255,255,.22); }
+  .opener h2 { color: #fff; font-size: 28pt; margin-top: auto; }
+  .opener p { margin-top: 5mm; font-size: 12pt; line-height: 1.45; color: rgba(255,255,255,.86); }
+  .opener .pic { position: relative; }
+  .opener .pic .photo { inset: 0; }
+  .opener .inch { list-style: none; margin-top: 8mm; border-top: 1px solid rgba(255,255,255,.3); }
+  .opener .inch a { display: grid; grid-template-columns: 9mm 1fr 5mm; align-items: center; padding: 3mm 0; border-bottom: 1px solid rgba(255,255,255,.3); color: #fff; text-decoration: none; font-size: 10.4pt; font-weight: 600; }
+  .opener .inch a span { font-size: 8pt; font-weight: 700; color: rgba(255,255,255,.66); }
+  .opener .inch .ic { width: 4.6mm; height: 4.6mm; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: rgba(255,255,255,.8); }
+  .opener.flip .side { order: 2; padding: 17mm 18mm 23mm 14mm; }
+  .opener-page .foot { color: rgba(255,255,255,.72); border-top-color: rgba(255,255,255,.22); right: calc(50% + 8mm); }
+  .opener-page .foot .mark { color: #fff; }
+  .opener-page.flip .foot { left: calc(50% + 14mm); right: var(--pad-x); }
+
+  /* Progress bar in the top right corner of inner pages, copied from brochure-kit.css */
+  .progress { position: absolute; top: 9mm; right: var(--pad-x); display: flex; align-items: center; gap: 1.4mm; }
+  .progress i { width: 5mm; height: 1.2mm; border-radius: 1mm; background: var(--line); }
+  .progress i.on { background: var(--accent); }
+  .progress em { font-style: normal; font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-right: 2mm; }
+
+  /* Contents: plain lists with page links, one column per chapter */
+  .toc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 9mm; margin-top: 11mm; }
+  .toc .n { font-size: 8pt; font-weight: 600; letter-spacing: .08em; color: var(--accent); }
+  .toc h3 { margin-top: 1.6mm; padding-bottom: 2.6mm; border-bottom: 1px solid var(--ink); }
+  .toc h3 a { color: var(--ink); text-decoration: none; }
+  .toc ul { list-style: none; }
+  .toc li a { display: grid; grid-template-columns: 8mm 1fr; padding: 3mm 0; border-bottom: 1px solid var(--line); color: var(--ink-2); text-decoration: none; }
+  .toc li a span { font-size: 8pt; font-weight: 600; color: var(--muted); padding-top: .4mm; font-variant-numeric: tabular-nums; }
+
+  /* Timeline: one ink line with dates */
+  .tline { list-style: none; position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0 5mm; margin-top: 16mm; }
+  .tline::before { content: ""; position: absolute; left: 0; right: 0; top: 7.4mm; border-top: 1px solid var(--ink); }
+  .tline li { position: relative; padding-top: 13mm; }
+  .tline li::before { content: ""; position: absolute; left: 0; top: 5.9mm; width: 3mm; height: 3mm; border-radius: 50%; background: var(--paper); border: 1px solid var(--ink); }
+  .tline .d { position: absolute; top: 0; left: 0; font-size: 8pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .tline b { display: block; font-size: 11.6pt; line-height: 1.3; font-weight: 600; }
+  .tline small { display: block; margin-top: 1.6mm; font-size: 8.8pt; line-height: 1.35; color: var(--muted); }
+  .tline li.key::before { background: var(--accent); border-color: var(--accent); }
+  .tline li.key .d { color: var(--accent); }
+
+  /* Tables with names in the first column */
+  .compare.plain td:first-child { color: var(--ink); font-size: 10.8pt; font-weight: 600; letter-spacing: 0; width: 62mm; }
+  .compare.plain td { font-size: 10.8pt; }
+  .compare.plain td small { display: block; font-size: 8.4pt; color: var(--muted); font-weight: 500; margin-top: .6mm; }
+
+  /* Current and capital operations: two plain columns and one arrow between them */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12mm; margin-top: 9mm; }
+  .two h3 { padding-bottom: 2.4mm; border-bottom: 1px solid var(--ink); }
+  .two ul { list-style: none; }
+  .two li { padding: 2.6mm 0; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+  .two .st { margin-top: 4mm; font-size: 10.6pt; font-weight: 600; line-height: 1.35; }
+  .two .st small { display: block; margin-top: .8mm; font-size: 9pt; font-weight: 500; color: var(--muted); }
+  .shift { position: relative; margin: 9mm 25% 0; height: 0; border-top: 1px solid var(--ink); }
+  .shift::before { content: ""; position: absolute; left: -1mm; top: -1mm; width: 2mm; height: 2mm; border-radius: 50%; background: var(--ink); }
+  .shift::after { content: ""; position: absolute; right: 0; top: -1.15mm; width: 2.2mm; height: 2.2mm; border-top: 1px solid var(--ink); border-right: 1px solid var(--ink); transform: rotate(45deg); transform-origin: 100% 0; }
+  .shift em { position: absolute; left: 0; right: 0; top: 2.6mm; text-align: center; font-style: normal; font-size: 8pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+  /* Path of an outgoing payment: five boxes joined by arrows */
+  .path { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0 6mm; margin-top: 11mm; counter-reset: s; }
+  .path li { position: relative; }
+  .path .bx { border: 1px solid var(--ink); border-radius: 2mm; padding: 3.6mm 3.6mm 4mm; min-height: 23mm; font-size: 10.4pt; font-weight: 600; line-height: 1.25; }
+  .path .bx::before { counter-increment: s; content: counter(s); display: block; font-size: 8pt; font-weight: 600; color: var(--muted); margin-bottom: 1.4mm; }
+  .path li:not(:last-child)::after { content: ""; position: absolute; right: -5.4mm; top: 11.5mm; width: 4.8mm; border-top: 1px solid var(--ink); }
+  .path li:not(:last-child)::before { content: ""; position: absolute; right: -5.2mm; top: 10.4mm; width: 2.2mm; height: 2.2mm; border-top: 1px solid var(--ink); border-right: 1px solid var(--ink); transform: rotate(45deg); }
+  .path li > span { display: block; margin-top: 3.4mm; font-size: 9.2pt; line-height: 1.4; color: var(--ink-2); }
+  .path li.key .bx { border-color: var(--accent); }
+  .path li.key .bx::before { color: var(--accent); }
+
+  .facts.big li { font-size: 11pt; padding: 3.4mm 0 3.4mm 5mm; }
+  .facts.big li::before { top: 5.6mm; }
+  .road.tight li { padding: 4.4mm 0; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<!-- 1 · Обложка -->
+<section class="page cover on-photo" id="p1">
+  <div class="photo" style="background-image:url('img/cv-cover.jpg');background-position:50% 50%"></div>
+  <div class="inner">
+    <div class="wordmark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</div>
+    <div>
+      <p class="eyebrow">Гид для финансовых служб</p>
+      <h1 style="margin-top:4mm">Валютный контроль и платежи в&nbsp;Узбекистане</h1>
+      <p class="sub"><span class="nw">E-kontrakt</span>, репатриация, конвертация и деньги с материнской компанией</p>
+      <p class="year">2026</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span>Редакция ноября 2026</span></footer>
+</section>
+
+<!-- 2 · Содержание -->
+<section class="page" id="p2">
+  <div class="inner">
+    <p class="eyebrow">Что внутри</p>
+    <h2>Валютные правила за восемь шагов</h2>
+    <p class="lede">Платежи за товары, услуги и дивиденды свободны. Контроль идёт через <span class="nw">E-kontrakt</span>, банк и сроки. Нажмите на название, чтобы открыть страницу.</p>
+    <div class="toc">
+      <div>
+        <span class="n">01</span>
+        <h3><a href="#p3">Правила игры</a></h3>
+        <ul>
+          <li><a href="#p4"><span>04</span>Два вида операций</a></li>
+          <li><a href="#p5"><span>05</span>Что изменилось в 2026 году</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="n">02</span>
+        <h3><a href="#p6">Торговля и платежи</a></h3>
+        <ul>
+          <li><a href="#p7"><span>07</span>Путь платежа</a></li>
+          <li><a href="#p8"><span>08</span>180 дней и штрафы</a></li>
+          <li><a href="#p9"><span>09</span>Счета и конвертация</a></li>
+          <li><a href="#p10"><span>10</span>Платежи внутри страны</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="n">03</span>
+        <h3><a href="#p11">Материнская компания и банк</a></h3>
+        <ul>
+          <li><a href="#p12"><span>12</span>Деньги с материнской компанией</a></li>
+          <li><a href="#p13"><span>13</span>Что проверяет банк</a></li>
+          <li><a href="#p14"><span>14</span>Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="figs">
+      <div class="fig"><b>180 дней</b><span>На закрытие внешнеторговой сделки</span></div>
+      <div class="fig"><b>7 дней</b><span>Банковских дней на расход купленной валюты</span></div>
+      <div class="fig"><b>50%</b><span>Предельный штраф за нерепатриацию</span></div>
+      <div class="fig"><b>10%</b><span>Доля, с которой банк устанавливает владельцев</span></div>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">2</span></footer>
+</section>
+
+<!-- 3 · Глава 1 -->
+<section class="page opener-page" id="p3">
+  <div class="opener">
+    <div class="side">
+      <span class="num">01</span>
+      <h2>Правила игры</h2>
+      <p>Текущие платежи свободны и не требуют разрешений. Государство контролирует их через записи в системе, банк и сроки.</p>
+      <div class="inch">
+        <a href="#p4"><span>04</span>Два вида операций<svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#p5"><span>05</span>Что изменилось в 2026 году<svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="pic"><div class="photo" style="background-image:url('img/cv-rules.jpg');background-position:50% 60%"></div></div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com</span><span class="num">3</span></footer>
+</section>
+
+<!-- 4 · Текущие операции и операции с капиталом -->
+<section class="page" id="p4">
+  <div class="progress"><em>Правила</em><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">Основы</p>
+    <h2>Два вида операций</h2>
+    <p class="lede">Закон <span class="nw">ЗРУ-573</span> «О валютном регулировании» 2019 года делит трансграничные операции на два вида. Подробные правила устанавливает Центральный банк.</p>
+    <div class="two">
+      <div>
+        <h3>Текущие операции</h3>
+        <ul>
+          <li>Товары, работы и услуги</li>
+          <li>Проценты и дивиденды</li>
+          <li>Роялти и лицензионные платежи</li>
+          <li>Зарплата</li>
+        </ul>
+        <p class="st">Свободно<small>Включая покупку валюты под них</small></p>
+      </div>
+      <div>
+        <h3>Операции движения капитала</h3>
+        <ul>
+          <li>Кредиты, займы и лизинг</li>
+          <li>Инвестиции</li>
+          <li>Недвижимость</li>
+          <li>Счета и вклады за рубежом</li>
+        </ul>
+        <p class="st">По отдельным правилам<small>Прямые иностранные инвестиции и их репатриация свободны</small></p>
+      </div>
+    </div>
+    <div class="shift"><em>Не исполнено за 180 дней</em></div>
+    <div class="box end">
+      <p class="eyebrow">На практике</p>
+      <p>Узбекская «дочка» является резидентом и полностью подчиняется этим правилам. Филиал или представительство иностранной компании является нерезидентом со своим режимом счетов.</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">4</span></footer>
+</section>
+
+<!-- 5 · Что изменилось в 2026 году -->
+<section class="page" id="p5">
+  <div class="progress"><em>Правила</em><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">Новые правила</p>
+    <h2>Что изменилось в 2026 году</h2>
+    <p class="lede">Закон остался прежним, процедуры стали быстрее. Большинство изменений внесли правила Центрального банка и постановления Кабмина.</p>
+    <ol class="tline">
+      <li><span class="d">янв 2026</span><b>Система внешней торговли переименована в <span class="nw">E-kontrakt</span></b></li>
+      <li><span class="d">апр 2026</span><b>Решение по заявке на валюту к следующему банковскому дню</b></li>
+      <li><span class="d">июл 2026</span><b>Цель купленной валюты можно сменить</b></li>
+      <li><span class="d">сен 2026</span><b>Заём от материнской компании регистрируют за один рабочий день</b></li>
+      <li class="key"><span class="d">1 янв 2027</span><b>Код нерезидента в <span class="nw">E-kontrakt</span> становится обязательным</b></li>
+    </ol>
+    <div class="box end">
+      <p class="eyebrow">На практике</p>
+      <p>Ключевые правила ЦБ о валютных операциях и счетах опубликованы только на узбекском языке. Перед каждой новой схемой платежей мы сверяем действующий текст.</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">5</span></footer>
+</section>
+
+<!-- 6 · Глава 2 -->
+<section class="page opener-page flip" id="p6">
+  <div class="opener flip">
+    <div class="side">
+      <span class="num">02</span>
+      <h2>Торговля и платежи</h2>
+      <p>Каждый внешнеторговый контракт вносится в <span class="nw">E-kontrakt</span> до первого платежа. С этого момента идут два срока: 180 дней на сделку и 7 банковских дней на купленную валюту.</p>
+      <div class="inch">
+        <a href="#p7"><span>07</span>Путь платежа<svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#p8"><span>08</span>180 дней и штрафы<svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#p9"><span>09</span>Счета и конвертация<svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#p10"><span>10</span>Платежи внутри страны<svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="pic"><div class="photo" style="background-image:url('img/cv-trade.jpg');background-position:50% 60%"></div></div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com</span><span class="num">6</span></footer>
+</section>
+
+<!-- 7 · Путь исходящего платежа -->
+<section class="page" id="p7">
+  <div class="progress"><em>Торговля</em><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">E-kontrakt</p>
+    <h2>Путь платежа за рубеж</h2>
+    <p class="lede">Каждый внешнеторговый контракт или инвойс вносится в <span class="nw">E-kontrakt</span> до начала операций, в том числе по услугам. Без записи в системе банк не платит аванс, а таможня не выпускает товар.</p>
+    <ol class="path">
+      <li class="key"><div class="bx">Контракт в <span class="nw">E-kontrakt</span></div><span>До первой операции. Изменения только допсоглашением</span></li>
+      <li><div class="bx">Проверка банка</div><span>Перед авансом или аккредитивом банк сверяет запись</span></li>
+      <li><div class="bx">Покупка валюты</div><span>Заявка с целью, решение к следующему банковскому дню</span></li>
+      <li><div class="bx">Платёж</div><span>Только со своего счёта в узбекском банке</span></li>
+      <li><div class="bx">Акт или таможенная декларация</div><span>Таможня сверяет товар с записью. Акт услуг вносится до 20-го числа следующего месяца</span></li>
+    </ol>
+    <p class="note end"><span class="nw">E-kontrakt</span> является системой Таможенного комитета, до 2026 года она называлась ЕЭИСВО. Порядок работы установлен ПКМ №&nbsp;283.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">7</span></footer>
+</section>
+
+<!-- 8 · 180 дней и штрафы -->
+<section class="page" id="p8">
+  <div class="progress"><em>Торговля</em><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">Репатриация</p>
+    <h2>180 дней, чтобы закрыть сделку</h2>
+    <p class="lede">У нерезидента 180 дней, чтобы поставить товар или оказать услугу, заплатить или вернуть аванс. Затем на невозвращённую сумму начисляется штраф, который растёт ступенями (<span class="nw">ЗРУ-573</span>, ст.&nbsp;11-1).</p>
+    <ol class="tline">
+      <li><span class="d">День 0</span><b>Платёж, экспорт или подписанный акт</b></li>
+      <li><span class="d">День 180</span><b>Сделка становится операцией движения капитала</b></li>
+      <li class="key"><span class="d">День 225</span><b>Штраф 5%</b><small>День 270 для малого бизнеса</small></li>
+      <li><span class="d">День 360</span><b>Плюс 10%</b></li>
+      <li><span class="d">День 545</span><b>Плюс 35%, всего до 50%</b></li>
+    </ol>
+    <ul class="facts" style="margin-top:11mm">
+      <li>Отсчёт идёт от платежа по импорту, от таможенного оформления по экспорту и от подписания акта по услугам</li>
+      <li>Обязательство закрывают также зачёт, новация или страховая выплата</li>
+      <li>Штрафа нет, пока просроченная экспортная задолженность не больше 10% выручки за 36 месяцев</li>
+    </ul>
+    <p class="note end">Налоговый орган направляет требование, а штраф налагает суд. С 2027 года указ Президента позволяет суду снизить штраф вдвое. Поправки в закон находятся на рассмотрении.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">8</span></footer>
+</section>
+
+<!-- 9 · Счета и конвертация -->
+<section class="page" id="p9">
+  <div class="progress"><em>Торговля</em><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">Счета и конвертация</p>
+    <h2>Семь банковских дней на валюту</h2>
+    <p class="lede">Валюту покупают и продают только через узбекские банки. Лимита на покупку для текущих операций нет, а обязательная продажа экспортной выручки отменена в 2017 году.</p>
+    <ol class="road tight">
+      <li><span class="when">Основной счёт</span><div><b>Первый сумовой счёт становится основным</b><span>Банк открывает его не позднее следующего рабочего дня после полного пакета документов</span></div></li>
+      <li><span class="when">Заявка</span><div><b>Цель и подтверждающие документы</b><span>Банк решает и проводит расчёт к следующему банковскому дню</span></div></li>
+      <li><span class="when">Спецсчёт</span><div><b>Купленная валюта тратится только по цели</b><span>С июля 2026 года цель можно сменить на другую текущую операцию</span></div></li>
+      <li><span class="when">7 банковских дней</span><div><b>Неиспользованная валюта уходит обратно</b><span>Банк сам продаёт её по рыночному курсу дня без согласия клиента</span></div></li>
+    </ol>
+    <p class="note end">Счёт за рубежом компания открывает только по решению Президента или Правительства либо по международному договору и ежеквартально по нему отчитывается.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">9</span></footer>
+</section>
+
+<!-- 10 · Платежи внутри страны -->
+<section class="page" id="p10">
+  <div class="progress"><em>Торговля</em><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">Внутри страны</p>
+    <h2>Только сумы и меньше наличных</h2>
+    <p class="lede">Внутри Узбекистана цены и расчёты только в сумах (<span class="nw">ЗРУ-573</span>, ст.&nbsp;9). Привязывать цену к доллару нельзя, зарплата тоже выплачивается в сумах.</p>
+    <ul class="facts big">
+      <li>Покупки дороже 400 БРВ оплачиваются только картой или электронно</li>
+      <li>С июля 2026 года торговля и сфера услуг обязаны принимать оплату по единому QR-коду</li>
+      <li>Сумовая корпоративная карта нужна для расходов в Узбекистане, валютная для командировок за рубеж</li>
+      <li>Рекламу в зарубежных соцсетях можно оплачивать картой до 5&nbsp;000 долларов в месяц</li>
+    </ul>
+    <p class="note end">С 25 января 2027 года внутренние платежи картами в сумах пойдут через национальный платёжный свитч ЦБ.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">10</span></footer>
+</section>
+
+<!-- 11 · Глава 3 -->
+<section class="page opener-page" id="p11">
+  <div class="opener">
+    <div class="side">
+      <span class="num">03</span>
+      <h2>Материнская компания и банк</h2>
+      <p>Материнская компания может вносить деньги и забирать их после уплаты налогов. Заём нужно зарегистрировать, а банк хочет знать, кто стоит за компанией.</p>
+      <div class="inch">
+        <a href="#p12"><span>12</span>Деньги с материнской компанией<svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#p13"><span>13</span>Что проверяет банк<svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#p14"><span>14</span>Контакты<svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="pic"><div class="photo" style="background-image:url('img/cv-parent.jpg');background-position:50% 65%"></div></div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com</span><span class="num">11</span></footer>
+</section>
+
+<!-- 12 · Деньги с материнской компанией -->
+<section class="page" id="p12">
+  <div class="progress"><em>Группа</em><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+  <div class="inner">
+    <p class="eyebrow">Деньги с материнской компанией</p>
+    <h2>Деньги в «дочку» и обратно</h2>
+    <p class="lede">Закон <span class="nw">ЗРУ-598</span> «Об инвестициях и инвестиционной деятельности» гарантирует иностранному инвестору свободный перевод средств за рубеж после уплаты налогов.</p>
+    <table class="compare plain">
+      <tr><th>Поток</th><th>Правило</th></tr>
+      <tr><td>Взнос в уставный капитал<small>В Узбекистан</small></td><td>Свободно. Капитал выражается в сумах и оплачивается валютой или имуществом в течение года после регистрации</td></tr>
+      <tr><td>Заём от материнской компании<small>В Узбекистан</small></td><td>Регистрируется в ЦБ через банк до получения денег</td></tr>
+      <tr><td>Проценты, услуги и роялти<small>Из Узбекистана</small></td><td>Свободные текущие платежи. Контракты на услуги проходят через <span class="nw">E-kontrakt</span></td></tr>
+      <tr><td>Дивиденды<small>Из Узбекистана</small></td><td>Свободно после налогов. ООО выплачивает их не позднее 60 дней после решения</td></tr>
+      <tr><td>Возврат капитала<small>Из Узбекистана</small></td><td>Через уменьшение капитала или выход участника, после расчётов с кредиторами</td></tr>
+    </table>
+    <p class="note end">Налоги с дивидендов, процентов и услуг описаны в нашем «Налоговом гиде Узбекистан 2026».</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">12</span></footer>
+</section>
+
+<!-- 13 · Что проверяет банк -->
+<section class="page" id="p13">
+  <div class="progress"><em>Группа</em><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+  <div class="inner">
+    <p class="eyebrow">Проверки банка</p>
+    <h2>Кто стоит за компанией</h2>
+    <p class="lede">Банк обязан знать, кто владеет клиентом и управляет им. Если проверку провести нельзя, банк вправе отказать в операции.</p>
+    <ul class="facts big">
+      <li>Владельцев устанавливают до каждого физлица с долей от 10%, это ниже привычных 25%</li>
+      <li>Банк должен понимать бизнес и структуру собственности клиента</li>
+      <li>Крупные и нетипичные операции банк проверяет внимательнее</li>
+      <li>К публичным должностным лицам и рискованным юрисдикциям применяются усиленные меры</li>
+    </ul>
+    <div class="box end">
+      <p class="eyebrow">На практике</p>
+      <p>Подготовьте схему владения до каждого физлица с долей от 10% ещё до открытия счёта.</p>
+    </div>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">13</span></footer>
+</section>
+
+<!-- 14 · Контакты -->
+<section class="page contacts-page on-photo" id="p14">
+  <div class="photo" style="background-image:url('../company-profile/img/khiva.jpg');background-position:50% 50%"></div>
+  <div class="inner">
+    <p class="eyebrow" style="color:rgba(255,255,255,.65)">Контакты</p>
+    <h2>Нужна помощь с платежами в Узбекистане?</h2>
+    <p class="lede">Мы регистрируем контракты в <span class="nw">E-kontrakt</span>, следим за сроками 180 дней, регистрируем займы от материнской компании и готовим документы для банка. Первый созвон бесплатный.</p>
+    <a class="cta" href="https://www.advizenco.com/ru/contact">Записаться на вводный созвон</a>
+    <div class="clist">
+      <dl>
+        <dt>Сайт</dt><dd><a href="https://www.advizenco.com/ru">advizenco.com</a></dd>
+        <dt>Email</dt><dd><a href="mailto:info@advizenco.com">info@advizenco.com</a></dd>
+        <dt>Телефон</dt><dd><a href="tel:+998334884888">+998 33 488 48 88</a></dd>
+      </dl>
+      <dl>
+        <dt>Telegram</dt><dd><a href="https://t.me/advizen">t.me/advizen</a></dd>
+        <dt>Город</dt><dd>Ташкент, Узбекистан</dd>
+      </dl>
+      <div><div class="qr"><img src="../company-profile/qr.svg" alt=""></div><p class="qr-cap">advizenco.com</p></div>
+    </div>
+    <p class="legal">© 2026 Advizen Consulting LLC, Ташкент. Гид носит информационный характер и не является юридической, налоговой или бухгалтерской консультацией. Правила на ноябрь 2026 года.</p>
+  </div>
+  <footer class="foot"><span class="mark"><img src="../company-profile/img/logo.png" alt="">ADVIZEN</span><span class="contacts">advizenco.com · info@advizenco.com · +998 33 488 48 88</span><span class="num">14</span></footer>
+</section>
+
+</body>
+</html>
