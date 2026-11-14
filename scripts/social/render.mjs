@@ -83,7 +83,7 @@ b { color: #f5f5f7; font-weight: 700; }
 .photo .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .photo .low { -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%); mask-image: linear-gradient(180deg, transparent 0, #000 14%); }
 .photo .shade { position: absolute; left: 0; right: 0; top: 0; height: ${STORY ? 1050 : 620}px; background: linear-gradient(180deg, rgba(244,242,238,.82) 0%, rgba(244,242,238,.55) 55%, rgba(244,242,238,0) 100%); }
-.photo .ptext { position: absolute; left: 88px; right: 88px; top: ${STORY ? 250 : 92}px; max-height: ${STORY ? 860 : 520}px; flex: none; display: block; overflow: hidden; }
+.photo .ptext { position: absolute; left: 88px; right: 88px; top: ${STORY ? 250 : 92}px; max-height: ${STORY ? 860 : 570}px; flex: none; display: block; overflow: hidden; }
 .pkicker { font-size: 28px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #940e27; margin-bottom: 26px; }
 .ph { font-size: 92px; font-weight: 800; letter-spacing: -0.045em; line-height: 0.98; color: #1d1d1f; text-wrap: balance; }
 .ph b { color: #940e27; font-weight: 800; }
