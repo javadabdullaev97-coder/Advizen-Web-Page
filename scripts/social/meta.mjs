@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const ENV_FILE = path.join(ROOT, ".env.social");
-export const GRAPH = "https://graph.facebook.com/v23.0";
+export const GRAPH = "https://graph.facebook.com/v26.0";
 
 export function readEnv() {
   if (!fs.existsSync(ENV_FILE)) throw new Error(`Missing ${ENV_FILE}. Copy social/env.example to .env.social and fill it in.`);
