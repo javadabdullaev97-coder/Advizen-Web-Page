@@ -32,25 +32,25 @@ Privatisation has been slower than planned. Only two of the six planned sales of
 
 ### Convertibility and repatriation
 
-Uzbekistan has accepted the obligations of Article VIII of the IMF Articles of Agreement. Under the Law on Currency Regulation (ZRU-573 of 22 October 2019), current international transactions are free. They include payments for goods and services, interest, dividends and other investment income, and the related purchase of foreign currency (Art. 15). Inbound direct investment and its repatriation are also unrestricted (Art. 16). Other capital transactions, such as cross-border loans and deposits abroad, follow separate procedures.
+Uzbekistan has accepted the obligations of Article VIII of the IMF Articles of Agreement. Under the Law on Currency Regulation (ZRU-573 of 22 October 2019), current international transactions are free. They include payments for goods and services, interest and other income, including net investment income such as dividends, loan repayments up to twice the scheduled instalment, and the related purchase of foreign currency (Art. 15). Inbound direct investment and its repatriation are also unrestricted (Art. 16). Other capital transactions follow separate rules. A loan from abroad is registered with the CBU through the borrower's bank before any funds move, since 17 September 2026 by the next working day.
 
-A company with foreign shareholders can buy foreign currency from its bank to pay dividends once all taxes have been paid. In practice the conversion takes no more than a week. The authorities can stop a repatriation only in cases of insolvency, criminal proceedings or a court or arbitral order.
+A company with foreign shareholders can buy foreign currency from its bank to pay dividends once all taxes have been paid. The bank decides on the application and settles the purchase by the next banking day, and purchased currency must be used within seven banking days (CBU Rules No. 3281). Under the Law on Investments (Art. 17), repatriation can be suspended only for insolvency or a breach of creditors' rights, an offence by an individual investor, or a court or arbitral decision.
 
 The CBU sets the official exchange rate daily from trading on the currency market. On 4 November 2026 the rate was UZS 11,911.71 per USD.
 
 :::box The Tashkent International Financial Centre
 - Constitutional Law ZRU-1158 of 13 July 2026 created the Tashkent International Financial Centre (TIFC), a separate legal regime with its own regulator and court.
-- Inside the centre, national currency control does not apply to participants' currency operations unless a TIFC resolution provides otherwise.
+- Participants are exempt from the general currency registration and notification rules unless the centre's decisions, adopted with the CBU, provide otherwise. Reporting and AML rules still apply.
 - The centre is not yet operating, and its detailed currency rules are still to be adopted.
 :::
 
 ### Accounts
 
-Residents may hold foreign currency accounts with Uzbek banks. A resident company may open an account abroad only with a decision of the President or the Government, or under an international treaty. It must then notify the tax authority and the CBU (Art. 12). Non-residents may open accounts in soum and in foreign currency. A foreign legal entity must, however, carry on activity in Uzbekistan, for example through a representative office (Art. 13).
+Residents may hold foreign currency accounts with Uzbek banks. A resident company may open an account abroad only with a decision of the President or the Government, or under an international treaty. It must notify the tax authority and the CBU, and report every quarter by the 25th of the following month to the tax service and its servicing bank (Art. 12; CBU Rules No. 3281). Non-residents may open accounts in soum and in foreign currency. A foreign legal entity must, however, carry on activity in Uzbekistan, for example through a representative office (Art. 13).
 
 ### Payments between residents
 
-All payments for goods and services inside Uzbekistan must be made in soum (Art. 9). Prices may not be pegged to a foreign currency or a conventional unit, except in foreign-investment projects approved at government level. Foreign currency transactions between residents are banned unless they fall within the closed list in Art. 17. The main permitted cases are:
+All payments for goods and services inside Uzbekistan must be made in soum (Art. 9). Prices may not be pegged to a foreign currency or a conventional unit, except in foreign-investment projects under PPP or investment agreements with the Government based on presidential decisions. Foreign currency transactions between residents are banned unless they fall within the closed list in Art. 17. The main permitted cases are:
 
 - Settlements between agents or commission agents and their principals under contracts with non-residents.
 - Contributions to charter capital and their return.
@@ -60,7 +60,9 @@ All payments for goods and services inside Uzbekistan must be made in soum (Art.
 
 ### Repatriation of trade proceeds
 
-Exporters must receive their export proceeds, and importers must receive the goods they have paid for. If the non-resident's obligation is still outstanding 180 days after it arose, the transaction is treated as a capital transaction (Art. 11). Once a further 45 days have passed, or 90 days for small businesses, fines apply under Art. 11-1. The fine is 5% of the unrepatriated amount, rising by a further 10% after 360 days and a further 35% after 545 days.
+Each foreign trade contract or invoice must be entered in the Customs Committee's E-kontrakt system (so named since January 2026) before operations start. Otherwise the bank will not pay an advance and customs will not release the goods.
+
+Exporters must receive their export proceeds, and importers must receive the goods or services they have paid for. If the non-resident's obligation is still outstanding 180 days after it arose, the transaction is treated as a capital transaction (Art. 11). Once a further 45 days have passed, or 90 days for small businesses, fines apply under Art. 11-1, counted from payment or export. The fine is 5% of the unrepatriated amount, rising by a further 10% after 360 days and a further 35% after 545 days. A court imposes it at the tax authority's request. Exceptions include overdue export receivables within 10% of currency proceeds over 36 months, long-term equipment imports and approved state projects. The fine is refunded if everything is repatriated within 90 days of the court decision. From 2027 courts may halve it (Presidential Decree UP-176).
 
 ## Financing and interest rates
 
@@ -117,6 +119,12 @@ https://www.state.gov/reports/2026-investment-climate-statements/uzbekistan
 https://www.uzdaily.uz/en/uzbekistan-will-not-privatize-state-owned-banks-in-2026/
 https://www.spot.uz/en/2026/09/17/asakabank
 https://lex.uz/docs/4562846 (Law on Currency Regulation, Arts. 2, 9, 11, 11-1, 12, 13, 15, 16, 17)
+https://lex.uz/docs/4975566 (CBU Rules reg. No. 3281 on currency operations, as amended by 3281-5, paras 14, 24, 26, 27, 29)
+https://lex.uz/docs/2296324 (CBU Regulation reg. No. 2536 on capital transactions, as amended by 2536-3, in force 17.09.2026, para 7)
+https://lex.uz/ru/docs/4664144 (Law ZRU-598, Art. 17)
+https://lex.uz/ru/docs/4812424 (Regulation approved by Cabinet Resolution No. 283, as amended by Resolution No. 40 of 30.01.2026, E-kontrakt)
+https://lex.uz/ru/docs/8325838 (Constitutional Law ZRU-1158, Art. 17)
+https://gov.uz/ru/soliq/news/view/215523 (Tax Committee on Presidential Decree UP-176)
 https://zamin.uz/en/economy/226259-exchange-rates-for-november-4-announced.html
 https://cbu.uz/en/monetary-policy/publications/press-releases/4540138/
 https://interfax.com/newsroom/top-stories/119147/

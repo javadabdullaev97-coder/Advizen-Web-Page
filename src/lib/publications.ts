@@ -226,7 +226,7 @@ export const publications: Publication[] = [
     category: "Legal",
     title: "Escrow accounts in Uzbekistan: legal mechanics & use cases",
     description:
-      "An overview of escrow account regulation in Uzbekistan, covering permitted use cases in M&A and real estate transactions, bank requirements, and release mechanics.",
+      "Notarial escrow for real estate and vehicles since 1 April 2026, the status of escrow in shared construction, and how bank escrow accounts work.",
     year: "2025",
     date: "2025-07-18",
     pages: 7,
