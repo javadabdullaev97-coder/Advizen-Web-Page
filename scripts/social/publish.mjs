@@ -9,7 +9,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { ROOT, graph, readEnv, sleep } from "./meta.mjs";
 
-const SITE = "https://advizenco.com";
+// The site answers on www; the bare domain redirects, and Instagram should get the final URL.
+const SITE = "https://www.advizenco.com";
 const args = process.argv.slice(2);
 const slug = args.find((a) => !a.startsWith("--"));
 if (!slug) {
