@@ -11,7 +11,6 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-const W = 1080, H = 1350;
 
 const slug = process.argv[2];
 if (!slug) {
@@ -19,6 +18,9 @@ if (!slug) {
   process.exit(1);
 }
 const post = JSON.parse(fs.readFileSync(path.join(ROOT, "social/posts", slug, "post.json"), "utf8"));
+// "format": "story" renders 1080×1920 Instagram stories (for highlights); the default is a 1080×1350 feed carousel.
+const STORY = post.format === "story";
+const W = 1080, H = STORY ? 1920 : 1350;
 const outDir = path.join(ROOT, "public/social", slug);
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
@@ -72,18 +74,23 @@ b { color: #f5f5f7; font-weight: 700; }
 .bar { position: absolute; left: 0; top: 0; height: 10px; background: #940e27; }
 .photo { padding: 0; background: #e9e6e1; }
 .photo .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.photo .shade { position: absolute; left: 0; right: 0; top: 0; height: 620px; background: linear-gradient(180deg, rgba(244,242,238,.82) 0%, rgba(244,242,238,.55) 55%, rgba(244,242,238,0) 100%); }
-.photo .ptext { position: absolute; left: 88px; right: 88px; top: 92px; max-height: 520px; flex: none; display: block; overflow: hidden; }
+.photo .low { -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%); mask-image: linear-gradient(180deg, transparent 0, #000 14%); }
+.photo .shade { position: absolute; left: 0; right: 0; top: 0; height: ${STORY ? 1050 : 620}px; background: linear-gradient(180deg, rgba(244,242,238,.82) 0%, rgba(244,242,238,.55) 55%, rgba(244,242,238,0) 100%); }
+.photo .ptext { position: absolute; left: 88px; right: 88px; top: ${STORY ? 250 : 92}px; max-height: ${STORY ? 860 : 520}px; flex: none; display: block; overflow: hidden; }
 .pkicker { font-size: 28px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #940e27; margin-bottom: 26px; }
 .ph { font-size: 92px; font-weight: 800; letter-spacing: -0.045em; line-height: 0.98; color: #1d1d1f; text-wrap: balance; }
 .ph b { color: #940e27; font-weight: 800; }
 .psub { font-size: 40px; line-height: 1.3; font-weight: 500; color: #3a3a3d; margin-top: 30px; text-wrap: pretty; }
 .psub b { color: #1d1d1f; }
+.plist { margin-top: 34px; font-size: 38px; line-height: 1.3; font-weight: 600; color: #1d1d1f; }
+.plist div + div { margin-top: 14px; }
+.plist div::before { content: ""; display: inline-block; width: 26px; height: 4px; background: #940e27; vertical-align: middle; margin-right: 18px; }
 .pcontacts { margin-top: 34px; font-size: 34px; line-height: 1.32; font-weight: 700; color: #940e27; }
-.pfoot { position: absolute; left: 88px; right: 88px; bottom: 64px; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+.pfoot { position: absolute; left: 88px; right: 88px; bottom: ${STORY ? 250 : 64}px; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
 .pmark { display: flex; align-items: center; gap: 14px; font-weight: 800; font-size: 26px; letter-spacing: 0.22em; color: #1d1d1f; padding: 14px 22px; border-radius: 999px; background: rgba(255,255,255,.82); }
 .pmark img { width: 40px; height: 40px; object-fit: contain; }
 .pfoot span { font-size: 21px; font-weight: 600; color: #3a3a3d; padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,.82); }
+${STORY ? `.ph { font-size: 112px; } .psub { font-size: 46px; } .plist { font-size: 44px; } .pkicker { font-size: 32px; } .pcontacts { font-size: 46px; } .pmark { font-size: 30px; } .pfoot span { font-size: 26px; } .pfoot { display: none; }` : ""}
 `;
 
 // A slide over a full-bleed photo: headline and one line at the top, logo and source at the bottom.
@@ -95,9 +102,14 @@ function photoHTML(sl, i, total) {
   const contacts = sl.contacts
     ? `<div class="pcontacts"><div>advizenco.com</div><div>+998&nbsp;33&nbsp;488&nbsp;48&nbsp;88</div><div>info@advizenco.com</div><div>Telegram: @advizen</div></div>`
     : "";
-  return `<section class="s photo"><img class="bg" src="${src}" style="object-position:${sl.pos || "50% 50%"}" alt="">
+  // "lower": N shrinks the sharp picture to N% of the height, anchored at the bottom, over a blurred copy of itself,
+  // so a tall text block does not sit on the object.
+  const lower = sl.lower
+    ? `<img class="bg low" src="${src}" style="height:${sl.lower}%;top:auto;bottom:0;object-position:${sl.pos || "50% 50%"}" alt="">`
+    : `<img class="bg" src="${src}" style="object-position:${sl.pos || "50% 50%"}" alt="">`;
+  return `<section class="s photo">${lower}
 <div class="shade"></div>
-<div class="body ptext">${sl.kicker ? `<div class="pkicker">${esc(sl.kicker)}</div>` : ""}<h2 class="ph">${rich(sl.title)}</h2>${sl.text ? `<p class="psub">${rich(sl.text)}</p>` : ""}${contacts}</div>
+<div class="body ptext">${sl.kicker ? `<div class="pkicker">${esc(sl.kicker)}</div>` : ""}<h2 class="ph">${rich(sl.title)}</h2>${sl.text ? `<p class="psub">${rich(sl.text)}</p>` : ""}${sl.items ? `<div class="plist">${sl.items.map((x) => `<div>${rich(x)}</div>`).join("")}</div>` : ""}${contacts}</div>
 <div class="pfoot"><div class="pmark"><img src="${logo}" alt="">ADVIZEN</div><span>${esc(sl.source ?? post.source ?? "")}${last ? "" : ""}</span></div></section>`;
 }
 
@@ -144,7 +156,7 @@ const page = (sections) => `<!doctype html><html lang="${post.lang || "ru"}"><he
 const chrome = (args) => execFileSync(CHROME, ["--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1", "--virtual-time-budget=10000", ...args], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] });
 
 const total = post.slides.length;
-if (total > 10) throw new Error(`Instagram carousels take at most 10 slides; this post has ${total}.`);
+if (total > 10 && !STORY) throw new Error(`Instagram carousels take at most 10 slides; this post has ${total}.`);
 const all = post.slides.map((sl, i) => slideHTML(sl, i, total));
 
 // Check every slide for text running past its area before writing anything.

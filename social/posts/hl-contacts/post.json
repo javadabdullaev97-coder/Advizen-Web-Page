@@ -1,0 +1,17 @@
+{
+  "status": "draft",
+  "format": "story",
+  "lang": "ru",
+  "source": "Ташкент, Узбекистан",
+  "slides": [
+    {
+      "type": "photo",
+      "img": "../../highlights/img/contacts-1.jpg",
+      "pos": "50% 50%",
+      "kicker": "Контакты",
+      "title": "Напишите **нам**",
+      "contacts": true,
+      "text": "Нажмите на ссылку ниже — откроется чат в Telegram"
+    }
+  ]
+}

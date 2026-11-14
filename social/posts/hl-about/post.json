@@ -1,0 +1,23 @@
+{
+  "status": "draft",
+  "format": "story",
+  "lang": "ru",
+  "source": "advizenco.com",
+  "slides": [
+    {
+      "type": "photo",
+      "img": "../../highlights/img/about-1.jpg",
+      "pos": "50% 50%",
+      "kicker": "О нас",
+      "title": "Advizen **Consulting**",
+      "text": "Налоги, право и бухгалтерия в Узбекистане"
+    },
+    {
+      "type": "photo",
+      "img": "../../highlights/img/about-2.jpg",
+      "pos": "50% 50%",
+      "title": "Одна команда — **все вопросы**",
+      "text": "Юрист, бухгалтер и налоговый консультант работают вместе. На русском, узбекском и английском"
+    }
+  ]
+}
