@@ -42,6 +42,11 @@ export const GUIDES: Guide[] = [
     photo: "/guides/photos/accounting.webp",
   },
   {
+    slug: "currency",
+    pdf: { en: "/guides/Currency-Control-Uzbekistan-2026.pdf", ru: "/guides/Currency-Control-Uzbekistan-2026-RU.pdf" },
+    photo: "/guides/photos/currency.webp",
+  },
+  {
     slug: "it-business",
     pdf: { en: "/guides/IT-Business-in-Uzbekistan-2026.pdf", ru: "/guides/IT-Business-in-Uzbekistan-2026-RU.pdf" },
     photo: "/guides/photos/it-business.webp",
