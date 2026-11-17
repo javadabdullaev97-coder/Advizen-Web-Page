@@ -17,11 +17,11 @@ The investor applies to the zone directorate; the project must fit the zone's sp
 
 ### Tax and customs benefits
 
-Participants are exempt from property tax and land tax for a period that depends on the investment: three years from USD 300,000, five years from USD 3 million, seven years from USD 5 million and 10 years from USD 10 million. The profit tax exemption runs for three years for USD 3 to 5 million, five years for USD 5 to 15 million and 10 years for USD 15 million or more (Tax Code, Art. 473). The profit tax term starts when the production facility is commissioned (Art. 474).
+Participants are exempt from property tax and land tax for a period set by a decision of the President. The profit tax exemption runs for three years for USD 3 to 5 million of investment, five years for USD 5 to 15 million and 10 years for USD 15 million or more (Tax Code, Art. 473). The profit tax term starts when the production facility is commissioned (Art. 474).
 
 For companies that obtain participant status on or after 1 April 2026, the profit tax benefit takes the form of accelerated depreciation of fixed assets instead of an exemption, for the same periods. Existing participants keep their exemptions until they expire. Benefits apply only to the activities listed in the investment agreement.
 
-Participants pay no customs duties, other than VAT and clearance fees, on construction materials not produced in Uzbekistan and on technological equipment without a local equivalent. Raw materials for export production are also exempt. Import VAT can be deferred for up to 120 days without interest or security. If tax law changes, participants may keep applying the rules in force at their registration for the term of their benefits, up to 10 years, except for excise goods. At least 90% of a participant's staff must be Uzbek citizens.
+Participants pay no customs duties, other than VAT and clearance fees, on construction materials not produced in Uzbekistan and on technological equipment without a local equivalent. Raw materials for export production are also exempt, but only under the customs procedure "processing on customs territory" (Presidential Decree No. UP-153). Import VAT and customs duty on components, raw materials and materials can be deferred for up to 120 days without interest or security (Presidential Resolution No. PP-5243). If tax law changes, participants may keep applying the rules in force at their registration for the term of their benefits, up to 10 years, except for excise goods. At least 90% of a participant's staff must be Uzbek citizens.
 
 Small industrial zones lease plots and premises to smaller manufacturers; their extended tax holiday for exporters was abolished from January 2025.
 
@@ -77,7 +77,7 @@ Enterprises with direct private foreign investment can be exempt from land tax a
 :::table Special regimes compared
 | Regime | Main benefit | Term | Main condition |
 |---|---|---|---|
-| SEZ | Property, land and profit tax relief | 3 to 10 years | Investment from USD 300,000 |
+| SEZ | Profit tax relief (accelerated depreciation from 1 April 2026); property and land tax relief | 3 to 10 years | Investment from USD 3m |
 | IT Park | All taxes exempt; 7.5% PIT | To 2028; then to 2040 | IT activity; export share |
 | Creative Industry Park | PIT and social tax halved | To 1 January 2031 | Creative industry activity |
 | TIFC | 0% profit and social tax | To 1 January 2076 | Financial services; substance |

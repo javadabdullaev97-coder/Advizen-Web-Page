@@ -2,39 +2,48 @@ import type { LocalizedArticle } from "../publications";
 
 const article: Record<string, LocalizedArticle> = {
   en: {
-    subtitle: "A structured guide to the tax, customs, legal, and currency benefits available to participants of Uzbekistan's Special Economic Zones.",
+    subtitle: "A structured guide to the tax, customs and legal benefits available to participants of special economic zones (SEZs) in Uzbekistan under the current Tax Code.",
     author: "Advizen Legal Practice",
     readTime: "7 min read",
     inShort: {
       figures: [
-        { value: "Law No. 604", label: "Law of 17 February 2020 \"On Special Economic Zones\"" },
+        { value: "Art. 473", label: "Tax Code article that sets the tax benefits of SEZ participants" },
         {
           value: "3–10 years",
-          label: "Duration of tax and customs benefits, from USD 300,000 of investment for 3 years to USD 10m and above for 10 years",
+          label: "Profit tax exemption: USD 3–5m of investment gives 3 years, USD 5–15m gives 5 years, USD 15m and above gives 10 years",
         },
-        { value: "120 days", label: "Maximum deferral of VAT on imported goods" },
-        { value: "7 days", label: "For refund of excess creditable VAT under the simplified procedure" },
+        {
+          value: "1 April 2026",
+          label: "From this date new participants get accelerated depreciation instead of the profit tax exemption",
+        },
+        {
+          value: "120 days",
+          label: "Interest-free deferral of VAT and customs duty on imported components, raw materials and materials (PP-5243)",
+        },
       ],
       points: [
-        "SEZ participants in Uzbekistan are exempt from land tax, corporate profit tax, property tax on legal entities and the unified tax payment, and from contributions to the Republican Road Fund and the extra-budgetary fund for educational and medical institutions.",
-        "If tax legislation changes, participants may keep applying the tax rates and payment conditions in force at their registration for the duration of their benefits, up to ten years; this does not cover excise goods.",
-        "Participants are exempt from customs payments, other than VAT and customs clearance fees, on imports such as construction materials not produced in Uzbekistan and technological equipment without a domestic equivalent.",
-        "Participants may open foreign currency accounts at one or more Uzbek banks and hold accounts abroad.",
+        "SEZ participants in Uzbekistan are exempt from profit tax for 3, 5 or 10 years, depending on the investment made: USD 3–5m, USD 5–15m, or USD 15m and above (Tax Code, Art. 473).",
+        "Taxpayers that became SEZ participants on or after 1 April 2026 get the right to accelerated depreciation of fixed assets instead of the profit tax exemption, for a term based on the same investment thresholds.",
+        "Participants are also exempt from property tax and land tax for a term set by a decision of the President. All these benefits apply only to the activities listed in the investment agreement with the SEZ directorate.",
+        "VAT and customs duty on imported components, raw materials and materials may be deferred for up to 120 days without interest or security (PP-5243). Customs benefits on raw materials apply only under the customs regime \"processing in the customs territory\" (UP-153).",
       ],
     },
     content: [
       {
         type: "p",
-        text: "Special Economic Zones (SEZs) are designated territories operating under a special legal regime designed to attract investment and stimulate economic growth. Participants benefit from a comprehensive package of tax exemptions, customs privileges, legal guarantees, and currency freedoms. Uzbekistan recognises several types of SEZ, each with its own regulatory framework and sector focus.",
+        text: "Special economic zones (SEZs) are territories with defined boundaries and a special legal regime, created to attract investment and develop regional industry. In Uzbekistan the framework is set by Law No. ZRU-604 \"On Special Economic Zones\", while the tax benefits themselves are governed by the Tax Code. This guide sets out the rules that apply today, including the change for new participants from 1 April 2026.",
       },
       { type: "h2", text: "Legislative framework" },
       {
         type: "sources",
         items: [
-          { title: "Customs Code of the Republic of Uzbekistan" },
-          { title: "Tax Code of the Republic of Uzbekistan", href: "https://lex.uz/en/docs/4674893" },
           {
-            title: "Law No. 604 \"On Special Economic Zones\"",
+            title: "Tax Code of the Republic of Uzbekistan",
+            meta: "Art. 473–474 · as amended by Law No. ZRU-783 of 12 July 2022",
+            href: "https://lex.uz/en/docs/4674893",
+          },
+          {
+            title: "Law No. ZRU-604 \"On Special Economic Zones\"",
             meta: "17 February 2020",
             href: "https://lex.uz/en/docs/4737514",
           },
@@ -44,21 +53,22 @@ const article: Record<string, LocalizedArticle> = {
             href: "https://lex.uz/en/docs/5633655",
           },
           {
-            title: "Presidential Decree No. UP-5600",
-            meta: "21 December 2018 · On further improvement of the coordination and management system of free economic zones",
-            href: "https://lex.uz/en/docs/4117767",
-          },
-          {
             title: "Presidential Decree No. UP-153",
             meta: "13 June 2022 · On additional measures to enhance the effectiveness of special economic, small industrial, youth industrial and entrepreneurial zones",
             href: "https://lex.uz/en/docs/6061066",
           },
+          {
+            title: "Presidential Decree No. UP-5600",
+            meta: "21 December 2018 · On further improvement of the coordination and management system of free economic zones",
+            href: "https://lex.uz/en/docs/4117767",
+          },
+          { title: "Customs Code of the Republic of Uzbekistan" },
         ],
       },
       { type: "h2", text: "Types of special economic zones" },
       {
         type: "p",
-        text: "A Special Economic Zone is a territory with defined boundaries and a special legal regime, created to attract foreign and domestic investment, advanced technology, and management expertise for the accelerated socio-economic development of a region. SEZs may be established in the following forms:",
+        text: "Under Law No. ZRU-604, SEZs are created by decision of the President and may take the following forms:",
       },
       {
         type: "ul",
@@ -70,126 +80,114 @@ const article: Record<string, LocalizedArticle> = {
           "Special industrial zones",
         ],
       },
-      { type: "h2", text: "Special legal regime" },
+      { type: "h2", text: "Tax benefits under Art. 473 of the Tax Code" },
       {
         type: "p",
-        text: "SEZ participants are entitled to legal protection guarantees, benefits, and preferences provided by law. When tax legislation changes, participants may continue to apply — for the duration of their benefits but no longer than ten years — the tax rates and payment conditions that were in effect at the date of their registration in the SEZ register. This stability guarantee does not extend to excise goods.",
-      },
-      {
-        type: "p",
-        text: "Participants may use the payment conditions and settlement forms most convenient to them for exported and imported goods. Additional guarantees may be established by Presidential decision. Losses, lost profits, and moral damages caused by unjustified interference by state authorities are subject to court-ordered compensation.",
-      },
-      { type: "h2", text: "Special customs regime" },
-      {
-        type: "p",
-        text: "The special customs regime may include temporary exemption from or reduction of customs duties, and the abolition or relaxation of non-tariff restrictions on export or import. In practice, SEZ participants are exempt from customs payments (excluding VAT and customs clearance fees) in the following cases:",
-      },
-      {
-        type: "ul",
-        items: [
-          "Import of construction materials not produced in Uzbekistan, brought in under an investment agreement during the construction period.",
-          "Import of technological equipment without a domestic equivalent, per the approved government list (customs clearance fees remain payable).",
-          "Import of raw materials, components, and supplies used to manufacture products destined for export (customs clearance fees remain payable).",
-        ],
-      },
-      { type: "h2", text: "Special tax regime" },
-      {
-        type: "p",
-        text: "SEZ participants are exempt from the following taxes and mandatory contributions:",
+        text: "SEZ participants are exempt from the following taxes:",
       },
       {
         type: "checks",
         items: [
-          "Land tax",
-          "Corporate profit tax",
-          "Property tax on legal entities",
-          "Unified tax payment (applicable to micro and small enterprises)",
-          "Mandatory contributions to the Republican Road Fund under the Cabinet of Ministers",
-          "Mandatory contributions to the Extra-budgetary Fund for Development of Educational and Medical Institutions under the Ministry of Finance",
+          "Profit tax: for 3, 5 or 10 years, depending on the investment made",
+          "Property tax: for a term set by a decision of the President",
+          "Land tax: for a term set by a decision of the President",
         ],
-        except: "VAT still applies: it is deferred and refunded quickly instead",
-      },
-      { type: "p", text: "VAT is not exempt, but participants get two cash-flow advantages:" },
-      {
-        type: "figures",
-        items: [
-          { value: "120", unit: "days", label: "Maximum deferral of VAT on imported goods" },
-          {
-            value: "7",
-            unit: "days",
-            label: "To refund excess creditable VAT under the simplified procedure",
-          },
-        ],
+        except: "VAT still applies: import VAT can be deferred for up to 120 days",
       },
       {
         type: "p",
-        text: "VAT refunds from the republican budget are processed in accordance with Cabinet of Ministers regulations.",
-      },
-      { type: "h2", text: "Investment-based duration of benefits" },
-      {
-        type: "p",
-        text: "Tax and customs benefits are granted for 3 to 10 years depending on the volume of investment committed:",
+        text: "The profit tax exemption depends on the volume of investment made (Tax Code, Art. 473, part 2, added by Law No. ZRU-783 of 12 July 2022):",
       },
       {
         type: "table",
-        head: [
-          "Investment committed",
-          "Benefits last",
-        ],
+        head: ["Investment made", "Profit tax exemption"],
         rows: [
+          { cells: ["USD 3m – 5m", "3 years"], bar: 0.3 },
+          { cells: ["USD 5m – 15m", "5 years"], bar: 0.5 },
+          { cells: ["USD 15m and above", "10 years"], bar: 1, highlight: true },
+        ],
+        caption: "For participants with status granted from 1 April 2026, the same thresholds set the term of accelerated depreciation.",
+      },
+      { type: "h3", text: "From 1 April 2026: accelerated depreciation instead of the exemption" },
+      {
+        type: "p",
+        text: "For taxpayers that obtained SEZ participant status on or after 1 April 2026, the profit tax benefit takes the form of a right to accelerated depreciation of depreciable fixed assets. Its term depends on the same investment thresholds (Tax Code, Art. 473, part 3). Accelerated depreciation does not remove profit tax; it brings the deduction for equipment and buildings forward, so less tax is paid in the first years of the project.",
+      },
+      { type: "h3", text: "Only for activities in the investment agreement" },
+      {
+        type: "p",
+        text: "All the benefits above apply only to the participant's activities listed in the investment agreement concluded between the investor and the SEZ directorate (Tax Code, Art. 473, part 4). Any other business of the same company is taxed under the general rules.",
+      },
+      { type: "h3", text: "When the benefits start" },
+      {
+        type: "ul",
+        items: [
+          "Property tax and land tax benefits run from the date the SEZ participant certificate is issued (Tax Code, Art. 474).",
+          "The profit tax benefit runs from the date the production facility (or service facility) in the SEZ is accepted into operation.",
+          "If a participant raises its investment to a level that gives a longer term, it may extend the benefit in line with the actual investment.",
+          "A company stripped of participant status loses the benefits from the 1st day of the month in which the status was withdrawn.",
+        ],
+      },
+      { type: "h2", text: "VAT and customs duty deferral" },
+      {
+        type: "p",
+        text: "SEZ participants are not exempt from VAT, but they have a cash-flow advantage on imports:",
+      },
+      {
+        type: "figures",
+        items: [
           {
-            cells: [
-              "USD 300,000 – 3m",
-              "3 years",
-            ],
-            bar: 0.3,
+            value: "120",
+            unit: "days",
+            label: "Deferral or instalment of VAT and customs duty on imported components, raw materials and materials, without interest or security",
           },
-          {
-            cells: [
-              "USD 3m – 5m",
-              "5 years",
-            ],
-            bar: 0.5,
-          },
-          {
-            cells: [
-              "USD 5m – 10m",
-              "7 years",
-            ],
-            bar: 0.7,
-          },
-          {
-            cells: [
-              "USD 10m and above",
-              "10 years",
-            ],
-            bar: 1,
-            highlight: true,
-          },
+        ],
+      },
+      {
+        type: "p",
+        text: "The deferral covers imports for production and the participant's own needs (Presidential Resolution No. PP-5243 of 14 September 2021).",
+      },
+      { type: "h2", text: "Customs benefits" },
+      {
+        type: "p",
+        text: "Under Law No. ZRU-604 (Art. 39), SEZ participants pay no customs payments in the following cases:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Construction materials not produced in Uzbekistan, imported for the investment project under the investment agreement during construction (VAT and customs clearance fees remain payable).",
+          "Technological equipment without an equivalent produced in Uzbekistan, according to the approved list (customs clearance fees remain payable).",
+          "Raw materials, materials and components used to produce goods for export (customs clearance fees remain payable). Under Presidential Decree No. UP-153 of 13 June 2022, this benefit applies only when the goods are placed under the customs regime \"processing in the customs territory\".",
         ],
       },
       {
         type: "takeaway",
         title: "What this means for you",
         items: [
-          "How long the benefits last depends on the size of the investment, so fix the investment amount before applying.",
-          "Committing USD 10m or more secures benefits for the full 10 years.",
-          "Plan for VAT: it is deferred and refunded quickly, not exempt.",
+          "Fix the investment amount before applying: it sets whether the profit tax benefit lasts 3, 5 or 10 years.",
+          "If status is granted on or after 1 April 2026, build accelerated depreciation into the financial model, not a profit tax exemption.",
+          "List every activity that needs the benefits in the investment agreement: the benefits do not cover anything else.",
+          "Plan for VAT: it is not exempt, but import VAT can be deferred for up to 120 days.",
+          "For raw materials, import under the \"processing in the customs territory\" regime, or the customs benefit is lost.",
         ],
       },
-      { type: "h2", text: "Currency regime" },
+      { type: "h2", text: "Legal guarantees" },
       {
         type: "p",
-        text: "SEZ participants may freely choose their servicing bank and open foreign currency accounts at one or more commercial banks in Uzbekistan, as well as maintain accounts abroad. Foreign currency revenue — including export proceeds from goods, works, and services — must be credited to the participant's account. Within the SEZ, even non-participant Uzbek resident entities are permitted to sell goods and services to SEZ participants for foreign currency.",
+        text: "If tax legislation changes, SEZ participants may continue to apply, for the term of their benefits but no longer than ten years, the tax rules in force at the date they were entered in the SEZ register. This stability guarantee does not cover the taxation of excise goods (Law No. ZRU-604, Art. 42).",
+      },
+      {
+        type: "p",
+        text: "Participants may use the payment conditions and settlement forms most convenient to them for exported and imported goods. Additional guarantees may be established by decision of the President. Losses, lost profits and moral damage caused by unjustified interference by state bodies are compensated through the courts.",
       },
       { type: "h2", text: "Additional rights of SEZ participants" },
       {
         type: "ul",
         items: [
-          "Lease land plots through electronic online auction; use buildings and structures on lease terms; and construct infrastructure for production activities as provided by law.",
-          "Require the SEZ directorate to provide engineering, utility, and transport infrastructure on schedule in accordance with the investment agreement and project timeline.",
+          "Lease land plots through electronic online auction; use buildings and structures, including on lease terms; and construct infrastructure for production activities as provided by Law No. ZRU-604.",
+          "Require the SEZ directorate to provide engineering, utility and transport infrastructure on time, in line with the investment agreement and the project schedule.",
           "Use all services provided by the SEZ directorate on equal terms, including on a contractual basis.",
-          "Construct infrastructure at own expense in accordance with the SEZ master plan.",
+          "Construct infrastructure needed for the project at own expense in accordance with the SEZ master plan.",
         ],
       },
       { type: "h2", text: "Zone-specific benefits" },
@@ -205,86 +203,100 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "How Advizen can help" },
       {
         type: "p",
-        text: "Selecting the right SEZ, structuring an investment project to maximise the available benefits, and managing ongoing compliance obligations requires careful legal and tax planning. Advizen's team assists clients in assessing eligibility, preparing applications for SEZ participant status, drafting investment agreements, and navigating the regulatory requirements of the zone directorate.",
+        text: "Selecting the right SEZ, structuring an investment project to make full use of the available benefits, and managing ongoing compliance requires careful legal and tax planning. Advizen's team assists clients in assessing eligibility, preparing applications for SEZ participant status, drafting investment agreements, and meeting the requirements of the zone directorate.",
       },
     ],
     faq: [
       {
-        question: "What tax benefits do Special Economic Zone participants receive in Uzbekistan?",
-        answer: "SEZ participants in Uzbekistan receive a comprehensive package including exemptions from corporate income tax, property tax, and land tax for periods of up to ten years. Customs duty exemptions apply to imported equipment and raw materials. IT Park residents are exempt from all taxes and mandatory contributions to state-earmarked funds, including social tax, until 1 January 2028, and their employees pay personal income tax at a reduced rate of 7.5% on income earned until that date.",
+        question: "What tax benefits do special economic zone participants receive in Uzbekistan?",
+        answer: "Under Art. 473 of the Tax Code, SEZ participants are exempt from profit tax for 3 years (investment of USD 3–5m), 5 years (USD 5–15m) or 10 years (USD 15m and above), and from property tax and land tax for a term set by a decision of the President. Participants that obtained status on or after 1 April 2026 get accelerated depreciation of fixed assets instead of the profit tax exemption. VAT and customs duty on imported components, raw materials and materials may be deferred for up to 120 days without interest (PP-5243). The benefits cover only the activities listed in the investment agreement with the SEZ directorate.",
       },
       {
-        question: "What types of Special Economic Zones exist in Uzbekistan?",
-        answer: "Uzbekistan recognises five types of SEZs: free economic zones, special scientific and technological zones, tourist and recreational zones, free trade zones, and special industrial zones. Each type has its own regulatory framework and sector focus.",
+        question: "What changed for SEZ participants on 1 April 2026?",
+        answer: "Taxpayers that became SEZ participants on or after 1 April 2026 no longer get a profit tax exemption. Instead they get the right to accelerated depreciation of depreciable fixed assets, for a term based on the same investment thresholds of USD 3m, 5m and 15m (Tax Code, Art. 473, part 3). The property tax and land tax exemptions are unchanged.",
+      },
+      {
+        question: "What types of special economic zones exist in Uzbekistan?",
+        answer: "Law No. ZRU-604 provides for five types of SEZs: free economic zones, special scientific and technological zones, tourist and recreational zones, free trade zones, and special industrial zones.",
       },
       {
         question: "Are SEZ tax benefits guaranteed if legislation changes?",
-        answer: "Yes. When tax legislation changes, SEZ participants may continue to apply the tax rates and conditions in effect at the date of their registration for the duration of their benefits — but no longer than ten years. This legislative stability guarantee does not extend to excise goods.",
+        answer: "Yes. When tax legislation changes, SEZ participants may continue to apply the tax rules in force at the date of their entry in the SEZ register for the term of their benefits, but no longer than ten years (Law No. ZRU-604, Art. 42). The guarantee does not cover the taxation of excise goods.",
       },
       {
-        question: "How do companies apply for SEZ participant status in Uzbekistan?",
-        answer: "Companies apply to the relevant SEZ administration, meeting minimum investment thresholds set by the zone operator. The process involves signing an investment agreement, registration in the SEZ register, and issuance of a participant certificate. Advizen assists with eligibility assessment, application preparation, and regulatory compliance.",
+        question: "How do companies obtain SEZ participant status in Uzbekistan?",
+        answer: "The investor submits an investment application to the directorate of the relevant SEZ. If it is approved, the investor signs an investment agreement with the directorate, is entered in the register of SEZ participants and receives a participant certificate. Advizen assists with eligibility assessment, application preparation and the investment agreement.",
       },
     ],
   },
   ru: {
-    subtitle: "Структурированное руководство по налоговым, таможенным, правовым и валютным льготам, доступным участникам особых экономических зон Узбекистана.",
+    subtitle: "Структурированное руководство по налоговым, таможенным и правовым льготам участников специальных экономических зон (СЭЗ) в Узбекистане по действующему Налоговому кодексу.",
     author: "Юридическая практика Advizen",
     readTime: "7 мин чтения",
     inShort: {
       figures: [
-        { value: "Закон № 604", label: "Закон от 17 февраля 2020 года «Об особых экономических зонах»" },
+        { value: "Ст. 473", label: "Статья Налогового кодекса, которая устанавливает налоговые льготы участников СЭЗ" },
         {
           value: "3–10 лет",
-          label: "Срок налоговых и таможенных льгот: от 300 000 долл. США инвестиций — 3 года, от 10 млн долл. США — 10 лет",
+          label: "Освобождение от налога на прибыль: инвестиции от 3 до 5 млн долл. США — 3 года, от 5 до 15 млн — 5 лет, от 15 млн — 10 лет",
         },
-        { value: "120 дней", label: "Максимальная отсрочка НДС по импортируемым товарам" },
-        { value: "7 дней", label: "На возврат превышения зачитываемого НДС в упрощённом порядке" },
+        {
+          value: "1 апреля 2026",
+          label: "С этой даты новые участники получают ускоренную амортизацию вместо освобождения от налога на прибыль",
+        },
+        {
+          value: "120 дней",
+          label: "Отсрочка НДС и таможенной пошлины при импорте комплектующих, сырья и материалов без процентов (ПП-5243)",
+        },
       ],
       points: [
-        "Участники ОЭЗ в Узбекистане освобождены от земельного налога, налога на прибыль, налога на имущество юридических лиц и единого налогового платежа, а также от отчислений в Республиканский дорожный фонд и внебюджетный фонд развития образовательных и медицинских учреждений.",
-        "При изменении налогового законодательства участники вправе применять ставки и условия уплаты налогов, действовавшие на дату регистрации, в течение срока льгот, но не более десяти лет; это не распространяется на подакцизные товары.",
-        "Участники освобождены от таможенных платежей, кроме НДС и сборов за таможенное оформление, при ввозе, например, не производимых в Узбекистане строительных материалов и технологического оборудования, не имеющего отечественных аналогов.",
-        "Участники могут открывать валютные счета в одном или нескольких банках Узбекистана и иметь счета за рубежом.",
+        "Участники СЭЗ в Узбекистане освобождаются от налога на прибыль на 3, 5 или 10 лет в зависимости от объёма внесённых инвестиций: от 3 до 5 млн, от 5 до 15 млн или от 15 млн долл. США (ст. 473 НК).",
+        "Налогоплательщики, получившие статус участника СЭЗ с 1 апреля 2026 года, вместо освобождения от налога на прибыль получают право на ускоренную амортизацию основных средств на срок, который зависит от тех же порогов инвестиций.",
+        "Участники также освобождаются от налога на имущество и земельного налога на срок, определяемый решением Президента. Все эти льготы действуют только для видов деятельности из соглашения об инвестировании с дирекцией СЭЗ.",
+        "НДС и таможенную пошлину при импорте комплектующих, сырья и материалов можно отсрочить до 120 дней без процентов и обеспечения (ПП-5243). Таможенные льготы на сырьё применяются только в таможенном режиме «переработка на таможенной территории» (УП-153).",
       ],
     },
     content: [
       {
         type: "p",
-        text: "Особые экономические зоны (ОЭЗ) — это выделенные территории, функционирующие в условиях особого правового режима, созданного для привлечения инвестиций и стимулирования экономического роста. Участники пользуются комплексным пакетом налоговых освобождений, таможенных привилегий, правовых гарантий и валютных свобод. В Узбекистане признаётся несколько видов ОЭЗ, каждый из которых имеет собственную нормативно-правовую базу и отраслевой фокус.",
+        text: "Специальные экономические зоны (СЭЗ) — это территории с определёнными границами и особым правовым режимом, созданные для привлечения инвестиций и развития промышленности в регионах. В Узбекистане рамки задаёт Закон № ЗРУ-604 «О специальных экономических зонах», а сами налоговые льготы устанавливает Налоговый кодекс. В этом обзоре — правила, которые действуют сейчас, включая изменение для новых участников с 1 апреля 2026 года.",
       },
       { type: "h2", text: "Законодательная база" },
       {
         type: "sources",
         items: [
-          { title: "Таможенный кодекс Республики Узбекистан" },
-          { title: "Налоговый кодекс Республики Узбекистан", href: "https://lex.uz/ru/docs/4674893" },
           {
-            title: "Закон № 604 «Об особых экономических зонах»",
+            title: "Налоговый кодекс Республики Узбекистан",
+            meta: "Ст. 473–474 · в редакции Закона № ЗРУ-783 от 12 июля 2022 года",
+            href: "https://lex.uz/ru/docs/4674893",
+          },
+          {
+            title: "Закон № ЗРУ-604 «О специальных экономических зонах»",
             meta: "17 февраля 2020 года",
             href: "https://lex.uz/ru/docs/4737514",
           },
           {
             title: "Постановление Президента № ПП-5243",
-            meta: "14 сентября 2021 года · О мерах по дополнительной поддержке участников ОЭЗ",
+            meta: "14 сентября 2021 года · О мерах по дальнейшей поддержке участников специальных экономических зон",
             href: "https://lex.uz/ru/docs/5633655",
-          },
-          {
-            title: "Указ Президента № УП-5600",
-            meta: "21 декабря 2018 года · О дальнейшем совершенствовании системы координации и управления свободными экономическими зонами",
-            href: "https://lex.uz/ru/docs/4117767",
           },
           {
             title: "Указ Президента № УП-153",
             meta: "13 июня 2022 года · О дополнительных мерах по повышению эффективности специальных экономических, малых промышленных, молодёжных промышленных и предпринимательских зон",
             href: "https://lex.uz/ru/docs/6061066",
           },
+          {
+            title: "Указ Президента № УП-5600",
+            meta: "21 декабря 2018 года · О дальнейшем совершенствовании системы координации и управления свободными экономическими зонами",
+            href: "https://lex.uz/ru/docs/4117767",
+          },
+          { title: "Таможенный кодекс Республики Узбекистан" },
         ],
       },
-      { type: "h2", text: "Виды особых экономических зон" },
+      { type: "h2", text: "Виды специальных экономических зон" },
       {
         type: "p",
-        text: "Особая экономическая зона — это территория с определёнными границами и особым правовым режимом, создаваемая для привлечения иностранных и отечественных инвестиций, передовых технологий и управленческого опыта в целях ускоренного социально-экономического развития региона. ОЭЗ могут создаваться в следующих формах:",
+        text: "По Закону № ЗРУ-604 СЭЗ создаются решением Президента и могут быть следующих видов:",
       },
       {
         type: "ul",
@@ -292,130 +304,115 @@ const article: Record<string, LocalizedArticle> = {
           "Свободные экономические зоны",
           "Специальные научно-технологические зоны",
           "Туристско-рекреационные зоны",
-          "Свободные торговые зоны",
-          "Специальные промышленные зоны",
+          "Зоны свободной торговли",
+          "Особые промышленные зоны",
         ],
       },
-      { type: "h2", text: "Особый правовой режим" },
-      {
-        type: "p",
-        text: "Участники ОЭЗ имеют право на гарантии правовой защиты, льготы и преференции, предусмотренные законодательством. При изменении налогового законодательства участники вправе продолжать применять — в течение срока действия льгот, но не более десяти лет — налоговые ставки и условия уплаты, действовавшие на дату их регистрации в реестре ОЭЗ. Данная гарантия стабильности не распространяется на подакцизные товары.",
-      },
-      {
-        type: "p",
-        text: "Участники вправе использовать наиболее удобные для них условия оплаты и формы расчётов при экспорте и импорте товаров. Дополнительные гарантии могут быть установлены Президентским решением. Убытки, упущенная выгода и моральный вред, причинённые необоснованным вмешательством государственных органов, подлежат возмещению по решению суда.",
-      },
-      { type: "h2", text: "Особый таможенный режим" },
-      {
-        type: "p",
-        text: "Особый таможенный режим может предусматривать временное освобождение от таможенных пошлин или их снижение, а также отмену или смягчение нетарифных ограничений на экспорт или импорт. На практике участники ОЭЗ освобождены от таможенных платежей (за исключением НДС и сборов за таможенное оформление) в следующих случаях:",
-      },
-      {
-        type: "ul",
-        items: [
-          "Ввоз строительных материалов, не производимых в Узбекистане, в рамках инвестиционного соглашения в период строительства.",
-          "Ввоз технологического оборудования, не имеющего отечественных аналогов, согласно утверждённому правительством перечню (сборы за таможенное оформление остаются).",
-          "Ввоз сырья, комплектующих и расходных материалов, используемых для производства продукции, предназначенной на экспорт (сборы за таможенное оформление остаются).",
-        ],
-      },
-      { type: "h2", text: "Особый налоговый режим" },
-      { type: "p", text: "Участники ОЭЗ освобождаются от следующих налогов и обязательных взносов:" },
+      { type: "h2", text: "Налоговые льготы по ст. 473 Налогового кодекса" },
+      { type: "p", text: "Участники СЭЗ освобождаются от следующих налогов:" },
       {
         type: "checks",
         items: [
-          "Земельный налог",
-          "Налог на прибыль юридических лиц",
-          "Налог на имущество юридических лиц",
-          "Единый налоговый платёж (применяемый для микро- и малых предприятий)",
-          "Обязательные отчисления в Республиканский дорожный фонд при Кабинете Министров",
-          "Обязательные отчисления во Внебюджетный фонд развития образовательных и медицинских учреждений при Министерстве финансов",
+          "Налог на прибыль — на 3, 5 или 10 лет в зависимости от объёма инвестиций",
+          "Налог на имущество — на срок, определяемый решением Президента",
+          "Земельный налог — на срок, определяемый решением Президента",
         ],
-        except: "НДС не освобождается: вместо этого отсрочка и быстрый возврат",
+        except: "НДС не освобождается: импортный НДС можно отсрочить до 120 дней",
       },
       {
         type: "p",
-        text: "От НДС участники не освобождены, но получают два преимущества для оборотных средств:",
+        text: "Срок освобождения от налога на прибыль зависит от объёма внесённых инвестиций (ст. 473, часть вторая, НК; дополнена Законом № ЗРУ-783 от 12 июля 2022 года):",
+      },
+      {
+        type: "table",
+        head: ["Объём инвестиций", "Освобождение от налога на прибыль"],
+        rows: [
+          { cells: ["3–5 млн долл. США", "3 года"], bar: 0.3 },
+          { cells: ["5–15 млн долл. США", "5 лет"], bar: 0.5 },
+          { cells: ["от 15 млн долл. США", "10 лет"], bar: 1, highlight: true },
+        ],
+        caption: "Для участников, получивших статус с 1 апреля 2026 года, те же пороги определяют срок ускоренной амортизации.",
+      },
+      { type: "h3", text: "С 1 апреля 2026 года — ускоренная амортизация вместо освобождения" },
+      {
+        type: "p",
+        text: "Налогоплательщикам, получившим статус участника СЭЗ начиная с 1 апреля 2026 года, льгота по налогу на прибыль предоставляется в форме права на ускоренную амортизацию амортизируемых основных средств. Срок зависит от тех же порогов инвестиций (ст. 473, часть третья, НК). Ускоренная амортизация не отменяет налог на прибыль: она переносит вычет расходов на оборудование и здания на первые годы проекта, и в эти годы налога платится меньше.",
+      },
+      { type: "h3", text: "Только для деятельности из соглашения об инвестировании" },
+      {
+        type: "p",
+        text: "Все перечисленные льготы распространяются исключительно на виды деятельности участника, предусмотренные в соглашении об инвестировании, заключённом между инвестором и дирекцией СЭЗ (ст. 473, часть четвёртая, НК). Другой бизнес той же компании облагается налогами на общих основаниях.",
+      },
+      { type: "h3", text: "С какого момента действуют льготы" },
+      {
+        type: "ul",
+        items: [
+          "Льготы по налогу на имущество и земельному налогу отсчитываются с даты получения свидетельства участника СЭЗ (ст. 474 НК).",
+          "Льгота по налогу на прибыль отсчитывается с даты приёмки в эксплуатацию производственного объекта (объекта оказания услуг) на территории СЭЗ.",
+          "Если участник увеличил инвестиции до объёма, который даёт более длительный срок, он вправе продлить льготы в соответствии с фактическим объёмом инвестиций.",
+          "При лишении статуса участника льготы прекращаются с 1-го числа месяца, в котором статус был отозван.",
+        ],
+      },
+      { type: "h2", text: "Отсрочка НДС и таможенной пошлины" },
+      {
+        type: "p",
+        text: "От НДС участники СЭЗ не освобождены, но получают преимущество для оборотных средств при импорте:",
       },
       {
         type: "figures",
         items: [
-          { value: "120", unit: "дней", label: "Максимальная отсрочка НДС по импортируемым товарам" },
           {
-            value: "7",
+            value: "120",
             unit: "дней",
-            label: "На возврат превышения зачитываемого НДС по упрощённой процедуре",
+            label: "Отсрочка (рассрочка) НДС и таможенной пошлины при импорте комплектующих, сырья и материалов без процентов и обеспечения",
           },
         ],
       },
       {
         type: "p",
-        text: "Возврат НДС из республиканского бюджета осуществляется в соответствии с постановлениями Кабинета Министров.",
+        text: "Отсрочка распространяется на импорт для производства продукции и собственных нужд (Постановление Президента № ПП-5243 от 14 сентября 2021 года).",
       },
-      { type: "h2", text: "Продолжительность льгот в зависимости от объёма инвестиций" },
+      { type: "h2", text: "Таможенные льготы" },
       {
         type: "p",
-        text: "Налоговые и таможенные льготы предоставляются на срок от 3 до 10 лет в зависимости от объёма принятых инвестиционных обязательств:",
+        text: "По Закону № ЗРУ-604 (ст. 39) участники СЭЗ не уплачивают таможенные платежи в следующих случаях:",
       },
       {
-        type: "table",
-        head: [
-          "Объём инвестиций",
-          "Срок льгот",
-        ],
-        rows: [
-          {
-            cells: [
-              "300 тыс. – 3 млн долл. США",
-              "3 года",
-            ],
-            bar: 0.3,
-          },
-          {
-            cells: [
-              "3–5 млн долл. США",
-              "5 лет",
-            ],
-            bar: 0.5,
-          },
-          {
-            cells: [
-              "5–10 млн долл. США",
-              "7 лет",
-            ],
-            bar: 0.7,
-          },
-          {
-            cells: [
-              "от 10 млн долл. США",
-              "10 лет",
-            ],
-            bar: 1,
-            highlight: true,
-          },
+        type: "ul",
+        items: [
+          "Ввоз строительных материалов, не производимых в Узбекистане, для реализации инвестиционного проекта по соглашению об инвестировании в период строительства (НДС и сборы за таможенное оформление уплачиваются).",
+          "Ввоз технологического оборудования, аналоги которого не производятся в Узбекистане, по утверждённому перечню (сборы за таможенное оформление уплачиваются).",
+          "Ввоз сырья, материалов и комплектующих для производства продукции на экспорт (сборы за таможенное оформление уплачиваются). По Указу Президента № УП-153 от 13 июня 2022 года эта льгота применяется только при помещении товаров в таможенный режим «переработка на таможенной территории».",
         ],
       },
       {
         type: "takeaway",
         title: "Что это значит для вас",
         items: [
-          "Срок льгот зависит от объёма инвестиций, поэтому определите сумму инвестиций до подачи заявки.",
-          "Инвестиции от 10 млн долл. США дают льготы на полные 10 лет.",
-          "Учитывайте НДС в планах: он не отменяется, а откладывается и быстро возвращается.",
+          "Определите объём инвестиций до подачи заявки: от него зависит, будет льгота по налогу на прибыль на 3, 5 или 10 лет.",
+          "Если статус получен с 1 апреля 2026 года, закладывайте в финансовую модель ускоренную амортизацию, а не освобождение от налога на прибыль.",
+          "Укажите в соглашении об инвестировании все виды деятельности, для которых нужны льготы: на остальные они не распространяются.",
+          "Учитывайте НДС в планах: он не отменяется, но импортный НДС можно отсрочить до 120 дней.",
+          "Сырьё ввозите в режиме «переработка на таможенной территории», иначе таможенная льгота не применяется.",
         ],
       },
-      { type: "h2", text: "Валютный режим" },
+      { type: "h2", text: "Правовые гарантии" },
       {
         type: "p",
-        text: "Участники ОЭЗ вправе свободно выбирать обслуживающий банк и открывать счета в иностранной валюте в одном или нескольких коммерческих банках Узбекистана, а также вести счета за рубежом. Валютная выручка — в том числе экспортные поступления от товаров, работ и услуг — должна зачисляться на счёт участника. В пределах ОЭЗ даже узбекские организации-резиденты, не являющиеся участниками ОЭЗ, вправе реализовывать товары и оказывать услуги участникам ОЭЗ за иностранную валюту.",
+        text: "При изменении налогового законодательства участники СЭЗ вправе применять в течение срока действия льгот, но не более десяти лет, нормы по уплате налогов, действовавшие на дату их включения в реестр участников СЭЗ. Гарантия не распространяется на налогообложение подакцизных товаров (ст. 42 Закона № ЗРУ-604).",
       },
-      { type: "h2", text: "Дополнительные права участников ОЭЗ" },
+      {
+        type: "p",
+        text: "Участники вправе использовать удобные для них условия, формы оплаты и расчётов за экспортируемые и импортируемые товары. Дополнительные гарантии и льготы могут быть предусмотрены решением Президента. Убытки, упущенная выгода и моральный вред, причинённые необоснованным вмешательством государственных органов, возмещаются в судебном порядке.",
+      },
+      { type: "h2", text: "Дополнительные права участников СЭЗ" },
       {
         type: "ul",
         items: [
-          "Арендовать земельные участки посредством электронных онлайн-торгов; использовать здания и сооружения на правах аренды; возводить инфраструктуру для производственной деятельности в порядке, установленном законодательством.",
-          "Требовать от дирекции ОЭЗ обеспечения инженерной, коммунальной и транспортной инфраструктуры в сроки, предусмотренные инвестиционным соглашением и графиком реализации проекта.",
-          "Пользоваться всеми услугами дирекции ОЭЗ на равных условиях, в том числе на договорной основе.",
-          "Возводить инфраструктуру за собственный счёт в соответствии с генеральным планом ОЭЗ.",
+          "Получать в аренду земельные участки через электронный онлайн-аукцион, пользоваться зданиями и сооружениями, в том числе на правах аренды, и строить объекты инфраструктуры для производственной деятельности в порядке, предусмотренном Законом № ЗРУ-604.",
+          "Требовать от дирекции СЭЗ своевременного обеспечения инженерно-коммуникационной и дорожно-транспортной инфраструктурой в соответствии с соглашением об инвестировании и графиком реализации проекта.",
+          "Пользоваться на равных условиях всеми услугами дирекции СЭЗ, в том числе на договорной основе.",
+          "Строить за собственный счёт объекты инфраструктуры, необходимые для проекта, в соответствии с генеральным планом СЭЗ.",
         ],
       },
       { type: "h2", text: "Зональные преимущества" },
@@ -431,95 +428,103 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Чем может помочь Advizen" },
       {
         type: "p",
-        text: "Выбор подходящей ОЭЗ, структурирование инвестиционного проекта с целью максимизации доступных льгот и управление текущими обязательствами по соблюдению требований требуют тщательного правового и налогового планирования. Команда Advizen помогает клиентам в оценке права на участие, подготовке заявлений для получения статуса участника ОЭЗ, составлении инвестиционных соглашений и прохождении нормативных требований дирекции зоны.",
+        text: "Выбор подходящей СЭЗ, структурирование инвестиционного проекта так, чтобы полностью использовать доступные льготы, и выполнение текущих требований требуют тщательного правового и налогового планирования. Команда Advizen помогает оценить право на льготы, подготовить заявку на статус участника СЭЗ и соглашение об инвестировании и выполнить требования дирекции зоны.",
       },
     ],
     faq: [
       {
-        question: "Какие налоговые льготы получают участники ОЭЗ в Узбекистане?",
-        answer: "Участники ОЭЗ в Узбекистане получают комплексный пакет льгот, включающий освобождение от налога на прибыль, налога на имущество и земельного налога на срок до десяти лет. Предусмотрено освобождение от таможенных пошлин на ввозимое оборудование и сырьё. Резиденты IT-парка освобождены от всех налогов и обязательных отчислений в государственные целевые фонды, включая социальный налог, до 1 января 2028 года, а их сотрудники уплачивают НДФЛ по сниженной ставке 7,5% на доходы, получаемые до этой даты.",
+        question: "Какие налоговые льготы получают участники СЭЗ в Узбекистане?",
+        answer: "По ст. 473 Налогового кодекса участники СЭЗ освобождаются от налога на прибыль на 3 года (инвестиции от 3 до 5 млн долл. США), 5 лет (от 5 до 15 млн) или 10 лет (от 15 млн), а также от налога на имущество и земельного налога на срок, определяемый решением Президента. Участники, получившие статус с 1 апреля 2026 года, вместо освобождения от налога на прибыль получают ускоренную амортизацию основных средств. НДС и таможенную пошлину при импорте комплектующих, сырья и материалов можно отсрочить до 120 дней без процентов (ПП-5243). Льготы действуют только для видов деятельности из соглашения об инвестировании с дирекцией СЭЗ.",
       },
       {
-        question: "Какие виды ОЭЗ существуют в Узбекистане?",
-        answer: "В Узбекистане признаётся пять типов ОЭЗ: свободные экономические зоны, специальные научно-технологические зоны, туристско-рекреационные зоны, свободные торговые зоны и специальные промышленные зоны. Каждый тип имеет собственную нормативно-правовую базу и отраслевую направленность.",
+        question: "Что изменилось для участников СЭЗ с 1 апреля 2026 года?",
+        answer: "Налогоплательщики, получившие статус участника СЭЗ с 1 апреля 2026 года, больше не освобождаются от налога на прибыль. Вместо этого они получают право на ускоренную амортизацию амортизируемых основных средств на срок, который зависит от тех же порогов инвестиций — 3, 5 и 15 млн долл. США (ст. 473, часть третья, НК). Освобождение от налога на имущество и земельного налога сохраняется.",
       },
       {
-        question: "Сохраняются ли налоговые льготы ОЭЗ при изменении законодательства?",
-        answer: "Да. При изменении налогового законодательства участники ОЭЗ вправе продолжать применять ставки и условия уплаты налогов, действовавшие на дату их регистрации в реестре участников зоны, в течение срока действия льгот — но не более десяти лет. Гарантия законодательной стабильности не распространяется на подакцизные товары.",
+        question: "Какие виды СЭЗ существуют в Узбекистане?",
+        answer: "Закон № ЗРУ-604 предусматривает пять видов СЭЗ: свободные экономические зоны, специальные научно-технологические зоны, туристско-рекреационные зоны, зоны свободной торговли и особые промышленные зоны.",
       },
       {
-        question: "Как компании получают статус участника ОЭЗ в Узбекистане?",
-        answer: "Компании подают заявку в администрацию соответствующей ОЭЗ, выполнив минимальные инвестиционные пороговые условия. Процедура включает подписание инвестиционного соглашения, регистрацию в реестре участников и получение сертификата участника. Advizen оказывает помощь в оценке соответствия требованиям, подготовке заявки и выполнении регуляторных требований.",
+        question: "Сохраняются ли налоговые льготы СЭЗ при изменении законодательства?",
+        answer: "Да. При изменении налогового законодательства участники СЭЗ вправе применять нормы, действовавшие на дату их включения в реестр участников, в течение срока действия льгот, но не более десяти лет (ст. 42 Закона № ЗРУ-604). Гарантия не распространяется на налогообложение подакцизных товаров.",
+      },
+      {
+        question: "Как компании получают статус участника СЭЗ в Узбекистане?",
+        answer: "Инвестор подаёт инвестиционную заявку в дирекцию соответствующей СЭЗ. После её одобрения инвестор подписывает с дирекцией соглашение об инвестировании, включается в реестр участников СЭЗ и получает свидетельство участника. Advizen помогает оценить право на льготы, подготовить заявку и соглашение об инвестировании.",
       },
     ],
   },
   uz: {
-    subtitle: "Oʻzbekiston maxsus iqtisodiy zonalari ishtirokchilari uchun mavjud soliq, bojxona, huquqiy va valyuta imtiyozlari boʻyicha tizimli qoʻllanma.",
+    subtitle: "Oʻzbekistonda maxsus iqtisodiy zonalar (MIZ) ishtirokchilari uchun amaldagi Soliq kodeksiga koʻra mavjud soliq, bojxona va huquqiy imtiyozlar boʻyicha tizimli qoʻllanma.",
     author: "Advizen yuridik amaliyoti",
     readTime: "7 daqiqa oʻqish",
     inShort: {
       figures: [
         {
-          value: "604-sonli Qonun",
-          label: "2020-yil 17-fevraldagi «Maxsus iqtisodiy zonalar toʻgʻrisida»gi Qonun",
+          value: "473-modda",
+          label: "MIZ ishtirokchilarining soliq imtiyozlarini belgilovchi Soliq kodeksi moddasi",
         },
         {
           value: "3–10 yil",
-          label: "Soliq va bojxona imtiyozlari muddati: 300 000 AQSh dollari investitsiyadan 3 yil, 10 mln AQSh dollari va undan koʻpdan 10 yil",
+          label: "Foyda soligʻidan ozod qilish: 3–5 mln AQSh dollari investitsiya — 3 yil, 5–15 mln — 5 yil, 15 mln va undan koʻp — 10 yil",
+        },
+        {
+          value: "2026-yil 1-aprel",
+          label: "Shu sanadan yangi ishtirokchilar foyda soligʻidan ozod qilish oʻrniga tezlashtirilgan amortizatsiya huquqini oladi",
         },
         {
           value: "120 kun",
-          label: "Import qilinadigan tovarlar boʻyicha QQSni kechiktirishning eng uzoq muddati",
-        },
-        {
-          value: "7 kun",
-          label: "Hisobga olinadigan QQSning ortiqcha qismini soddalashtirilgan tartibda qaytarish muddati",
+          label: "Butlovchi buyumlar, xomashyo va materiallar importida QQS va bojxona boji toʻlovini foizsiz kechiktirish (PQ-5243)",
         },
       ],
       points: [
-        "Oʻzbekistondagi MIZ ishtirokchilari yer soligʻi, foyda soligʻi, yuridik shaxslarning mulk soligʻi va yagona soliq toʻlovidan, shuningdek Respublika yoʻl fondi hamda Taʼlim va tibbiyot muassasalarini rivojlantirish byudjetdan tashqari fondiga ajratmalardan ozod.",
-        "Soliq qonunchiligi oʻzgarganda ishtirokchilar roʻyxatdan oʻtgan sanada amal qilgan soliq stavkalari va toʻlov shartlarini imtiyozlar muddati davomida, lekin oʻn yildan koʻp boʻlmagan muddatda qoʻllashi mumkin; bu aksizli tovarlarga tatbiq etilmaydi.",
-        "Ishtirokchilar Oʻzbekistonda ishlab chiqarilmaydigan qurilish materiallari va mahalliy muqobili boʻlmagan texnologik uskunalar kabi tovarlar importida QQS va bojxona rasmiylashtiruvi yigʻimlaridan tashqari bojxona toʻlovlaridan ozod.",
-        "Ishtirokchilar Oʻzbekistondagi bir yoki bir nechta bankda valyuta hisobvaraqlarini ochishi va xorijda hisobvaraqlarga ega boʻlishi mumkin.",
+        "Oʻzbekistonda MIZ ishtirokchilari kiritilgan investitsiya hajmiga qarab foyda soligʻidan 3, 5 yoki 10 yilga ozod qilinadi: 3–5 mln, 5–15 mln yoki 15 mln AQSh dollari va undan koʻp (Soliq kodeksining 473-moddasi).",
+        "2026-yil 1-apreldan boshlab MIZ ishtirokchisi maqomini olgan soliq toʻlovchilarga foyda soligʻidan ozod qilish oʻrniga asosiy vositalarni tezlashtirilgan amortizatsiya qilish huquqi xuddi shu investitsiya chegaralariga bogʻliq muddatga beriladi.",
+        "Ishtirokchilar, shuningdek, Prezident qarori bilan belgilanadigan muddatga mol-mulk soligʻi va yer soligʻidan ozod qilinadi. Bu imtiyozlarning barchasi faqat MIZ direksiyasi bilan tuzilgan investitsiya shartnomasida nazarda tutilgan faoliyat turlariga tatbiq etiladi.",
+        "Butlovchi buyumlar, xomashyo va materiallar importida QQS va bojxona bojini 120 kungacha foizsiz va taʼminotsiz kechiktirish mumkin (PQ-5243). Xomashyo boʻyicha bojxona imtiyozlari faqat «bojxona hududida qayta ishlash» bojxona rejimida qoʻllaniladi (PF-153).",
       ],
     },
     content: [
       {
         type: "p",
-        text: "Maxsus iqtisodiy zonalar (MIZ) — investitsiyalarni jalb qilish va iqtisodiy oʻsishni ragʻbatlantirish uchun yaratilgan maxsus huquqiy rejim asosida faoliyat yuritadigan belgilangan hududlardir. Ishtirokchilar soliq imtiyozlari, bojxona imtiyozlari, huquqiy kafolatlar va valyuta erkinliklarining keng toʻplamidan foydalanadilar. Oʻzbekiston bir nechta MIZ turlarini tan oladi, ularning har birining oʻz tartibga soluvchi tizimi va tarmoq yoʻnalishi mavjud.",
+        text: "Maxsus iqtisodiy zonalar (MIZ) — investitsiyalarni jalb qilish va hududlarda sanoatni rivojlantirish uchun yaratilgan, belgilangan chegaralari va maxsus huquqiy rejimiga ega hududlardir. Oʻzbekistonda umumiy asoslarni «Maxsus iqtisodiy zonalar toʻgʻrisida»gi OʻRQ-604-sonli Qonun belgilaydi, soliq imtiyozlarining oʻzi esa Soliq kodeksi bilan tartibga solinadi. Ushbu qoʻllanmada hozir amal qilayotgan qoidalar, jumladan 2026-yil 1-apreldan yangi ishtirokchilar uchun kiritilgan oʻzgarish bayon etilgan.",
       },
       { type: "h2", text: "Qonunchilik bazasi" },
       {
         type: "sources",
         items: [
-          { title: "Oʻzbekiston Respublikasi Bojxona kodeksi" },
-          { title: "Oʻzbekiston Respublikasi Soliq kodeksi", href: "https://lex.uz/uz/docs/4674893" },
           {
-            title: "«Maxsus iqtisodiy zonalar toʻgʻrisida»gi 604-sonli Qonun",
+            title: "Oʻzbekiston Respublikasi Soliq kodeksi",
+            meta: "473–474-moddalar · 2022-yil 12-iyuldagi OʻRQ-783-sonli Qonun tahririda",
+            href: "https://lex.uz/uz/docs/4674893",
+          },
+          {
+            title: "«Maxsus iqtisodiy zonalar toʻgʻrisida»gi OʻRQ-604-sonli Qonun",
             meta: "2020-yil 17-fevral",
             href: "https://lex.uz/uz/docs/4737514",
           },
           {
             title: "PQ-5243-sonli Prezident Qarori",
-            meta: "2021-yil 14-sentabr · MIZ ishtirokchilarini yanada qoʻllab-quvvatlash chora-tadbirlari toʻgʻrisida",
+            meta: "2021-yil 14-sentabr · Maxsus iqtisodiy zonalar ishtirokchilarini yanada qoʻllab-quvvatlash chora-tadbirlari toʻgʻrisida",
             href: "https://lex.uz/uz/docs/5633655",
-          },
-          {
-            title: "PF-5600-sonli Prezident Farmoni",
-            meta: "2018-yil 21-dekabr · Erkin iqtisodiy zonalarni muvofiqlashtirish va boshqarish tizimini yanada takomillashtirish toʻgʻrisida",
-            href: "https://lex.uz/uz/docs/4117767",
           },
           {
             title: "PF-153-sonli Prezident Farmoni",
             meta: "2022-yil 13-iyun · Maxsus iqtisodiy, kichik sanoat, yoshlar sanoat va tadbirkorlik zonalarining samaradorligini oshirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisida",
             href: "https://lex.uz/uz/docs/6061066",
           },
+          {
+            title: "PF-5600-sonli Prezident Farmoni",
+            meta: "2018-yil 21-dekabr · Erkin iqtisodiy zonalarni muvofiqlashtirish va boshqarish tizimini yanada takomillashtirish toʻgʻrisida",
+            href: "https://lex.uz/uz/docs/4117767",
+          },
+          { title: "Oʻzbekiston Respublikasi Bojxona kodeksi" },
         ],
       },
       { type: "h2", text: "Maxsus iqtisodiy zonalar turlari" },
       {
         type: "p",
-        text: "Maxsus iqtisodiy zona — mintaqaning jadal ijtimoiy-iqtisodiy rivojlanishi uchun xorijiy va ichki investitsiyalarni, ilgʻor texnologiyalarni va boshqaruv tajribasini jalb qilish maqsadida yaratilgan, belgilangan chegaralari va maxsus huquqiy rejimi mavjud hududdir. MIZlar quyidagi shakllarda tashkil etilishi mumkin:",
+        text: "OʻRQ-604-sonli Qonunga koʻra MIZlar Prezident qarori bilan tashkil etiladi va quyidagi turlarda boʻlishi mumkin:",
       },
       {
         type: "ul",
@@ -528,48 +533,58 @@ const article: Record<string, LocalizedArticle> = {
           "Maxsus ilmiy-texnologik zonalar",
           "Turistik-rekreatsion zonalar",
           "Erkin savdo zonalari",
-          "Maxsus sanoat zonalari",
+          "Alohida sanoat zonalari",
         ],
       },
-      { type: "h2", text: "Maxsus huquqiy rejim" },
-      {
-        type: "p",
-        text: "MIZ ishtirokchilari qonun hujjatlarida nazarda tutilgan huquqiy himoya kafolatlari, imtiyozlar va afzalliklarga haqlidirlar. Soliq qonunchiligi oʻzgarganda ishtirokchilar — imtiyozlar muddati davomida, lekin oʻn yildan koʻp boʻlmagan holda — MIZ reestriga roʻyxatdan oʻtgan sanada amal qilgan soliq stavkalari va toʻlov shartlarini qoʻllashda davom etishlari mumkin. Ushbu barqarorlik kafolati aksizli tovarlarga nisbatan qoʻllanilmaydi.",
-      },
-      {
-        type: "p",
-        text: "Ishtirokchilar eksport va import qilinadigan tovarlar uchun oʻzlari uchun qulay toʻlov shartlari va hisob-kitob shakllaridan foydalanishi mumkin. Qoʻshimcha kafolatlar Prezident qarori bilan belgilanishi mumkin. Davlat organlari tomonidan asossiz aralashuv natijasida yetkazilgan zararlar, boy berilgan foyda va maʼnaviy zarar sud qarori bilan qoplanadi.",
-      },
-      { type: "h2", text: "Maxsus bojxona rejimi" },
-      {
-        type: "p",
-        text: "Maxsus bojxona rejimi bojxona toʻlovlaridan vaqtincha ozod etish yoki ularni kamaytirishni, hamda eksport yoki importga nisbatan noitarif cheklovlarni bekor qilish yoki yumshatishni oʻz ichiga olishi mumkin. Amalda MIZ ishtirokchilari quyidagi hollarda bojxona toʻlovlaridan (QQS va bojxona rasmiylashtiruv yigʻimlaridan tashqari) ozod qilingan:",
-      },
-      {
-        type: "ul",
-        items: [
-          "Oʻzbekistonda ishlab chiqarilmaydigan qurilish materiallarini investitsiya shartnomasi doirasida qurilish davrida olib kirishda.",
-          "Ichki muqobili boʻlmagan texnologik uskunalarni tasdiqlangan hukumat roʻyxati boʻyicha olib kirishda (bojxona rasmiylashtiruv yigʻimlari saqlanib qoladi).",
-          "Eksportga moʻljallangan mahsulotlar ishlab chiqarishda ishlatiladigan xomashyo, butlovchi qismlar va sarflanadigan materiallarni olib kirishda (bojxona rasmiylashtiruv yigʻimlari saqlanib qoladi).",
-        ],
-      },
-      { type: "h2", text: "Maxsus soliq rejimi" },
-      { type: "p", text: "MIZ ishtirokchilari quyidagi soliq va majburiy toʻlovlardan ozod etiladi:" },
+      { type: "h2", text: "Soliq kodeksining 473-moddasi boʻyicha soliq imtiyozlari" },
+      { type: "p", text: "MIZ ishtirokchilari quyidagi soliqlardan ozod qilinadi:" },
       {
         type: "checks",
         items: [
-          "Yer soligʻi",
-          "Yuridik shaxslarning foyda soligʻi",
-          "Yuridik shaxslarning mulk soligʻi",
-          "Yagona soliq toʻlovi (mikro va kichik korxonalarga qoʻllaniladigan)",
-          "Vazirlar Mahkamasi huzuridagi Respublika yoʻl fondiga majburiy ajratmalar",
-          "Moliya vazirligi huzuridagi Taʼlim va tibbiyot muassasalarini rivojlantirish byudjetdan tashqari fondiga majburiy ajratmalar",
+          "Foyda soligʻi — investitsiya hajmiga qarab 3, 5 yoki 10 yilga",
+          "Mol-mulk soligʻi — Prezident qarori bilan belgilanadigan muddatga",
+          "Yer soligʻi — Prezident qarori bilan belgilanadigan muddatga",
         ],
-        except: "QQS saqlanadi: uning oʻrniga kechiktirish va tez qaytarish",
+        except: "QQS saqlanadi: import QQSni 120 kungacha kechiktirish mumkin",
       },
       {
         type: "p",
-        text: "Ishtirokchilar QQSdan ozod qilinmaydi, lekin aylanma mablagʻlar uchun ikki afzallikka ega:",
+        text: "Foyda soligʻidan ozod qilish muddati kiritilgan investitsiya hajmiga bogʻliq (Soliq kodeksi 473-moddasining ikkinchi qismi; 2022-yil 12-iyuldagi OʻRQ-783-sonli Qonun bilan qoʻshilgan):",
+      },
+      {
+        type: "table",
+        head: ["Investitsiya hajmi", "Foyda soligʻidan ozod qilish"],
+        rows: [
+          { cells: ["3–5 mln AQSh dollari", "3 yil"], bar: 0.3 },
+          { cells: ["5–15 mln AQSh dollari", "5 yil"], bar: 0.5 },
+          { cells: ["15 mln AQSh dollari va undan koʻp", "10 yil"], bar: 1, highlight: true },
+        ],
+        caption: "2026-yil 1-apreldan maqom olgan ishtirokchilar uchun xuddi shu chegaralar tezlashtirilgan amortizatsiya muddatini belgilaydi.",
+      },
+      { type: "h3", text: "2026-yil 1-apreldan — ozod qilish oʻrniga tezlashtirilgan amortizatsiya" },
+      {
+        type: "p",
+        text: "2026-yil 1-apreldan boshlab MIZ ishtirokchisi maqomini olgan soliq toʻlovchilarga foyda soligʻi boʻyicha imtiyoz amortizatsiya qilinadigan asosiy vositalarni tezlashtirilgan amortizatsiya qilish huquqi shaklida beriladi. Muddat xuddi shu investitsiya chegaralariga bogʻliq (Soliq kodeksi 473-moddasining uchinchi qismi). Tezlashtirilgan amortizatsiya foyda soligʻini bekor qilmaydi: u uskunalar va binolarga xarajatlarni loyihaning dastlabki yillariga oʻtkazadi, shu yillarda soliq kamroq toʻlanadi.",
+      },
+      { type: "h3", text: "Faqat investitsiya shartnomasidagi faoliyat uchun" },
+      {
+        type: "p",
+        text: "Yuqoridagi barcha imtiyozlar faqat investor va MIZ direksiyasi oʻrtasida tuzilgan investitsiya shartnomasida nazarda tutilgan faoliyat turlariga tatbiq etiladi (Soliq kodeksi 473-moddasining toʻrtinchi qismi). Shu kompaniyaning boshqa faoliyati umumiy asosda soliqqa tortiladi.",
+      },
+      { type: "h3", text: "Imtiyozlar qachondan amal qiladi" },
+      {
+        type: "ul",
+        items: [
+          "Mol-mulk soligʻi va yer soligʻi boʻyicha imtiyozlar muddati MIZ ishtirokchisi guvohnomasi olingan sanadan hisoblanadi (Soliq kodeksining 474-moddasi).",
+          "Foyda soligʻi boʻyicha imtiyoz muddati MIZ hududidagi ishlab chiqarish obyekti (xizmat koʻrsatish obyekti) foydalanishga qabul qilingan sanadan hisoblanadi.",
+          "Agar ishtirokchi investitsiyani uzoqroq muddat beradigan hajmgacha oshirsa, imtiyozlarni haqiqiy investitsiya hajmiga muvofiq uzaytirishga haqli.",
+          "Ishtirokchi maqomidan mahrum qilinganda imtiyozlar maqom bekor qilingan oyning 1-sanasidan toʻxtatiladi.",
+        ],
+      },
+      { type: "h2", text: "QQS va bojxona bojini kechiktirish" },
+      {
+        type: "p",
+        text: "MIZ ishtirokchilari QQSdan ozod qilinmaydi, lekin import qilishda aylanma mablagʻlar uchun afzallikka ega:",
       },
       {
         type: "figures",
@@ -577,84 +592,55 @@ const article: Record<string, LocalizedArticle> = {
           {
             value: "120",
             unit: "kun",
-            label: "Import qilinadigan tovarlar boʻyicha QQSni kechiktirishning eng uzoq muddati",
-          },
-          {
-            value: "7",
-            unit: "kun",
-            label: "Ortiqcha hisobga olinadigan QQSni soddalashtirilgan tartibda qaytarish muddati",
+            label: "Butlovchi buyumlar, xomashyo va materiallar importida QQS va bojxona bojini foizsiz va taʼminotsiz kechiktirish (boʻlib toʻlash)",
           },
         ],
       },
       {
         type: "p",
-        text: "Respublika byudjetidan QQS qaytarish Vazirlar Mahkamasi qarorlari bilan tartibga solinadi.",
+        text: "Kechiktirish mahsulot ishlab chiqarish va oʻz ehtiyojlari uchun import qilinadigan tovarlarga tatbiq etiladi (2021-yil 14-sentabrdagi PQ-5243-sonli Prezident Qarori).",
       },
-      { type: "h2", text: "Investitsiya hajmiga qarab imtiyozlar muddati" },
+      { type: "h2", text: "Bojxona imtiyozlari" },
       {
         type: "p",
-        text: "Soliq va bojxona imtiyozlari qilingan investitsiya majburiyatlari hajmiga qarab 3 dan 10 yilgacha beriladi:",
+        text: "OʻRQ-604-sonli Qonunga (39-modda) koʻra MIZ ishtirokchilari quyidagi hollarda bojxona toʻlovlarini toʻlamaydi:",
       },
       {
-        type: "table",
-        head: [
-          "Investitsiya hajmi",
-          "Imtiyozlar muddati",
-        ],
-        rows: [
-          {
-            cells: [
-              "300 ming – 3 mln AQSh dollari",
-              "3 yil",
-            ],
-            bar: 0.3,
-          },
-          {
-            cells: [
-              "3–5 mln AQSh dollari",
-              "5 yil",
-            ],
-            bar: 0.5,
-          },
-          {
-            cells: [
-              "5–10 mln AQSh dollari",
-              "7 yil",
-            ],
-            bar: 0.7,
-          },
-          {
-            cells: [
-              "10 mln AQSh dollari va undan koʻp",
-              "10 yil",
-            ],
-            bar: 1,
-            highlight: true,
-          },
+        type: "ul",
+        items: [
+          "Oʻzbekistonda ishlab chiqarilmaydigan qurilish materiallarini investitsiya shartnomasiga muvofiq investitsiya loyihasini amalga oshirish uchun qurilish davrida olib kirishda (QQS va bojxona rasmiylashtiruvi yigʻimlari toʻlanadi).",
+          "Oʻzbekistonda muqobili ishlab chiqarilmaydigan texnologik uskunalarni tasdiqlangan roʻyxat boʻyicha olib kirishda (bojxona rasmiylashtiruvi yigʻimlari toʻlanadi).",
+          "Eksportga mahsulot ishlab chiqarish uchun xomashyo, materiallar va butlovchi buyumlarni olib kirishda (bojxona rasmiylashtiruvi yigʻimlari toʻlanadi). 2022-yil 13-iyundagi PF-153-sonli Prezident Farmoniga koʻra bu imtiyoz faqat tovarlar «bojxona hududida qayta ishlash» bojxona rejimiga joylashtirilganda qoʻllaniladi.",
         ],
       },
       {
         type: "takeaway",
         title: "Bu siz uchun nimani anglatadi",
         items: [
-          "Imtiyozlar muddati investitsiya hajmiga bogʻliq, shuning uchun ariza berishdan oldin investitsiya miqdorini aniqlang.",
-          "10 mln AQSh dollari va undan koʻp investitsiya imtiyozlarni toʻliq 10 yilga taʼminlaydi.",
-          "QQSni rejalashtiring: u bekor qilinmaydi, balki kechiktiriladi va tez qaytariladi.",
+          "Ariza berishdan oldin investitsiya hajmini aniqlang: foyda soligʻi boʻyicha imtiyoz 3, 5 yoki 10 yilga berilishi shunga bogʻliq.",
+          "Agar maqom 2026-yil 1-apreldan keyin olingan boʻlsa, moliyaviy modelga foyda soligʻidan ozod qilishni emas, tezlashtirilgan amortizatsiyani kiriting.",
+          "Imtiyoz kerak boʻlgan barcha faoliyat turlarini investitsiya shartnomasida koʻrsating: boshqa faoliyatga imtiyozlar tatbiq etilmaydi.",
+          "QQSni rejalashtiring: u bekor qilinmaydi, lekin import QQSni 120 kungacha kechiktirish mumkin.",
+          "Xomashyoni «bojxona hududida qayta ishlash» rejimida olib kiring, aks holda bojxona imtiyozi qoʻllanilmaydi.",
         ],
       },
-      { type: "h2", text: "Valyuta rejimi" },
+      { type: "h2", text: "Huquqiy kafolatlar" },
       {
         type: "p",
-        text: "MIZ ishtirokchilari xizmat koʻrsatuvchi bankni erkin tanlashi va Oʻzbekistondagi bir yoki bir nechta tijorat bankida xorijiy valyutadagi hisobvaraqlar ochishi, shuningdek chet elda hisobvaraqlar yuritishi mumkin. Xorijiy valyuta tushumlari — jumladan, tovarlar, ishlar va xizmatlar eksportidan olingan tushumlar — ishtirokchining hisobvaragʻiga oʻtkazilishi kerak. MIZ hududida MIZ ishtirokchisi boʻlmagan rezident yuridik shaxslar ham MIZ ishtirokchilariga xorijiy valyutada tovar sotish va xizmat koʻrsatish huquqiga ega.",
+        text: "Soliq qonunchiligi oʻzgarganda MIZ ishtirokchilari imtiyozlar muddati davomida, lekin oʻn yildan koʻp boʻlmagan muddatda, MIZ ishtirokchilari reestriga kiritilgan sanada amal qilgan soliq toʻlash qoidalarini qoʻllashga haqli. Bu kafolat aksizli tovarlarni soliqqa tortishga tatbiq etilmaydi (OʻRQ-604-sonli Qonunning 42-moddasi).",
+      },
+      {
+        type: "p",
+        text: "Ishtirokchilar eksport va import qilinadigan tovarlar uchun oʻzlariga qulay toʻlov shartlari va hisob-kitob shakllaridan foydalanishi mumkin. Qoʻshimcha kafolatlar va imtiyozlar Prezident qarori bilan belgilanishi mumkin. Davlat organlarining asossiz aralashuvi natijasida yetkazilgan zararlar, boy berilgan foyda va maʼnaviy zarar sud tartibida qoplanadi.",
       },
       { type: "h2", text: "MIZ ishtirokchilarining qoʻshimcha huquqlari" },
       {
         type: "ul",
         items: [
-          "Elektron onlayn auksion orqali yer uchastkalarini ijaraga olish; binolar va inshootlardan ijara shartlarida foydalanish; qonun hujjatlarida belgilangan tartibda ishlab chiqarish faoliyati uchun infratuzilma barpo etish.",
-          "MIZ direksiyasidan investitsiya shartnomasi va loyiha jadvaliga muvofiq muhandislik, kommunal va transport infratuzilmasini oʻz vaqtida taʼminlashni talab qilish.",
-          "MIZ direksiyasi tomonidan taqdim etiladigan barcha xizmatlardan teng shartlarda, jumladan shartnoma asosida foydalanish.",
-          "MIZ bosh rejasiga muvofiq oʻz hisobidan infratuzilma barpo etish.",
+          "Elektron onlayn auksion orqali yer uchastkalarini ijaraga olish, binolar va inshootlardan, jumladan ijara asosida foydalanish, OʻRQ-604-sonli Qonunda nazarda tutilgan tartibda ishlab chiqarish faoliyati uchun infratuzilma obyektlarini qurish.",
+          "MIZ direksiyasidan investitsiya shartnomasi va loyiha jadvaliga muvofiq muhandislik-kommunikatsiya va yoʻl-transport infratuzilmasini oʻz vaqtida taʼminlashni talab qilish.",
+          "MIZ direksiyasi koʻrsatadigan barcha xizmatlardan teng shartlarda, jumladan shartnoma asosida foydalanish.",
+          "Loyiha uchun zarur infratuzilma obyektlarini MIZ bosh rejasiga muvofiq oʻz hisobidan qurish.",
         ],
       },
       { type: "h2", text: "Zonaga xos imtiyozlar" },
@@ -670,25 +656,29 @@ const article: Record<string, LocalizedArticle> = {
       { type: "h2", text: "Advizen qanday yordam bera oladi" },
       {
         type: "p",
-        text: "Toʻgʻri MIZni tanlash, mavjud imtiyozlardan maksimal darajada foydalanish uchun investitsiya loyihasini tuzish va doimiy muvofiqlik majburiyatlarini boshqarish puxta huquqiy va soliqqa oid rejalashtirish talab etadi. Advizen jamoasi mijozlarga muvofiqlikni baholashda, MIZ ishtirokchisi maqomini olish uchun arizalar tayyorlashda, investitsiya shartnomalari tuzishda va zona direksiyasi talablarini tushunib olishda yordam beradi.",
+        text: "Toʻgʻri MIZni tanlash, mavjud imtiyozlardan toʻliq foydalanish uchun investitsiya loyihasini tuzish va joriy talablarni bajarish puxta huquqiy va soliq rejalashtirishni talab qiladi. Advizen jamoasi imtiyozlarga boʻlgan huquqni baholash, MIZ ishtirokchisi maqomi uchun ariza va investitsiya shartnomasini tayyorlash hamda zona direksiyasi talablarini bajarishda yordam beradi.",
       },
     ],
     faq: [
       {
         question: "Oʻzbekistonda MIZ ishtirokchilari qanday soliq imtiyozlariga ega?",
-        answer: "Oʻzbekistonda MIZ ishtirokchilari toʻliq imtiyozlar paketini oladilar: foyda soligʻi, mulk soligʻi va yer soligʻidan oʻn yilgacha ozodlik. Import qilinadigan uskunalar va xomashyo uchun bojxona toʻlovlaridan ozodlik qoʻllaniladi. IT Park rezidentlari 2028-yil 1-yanvargacha barcha soliqlar, jumladan ijtimoiy soliq, hamda davlat maqsadli jamgʻarmalariga majburiy ajratmalardan ozod etilgan, ularning xodimlari esa shu sanagacha olingan daromadlaridan 7,5% kamaytirilgan stavkada jismoniy shaxslardan olinadigan daromad soligʻi toʻlaydilar.",
+        answer: "Soliq kodeksining 473-moddasiga koʻra MIZ ishtirokchilari foyda soligʻidan 3 yilga (3–5 mln AQSh dollari investitsiya), 5 yilga (5–15 mln) yoki 10 yilga (15 mln va undan koʻp), shuningdek Prezident qarori bilan belgilanadigan muddatga mol-mulk soligʻi va yer soligʻidan ozod qilinadi. 2026-yil 1-apreldan maqom olgan ishtirokchilar foyda soligʻidan ozod qilish oʻrniga asosiy vositalarni tezlashtirilgan amortizatsiya qilish huquqini oladi. Butlovchi buyumlar, xomashyo va materiallar importida QQS va bojxona bojini 120 kungacha foizsiz kechiktirish mumkin (PQ-5243). Imtiyozlar faqat MIZ direksiyasi bilan tuzilgan investitsiya shartnomasidagi faoliyat turlariga tatbiq etiladi.",
+      },
+      {
+        question: "2026-yil 1-apreldan MIZ ishtirokchilari uchun nima oʻzgardi?",
+        answer: "2026-yil 1-apreldan boshlab MIZ ishtirokchisi maqomini olgan soliq toʻlovchilar endi foyda soligʻidan ozod qilinmaydi. Buning oʻrniga ular amortizatsiya qilinadigan asosiy vositalarni tezlashtirilgan amortizatsiya qilish huquqini xuddi shu investitsiya chegaralariga — 3, 5 va 15 mln AQSh dollariga bogʻliq muddatga oladi (Soliq kodeksi 473-moddasining uchinchi qismi). Mol-mulk soligʻi va yer soligʻidan ozod qilish saqlanadi.",
       },
       {
         question: "Oʻzbekistonda qanday turdagi maxsus iqtisodiy zonalar mavjud?",
-        answer: "Oʻzbekiston MIZning beshta turini tan oladi: erkin iqtisodiy zonalar, maxsus ilmiy-texnologik zonalar, turistik-rekreatsion zonalar, erkin savdo zonalari va maxsus sanoat zonalari. Har bir tur oʻzining tartibga solish tizimi va tarmoq yoʻnalishiga ega.",
+        answer: "OʻRQ-604-sonli Qonun MIZning beshta turini nazarda tutadi: erkin iqtisodiy zonalar, maxsus ilmiy-texnologik zonalar, turistik-rekreatsion zonalar, erkin savdo zonalari va alohida sanoat zonalari.",
       },
       {
         question: "Qonunchilik oʻzgarganda MIZ soliq imtiyozlari saqlanadimi?",
-        answer: "Ha. Soliq qonunchiligi oʻzgarganda MIZ ishtirokchilari zona ishtirokchilari reestriga roʻyxatdan oʻtgan sanada amal qilgan soliq stavkalari va toʻlov shartlarini imtiyozlari amal qilgan davr mobaynida, lekin oʻn yildan koʻp boʻlmagan muddatda qoʻllashni davom ettirishga haqli. Qonunchilik barqarorligi kafolati aksizli tovarlarga tatbiq etilmaydi.",
+        answer: "Ha. Soliq qonunchiligi oʻzgarganda MIZ ishtirokchilari ishtirokchilar reestriga kiritilgan sanada amal qilgan qoidalarni imtiyozlar muddati davomida, lekin oʻn yildan koʻp boʻlmagan muddatda qoʻllashga haqli (OʻRQ-604-sonli Qonunning 42-moddasi). Kafolat aksizli tovarlarni soliqqa tortishga tatbiq etilmaydi.",
       },
       {
         question: "Oʻzbekistonda kompaniyalar MIZ ishtirokchisi maqomini qanday oladi?",
-        answer: "Kompaniyalar tegishli MIZ maʼmuriyatiga murojaat qiladi va zona operatori belgilagan minimal investitsiya chegarasiga rioya qiladi. Jarayon investitsiya shartnomasini imzolash, ishtirokchilar reestriga roʻyxatdan oʻtish va ishtirokchi sertifikati olishni oʻz ichiga oladi. Advizen muvofiqlikni baholash, ariza tayyorlash va tartibga solish talablariga javob berishda yordam beradi.",
+        answer: "Investor tegishli MIZ direksiyasiga investitsiya arizasini topshiradi. Ariza maʼqullangach, investor direksiya bilan investitsiya shartnomasini imzolaydi, MIZ ishtirokchilari reestriga kiritiladi va ishtirokchi guvohnomasini oladi. Advizen imtiyozlarga boʻlgan huquqni baholash, ariza va investitsiya shartnomasini tayyorlashda yordam beradi.",
       },
     ],
   },

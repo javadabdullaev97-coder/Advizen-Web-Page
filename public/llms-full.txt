@@ -638,23 +638,27 @@ A: A maximum of 3 activity types at once, selected from the approved list of ove
 URL: https://www.advizenco.com/insights/special-economic-zones-uzbekistan
 
 
-Law No. 604 (February 17, 2020) governs the establishment and operation of Special Economic Zones (SEZs) in Uzbekistan. Five types of zones are authorized: free economic zones, special scientific and technological zones, tourist and recreational zones, free trade zones, and special industrial zones.
+Special economic zones (SEZs) in Uzbekistan are governed by Law No. ZRU-604 "On Special Economic Zones" of 17 February 2020 (framework) and by the Tax Code, Articles 473–474 (tax benefits). Five types of zones are provided for: free economic zones, special scientific and technological zones, tourist and recreational zones, free trade zones, and special industrial zones.
 
-### Tax Exemptions for SEZ Residents
+### Tax Benefits (Tax Code, Art. 473)
 
-All SEZ types provide exemption from: land tax; corporate profit tax; property tax on legal entities; the unified tax payment; mandatory contributions to the Republican Road Fund; and mandatory contributions to the Extra-budgetary Fund for Development of Educational and Medical Institutions. VAT on imported goods is deferred for up to 120 days. Excess creditable VAT is refunded within 7 working days through a simplified expedited procedure.
+SEZ participants are exempt from profit tax depending on the investment made: USD 3–5 million = 3 years; USD 5–15 million = 5 years; USD 15 million and above = 10 years (part 2, added by Law No. ZRU-783 of 12 July 2022). They are also exempt from property tax and land tax for a term set by a decision of the President (part 1).
+
+Taxpayers that became SEZ participants on or after 1 April 2026 get the right to accelerated depreciation of depreciable fixed assets instead of the profit tax exemption, for a term based on the same investment thresholds (part 3).
+
+All these benefits apply only to the activities listed in the investment agreement between the investor and the SEZ directorate (part 4). The property and land tax term runs from the date of the participant certificate; the profit tax term runs from the commissioning of the production facility (Art. 474).
+
+### VAT and Customs Duty Deferral
+
+SEZ participants are not exempt from VAT. VAT and customs duty on imported components, raw materials and materials for production and own needs may be deferred or paid in instalments for up to 120 days, without interest or security (Presidential Resolution No. PP-5243 of 14 September 2021).
 
 ### Customs Benefits
 
-SEZ residents benefit from customs duty exemptions on: construction materials not produced in Uzbekistan (during the construction phase of their project); technological equipment with no domestic equivalent; and raw materials and components used in the production of export-destined goods.
+SEZ participants pay no customs payments on: construction materials not produced in Uzbekistan imported for the project during construction (VAT and clearance fees still due); technological equipment with no domestic equivalent, per the approved list; and raw materials, materials and components used to produce goods for export (Law No. ZRU-604, Art. 39). Customs benefits on raw materials, materials and components apply only under the customs regime "processing in the customs territory" (Presidential Decree No. UP-153 of 13 June 2022).
 
-### Benefit Duration Based on Investment Size
+### Stability Guarantee
 
-The duration of tax and customs benefits is tied to the volume of investment: USD 300,000 – 3 million = 3-year benefit period; USD 3 million – 5 million = 5-year benefit period; USD 5 million – 10 million = 7-year benefit period; USD 10 million and above = 10-year benefit period.
-
-### Investment Stability Guarantee
-
-SEZ residents may elect to apply the tax rates in effect at the date of their registration for the entire duration of their benefit period (maximum 10 years), even if rates increase subsequently. This stability guarantee does not apply to excise goods.
+If tax legislation changes, SEZ participants may keep applying the tax rules in force at the date of their entry in the SEZ register for the term of their benefits, up to 10 years. The guarantee does not cover the taxation of excise goods (Law No. ZRU-604, Art. 42).
 
 ### IT Park (it-park.uz)
 
@@ -663,13 +667,16 @@ IT Park residents enjoy a broader exemption: all taxes and mandatory contributio
 ### Frequently Asked Questions
 
 **Q: How long can SEZ tax benefits last?**
-A: Up to 10 years, depending on the investment amount. A USD 10 million+ investment qualifies for the full 10-year benefit period.
+A: The profit tax exemption lasts 3, 5 or 10 years for investment of USD 3–5 million, USD 5–15 million, or USD 15 million and above (Tax Code, Art. 473). The property tax and land tax term is set by a decision of the President.
+
+**Q: What changed for SEZ participants on 1 April 2026?**
+A: Participants with status granted on or after 1 April 2026 get accelerated depreciation of fixed assets instead of the profit tax exemption, for a term based on the same investment thresholds (Tax Code, Art. 473, part 3).
 
 **Q: Is VAT on imports fully waived for SEZ residents?**
-A: VAT is deferred for up to 120 days, not permanently waived. Excess creditable VAT is refunded within 7 working days through a simplified procedure.
+A: No. VAT and customs duty on imported components, raw materials and materials may be deferred for up to 120 days without interest or security (PP-5243).
 
 **Q: Does the investment stability guarantee protect against all tax increases?**
-A: Yes, for the benefit period duration (up to 10 years), except for excise goods. SEZ residents may lock in the tax rates applicable at their registration date.
+A: For the term of the benefits (up to 10 years), except for the taxation of excise goods. SEZ participants may keep the tax rules in force at the date of their entry in the SEZ register.
 
 **Q: What PIT rate do IT Park employees pay?**
 A: IT Park employees pay 7.5% PIT (versus the standard 12%) until January 1, 2028.
