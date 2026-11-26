@@ -31,3 +31,6 @@
 # The guide PDF keeps its name between corrections, so browsers check for a new copy daily.
 /guides/*
   Cache-Control: public, max-age=86400
+# Logo used in email signatures, linked by absolute URL from Gmail and Outlook.
+/email/*
+  Cache-Control: public, max-age=2592000
